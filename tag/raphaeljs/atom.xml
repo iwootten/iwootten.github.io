@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: raphaeljs</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>If You Build It</title>
+        <link>http://ianwootten.co.uk/2012/05/03/if-you-build-it</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-05-03T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/05/03/if-you-build-it</guid>
+		<description><![CDATA[
+		   <p>If my years in academia have taught me anything, it’s that insight obvious to you isn’t often obvious to others. </p>
+
+<p>As a result, I’ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I’ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I’m in the fortunate position to have some of that available now and again. There’s a variety of reasons why I might attempt a project, ranging from it may later evolve into something able to draw an income further down the line, that I’m excited by learning from the tools I choose to use or that I feel moved enough by a problem to do something to try and prompt change. </p>
+
+<p>I had one of these ideas last weekend, whereby I was wondering what the specifics of the fees of kickstarter projects broke down to. The information on what fees are taken is published <a href="http://www.kickstarter.com/help/faq/creating%20a%20project#WhatFeesDoesKickChar" title="what fees does kickstarter charge">on their site</a>, so I set about a simple phantomjs script (available <a href="https://github.com/niftydigits/kickstarter.js">on github</a>) that could scrape the information from kickstarter. After doing so, the idea moved on to graphing said information via an app to a simple raphaeljs and again further once I’d realised some other stats that could be gathered from the info I was grabbing. The end result is <a href="http://starterstats.com">Starter Stats</a> – which is, (I think) a neat little site for showing stats on any kickstarter project.</p>
+
+<p><a href="http://starterstats.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/05/Screen-Shot-2012-05-03-at-10.16.42-1024x817.png" alt="" title="Starter Stats" width="640" height="510" class="alignnone size-large wp-image-536" /></a></p>
+
+<p>It took a little longer than I’d hoped, but I’m really pleased with the final site as it stands. You should also be able to just replace the beginning of any kickstarter project page (http://kickstarter.com) with “http://starterstats.com” and you’ll be sent to the relevant stats page on the app. Pages are generated on-demand every 15 minutes. Go on, take a look and let me know what you think.</p>
+
+<p>I could have not spent my time on this, instead kicking back and waiting for someone else to build such a tool. But I couldn’t see that happening. No, better for me to build, learn whilst doing so and move on to my next project. What do you get by not building?</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

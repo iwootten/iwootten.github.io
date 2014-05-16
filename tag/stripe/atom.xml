@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: stripe</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Where&#8217;s my Full Stack Payment Service?</title>
+        <link>http://ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-02-16T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service</guid>
+		<description><![CDATA[
+		   <p>Unless you’ve been living under a rock, you’ll realise that there’s an uprising against paypal amongst developers. Most of this stems from the multitude of <a href="http://www.huffingtonpost.com/2011/12/06/paypal-to-regretsy-sorry-_n_1132679.html">crazy requirements</a> they put upon sellers and the locks they can put upon your account without notice.</p>
+
+<p>This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal. None of these solutions are ideal though if you’re looking to make say, a service that bills on a monthly basis.</p>
+
+<p>Enter the subscription billing tools – there’s <a href="http://recurly.com/">recurly</a>, <a href="http://chargify.com/">Chargify</a> and <a href="http://saasy.com/">Saasy</a>, to name 3. All of these go some way to ease the management of customer subscriptions. This is great if you have an established banking history as a business and are able to get hold of a merchant account. Not so great for me – an independent developer with neither of those.</p>
+
+<p>Enter <a href="https://stripe.com/">Stripe</a>, a full-stack payment processor for developers which has no requirement on merchant accounts or gateways. Integration with your own website is as simple as pasting in some javascript. Sounds great…..Except I need to be in the US to use it. *Facepalm*. I even had beta access to stripe in it’s infancy and just had to smile at my invitation code.</p>
+
+<p>Recently here in the UK, <a href="http://gocardless.com">Go Cardless</a> has appeared with an interesting model, based around the use of direct debits to set up subscriptions and make payments. That strikes me as a little weird from a customer point of view. I’m ok paying my gas by direct debit, but would I be ok paying for a piece of software? Given it’s unusual for a website to bill this way, I’d argue most people wouldn’t be.</p>
+
+<p>Unfortunately for us independent developers in the UK, Go Cardless really is our best option until Stripe or some other full stack offering lands here. I know Stripe are supposedly working hard on doing so, but payments are at an incredibly frustrating point here right now.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

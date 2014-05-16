@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: PHP</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Lovefilm Filmstream Plugin for WordPress</title>
+        <link>http://ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2010-04-18T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress</guid>
+		<description><![CDATA[
+		   <p>Something I’ve thought I’d like to have on my site for a while is a list of movies that I’ve recently seen and some brief opinions on them. I’m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I’ve watched, but a recent television upgrade has now meant I’ve got the opportunity to do this.</p>
+
+<p>Our television came with a years subscription to <a href="http://www.lovefilm.com">lovefilm</a>, which means I can now track our past film watching history. At four blu rays a month, that’s quite a lot of films over the course of the year.</p>
+
+<p>Love Film have recently opened up their doors with an api and <a href="http://developer.lovefilm.com">developer area</a> (which unfortunately is not particularly active at the moment). Anyway – their documentation is pretty thorough and has made the process of creating a wordpress plugin to display my past rentals really simple. You can see some example output of it on my site <a href="http://www.ianwootten.co.uk/filmstream">over here</a>.</p>
+
+<p>You can grab the plugin over <a href="http://www.ianwootten.co.uk/downloads/filmstream.zip">here</a>. It’s authenticated by oauth (for which you’ll require php on your blog host to be compiled with oauth enabled) and so will bounce you over to <a href="http://www.lovefilm.com">lovefilm</a> to ask for access to your account, but after that will update on a daily basis. Just click “Fetch Items” on the filmstream admin page and stick <code>&lt;!--filmstream_content--&gt;</code> in any page to display a table containing all your past rentals. There’s no options to speak of right now, but I’m sure I’ll be extending it in the future.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Amazon Associates WordPress Plugin v0.2</title>
+        <link>http://ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2009-10-25T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2</guid>
+		<description><![CDATA[
+		   <p>I’ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.</p>
+
+<p>This now also means you’ll have to enter your amazon secret access key in the plugin configuration page.</p>
+
+<p>You can download the updated version over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
+
+<p>It also means <a href="http://www.ianwootten.co.uk/wishlist">my wishlist</a> has finally been brought back to life. Just in time for Christmas…</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Sweetcron is pretty sweet at Lifestreaming</title>
+        <link>http://ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-08-31T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming</guid>
+		<description><![CDATA[
+		   <p>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to <a href="http://sweetcron.com">Sweetcron</a>. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web. You can see mine over <a href="http://ianwootten.co.uk/stream">here</a> (although is mostly twitter updates for the minute).</p>
+
+<p>What sets this lifestream software apart from others is that as its opensource it can be downloaded, modified and hosted upon your own servers. That means you’re free to mess about with it as you like and maybe customise the page in your own snazzy design. It’s also based on the lovely codeigniter PHP framework from the peeps at ellislabs, which I’ve used a number of times now. You’ll need to modify the .htaccess and codeigniter config to get it working in a sub-folder, but it’s all fairly easy and self explanatory. </p>
+
+<p>The author, <a href="http://www.yongfook.com">Yong Fook</a> has done well to put this out as a side project all on his tod. Whilst my design looks fairly basic, there is a more fancy version included that looks a lot like Yongs homepage.</p>
+
+<p>If you’re a proper geek, a <a href="http://adactio.com/journal/1202">homebrewed version of a lifestream</a> might be more your style.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Amazon Associates WordPress Wishlist Plugin</title>
+        <link>http://ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-04-02T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin</guid>
+		<description><![CDATA[
+		   <p>One of the things that’s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they’re unable to find my wishlist. This is mainly because they’re simple folk who might not think to check amazon for my name. I’m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage. All this data is available on the web already its just a case of putting it together.</p>
+
+<p>Some keen readers might of noticed the wishlist page I stuck up recently and want something similar on their own site and (like myself) either can’t be bothered or didn’t have the time to create a plugin to pull this data together. I’m putting up here my own quick and dirty plugin I built a few weeks ago to achieve this.</p>
+
+<p>It uses amazon web services to look up a wishlist, stick in a specified associates id in each of my item links and replace where I put the text <!-- wishlist_content --> (without spaces) in a post with my wishlist items. The plugin regularly updates this (hourly) as a scheduled event in wordpress in case someone decides to actually buy me something. Of course you’ll need a services key to use it, which you can easily get by signing up with amazon at aws.amazon.com. Fill out your services id, your wishlist id (found by logging into amazon and heading to your wishlist page) and your locale (the bit after amazon. so mine is .co.uk) and press the fetch items to pull all the items in. If you don’t have an associates id, feel free to leave as my own : )</p>
+
+<p>I used curl to get the remote data from amazon as the file_get_content methods generally aren’t enabled on normal web hosts. If you’d like the items to be fetched less regularly, then install the plugin with and updated wp_schedule_event method in the main wishlist.php to a value of your choice.</p>
+
+<p>You can download it over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
+
+<p><em>Double alliteration in a post title? Not sure I’ve attempted that before.</em></p>
+
+<p>[Edit: You’ll need to be running on PHP5 to make use of this plugin]<br />
+[Edit: I released an updated version based on Amazon’s move to use of signitures, see the details <a href="http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2">here</a>]</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Book Review: Code Igniter for Rapid PHP Application Development</title>
+        <link>http://ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-31T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.amazon.co.uk/exec/obidos/ASIN/1847191746/staplediet-21"><img src="http://images-eu.amazon.com/images/P/1847191746.02.TZZZZZZZ.jpg" alt="Code Igniter for Rapid PHP Application Development" /></a>In this book, author David Upton walks you through use of the Code Igniter framework, which is essentially PHP&#8217;s answer to Ruby on Rails. I&#8217;ve been a avid user of <a href="http://codeigniter.com">Code Igniter</a> since I discovered it last year, which is a nice waypoint for anyone trying to understand model-view-controller architectures and not wanting to make the move over to ROR quite yet.</p>
+<p>The angle of this book is taken from a first time CI developer, but one with some knowledge of both PHP and web development in general. The initial chapters begin by exploring why you&#8217;d choose to use CI and some of its benefits over straight PHP code (such as saving on code reproduction or easing development burdens), though doesn&#8217;t really offer any real comparison of features of other similar frameworks. A traditional chapter on setup of CI is also included, (though I think at 4 pages could have perhaps been merged with another!). </p>
+<p>The book then proceeds by tackling the subject at the core of CI, &#8216;model-view-controller&#8217; and how this relates to traditional methods of programming. David breaks down how CI is structured very well and gives suggestions of how applications built within it should be designed to be successful. Some of the example code savings at this stage are somewhat minimal over a standard approach, but I think David conveys how these rack up throughout a web app. Useful chapters of how active record and CRUD can be used to ease DB interaction and also how views can be organised to avoid repitition complete with examples should allow any new CI developer to get to grips with it very quickly.</p>
+<p>The later chapters quite extensively cover more &#8220;geeky&#8221; complicated subjects (using objects and namespaces, localisation, getting CI to interact with other services) which might be a bit much for a hobbyist user, but it gives some room for learning for others. The book also includes some good descriptions of how to make the most of the testing and profiling features which CI has out of the box to debug some of the larger web applications that you might undertake (Both features which I&#8217;ve previously been unaware of).</p>
+<p>The use of friendly language is a welcome change from other texts, but I think in places it does get in the way a bit of the particular functionality which is being talked about. The constant reenforcement of the MVC throughout will be welcome for new converts, but my own practical experience suggests this might be better bent in places. A number of the descriptions of features provided in the book are at the CI site, and I think what might have helped this book is if a single larger running example led the way to describing each of the features.</p>
+<p>At the moment, this is the only CI book available and it does well at covering the large featureset CI has. For a seasoned CI veteran it won&#8217;t bring any revelations, but if you&#8217;re new the framework it will serve you extremely well at getting your head round what makes it shine.</p>
+<p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Decrypting Filezilla Passwords with PHP</title>
+        <link>http://ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-05T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php</guid>
+		<description><![CDATA[
+		   <p>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I’ve added some comments to roughly describe what is going on.</p>
+
+<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that’ll make my job easier now. &lt;pre class='php'&gt;$filezilla_password_file = “FileZilla.xml”;</p>
+
+<p>$xml = file_get_contents($filezilla_password_file);</p>
+
+<p>$simple_xml = simplexml_load_string($xml);</p>
+
+<p>foreach($simple_xml-&gt;Sites-&gt;Site as $site)
+{
+	$attributes =  $site-&gt;attributes();</p>
+
+<pre><code>print "Site: ".$attributes-&gt;Name."\n";
+print "User: ".$attributes-&gt;User."\n";
+print "Encrypted Pass: ".$attributes-&gt;Pass."\n";
+print "Unencrypted Pass:".decryptPass((string)$attributes-&gt;Pass)."\n\n"; }
+</code></pre>
+
+<p>function decryptPass($pass) 
+{
+        // Encryption Key for FileZilla 2 Passwords
+	$key = “FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ”;</p>
+
+<pre><code>// Find the offset position in the key for this pass
+$pos=(strlen($pass)/3) % strlen($key);
+$decrypt = '';
+
+$t=0;
+	
+//Loop through each 3rd of the password
+for($i=0;$i &amp;lt; strlen($pass) / 3;$i++) {
+	    
+    //Get 3 characters, remove the 0 at the 
+//front to get ASCII code to represent the character 
+$num = substr($pass,$i * 3,3);
+
+if (substr($num,0,1) == 0) {
+	$num = substr($num,1,2);
+}
+		
+//Get the ascii code of the unencrypted character
+//by performing XOR against current ASCII and key
+//before converting back and adding to decrypted pass
+	$t = $num ^ ord($key[($i + $pos) % strlen($pass)]);
+	 $decrypt .= chr($t);
+	    
+}
+	
+// Return the decrypted pass
+   return $decrypt; }
+</code></pre>
+<p>&lt;/pre&gt;</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>UK Jobs in Web 2.0</title>
+        <link>http://ianwootten.co.uk/2007/03/12/uk-jobs-in-web20</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2007-03-12T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2007/03/12/uk-jobs-in-web20</guid>
+		<description><![CDATA[
+		   <p>If anyone else like me is considering working in the uk “web 2.0″ market, and finds the posts on common job boards clogged up with all the jobs from america, the small job board I have created and posted online might be a help. You’ll find it over at: <a href="http://webtyrant.com/jobs">http://webtyrant.com/jobs</a>. It aggregates some common job boards together like 37Signals and ThinkVitamin, but removes anything but those located in the UK.</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>pMachine changes its name</title>
+        <link>http://ianwootten.co.uk/2007/03/09/pmachine-changes-its-name</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2007-03-09T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2007/03/09/pmachine-changes-its-name</guid>
+		<description><![CDATA[
+		   <p>pMachine has changed its name to <a href="http://ellislab.com">Ellislab</a>, and are <a href="http://ellislab.com">sporting a shiny new website for all to see</a>. The reason for the change is the expansion over the last 6 years to encompass products which don’t fall under the same banner now. I’m glad to see that the <a href="http://codeigniter.com">CodeIgniter</a> website has got a facelift. <a href="http://31three.com/">31three</a> did the hard graft on the design and <a href="http://ellislab.com">they</a> all <a href="http://expressionengine.com">look</a> <a href="http://codeigniter.com">awesome</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

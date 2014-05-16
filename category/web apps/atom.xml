@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>ianwootten.co.uk - Category: web apps</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>The Developer Dream</title>
+        <link>http://ianwootten.co.uk/2013/06/27/the-developer-dream</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-06-27T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/06/27/the-developer-dream</guid>
+		<description><![CDATA[
+		   <p>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I’m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I’ve mainly created these by myself – a casualty of doing paid work in the main like this too. </p>
+
+<p>Most of these ideas in the have been simple hacks – <a href="http://loveletterd.com">solutions to things that bug me</a>. <a href="http://fairandbare.com">One of them has been a proper business too</a>. I’m able to do something and make it happen, to potentially tap a huge audience. Get them to that first step. The problem I have is, not a single one of these so much as turns a profit, though they serve as wonderful educational devices for me. I would hazard a guess that some of them have indirectly got me work.</p>
+
+<p>Some of my ideas never get past the domain registration phase before being knocked on the head. A friend many years ago gave me the great quote that ‘My domains are my todo list’. This totally hits the nail on the head for me – if I’ve felt like an idea was good enough to make it to the registration phase, there’s something there worth pursuing. Unfortunately, I have quite a long list to work through.</p>
+
+<p>I heard it said that “The Developer Dream” is that we (developers) “build a product/service which we’re able to earn a living from”. But the majority of developers I know, don’t even begin to pursue the ideas they have. This surprises me. </p>
+
+<p>There seems to be such an abundance of opportunities that I can’t imagine not building my own ideas, however bad they might seem to others. </p>
+
+<p>Why hold back? Time? Yes, we have other commitments – family, work and maybe even a hobby or two. I’m not suggesting we make drastic sacrifices or sell our kids in order to create stuff. I’d would however, like to think that the payoff for building our ideas might make our initial holdups seem insignificant longer term. <a href="http://www.ianwootten.co.uk/2012/05/03/if-you-build-it">I’ve said it before</a> and I can’t speak from as the voice of successful experience, but what do I get out of never trying?</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Growing a Business with Developer APIs</title>
+        <link>http://ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-02-20T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis</guid>
+		<description><![CDATA[
+		   <p>Those of your you who follow me on twitter will might be aware of a <a href="http://loveletterd.com">single day hack I attempted last week</a>, which takes output from Lovefilm’s customer history and formats it so it can easily be imported into the lovely Letterboxd. It’s named <a href="http://loveletterd.com">Loveletterd</a> and it seemed entirely appropriate to release it on Valentines day.</p>
+
+<p>After hearing that Letterboxd had created a CSV import tool for it’s community to use and as I’m a <a href="http://developer.lovefilm.com">Lovefilm developer</a>, I felt like it would be a great use of my time to get to work on Loveletterd. </p>
+
+<p>Originally, I’d thought I’d use Lovefilm’s OAuth sign-on, grab past rentals for a user and create a CSV from it formatting to Letterboxd’s import structure. I’d completely forgotten about a bug I raised on the developer forums; almost 3 years earlier – highlighting that actually this was impossible due to a bug which didn’t read a supplied argument, subsequently limiting the number of rental titles returned as the history. What’s more infuriating is that no one from Lovefilm had replied, even though the problem was reiterated by others in the same and other threads. There’s many different threads which highlight numerous other issues, all of which receive no or very little response from the Lovefilm developer team.</p>
+
+<p>This is an awful way to treat a community excited about building tools with your company data. If you don’t want to cushion the cost of supporting providing such an API yourself, don’t create one, or charge for access to it. Similar sentiment has been said about twitter recently on changing their API rendering it unusable for apps that have based their business models on it. Such is the feeling of discontent that it’s led to a niche for rivals.</p>
+
+<p>Lovefilm’s API “gallery” of developer apps features the message </p>
+
+<blockquote>
+  <p>“We will be placing details of the latest and greatest applications using our API here. Be sure to check this page regularly as new ideas are developed.”</p>
+</blockquote>
+
+<p>Which is also the same as 3 years ago, shortly after the API’s first release. Good work Lovefilm.</p>
+
+<p>Remembering this, I walked away thinking, “Oh, well”, before going back to my workday. Explaining it to my wife, I realised there was another route to achieve what I wanted, which is what you see on the web now. Ultimately, this is nothing more than a bunch of regular expressions.</p>
+
+<p>Admittedly, I’m aware there’s changes at Lovefilm – they’ve been entirely bought out by Amazon and I can imagine the new owners would want to integrate the company with their brand better. It seems as if they’ve already switched off new developer registrations, so I’d imagine the whole API will be turned off before long.</p>
+
+<p>On the flip, take a look at where I want to take my data to – <a href="http://letterboxd.com">Letterboxd</a>. A site focused on film lovers and it shows. They’ve taken the route of paid pro accounts, which provide access to the <a href="http://letterboxd.com/about/importing-data/">import tools</a> I mentioned earlier. The majority of users won’t make use of this though; they just want to support a site providing a great service which is open and honest. They’re also planning on providing a full API, which I’ll be interested in playing with on release. As a result, I’m sure Letterboxd users will get a bunch of new toys they can use their accounts with that external developers decide to create.</p>
+
+<p>The best thing though? They’re real people who talk to me. After letting them know about my little hack, I got thanks that same day from <a href="http://letterbox.com/about/crew">Matthew</a> of the Letterboxd crew, with a <a href="http://feedback.letterboxd.com/forums/136771-general/suggestions/2360263-add-lovefilm-imports">ticket closure</a> shortly thereafter. That beats 3 years of waiting.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>The Move Towards Static Websites</title>
+        <link>http://ianwootten.co.uk/2013/01/22/the-move-towards-static-websites</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-01-22T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/01/22/the-move-towards-static-websites</guid>
+		<description><![CDATA[
+		   <p>There’s some discussion on new podcast <a href="http://backtofrontshow.com">“The Back to Front Show”</a> on why of late we’re seeing so many static websites cropping up. It seem like now more than ever, we’re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing. </p>
+
+<p>When I talk about a static site, I think of it of raw HTML sat on a server and nothing else. However, it seems as if the industry has adopted the term to refer to sites created from tools which are capable of creating/emulating this HTML, whether it be a local, dropbox or a hosted/self-hosted solution. Typically both types of tool are powered through conversion of flat files into the markup which is served publicly. Through using them you can achieve something akin to a typical blog, without the need for a database (or possibly even a server-side language to power it).</p>
+
+<p><strong>Pro’s</strong></p>
+
+<p>Simplicity – Most of the draw toward toward such setups seems to be on the simplicity over flexibility. I can power a site with a minimal setup, but still regularly and simply update and maintain it, using a partial based environment. With a dropbox based solution, I just need to drop my flat files into a folder and everything is updated transparently. Mark Boulton <a href="http://markboulton.co.uk/journal/newblog-newcms">has previously written</a> about his requirements for writing on the web and why he went with <a href="http://statamic.com">Statamic</a>: </p>
+
+<blockquote>
+  <p>“I wanted a way of simply publishing words, rather than getting all wrapped up in php, theming files and database problems.”</p>
+</blockquote>
+
+<p>Simplicity it seems, rules.</p>
+
+<p>I previously <a href="http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">wrote an article</a> on how you could publish using Octopress and Amazon’s S3 service. For anyone who has a relatively low traffic site, such a setup could also work out cheaper than a monthly hosting package.</p>
+
+<p>Development Time – If you’re one for creating custom themes, a static site is also a much simpler solution than wrestling with styling the innerds of a full fledged cms. Typically posts are stored in markdown and can be styled along with assets using a partial templating system (eg. based on YAML or Liquid). Having recently developed a wordpress theme I can testify to the complexity of having to dig through documentation on function usage and to determine which template file should be modified to achieve what I want within a page.</p>
+
+<p>Source Control – As <a href="http://rickhurst.co.uk">Rick</a> quite rightly points out below in the comments, having all your posts available in flat files makes them perfect for managing/backing up through your revision control tools of choice.</p>
+
+<p><strong>Cons</strong></p>
+
+<p>Customisation – For me, the big loss is the lack of flexibility. I hear everyone cry, “Well, duh – it’s static”. Without a server side language handling requests, I’m unable to schedule posts, handle comments, create forms or trigger email. If I intend on continuing to offer them, I have to find third party services to deal with each of these aspects. I’m well aware there’s services like disqus and wufoo that may solve some of these problems, but it seems like a major hassle to integrate each time something like this is required. It may be that this is just me, you may be perfectly happy using these solutions, or may not require them.</p>
+
+<p>Remote publishing – When using a local based solution (e.g. Jekyll), you don’t have the option of blogging remotely, due to the lack of tools to create and push out your content. Gone are the days of being able to log into a site from your phone and add a small update. For me, this is less of an issue as I can’t recall if I’ve ever written a post in this way and try to be more methodical, less spontaneous about what I’m writing from the comfort of my desktop.</p>
+
+<p><strong>Example Systems</strong></p>
+
+<p>If you’re interested in running a static site, then I’ve listed a few that seem pretty popular at the time of writing, along with a brief list of their features.</p>
+
+<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> – Locally run, File based, Open source, Powers Github pages.<br />
+<a href="http://octopress.org/">Octopress</a> – Locally run, Jekyll/File based, but with preconfigured HTML templates, CSS, Javascript, Open Source<br />
+<a href="http://statamic.com">Statamic</a> – Self Hosted, File Based, License Required<br />
+<a href="http://getkirby.com">Kirby</a> – Self Hosted, File based, jQuery inspired API, License Required<br />
+<a href="http://staceyapp.com">Stacey</a> – Self hosted, File based, Open source<br />
+<a href="http://scriptogr.am">Scriptogram</a> – Dropbox/File based</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>If You Build It</title>
+        <link>http://ianwootten.co.uk/2012/05/03/if-you-build-it</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-05-03T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/05/03/if-you-build-it</guid>
+		<description><![CDATA[
+		   <p>If my years in academia have taught me anything, it’s that insight obvious to you isn’t often obvious to others. </p>
+
+<p>As a result, I’ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I’ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I’m in the fortunate position to have some of that available now and again. There’s a variety of reasons why I might attempt a project, ranging from it may later evolve into something able to draw an income further down the line, that I’m excited by learning from the tools I choose to use or that I feel moved enough by a problem to do something to try and prompt change. </p>
+
+<p>I had one of these ideas last weekend, whereby I was wondering what the specifics of the fees of kickstarter projects broke down to. The information on what fees are taken is published <a href="http://www.kickstarter.com/help/faq/creating%20a%20project#WhatFeesDoesKickChar" title="what fees does kickstarter charge">on their site</a>, so I set about a simple phantomjs script (available <a href="https://github.com/niftydigits/kickstarter.js">on github</a>) that could scrape the information from kickstarter. After doing so, the idea moved on to graphing said information via an app to a simple raphaeljs and again further once I’d realised some other stats that could be gathered from the info I was grabbing. The end result is <a href="http://starterstats.com">Starter Stats</a> – which is, (I think) a neat little site for showing stats on any kickstarter project.</p>
+
+<p><a href="http://starterstats.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/05/Screen-Shot-2012-05-03-at-10.16.42-1024x817.png" alt="" title="Starter Stats" width="640" height="510" class="alignnone size-large wp-image-536" /></a></p>
+
+<p>It took a little longer than I’d hoped, but I’m really pleased with the final site as it stands. You should also be able to just replace the beginning of any kickstarter project page (http://kickstarter.com) with “http://starterstats.com” and you’ll be sent to the relevant stats page on the app. Pages are generated on-demand every 15 minutes. Go on, take a look and let me know what you think.</p>
+
+<p>I could have not spent my time on this, instead kicking back and waiting for someone else to build such a tool. But I couldn’t see that happening. No, better for me to build, learn whilst doing so and move on to my next project. What do you get by not building?</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Where&#8217;s my Full Stack Payment Service?</title>
+        <link>http://ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-02-16T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service</guid>
+		<description><![CDATA[
+		   <p>Unless you’ve been living under a rock, you’ll realise that there’s an uprising against paypal amongst developers. Most of this stems from the multitude of <a href="http://www.huffingtonpost.com/2011/12/06/paypal-to-regretsy-sorry-_n_1132679.html">crazy requirements</a> they put upon sellers and the locks they can put upon your account without notice.</p>
+
+<p>This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal. None of these solutions are ideal though if you’re looking to make say, a service that bills on a monthly basis.</p>
+
+<p>Enter the subscription billing tools – there’s <a href="http://recurly.com/">recurly</a>, <a href="http://chargify.com/">Chargify</a> and <a href="http://saasy.com/">Saasy</a>, to name 3. All of these go some way to ease the management of customer subscriptions. This is great if you have an established banking history as a business and are able to get hold of a merchant account. Not so great for me – an independent developer with neither of those.</p>
+
+<p>Enter <a href="https://stripe.com/">Stripe</a>, a full-stack payment processor for developers which has no requirement on merchant accounts or gateways. Integration with your own website is as simple as pasting in some javascript. Sounds great…..Except I need to be in the US to use it. *Facepalm*. I even had beta access to stripe in it’s infancy and just had to smile at my invitation code.</p>
+
+<p>Recently here in the UK, <a href="http://gocardless.com">Go Cardless</a> has appeared with an interesting model, based around the use of direct debits to set up subscriptions and make payments. That strikes me as a little weird from a customer point of view. I’m ok paying my gas by direct debit, but would I be ok paying for a piece of software? Given it’s unusual for a website to bill this way, I’d argue most people wouldn’t be.</p>
+
+<p>Unfortunately for us independent developers in the UK, Go Cardless really is our best option until Stripe or some other full stack offering lands here. I know Stripe are supposedly working hard on doing so, but payments are at an incredibly frustrating point here right now.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>A Survey of Hype in Web Development Podcasts</title>
+        <link>http://ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-03-31T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts</guid>
+		<description><![CDATA[
+		   <p>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they’re allowed to, it is their own podcast after all, often from their own businesses etc. I’m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless. </p>
+
+<p>One of these things is the title of the show itself. I don’t really get why its necessary to repeat the title (Sure I do really, to drum it into my head), given it’s going to be within the title of the mp3. I know what I’m listening to after all, because my favourite media player tells me. </p>
+
+<p>I’ve been wanting to count the number of times a show utters it’s name over its duration. Sure, I realise this is somewhat ocd and geeky, but hey. Here’s my results for a typical set of podcasts that I often listen to in a week. I’ve linked up the data I’ve used to create this chart on <a href="https://spreadsheets.google.com/ccc?key=0AiyMcCUnltKwdG85QnNKMnhneUVXMjJNUzVCa0kzNEE&#038;hl=en&#038;pli=1&#038;authkey=CJbb9a0L#gid=0">google spreadsheets</a>, for anyone else who may be interested to contribute to and build upon further. I gathered the data all myself by listening to each podcast and counting when mentions of the show were made but it may be a good excuse for me to experiment with amazon turk. </p>
+
+<p>The big web show comes out tops with one mention over 40 mins worth of show and boagworld comes last with 24 mentions of the show over its duration. (It’s unfortunate for boagworld that its theme tune includes a voice repeating the title in the theme. I did originally include echos, which would be 34 mentions, but my colleagues inform me this may be taking the experiment a little too far :))</p>
+
+<p>I plan to do the same for product mentions (adverts I guess) in a weeks worth of (different) episodes, but if anyone wants to go ahead and update with their own findings that would be great.</p>
+
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png" alt="" title="Own Web Show Mentions per Minute" width="600" height="371" class="alignnone size-full wp-image-445" /></a></p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Mixbooth</title>
+        <link>http://ianwootten.co.uk/2010/03/21/mixbooth</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2010-03-21T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2010/03/21/mixbooth</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.mixbooth.com">Mixbooth</a> is a dj mix hosting service I created several years ago. At the time there wasn’t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you’d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it. It was good at the time and I got quite a buzz out of seeing new uploads appearing and hearing what others had created. I took the decision to end use of <a href="http://www.mixbooth.com">mixbooth</a> after about a year of having a couple of mixes a week uploaded. This was mainly due to academic commitments at the time.</p>
+
+<p>Anyway, I’ve been working on a rebuild of it for some time now. So I’m letting it loose on those who might be interested. I’m no longer hosting mixes, but hopefully exchanging useful info on them and those artists who feature within and allowing people to chat about them. It’s not everything I want it to be right now, but hopefully will serve to a use to djs other than myself. If you want to have a play, head to <a href="http://www.mixbooth.com/signup">www.mixbooth.com/signup</a> and I’ll get an invite out. I’ll also be tweeting updates via <a href="http://twitter.com/mixbooth">@mixbooth</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Stephen Fry and the Ascent of &#8220;Micro Blogging&#8221;</title>
+        <link>http://ianwootten.co.uk/2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2009-02-06T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging</guid>
+		<description><![CDATA[
+		   <p><a href="http://twitter.com/">Twitter</a> is all over the news at the moment. For the uninitiated, it allows you to list short updates of what you are doing at any time. BBC News seemed to have an all-out assault at the end of January raving about it at every opportunity – <a href="http://news.bbc.co.uk/1/hi/world/americas/7834755.stm">the first moments of the Hudson plane landing</a>, an short chat about it by Stephen Fry on Friday Night with Jonathan Ross and <a href="http://news.bbc.co.uk/1/hi/entertainment/7845823.stm">this short clip on iPlayer</a> by <a href="http://www.stephenfry.com/blog/2009/01/29/twitter/">Stephen Fry again</a>. For Stephen Fry, this has meant an insane amount of new followers, indicated by the stats by twittercounter, which are shown below.</p>
+
+<p><a href="http://twittercounter.com/stephenfry/month"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2009/02/stephenfry-twitcount-300x236.gif" alt="Stephenfry&#039;s Twittercounter" title="Stephenfry Twittercounter" width="300" height="236" class="size-medium wp-image-302" /></a></p>
+
+<p>Notice the stats for 27th January – a full 20,978 extra followers in a single day! My <a href="http://twitter.com/ironyboy">own profile</a> has a paltry 38 in comparison for all time!, which is about 30 more friends than I actually have offline…</p>
+
+<p>I guess this huge upsurge is in part due to the fact that Stephen is such a well known comedian in the UK and by no means a stranger to the web. Just yesterday <a href="http://www.kottke.org/09/02/stephen-fry-stuck-in-elevator-twittering">Jason Kottke observed his day as deciding “to start his own reality chat show after becoming stuck in an elevator”</a>. He also has an <a href="http://stephenfry.com">awesome blog</a> and <a href="http://www.stephenfry.com/media/audio/109/series-2-episode-3--language/">podcast</a>. He also is a very open advocate of <a href="http://www.gnu.org/fry/happy-birthday-to-gnu.html">open source</a> and free software. How on earth he finds the time to live both his life virtually and as television celebrity I do not know. But I like the cut of his jib.</p>
+
+<p>It seems micro-blogging is truly being picked up by the masses. I really enjoy it, but ideally I’d love to be using a decentralised open source service, hosted on my own personal webspace. I’d like to suggest the Open Micro Blogging service, <a href="http://laconi.ca">laconi.ca</a> as the way forward – but then I also want to be able to reply to my friends on twitter and them to me and I don’t think true two way cross network chat will happen for a while. I see <a href="http://wordpress.org">wordpress</a> to <a href="http://blogger.com">blogger</a> as <a href="http://laconi.ca">laconi.ca</a> is to <a href="http://twitter.com">twitter</a>. I’m actually surprised that there doesn’t seem to be a concerted effort from any one of the current big blog companies right now to push for a more open alternative. The automatticians have put out <a href="http://en.blog.wordpress.com/2008/01/28/introducing-prologue/">prologue</a> but it doesn’t seem to have been touched for over a year and only supports sharing amongst groups (as in a working environment)…that’s no fun for the rest of us. </p>
+
+<p>Bring on a true open web status service, (complete with adopters) where I can update any one of my friends on my activities by them following a status feed on my homepage and vice versa. This requires clients who make use of such services though and right now twitter is stronger in that regard.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Sweetcron is pretty sweet at Lifestreaming</title>
+        <link>http://ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-08-31T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming</guid>
+		<description><![CDATA[
+		   <p>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to <a href="http://sweetcron.com">Sweetcron</a>. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web. You can see mine over <a href="http://ianwootten.co.uk/stream">here</a> (although is mostly twitter updates for the minute).</p>
+
+<p>What sets this lifestream software apart from others is that as its opensource it can be downloaded, modified and hosted upon your own servers. That means you’re free to mess about with it as you like and maybe customise the page in your own snazzy design. It’s also based on the lovely codeigniter PHP framework from the peeps at ellislabs, which I’ve used a number of times now. You’ll need to modify the .htaccess and codeigniter config to get it working in a sub-folder, but it’s all fairly easy and self explanatory. </p>
+
+<p>The author, <a href="http://www.yongfook.com">Yong Fook</a> has done well to put this out as a side project all on his tod. Whilst my design looks fairly basic, there is a more fancy version included that looks a lot like Yongs homepage.</p>
+
+<p>If you’re a proper geek, a <a href="http://adactio.com/journal/1202">homebrewed version of a lifestream</a> might be more your style.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Location Based Job Boards</title>
+        <link>http://ianwootten.co.uk/2008/01/30/location-based-job-boards</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-30T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/30/location-based-job-boards</guid>
+		<description><![CDATA[
+		   <p>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent <a href="http://djangogigs.com">job</a> and <a href="http://simonwillison.net/2008/Jan/23/djangopeople/">profile sites</a> in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don’t have time myself to do this though unfortunately – perhaps someone might like to chat about collaborating). What I’ve concluded is that being aware of those jobs within a certain area might be quite useful – and simple to implement. What you’d basically end up with is a situation where you could subscribe to updates on jobs in a particular field within a certain area (think – “tell me about all dev jobs within 50 miles”). Whilst this feature may exist on some other sites (though I’m unaware of it) my experience tells me that it probably isn’t executed particularly well.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

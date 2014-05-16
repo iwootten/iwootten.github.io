@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>ianwootten.co.uk - Category: university</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>My final year of being a student?</title>
+        <link>http://ianwootten.co.uk/2006/09/24/my-final-year-of-being-a-student</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-09-24T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/09/24/my-final-year-of-being-a-student</guid>
+		<description><![CDATA[
+		   <p>I thought I’d pose this as a question because I’m unsure if this is indeed my final year. It’s quite strange to think at the end of this thing I’m actually going to have to find some work somewhere another. Any suggestions would be greatly appreciated from whomever. I’m looking for £50k/yr involving part time work from home, company car, but then I think the rest of the world is too.</p>
+
+<p>I go through the enrolment thing tomorrow, with whatever follows throughout the rest of the year on the cards too. You know, taking a few labs and tutorials, Christmas, New Years, some more labs and tutorials, my 26th birthday (sheesh!) getting wed……..I’ll stop there.</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>XGL, Compiz on Dapper 64 &#8211; Too much to ask?</title>
+        <link>http://ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-09-06T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask</guid>
+		<description><![CDATA[
+		   <p>I spent a large amount of time last week, after realising that I could very easy install compiz and XGL on my machine at uni, trying to install it upon my home machine. As its 64 bit, and owing to previous problems I’d experienced installing 64 bit applications (like linux for instance), I spent the best part of 2 days attempting to install both, before caving and completely giving up.I got to the stage where XGL is installed properly and seems to work ok, but the compiz gnome window manager isn’t working properly, meaning I have no borders to any panes I create.It’s not like I need a whizzy 4 sided cube spinning around, but I thought it might be fun…</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Code Igniter</title>
+        <link>http://ianwootten.co.uk/2006/08/23/code-igniter</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-08-23T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/08/23/code-igniter</guid>
+		<description><![CDATA[
+		   <p>I’ve been experimenting with <a href="http://www.codeigniter.com">code igniter</a> tonight, a php mvc framework. I discovered it yesterday, not realising that such things were available for php. As its extremely lightweight and seems to speeding up things no-end already, I reckon I’ll probably be using it on some of my new <a href="http://www.slimshot.org">slimshot</a> projects I’m planning on working on soon. I just need to get another life somewhere so I can actually go about implementing all this stuff.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Security</title>
+        <link>http://ianwootten.co.uk/2004/08/08/security</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2004-08-08T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2004/08/08/security</guid>
+		<description><![CDATA[
+		   <p>Blimey, some cheeky blighter signed up and posted on my blog! Well, I suppose it was my fault really seeing as how wordpress was configured to allow it! Anyway, I removed the offending post and reconfigured so we’re now back to normality…</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Chicken Breasts</title>
+        <link>http://ianwootten.co.uk/2004/05/06/chicken-breasts</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2004-05-06T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2004/05/06/chicken-breasts</guid>
+		<description><![CDATA[
+		   <p>In order to give a little more items of interest here, these are a few of the images which I’ve been creating to assist me with my Image Processing module here at Cardiff…</p>
+
+<p>Basically, an image of a Chicken Breast is taken, and the best approximation to a cardioid found and displayed. This involves taking an image, performing Median filtering upon it to remove noise, edge detecting it with sobel masks, forming an accumulator space from the approximate gradient determined, and finally locating the largest peak within this space….</p>
+
+<p>Boring eh? Take a look at a few of the images to see how it works…..I’ve impressed myself. 
+1.  The original image &lt;div class="imgshadow"&gt;
+      <img src="http://www.cs.cf.ac.uk/user/I.M.Wootten/wordpress/images/breast2.jpg" alt="The original image" />
+    &lt;/div&gt;</p>
+
+<ol>
+  <li>
+    <p>The median filtered image &lt;div class="imgshadow"&gt;
+  <img src="http://www.cs.cf.ac.uk/user/I.M.Wootten/wordpress/images/breast2-filter.jpg" alt="The median filtered image" />
+&lt;/div&gt;</p>
+  </li>
+  <li>
+    <p>The thresholded image &lt;div class="imgshadow"&gt;
+  <img src="http://www.cs.cf.ac.uk/user/I.M.Wootten/wordpress/images/breast-thresh.jpg" alt="The thresholded image" />
+&lt;/div&gt;</p>
+  </li>
+  <li>
+    <p>An edge detected version of the image &lt;div class="imgshadow"&gt;
+  <img src="http://www.cs.cf.ac.uk/user/I.M.Wootten/wordpress/images/breast-edge.jpg" alt="An edge detected version of the image" />
+&lt;/div&gt;</p>
+  </li>
+  <li>
+    <p>The accumulator image &lt;div class="imgshadow"&gt;
+  <img src="http://www.cs.cf.ac.uk/user/I.M.Wootten/wordpress/images/breast-accum.jpg" alt="The accumulator image" />
+&lt;/div&gt;</p>
+  </li>
+  <li>
+    <p>The located cardioid &lt;div class="imgshadow"&gt;
+  <img src="http://www.cs.cf.ac.uk/user/I.M.Wootten/wordpress/images/breast2-cardiod.jpg" alt="The located cardioid" />
+&lt;/div&gt;</p>
+  </li>
+</ol>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Image Processing &#8211; Connected Component Analysis</title>
+        <link>http://ianwootten.co.uk/2004/03/05/image-processing-connected-component-analysis</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2004-03-05T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2004/03/05/image-processing-connected-component-analysis</guid>
+		<description><![CDATA[
+		   <p>Ahh, theres a result.</p>
+
+<p>I’ve been working some image processing coursework trying to correctly label an B+W image with a different label for each object in the image…it’s taken ages!….</p>
+
+<p>The basic premise is, go through each pixel in the image. If this pixel has a neighbour which is labelled, label it with that label, if two pixel neighbours labels differ, store the equivalence in a table and resolve it later. </p>
+
+<p>Resolve the equivalence table (find the lowest equivalent neighbour and remember it). Do another pass to check if we still have equivalent items in the image. I’ve been struggling forever trying to find a way to resolve the equivalence table right down to the lowest level straight away in one pass, which is extremely difficult, so you perform multiple passes!</p>
+
+<p>Anyway, glad that bits over – now onto the complex stats of it all!</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Mid-Year with Moderator</title>
+        <link>http://ianwootten.co.uk/2004/02/16/mid-year-with-moderator</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2004-02-16T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2004/02/16/mid-year-with-moderator</guid>
+		<description><![CDATA[
+		   <p>Just had my mid-year meeting follow-up with my moderator. It seems he would like to see a focus on XML standards for this system, rather than just a botch of XML which I decided on. Don’t really know how I decide on that.</p>
+
+<p>On searching for them though I found a CMS XML framework (uh-oh) which basically just outputs everything as XML. Find it <a href="http://www.bitflux.ch/developer/cms/popoon.html">here</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Moody</title>
+        <link>http://ianwootten.co.uk/2003/10/09/moody</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2003-10-09T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2003/10/09/moody</guid>
+		<description><![CDATA[
+		   <p>Just messing about with a new mood plugin I’ve put up here..</p>
+
+<p>Would be cool to let you guys know how I’m feeling right now..</p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

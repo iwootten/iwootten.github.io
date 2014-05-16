@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: socket.io</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Maintaining References to Sockets with Express and Socket.io</title>
+        <link>http://ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-07-04T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io</guid>
+		<description><![CDATA[
+		   <p>I hit a frustrating problem when trying to use expressjs alongside <a href="http://socket.io">socket.io</a> recently. The solution may seem somewhat trivial, but I struggled with it for a while, until finally asking for help on the <a href="http://socket.io">socket.io</a> irc channel. I’m not sure if a better solution exists for my case, but this is what I have for now.</p>
+
+<p>In the main route of my express app, I needed to iterate across an array, performing a REST call using each element as a parameter and spit the results back for socket.io to send out to the browser. To get some idea of what that would look like, imagine the following.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+     <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<p>My problem then became, how do I emit in this way, given my use case? All examples I could find on the <a href="http://socket.io">socket.io</a> homepages demonstrate emitting msgs on connection, like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// send custom events to browser socket</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;i can send&#39;</span><span class="o">:</span> <span class="s1">&#39;json!&#39;</span> <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>But I wanted to emit messages as part of a loop, within an app route. How would I do that? I could wrap the loop with the connection logic:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+      <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+         <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>But if I do this, then my connection listener would be added on every refresh of the route. This would mean I’d end up with duplicate binding of event listeners and a load more results messages would be emitted than I’d expect. This would result in crazy behavior for any user who might choose to refresh your app.</p>
+
+<p>Actually, the solution is rather simple although not entirely obvious given the nature of using node. If you maintain a reference to the socket as a global variable and then later emit upon that same socket, like so:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">global_socket</span><span class="p">;</span>
+
+<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">global_socket</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+      <span class="nx">global_socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<p>This way, a connection will be established and maintained and we won’t get duplicate bindings when refreshing the route of the app. Simple when you know how. I had a rather interesting discussion following this on irc about whether the use of express and socket.io together is warranted, given that socket.io supports use of variable passing and ultimately could entirely replace an express app.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

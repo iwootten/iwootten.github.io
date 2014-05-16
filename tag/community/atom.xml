@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: community</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Cardiff Geeks</title>
+        <link>http://ianwootten.co.uk/2007/09/07/cardiff-geeks</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2007-09-07T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2007/09/07/cardiff-geeks</guid>
+		<description><![CDATA[
+		   <p>I’ve long wondered why there doesn’t seem to be much happening in terms of community of the web professionals in wales. There is a vibrant collection of people sporting different skill sets in the area, yet as I can see not a lot of chat amongst everyone in between different groups. On a whim, I decided to create a facebook group “<a href="http://www.facebook.com/group.php?gid=5399328503">Cardiff Web Geeks</a>” to try and get people to come out of their shells and actually participate in a bit of discussion about tech topics in wales. I’ve invited a bunch of people who might be interested and hopefully we’ll be able to organise some sort of chats and discussions at meetups, rather than having to cross the border back to England and sponge from our friends over there. (Each one of those return trips costs…) If you are interested in what’s going on with people and the web in Wales, I’d invite you to sign up and participate in what hopefully could be built into a nice valuable community in our local area. </p>
+
+<p>[Update - We now have our own <a href="http://cardiffgeeks.net">website</a>! Rock on!]</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

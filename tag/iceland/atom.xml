@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: iceland</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Setting Up an .is Domain with ISNIC</title>
+        <link>http://ianwootten.co.uk/2013/10/27/setting-up-an-is-domain-with-isnic</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-10-27T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/10/27/setting-up-an-is-domain-with-isnic</guid>
+		<description><![CDATA[
+		   <p>I’ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn’t great, given their somewhat confusing management interface. That’s summed up in a recent tweet below.</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Given the potential savings compared to a ‘normal’ registrar, it’s likely you’ll want to make use of ISNIC themselves – who are much like an Icelandic version of Nominet.</p>
+
+<p>Here’s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it’s not necessary to use a “pre-approved” registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there’s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
+
+<p>Once you’ve gone through the process of checking your domain is available and registering it, you’ll need to ensure your hosting provider has appropriate dns entries for your domain. If you’re using, cPanel or something that basically means adding it there. If you’re managing your own dns entries, add the appropriate entries within your manager.</p>
+
+<p>Here’s the key bit. Now wait…. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
+
+<p>Following that wait, head to the “redelegate” option within your new “My Page” area at ISNIC. Choose the “Not Registered” when asked for your ISP.</p>
+
+<p>Go ahead and enter the nameservers you want to use. If the dns changes haven’t yet propagated, you’ll probably get the error “The nameserver ‘ns1.whatever.com’ has not been registered”, as shown below:</p>
+
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png" alt="Misleading Error" width="676" height="360" class="alignnone size-full wp-image-912" /></a></p>
+
+<p>This is a pretty misleading error, given what it actually means is “your domain doesn’t seem to be registered yet on those nameservers”. So wait a bit more for propagation to occur…</p>
+
+<p>Be aware of the <a href="https://www.isnic.is/en/host/req">rules</a> for ISNIC nameservers and check your host complies with them, otherwise you may find you encounter other errors. When the changes are picked up, you should finally be able to add the entries without getting an array of red boxes, much like below.</p>
+
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png" alt="Successful nameserver entry" width="684" height="577" class="alignnone size-full wp-image-913" /></a></p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

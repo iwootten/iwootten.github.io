@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: jQuery</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Book Review: Learning jQuery</title>
+        <link>http://ianwootten.co.uk/2008/01/09/learning-jquery</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-09T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/09/learning-jquery</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.amazon.co.uk/exec/obidos/ASIN/B000VUVG3E/1847192505/staplediet-21"><img src="http://images-eu.amazon.com/images/P/1847192505.02.TZZZZZZZ.jpg" alt="Learning jQuery" /></a>Learning jQuery takes a look at the JavaScript library jQuery by Jonathan Chaffer and Karl Swedberg, whom run <a href="http://learningjquery.com">learningjquery.com</a>, a popular resource to jQuery developers. Jonathan and Karl work through a example based approach of common problems in web application development to demonstrate how jQuery can be used to minimize the amount of code written by developers and instead focus on the functionality of their code. </p>
+<p>The book is set for the developer with some knowledge of HTML, CSS and Javascript but a jQuery novice. The examples in the first few chapters offer solutions which may be achieved more simply through alternative approaches (e.g. applying styles with JavaScript, rather than applying it directly in HTML), but they serve their purpose of introducing what can be done without introducing a huge amount of features of the library too quickly. The following examples are far more realistic, focusing on tasks more suited to the library. </p>
+<p>Each example is explained so thoroughly it includes exploring many eventualities that the less descerning developer may glaze over, with many set over the course of a chapter. I certainly found that many of the examples highlighted problems I just wouldn&#8217;t be aware of. The applications built through the examples include style switchers, animation effects and Chapters 8-9 cover much more completely how to build more full featured scripts such as AJAX based searches, a shopping cart system and image shufflers and rotators. Other topics of note include how to perform manipulation of the DOM tree of a HTML page and how to handle particular event requests. The book also does really well at consistently suggesting in the later examples the must haves of any page featuring JavaScript, progressive enhancement and graceful degradation.</p>
+<p>One of the things that frustrated me slightly however was the frequency of code repitition and screen captures for each new added feature, but this is a minor problem considering how well the books covers the subject.</p>
+<p>I found this an extremely easy and interesting read, with the example based approach keeping me engaged in how each situation could be enhanced with use of jQuery. The sensible organisation of each chapter means that many asides are covered enough to give the reader a working knowledge of how complementary technologies are able to be used with the library. The book also includes appendices documenting a number of useful web development sites, not all specific to just jQuery. Overall, a thorough introduction to the language.</p>
+<p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Growing a Business with Developer APIs</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/fonts/open-sans.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/syntax.css" />
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-263865-2', 'ianwootten.co.uk');
+      ga('send', 'pageview');
+
+    </script>
+    </head>
+    <body>
+
+    
+        <div class="container web-apps">
+      <header>
+        <nav>
+        <ul class="nav">
+          <li><a class="blog" href="/">Blog</a></li>
+          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
+          <li><a class="web-apps active" href="/category/web-apps">Web Apps</a></li>
+          <li><a class="about" href="/about">About</a></li>
+          <li><a class="contact" href="/contact">Contact</a></li>
+        </ul>
+        </nav>
+        <div class="clear"></div>
+      </header>
+    
+
+      <div class="post">
+	<h1><a href="/2013/02/20/growing-a-business-with-developer-apis">Growing a Business with Developer APIs</a></h1>
+<div class="author_meta">20 Feb 2013</div>
+<p>Those of your you who follow me on twitter will might be aware of a <a href="http://loveletterd.com">single day hack I attempted last week</a>, which takes output from Lovefilm’s customer history and formats it so it can easily be imported into the lovely Letterboxd. It’s named <a href="http://loveletterd.com">Loveletterd</a> and it seemed entirely appropriate to release it on Valentines day.</p>
+
+<p>After hearing that Letterboxd had created a CSV import tool for it’s community to use and as I’m a <a href="http://developer.lovefilm.com">Lovefilm developer</a>, I felt like it would be a great use of my time to get to work on Loveletterd. </p>
+
+<p>Originally, I’d thought I’d use Lovefilm’s OAuth sign-on, grab past rentals for a user and create a CSV from it formatting to Letterboxd’s import structure. I’d completely forgotten about a bug I raised on the developer forums; almost 3 years earlier – highlighting that actually this was impossible due to a bug which didn’t read a supplied argument, subsequently limiting the number of rental titles returned as the history. What’s more infuriating is that no one from Lovefilm had replied, even though the problem was reiterated by others in the same and other threads. There’s many different threads which highlight numerous other issues, all of which receive no or very little response from the Lovefilm developer team.</p>
+
+<p>This is an awful way to treat a community excited about building tools with your company data. If you don’t want to cushion the cost of supporting providing such an API yourself, don’t create one, or charge for access to it. Similar sentiment has been said about twitter recently on changing their API rendering it unusable for apps that have based their business models on it. Such is the feeling of discontent that it’s led to a niche for rivals.</p>
+
+<p>Lovefilm’s API “gallery” of developer apps features the message </p>
+
+<blockquote>
+  <p>“We will be placing details of the latest and greatest applications using our API here. Be sure to check this page regularly as new ideas are developed.”</p>
+</blockquote>
+
+<p>Which is also the same as 3 years ago, shortly after the API’s first release. Good work Lovefilm.</p>
+
+<p>Remembering this, I walked away thinking, “Oh, well”, before going back to my workday. Explaining it to my wife, I realised there was another route to achieve what I wanted, which is what you see on the web now. Ultimately, this is nothing more than a bunch of regular expressions.</p>
+
+<p>Admittedly, I’m aware there’s changes at Lovefilm – they’ve been entirely bought out by Amazon and I can imagine the new owners would want to integrate the company with their brand better. It seems as if they’ve already switched off new developer registrations, so I’d imagine the whole API will be turned off before long.</p>
+
+<p>On the flip, take a look at where I want to take my data to – <a href="http://letterboxd.com">Letterboxd</a>. A site focused on film lovers and it shows. They’ve taken the route of paid pro accounts, which provide access to the <a href="http://letterboxd.com/about/importing-data/">import tools</a> I mentioned earlier. The majority of users won’t make use of this though; they just want to support a site providing a great service which is open and honest. They’re also planning on providing a full API, which I’ll be interested in playing with on release. As a result, I’m sure Letterboxd users will get a bunch of new toys they can use their accounts with that external developers decide to create.</p>
+
+<p>The best thing though? They’re real people who talk to me. After letting them know about my little hack, I got thanks that same day from <a href="http://letterbox.com/about/crew">Matthew</a> of the Letterboxd crew, with a <a href="http://feedback.letterboxd.com/forums/136771-general/suggestions/2360263-add-lovefilm-imports">ticket closure</a> shortly thereafter. That beats 3 years of waiting.</p>
+
+
+	<div class="entry_content">Tagged <a href="/tag/films">films</a>, <a href="/tag/hacking">hacking</a>,  | <a href="#disqus_thread">Leave a comment</a></div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+      <footer>
+        <div class="footer-about">
+          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: mixes</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Mixbooth</title>
+        <link>http://ianwootten.co.uk/2010/03/21/mixbooth</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2010-03-21T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2010/03/21/mixbooth</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.mixbooth.com">Mixbooth</a> is a dj mix hosting service I created several years ago. At the time there wasn’t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you’d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it. It was good at the time and I got quite a buzz out of seeing new uploads appearing and hearing what others had created. I took the decision to end use of <a href="http://www.mixbooth.com">mixbooth</a> after about a year of having a couple of mixes a week uploaded. This was mainly due to academic commitments at the time.</p>
+
+<p>Anyway, I’ve been working on a rebuild of it for some time now. So I’m letting it loose on those who might be interested. I’m no longer hosting mixes, but hopefully exchanging useful info on them and those artists who feature within and allowing people to chat about them. It’s not everything I want it to be right now, but hopefully will serve to a use to djs other than myself. If you want to have a play, head to <a href="http://www.mixbooth.com/signup">www.mixbooth.com/signup</a> and I’ll get an invite out. I’ll also be tweeting updates via <a href="http://twitter.com/mixbooth">@mixbooth</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

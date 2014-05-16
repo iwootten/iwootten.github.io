@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: rant business</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Second Rate Britizens</title>
+        <link>http://ianwootten.co.uk/2013/07/06/second-rate-britizens</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-07-06T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/07/06/second-rate-britizens</guid>
+		<description><![CDATA[
+		   <p>I decided to attempt a simple app this week, first using <a href="http://gocardless.com">GoCardless</a>, then later the <a href="http://stripe.com">beta of Stripe</a>. It requires the payment of funds between two individuals, neither of which might be a business. GoCardless suggests signing up to use their <a href="https://gocardless.com/docs/partner_guide">partner programme</a>, which involves registering a user as a merchant. This isn’t entirely suitable given the individual will be asked many queries on the nature of their business (which they don’t have). Stripe have a similar offering, known as <a href="https://stripe.com/connect">“Connect”</a> which asks similar questions. It’s at this point users would probably start turning away.</p>
+
+<p>The recently announced <a href="https://stripe.com/blog/send-payouts-with-stripe">“Payouts”</a> from Stripe, seems like the most appropriate solution, but it doesn’t yet exist in the UK (and it’ll probably be a while before it does). Bigger players like Amazon’s fps require that you have a US card and haven’t ever made noises that they may be expanding into European markets.</p>
+
+<p>As developers in the UK, we get a bit of a bum deal. Software products are often first targeted towards the biggest (US) market and we fine folks have to sit around and wait until the smaller pieces of the puzzle are picked up and put in place. Sucks to be us.</p>
+
+<p>I’ve blogged in the past about the many payment providers cropping up and their services being unavailable in the UK. I can understand why this happens, but it’s frustrating not least because it hinders any momentum that might be able to be built at an earlier date. </p>
+
+<p>I doubt I’ll ever have the same momentum as I did with my idea this week. It’s unlikely therefore, it will ever see the light of day. A US counterpart could easily offer an international version of my idea today.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

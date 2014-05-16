@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>ianwootten.co.uk - Category: php</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Book Review: Code Igniter for Rapid PHP Application Development</title>
+        <link>http://ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-31T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.amazon.co.uk/exec/obidos/ASIN/1847191746/staplediet-21"><img src="http://images-eu.amazon.com/images/P/1847191746.02.TZZZZZZZ.jpg" alt="Code Igniter for Rapid PHP Application Development" /></a>In this book, author David Upton walks you through use of the Code Igniter framework, which is essentially PHP&#8217;s answer to Ruby on Rails. I&#8217;ve been a avid user of <a href="http://codeigniter.com">Code Igniter</a> since I discovered it last year, which is a nice waypoint for anyone trying to understand model-view-controller architectures and not wanting to make the move over to ROR quite yet.</p>
+<p>The angle of this book is taken from a first time CI developer, but one with some knowledge of both PHP and web development in general. The initial chapters begin by exploring why you&#8217;d choose to use CI and some of its benefits over straight PHP code (such as saving on code reproduction or easing development burdens), though doesn&#8217;t really offer any real comparison of features of other similar frameworks. A traditional chapter on setup of CI is also included, (though I think at 4 pages could have perhaps been merged with another!). </p>
+<p>The book then proceeds by tackling the subject at the core of CI, &#8216;model-view-controller&#8217; and how this relates to traditional methods of programming. David breaks down how CI is structured very well and gives suggestions of how applications built within it should be designed to be successful. Some of the example code savings at this stage are somewhat minimal over a standard approach, but I think David conveys how these rack up throughout a web app. Useful chapters of how active record and CRUD can be used to ease DB interaction and also how views can be organised to avoid repitition complete with examples should allow any new CI developer to get to grips with it very quickly.</p>
+<p>The later chapters quite extensively cover more &#8220;geeky&#8221; complicated subjects (using objects and namespaces, localisation, getting CI to interact with other services) which might be a bit much for a hobbyist user, but it gives some room for learning for others. The book also includes some good descriptions of how to make the most of the testing and profiling features which CI has out of the box to debug some of the larger web applications that you might undertake (Both features which I&#8217;ve previously been unaware of).</p>
+<p>The use of friendly language is a welcome change from other texts, but I think in places it does get in the way a bit of the particular functionality which is being talked about. The constant reenforcement of the MVC throughout will be welcome for new converts, but my own practical experience suggests this might be better bent in places. A number of the descriptions of features provided in the book are at the CI site, and I think what might have helped this book is if a single larger running example led the way to describing each of the features.</p>
+<p>At the moment, this is the only CI book available and it does well at covering the large featureset CI has. For a seasoned CI veteran it won&#8217;t bring any revelations, but if you&#8217;re new the framework it will serve you extremely well at getting your head round what makes it shine.</p>
+<p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

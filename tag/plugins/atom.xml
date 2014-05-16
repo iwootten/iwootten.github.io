@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: plugins</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Lovefilm Filmstream Plugin v0.2</title>
+        <link>http://ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0-2</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-07-20T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0-2</guid>
+		<description><![CDATA[
+		   <p>Just a quick note to say I’ve updated the plugin that generates my <a href="http://ianwootten.co.uk/filmstream">filmstream pages</a>. It’s become obvious that the <a href="http://developer.lovefilm.com">Lovefilm API</a> only exposes the last 10 features that you’ve rented in their “at home” list. This isn’t that great if you’ve been renting more than a few months. This is the same as the information you’d see in your account when logged in.</p>
+
+<p>I’ve made a simple modification to use the actual ids that <a href="http://lovefilm.com">Lovefilm</a> issue for films, rather than a autoincrement value. This way, there’s no need to empty what’s currently stored when updating and we capture the users history of rentals…</p>
+
+<p>You can grab it over <a href="http://www.ianwootten.co.uk/downloads/filmstream.zip">here</a></p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

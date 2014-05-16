@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: mongdb</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Blog rolling with CouchDB, Express and Node.js</title>
+        <link>http://ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-02-07T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js</guid>
+		<description><![CDATA[
+		   <p>Over the last little while, I’ve been doing a lot of playing with <a href="http://nodejs.org">Node.js</a>, mostly to run data collection scripts. Last week, I started following <a href="http://howtonode.org/express-mongodb">Ciaran Jessup’s tutorial</a> on getting started with <a href="http://nodejs.org">node.js</a>, <a href="http://github.com/visionmedia/express">Express</a> and <a href="http://www.mongodb.org/">mongoDB</a>. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar <a href="http://en.wikipedia.org/wiki/JavaScript">server side language</a>. I hit a few problems along the way in the tutorial, so I thought I’ve list a few of my findings here. I also wanted to make use of my preferred flavour of nosql – <a href="http://couchdb.apache.org/">couchdb</a> with express, which proved extremely easy to port the mongo model over to it. I hope someone out there finds this useful as I’ve yet to find a vast community using couchdb/express.</p>
+
+<p>First things first, you’ll want to install <a href="http://nodejs.org">Node</a> and <a href="http://npmjs.org">npm</a> (the node package manager) in order to be able to easily install node packages. You’ll also probably find it handy to have the <a href="http://howtonode.org/express-mongodb">original tutorial open</a> alongside this one. I’ve been using the latest versions of node (0.3.7) and npm (0.2.17) at the time of writing.</p>
+
+<p>Once that’s done, grab copies of the packages that we’ll be using:</p>
+
+<div class="highlight"><pre><code class="bash">npm install express</code></pre></div>
+
+<div class="highlight"><pre><code class="bash">npm install jade</code></pre></div>
+
+<div class="highlight"><pre><code class="bash">npm install sass</code></pre></div>
+
+<p>If you want to use couchdb, then make sure you have it installed – grab it over <a href="http://www.couchone.com/get">here</a> and then install the package for talking to node.</p>
+
+<div class="highlight"><pre><code class="bash">npm install cradle</code></pre></div>
+
+<p>The first hurdle I found was that the way in which that express is called has changed a little.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyDecoder</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">logger</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
+
+<p>Then by saving to a file called app.js and calling using:</p>
+
+<div class="highlight"><pre><code class="bash">node app.js</code></pre></div>
+
+<p>Once that’s done. You can then visit 127.0.0.1:3000 in your browser to see a rivetting message!</p>
+
+<p>After creating folder beneath our original app.js in which to put views, you can use the original <a href="http://howtonode.org/express-mongodb/articleprovider-memory.js">article provider file</a> and the updated app.js below in order to have an app with a few articles shown.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./articleprovider-memory&#39;</span><span class="p">).</span><span class="nx">ArticleProvider</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyDecoder</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">logger</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">articleProvider</span><span class="o">=</span> <span class="k">new</span> <span class="nx">ArticleProvider</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">docs</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sys&#39;</span><span class="p">).</span><span class="nx">inspect</span><span class="p">(</span><span class="nx">docs</span><span class="p">));</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
+
+<p>Now when you re-run, you’ll see 3 separate articles. Oooh fancy!</p>
+
+<p>Next I hit my first hurdle. Express no longer uses the HAML HTML template language and instead uses JADE by default. This requires converting the HAML templates across to their equivalent JADE counterparts. Basically, this is as simple as dropping the ‘%’ from the beginning of each line (I also replaced braces with brackets in later templates).</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">html</span>
+  <span class="nt">head</span>
+    <span class="nt">title</span><span class="p">=</span> <span class="n">title</span>
+    <span class="nt">link</span>(<span class="na">rel:</span> <span class="err">&#39;</span><span class="na">stylesheet</span><span class="err">&#39;,</span> <span class="na">href:</span> <span class="err">&#39;/</span><span class="na">style</span><span class="err">.</span><span class="na">css</span><span class="err">&#39;</span> )
+  <span class="nt">body</span>
+    <span class="nf">#wrapper</span>
+      <span class="err">!= </span><span class="nt">body</span></code></pre></div>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">h1</span><span class="p">=</span> <span class="n">title</span>
+<span class="nf">#articles</span>
+  <span class="p">-</span> <span class="n">each</span> <span class="n">article</span> <span class="n">in</span> <span class="n">articles</span>
+    <span class="nt">div</span><span class="nc">.article</span>
+      <span class="nt">div</span><span class="nc">.created_at</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">created_at</span>
+      <span class="nt">div</span><span class="nc">.title</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span>
+      <span class="nt">div</span><span class="nc">.body</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">body</span></code></pre></div>
+
+<p>The app.js now becomes:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;view engine&#39;</span><span class="p">,</span> <span class="s1">&#39;jade&#39;</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;views&#39;</span><span class="p">,</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/views&#39;</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyDecoder</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">logger</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">compiler</span><span class="p">({</span> <span class="nx">src</span><span class="o">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/views&#39;</span><span class="p">,</span> <span class="nx">enable</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;sass&#39;</span><span class="p">]</span> <span class="p">}));</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./articleprovider-memory&#39;</span><span class="p">).</span><span class="nx">ArticleProvider</span><span class="p">;</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">docs</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;blogs_index.jade&#39;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">locals</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Blog&#39;</span><span class="p">,</span>
+        <span class="nx">articles</span><span class="o">:</span> <span class="nx">docs</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+<span class="p">})</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/*.css&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.css.sass&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
+
+<p>You’ll notice that here we enable the CSS compiler sass and HTML compiler jade. If you download the original <a href="http://howtonode.org/express-mongodb/views/style.css.sass">sass CSS template</a> into your views folder, you can now restart the app and inspect the fruits of your labour. The CSS shouldn’t actually sit in the views folder, according to the creator of Express, and should instead should be compiled with the sass package itself. I’ve yet to discover the correct way of doing this. To request a stylesheet in the view, we need to do the following:</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">html</span>
+  <span class="nt">head</span>
+    <span class="nt">title</span><span class="p">=</span> <span class="n">title</span>
+    <span class="nt">link</span>(<span class="na">rel:</span> <span class="err">&#39;</span><span class="na">stylesheet</span><span class="err">&#39;,</span> <span class="na">href:</span> <span class="err">&#39;/</span><span class="na">style</span><span class="err">.</span><span class="na">css</span><span class="err">&#39;</span> )
+  <span class="nt">body</span>
+    <span class="nf">#wrapper</span>
+      <span class="err">!= </span><span class="nt">body</span></code></pre></div>
+
+<p>If you reload now and visit <a href="http://127.0.0.1:3000">127.0.0.1:3000</a> you should see your posts with a little more style.</p>
+
+<p>Creating a form for new posts looks like this:</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">h1</span><span class="p">=</span> <span class="n">title</span>
+<span class="nt">form</span>( <span class="na">method=</span> <span class="s">&#39;post&#39;</span> )
+  <span class="nt">div</span>
+    <span class="nt">div</span>
+      <span class="nt">span</span> Title :
+      <span class="nt">input</span>(<span class="na">type=</span><span class="s">&#39;text&#39;</span><span class="err">,</span> <span class="na">name=</span> <span class="s">&#39;title&#39;</span><span class="err">,</span> <span class="na">id=</span> <span class="s">&#39;editArticleTitle&#39;</span> )
+    <span class="nt">div</span>
+      <span class="nt">span</span> Body :
+      <span class="nt">textarea</span>( <span class="na">name=</span> <span class="s">&#39;body&#39;</span><span class="err">,</span> <span class="na">rows=</span> <span class="nv">20</span><span class="err">,</span> <span class="na">id=</span> <span class="s">&#39;editArticleBody&#39;</span> )
+    <span class="nt">div</span><span class="nf">#editArticleSubmit</span>
+      <span class="nt">input</span>( <span class="na">type=</span> <span class="s">&#39;submit&#39;</span><span class="err">,</span> <span class="na">value=</span> <span class="s">&#39;Send&#39;</span> )</code></pre></div>
+
+<p>And the new app.js routes are as follows:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/blog/new&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;blog_new&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">locals</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;New Post&#39;</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/blog/new&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">),</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)</span>
+  <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">docs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>In order to add persistence using mongodb, nothing changes in the original model file, <a href="http://howtonode.org/express-mongodb/articleprovider-mongodb.js">so go ahead and use that</a>. You’ll need to have installed the package ‘mongodb’ if you’d like to try out using it though and update your instantiation of the articleprovider class by supplying a port number to which mongo is installed.</p>
+
+<h1 id="adding-couchdb-persistence">Adding CouchDB Persistence</h1>
+
+<p>Here, I took my own angle on the tutorial and decided to give attempting to make my own persistence model using couchdb a go. It proved to be extremely easy, given the JSON representation and HTTP/GET method of access already built in to it.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">cradle</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cradle&#39;</span><span class="p">);</span>
+
+<span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">port</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">connection</span><span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="nx">cradle</span><span class="p">.</span><span class="nx">Connection</span><span class="p">)(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">port</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">cache</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">raw</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">});</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">db</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">connection</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">ArticleProvider</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">findAll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">view</span><span class="p">(</span><span class="s1">&#39;articles/all&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">){</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">docs</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="nx">result</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">row</span><span class="p">){</span>
+          <span class="nx">docs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">docs</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">ArticleProvider</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">findById</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">)</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+        <span class="k">else</span> <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span>
+      <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">ArticleProvider</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">save</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">articles</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">articles</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;undefined&quot;</span><span class="p">)</span>
+      <span class="nx">articles</span> <span class="o">=</span> <span class="p">[</span><span class="nx">articles</span><span class="p">];</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span> <span class="nx">articles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">article</span> <span class="o">=</span> <span class="nx">articles</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">article</span><span class="p">.</span><span class="nx">created_at</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="p">[];</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span> <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">created_at</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">articles</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">)</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+      <span class="k">else</span> <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">articles</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="nx">ArticleProvider</span><span class="p">;</span></code></pre></div>
+
+<p>I added the following view and route to my app.js too, to allow support for clicking upon articles.</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">div</span><span class="nc">.article</span>
+  <span class="nt">h1</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span>
+  <span class="nt">div</span><span class="nc">.created_at</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">created_at</span>
+  <span class="nt">div</span><span class="nc">.body</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">body</span></code></pre></div>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/blog/view/:id&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+   <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+     <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">doc</span><span class="p">){</span>
+       <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;blog_view&#39;</span><span class="p">,</span> <span class="p">{</span>
+       <span class="nx">locals</span><span class="o">:</span> <span class="p">{</span>
+         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;New Post&#39;</span><span class="p">,</span>
+         <span class="nx">article</span><span class="o">:</span> <span class="nx">doc</span>
+       <span class="p">}</span>
+     <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>And in order to support it, the main view now becomes as follows:</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">h1</span><span class="p">=</span> <span class="n">title</span>
+<span class="nf">#articles</span>
+  <span class="p">-</span> <span class="n">each</span> <span class="n">article</span> <span class="n">in</span> <span class="n">articles</span>
+    <span class="nt">div</span><span class="nc">.article</span>
+      <span class="nt">div</span><span class="nc">.created_at</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">created_at</span>
+      <span class="p">-</span> <span class="k">var</span> <span class="n">articlelink</span> <span class="k">=</span> <span class="-Symbol">&#39;blog</span><span class="o">/</span><span class="n">view</span><span class="o">/</span><span class="err">&#39;</span> <span class="o">+</span> <span class="n">article</span><span class="o">.</span><span class="nc">_id</span><span class="o">;</span>
+      <span class="nt">a</span>(<span class="na">href=</span><span class="nv">articlelink</span>)
+        <span class="nt">div</span><span class="nc">.title</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span>
+      <span class="nt">div</span><span class="nc">.body</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">body</span>
+
+  <span class="nt">a</span>(<span class="na">href=</span><span class="s">&#39;blog/new&#39;</span>)
+    <span class="nt">Add</span> new post</code></pre></div>
+
+<p>Anyway, so far I’ve not yet added comment support, but given the headway I made here, I’d imagine it would be extremely easy to integrate into my couchdb article model. I’ll update here if I ever get round to adding it!</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: hotdealsuk</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Hotdealsuk &#8211; Indexing the webs best deals</title>
+        <link>http://ianwootten.co.uk/2007/01/24/hotdealsuk-indexing-the-webs-best-deals</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2007-01-24T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2007/01/24/hotdealsuk-indexing-the-webs-best-deals</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.hotdealsuk.com" title="hukdheader.gif"><img src="http://webtyrant.com/wp-content/uploads/2007/01/hukdheader.gif" alt="hukdheader.gif" /></a></p>
+<p>I came across <a href="http://hotdealsuk.com">hotdealsuk</a> prior to christmas and I think its an absolute must for any techie thats currently residing in the uk. Basically, a sophisticated messageboard, bargains of interest to the community are highlighted and then voted upon. Those more highly voted make it through to the front page.</p>
+<p>I absolutely love it and so far have managed to purchase 1 xbox (with 4 games) @ £50 and a <a href="http://www.maplin.co.uk/Module.aspx?ModuleNo=48872&#038;TabID=1&#038;source=1&#038;doy=24m1">400Gb harddrive @ £83</a>. Introducing a friend to it this evening meant he was able to purchase an <a href="http://www.amazon.co.uk/Accurist-MB608N-Stainless-Chronograph-Bracelet/dp/B000M4PTIM/ref=br_lf_m__1_1_img/026-8583712-3082010?%5Fencoding=UTF8&#038;m=A3P5ROKL5A1OLE&#038;s=electronics">accurist watch</a> for £31 rather than its usual £95 price tag.</p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

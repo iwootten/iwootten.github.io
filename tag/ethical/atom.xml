@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: ethical</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Fairy Tale Design Challenge</title>
+        <link>http://ianwootten.co.uk/2009/01/13/fairy-tale-design-challenge</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2009-01-13T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2009/01/13/fairy-tale-design-challenge</guid>
+		<description><![CDATA[
+		   <p>It seems that all I do these days is talk about what’s going on over at <a href="http://www.fairandbare.com">Fair &#038; Bare</a> and if you’re here because you prefer the more geeky side to me I apologise I’ve not been indulging you recently. However, that said, these posts do represent a significant part of me right now and what’s going on in my life so I think it fair I shout about it.</p>
+
+<p>We’re holding our <a href="http://www.fairandbare.com/challenge/fairytales">second design challenge</a> right now and calling for designs based around the concept of a unique twist on a fairy tale. The prize is our biggest ever, at £200 + a copy of Adobe Photoshop CS3 (which was kindly donated by one of F&#038;B’s community!). You have until 15th February to both submit a design and get it voted on by the F&#038;B peeps!</p>
+
+<p>It looks like I’ve also failed to mention over here the winner of our Snowdodgers competition as the amazing <a href="http://www.mistershrew.co.uk">Mister Shrew</a>. The shirts we printed look amazing and you should pick one up now if you haven’t already.</p>
+
+<p><a href="http://www.fairandbare.com/challenge/fairytales"><img alt="" src="http://www.fairandbare.com/images/challenges/fairy_challenge.gif" title="Fair &#038; Bare - Fairy Tale Design Challenge" class="alignnone" width="398" height="300" /></a></p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

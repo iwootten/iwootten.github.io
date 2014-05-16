@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>ianwootten.co.uk - Category: rant</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Essential Cinema According to Lovefilm</title>
+        <link>http://ianwootten.co.uk/2012/11/20/essential-cinema-lovefilm</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-11-20T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/11/20/essential-cinema-lovefilm</guid>
+		<description><![CDATA[
+		   <p>Given there’s a bit of lovefilm bashing <a href="http://www.tomalloyd.com/lovefilm-hate-email/">going on in Wales</a> at the moment, I thought I’d chime in with the most frustrating thing I found with communications from lovefilm. </p>
+
+<p>Check out the following weekly email I used to receive (I’ve since unsubscribed), along with my annotations.</p>
+
+<p><a href="http://www.lovefilm.com/emailpublic/cmsnewsletter/uk-newsletter/LOVEFiLM-Newsletter/2012/Newsletter-Issue-No-409?cid=lfnl409tlweb&#038;brand=lovefilm"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/11/Read-Newsletter-Issue-409-5.jpg" alt="" title="Read Newsletter Issue 409 5" width="470" height="906" class="alignnone size-full wp-image-569" /></a></p>
+
+<p>I really couldn’t care less about who lovefilm are sending into cinema’s to perform reviews and certainly don’t want it to be the first text I see in relation to that image. </p>
+
+<p>Also, the first thing I’m drawn to is the image. Why lead me away from the title of that movie and make work to find the text for the heading? Don’t make the title and preview exactly the same size, or divide them up!</p>
+
+<p>End of rant.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>You’re Nowhere Near as Good a Hacker as You Think</title>
+        <link>http://ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-08-13T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think</guid>
+		<description><![CDATA[
+		   <p>What are you doing? Why would you go down that road? Shouldn’t you be building something else? How long have you been doing this?</p>
+
+<p>Sure you can fool your clients into thinking you’re adding value to their product. I know the truth. But how did you – with all your expertise get to the point in thinking that’s what you’re really doing?</p>
+
+<p>This is your first project? Shouldn’t you be focusing on your clients problems? </p>
+
+<p>Why are you busily building a framework, when you’re already overdue? You know there’s any flavour of ORM available already right? What’s wrong with you? Where are your requirements?</p>
+
+<p>Do you think that you’re going to be able to produce something better than the thousands of contributors to that open source project you’re avoiding using? They’ve been doing it for years already, for thousands of use cases. You think somehow yours falls outside it’s catchment area? Seriously? How arrogant are you?</p>
+
+<p>You’ve been blinkered into thinking you’re an expert in areas you’re not. When your time is spent solving the wrong problems and you’re not invited back, I hope you’ll realise that you’re nowhere near as good a hacker as you think.</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Goodbye 1 &#038; 1</title>
+        <link>http://ianwootten.co.uk/2012/01/12/goodbye-1-1</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-01-12T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/01/12/goodbye-1-1</guid>
+		<description><![CDATA[
+		   <p>I just sent the following email to 1 &#038; 1′s billing department. I’ve been with them for coming up to 7 years now and they were, when I first used them, the only registraar I knew about and I was really happy. </p>
+
+<p>As the number of domains I own has grown, their account admin has become really totally useless to manage them all. I recieved a payment request out of the blue today and it tipped me over the edge.</p>
+
+<blockquote>
+  <blockquote>
+    <p>We contacted you regarding a declined payment or an expired credit/debit card and have not yet heard back from you.<br />
+Our records indicate that there is an unpaid balance in your 1&#038;1 customer account no.: K####### as listed below.</p>
+  </blockquote>
+
+  <p>Firstly – No you didn’t.</p>
+
+  <p>Secondly – It would be far more useful telling me which domain name in my account a payment demand is in reference to rather than my account number, as I have more than 1 domain with you.</p>
+
+  <p>Thirdly – The steps you’ve listed here to find my payment details miss steps and references links that don’t exist.</p>
+
+  <p>Fourthly – Threatening action when you haven’t actually sent a primary payment request email is rude, forceful and obnoxious.</p>
+
+  <blockquote>
+    <p>Please be aware that if this matter is not resolved, you may be sent to a debt collection agency. If the account is sent to a debt collection agency a £15.00 &gt; charge will be added to the unpaid balance.</p>
+  </blockquote>
+
+  <p>I’ve decided to take all of my business elsewhere at the earliest opportunity. I’d hope you’d take heed of these comments and pay your other longstanding customers the respect they deserve.</p>
+</blockquote>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>On Demand Access</title>
+        <link>http://ianwootten.co.uk/2006/11/19/on-demand-access</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-11-19T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/11/19/on-demand-access</guid>
+		<description><![CDATA[
+		   <p>I don’t really understand microsoft, over the last few days, their live network has been experiencing problems every time I’ve tried to logon to access my email. Who knows what my 8 emails contain which are hidden within live mail, I certainly don’t. You would think that more people would be in uproar about this – I mean what if these were payment requests, final demands or quick response business proposals? I could be loosing out on some serious money here.</p>
+
+<p>Apparently, even they are unsure of the problem – it could be that “This site may be experiencing a problem” or “The site may not be a member of the Windows Live Network”. These seem quite vague, I mean obviously the sites experiencing a problem as everything would be fine and dandy if not and I’m pretty sure that Live mail is a member of their Live network too. Why don’t you try telling me something that I don’t already know?</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>EMuppets</title>
+        <link>http://ianwootten.co.uk/2005/11/03/emuppets</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2005-11-03T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2005/11/03/emuppets</guid>
+		<description><![CDATA[
+		   <p>So, I’ve had not a lot of response to my situation with ebuyer of late, but this recent email I recieved from them sent me over the edge – I’d sent them 7 emails and phoned 2 times with a 40 min wait prior to recieving this.<br />
+———————————————————————————————————-<br />
+Microsoft OEM Windows XP Professional x64 Edition – 1Pk</p>
+
+<p>Dear Sir / Madam,</p>
+
+<p>Thank you for informing us of your missing item. When we are believed to have short shipped an<br />
+item, we carry out a series of checks to make sure that the item has not been dispatched.</p>
+
+<p>Our first check is to recreate the order in our warehouse, and match that weight against the weight<br />
+of your order when it was shipped. We have carried out this check, and the<br />
+weights show we have shipped the item. This means we have to further investigate the missing item, by<br />
+checking the parcel with Citylink, our couriers, and possibly reporting to the relevant<br />
+authorities should something seem suspect.</p>
+
+<p>We have performed these checks and believe goods to have shipped on this occasion. However, if an<br />
+incorect item/s have been delivered, please advise as this will account for the weight check and we<br />
+can investigate further.</p>
+
+<p>Thank you for your patience and co-operation in this matter.</p>
+
+<p>Regards,</p>
+
+<p>Ebuyer Customer Support</p>
+
+<p>———————————————————————————————————-</p>
+
+<p>In response to your email of 03/11/05:</p>
+
+<p>Dear ebuyer,</p>
+
+<p>I’d be interested to know why exactly you think I’d make a complaint that an item had not been delivered if it had? I have been a loyal customer of ebuyers since 2002 – making over £3200 worth of purchases over that time! – all of which further adds to the horrendous way in which you are treating me, I am extremely annoyed.</p>
+
+<p>I’d also add that this method of checking weight descrepencies between items is horrendously flawed in this matter – you believe you can account for the difference of a weight of a unboxed oem cd and leaflet, by recreating it in the warehouse?! The weight of these items is comparable to the air-packing which you ship with every order, ie nothing!</p>
+
+<p>If you’d fully read my enotes you would see that I’ve told you the item has not been shipped, in every note I left, there we no boxes opened or damaged, so looking into your delivery companies actions seems rather pointless – I’ve had to purchase this elsewhere due to the decided lack of response on ebuyers part, incurring further cost to myself. In the course of a month, you have spent your time not listening to me, lying to me upon the phone, giving me information which I already know and have informed you of.</p>
+
+<p>Suffice to say I shall not be purchasing from you in the future and by the looks of things may have to employ the services of a solicitor in order to retrieve my money anyway.</p>
+
+<p>This situation is ridiculous – I expect a full refund immediately, I was initially told this matter would be resolved in a day, and your continued lack of action is deplorable.</p>
+
+<p>Mr I.M.Wootten</p>
+
+<p>——————————————————————————————————-<br />
+Dear Mr Wootten,</p>
+
+<p>The email which has been sent to you so we can gain further information to assist us with our enquiries. The weights of the parcels are showing as that the item has shipped. Can you please advise if you received an incorrect item or was any of the packaging damaged on arrival.</p>
+
+<p>Kind Regards<br />
+Sarah<br />
+Ebuyer Customer Support Team</p>
+
+<p>———————————————————————————————————-<br />
+I think the content of every enote I have ever written, along with the last I’ve just written covers this as well as the title of this post. The item is “Missing”. I had no extra items delivered, no boxes opened or damaged, I had the DVDRW Drive, Thermal Grease, Nero Express CD OEM in one package and the Logitech Keyboard bundle in another in the last consignment delivery.</p>
+
+<p>———————————————————————————————————<br />
+Dear Mr Wootten,</p>
+
+<p>Your card has now been refunded. The funds will be in your account in the next 3-4 working days.</p>
+
+<p>Kind Regards<br />
+Sarah<br />
+Ebuyer Customer Support Team</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Fools</title>
+        <link>http://ianwootten.co.uk/2005/10/06/fools</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2005-10-06T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2005/10/06/fools</guid>
+		<description><![CDATA[
+		   <p>Whats the most annoying thing ebuyer could leave out of my order for my building a new PC? That’s it – the OS, so I can build my lovely little machine, but not actually use the thing until they get their act together. Nice one guys, you <a href="http://www.ebuyersucks.com">suck ass</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

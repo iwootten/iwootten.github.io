@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: learning</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>2012</title>
+        <link>http://ianwootten.co.uk/2013/01/02/2012</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-01-02T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/01/02/2012</guid>
+		<description><![CDATA[
+		   <p>So here we are in a brand new year. 2012 came and went without even the slightest apocalypse. Reflecting on what has been achieved this past year has found favour with others in the web profession so I thought I might try it. More importantly to me, it also seems like a good way to perhaps spur me on to achieve some firm targets this year.</p>
+
+<p>My circumstances have dramatically changed since January last year. I’ve gone from full time employment as a frontend/backend developer for Aardman to being self employed as a frontend developer for the majority of the year. This was (and still is) a scary leap. Finding work, managing finances whilst still trying to be a good father/husband is a sometimes difficult balancing act to perform. So far though (after 9 months and counting), I’m enjoying it.</p>
+
+<h2 id="events">Events</h2>
+
+<p>The amount of conferences/meetups that have been organised this side of the bridge has been fantastic, especially where I’ve not had such a long commute this year. I’ve been able to head along regularly but have had to be fairly choosy about the amount of events I can attend. It’s great to see such a blossoming community round here. I’ve also thought about organising my own event, though I think I have enough on my plate at the moment.</p>
+
+<h2 id="learning">Learning</h2>
+
+<p>JS has been my bread and butter this year. I’ve enjoyed digging deeper into various frontend frameworks and learning as much as I can about the language. Where I’ve known relatively little about the ins and outs of other backend languages, I feel like I actually have something to contribute here. I’ve continued tinkering with node.js on the backend and have used it as a build tool for much of the year. I spent some time learning a little Cocoa shortly after leaving Aardman and taking the <a href="https://education.10gen.com/">MongoDB developer training course by 10gen</a>. Whilst I found it difficult fitting the course in around everything, I can highly recommend it. I’ve even developed a couple of things myself, which I hope to tidy up and release over the coming year. I’ve not been able to write a great deal about what I’m learning, but hope that will soon change. Some of my most popular posts here relate to use of CouchDB and node.js from many moons ago.</p>
+
+<h2 id="focus">Focus</h2>
+
+<p>I already had a number of side projects running before the start of last year but I’ve had a number of ideas for tools and a fairly major service I’d like to work on across 2012. I plan on releasing more details soon, but would love to have a recurring revenue stream from one of these coming in at some point this year. I find I can easily stray from this path and get distracted by other less fruitful ideas I have. I’m going to make it a resolution that I remain committed to one thing at a time, whilst putting to bed ideas that haven’t worked out.</p>
+
+<h2 id="design">Design</h2>
+
+<p>As much as I feel like I have adequate design chops, I’ve not had the opportunity to demonstrate them publicly. I’d love to redesign <a href="http://ianwootten.co.uk">several</a> <a href="http://niftydigits.com">of my</a> <a href="http://fairandbare.com">sites</a> to a standard that I feel reflect my skills as a web craftsman. I’m currently working on developing a wordpress theme which I hope to contribute back to the community once I’m done.</p>
+
+<p>So in all, it’s been a good, 2012. I’ve not fitted everything I might like in, but much of the content of my projects and work I had no idea about back at the start of last year. That also means you have something to look forward to from me in 2013. </p>
+
+<p>Happy New Year everyone.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

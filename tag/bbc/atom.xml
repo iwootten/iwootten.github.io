@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: bbc</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Cardiff Web Meetup #3</title>
+        <link>http://ianwootten.co.uk/2008/05/31/cardiff-web-meetup-no-3</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-05-31T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/05/31/cardiff-web-meetup-no-3</guid>
+		<description><![CDATA[
+		   <p>Just a quick note to remind people that this coming week is the third Cardiff meetup for web types in wales. It’s in 10 Feet Tall on Church St on Wednesday 4th June from 6.30pm. Featured speakers include <a href="http://www.thelondonbiker.com/">Matthew Cashmore</a> (Development Producer for BBC Future Media &#038; Technology, Research and Innovation) and <a href="http://timholmes.blogspot.com/">Tim Holmes</a> (Course co-ordinator for the Postgraduate Diploma in Magazine Journalism and the MA International Journalism: Magazine Pathway at Cardiff University’s School of Journalism, Media and Cultural Studies). It sounds like its going to be two really interesting talks with Matt discussing BBC Backstage and Mashed, whilst Tim will be chatting about journalism for the web. If thats not enough, there is even bands that you would normally have to pay for on afterwards. </p>
+
+<p>See the <a href="http://www.facebook.com/event.php?eid=13081094169">facebook</a> or <a href="http://upcoming.yahoo.com/event/676186/">upcoming</a> events for more.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

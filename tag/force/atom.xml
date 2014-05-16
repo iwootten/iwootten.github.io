@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: force</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>New T-Shirts from Fair &#038; Bare</title>
+        <link>http://ianwootten.co.uk/2008/11/20/new-t-shirts-from-fair-bare</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-11-20T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/11/20/new-t-shirts-from-fair-bare</guid>
+		<description><![CDATA[
+		   <p>I&#8217;m really pleased to announce that Fair &#038; Bare has just released 2 new shirts. First up is “Feel the Force” based on a slogan submission by JonnyDanger and secondly is the fantastic Esther Aarts’ “My Bike is My Castle”. </p>
+<p><a href="http://www.fairandbare.com/product/2/feel_the_force"><br />
+<img src="http://www.fairandbare.com/images/shirts/2/1.jpg" alt="JonnyDanger - Feel the Force" /><br />
+</a></p>
+<p><a href="http://www.fairandbare.com/product/3/my_bike_is_my_castle"><img src="http://www.fairandbare.com/images/shirts/3/1.jpg" alt="Esther Aarts - My Bike is My Castle" /></a></p>
+<p>We printed these on super-soft, Fairtrade certified, organic in-conversion cotton using fantastic waterbased inks. They also look pretty darn good. It&#8217;s the net result of a ton of hard work by our printers, designers, community and the original cotton original farmers that mean that these have been able to be released. <a href="http://www.fairandbare.com">Head over to buy one (or more!)</a>.</p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

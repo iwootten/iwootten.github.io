@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: customer service</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Goodbye 1 &#038; 1</title>
+        <link>http://ianwootten.co.uk/2012/01/12/goodbye-1-1</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-01-12T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/01/12/goodbye-1-1</guid>
+		<description><![CDATA[
+		   <p>I just sent the following email to 1 &#038; 1′s billing department. I’ve been with them for coming up to 7 years now and they were, when I first used them, the only registraar I knew about and I was really happy. </p>
+
+<p>As the number of domains I own has grown, their account admin has become really totally useless to manage them all. I recieved a payment request out of the blue today and it tipped me over the edge.</p>
+
+<blockquote>
+  <blockquote>
+    <p>We contacted you regarding a declined payment or an expired credit/debit card and have not yet heard back from you.<br />
+Our records indicate that there is an unpaid balance in your 1&#038;1 customer account no.: K####### as listed below.</p>
+  </blockquote>
+
+  <p>Firstly – No you didn’t.</p>
+
+  <p>Secondly – It would be far more useful telling me which domain name in my account a payment demand is in reference to rather than my account number, as I have more than 1 domain with you.</p>
+
+  <p>Thirdly – The steps you’ve listed here to find my payment details miss steps and references links that don’t exist.</p>
+
+  <p>Fourthly – Threatening action when you haven’t actually sent a primary payment request email is rude, forceful and obnoxious.</p>
+
+  <blockquote>
+    <p>Please be aware that if this matter is not resolved, you may be sent to a debt collection agency. If the account is sent to a debt collection agency a £15.00 &gt; charge will be added to the unpaid balance.</p>
+  </blockquote>
+
+  <p>I’ve decided to take all of my business elsewhere at the earliest opportunity. I’d hope you’d take heed of these comments and pay your other longstanding customers the respect they deserve.</p>
+</blockquote>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

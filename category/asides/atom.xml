@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>ianwootten.co.uk - Category: asides</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Where does Steam store Indie Game The Movie?</title>
+        <link>http://ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-06-12T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie</guid>
+		<description><![CDATA[
+		   <p>A quickie – but for all those that have downloaded “Indie Game the Movie” today from steam and are wondering where the video files are stored, you can find them here:</p>
+
+<p>Steam/SteamApps/common/Indie Game The Movie/data/movies</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Johnny Lee&#8217;s Innovative Uses of Common Technology</title>
+        <link>http://ianwootten.co.uk/2008/05/30/johnny-lee-innovative-uses-of-common-technology</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-05-30T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/05/30/johnny-lee-innovative-uses-of-common-technology</guid>
+		<description><![CDATA[
+		   <p>I’m not sure how many visitors have caught this ted talk before, but I’d thought I’d post it anyway. Johnny Chung Lee is amazing, turning a $40 wii remote into use an interactive whiteboard or a new way to interact with video games via head tracking. He’s been at this sort of thing for ages previously putting out a <a href="http://www.littlegreatideas.com/steadycam/">$14 steadycam</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Undeserved Job Titles</title>
+        <link>http://ianwootten.co.uk/2007/09/20/undeserved-job-titles</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2007-09-20T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2007/09/20/undeserved-job-titles</guid>
+		<description><![CDATA[
+		   <p>Today on the return from uni I passed the new Subway that is opening up soon near Queen Street train station. On one of their job adverts, they were advertising for team leaders and <em>sandwich artists</em>. I’ve never really noticed my sandwiches being arranged in a artistic fashion before, maybe it would brighten my day if they were. I feel sorry for the poor art school graduate who ends up filling baguettes for a living.</p>
+
+<p>Does anyone else have examples of jobs with somewhat over enthusiastic job titles?</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>pMachine changes its name</title>
+        <link>http://ianwootten.co.uk/2007/03/09/pmachine-changes-its-name</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2007-03-09T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2007/03/09/pmachine-changes-its-name</guid>
+		<description><![CDATA[
+		   <p>pMachine has changed its name to <a href="http://ellislab.com">Ellislab</a>, and are <a href="http://ellislab.com">sporting a shiny new website for all to see</a>. The reason for the change is the expansion over the last 6 years to encompass products which don’t fall under the same banner now. I’m glad to see that the <a href="http://codeigniter.com">CodeIgniter</a> website has got a facelift. <a href="http://31three.com/">31three</a> did the hard graft on the design and <a href="http://ellislab.com">they</a> all <a href="http://expressionengine.com">look</a> <a href="http://codeigniter.com">awesome</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>What colour are you?</title>
+        <link>http://ianwootten.co.uk/2005/10/08/what-colour-are-you</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2005-10-08T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2005/10/08/what-colour-are-you</guid>
+		<description><![CDATA[
+		   <p>I found a wicked animation by Maria Claudia Cortes describing what personalities a bunch of colours are often attributed with. I reckon I’m a mixture of red and blue, my wardrobe reflects this as well. <a href="http://www.mariaclaudiacortes.com/">What colour are you?</a></p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

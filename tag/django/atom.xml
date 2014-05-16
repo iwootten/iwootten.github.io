@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: django</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Location Based Job Boards</title>
+        <link>http://ianwootten.co.uk/2008/01/30/location-based-job-boards</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-30T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/30/location-based-job-boards</guid>
+		<description><![CDATA[
+		   <p>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent <a href="http://djangogigs.com">job</a> and <a href="http://simonwillison.net/2008/Jan/23/djangopeople/">profile sites</a> in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don’t have time myself to do this though unfortunately – perhaps someone might like to chat about collaborating). What I’ve concluded is that being aware of those jobs within a certain area might be quite useful – and simple to implement. What you’d basically end up with is a situation where you could subscribe to updates on jobs in a particular field within a certain area (think – “tell me about all dev jobs within 50 miles”). Whilst this feature may exist on some other sites (though I’m unaware of it) my experience tells me that it probably isn’t executed particularly well.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

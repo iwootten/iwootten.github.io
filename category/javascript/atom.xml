@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+    <title>ianwootten.co.uk - Category: javascript</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Scaling a Linear Domain to an Ordinal Range with d3</title>
+        <link>http://ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2014-03-07T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3</guid>
+		<description><![CDATA[
+		   <p>I’ve had the opportunity of using <a href="http://d3js.org/">d3</a> quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.</p>
+
+<p>Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</p>
+
+<p>I’d picked out a colour palette I wanted to use for a particular graph, as per below:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#B8D0DE&quot;</span><span class="p">,</span> <span class="s2">&quot;#9FC2D6&quot;</span><span class="p">,</span> <span class="s2">&quot;#86B4CF&quot;</span><span class="p">,</span> <span class="s2">&quot;#73A2BD&quot;</span><span class="p">,</span> <span class="s2">&quot;#6792AB&quot;</span><span class="p">];</span></code></pre></div>
+
+<p>The only examples I’ve seen similar to this are where it is assumed you want to vary darkness of colours based on value or <a href="http://stackoverflow.com/questions/17321139/mapping-in-d3-ordinal-scales">vary the domain</a> based on the number of colours you want. Not a good fit.</p>
+
+<p>I wanted to pick one of my values based on a linear value from my data set. My first thought was to make use of the ordinal scale function provided by d3. Something like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colour</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">ordinal</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">domain</span><span class="p">(</span><span class="nx">mySortedDataValues</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="nx">colours</span><span class="p">);</span></code></pre></div>
+
+<p>In doing this, I got something that *looked* a bit like it was working, but not the way I expected. In fact, the way an ordinal scale works is that it provides a 1-to-1 mapping of domain values to the range, rather than any kind of interpolation between them. In this case, it was expecting only 5 distinct data values (to match up against the colours) and for everything over and above that, it wrapped them round to the beginning of the domain again. The solution then is fairly simple once you’ve got your head around that.</p>
+
+<p>What I did next, was to create a scale that gave the index of the colour we were going to be mapping to. This works well, because the indices are linear and d3 has the ability to do the dirty work in that respect.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colourIndex</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">linear</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">domain</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">data</span><span class="p">)])</span>
+  <span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">colours</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+
+<span class="nx">svg</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">enter</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">colours</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">colourIndex</span><span class="p">(</span><span class="nx">d</span><span class="p">))];</span>
+   <span class="p">});</span></code></pre></div>
+
+<p>Here we end up with an index ranging across all the indices of the colour array, and a colour appropriately selected from the palette as expected. You can see the resultant effect in the graph linked to below:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Working on some funky graphs for <a href="https://twitter.com/UseHourglass">@usehourglass</a>. This one shows how often you work certain times of the week: <a href="http://t.co/xRHE39HmTu">pic.twitter.com/xRHE39HmTu</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/441595966613774336">March 6, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>The Problem with Full Stack JS Applications</title>
+        <link>http://ianwootten.co.uk/2013/04/03/the-problem-with-full-stack-js-applications</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-04-03T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/04/03/the-problem-with-full-stack-js-applications</guid>
+		<description><![CDATA[
+		   <p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It’s inevitable that there’s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you’re doing when knee deep in code.</p>
+
+<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I’ve certainly found myself tied up in this kind of knot. For example, if I’m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you’re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you’re working and if that’s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn’t the case when working in one language. My guess is you’re going to have to take a second glance in order to figure out where you are, which isn’t a big issue, but is frustrating.</p>
+
+<p>Currently my apps typically are structured like this:</p>
+
+<p>server.js (Main node/express file)<br />
+-lib (Classes for DB Calls)<br />
+-node_modules (Node requires)<br />
+-public (Client backbone app)<br />
+    -css<br />
+    -images<br />
+    -js<br />
+        -lib (Backbone and other dependencies)<br />
+        -collections<br />
+        -models<br />
+        -templates<br />
+        -views<br />
+-routes (Contains the main express routes)</p>
+
+<p>But I actually think the following is a better approach:</p>
+
+<p>-server<br />
+    server.js<br />
+    -lib<br />
+    -node_modules<br />
+    -routes<br />
+-client (Renamed from public)<br />
+    -css<br />
+    -images<br />
+    -js<br />
+        -lib<br />
+        -collections<br />
+        -models<br />
+        -templates<br />
+        -views</p>
+
+<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn’t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don’t believe there is a solution.</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Breaking up Relationships with CouchDB</title>
+        <link>http://ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-03-01T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb</guid>
+		<description><![CDATA[
+		   <p><em>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat ‘belated’]</em></p>
+
+<p>Beware – there’s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.</p>
+
+<p>For me, my first experiments working with databases were performed with Oracle, the staple of our computer science course at the time. We were taught how to identify common structures in what we wanted to store (or had already been stored) and how to represent the relationships which existed between them. There was an entire series of lectures dedicated to this fine art, much of which I now can’t remember.</p>
+
+<p>There has been an uptake in the number of developers working with NoSQL, or document oriented databases. These alternatives do not require decisions on subdividing documents into multiple record structures to be made at all, instead allowing the entire document to be recorded as a series of simple variable types. The contents of each document can vary from one document to the next. For the majority of developers who work with relational databases, this might come as a bit of a shock.</p>
+
+<p>There are a number of varieties of NoSQL flavours currently available: CouchDB, Cassandra and MongoDB are a few of the hot ones right now. I’m not going to discuss the pros and cons of each right here (for that I’d refer you to The Changelog’s NoSQL smackdown podcasts), but rather give you a whistle stop tour of CouchDB, which I’ve been working with for a few years now.</p>
+
+<p>If you want to follow along, you’ll need to head to the CouchDB site and read up on <a href="http://wiki.apache.org/couchdb/Installation">installation</a> for your platform. I’m using the <a href="http://couchdb.apache.org/">CouchDB server app</a>, which is nice and self contained.</p>
+
+<p>Document oriented storage gives me the ability not to have to worry about the structure of my documents prior to storage. From my own point of view this is a huge timesaver as my apps often tend to focus on a single type of document. Think of a blog post stored in a mysql database, we have a table for the post along with all its metadata, a table for the comments and maybe another for recording pingbacks. The same blog post in couch could be represented like so:</p>
+
+<div class="highlight"><pre><code class="json"><span class="p">{</span>
+   <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;83ab09b88836ab714f592293d4e02845&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;My Blog Post&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;ian&quot;</span><span class="p">:</span> <span class="s2">&quot;You&#39;re a wally&quot;</span><span class="p">},{</span><span class="nt">&quot;Some user&quot;</span><span class="p">:</span> <span class="s2">&quot;This post sucks&quot;</span><span class="p">}]</span>
+<span class="p">}</span></code></pre></div>
+
+<p>A document based db may well not be suitable for the nature of your application. However, I’ve found in lots of cases, it is.</p>
+
+<h2 id="rest-style-interface">Rest Style Interface</h2>
+
+<p>CouchDB works across a REST style interface. To write documents back to couch, you call a HTTP PUT or POST with your JSON structure. To read documents, you call a GET and to delete them you call DELETE. For example, to add a document with “_id=someid” to the database “blog”, you would call the following:</p>
+
+<div class="highlight"><pre><code class="bash">curl http://127.0.0.1:5984/blog/someid -X PUT -d <span class="s1">&#39;{&quot;Title&quot;:&quot;Another Blog Post&quot;, &quot;Content&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;}&#39;</span></code></pre></div>
+
+<p>Similarly you can HTTP GET this uri to return the document just added. Saving the document to a couch store will add another field, “_rev” which represents the particular revision of the document you’re storing. Every time you update this document, it will be stored as a new document, along with a new revision number. You have access to all these revisions within couch, or you can choose to cleanup the database by compacting and removing all but the most recent revision of documents. Another blog entry document without any comments would be perfectly valid stored in the same database, as well as a document featuring just an array of pingback items.</p>
+
+<p>You’ll notice that the structures are JSON objects. This is how all objects are exchanged between couch and other languages and over couch’s REST interface. Heading to where we stored the above blog document “http://127.0.0.1:5984/blog” in your browser yields a collection of metadata expressed in a JSON structure about that particular database. Appending “/83ab09b88836ab714f592293d4e02845″ (the id of the document) gives us the original blog document.</p>
+
+<p>This, in turn works wonderfully well with certain frontend frameworks – such as <a href="http://backbonejs.org">Backbone</a>. If you configure your backbone models to construct URLs the way CouchDB expects them, you can effectively have a frontend app driven by just a CouchDB store. As CouchDB returns JSON objects, it’s able to correctly parse and load them into your backbone app.</p>
+
+<h2 id="mapreduce">Map/Reduce</h2>
+
+<p>To support the extraction of substructures and sorting within these documents, couch has the concept of map/reduce built straight into its core. Futon, couch’s built in administration application, makes creation of these a very simple process. Maps and Reductions are described in Javascript, which is great given most of us are making more and more use of it these days. Head over to http://127.0.0.1:5984/_utils and you’ll see your collection of databases right away. Navigate to the blog database and under the view dropdown, select temporary view. Couch automatically populates this with a default temporary view:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">emit</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">doc</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>This basically reads as: for each document emit an object with a null key and the document as the value which is what you’ll see if you go ahead and run it. Not particularly exciting really, but by changing the null key to doc.title, we can emit all those blog posts sorted by title. To do something a little more complicated, such as determining the number of comments for each blog post we can make use of the reduce function too.</p>
+
+<p>Map:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="nx">emit</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Reduce:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">values</span><span class="p">){</span>
+   <span class="k">return</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">values</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Here, we cycle each of the comments for every blog post and emit a single value 1 for every comment. Our reduce function takes both the entire key and value set which are emitted from the map function for each document and calculates the sum of values sent to it. With these two very basic functions we can support all the queries we might want to make of the database. You can permanently store this entire map/reduce query as a view within couch to be called later. When a document is inserted which effects the result of the query, the map/reduce will be re-evaluated on the next call. It turns out that storing and querying documents in this way can be extremely performant.</p>
+
+<p>I very much enjoy having the ability to write my queries in a language I’m familiar with to retrieve results, rather than having to dip into MySQL voodoo.</p>
+
+<p><em>So, there you have it, CouchDB – I may well follow this up at a later date with a comparison with Mongo, given I’m now a certified developer.</em></p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Why I Choose Popular Frameworks</title>
+        <link>http://ianwootten.co.uk/2013/01/04/why-i-choose-popular-frameworks</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-01-04T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/01/04/why-i-choose-popular-frameworks</guid>
+		<description><![CDATA[
+		   <p>I feel compelled to write this post so late in the day after clocking <a href="https://gist.github.com/4454814">Tyler Renelle’s rant</a> on github about his problems with the popularity of certain JS frameworks (in the main <a href="http://backbonejs.org">Backbone.js</a>). After having written apps in a variety of JS frameworks (Backbone, Spine and Meteor), I’ve learned that the feature set of a framework is not the only thing I hold dear when making a choice between them.</p>
+
+<p>Documentation, support, learning curve and most importantly community are what also guide me when building anything. If I need to make an app quickly, I’ll of course develop it in my favourite tool (Backbone), because I’ve been using it for years and therefore doesn’t hold a cost. If I have a problem, I know there’s a ton of hackers who’ve probably already worked on solutions already and mechanisms are in place for them to offer advice. There may be better documented more capable tools, but I can’t foot the expense in the short term that might come with investigating something new and run the risk of hitting problems I can’t solve. In the long term, as a framework grows in popularity and garners these other factors then I may make that jump. </p>
+
+<p>The real reason these frameworks are popular right now is in part because they are already popular.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Oh Crap, I&#8217;m a Frontend Developer</title>
+        <link>http://ianwootten.co.uk/2012/11/23/oh-crap-im-a-frontend-developer</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2012-11-23T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2012/11/23/oh-crap-im-a-frontend-developer</guid>
+		<description><![CDATA[
+		   <p>When I was first tiptoeing in the waters of web development (early 2000′s), getting a grips on job descriptions was simple. There were 2 types of people in our industry: designers or developers. You either drew websites, or you built websites – that was it.</p>
+
+<p>As time went on people seemed to invent new titles: “UX Designers” were the first to appear on the scene to me, and <a href="http://adactio.com/journal/1596">we’re still to this day figuring out what this role really entails</a>. The one that particularly got my hair up though was a “Frontend Developer”. Basically, going from the skills that were listed with these roles (HTML, CSS, JS) it was a designer who could also do a bit of jQuery…. Not a real developer then. Not someone who pokes around with backend scripts and really knows what’s going on, right? Someone who can properly structure apps and create proper object oriented classes. It got my hair up because it seemed like an attempt to poach credentials from us hardworking devs. How dare they. Losers.</p>
+
+<p>Time passed…. I got a real job….. The industry invented more job titles….</p>
+
+<p>My first role was as a PHP/MySQL developer. I also started having to make decisions on frontend design and behaviour without having a formal education in either. I was, in my own projects at least, the only person to do such work. Outside of work during my first job, I decided to play with two hot technologies at the time: CouchDB and node.js. I geeked out about both, using document based stores and Javascript server-side – but hated the steep learning curve that came with having to use JS. It also missed many of the constructs I’d become used to in other languages.</p>
+
+<p>I’d seen a great deal of realtime apps and knew behaviour in my own apps should be keeping up. What I had could be better, much better. It was about here I probably started appreciating how much work was involved in a typical browser based app. I started using <a href="http://backbonejs.org">backbone.js</a> with a view to better organising the mess of JS that typically sat next to my markup. There wasn’t a great deal of help around, so I read a book as an aide….. I had to properly approach what was going on in the browser as I would do any other software. Hmm, weird. JS in the browser had up until now, been an afterthought to “jazz stuff up”. Developing real, well designed software in the browser however really floated my boat. I prototyped a simple calendar app and it worked fantastically well.</p>
+
+<p>Since then, I’ve been lucky enough to move into a full time contract role as a Javascript Developer – or a Frontend Web Developer, if you like. I probably would have been shocked had someone suggested this 5 or so years ago.</p>
+
+<p>I’m really enjoying being part of the community around JS, the ever increasing list of libraries being posted and patterns for development. Hopefully I’ve learnt to be a little more discerning of job titles than I have been in the past.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Pagination in CouchDB Apps</title>
+        <link>http://ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-11-02T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps</guid>
+		<description><![CDATA[
+		   <p>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.</p>
+
+<p>I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I’ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out <a href="http://guide.couchdb.org/draft/recipes.html#pagination" title="CouchDB Pagination Recipe">I’ve always been doing it the “bad” way</a>. Oh, well that’s upsetting.</p>
+
+<h2 id="the-wrong-way">The Wrong Way</h2>
+
+<p>My “slow” approach has always been to take the page no as a argument in the url, generating “skip” and “limit” variables to be used as parameters to my store. So for example, if I wanted to have the 2nd page of my app showing 10 items:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">skip</span> <span class="o">=</span> <span class="p">(</span><span class="nx">pageno</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="p">()</span> <span class="o">:</span> <span class="p">((</span><span class="nx">pageno</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span></code></pre></div>
+
+<div class="highlight"><pre><code class="bash">curl -X GET http://127.0.0.1:5984/stuff/_design/stuff/_view/by-name?skip<span class="o">=</span>10<span class="p">&amp;</span><span class="nv">limit</span><span class="o">=</span>10</code></pre></div>
+
+<p>It turns out, that although you might think you’re starting at a particular result, CouchDB still starts at the first result, due to the way the view is created from the b-tree index, couchDB just surpresses the results you skip. This isn’t good news when you’re trying to skip say, 10000 results.</p>
+
+<h2 id="the-suggested-way">The Suggested Way</h2>
+
+<p>The suggested solution is to perform requests and instead of using a “skip” parameter, keep track of the startkey at which the next page begins. This is possible, by requesting a page 1 item longer than that of the number of items on a page and using the key of the result in any requests. So now, for a first page my query is:</p>
+
+<div class="highlight"><pre><code class="bash">curl -X GET http://127.0.0.1:5984/stuff/_design/stuff/_view/by-name?limit<span class="o">=</span>11</code></pre></div>
+
+<p>Returning something like:</p>
+
+<div class="highlight"><pre><code class="json"><span class="p">{</span><span class="nt">&quot;total_rows&quot;</span><span class="p">:</span><span class="mi">17</span><span class="p">,</span><span class="nt">&quot;offset&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;rows&quot;</span><span class="p">:[</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;8177bf155b952652129836a5d354b30e&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Ian Wootten&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;bae2c490c70480aec7096d79e1e3bfc3&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Isambard Kingdom Brunel&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;eaae74cfbe5cd13ea6b50dfd090827ca&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Christopher Columbus&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;491e68b08d73256f060ebf4b8e063e1c&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Elizabeth Fry&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;b45d8a7b9edee9ca66ac0860196f4504&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Edward Jenner&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;8a4d3f46885701ffcc7532aeac7a5ae9&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Florence Nightingale&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;71e6534c17429eca2cd9450cfc95c6bb&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Samuel Pepys&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;6cbad847f0ae959b281b471a72d60587&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Pocahontas&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;e5b026ec5c92c20f1575a2901defe14e&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Mary Seacole&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;84a371a7b8414237fad1b6aaf68cd16a&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;George Stephenson&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;321aeb36e20d62660eb0d03c9fcd27b2&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Joe Bloggs&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">}</span>
+<span class="p">]}</span></code></pre></div>
+
+<p>From the 11th returned result, I have the key “Joe Bloggs” – which can be used as a startkey arg to couch to obtain my second page. If we have duplicate keys, it is also neccessary to keep tabs on the last document’s id and supply as a startkey_docid arg in order to correctly page through everything.</p>
+
+<p>What personally I dislike about the suggested approach, is the inability to create simple requests to arbritrary pages, even with low numbers. We always need to follow a path of links from the first page in order to view particular results. CouchDB’s response is “Not even Google is doing that!”, which is kind of weak to me. I want nice clean urls ala myapp.com/page/2 or myapp.com?page=2.</p>
+
+<p>In fact, such a suggested approach only really allows us to have a single “more” type link in order to fetch results. Passing a startkey as part of a url param eg /page/321aeb36e20d62660eb0d03c9fcd27b2 just sounds (and looks) plain nasty and isn’t very good from a UX point of view for any users we may have.</p>
+
+<p>At the moment, clean tangible page urls (the right way) are only possible using custom middleware. I’ve yet to find anything suitable for <a href="http://nodejs.org">node.js</a>. I intend to investigate how to cache document keys for low numbered pages as a separate db in order to produce a solution for my current project and I hope to write a later post detailing how I’ve got on.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Maintaining References to Sockets with Express and Socket.io</title>
+        <link>http://ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-07-04T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io</guid>
+		<description><![CDATA[
+		   <p>I hit a frustrating problem when trying to use expressjs alongside <a href="http://socket.io">socket.io</a> recently. The solution may seem somewhat trivial, but I struggled with it for a while, until finally asking for help on the <a href="http://socket.io">socket.io</a> irc channel. I’m not sure if a better solution exists for my case, but this is what I have for now.</p>
+
+<p>In the main route of my express app, I needed to iterate across an array, performing a REST call using each element as a parameter and spit the results back for socket.io to send out to the browser. To get some idea of what that would look like, imagine the following.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+     <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<p>My problem then became, how do I emit in this way, given my use case? All examples I could find on the <a href="http://socket.io">socket.io</a> homepages demonstrate emitting msgs on connection, like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// send custom events to browser socket</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;i can send&#39;</span><span class="o">:</span> <span class="s1">&#39;json!&#39;</span> <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>But I wanted to emit messages as part of a loop, within an app route. How would I do that? I could wrap the loop with the connection logic:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+      <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+         <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>But if I do this, then my connection listener would be added on every refresh of the route. This would mean I’d end up with duplicate binding of event listeners and a load more results messages would be emitted than I’d expect. This would result in crazy behavior for any user who might choose to refresh your app.</p>
+
+<p>Actually, the solution is rather simple although not entirely obvious given the nature of using node. If you maintain a reference to the socket as a global variable and then later emit upon that same socket, like so:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">global_socket</span><span class="p">;</span>
+
+<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">global_socket</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+      <span class="nx">global_socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<p>This way, a connection will be established and maintained and we won’t get duplicate bindings when refreshing the route of the app. Simple when you know how. I had a rather interesting discussion following this on irc about whether the use of express and socket.io together is warranted, given that socket.io supports use of variable passing and ultimately could entirely replace an express app.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Blog rolling with CouchDB, Express and Node.js</title>
+        <link>http://ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-02-07T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js</guid>
+		<description><![CDATA[
+		   <p>Over the last little while, I’ve been doing a lot of playing with <a href="http://nodejs.org">Node.js</a>, mostly to run data collection scripts. Last week, I started following <a href="http://howtonode.org/express-mongodb">Ciaran Jessup’s tutorial</a> on getting started with <a href="http://nodejs.org">node.js</a>, <a href="http://github.com/visionmedia/express">Express</a> and <a href="http://www.mongodb.org/">mongoDB</a>. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar <a href="http://en.wikipedia.org/wiki/JavaScript">server side language</a>. I hit a few problems along the way in the tutorial, so I thought I’ve list a few of my findings here. I also wanted to make use of my preferred flavour of nosql – <a href="http://couchdb.apache.org/">couchdb</a> with express, which proved extremely easy to port the mongo model over to it. I hope someone out there finds this useful as I’ve yet to find a vast community using couchdb/express.</p>
+
+<p>First things first, you’ll want to install <a href="http://nodejs.org">Node</a> and <a href="http://npmjs.org">npm</a> (the node package manager) in order to be able to easily install node packages. You’ll also probably find it handy to have the <a href="http://howtonode.org/express-mongodb">original tutorial open</a> alongside this one. I’ve been using the latest versions of node (0.3.7) and npm (0.2.17) at the time of writing.</p>
+
+<p>Once that’s done, grab copies of the packages that we’ll be using:</p>
+
+<div class="highlight"><pre><code class="bash">npm install express</code></pre></div>
+
+<div class="highlight"><pre><code class="bash">npm install jade</code></pre></div>
+
+<div class="highlight"><pre><code class="bash">npm install sass</code></pre></div>
+
+<p>If you want to use couchdb, then make sure you have it installed – grab it over <a href="http://www.couchone.com/get">here</a> and then install the package for talking to node.</p>
+
+<div class="highlight"><pre><code class="bash">npm install cradle</code></pre></div>
+
+<p>The first hurdle I found was that the way in which that express is called has changed a little.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyDecoder</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">logger</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
+
+<p>Then by saving to a file called app.js and calling using:</p>
+
+<div class="highlight"><pre><code class="bash">node app.js</code></pre></div>
+
+<p>Once that’s done. You can then visit 127.0.0.1:3000 in your browser to see a rivetting message!</p>
+
+<p>After creating folder beneath our original app.js in which to put views, you can use the original <a href="http://howtonode.org/express-mongodb/articleprovider-memory.js">article provider file</a> and the updated app.js below in order to have an app with a few articles shown.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./articleprovider-memory&#39;</span><span class="p">).</span><span class="nx">ArticleProvider</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyDecoder</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">logger</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">articleProvider</span><span class="o">=</span> <span class="k">new</span> <span class="nx">ArticleProvider</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">docs</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sys&#39;</span><span class="p">).</span><span class="nx">inspect</span><span class="p">(</span><span class="nx">docs</span><span class="p">));</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
+
+<p>Now when you re-run, you’ll see 3 separate articles. Oooh fancy!</p>
+
+<p>Next I hit my first hurdle. Express no longer uses the HAML HTML template language and instead uses JADE by default. This requires converting the HAML templates across to their equivalent JADE counterparts. Basically, this is as simple as dropping the ‘%’ from the beginning of each line (I also replaced braces with brackets in later templates).</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">html</span>
+  <span class="nt">head</span>
+    <span class="nt">title</span><span class="p">=</span> <span class="n">title</span>
+    <span class="nt">link</span>(<span class="na">rel:</span> <span class="err">&#39;</span><span class="na">stylesheet</span><span class="err">&#39;,</span> <span class="na">href:</span> <span class="err">&#39;/</span><span class="na">style</span><span class="err">.</span><span class="na">css</span><span class="err">&#39;</span> )
+  <span class="nt">body</span>
+    <span class="nf">#wrapper</span>
+      <span class="err">!= </span><span class="nt">body</span></code></pre></div>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">h1</span><span class="p">=</span> <span class="n">title</span>
+<span class="nf">#articles</span>
+  <span class="p">-</span> <span class="n">each</span> <span class="n">article</span> <span class="n">in</span> <span class="n">articles</span>
+    <span class="nt">div</span><span class="nc">.article</span>
+      <span class="nt">div</span><span class="nc">.created_at</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">created_at</span>
+      <span class="nt">div</span><span class="nc">.title</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span>
+      <span class="nt">div</span><span class="nc">.body</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">body</span></code></pre></div>
+
+<p>The app.js now becomes:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">configure</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;view engine&#39;</span><span class="p">,</span> <span class="s1">&#39;jade&#39;</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;views&#39;</span><span class="p">,</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/views&#39;</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">methodOverride</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">bodyDecoder</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">logger</span><span class="p">());</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">compiler</span><span class="p">({</span> <span class="nx">src</span><span class="o">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">&#39;/views&#39;</span><span class="p">,</span> <span class="nx">enable</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;sass&#39;</span><span class="p">]</span> <span class="p">}));</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./articleprovider-memory&#39;</span><span class="p">).</span><span class="nx">ArticleProvider</span><span class="p">;</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">docs</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;blogs_index.jade&#39;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">locals</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Blog&#39;</span><span class="p">,</span>
+        <span class="nx">articles</span><span class="o">:</span> <span class="nx">docs</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+<span class="p">})</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/*.css&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.css.sass&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></code></pre></div>
+
+<p>You’ll notice that here we enable the CSS compiler sass and HTML compiler jade. If you download the original <a href="http://howtonode.org/express-mongodb/views/style.css.sass">sass CSS template</a> into your views folder, you can now restart the app and inspect the fruits of your labour. The CSS shouldn’t actually sit in the views folder, according to the creator of Express, and should instead should be compiled with the sass package itself. I’ve yet to discover the correct way of doing this. To request a stylesheet in the view, we need to do the following:</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">html</span>
+  <span class="nt">head</span>
+    <span class="nt">title</span><span class="p">=</span> <span class="n">title</span>
+    <span class="nt">link</span>(<span class="na">rel:</span> <span class="err">&#39;</span><span class="na">stylesheet</span><span class="err">&#39;,</span> <span class="na">href:</span> <span class="err">&#39;/</span><span class="na">style</span><span class="err">.</span><span class="na">css</span><span class="err">&#39;</span> )
+  <span class="nt">body</span>
+    <span class="nf">#wrapper</span>
+      <span class="err">!= </span><span class="nt">body</span></code></pre></div>
+
+<p>If you reload now and visit <a href="http://127.0.0.1:3000">127.0.0.1:3000</a> you should see your posts with a little more style.</p>
+
+<p>Creating a form for new posts looks like this:</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">h1</span><span class="p">=</span> <span class="n">title</span>
+<span class="nt">form</span>( <span class="na">method=</span> <span class="s">&#39;post&#39;</span> )
+  <span class="nt">div</span>
+    <span class="nt">div</span>
+      <span class="nt">span</span> Title :
+      <span class="nt">input</span>(<span class="na">type=</span><span class="s">&#39;text&#39;</span><span class="err">,</span> <span class="na">name=</span> <span class="s">&#39;title&#39;</span><span class="err">,</span> <span class="na">id=</span> <span class="s">&#39;editArticleTitle&#39;</span> )
+    <span class="nt">div</span>
+      <span class="nt">span</span> Body :
+      <span class="nt">textarea</span>( <span class="na">name=</span> <span class="s">&#39;body&#39;</span><span class="err">,</span> <span class="na">rows=</span> <span class="nv">20</span><span class="err">,</span> <span class="na">id=</span> <span class="s">&#39;editArticleBody&#39;</span> )
+    <span class="nt">div</span><span class="nf">#editArticleSubmit</span>
+      <span class="nt">input</span>( <span class="na">type=</span> <span class="s">&#39;submit&#39;</span><span class="err">,</span> <span class="na">value=</span> <span class="s">&#39;Send&#39;</span> )</code></pre></div>
+
+<p>And the new app.js routes are as follows:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/blog/new&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;blog_new&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">locals</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;New Post&#39;</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/blog/new&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+  <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">save</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">),</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)</span>
+  <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">docs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>In order to add persistence using mongodb, nothing changes in the original model file, <a href="http://howtonode.org/express-mongodb/articleprovider-mongodb.js">so go ahead and use that</a>. You’ll need to have installed the package ‘mongodb’ if you’d like to try out using it though and update your instantiation of the articleprovider class by supplying a port number to which mongo is installed.</p>
+
+<h1 id="adding-couchdb-persistence">Adding CouchDB Persistence</h1>
+
+<p>Here, I took my own angle on the tutorial and decided to give attempting to make my own persistence model using couchdb a go. It proved to be extremely easy, given the JSON representation and HTTP/GET method of access already built in to it.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">cradle</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cradle&#39;</span><span class="p">);</span>
+
+<span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">port</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">connection</span><span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="nx">cradle</span><span class="p">.</span><span class="nx">Connection</span><span class="p">)(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">port</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">cache</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">raw</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">});</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">db</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">connection</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="s1">&#39;articles&#39;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">ArticleProvider</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">findAll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">view</span><span class="p">(</span><span class="s1">&#39;articles/all&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">){</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">docs</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="nx">result</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">row</span><span class="p">){</span>
+          <span class="nx">docs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">docs</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">ArticleProvider</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">findById</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">)</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+        <span class="k">else</span> <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span>
+      <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">ArticleProvider</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">save</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">articles</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">articles</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;undefined&quot;</span><span class="p">)</span>
+      <span class="nx">articles</span> <span class="o">=</span> <span class="p">[</span><span class="nx">articles</span><span class="p">];</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span> <span class="nx">articles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">article</span> <span class="o">=</span> <span class="nx">articles</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">article</span><span class="p">.</span><span class="nx">created_at</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="p">[];</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span> <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">article</span><span class="p">.</span><span class="nx">comments</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">created_at</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">articles</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">)</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+      <span class="k">else</span> <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">articles</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">ArticleProvider</span> <span class="o">=</span> <span class="nx">ArticleProvider</span><span class="p">;</span></code></pre></div>
+
+<p>I added the following view and route to my app.js too, to allow support for clicking upon articles.</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">div</span><span class="nc">.article</span>
+  <span class="nt">h1</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span>
+  <span class="nt">div</span><span class="nc">.created_at</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">created_at</span>
+  <span class="nt">div</span><span class="nc">.body</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">body</span></code></pre></div>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/blog/view/:id&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+   <span class="nx">articleProvider</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+     <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">doc</span><span class="p">){</span>
+       <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;blog_view&#39;</span><span class="p">,</span> <span class="p">{</span>
+       <span class="nx">locals</span><span class="o">:</span> <span class="p">{</span>
+         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;New Post&#39;</span><span class="p">,</span>
+         <span class="nx">article</span><span class="o">:</span> <span class="nx">doc</span>
+       <span class="p">}</span>
+     <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>And in order to support it, the main view now becomes as follows:</p>
+
+<div class="highlight"><pre><code class="jade"><span class="nt">h1</span><span class="p">=</span> <span class="n">title</span>
+<span class="nf">#articles</span>
+  <span class="p">-</span> <span class="n">each</span> <span class="n">article</span> <span class="n">in</span> <span class="n">articles</span>
+    <span class="nt">div</span><span class="nc">.article</span>
+      <span class="nt">div</span><span class="nc">.created_at</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">created_at</span>
+      <span class="p">-</span> <span class="k">var</span> <span class="n">articlelink</span> <span class="k">=</span> <span class="-Symbol">&#39;blog</span><span class="o">/</span><span class="n">view</span><span class="o">/</span><span class="err">&#39;</span> <span class="o">+</span> <span class="n">article</span><span class="o">.</span><span class="nc">_id</span><span class="o">;</span>
+      <span class="nt">a</span>(<span class="na">href=</span><span class="nv">articlelink</span>)
+        <span class="nt">div</span><span class="nc">.title</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span>
+      <span class="nt">div</span><span class="nc">.body</span><span class="p">=</span> <span class="n">article</span><span class="o">.</span><span class="n">body</span>
+
+  <span class="nt">a</span>(<span class="na">href=</span><span class="s">&#39;blog/new&#39;</span>)
+    <span class="nt">Add</span> new post</code></pre></div>
+
+<p>Anyway, so far I’ve not yet added comment support, but given the headway I made here, I’d imagine it would be extremely easy to integrate into my couchdb article model. I’ll update here if I ever get round to adding it!</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Book Review: Learning jQuery</title>
+        <link>http://ianwootten.co.uk/2008/01/09/learning-jquery</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-01-09T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/01/09/learning-jquery</guid>
+		<description><![CDATA[
+		   <p><a href="http://www.amazon.co.uk/exec/obidos/ASIN/B000VUVG3E/1847192505/staplediet-21"><img src="http://images-eu.amazon.com/images/P/1847192505.02.TZZZZZZZ.jpg" alt="Learning jQuery" /></a>Learning jQuery takes a look at the JavaScript library jQuery by Jonathan Chaffer and Karl Swedberg, whom run <a href="http://learningjquery.com">learningjquery.com</a>, a popular resource to jQuery developers. Jonathan and Karl work through a example based approach of common problems in web application development to demonstrate how jQuery can be used to minimize the amount of code written by developers and instead focus on the functionality of their code. </p>
+<p>The book is set for the developer with some knowledge of HTML, CSS and Javascript but a jQuery novice. The examples in the first few chapters offer solutions which may be achieved more simply through alternative approaches (e.g. applying styles with JavaScript, rather than applying it directly in HTML), but they serve their purpose of introducing what can be done without introducing a huge amount of features of the library too quickly. The following examples are far more realistic, focusing on tasks more suited to the library. </p>
+<p>Each example is explained so thoroughly it includes exploring many eventualities that the less descerning developer may glaze over, with many set over the course of a chapter. I certainly found that many of the examples highlighted problems I just wouldn&#8217;t be aware of. The applications built through the examples include style switchers, animation effects and Chapters 8-9 cover much more completely how to build more full featured scripts such as AJAX based searches, a shopping cart system and image shufflers and rotators. Other topics of note include how to perform manipulation of the DOM tree of a HTML page and how to handle particular event requests. The book also does really well at consistently suggesting in the later examples the must haves of any page featuring JavaScript, progressive enhancement and graceful degradation.</p>
+<p>One of the things that frustrated me slightly however was the frequency of code repitition and screen captures for each new added feature, but this is a minor problem considering how well the books covers the subject.</p>
+<p>I found this an extremely easy and interesting read, with the example based approach keeping me engaged in how each situation could be enhanced with use of jQuery. The sensible organisation of each chapter means that many asides are covered enough to give the reader a working knowledge of how complementary technologies are able to be used with the library. The book also includes appendices documenting a number of useful web development sites, not all specific to just jQuery. Overall, a thorough introduction to the language.</p>
+<p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

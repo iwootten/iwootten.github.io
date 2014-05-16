@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: webdev</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>The Developer Dream</title>
+        <link>http://ianwootten.co.uk/2013/06/27/the-developer-dream</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2013-06-27T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2013/06/27/the-developer-dream</guid>
+		<description><![CDATA[
+		   <p>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I’m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I’ve mainly created these by myself – a casualty of doing paid work in the main like this too. </p>
+
+<p>Most of these ideas in the have been simple hacks – <a href="http://loveletterd.com">solutions to things that bug me</a>. <a href="http://fairandbare.com">One of them has been a proper business too</a>. I’m able to do something and make it happen, to potentially tap a huge audience. Get them to that first step. The problem I have is, not a single one of these so much as turns a profit, though they serve as wonderful educational devices for me. I would hazard a guess that some of them have indirectly got me work.</p>
+
+<p>Some of my ideas never get past the domain registration phase before being knocked on the head. A friend many years ago gave me the great quote that ‘My domains are my todo list’. This totally hits the nail on the head for me – if I’ve felt like an idea was good enough to make it to the registration phase, there’s something there worth pursuing. Unfortunately, I have quite a long list to work through.</p>
+
+<p>I heard it said that “The Developer Dream” is that we (developers) “build a product/service which we’re able to earn a living from”. But the majority of developers I know, don’t even begin to pursue the ideas they have. This surprises me. </p>
+
+<p>There seems to be such an abundance of opportunities that I can’t imagine not building my own ideas, however bad they might seem to others. </p>
+
+<p>Why hold back? Time? Yes, we have other commitments – family, work and maybe even a hobby or two. I’m not suggesting we make drastic sacrifices or sell our kids in order to create stuff. I’d would however, like to think that the payoff for building our ideas might make our initial holdups seem insignificant longer term. <a href="http://www.ianwootten.co.uk/2012/05/03/if-you-build-it">I’ve said it before</a> and I can’t speak from as the voice of successful experience, but what do I get out of never trying?</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Aardman</title>
+        <link>http://ianwootten.co.uk/2009/09/26/aardman</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2009-09-26T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2009/09/26/aardman</guid>
+		<description><![CDATA[
+		   <p>In order for me to generate this post I’ve created something quite novel on my blog – a new category which I’ve not had a great deal of experience in previously, “work”. For the last couple of months I’ve been working for <a href="http://www.aardman.com/">Aardman</a> features in Bristol on their forthcoming feature film, “Pirates” – building software, which I’ll be doing at least for the next couple of months too.</p>
+
+<p>I’ve been having an amazing experience over this time. Being landed in a fantastic position of working with extremely talented, creative individuals – whom have worked on tons of entertainment that I’ve chuckled away too throughout my life. I’ve been fortunate enough to have been sent to LA in order to read up and fully understand the software I’m working on too and also get to see many exciting elements of the production process. The nature of the work I’m doing has meant I’ve had to talk to everyone from the floor crew, model making, camera assistants and animators to visual effects and editorial. It has been a massive task to take in the huge amount of new information, but I am loving learning about every step in the process. It’s great to see all these steps under one roof working as a massive family unit.</p>
+
+<p>The whole experience is to say the least exciting and quite honestly I am honoured to be involved with it! Here’s to the next couple of months….</p>
+
+<p>PS: Check out some of <a href="http://www.aardman.com/aardman-characters/">aardmans wonderful characters on this page</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

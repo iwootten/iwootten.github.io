@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: phd</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Papers</title>
+        <link>http://ianwootten.co.uk/2006/02/02/papers</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-02-02T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/02/02/papers</guid>
+		<description><![CDATA[
+		   <p>I’ve just been informed that my paper for <a href="http://pdcc.ntu.edu.sg/ccgrid2006/" title="CCGRID06">CCGRID06 </a>has been accepted, which I’m very pleased about. It’s my first paper acceptance in my 14 months of being based as a PhD at Cardiff University so really its about time I got some ideas out in the open to people. It’s also based in Singapore, and I’ve never left Europe – yeah it’s two days, but I’m chuffed nonetheless.</p>
+
+<p>The ironic thing is I was a bit annoyed last year at the fact <a href="http://www.cs.cf.ac.uk/ccgrid2005/" title="CCGRID05">CCGRID05 </a>was in Cardiff. I suppose its better this way round.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Cutting Edge</title>
+        <link>http://ianwootten.co.uk/2006/02/01/cutting-edge</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-02-01T00:00:00+00:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/02/01/cutting-edge</guid>
+		<description><![CDATA[
+		   <p>My day was brightened lots yesterday when my my PhD supervisor informed me he had a blog on the subject of grid computing. It was intended for members of our research group to contribute to and discuss things. The most amusing part was, being cutting edge and all, you’d expect it to be a bustling hive of activity. What I actually found was a <a href="http://gridder.blogspot.com/">site</a> with <strong>two posts</strong> covering the last 2 years. Yup, that’ll about do it.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>What a difference a year makes&#8230;.</title>
+        <link>http://ianwootten.co.uk/2005/07/12/what-a-difference-a-year-makes</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2005-07-12T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2005/07/12/what-a-difference-a-year-makes</guid>
+		<description><![CDATA[
+		   <p>So, in the absence of students, life continues as normal for the various research teams down here in the Queens buildings. We wake, march to University and sit in our little boxes reading, theorising and tearing our hair out until 5 o’clock when we march back, only to be repeated the next day. I hate routines…</p>
+
+<p>Today marked the graduation of Year 3′s which brought back memories of my graduation last year, which was pretty depressing to be honest. It allows me to reflect how far I’ve come in the last year or so and how I’ve not nearly amounted to that image I’d be content with at the beginning of my degree and how perhaps my values have changed. It also made me to look at how much older I am than the vast majority of my colleagues and how different life would have been coming to uni a year earlier. I know the whole experience of that extra couple of years at home was beneficial to me and I was placed there for a reason, but it doesn’t half make me feel inadequate against some of my current pool of mates. This combined with the current lack of air conditioning in our lab and mini-heatwave (we reached 33 degrees) doesn’t make it easy to keep to any train of thought for extended periods.</p>
+
+<p>It makes me wonder where I’ll be in the next year….</p>
+
+<p>Oh – I know! ……. right here sat at my desk</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Mental Mental</title>
+        <link>http://ianwootten.co.uk/2005/06/29/mental-mental</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2005-06-29T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2005/06/29/mental-mental</guid>
+		<description><![CDATA[
+		   <p>Today I travelled on 2 planes, 3 buses and 1 car (thats a full house and extra) to make the 800 mile round trip to Edinburgh for part of a <a href="http://www.bdworld.org">BioDiveristyWorld</a> conference. I’m quite surprised I managed to organise and sort out everything since Monday and it go according to plan.</p>
+
+<p>I was actually really overwhelmed at how amazing the place was for the brief time I was there, the sheer scale of the city was something else. Too bad I couldn’t stick about for the G8 conference and related protests/festivals, despite comments about riots being thrown around, it would of been something to tell the kids. Anyways, I’ve got Steve and Hannah’s wedding back home to go to on Saturday. The 5:00am start has not been the best thing for me though, I will sleep like the proverbial log tonight.</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

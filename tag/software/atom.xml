@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: software</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Firefox 2.0 is Out!</title>
+        <link>http://ianwootten.co.uk/2006/10/23/firefox-20-is-out</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2006-10-23T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2006/10/23/firefox-20-is-out</guid>
+		<description><![CDATA[
+		   <p>Firefox 2.0 is out! Wikked wikked bwaaad bwoy!Get your ass over to <a href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0/win32/en-GB/">mozilla.org</a> while its still hot.<a class="imagelink" href="http://webtyrant.com/wp-content/uploads/2006/10/firefox2.0.JPG" title="firefox2"><img id="image23" src="http://webtyrant.com/wp-content/uploads/2006/10/firefox2.0.thumbnail.JPG" alt="firefox2" /></a></p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>

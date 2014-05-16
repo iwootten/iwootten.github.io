@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: amazon</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Hosting an Octopress Blog on Amazon S3</title>
+        <link>http://ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2011-09-09T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3</guid>
+		<description><![CDATA[
+		   <p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</p>
+
+<p>Using Octopress, you’d typically write your posts in markdown and process them locally. You’d then have a number of HTML pages to upload to your web server, which would appear no different than any other blog in terms of functionality.</p>
+
+<p>The most interesting thing that coincincides with the creation of jekyll is that it is now possible to serve static websites straight from Amazon S3, meaning that it isn’t neccessary to have a web server to serve a Octopress blog. I’ve been playing a little and have been able to serve my own octopress blog which you can see over at <a href="http://www.ianwootten.com">www.ianwootten.com</a>. Here’s how to do it:</p>
+
+<h2 id="configure-an-s3-bucket-to-act-as-a-website">Configure an S3 Bucket to Act as a Website</h2>
+
+<p>NB: If you want to use your own domain, then you’re going to need to create an S3 bucket from the AWS Console named the same as your domain (so for me I created a bucket called “www.ianwootten.com”. </p>
+
+<p>To configure your bucket as a website, from the AWS Console, select the new bucket and click “Properties”. Choose the “Website” tab from the box that appears and check “enabled” and set the Index document as “index.html”. Click “Save”. Now move to the “permissions” tab and click “Add bucket policy”. Enter a policy as below, with “www.ianwootten.com” replaced with the name of the bucket you’re using.</p>
+
+<p><code>&lt;br /&gt;
+{&lt;br /&gt;
+	"Version": "2008-10-17",&lt;br /&gt;
+	"Id": "",&lt;br /&gt;
+	"Statement": [&lt;br /&gt;
+		{&lt;br /&gt;
+			"Sid": "PublicReadForGetBucketObjects",&lt;br /&gt;
+			"Effect": "Allow",&lt;br /&gt;
+			"Principal": {&lt;br /&gt;
+				"AWS": "*"&lt;br /&gt;
+			},&lt;br /&gt;
+			"Action": "s3:GetObject",&lt;br /&gt;
+			"Resource": "arn:aws:s3:::www.ianwootten.com/*"&lt;br /&gt;
+		}&lt;br /&gt;
+	]&lt;br /&gt;
+}&lt;br /&gt;
+</code></p>
+
+<p>If you’ve opted not to use your own domain, then that’s it for S3. Your new bucket website will be available at a combination of the bucket name and the S3 storage location. In my case, this is <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/">http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/</a>. There’s a list of endpoints on the “website endpoints” page in <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a>.</p>
+
+<h2 id="configure-dns">Configure DNS</h2>
+
+<p>If you’re wanting to use your own domain, then you’ll need to visit your domain registraar and edit some DNS entries. In my case, I added a CNAME entry “www” pointing to www.ianwootten.com.s3-website-us-east-1.amazonaws.com. You’ll need to use a tool like <a href="http://wwwizer.com">wwwizer</a> in order to forward from the root of your domain to the www subdomain. e.g. “ianwootten.com” to “www.ianwootten.com”. To get that working, you’ll also need to modify the @ A record and point it to 174.129.25.170. Read this <a href="http://serverfault.com/questions/62527/how-to-create-a-cname-for-a-domains-root-name">serverfault post</a> if you’re interested to know why.</p>
+
+<p>For more info on CNAME configuration and S3 see <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a> (Specifically the notes on virtual hosting).</p>
+
+<h2 id="download-octopress-and-write-some-markdown">Download Octopress and write some Markdown</h2>
+
+<p>Having successfully configured Amazon S3 to host your blog, you need to tackle the age old problem of writing some content for it. This was particularly hard for me, given my lack of knowledge about markdown! You may like to take a look at <a href="http://daringfireball.net/projects/markdown/basics">John Grubers explanation of markdown</a> if you’re suffering like me. The <a href="http://octopress.org/docs/blogging/">Octopress blogging basics</a> gives a good overview of how your new local blogging workflow will work. Essentially new posts are written in the ./_source/posts folder and when <code>rake generate</code> is executed, your entire websites content is output to the ./public folder. You can also run <code>rake preview</code> in order to preview on a local server.</p>
+
+<p>TO publish your blog, it’s merely a matter of transferring your /public content to the S3 bucket you’ve generated.</p>
+
+<p>Having done all that you’ve now no need to run your own server. You’re still dependent on those that operate at S3, wwwizer and your domain registraar, but you’ve removed your own from the equation. You may be interested in checking out <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">Jerome Bernard’s</a> tip on easily deploying Octopress blogs with <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Amazon Associates WordPress Plugin v0.2</title>
+        <link>http://ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2009-10-25T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2</guid>
+		<description><![CDATA[
+		   <p>I’ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.</p>
+
+<p>This now also means you’ll have to enter your amazon secret access key in the plugin configuration page.</p>
+
+<p>You can download the updated version over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
+
+<p>It also means <a href="http://www.ianwootten.co.uk/wishlist">my wishlist</a> has finally been brought back to life. Just in time for Christmas…</p>
+
+
+		]]></description>
+	  </item>
+    
+	  <item>
+        <title>Amazon Associates WordPress Wishlist Plugin</title>
+        <link>http://ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2008-04-02T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin</guid>
+		<description><![CDATA[
+		   <p>One of the things that’s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they’re unable to find my wishlist. This is mainly because they’re simple folk who might not think to check amazon for my name. I’m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage. All this data is available on the web already its just a case of putting it together.</p>
+
+<p>Some keen readers might of noticed the wishlist page I stuck up recently and want something similar on their own site and (like myself) either can’t be bothered or didn’t have the time to create a plugin to pull this data together. I’m putting up here my own quick and dirty plugin I built a few weeks ago to achieve this.</p>
+
+<p>It uses amazon web services to look up a wishlist, stick in a specified associates id in each of my item links and replace where I put the text <!-- wishlist_content --> (without spaces) in a post with my wishlist items. The plugin regularly updates this (hourly) as a scheduled event in wordpress in case someone decides to actually buy me something. Of course you’ll need a services key to use it, which you can easily get by signing up with amazon at aws.amazon.com. Fill out your services id, your wishlist id (found by logging into amazon and heading to your wishlist page) and your locale (the bit after amazon. so mine is .co.uk) and press the fetch items to pull all the items in. If you don’t have an associates id, feel free to leave as my own : )</p>
+
+<p>I used curl to get the remote data from amazon as the file_get_content methods generally aren’t enabled on normal web hosts. If you’d like the items to be fetched less regularly, then install the plugin with and updated wp_schedule_event method in the main wishlist.php to a value of your choice.</p>
+
+<p>You can download it over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
+
+<p><em>Double alliteration in a post title? Not sure I’ve attempted that before.</em></p>
+
+<p>[Edit: You’ll need to be running on PHP5 to make use of this plugin]<br />
+[Edit: I released an updated version based on Amazon’s move to use of signitures, see the details <a href="http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2">here</a>]</p>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>
