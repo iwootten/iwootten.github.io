@@ -42,6 +42,20 @@
       
 
 <div class="post">
+<h1><a href="/2014/05/18/bye-bye-wordpress">Bye Bye Wordpress</a></h1>
+<div class="author_meta">18 May 2014</div>
+<p>I’ve finally made the move to <a href="http://jekyllrb.com">jekyll</a> for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible <a href="https://github.com/iwootten/iwootten.github.io">on github</a> and revision control for post entries is handled there too.</p>
+
+<p>What finally convinced me with the release of jekyll 2 was the introduction of <a href="http://jekyllrb.com/news/2014/05/06/jekyll-turns-2-0-0/">native sass support</a>. Originally, the prose theme I’m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it. I had the scss for the original design available and therefore thought the jump to using jekyll wouldn’t be that great (or so I thought - overlooking all the features jekyll doesn’t support compared to wordpress). I’m going to blog individually about the pieces of the puzzle in other posts as there are number of things that tripped me up along the way.</p>
+
+<p>But for now, I’d like to bid a fond farewell to wordpress - my go to blogging software for the last 10 years. You once were diminutive, got out of my way and let my voice be heard. That’s no longer the case. These days the only time we speak is when you want me to update you. I’ve got better things to do. Theres a ton of features the length of my arm which I’ve never used and the majority of features which I use rarely. I long for those simpler days once again. You’ve served me well, but I’ve moved on.</p>
+
+<div class="entry_content">Tagged <a href="/tag/jekyll">jekyll</a>, <a href="/tag/static sites">static sites</a>, <a href="/tag/wordpress">wordpress</a>,  | <a href="/2014/05/18/bye-bye-wordpress/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2014/04/07/copyright-law-finally-aligns-with-me">Copyright Law Finally Aligns with Me</a></h1>
 <div class="author_meta">07 Apr 2014</div>
 <p>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.</p>
@@ -259,53 +273,6 @@
 
 
 <div class="entry_content">Tagged <a href="/tag/hacking">hacking</a>, <a href="/tag/ideas">ideas</a>, <a href="/tag/webdev">webdev</a>,  | <a href="/2013/06/27/the-developer-dream/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/04/03/the-problem-with-full-stack-js-applications">The Problem with Full Stack JS Applications</a></h1>
-<div class="author_meta">03 Apr 2013</div>
-<p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It’s inevitable that there’s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you’re doing when knee deep in code.</p>
-
-<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I’ve certainly found myself tied up in this kind of knot. For example, if I’m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you’re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you’re working and if that’s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn’t the case when working in one language. My guess is you’re going to have to take a second glance in order to figure out where you are, which isn’t a big issue, but is frustrating.</p>
-
-<p>Currently my apps typically are structured like this:</p>
-
-<p>server.js (Main node/express file)<br />
--lib (Classes for DB Calls)<br />
--node_modules (Node requires)<br />
--public (Client backbone app)<br />
-    -css<br />
-    -images<br />
-    -js<br />
-        -lib (Backbone and other dependencies)<br />
-        -collections<br />
-        -models<br />
-        -templates<br />
-        -views<br />
--routes (Contains the main express routes)</p>
-
-<p>But I actually think the following is a better approach:</p>
-
-<p>-server<br />
-    server.js<br />
-    -lib<br />
-    -node_modules<br />
-    -routes<br />
--client (Renamed from public)<br />
-    -css<br />
-    -images<br />
-    -js<br />
-        -lib<br />
-        -collections<br />
-        -models<br />
-        -templates<br />
-        -views</p>
-
-<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn’t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don’t believe there is a solution.</p>
-
-<div class="entry_content">Tagged <a href="/tag/javascript">javascript</a>, <a href="/tag/web development">web development</a>,  | <a href="/2013/04/03/the-problem-with-full-stack-js-applications/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

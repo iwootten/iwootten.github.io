@@ -42,6 +42,53 @@
       
 
 <div class="post">
+<h1><a href="/2013/04/03/the-problem-with-full-stack-js-applications">The Problem with Full Stack JS Applications</a></h1>
+<div class="author_meta">03 Apr 2013</div>
+<p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It’s inevitable that there’s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you’re doing when knee deep in code.</p>
+
+<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I’ve certainly found myself tied up in this kind of knot. For example, if I’m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you’re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you’re working and if that’s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn’t the case when working in one language. My guess is you’re going to have to take a second glance in order to figure out where you are, which isn’t a big issue, but is frustrating.</p>
+
+<p>Currently my apps typically are structured like this:</p>
+
+<p>server.js (Main node/express file)<br />
+-lib (Classes for DB Calls)<br />
+-node_modules (Node requires)<br />
+-public (Client backbone app)<br />
+    -css<br />
+    -images<br />
+    -js<br />
+        -lib (Backbone and other dependencies)<br />
+        -collections<br />
+        -models<br />
+        -templates<br />
+        -views<br />
+-routes (Contains the main express routes)</p>
+
+<p>But I actually think the following is a better approach:</p>
+
+<p>-server<br />
+    server.js<br />
+    -lib<br />
+    -node_modules<br />
+    -routes<br />
+-client (Renamed from public)<br />
+    -css<br />
+    -images<br />
+    -js<br />
+        -lib<br />
+        -collections<br />
+        -models<br />
+        -templates<br />
+        -views</p>
+
+<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn’t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don’t believe there is a solution.</p>
+
+<div class="entry_content">Tagged <a href="/tag/javascript">javascript</a>, <a href="/tag/web development">web development</a>,  | <a href="/2013/04/03/the-problem-with-full-stack-js-applications/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2013/03/28/so-you-want-to-run-a-fairtrade-business">So You Want to Run a Fairtrade Business?</a></h1>
 <div class="author_meta">28 Mar 2013</div>
 <p>This is a brief retrospective of what I’ve learned in the 6 years I’ve been running <a href="http://www.fairandbare.com" title="Fair &#038; Bare">Fair &#038; Bare</a>, a Fairtrade t-shirt company along with my wife. </p>
@@ -341,27 +388,6 @@
 
 
 <div class="entry_content">Tagged <a href="/tag/couchdb">couchdb</a>, <a href="/tag/js">js</a>, <a href="/tag/nodejs">nodejs</a>,  | <a href="/2012/11/23/oh-crap-im-a-frontend-developer/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/11/20/essential-cinema-lovefilm">Essential Cinema According to Lovefilm</a></h1>
-<div class="author_meta">20 Nov 2012</div>
-<p>Given there’s a bit of lovefilm bashing <a href="http://www.tomalloyd.com/lovefilm-hate-email/">going on in Wales</a> at the moment, I thought I’d chime in with the most frustrating thing I found with communications from lovefilm. </p>
-
-<p>Check out the following weekly email I used to receive (I’ve since unsubscribed), along with my annotations.</p>
-
-<p><a href="http://www.lovefilm.com/emailpublic/cmsnewsletter/uk-newsletter/LOVEFiLM-Newsletter/2012/Newsletter-Issue-No-409?cid=lfnl409tlweb&#038;brand=lovefilm"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/11/Read-Newsletter-Issue-409-5.jpg" alt="" title="Read Newsletter Issue 409 5" width="470" height="906" class="alignnone size-full wp-image-569" /></a></p>
-
-<p>I really couldn’t care less about who lovefilm are sending into cinema’s to perform reviews and certainly don’t want it to be the first text I see in relation to that image. </p>
-
-<p>Also, the first thing I’m drawn to is the image. Why lead me away from the title of that movie and make work to find the text for the heading? Don’t make the title and preview exactly the same size, or divide them up!</p>
-
-<p>End of rant.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/design">design</a>, <a href="/tag/lovefilm">lovefilm</a>,  | <a href="/2012/11/20/essential-cinema-lovefilm/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

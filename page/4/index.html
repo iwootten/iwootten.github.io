@@ -42,6 +42,59 @@
       
 
 <div class="post">
+<h1><a href="/2011/11/02/pagination-in-couchdb-apps">Pagination in CouchDB Apps</a></h1>
+<div class="author_meta">02 Nov 2011</div>
+<p>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.</p>
+
+<p>I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I’ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out <a href="http://guide.couchdb.org/draft/recipes.html#pagination" title="CouchDB Pagination Recipe">I’ve always been doing it the “bad” way</a>. Oh, well that’s upsetting.</p>
+
+<h2 id="the-wrong-way">The Wrong Way</h2>
+
+<p>My “slow” approach has always been to take the page no as a argument in the url, generating “skip” and “limit” variables to be used as parameters to my store. So for example, if I wanted to have the 2nd page of my app showing 10 items:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">skip</span> <span class="o">=</span> <span class="p">(</span><span class="nx">pageno</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="p">()</span> <span class="o">:</span> <span class="p">((</span><span class="nx">pageno</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span></code></pre></div>
+
+<div class="highlight"><pre><code class="bash">curl -X GET http://127.0.0.1:5984/stuff/_design/stuff/_view/by-name?skip<span class="o">=</span>10<span class="p">&amp;</span><span class="nv">limit</span><span class="o">=</span>10</code></pre></div>
+
+<p>It turns out, that although you might think you’re starting at a particular result, CouchDB still starts at the first result, due to the way the view is created from the b-tree index, couchDB just surpresses the results you skip. This isn’t good news when you’re trying to skip say, 10000 results.</p>
+
+<h2 id="the-suggested-way">The Suggested Way</h2>
+
+<p>The suggested solution is to perform requests and instead of using a “skip” parameter, keep track of the startkey at which the next page begins. This is possible, by requesting a page 1 item longer than that of the number of items on a page and using the key of the result in any requests. So now, for a first page my query is:</p>
+
+<div class="highlight"><pre><code class="bash">curl -X GET http://127.0.0.1:5984/stuff/_design/stuff/_view/by-name?limit<span class="o">=</span>11</code></pre></div>
+
+<p>Returning something like:</p>
+
+<div class="highlight"><pre><code class="json"><span class="p">{</span><span class="nt">&quot;total_rows&quot;</span><span class="p">:</span><span class="mi">17</span><span class="p">,</span><span class="nt">&quot;offset&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;rows&quot;</span><span class="p">:[</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;8177bf155b952652129836a5d354b30e&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Ian Wootten&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;bae2c490c70480aec7096d79e1e3bfc3&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Isambard Kingdom Brunel&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;eaae74cfbe5cd13ea6b50dfd090827ca&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Christopher Columbus&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;491e68b08d73256f060ebf4b8e063e1c&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Elizabeth Fry&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;b45d8a7b9edee9ca66ac0860196f4504&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Edward Jenner&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;8a4d3f46885701ffcc7532aeac7a5ae9&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Florence Nightingale&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;71e6534c17429eca2cd9450cfc95c6bb&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Samuel Pepys&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;6cbad847f0ae959b281b471a72d60587&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Pocahontas&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;e5b026ec5c92c20f1575a2901defe14e&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Mary Seacole&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;84a371a7b8414237fad1b6aaf68cd16a&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;George Stephenson&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;321aeb36e20d62660eb0d03c9fcd27b2&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Joe Bloggs&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">}</span>
+<span class="p">]}</span></code></pre></div>
+
+<p>From the 11th returned result, I have the key “Joe Bloggs” – which can be used as a startkey arg to couch to obtain my second page. If we have duplicate keys, it is also neccessary to keep tabs on the last document’s id and supply as a startkey_docid arg in order to correctly page through everything.</p>
+
+<p>What personally I dislike about the suggested approach, is the inability to create simple requests to arbritrary pages, even with low numbers. We always need to follow a path of links from the first page in order to view particular results. CouchDB’s response is “Not even Google is doing that!”, which is kind of weak to me. I want nice clean urls ala myapp.com/page/2 or myapp.com?page=2.</p>
+
+<p>In fact, such a suggested approach only really allows us to have a single “more” type link in order to fetch results. Passing a startkey as part of a url param eg /page/321aeb36e20d62660eb0d03c9fcd27b2 just sounds (and looks) plain nasty and isn’t very good from a UX point of view for any users we may have.</p>
+
+<p>At the moment, clean tangible page urls (the right way) are only possible using custom middleware. I’ve yet to find anything suitable for <a href="http://nodejs.org">node.js</a>. I intend to investigate how to cache document keys for low numbered pages as a separate db in order to produce a solution for my current project and I hope to write a later post detailing how I’ve got on.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/articles">articles</a>, <a href="/tag/couchdb">couchdb</a>, <a href="/tag/nodejs">nodejs</a>,  | <a href="/2011/11/02/pagination-in-couchdb-apps/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">Hosting an Octopress Blog on Amazon S3</a></h1>
 <div class="author_meta">09 Sep 2011</div>
 <p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</p>
@@ -633,28 +686,6 @@ sudo chown -R ian:www-data /var/www/pathtowordpress/
 
 
 <div class="entry_content">Tagged <a href="/tag/camera">camera</a>, <a href="/tag/code">code</a>, <a href="/tag/stop motion">stop motion</a>,  | <a href="/2010/09/09/installing-gphoto-on-snow-leopard/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2010/07/24/how-not-to-do-a-hack-day">How not to: Do A Hack Day</a></h1>
-<div class="author_meta">24 Jul 2010</div>
-<p>It’s been well over a month since I attended <a href="http://sciencehackday.com">science hack day</a> and I’d thought I’d put out some notes on my time there. Rather than do a run down of the event, for which I’m sure there’s far more comprehensive blog posts available already, I thought I’d share my experiences based on attendance of a number of different hack events I’ve been to over the years. I went with the full intention of doing some hardcore hacking, but didn’t entirely meet my own expectations. Here’s my top tips, for now not to do a hack day:</p>
-
-<ul>
-  <li>1: Don’t bother coming prepared – You’ve got 24 hours, and you’re bound to be the best coder at the event. You’ll have a unique idea and get that app finished in no time! No, far better to kick back and relax before setting on your way and conduct your research on what’s possible when you arrive.</li>
-  <li>2: Arrive fashionably late – 24 hours is ages, and you know all the apis that presentations are going to cover. Nothing says “I’m superior” more than waltzing in a couple of hours late to the event whilst everyone else has been busy sweating it out already.</li>
-  <li>3: Keep your distance from other attendees – Your idea is your own and you’ll want to claim all the glory for it after the event. Where’s the glory in letting people know you’re one of 10 people involved? Keep your app under wraps before that all important presentation at the end, the audience will be in total awe of you and flock to your side afterwards.</li>
-  <li>4: Be sure to leave the event – You enjoy your sleep right? Why lose it by camping out on some office floor space, when you can head home to your comfy bed or to a hotel and return in the morning? This way, you also get to avoid all that small talk with big name, high profile coders who will belittle you with their outstanding knowledge of their own companies apis.</li>
-  <li>5: Have your fill of the free refreshments – Free beer and pizza? Wow, these are a must for any late night software development project. There’s nothing better than feeling stuffed full of dominos and slightly rosy whilst trying to get your brain working at full throttle.</li>
-  <li>6: Don’t prepare for your presentation – You’ll need every last second for building your app and the presentation is only a minute long. You might as well just attempt something of the cuff. Don’t worry about connections to your laptop, because those things always work and organisers like <a href="http://adactio.com/">adactio</a> are most amicable about trying to organise it for you along with 30 others at the same time.</li>
-</ul>
-
-<p>I attended <a href="http://sciencehackday.com">Science Hack Day</a> and collaborated with a <a href="http://openobjects.blogspot.com">Mia</a>, <a href="http://dharmafly.com">Prem</a>, <a href="http://tommorris.org/blog/">Tom Morris</a>, <a href="http://yaili.com/">Inayaili de León</a>, <a href="http://twitter.com/goodonpaper">Andy McMillan</a> and Richard Boulton in order to build an app titled <a href="http://dharmafly.com/scihack">“The Revolutionaries”</a>. Both Inayaili and Andy I never even spoke to and it was only through Prem’s organisation that the app came through in the end. I spent 2 hours of the event commuting to and from the guardian’s offices and 1 more stuck in a stationary tunnel in the dark. I’m glad that a made an effort though as the <a href="http://dharmafly.com/revolutionaries/">net result was a great app</a>, which even won a little prize. I probably won’t be heeding much of the above advice at future events.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/hacking">hacking</a>, <a href="/tag/sciencehackday">sciencehackday</a>,  | <a href="/2010/07/24/how-not-to-do-a-hack-day/#disqus_thread">Leave a comment</a></div>
 </div>
 
 
