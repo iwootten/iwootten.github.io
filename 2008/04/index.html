@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ian Wootten - Web Developer, Cardiff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/fonts/open-sans.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/syntax.css" />
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-263865-2', 'ianwootten.co.uk');
+      ga('send', 'pageview');
+
+    </script>
+    </head>
+    <body>
+
+
+    <div class="container blog">
+      <header>
+        <nav>
+        <ul class="nav">
+          <li><a class="blog active" href="/">Blog</a></li>
+          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
+          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
+          <li><a class="about" href="/about">About</a></li>
+          <li><a class="contact" href="/contact">Contact</a></li>
+        </ul>
+        </nav>
+        <div class="clear"></div>
+      </header>
+
+      
+
+<div class="post">
+<h1><a href="/2008/04/02/amazon-associates-wordpress-wishlist-plugin">Amazon Associates WordPress Wishlist Plugin</a></h1>
+<div class="author_meta">02 Apr 2008</div>
+<p>One of the things that’s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they’re unable to find my wishlist. This is mainly because they’re simple folk who might not think to check amazon for my name. I’m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage. All this data is available on the web already its just a case of putting it together.</p>
+
+<p>Some keen readers might of noticed the wishlist page I stuck up recently and want something similar on their own site and (like myself) either can’t be bothered or didn’t have the time to create a plugin to pull this data together. I’m putting up here my own quick and dirty plugin I built a few weeks ago to achieve this.</p>
+
+<p>It uses amazon web services to look up a wishlist, stick in a specified associates id in each of my item links and replace where I put the text <!-- wishlist_content --> (without spaces) in a post with my wishlist items. The plugin regularly updates this (hourly) as a scheduled event in wordpress in case someone decides to actually buy me something. Of course you’ll need a services key to use it, which you can easily get by signing up with amazon at aws.amazon.com. Fill out your services id, your wishlist id (found by logging into amazon and heading to your wishlist page) and your locale (the bit after amazon. so mine is .co.uk) and press the fetch items to pull all the items in. If you don’t have an associates id, feel free to leave as my own : )</p>
+
+<p>I used curl to get the remote data from amazon as the file_get_content methods generally aren’t enabled on normal web hosts. If you’d like the items to be fetched less regularly, then install the plugin with and updated wp_schedule_event method in the main wishlist.php to a value of your choice.</p>
+
+<p>You can download it over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
+
+<p><em>Double alliteration in a post title? Not sure I’ve attempted that before.</em></p>
+
+<p>[Edit: You’ll need to be running on PHP5 to make use of this plugin]<br />
+[Edit: I released an updated version based on Amazon’s move to use of signitures, see the details <a href="http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2">here</a>]</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/amazon">amazon</a>, <a href="/tag/associates">associates</a>, <a href="/tag/aws">aws</a>, <a href="/tag/PHP">PHP</a>, <a href="/tag/web services">web services</a>, <a href="/tag/wishlist">wishlist</a>,  | <a href="/2008/04/02/amazon-associates-wordpress-wishlist-plugin/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+      <footer>
+        <div class="footer-about">
+          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+        </div>
+      </footer>
+    </div>
+   <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+  </body>
+</html>
