@@ -79,7 +79,7 @@
 <p>The final piece of this saga was to rename all the files PhotoRec created so they were in folders according to their exif data. My photos are all in folders like “2012_06_30″, so to have 500 files named “f0677440.jpg”, “f0688768.jpg” in a random PhotoRec directory would be pretty annoying. I had looked at setting up an automator task for this, but I ended up using <a href="http://www.petrosit.de/index.php/apps/12-pexiftool">PexifTool</a> for simplicities sake (I’m sure there are other alternatives). I believe if you go the Automator route, you may well have to install plugins in order to be able to extract exif data from files.</p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>, <a href="/tag/mac">mac</a>, <a href="/tag/photorec">photorec</a>,  | <a href="/2012/09/04/recovering-images-from-sd-cards-with-photorec#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>, <a href="/tag/mac">mac</a>, <a href="/tag/photorec">photorec</a>,  | <a href="/2012/09/04/recovering-images-from-sd-cards-with-photorec/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
@@ -107,7 +107,7 @@
 <p>&lt;/div&gt;</p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/10/16/bash-bash#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/10/16/bash-bash/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
@@ -117,7 +117,7 @@
 <div class="author_meta">06 Sep 2006</div>
 	<p>I spent a large amount of time last week, after realising that I could very easy install compiz and XGL on my machine at uni, trying to install it upon my home machine. As its 64 bit, and owing to previous problems I’d experienced installing 64 bit applications (like linux for instance), I spent the best part of 2 days attempting to install both, before caving and completely giving up.I got to the stage where XGL is installed properly and seems to work ok, but the compiz gnome window manager isn’t working properly, meaning I have no borders to any panes I create.It’s not like I need a whizzy 4 sided cube spinning around, but I thought it might be fun…</p>
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
@@ -130,7 +130,7 @@
 
 <p>Again supplimenting user and pass with your username and password. The  40 indicates a space in the name of the share which is on the NAS, which annoyingly took me a large amount of time to figure out!</p>
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/19/slugs-talking-nicely#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/19/slugs-talking-nicely/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
@@ -141,7 +141,7 @@
 	<p>Another post about ubuntu? Where will it end?I was fairly excited from thursday evenings antics of getting things working on my machine at home, I thought I’d give it a try with my dev machine at uni. My graphics card, a 9600 (yes ATI, I know!) had been screwed since the day I’d put on Dapper, and to be honest, as I’m not using it that much for GL stuff, I wasn’t really bothered about it. After installing the ATI drivers, them not working and reinstalling the fglrx xorg drivers, I managed to get it working nicely within about 30 mins. <a href="http://wiki.cchtml.com/index.php/Ubuntu_Installation_Guide" title="Unofficial ATI Linux Driver Wiki">This wiki page</a> may help if you’re experiencing similar problems. In my case, my driver was loading, but I was having a problem with libdri.a menaing 3d acceleration got switched off. Anyway, glxgears is now shuvving out a good 3000+ fps so I’m happy enough with that.Aha, I thought, I’ll give the soundcard a bash – a 6 year old SBLive Platinum complete with live drive. Although this (with some tweaking in alsamixer) give outputs on the pci card, the front bay wasn’t getting any output to the headphone socket. I tried to install and compile the latest emu10k drivers from <a href="http://www.alsa-project.org/" title="Advanced Linux Sound Architecture">alsa</a>, but then everything got screwed up and no drivers were loading. I removed them and reinstalled what I had before. I carried on with my troubles, inspecting my front bay for any connection problems, notcing one fairly major one…..having the headphones in the mic input – doh! I’d do well to check the obvious things first in the future.</p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/12/more-ubuntu-ati-9600-and-sblive#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/12/more-ubuntu-ati-9600-and-sblive/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
@@ -151,7 +151,7 @@
 <div class="author_meta">10 Aug 2006</div>
 	<p>It seems I may have spoken too soon about my linux joys with ubuntu. After performing a dist-upgrade on my previous beta version of Dapper, I discovered I’d have to go through the same problems of downloading kernel source and linux header packages for my new kernel version.I also discovered after doing this that actually there were further problems on booting Dapper straight up. Apparently the pointers to drives get screwed up somewhere in the process. Although I could boot into X using just the safety mode and booting from there, this wasn’t ideal and I still wanted my lovely little 64 bit install to be working nicely. I dicovered that adding the line ide=nodma to the line of the reference in grub solved the problem.So I’m in, great you might think, but oh no – lets try amarok on for size too… Amarok (A shiny linux media player I discoved) wasn’t playing any of my mp3′s at all, just whizzing through the lot of them. A short search revealed that in using the xine engine, xine needed further codecs to be installed to get sound out too. You’d think that a dependency would be put in place here to sort this out by default. One nice feature I like is the inbuilt submission to last.fm, a great idea in my book – I use it all the time.Anyway, *now *my Ubuntu is being nice. Oh no, have I just jinxed it?</p>
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/10/did-i-speak-too-soon#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/10/did-i-speak-too-soon/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
@@ -162,7 +162,7 @@
 	<p>FInally, after a grand total of 10 months, I have a 64bit version of Ubuntu Linux working upon my home machine.This is great news, not only does it mean that I have a wonderful OS to try out for size, but that I can easily convert my subversion server code and latex source to my machine.As I’ve never mentioned it before, I’ll detail what the problem was here. First up, the graphics card didn’t have drivers which were working which meant that my X800 was pretty pathetic to be quite honest with you. There was a fairly simple solution through apt, which would have been nice if………………the network card on my A8N-VM CSM was working properly, which it wasn’t, due to use of an NFORCE chipset. A build of some drivers were neccessary, which required adding a load of packages (simple if apt were working!).Anyway, several days of man hours later, and this ubuntu thing works wonderfully. If you’re having similar troubles with this board, its probably best to use <a href="https://help.ubuntu.com/community/NvNetInstallation" title="Ubuntu NVNet installation">this page</a> for guidance.</p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/07/ubuntu-working#disqus_thread">Leave a comment</a></div>
+	<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/07/ubuntu-working/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     
