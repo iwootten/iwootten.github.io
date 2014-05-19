@@ -42,89 +42,161 @@
       
 
 <div class="post">
-<h1><a href="/2008/01/09/learning-jquery">Book Review: Learning jQuery</a></h1>
-<div class="author_meta">09 Jan 2008</div>
-<p><a href="http://www.amazon.co.uk/exec/obidos/ASIN/B000VUVG3E/1847192505/staplediet-21"><img src="http://images-eu.amazon.com/images/P/1847192505.02.TZZZZZZZ.jpg" alt="Learning jQuery" /></a>Learning jQuery takes a look at the JavaScript library jQuery by Jonathan Chaffer and Karl Swedberg, whom run <a href="http://learningjquery.com">learningjquery.com</a>, a popular resource to jQuery developers. Jonathan and Karl work through a example based approach of common problems in web application development to demonstrate how jQuery can be used to minimize the amount of code written by developers and instead focus on the functionality of their code. </p>
-<p>The book is set for the developer with some knowledge of HTML, CSS and Javascript but a jQuery novice. The examples in the first few chapters offer solutions which may be achieved more simply through alternative approaches (e.g. applying styles with JavaScript, rather than applying it directly in HTML), but they serve their purpose of introducing what can be done without introducing a huge amount of features of the library too quickly. The following examples are far more realistic, focusing on tasks more suited to the library. </p>
-<p>Each example is explained so thoroughly it includes exploring many eventualities that the less descerning developer may glaze over, with many set over the course of a chapter. I certainly found that many of the examples highlighted problems I just wouldn&#8217;t be aware of. The applications built through the examples include style switchers, animation effects and Chapters 8-9 cover much more completely how to build more full featured scripts such as AJAX based searches, a shopping cart system and image shufflers and rotators. Other topics of note include how to perform manipulation of the DOM tree of a HTML page and how to handle particular event requests. The book also does really well at consistently suggesting in the later examples the must haves of any page featuring JavaScript, progressive enhancement and graceful degradation.</p>
-<p>One of the things that frustrated me slightly however was the frequency of code repitition and screen captures for each new added feature, but this is a minor problem considering how well the books covers the subject.</p>
-<p>I found this an extremely easy and interesting read, with the example based approach keeping me engaged in how each situation could be enhanced with use of jQuery. The sensible organisation of each chapter means that many asides are covered enough to give the reader a working knowledge of how complementary technologies are able to be used with the library. The book also includes appendices documenting a number of useful web development sites, not all specific to just jQuery. Overall, a thorough introduction to the language.</p>
-<p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
+<h1><a href="/2008/11/20/new-t-shirts-from-fair-bare">New T-Shirts from Fair &#038; Bare</a></h1>
+<div class="author_meta">20 Nov 2008</div>
+<p>I&#8217;m really pleased to announce that Fair &#038; Bare has just released 2 new shirts. First up is “Feel the Force” based on a slogan submission by JonnyDanger and secondly is the fantastic Esther Aarts’ “My Bike is My Castle”. </p>
+<p><a href="http://www.fairandbare.com/product/2/feel_the_force"><br />
+<img src="http://www.fairandbare.com/images/shirts/2/1.jpg" alt="JonnyDanger - Feel the Force" /><br />
+</a></p>
+<p><a href="http://www.fairandbare.com/product/3/my_bike_is_my_castle"><img src="http://www.fairandbare.com/images/shirts/3/1.jpg" alt="Esther Aarts - My Bike is My Castle" /></a></p>
+<p>We printed these on super-soft, Fairtrade certified, organic in-conversion cotton using fantastic waterbased inks. They also look pretty darn good. It&#8217;s the net result of a ton of hard work by our printers, designers, community and the original cotton original farmers that mean that these have been able to be released. <a href="http://www.fairandbare.com">Head over to buy one (or more!)</a>.</p>
 
-<div class="entry_content">Tagged <a href="/tag/book review">book review</a>, <a href="/tag/jQuery">jQuery</a>,  | <a href="/2008/01/09/learning-jquery/#disqus_thread">Leave a comment</a></div>
+<div class="entry_content">Tagged <a href="/tag/bikes">bikes</a>, <a href="/tag/fair-trade">fair trade</a>, <a href="/tag/fairtrade">fairtrade</a>, <a href="/tag/force">force</a>, <a href="/tag/t-shirts">t shirts</a>, <a href="/tag/tshirts">tshirts</a>, <a href="/tag/waterbased-inks">waterbased inks</a>,  | <a href="/2008/11/20/new-t-shirts-from-fair-bare/#disqus_thread">Leave a comment</a></div>
 </div>
 
 
 
 <div class="post">
-<h1><a href="/2008/01/05/decrypting-filezilla-passwords-with-php">Decrypting Filezilla Passwords with PHP</a></h1>
-<div class="author_meta">05 Jan 2008</div>
-<p>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I’ve added some comments to roughly describe what is going on.</p>
+<h1><a href="/2008/11/03/fair-bare-snowdodgers-challenge">Fair &#038; Bare Snowdodgers Challenge</a></h1>
+<div class="author_meta">03 Nov 2008</div>
+<p>Yesterday I announced that we’re running our <a href="http://fairandbare.com/challenge/snowdodgers">first design challenge</a> in conjunction with <a href="http://snowdodgers.co.uk">team Snowdodgers</a> at <a href="http://www.fairandbare.com">Fair &#038; Bare</a>. These are some really amazing fellas who are trying to raise £48,000 for charity by rallying a £200 banger round 4000 miles involving the Arctic circle. We’re asking designers to get in designs relating to the chilly weather and the guys crazy antics!</p>
 
-<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that’ll make my job easier now. &lt;pre class='php'&gt;$filezilla_password_file = “FileZilla.xml”;</p>
+<p>If you’re interested, you’ve got just a month to get an entry in. You’ll win £100 plus a space on the rally car for your design!</p>
 
-<p>$xml = file_get_contents($filezilla_password_file);</p>
-
-<p>$simple_xml = simplexml_load_string($xml);</p>
-
-<p>foreach($simple_xml-&gt;Sites-&gt;Site as $site)
-{
-	$attributes =  $site-&gt;attributes();</p>
-
-<pre><code>print "Site: ".$attributes-&gt;Name."\n";
-print "User: ".$attributes-&gt;User."\n";
-print "Encrypted Pass: ".$attributes-&gt;Pass."\n";
-print "Unencrypted Pass:".decryptPass((string)$attributes-&gt;Pass)."\n\n"; }
-</code></pre>
-
-<p>function decryptPass($pass) 
-{
-        // Encryption Key for FileZilla 2 Passwords
-	$key = “FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ”;</p>
-
-<pre><code>// Find the offset position in the key for this pass
-$pos=(strlen($pass)/3) % strlen($key);
-$decrypt = '';
-
-$t=0;
-	
-//Loop through each 3rd of the password
-for($i=0;$i &amp;lt; strlen($pass) / 3;$i++) {
-	    
-    //Get 3 characters, remove the 0 at the 
-//front to get ASCII code to represent the character 
-$num = substr($pass,$i * 3,3);
-
-if (substr($num,0,1) == 0) {
-	$num = substr($num,1,2);
-}
-		
-//Get the ascii code of the unencrypted character
-//by performing XOR against current ASCII and key
-//before converting back and adding to decrypted pass
-	$t = $num ^ ord($key[($i + $pos) % strlen($pass)]);
-	 $decrypt .= chr($t);
-	    
-}
-	
-// Return the decrypted pass
-   return $decrypt; }
-</code></pre>
-<p>&lt;/pre&gt;</p>
+<p>Check out <a href="http://fairandbare.com/challenge/snowdodgers">the challenge page</a> for full details of how to enter!</p>
 
 
-<div class="entry_content">Tagged <a href="/tag/decryption">decryption</a>, <a href="/tag/filezilla">filezilla</a>, <a href="/tag/PHP">PHP</a>,  | <a href="/2008/01/05/decrypting-filezilla-passwords-with-php/#disqus_thread">Leave a comment</a></div>
+<div class="entry_content">Tagged  | <a href="/2008/11/03/fair-bare-snowdodgers-challenge/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming">Sweetcron is pretty sweet at Lifestreaming</a></h1>
+<div class="author_meta">31 Aug 2008</div>
+<p>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to <a href="http://sweetcron.com">Sweetcron</a>. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web. You can see mine over <a href="http://ianwootten.co.uk/stream">here</a> (although is mostly twitter updates for the minute).</p>
+
+<p>What sets this lifestream software apart from others is that as its opensource it can be downloaded, modified and hosted upon your own servers. That means you’re free to mess about with it as you like and maybe customise the page in your own snazzy design. It’s also based on the lovely codeigniter PHP framework from the peeps at ellislabs, which I’ve used a number of times now. You’ll need to modify the .htaccess and codeigniter config to get it working in a sub-folder, but it’s all fairly easy and self explanatory. </p>
+
+<p>The author, <a href="http://www.yongfook.com">Yong Fook</a> has done well to put this out as a side project all on his tod. Whilst my design looks fairly basic, there is a more fancy version included that looks a lot like Yongs homepage.</p>
+
+<p>If you’re a proper geek, a <a href="http://adactio.com/journal/1202">homebrewed version of a lifestream</a> might be more your style.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/codeiginiter">codeiginiter</a>, <a href="/tag/ellislabs">ellislabs</a>, <a href="/tag/lifestream">lifestream</a>, <a href="/tag/opensource">opensource</a>, <a href="/tag/PHP">PHP</a>,  | <a href="/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/07/22/fair-and-bares-first-shirt">Fair and Bare&#8217;s first shirt!</a></h1>
+<div class="author_meta">22 Jul 2008</div>
+<p>So, its been a long time coming, but Fair and Bare&#8217;s first t-shirt is now available to purchase!</p>
+<p><a href="http://www.fairandbare.com/product/view/1/tree_huggin"><br />
+<img src="http://s3.amazonaws.com/fairandbare/images/banners/shop_banner.jpg" alt="Tree Huggin'" /><br />
+</a></p>
+<p>Thanks to everyone who&#8217;s participated since we kicked off. Really appreciate all your designs, words and support. We&#8217;re still taking submissions for our competitions, so if you haven&#8217;t hit us up already make sure you do!</p>
+
+<div class="entry_content">Tagged <a href="/tag/competition">competition</a>, <a href="/tag/cotton">cotton</a>, <a href="/tag/design">design</a>, <a href="/tag/fairtrade">fairtrade</a>, <a href="/tag/fashion">fashion</a>, <a href="/tag/t-shirts">t shirts</a>, <a href="/tag/tees">tees</a>,  | <a href="/2008/07/22/fair-and-bares-first-shirt/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/05/31/cardiff-web-meetup-no-3">Cardiff Web Meetup #3</a></h1>
+<div class="author_meta">31 May 2008</div>
+<p>Just a quick note to remind people that this coming week is the third Cardiff meetup for web types in wales. It’s in 10 Feet Tall on Church St on Wednesday 4th June from 6.30pm. Featured speakers include <a href="http://www.thelondonbiker.com/">Matthew Cashmore</a> (Development Producer for BBC Future Media &#038; Technology, Research and Innovation) and <a href="http://timholmes.blogspot.com/">Tim Holmes</a> (Course co-ordinator for the Postgraduate Diploma in Magazine Journalism and the MA International Journalism: Magazine Pathway at Cardiff University’s School of Journalism, Media and Cultural Studies). It sounds like its going to be two really interesting talks with Matt discussing BBC Backstage and Mashed, whilst Tim will be chatting about journalism for the web. If thats not enough, there is even bands that you would normally have to pay for on afterwards. </p>
+
+<p>See the <a href="http://www.facebook.com/event.php?eid=13081094169">facebook</a> or <a href="http://upcoming.yahoo.com/event/676186/">upcoming</a> events for more.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/bbc">bbc</a>, <a href="/tag/cardiff-geeks">cardiff geeks</a>, <a href="/tag/journalism">journalism</a>, <a href="/tag/Web">Web</a>,  | <a href="/2008/05/31/cardiff-web-meetup-no-3/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/05/30/johnny-lee-innovative-uses-of-common-technology">Johnny Lee&#8217;s Innovative Uses of Common Technology</a></h1>
+<div class="author_meta">30 May 2008</div>
+<p>I’m not sure how many visitors have caught this ted talk before, but I’d thought I’d post it anyway. Johnny Chung Lee is amazing, turning a $40 wii remote into use an interactive whiteboard or a new way to interact with video games via head tracking. He’s been at this sort of thing for ages previously putting out a <a href="http://www.littlegreatideas.com/steadycam/">$14 steadycam</a>.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/steadycam">steadycam</a>, <a href="/tag/whiteboard">whiteboard</a>, <a href="/tag/wii">wii</a>,  | <a href="/2008/05/30/johnny-lee-innovative-uses-of-common-technology/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/05/06/fair-and-bare-bringing-design-to-fairtrade">Fair and Bare &#8211; Bringing Design to Fairtrade</a></h1>
+<div class="author_meta">06 May 2008</div>
+<p>Some of the visitors to this site might be aware that I like my t shirts, each with their bold and awesome illustrations. I’m also quite an avid supporter of fairtrade, being involved with <a href="http://fairdos.com">fairdos</a> and purchasing fairtrade options such as tea and chocolate where possible. One of the big bugbears my friends and I have always had in the support of the fairtrade movement is that many of the designs put across upon fairtrade cotton products don’t appeal to us at all. Some of these friends are people who are right up there within prominent fairtrade companies, who although avid promoters, won’t wear fairtrade on a day to day basis if it means they have to sacrifice their style. It seems that the fairtrade companies don’t do design and so we’re not given a choice between two similar products. The end result is we’re faced with looking great and feeling a little discontent that the garment isn’t as fantastic as it could be, or feeling great about a product – but not looking so awesome. We’ve often spoken of beginning a fairtrade company that puts out clothing that is both ethically produced and well designed, but held off doing so because it felt a little beyond us. I can say here now that we’ve made the first step in bringing that vision a little closer.</p>
+
+<p><a href="http://fairandbare.com">Fair and Bare</a> is a crowdsourcing project which pays out comission to designers who successfully produce t shirt design ideas for fairtrade t shirts. It’s also an attempt for the fairtrade community to lose that somewhat ‘serious face’ with which I think they are often associated and relax the shoulders a bit whilst having some fun. We’re currently offering £200 for designs and £50 for design ideas which we think are worth printing up onto fairtrade cotton. We then hope to offer shirts at a somewhat more accessible price than other fairtrade shirts. It’s a fun, small project at the moment, but I hope that we can help rejuvinate an otherwise awesome product and maybe inspire others to do the same.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/competition">competition</a>, <a href="/tag/cotton">cotton</a>, <a href="/tag/design">design</a>, <a href="/tag/fairtrade">fairtrade</a>, <a href="/tag/fashion">fashion</a>, <a href="/tag/t-shirts">t shirts</a>, <a href="/tag/tees">tees</a>,  | <a href="/2008/05/06/fair-and-bare-bringing-design-to-fairtrade/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/04/02/amazon-associates-wordpress-wishlist-plugin">Amazon Associates WordPress Wishlist Plugin</a></h1>
+<div class="author_meta">02 Apr 2008</div>
+<p>One of the things that’s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they’re unable to find my wishlist. This is mainly because they’re simple folk who might not think to check amazon for my name. I’m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage. All this data is available on the web already its just a case of putting it together.</p>
+
+<p>Some keen readers might of noticed the wishlist page I stuck up recently and want something similar on their own site and (like myself) either can’t be bothered or didn’t have the time to create a plugin to pull this data together. I’m putting up here my own quick and dirty plugin I built a few weeks ago to achieve this.</p>
+
+<p>It uses amazon web services to look up a wishlist, stick in a specified associates id in each of my item links and replace where I put the text <!-- wishlist_content --> (without spaces) in a post with my wishlist items. The plugin regularly updates this (hourly) as a scheduled event in wordpress in case someone decides to actually buy me something. Of course you’ll need a services key to use it, which you can easily get by signing up with amazon at aws.amazon.com. Fill out your services id, your wishlist id (found by logging into amazon and heading to your wishlist page) and your locale (the bit after amazon. so mine is .co.uk) and press the fetch items to pull all the items in. If you don’t have an associates id, feel free to leave as my own : )</p>
+
+<p>I used curl to get the remote data from amazon as the file_get_content methods generally aren’t enabled on normal web hosts. If you’d like the items to be fetched less regularly, then install the plugin with and updated wp_schedule_event method in the main wishlist.php to a value of your choice.</p>
+
+<p>You can download it over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
+
+<p><em>Double alliteration in a post title? Not sure I’ve attempted that before.</em></p>
+
+<p>[Edit: You’ll need to be running on PHP5 to make use of this plugin]<br />
+[Edit: I released an updated version based on Amazon’s move to use of signitures, see the details <a href="http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2">here</a>]</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/amazon">amazon</a>, <a href="/tag/associates">associates</a>, <a href="/tag/aws">aws</a>, <a href="/tag/PHP">PHP</a>, <a href="/tag/web-services">web services</a>, <a href="/tag/wishlist">wishlist</a>,  | <a href="/2008/04/02/amazon-associates-wordpress-wishlist-plugin/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/01/31/book-review-code-igniter-for-rapid-php-application-development">Book Review: Code Igniter for Rapid PHP Application Development</a></h1>
+<div class="author_meta">31 Jan 2008</div>
+<p><a href="http://www.amazon.co.uk/exec/obidos/ASIN/1847191746/staplediet-21"><img src="http://images-eu.amazon.com/images/P/1847191746.02.TZZZZZZZ.jpg" alt="Code Igniter for Rapid PHP Application Development" /></a>In this book, author David Upton walks you through use of the Code Igniter framework, which is essentially PHP&#8217;s answer to Ruby on Rails. I&#8217;ve been a avid user of <a href="http://codeigniter.com">Code Igniter</a> since I discovered it last year, which is a nice waypoint for anyone trying to understand model-view-controller architectures and not wanting to make the move over to ROR quite yet.</p>
+<p>The angle of this book is taken from a first time CI developer, but one with some knowledge of both PHP and web development in general. The initial chapters begin by exploring why you&#8217;d choose to use CI and some of its benefits over straight PHP code (such as saving on code reproduction or easing development burdens), though doesn&#8217;t really offer any real comparison of features of other similar frameworks. A traditional chapter on setup of CI is also included, (though I think at 4 pages could have perhaps been merged with another!). </p>
+<p>The book then proceeds by tackling the subject at the core of CI, &#8216;model-view-controller&#8217; and how this relates to traditional methods of programming. David breaks down how CI is structured very well and gives suggestions of how applications built within it should be designed to be successful. Some of the example code savings at this stage are somewhat minimal over a standard approach, but I think David conveys how these rack up throughout a web app. Useful chapters of how active record and CRUD can be used to ease DB interaction and also how views can be organised to avoid repitition complete with examples should allow any new CI developer to get to grips with it very quickly.</p>
+<p>The later chapters quite extensively cover more &#8220;geeky&#8221; complicated subjects (using objects and namespaces, localisation, getting CI to interact with other services) which might be a bit much for a hobbyist user, but it gives some room for learning for others. The book also includes some good descriptions of how to make the most of the testing and profiling features which CI has out of the box to debug some of the larger web applications that you might undertake (Both features which I&#8217;ve previously been unaware of).</p>
+<p>The use of friendly language is a welcome change from other texts, but I think in places it does get in the way a bit of the particular functionality which is being talked about. The constant reenforcement of the MVC throughout will be welcome for new converts, but my own practical experience suggests this might be better bent in places. A number of the descriptions of features provided in the book are at the CI site, and I think what might have helped this book is if a single larger running example led the way to describing each of the features.</p>
+<p>At the moment, this is the only CI book available and it does well at covering the large featureset CI has. For a seasoned CI veteran it won&#8217;t bring any revelations, but if you&#8217;re new the framework it will serve you extremely well at getting your head round what makes it shine.</p>
+<p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
+
+<div class="entry_content">Tagged <a href="/tag/book-review">book review</a>, <a href="/tag/code-igniter">code igniter</a>, <a href="/tag/PHP">PHP</a>,  | <a href="/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
+<h1><a href="/2008/01/30/location-based-job-boards">Location Based Job Boards</a></h1>
+<div class="author_meta">30 Jan 2008</div>
+<p>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent <a href="http://djangogigs.com">job</a> and <a href="http://simonwillison.net/2008/Jan/23/djangopeople/">profile sites</a> in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don’t have time myself to do this though unfortunately – perhaps someone might like to chat about collaborating). What I’ve concluded is that being aware of those jobs within a certain area might be quite useful – and simple to implement. What you’d basically end up with is a situation where you could subscribe to updates on jobs in a particular field within a certain area (think – “tell me about all dev jobs within 50 miles”). Whilst this feature may exist on some other sites (though I’m unaware of it) my experience tells me that it probably isn’t executed particularly well.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/boards">boards</a>, <a href="/tag/django">django</a>, <a href="/tag/jobs">jobs</a>, <a href="/tag/natbat">natbat</a>, <a href="/tag/simon-willison">simon willison</a>,  | <a href="/2008/01/30/location-based-job-boards/#disqus_thread">Leave a comment</a></div>
 </div>
 
 
 
 <div class="pagination">
 
-  <a href="/page/1" class="previous">Previous</a>
+  <span class="previous">Previous</span>
 
-<span class="page_number ">Page: 2 of 2</span>
+<span class="page_number ">Page: 1 of 2</span>
 
-  <span class="next ">Next</span>
+  <a href="/2008/page/2" class="next">Next</a>
 
 </div>
 
