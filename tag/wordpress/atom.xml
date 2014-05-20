@@ -27,7 +27,7 @@
 
 <div class="highlight"><pre><code class="bash">Unable to activate compass-0.12.6, because sass-3.3.7 conflicts with sass <span class="o">(</span>~&gt; 3.2.19<span class="o">)</span> <span class="o">(</span>Gem::LoadError<span class="o">)</span></code></pre></div>
 
-<p>After searching for a bit I came across the <a href="https://github.com/jekyll/jekyll/issues/2263">following issue</a> which detailed a solution - but unfortunately it didn’t work for me. Being somewhat of a newbie to Ruby, I didn’t realise that after creating a Gem as instructed in the fix, I actually needed to “bundle install” it. After a little more digging and tweaking against (Mark Turners)[http://twitter.com/markturner] advice, I ended up with a Gem file like so:</p>
+<p>After searching for a bit I came across the <a href="https://github.com/jekyll/jekyll/issues/2263">following issue</a> which detailed a solution - but unfortunately it didn’t work for me. Being somewhat of a newbie to Ruby, I didn’t realise that after creating a Gem as instructed in the fix, I actually needed to “bundle install” it. After a little more digging and tweaking against <a href="http://twitter.com/markturner">Mark Turners</a> advice, I ended up with a Gem file like so:</p>
 
 <div class="highlight"><pre><code class="ruby"><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
 
