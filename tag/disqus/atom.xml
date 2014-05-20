@@ -3,7 +3,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
    
-    <title>ianwootten.co.uk - Category: blog</title>
+   	<title>ianwootten.co.uk - Tag: disqus</title>
    
    <link>http://ianwootten.co.uk</link>
    <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
@@ -64,22 +64,6 @@
 <p><img src="images/screen-2014-05-20.png" title="Disqus Migrate Threads Wizard" /></p>
 
 <p>In my next post I’ll go through how I use plugins to support archive, category and tag pages in jekyll.</p>
-
-		]]></description>
-	  </item>
-    
-	  <item>
-        <title>Bye Bye Wordpress</title>
-        <link>http://ianwootten.co.uk/2014/05/18/bye-bye-wordpress</link>
-		<author>I.M.Wootten<</author>
-		<pubDate>2014-05-18T00:00:00+01:00</pubDate>
-		<guid>http://ianwootten.co.uk/2014/05/18/bye-bye-wordpress</guid>
-		<description><![CDATA[
-		   <p>I’ve finally made the move to <a href="http://jekyllrb.com">jekyll</a> for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible <a href="https://github.com/iwootten/iwootten.github.io">on github</a> and revision control for post entries is handled there too.</p>
-
-<p>What finally convinced me with the release of jekyll 2 was the introduction of <a href="http://jekyllrb.com/news/2014/05/06/jekyll-turns-2-0-0/">native sass support</a>. Originally, the prose theme I’m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it. I had the scss for the original design available and therefore thought the jump to using jekyll wouldn’t be that great (or so I thought - overlooking all the features jekyll doesn’t support compared to wordpress). I’m going to blog individually about the pieces of the puzzle in other posts as there are number of things that tripped me up along the way.</p>
-
-<p>But for now, I’d like to bid a fond farewell to wordpress - my go to blogging software for the last 10 years. You once were diminutive, got out of my way and let my voice be heard. That’s no longer the case. These days the only time we speak is when you want me to update you. I’ve got better things to do. Theres a ton of features the length of my arm which I’ve never used and the majority of features which I use rarely. I long for those simpler days once again. You’ve served me well, but I’ve moved on.</p>
 
 		]]></description>
 	  </item>

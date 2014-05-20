@@ -42,6 +42,39 @@
       
 
 <div class="post">
+<h1><a href="/2012/01/12/goodbye-1-1">Goodbye 1 &#038; 1</a></h1>
+<div class="author_meta">12 Jan 2012</div>
+<p>I just sent the following email to 1 &#038; 1′s billing department. I’ve been with them for coming up to 7 years now and they were, when I first used them, the only registraar I knew about and I was really happy. </p>
+
+<p>As the number of domains I own has grown, their account admin has become really totally useless to manage them all. I recieved a payment request out of the blue today and it tipped me over the edge.</p>
+
+<blockquote>
+  <blockquote>
+    <p>We contacted you regarding a declined payment or an expired credit/debit card and have not yet heard back from you.<br />
+Our records indicate that there is an unpaid balance in your 1&#038;1 customer account no.: K####### as listed below.</p>
+  </blockquote>
+
+  <p>Firstly – No you didn’t.</p>
+
+  <p>Secondly – It would be far more useful telling me which domain name in my account a payment demand is in reference to rather than my account number, as I have more than 1 domain with you.</p>
+
+  <p>Thirdly – The steps you’ve listed here to find my payment details miss steps and references links that don’t exist.</p>
+
+  <p>Fourthly – Threatening action when you haven’t actually sent a primary payment request email is rude, forceful and obnoxious.</p>
+
+  <blockquote>
+    <p>Please be aware that if this matter is not resolved, you may be sent to a debt collection agency. If the account is sent to a debt collection agency a £15.00 &gt; charge will be added to the unpaid balance.</p>
+  </blockquote>
+
+  <p>I’ve decided to take all of my business elsewhere at the earliest opportunity. I’d hope you’d take heed of these comments and pay your other longstanding customers the respect they deserve.</p>
+</blockquote>
+
+<div class="entry_content">Tagged <a href="/tag/customer service">customer service</a>, <a href="/tag/domains">domains</a>,  | <a href="/2012/01/12/goodbye-1-1/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2011/11/02/pagination-in-couchdb-apps">Pagination in CouchDB Apps</a></h1>
 <div class="author_meta">02 Nov 2011</div>
 <p>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.</p>
@@ -581,111 +614,6 @@ sudo chown -R ian:www-data /var/www/pathtowordpress/
 
 
 <div class="entry_content">Tagged  | <a href="/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2010/09/09/installing-gphoto-on-snow-leopard">Installing gPhoto on Snow Leopard</a></h1>
-<div class="author_meta">09 Sep 2010</div>
-<p>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I’m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn’t really up to the job and FrameByFrame doesn’t work with such high-end cameras.</p>
-
-<p>So, I got to thinking wether there was any other route? I was aware of the <a href="http://www.gphoto.org/">gPhoto</a> commandline interface and libgphoto pointed out by a <a href="http://www.txm.net/">colleague</a> some time ago, so I thought I’d see what I might be able to do with it.</p>
-
-<p>It is possible to install gPhoto using macports, but I chose to compile from source. Here’s how to do it if anyone else is interested.</p>
-
-<p>Install <a href="http://sourceforge.net/project/showfiles.php?group_id=1674&#038;package_id=277626">libusb</a> &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>Install <a href="http://sourceforge.net/project/showfiles.php?group_id=1674&#038;package_id=277627">libusb compat</a> &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure <span style="color: #007800;">LIBUSB_1_0_CFLAGS</span>=-I<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>local<span style="color: #000000; font-weight: bold;">/</span>include<span style="color: #000000; font-weight: bold;">/</span>libusb-<span style="color: #000000;">1.0</span> <span style="color: #007800;">LIBUSB_1_0_LIBS</span>=<span style="color: #ff0000;">"-L/usr/local/lib -lusb-1.0"</span>
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>Install <a href="http://sourceforge.net/projects/libexif/files/">libexif</a> &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>Install &lt;a href=http://www-rocq.inria.fr/~gilbert/modulopt/libopt/libopt.tgz”&gt;libopt&lt;/a&gt; &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>Install <a href="http://sourceforge.net/projects/gphoto/files/">libgphoto2</a> (it may not be neccessary to restrict to a subset of drivers as I have done here, but on my macbook it wouldn’t compile unless I did so.) &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure <span style="color: #660033;">--with-drivers</span>=canon
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>Install <a href="http://tiswww.case.edu/php/chet/readline/rltop.html">readline</a> &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>Install <a href="http://sourceforge.net/projects/gphoto/files/">gphoto</a> &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-<p>You now should be able to capture, download, setup timelapses all from your terminal. See the <a href="http://www.gphoto.org/doc/manual/using-gphoto2.html">full list of examples</a> on the <a href="http://www.gphoto.org/">gphoto homepage</a>.</p>
-
-<p>In my own experiments, I’ve found I’ve mad to kill the PTP software that is initially fired up by the mac in order for gphoto to be able to communicate over usb. It also seems that any files I capture are not written to the memory card (or listed using the –list-files argument), meaning I need to use the –capture-image-and-download argument to capture direct to my machine. I’ve not had much time to experiment yet, so there may be another workaround.</p>
-
-<p>Anyway, its not a stop motion app yet, but it’s a start!</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/camera">camera</a>, <a href="/tag/code">code</a>, <a href="/tag/stop motion">stop motion</a>,  | <a href="/2010/09/09/installing-gphoto-on-snow-leopard/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

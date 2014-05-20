@@ -42,6 +42,111 @@
       
 
 <div class="post">
+<h1><a href="/2010/09/09/installing-gphoto-on-snow-leopard">Installing gPhoto on Snow Leopard</a></h1>
+<div class="author_meta">09 Sep 2010</div>
+<p>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I’m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn’t really up to the job and FrameByFrame doesn’t work with such high-end cameras.</p>
+
+<p>So, I got to thinking wether there was any other route? I was aware of the <a href="http://www.gphoto.org/">gPhoto</a> commandline interface and libgphoto pointed out by a <a href="http://www.txm.net/">colleague</a> some time ago, so I thought I’d see what I might be able to do with it.</p>
+
+<p>It is possible to install gPhoto using macports, but I chose to compile from source. Here’s how to do it if anyone else is interested.</p>
+
+<p>Install <a href="http://sourceforge.net/project/showfiles.php?group_id=1674&#038;package_id=277626">libusb</a> &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>Install <a href="http://sourceforge.net/project/showfiles.php?group_id=1674&#038;package_id=277627">libusb compat</a> &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure <span style="color: #007800;">LIBUSB_1_0_CFLAGS</span>=-I<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>local<span style="color: #000000; font-weight: bold;">/</span>include<span style="color: #000000; font-weight: bold;">/</span>libusb-<span style="color: #000000;">1.0</span> <span style="color: #007800;">LIBUSB_1_0_LIBS</span>=<span style="color: #ff0000;">"-L/usr/local/lib -lusb-1.0"</span>
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>Install <a href="http://sourceforge.net/projects/libexif/files/">libexif</a> &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>Install &lt;a href=http://www-rocq.inria.fr/~gilbert/modulopt/libopt/libopt.tgz”&gt;libopt&lt;/a&gt; &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>Install <a href="http://sourceforge.net/projects/gphoto/files/">libgphoto2</a> (it may not be neccessary to restrict to a subset of drivers as I have done here, but on my macbook it wouldn’t compile unless I did so.) &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure <span style="color: #660033;">--with-drivers</span>=canon
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>Install <a href="http://tiswww.case.edu/php/chet/readline/rltop.html">readline</a> &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>Install <a href="http://sourceforge.net/projects/gphoto/files/">gphoto</a> &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;">.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+<p>You now should be able to capture, download, setup timelapses all from your terminal. See the <a href="http://www.gphoto.org/doc/manual/using-gphoto2.html">full list of examples</a> on the <a href="http://www.gphoto.org/">gphoto homepage</a>.</p>
+
+<p>In my own experiments, I’ve found I’ve mad to kill the PTP software that is initially fired up by the mac in order for gphoto to be able to communicate over usb. It also seems that any files I capture are not written to the memory card (or listed using the –list-files argument), meaning I need to use the –capture-image-and-download argument to capture direct to my machine. I’ve not had much time to experiment yet, so there may be another workaround.</p>
+
+<p>Anyway, its not a stop motion app yet, but it’s a start!</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/camera">camera</a>, <a href="/tag/code">code</a>, <a href="/tag/stop motion">stop motion</a>,  | <a href="/2010/09/09/installing-gphoto-on-snow-leopard/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2010/07/24/how-not-to-do-a-hack-day">How not to: Do A Hack Day</a></h1>
 <div class="author_meta">24 Jul 2010</div>
 <p>It’s been well over a month since I attended <a href="http://sciencehackday.com">science hack day</a> and I’d thought I’d put out some notes on my time there. Rather than do a run down of the event, for which I’m sure there’s far more comprehensive blog posts available already, I thought I’d share my experiences based on attendance of a number of different hack events I’ve been to over the years. I went with the full intention of doing some hardcore hacking, but didn’t entirely meet my own expectations. Here’s my top tips, for now not to do a hack day:</p>
@@ -234,20 +339,6 @@
 
 
 <div class="entry_content">Tagged <a href="/tag/canonical">canonical</a>, <a href="/tag/tinyurl">tinyurl</a>,  | <a href="/2009/05/16/create-your-own-tinyurl-service-for-wordpress/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2009/05/15/my-vicious-circle-of-posting-quality-content">My Vicious Circle of Posting Quality Content</a></h1>
-<div class="author_meta">15 May 2009</div>
-<p>I’ve been looking back at the posts on this site and the commitment that I supposedly made (internally) a couple of months ago about posting regular, interesting content. But it seemed to die a death very promptly.</p>
-
-<p>I think that there may be a bit of a vicious circle here (in my own situation at least). I’d love to post regular interesting stuff, but for that to happen I need to feel that it might be read. By far the most commented stuff here is when I link up code. Those posts take a fairly substantial amount of time for me to complete as they are born of the result of my own frustration of hours spent tinkering with code, which I think might be useful for others to be clued up on. I also need time to gather my thoughts and structure what exactly I’m trying to say to people. This all adds up.</p>
-
-<p>If I post more often, I fear the lesser quality of content might be pretty boring for the majority of people and probably not at all worthy of feedback from them. So I end up in a kind of stalemate position – should I post this/shouldn’t I/Oo-er and I don’t do anything. I’m not saying that I have a massive amount of visitors here, I’d just like them to enjoy the experience when they visit.</p>
-
-<div class="entry_content">Tagged <a href="/tag/content">content</a>, <a href="/tag/copy">copy</a>, <a href="/tag/quality">quality</a>,  | <a href="/2009/05/15/my-vicious-circle-of-posting-quality-content/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

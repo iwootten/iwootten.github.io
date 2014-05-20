@@ -42,6 +42,34 @@
       
 
 <div class="post">
+<h1><a href="/2006/10/16/bash-bash">Bash bash</a></h1>
+<div class="author_meta">16 Oct 2006</div>
+<p>I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.</p>
+
+<p>I found a program called <a href="http://fileschanged.sourceforge.net">fileschanged</a>, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that. What it did allow me to do however was pass the filename as an argument (along with some other parameter) to another program. I duely spent an hour or so trying to figure out a script to take that filename and report back its filesize and the current time (which I assume is close enough to that which the file was changed). This is what it looks like: &lt;div class="wp_syntax"&gt;</p>
+<table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">#!/bin/bash</span>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">&#91;</span> <span style="color: #660033;">-z</span> <span style="color: #ff0000;">"$1"</span> <span style="color: #7a0874; font-weight: bold;">&#93;</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7a0874; font-weight: bold;">&#91;</span> <span style="color: #660033;">-z</span> <span style="color: #ff0000;">"$2"</span> <span style="color: #7a0874; font-weight: bold;">&#93;</span>; <span style="color: #000000; font-weight: bold;">then</span>
+	<span style="color: #7a0874; font-weight: bold;">exit</span>
+<span style="color: #000000; font-weight: bold;">fi</span>
+<span style="color: #007800;">FN</span>=<span style="color: #007800;">$2</span>
+<span style="color: #007800;">DATE</span>=$<span style="color: #7a0874; font-weight: bold;">&#40;</span><span style="color: #c20cb9; font-weight: bold;">date</span> +<span style="color: #000000; font-weight: bold;">%</span>s<span style="color: #7a0874; font-weight: bold;">&#41;</span>
+<span style="color: #007800;">FILESIZE</span>=$<span style="color: #7a0874; font-weight: bold;">&#40;</span><span style="color: #c20cb9; font-weight: bold;">stat</span> -c<span style="color: #000000; font-weight: bold;">%</span>s <span style="color: #ff0000;">"<span style="color: #007800;">$FN</span>"</span><span style="color: #7a0874; font-weight: bold;">&#41;</span>
+<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #ff0000;">"<span style="color: #007800;">$DATE</span>,<span style="color: #007800;">$FN</span>,<span style="color: #007800;">$FILESIZE</span>"</span></pre>
+      </td>
+    </tr>
+  </table>
+<p>&lt;/div&gt;</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/10/16/bash-bash/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2006/10/13/ow-my-arse">Ow! My arse!</a></h1>
 <div class="author_meta">13 Oct 2006</div>
 <p>For the 3rd time I can remember ever I came off my bike this morning. I took a corner too sharply and ended up sliding across the road. So I am currently sitting here with gravel ridden hands and a really sore arse. I thought to go and check my arse when I finally arrived at uni and decided that it might be an idea to find something to stop the injury oozing all over my underwear. Much to the amusement of the staff in reception who commented that they’d be able to help me apply first aid, but both of them would need to attend as they were of the opposite sex. I decided to go ahead and apply it myself. A wound dressing might be slightly overkill, but hopefully more comfortable when I return home.</p>
@@ -137,19 +165,6 @@
 
 
 <div class="entry_content">Tagged  | <a href="/2006/08/23/code-igniter/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2006/08/19/slugs-talking-nicely">Slug&#8217;s Talking Nicely</a></h1>
-<div class="author_meta">19 Aug 2006</div>
-<p>I’ve had a couple of problems getting my slug working nice under ubuntu. Firstly, although it is recognised by default and I can connect and browse via samba, when I actually came to playing my media, everything got screwed up, with Amarok trying to launch kmail…… I could copy files to ubuntu and play them properly from there, but straight off of the slug was a no go.I found the solution was to mount it under ubuntu using the command:<code>sudo mount -t smbfs //NAS/DISK 1 /media/slug -o username=user,password=pass</code>Where user and pass are your username and password for the slug respectively and the backslash indicates a space. This poses another problem however, that you don’t want to have to fire up a terminal everytime you want to listen to media, instead its better to get it automounted at startup using an entry in /etc/fstab:<code>sudo gedit /etc/fstab</code>and then add a line:<code>//NAS/DISK 401 /media/slug	smbfs	username=user,password=pass,rw&lt;br /&gt;
-</code></p>
-
-<p>Again supplimenting user and pass with your username and password. The  40 indicates a space in the name of the share which is on the NAS, which annoyingly took me a large amount of time to figure out!</p>
-
-<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/08/19/slugs-talking-nicely/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

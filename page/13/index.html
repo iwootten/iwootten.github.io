@@ -42,6 +42,17 @@
       
 
 <div class="post">
+<h1><a href="/2006/11/14/future-of-web-applications-london-07">Future of Web Applications &#8211; London 07</a></h1>
+<div class="author_meta">14 Nov 2006</div>
+<p><a href="http://futureofwebapps.com"><img id="image32" src="http://webtyrant.com/wp-content/uploads/2006/11/fowa2007-small.png" alt="FOWA07" /></a>Registration is open for the <a href="http://futureofwebapps.com">Future of Web Apps</a> conference in London 07. I’d love to go, loads of great companies/people talking (good to see Last.fm making an appearance), loads of schmoozing (if thats the appropriate word), but unfortunately absolutely jack to do with my PhD, so no funding.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/news">news</a>,  | <a href="/2006/11/14/future-of-web-applications-london-07/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2006/11/13/do-web-users-want-web-standards">Do Web Users Want Web Standards?</a></h1>
 <div class="author_meta">13 Nov 2006</div>
 <p>I was thinking about this earlier and was trying to make an educated answer. What I would note is that it is primarily content which drives users to use sites, we can see that through all manner of feeds and low bandwidth sites across the net. Without content, theres no point in sticking up a website. You can see demonstrations of that assertion here from time to time. It’s also fairly visible through all manner of seedy content on the web as users will be quite happy to sit through the many pop-ups and poorly formatted text to get to that bunch of images which they’re after.Design ends up just being the icing on the cake for users, but for other (perhaps) more hardcore users such as any number of programmers, it can be an ultimate turn off to see the horrendous environment which content which we thought we might be interested in is displayed.I think the reason I’ve been pondering this is the huge amount of extremely popular social networking sites which I’ve accessed which just don’t seem to abide by the rules which those of us who have been programming on the web have become accustomed to adhering to. I am of course referring to <a href="http://webstandards.org">web standards</a> and their apparent lack of appearance at <a href="http://myspace.com">myspace</a>. They’ve recently risen to light (as if they ever went away) as <a href="http://myspace.com">myspace</a> have been in talks with O2 about the <a href="http://uk.techcrunch.com/2006/11/13/myspace-in-talks-with-uk-mobile-networks/">possibilities of accessing pages via mobile</a>. How can they get away by flouting design rules? Have we been lied to? Should we never have bothered? It’s kind of a joke that an application so recently on the scene is so buggy.I for one feel accomplished at the end of the day knowing that whatever I’ve produced is beautiful code (or at least my best attempt at it). It’s going to work well, and hopefully for a long time if standards are adhered to by browsers in the future too. It doesn’t need <a href="http://www.techcrunch.com/2006/08/14/browster-20-makes-myspace-easier-to-use/">other applications</a> to make it navigable either. Despite all its buggy pages though, <a href="http://myspace.com">myspace</a> must be good at something, right? It’s not just all for the kids? It’s allowed people and artists to listen to full tracks by one another and browse for similar music via those peoples friends. Oh what? – That’s it?A recent perusal through a free music mag “salvo” from my local fopp shows that out of the 10 up-and-coming artists listed, none are without a myspace page, and none offer any other point of contact. It’s kinda nice when communication is provided like this to those who want/need it, but for my part I’d much prefer if they had a wordpress blog sat on their own domain, or at least used <a href="http://wordpress.com">wordpress.com</a>.</p>
@@ -138,34 +149,6 @@
 <p>This short vid is quite clever:</p>
 
 <div class="entry_content">Tagged  | <a href="/2006/10/17/god-is-a-dj/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2006/10/16/bash-bash">Bash bash</a></h1>
-<div class="author_meta">16 Oct 2006</div>
-<p>I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.</p>
-
-<p>I found a program called <a href="http://fileschanged.sourceforge.net">fileschanged</a>, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that. What it did allow me to do however was pass the filename as an argument (along with some other parameter) to another program. I duely spent an hour or so trying to figure out a script to take that filename and report back its filesize and the current time (which I assume is close enough to that which the file was changed). This is what it looks like: &lt;div class="wp_syntax"&gt;</p>
-<table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">#!/bin/bash</span>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">&#91;</span> <span style="color: #660033;">-z</span> <span style="color: #ff0000;">"$1"</span> <span style="color: #7a0874; font-weight: bold;">&#93;</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7a0874; font-weight: bold;">&#91;</span> <span style="color: #660033;">-z</span> <span style="color: #ff0000;">"$2"</span> <span style="color: #7a0874; font-weight: bold;">&#93;</span>; <span style="color: #000000; font-weight: bold;">then</span>
-	<span style="color: #7a0874; font-weight: bold;">exit</span>
-<span style="color: #000000; font-weight: bold;">fi</span>
-<span style="color: #007800;">FN</span>=<span style="color: #007800;">$2</span>
-<span style="color: #007800;">DATE</span>=$<span style="color: #7a0874; font-weight: bold;">&#40;</span><span style="color: #c20cb9; font-weight: bold;">date</span> +<span style="color: #000000; font-weight: bold;">%</span>s<span style="color: #7a0874; font-weight: bold;">&#41;</span>
-<span style="color: #007800;">FILESIZE</span>=$<span style="color: #7a0874; font-weight: bold;">&#40;</span><span style="color: #c20cb9; font-weight: bold;">stat</span> -c<span style="color: #000000; font-weight: bold;">%</span>s <span style="color: #ff0000;">"<span style="color: #007800;">$FN</span>"</span><span style="color: #7a0874; font-weight: bold;">&#41;</span>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #ff0000;">"<span style="color: #007800;">$DATE</span>,<span style="color: #007800;">$FN</span>,<span style="color: #007800;">$FILESIZE</span>"</span></pre>
-      </td>
-    </tr>
-  </table>
-<p>&lt;/div&gt;</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/linux">linux</a>,  | <a href="/2006/10/16/bash-bash/#disqus_thread">Leave a comment</a></div>
 </div>
 
 
