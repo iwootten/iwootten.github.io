@@ -13,6 +13,173 @@
 
     
 	  <item>
+        <title>Porting a Wordpress blog to Jekyll: Part 2</title>
+        <link>http://ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2014-06-02T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2</guid>
+		<description><![CDATA[
+		   <p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I’ve replicated wordpress’s default permalink structure on my own blog.</p>
+
+<h2 id="creating-category-and-tag-pages">Creating Category and Tag Pages</h2>
+
+<p>Jekyll doesn’t create category or tag index pages for those categories listed in your _posts source. Instead, you’ll need to use a plugin to recreate them. I used the tutorial <a href="http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/">here</a> as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.rb source below:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">module</span> <span class="nn">Jekyll</span>
+    <span class="k">class</span> <span class="nc">CatsAndTags</span> <span class="o">&lt;</span> <span class="no">Generator</span>
+        <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+          <span class="n">site</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">category</span><span class="o">|</span>
+            <span class="n">build_subpages</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span>
+          <span class="k">end</span>
+
+          <span class="n">site</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="o">|</span>
+            <span class="n">build_subpages</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+
+        <span class="c1"># Do the actual generation.</span>
+        <span class="k">def</span> <span class="nf">build_subpages</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+          <span class="n">posts</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">posts</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="o">-</span><span class="nb">p</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">to_f</span> <span class="p">}</span>
+          <span class="n">atomize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+          <span class="n">paginate</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+        <span class="k">end</span>
+
+        <span class="k">def</span> <span class="nf">atomize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+          <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/</span><span class="si">#{</span><span class="n">type</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">posts</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="n">atom</span> <span class="o">=</span> <span class="no">AtomPage</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">site</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">posts</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span>
+          <span class="n">site</span><span class="o">.</span><span class="n">pages</span> <span class="o">&lt;&lt;</span> <span class="n">atom</span>
+        <span class="k">end</span>
+
+        <span class="k">def</span> <span class="nf">paginate</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+          <span class="n">pages</span> <span class="o">=</span> <span class="no">Pager</span><span class="o">.</span><span class="n">calculate_pages</span><span class="p">(</span><span class="n">posts</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;paginate&#39;</span><span class="o">].</span><span class="n">to_i</span><span class="p">)</span>
+          <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.pages</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">num_page</span><span class="o">|</span>
+            <span class="n">pager</span> <span class="o">=</span> <span class="no">Pager</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">num_page</span><span class="p">,</span> <span class="n">posts</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+            <span class="n">slug</span> <span class="o">=</span> <span class="n">posts</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">gsub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+            <span class="n">base_path</span> <span class="o">=</span> <span class="s2">&quot;/</span><span class="si">#{</span><span class="n">type</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">slug</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">base_path</span>
+            <span class="k">if</span> <span class="n">num_page</span> <span class="o">&gt;</span> <span class="mi">1</span>
+              <span class="n">path</span> <span class="o">+=</span> <span class="s2">&quot;/page/</span><span class="si">#{</span><span class="n">num_page</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">end</span>
+            <span class="n">newpage</span> <span class="o">=</span> <span class="no">GroupSubPage</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">site</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">base_path</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">posts</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span>
+            <span class="n">newpage</span><span class="o">.</span><span class="n">pager</span> <span class="o">=</span> <span class="n">pager</span>
+            <span class="n">site</span><span class="o">.</span><span class="n">pages</span> <span class="o">&lt;&lt;</span> <span class="n">newpage</span>
+
+          <span class="k">end</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="k">class</span> <span class="nc">GroupSubPage</span> <span class="o">&lt;</span> <span class="no">Page</span>
+        <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">base_path</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+          <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
+          <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
+          <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
+          <span class="vi">@name</span> <span class="o">=</span> <span class="s1">&#39;index.html&#39;</span>
+
+          <span class="nb">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
+          <span class="nb">self</span><span class="o">.</span><span class="n">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;_layouts&#39;</span><span class="p">),</span> <span class="s2">&quot;group_index.html&quot;</span><span class="p">)</span>
+          <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="n">type</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span>
+          <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;base&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">base_path</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="k">class</span> <span class="nc">AtomPage</span> <span class="o">&lt;</span> <span class="no">Page</span>
+        <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">type</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+            <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
+            <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
+            <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
+            <span class="vi">@name</span> <span class="o">=</span> <span class="s1">&#39;atom.xml&#39;</span>
+
+            <span class="nb">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
+            <span class="nb">self</span><span class="o">.</span><span class="n">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;_layouts&#39;</span><span class="p">),</span> <span class="s2">&quot;group_atom.xml&quot;</span><span class="p">)</span>
+            <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="n">type</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s2">&quot;grouptype&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="n">type</span>
+            <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s2">&quot;posts&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="n">posts</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">9</span><span class="o">]</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>I chose to pass in an extra parameter to the Pager, defining the “base_path” for which an index page has been generated. This enables absolute links to pages and prevents situations like /category/javascript/category/javascript/page/1, which occur when relative pagination is generated when on a category page. </p>
+
+<p>A view making use of it would look like the following:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;pagination&quot;</span><span class="nt">&gt;</span>
+        {% if paginator.previous_page %}
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ page.base }}/page/{{ paginator.previous_page }}&quot;</span> <span class="na">class=</span><span class="s">&quot;previous&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
+        {% else %}
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;previous&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;page_number &quot;</span><span class="nt">&gt;</span>Page: {{ paginator.page }} of {{ paginator.total_pages }}<span class="nt">&lt;/span&gt;</span>
+        {% if paginator.next_page %}
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ page.base }}/page/{{ paginator.next_page }}&quot;</span> <span class="na">class=</span><span class="s">&quot;next&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+        {% else %}
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;next &quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="creating-archive-pages">Creating Archive Pages</h2>
+
+<p>In a similar fashion, Jekyll doesn’t create pages or pagination for previous years or months. Even if they are not oft used by others, I find it useful myself to hit up my archives for <a href="http://ianwootten.co.uk/2004">previous years</a> on occasion and <a href="http://www.ianwootten.co.uk/2004/05/06/chicken-breasts/">laugh at the random work I did for my undergraduate</a>.</p>
+
+<p>I created the following plugin to generate indexes at /{year} /{year}/{month} and /{year}/page/{pageNo} and /{year}/{month}/page/{pageNo} if necessary.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">module</span> <span class="nn">Jekyll</span>
+
+  <span class="k">class</span> <span class="nc">ArchiveGenerator</span> <span class="o">&lt;</span> <span class="no">Generator</span>
+    <span class="n">safe</span> <span class="kp">true</span>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">site</span><span class="o">.</span><span class="n">layouts</span><span class="o">.</span><span class="n">key?</span> <span class="s1">&#39;archive_index&#39;</span>
+        <span class="n">site</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">group_by</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="p">{</span><span class="s2">&quot;month&quot;</span> <span class="o">=&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span> <span class="o">=&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">}</span> <span class="p">}</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">period</span><span class="p">,</span> <span class="n">posts</span><span class="o">|</span>
+          <span class="n">posts</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="o">-</span><span class="nb">p</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">to_f</span> <span class="p">}</span>
+          <span class="n">archive_dir</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">period</span><span class="o">[</span><span class="s2">&quot;year&quot;</span><span class="o">].</span><span class="n">to_s</span><span class="p">(),</span> <span class="s2">&quot;%02d&quot;</span> <span class="o">%</span> <span class="n">period</span><span class="o">[</span><span class="s2">&quot;month&quot;</span><span class="o">].</span><span class="n">to_s</span><span class="p">())</span>
+          <span class="n">paginate</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">archive_dir</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="n">site</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">group_by</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="p">{</span><span class="s2">&quot;year&quot;</span> <span class="o">=&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">}</span> <span class="p">}</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">period</span><span class="p">,</span> <span class="n">posts</span><span class="o">|</span>
+          <span class="n">posts</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="o">-</span><span class="nb">p</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">to_f</span> <span class="p">}</span>
+          <span class="n">archive_dir</span> <span class="o">=</span> <span class="n">period</span><span class="o">[</span><span class="s2">&quot;year&quot;</span><span class="o">].</span><span class="n">to_s</span><span class="p">()</span>
+          <span class="n">paginate</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">archive_dir</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="k">def</span> <span class="nf">paginate</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+      <span class="n">pages</span> <span class="o">=</span> <span class="no">Pager</span><span class="o">.</span><span class="n">calculate_pages</span><span class="p">(</span><span class="n">posts</span><span class="p">,</span> <span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;paginate&#39;</span><span class="o">].</span><span class="n">to_i</span><span class="p">)</span>
+      <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.pages</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">num_page</span><span class="o">|</span>
+        <span class="n">pager</span> <span class="o">=</span> <span class="no">Pager</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">num_page</span><span class="p">,</span> <span class="n">posts</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+        <span class="n">archive_path</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">dir</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">archive_path</span>
+        <span class="k">if</span> <span class="n">num_page</span> <span class="o">&gt;</span> <span class="mi">1</span>
+          <span class="n">path</span> <span class="o">+=</span> <span class="s2">&quot;/page/</span><span class="si">#{</span><span class="n">num_page</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">end</span>
+        <span class="n">newpage</span> <span class="o">=</span> <span class="no">ArchiveIndex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">site</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">archive_path</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+        <span class="n">newpage</span><span class="o">.</span><span class="n">pager</span> <span class="o">=</span> <span class="n">pager</span>
+        <span class="n">site</span><span class="o">.</span><span class="n">pages</span> <span class="o">&lt;&lt;</span> <span class="n">newpage</span>
+
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">class</span> <span class="nc">ArchiveIndex</span> <span class="o">&lt;</span> <span class="no">Page</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">base_path</span><span class="p">,</span> <span class="n">posts</span><span class="p">)</span>
+      <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
+      <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
+      <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
+      <span class="vi">@name</span> <span class="o">=</span> <span class="s1">&#39;index.html&#39;</span>
+
+      <span class="nb">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
+      <span class="nb">self</span><span class="o">.</span><span class="n">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;_layouts&#39;</span><span class="p">),</span> <span class="s1">&#39;archive_index.html&#39;</span><span class="p">)</span>
+      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;base&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">base_path</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>The layout of the paginator for the archives is the same as that for categories and tags.</p>
+
+<p>That’s it for my jekyll roundup, I other long time wordpress users find this information useful.</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
         <title>Porting a Wordpress blog to Jekyll: Part 1</title>
         <link>http://ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1</link>
 		<author>I.M.Wootten<</author>

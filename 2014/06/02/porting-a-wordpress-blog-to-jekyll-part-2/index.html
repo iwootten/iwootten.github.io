@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ian Wootten - Web Developer, Cardiff</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porting a Wordpress blog to Jekyll: Part 2</title>
+        <meta name="viewport" content="width=device-width">
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/fonts/open-sans.css" />
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/syntax.css" />
-
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,8 +23,8 @@
     </head>
     <body>
 
-
-    <div class="container blog">
+    
+      <div class="container blog">
       <header>
         <nav>
         <ul class="nav">
@@ -38,13 +37,12 @@
         </nav>
         <div class="clear"></div>
       </header>
+    
 
-          
-
-	<div class="post">
+      <div class="post">
 	<h1><a href="/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2">Porting a Wordpress blog to Jekyll: Part 2</a></h1>
 <div class="author_meta">02 Jun 2014</div>
-	<p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I’ve replicated wordpress’s default permalink structure on my own blog.</p>
+<p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I’ve replicated wordpress’s default permalink structure on my own blog.</p>
 
 <h2 id="creating-category-and-tag-pages">Creating Category and Tag Pages</h2>
 
@@ -201,144 +199,23 @@
 
 <p>That’s it for my jekyll roundup, I other long time wordpress users find this information useful.</p>
 
-	<div class="entry_content">Tagged <a href="/tag/jekyll">jekyll</a>, <a href="/tag/static-sites">static sites</a>, <a href="/tag/wordpress">wordpress</a>,  | <a href="/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/#disqus_thread">Leave a comment</a></div>
-	</div>
+	<div class="entry_content">Tagged <a href="/tag/jekyll">jekyll</a>, <a href="/tag/static-sites">static sites</a>, <a href="/tag/wordpress">wordpress</a>, </div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
 
-    
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
 
-	<div class="post">
-	<h1><a href="/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1">Porting a Wordpress blog to Jekyll: Part 1</a></h1>
-<div class="author_meta">20 May 2014</div>
-	<p>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I’ve overcome them.</p>
-
-<h2 id="using-compass-for-a-jekyll-theme">Using Compass for a Jekyll theme</h2>
-
-<p>The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog. When attempting to use <a href="https://github.com/mscharley/jekyll-compass">jekyll-compass</a> to enable that, I hit the following error:</p>
-
-<div class="highlight"><pre><code class="bash">Unable to activate compass-0.12.6, because sass-3.3.7 conflicts with sass <span class="o">(</span>~&gt; 3.2.19<span class="o">)</span> <span class="o">(</span>Gem::LoadError<span class="o">)</span></code></pre></div>
-
-<p>After searching for a bit I came across the <a href="https://github.com/jekyll/jekyll/issues/2263">following issue</a> which detailed a solution - but unfortunately it didn’t work for me. Being somewhat of a newbie to Ruby, I didn’t realise that after creating a Gem as instructed in the fix, I actually needed to “bundle install” it. After a little more digging and tweaking against <a href="http://twitter.com/markturner">Mark Turners</a> advice, I ended up with a Gem file like so:</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
-
-<span class="n">gem</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 3.2.19&quot;</span>
-<span class="n">gem</span> <span class="s1">&#39;jekyll-compass&#39;</span><span class="p">,</span> <span class="s2">&quot;1.0.6&quot;</span></code></pre></div>
-
-<p>Which has finally given me what I wanted.</p>
-
-<h2 id="using-custom-pygments-themes-for-syntax-highlighting">Using Custom Pygments Themes for Syntax highlighting</h2>
-
-<p>Jekyll uses pygments for fancy pants syntax highlighting. Although an example syntax.css is linked to in the jekyll documentation, I prefer a darker theme myself. Jekyll doesn’t tell you it’s possible to generate any one of the numerous pygments styles like this:</p>
-
-<div class="highlight"><pre><code class="bash">pygmentize -f html -S monokai -a .highlight &gt; monokai.css</code></pre></div>
-
-<p>I’ve used the monokai theme for my own highlighting. There are demos of each of the themes on the pygments site - <a href="http://pygments.org/demo/357593/">here is an example</a>. You can then use that as the basis for your own custom highlighting. I’ve created each one of the 19 possible themes and <a href="https://github.com/iwootten/jekyll-syntax">put them up on github</a>.</p>
-
-<h2 id="moving-to-disqus-commenting">Moving to Disqus Commenting</h2>
-
-<p>Given I now had a static site, I needed a means of continuing supporting comments. Disqus does just that by embedding comments using javascript into post pages. Adding disqus  proved to be the biggest hurdle for me. I had a large number of comments from people on my blog over the years and therefore I didn’t want to lose them. After exporting my site as xml and uploading them to disqus, I finally set jekyll loose on my site along with disqus embeds, but I couldn’t see them. The problem I found after a frustrating hour or two of uploading new versions of my site over ftp, was jekyll used a trailing slash (as the post is an index within a directory) to denote links to posts. It’s possible however to do away with this using .htaccess if you’re using Apache.</p>
-
-<div class="highlight"><pre><code class="apache"><span class="nb">Options</span> -Multiviews +FollowSymLinks
-<span class="nb">RewriteEngine</span> <span class="k">On</span>
-<span class="nb">RewriteBase</span> /
-<span class="nb">DirectorySlash</span> <span class="k">Off</span>
-
-<span class="c"># remove the trailing slash</span>
-<span class="nb">RewriteRule</span> ^(.*)\/(\?.*)?$ $1$2 [R=301,L]
-
-<span class="c"># rewrite /dir/file to /dir/file/index.html</span>
-<span class="nb">RewriteRule</span> ^([\w\/-]+)(\?.*)?$ $1/index.html$2 [L,T=application/x-httpd-html]</code></pre></div>
-
-<p>However, when I began using github pages, this fix didn’t work as github only serves static files and doesn’t allow use of htaccess. Instead, I had to resign to the fact that I would have to have trailing slashes (apparently they’re quicker anyway). This then meant I had to use the Redirect Crawler option of disqus’s “Migrate Threads” wizard (seen below) to crawl my new blog on github and determine where the posts were now located.</p>
-
-<p><img src="http://ianwootten.co.uk/images/screen-2014-05-20.png" title="Disqus Migrate Threads Wizard" /></p>
-
-<p>In my next post I’ll go through how I use plugins to support archive, category and tag pages in jekyll.</p>
-
-	<div class="entry_content">Tagged <a href="/tag/jekyll">jekyll</a>, <a href="/tag/static-sites">static sites</a>, <a href="/tag/wordpress">wordpress</a>, <a href="/tag/disqus">disqus</a>, <a href="/tag/pygments">pygments</a>,  | <a href="/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2014/05/18/bye-bye-wordpress">Bye Bye Wordpress</a></h1>
-<div class="author_meta">18 May 2014</div>
-	<p>I’ve finally made the move to <a href="http://jekyllrb.com">jekyll</a> for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible <a href="https://github.com/iwootten/iwootten.github.io">on github</a> and revision control for post entries is handled there too.</p>
-
-<p>What finally convinced me with the release of jekyll 2 was the introduction of <a href="http://jekyllrb.com/news/2014/05/06/jekyll-turns-2-0-0/">native sass support</a>. Originally, the prose theme I’m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it. I had the scss for the original design available and therefore thought the jump to using jekyll wouldn’t be that great (or so I thought - overlooking all the features jekyll doesn’t support compared to wordpress). I’m going to blog individually about the pieces of the puzzle in other posts as there are number of things that tripped me up along the way.</p>
-
-<p>But for now, I’d like to bid a fond farewell to wordpress - my go to blogging software for the last 10 years. You once were diminutive, got out of my way and let my voice be heard. That’s no longer the case. These days the only time we speak is when you want me to update you. I’ve got better things to do. Theres a ton of features the length of my arm which I’ve never used and the majority of features which I use rarely. I long for those simpler days once again. You’ve served me well, but I’ve moved on.</p>
-
-	<div class="entry_content">Tagged <a href="/tag/jekyll">jekyll</a>, <a href="/tag/static-sites">static sites</a>, <a href="/tag/wordpress">wordpress</a>,  | <a href="/2014/05/18/bye-bye-wordpress/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">Hosting an Octopress Blog on Amazon S3</a></h1>
-<div class="author_meta">09 Sep 2011</div>
-	<p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</p>
-
-<p>Using Octopress, you’d typically write your posts in markdown and process them locally. You’d then have a number of HTML pages to upload to your web server, which would appear no different than any other blog in terms of functionality.</p>
-
-<p>The most interesting thing that coincincides with the creation of jekyll is that it is now possible to serve static websites straight from Amazon S3, meaning that it isn’t neccessary to have a web server to serve a Octopress blog. I’ve been playing a little and have been able to serve my own octopress blog which you can see over at <a href="http://www.ianwootten.com">www.ianwootten.com</a>. Here’s how to do it:</p>
-
-<h2 id="configure-an-s3-bucket-to-act-as-a-website">Configure an S3 Bucket to Act as a Website</h2>
-
-<p>NB: If you want to use your own domain, then you’re going to need to create an S3 bucket from the AWS Console named the same as your domain (so for me I created a bucket called “www.ianwootten.com”. </p>
-
-<p>To configure your bucket as a website, from the AWS Console, select the new bucket and click “Properties”. Choose the “Website” tab from the box that appears and check “enabled” and set the Index document as “index.html”. Click “Save”. Now move to the “permissions” tab and click “Add bucket policy”. Enter a policy as below, with “www.ianwootten.com” replaced with the name of the bucket you’re using.</p>
-
-<p><code>&lt;br /&gt;
-{&lt;br /&gt;
-	"Version": "2008-10-17",&lt;br /&gt;
-	"Id": "",&lt;br /&gt;
-	"Statement": [&lt;br /&gt;
-		{&lt;br /&gt;
-			"Sid": "PublicReadForGetBucketObjects",&lt;br /&gt;
-			"Effect": "Allow",&lt;br /&gt;
-			"Principal": {&lt;br /&gt;
-				"AWS": "*"&lt;br /&gt;
-			},&lt;br /&gt;
-			"Action": "s3:GetObject",&lt;br /&gt;
-			"Resource": "arn:aws:s3:::www.ianwootten.com/*"&lt;br /&gt;
-		}&lt;br /&gt;
-	]&lt;br /&gt;
-}&lt;br /&gt;
-</code></p>
-
-<p>If you’ve opted not to use your own domain, then that’s it for S3. Your new bucket website will be available at a combination of the bucket name and the S3 storage location. In my case, this is <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/">http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/</a>. There’s a list of endpoints on the “website endpoints” page in <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a>.</p>
-
-<h2 id="configure-dns">Configure DNS</h2>
-
-<p>If you’re wanting to use your own domain, then you’ll need to visit your domain registraar and edit some DNS entries. In my case, I added a CNAME entry “www” pointing to www.ianwootten.com.s3-website-us-east-1.amazonaws.com. You’ll need to use a tool like <a href="http://wwwizer.com">wwwizer</a> in order to forward from the root of your domain to the www subdomain. e.g. “ianwootten.com” to “www.ianwootten.com”. To get that working, you’ll also need to modify the @ A record and point it to 174.129.25.170. Read this <a href="http://serverfault.com/questions/62527/how-to-create-a-cname-for-a-domains-root-name">serverfault post</a> if you’re interested to know why.</p>
-
-<p>For more info on CNAME configuration and S3 see <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a> (Specifically the notes on virtual hosting).</p>
-
-<h2 id="download-octopress-and-write-some-markdown">Download Octopress and write some Markdown</h2>
-
-<p>Having successfully configured Amazon S3 to host your blog, you need to tackle the age old problem of writing some content for it. This was particularly hard for me, given my lack of knowledge about markdown! You may like to take a look at <a href="http://daringfireball.net/projects/markdown/basics">John Grubers explanation of markdown</a> if you’re suffering like me. The <a href="http://octopress.org/docs/blogging/">Octopress blogging basics</a> gives a good overview of how your new local blogging workflow will work. Essentially new posts are written in the ./_source/posts folder and when <code>rake generate</code> is executed, your entire websites content is output to the ./public folder. You can also run <code>rake preview</code> in order to preview on a local server.</p>
-
-<p>TO publish your blog, it’s merely a matter of transferring your /public content to the S3 bucket you’ve generated.</p>
-
-<p>Having done all that you’ve now no need to run your own server. You’re still dependent on those that operate at S3, wwwizer and your domain registraar, but you’ve removed your own from the equation. You may be interested in checking out <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">Jerome Bernard’s</a> tip on easily deploying Octopress blogs with <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
-
-
-	<div class="entry_content">Tagged <a href="/tag/amazon">amazon</a>, <a href="/tag/blog">blog</a>, <a href="/tag/blogging">blogging</a>, <a href="/tag/godaddy">godaddy</a>, <a href="/tag/jekyll">jekyll</a>, <a href="/tag/octopress">octopress</a>, <a href="/tag/s3">s3</a>,  | <a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-
-      <div class="pagination">
-        
-          <span class="previous">Previous</span>
-        
-        <span class="page_number ">Page: 1 of 1</span>
-        
-          <span class="next ">Next</span>
-        
-      </div>
 
       <footer>
         <div class="footer-about">
@@ -346,17 +223,5 @@
         </div>
       </footer>
     </div>
-   <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
   </body>
 </html>

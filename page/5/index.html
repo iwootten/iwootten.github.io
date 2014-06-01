@@ -42,6 +42,17 @@
       
 
 <div class="post">
+<h1><a href="/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more">Amazon Associates WordPress Wishlist Plugin is No More</a></h1>
+<div class="author_meta">28 Nov 2010</div>
+<p>I think my post title says it all really. I’ve just discovered that amazon has deprecated use of its ListLookup method since October 15th. I had used this in order to retrieve details of my amazon wishlist and display neatly on my blog using <a href="http://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin">my wishlist plugin</a>. Now it seems I’m forced to generate one with their own widget builder. This in turn means my wordpress plugin will no longer work. Sorry for those who were making use of it, or would like to use it. It’s also apparent that this is a kick in the teeth for developers building sites entirely dependant on this method. <a href="https://forums.aws.amazon.com/thread.jspa?threadID=53342">This chap estimates he made $11k in the last year using this function</a>. This is the trouble with building stuff that relies on third party services. I wonder how much more of their api they will gradually remove?</p>
+
+
+<div class="entry_content">Tagged  | <a href="/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2010/09/09/installing-gphoto-on-snow-leopard">Installing gPhoto on Snow Leopard</a></h1>
 <div class="author_meta">09 Sep 2010</div>
 <p>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I’m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn’t really up to the job and FrameByFrame doesn’t work with such high-end cameras.</p>
@@ -310,35 +321,6 @@
 
 
 <div class="entry_content">Tagged <a href="/tag/aardman">aardman</a>, <a href="/tag/animation">animation</a>, <a href="/tag/webdev">webdev</a>,  | <a href="/2009/09/26/aardman/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2009/05/16/create-your-own-tinyurl-service-for-wordpress">Create Your Own TinyURL Service for WordPress</a></h1>
-<div class="author_meta">16 May 2009</div>
-<p>I don’t particularly like using URL shortening services. I think I first noticed them getting used rather prolificly in the Guardians technology section to include lots of random links to bizarre web content. <a href="http://tinyurl.com">TinyURL’s own web site</a> wouldn’t particularly inspire me to go ahead and make use of it either. But, because of <a href="http://twitter.com/ironyboy">my own use</a> of services such as twitter, I’m forced to shrink down links to get within those 144 characters.</p>
-
-<p>Herein lies a problem – If said URL shortening service disappears, all my links are broken to all that interesting content I worked so hard to find. Not good.</p>
-
-<p>In order to our bit to help, <a href="http://simonwillison.net/2009/Apr/11/revcanonical/">a</a> <a href="http://adactio.com/journal/?start=10">number</a> <a href="http://www.colly.com/comments/ee_shortener_plugin_your_own_short_urls_using_revcanonical_and_permanent_re/">of</a> <a href="http://bokardo.com/">developers</a> and even <a href="http://baconfile.com/">services</a> have taken action in order to make sure they provide alternatives for the links over which they’re responsible.</p>
-
-<p>I’ve <a href="http://whomwah.com/2009/04/14/revcanonical-a-revcanonical-wordpress-plugin/">installed a plugin here</a> which uses the recently puchased domain “<a href="http://woot10.eu">woot10.eu</a>” to provide alternative links using the code <code>&lt;link rev="canonical" href="shorter link" /&gt;</code>. My full ianwootten.co.uk domain does not lend itself well to be able to provide a shorter URL on the same domain unforunately.</p>
-
-<p>There is a whole huge discussion on the approriateness of using this technique (mainly) due to the rev attribute not being included in the HTML5 spec. See the comments in <a href="http://shiflett.org/blog/2009/apr/save-the-internet-with-rev-canonical">Chris Shifletts post</a> for more on this.</p>
-
-<p>Anyway, Duncans plugin takes the id of any wordpress post and coverts it to base 36 (instead of 10) and offers up the alternative in the header of each post. I believe the conversion could go all the way up to 62, if php’s base conversion actually supported the use of different cases in conversion.</p>
-
-<p>In my own case, I’ve had to forward the links from woot10.eu across to www.ianwootten.co.uk using a .htaccess file so that the plugin is actually able to pick them up.</p>
-
-<p>Now when you visit:</p>
-
-<p><code>http://woot10.eu/p8p</code> you’ll be forwarded on to the longer URL such as <code>http://www.ianwootten.co.uk/2009/05/15/my-vicious-circle-of-posting-quality-content</code>.</p>
-
-<p>This isn’t particularly useful if you want to find the alternative for URL, as you’ll have to hunt through the source of a post. For that I’d suggest <a href="http://simonwillison.net/2009/Apr/11/revcanonical/">Simons bookmarklet</a> which looks for an alternative link, or creates one if it doesn’t exist using tinyurl. As an aside, there looks to be an interesting talk on the canonical attribute and link element by Matt Cutts of google <a href="http://www.youtube.com/watch?v=Cm9onOGTgeM">here</a>.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/canonical">canonical</a>, <a href="/tag/tinyurl">tinyurl</a>,  | <a href="/2009/05/16/create-your-own-tinyurl-service-for-wordpress/#disqus_thread">Leave a comment</a></div>
 </div>
 
 
