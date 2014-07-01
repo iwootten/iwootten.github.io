@@ -42,6 +42,68 @@
       
 
 <div class="post">
+<h1><a href="/2008/01/05/decrypting-filezilla-passwords-with-php">Decrypting Filezilla Passwords with PHP</a></h1>
+<div class="author_meta">05 Jan 2008</div>
+<p>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I’ve added some comments to roughly describe what is going on.</p>
+
+<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that’ll make my job easier now. &lt;pre class='php'&gt;$filezilla_password_file = “FileZilla.xml”;</p>
+
+<p>$xml = file_get_contents($filezilla_password_file);</p>
+
+<p>$simple_xml = simplexml_load_string($xml);</p>
+
+<p>foreach($simple_xml-&gt;Sites-&gt;Site as $site)
+{
+	$attributes =  $site-&gt;attributes();</p>
+
+<pre><code>print "Site: ".$attributes-&gt;Name."\n";
+print "User: ".$attributes-&gt;User."\n";
+print "Encrypted Pass: ".$attributes-&gt;Pass."\n";
+print "Unencrypted Pass:".decryptPass((string)$attributes-&gt;Pass)."\n\n"; }
+</code></pre>
+
+<p>function decryptPass($pass) 
+{
+        // Encryption Key for FileZilla 2 Passwords
+	$key = “FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ”;</p>
+
+<pre><code>// Find the offset position in the key for this pass
+$pos=(strlen($pass)/3) % strlen($key);
+$decrypt = '';
+
+$t=0;
+	
+//Loop through each 3rd of the password
+for($i=0;$i &amp;lt; strlen($pass) / 3;$i++) {
+	    
+    //Get 3 characters, remove the 0 at the 
+//front to get ASCII code to represent the character 
+$num = substr($pass,$i * 3,3);
+
+if (substr($num,0,1) == 0) {
+	$num = substr($num,1,2);
+}
+		
+//Get the ascii code of the unencrypted character
+//by performing XOR against current ASCII and key
+//before converting back and adding to decrypted pass
+	$t = $num ^ ord($key[($i + $pos) % strlen($pass)]);
+	 $decrypt .= chr($t);
+	    
+}
+	
+// Return the decrypted pass
+   return $decrypt; }
+</code></pre>
+<p>&lt;/pre&gt;</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/decryption">decryption</a>, <a href="/tag/filezilla">filezilla</a>, <a href="/tag/PHP">PHP</a>,  | <a href="/2008/01/05/decrypting-filezilla-passwords-with-php/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2007/12/20/stick-to-your-guns-youll-be-rewarded">Stick to your guns &#8211; You&#8217;ll be rewarded</a></h1>
 <div class="author_meta">20 Dec 2007</div>
 <p>I’m a firm believer that by upholding my own principles, I’ll be rewarded. It’s a tag line I adopted for the <a href="http://www.xen10.com">small hosting company</a> that I’ve been running for a while now. It also has been reflected this year in a nasty situation I was left in with my landlords, the council and a previous housemate (who doesn’t really deserve that title, more just a person whom shared the house). In all these situations things have turned out better for me in the long run, due to myself re-enforcing what I believe should be done – even if it does mean a longer struggle through.</p>
@@ -164,16 +226,6 @@ Image taken from Google Operating System</p>
 <p>It also brings to mind an idea that I&#8217;ve been toying with for sharing how links between pages are made, where details of hyperlink clicks are captured to some repository somewhere. This would make it it possible for users to have a series of heatmaps upon any page to display details of common links that other users choose to follow from one page to another, and common routes accross the net to particular pages. Similar issues for whether or not takeup would occur, or the information is indeed useful to everyone exist also.</p>
 
 <div class="entry_content">Tagged <a href="/tag/facebook">facebook</a>, <a href="/tag/ideas">ideas</a>,  | <a href="/2007/08/31/sharing-too-much/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2007/08/16/neckache">Neckache</a></h1>
-<div class="author_meta">16 Aug 2007</div>
-<p>The other evening I managed to stretch my back awkwardly and I’ve been feeling the repercussions of it ever since. It’s extremely painful to move my head, arm or neck and I’m getting really frustrated by not being able to sit at the computer without being uncomfortable. Wednesday night I was flat out in bed not able to move an inch, and little more of an improvement last night. It’s making me really tired and irritable. Grr!</p>
-
-<div class="entry_content">Tagged  | <a href="/2007/08/16/neckache/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

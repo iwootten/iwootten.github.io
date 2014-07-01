@@ -42,6 +42,51 @@
           
 
 	<div class="post">
+	<h1><a href="/2014/07/01/splitting-a-date-range-in-python">Splitting a date range in Python</a></h1>
+<div class="author_meta">01 Jul 2014</div>
+	<p>Dates are one of those annoying things that shouldn’t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments in a recent analytics part of an app I’m currently working on. Hopefully someone else will find them helpful.</p>
+
+<div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">calendar</span>
+
+<span class="c"># Find the delta between two dates based on a desired number of ranges</span>
+<span class="k">def</span> <span class="nf">datedelta</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">no_of_ranges</span><span class="p">):</span>
+    <span class="n">start_epoch</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">startdate</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+    <span class="n">end_epoch</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">enddate</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+
+    <span class="n">date_diff</span> <span class="o">=</span> <span class="n">end_epoch</span> <span class="o">-</span> <span class="n">start_epoch</span>
+
+    <span class="n">step</span> <span class="o">=</span> <span class="n">date_diff</span> <span class="o">/</span> <span class="n">no_of_ranges</span>
+
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">step</span><span class="p">)</span></code></pre></div>
+
+<p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
+
+<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
+    <span class="n">currentdate</span> <span class="o">=</span> <span class="n">startdate</span>
+    <span class="k">while</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="n">enddate</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">currentdate</span><span class="p">,</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span>
+        <span class="n">currentdate</span> <span class="o">+=</span> <span class="n">delta</span></code></pre></div>
+
+<p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
+
+<div class="highlight"><pre><code class="python"><span class="c"># Get timedeltas based on splitting the range by 10</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="n">date_delta</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">from_datetime</span><span class="p">,</span> <span class="n">to_datetime</span> <span class="ow">in</span> <span class="n">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">from_datetime</span><span class="p">,</span> <span class="n">to_datetime</span></code></pre></div>
+
+<p>The result forms part of the following d3 chart:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Made some updates to that there commerce dashboard (now uses summary ranges on x-axis), what do people think? <a href="http://t.co/AatFxBRnsC">pic.twitter.com/AatFxBRnsC</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/481780932496863233">June 25, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+	<div class="entry_content">Tagged <a href="/tag/coding">coding</a>, <a href="/tag/python">python</a>,  | <a href="/2014/07/01/splitting-a-date-range-in-python/#disqus_thread">Leave a comment</a></div>
+	</div>
+
+    
+
+	<div class="post">
 	<h1><a href="/2013/06/27/the-developer-dream">The Developer Dream</a></h1>
 <div class="author_meta">27 Jun 2013</div>
 	<p>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I’m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I’ve mainly created these by myself – a casualty of doing paid work in the main like this too. </p>
@@ -251,17 +296,6 @@
 
 
 	<div class="entry_content">Tagged <a href="/tag/codeiginiter">codeiginiter</a>, <a href="/tag/ellislabs">ellislabs</a>, <a href="/tag/lifestream">lifestream</a>, <a href="/tag/opensource">opensource</a>, <a href="/tag/PHP">PHP</a>,  | <a href="/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2008/01/30/location-based-job-boards">Location Based Job Boards</a></h1>
-<div class="author_meta">30 Jan 2008</div>
-	<p>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent <a href="http://djangogigs.com">job</a> and <a href="http://simonwillison.net/2008/Jan/23/djangopeople/">profile sites</a> in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don’t have time myself to do this though unfortunately – perhaps someone might like to chat about collaborating). What I’ve concluded is that being aware of those jobs within a certain area might be quite useful – and simple to implement. What you’d basically end up with is a situation where you could subscribe to updates on jobs in a particular field within a certain area (think – “tell me about all dev jobs within 50 miles”). Whilst this feature may exist on some other sites (though I’m unaware of it) my experience tells me that it probably isn’t executed particularly well.</p>
-
-
-	<div class="entry_content">Tagged <a href="/tag/boards">boards</a>, <a href="/tag/django">django</a>, <a href="/tag/jobs">jobs</a>, <a href="/tag/natbat">natbat</a>, <a href="/tag/simon-willison">simon willison</a>,  | <a href="/2008/01/30/location-based-job-boards/#disqus_thread">Leave a comment</a></div>
 	</div>
 
     

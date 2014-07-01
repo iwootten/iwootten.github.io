@@ -42,6 +42,21 @@
       
 
 <div class="post">
+<h1><a href="/2008/11/03/fair-bare-snowdodgers-challenge">Fair &#038; Bare Snowdodgers Challenge</a></h1>
+<div class="author_meta">03 Nov 2008</div>
+<p>Yesterday I announced that we’re running our <a href="http://fairandbare.com/challenge/snowdodgers">first design challenge</a> in conjunction with <a href="http://snowdodgers.co.uk">team Snowdodgers</a> at <a href="http://www.fairandbare.com">Fair &#038; Bare</a>. These are some really amazing fellas who are trying to raise £48,000 for charity by rallying a £200 banger round 4000 miles involving the Arctic circle. We’re asking designers to get in designs relating to the chilly weather and the guys crazy antics!</p>
+
+<p>If you’re interested, you’ve got just a month to get an entry in. You’ll win £100 plus a space on the rally car for your design!</p>
+
+<p>Check out <a href="http://fairandbare.com/challenge/snowdodgers">the challenge page</a> for full details of how to enter!</p>
+
+
+<div class="entry_content">Tagged  | <a href="/2008/11/03/fair-bare-snowdodgers-challenge/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming">Sweetcron is pretty sweet at Lifestreaming</a></h1>
 <div class="author_meta">31 Aug 2008</div>
 <p>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to <a href="http://sweetcron.com">Sweetcron</a>. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web. You can see mine over <a href="http://ianwootten.co.uk/stream">here</a> (although is mostly twitter updates for the minute).</p>
@@ -171,68 +186,6 @@
 <p><em>[Disclosure: This book was given freely by <a href="http://www.packtpub.com">PackPub</a> for review within the <a href="http://www.cardiffgeeks.net">Cardiff Geeks</a> group.]</em></p>
 
 <div class="entry_content">Tagged <a href="/tag/book review">book review</a>, <a href="/tag/jQuery">jQuery</a>,  | <a href="/2008/01/09/learning-jquery/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2008/01/05/decrypting-filezilla-passwords-with-php">Decrypting Filezilla Passwords with PHP</a></h1>
-<div class="author_meta">05 Jan 2008</div>
-<p>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I’ve added some comments to roughly describe what is going on.</p>
-
-<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that’ll make my job easier now. &lt;pre class='php'&gt;$filezilla_password_file = “FileZilla.xml”;</p>
-
-<p>$xml = file_get_contents($filezilla_password_file);</p>
-
-<p>$simple_xml = simplexml_load_string($xml);</p>
-
-<p>foreach($simple_xml-&gt;Sites-&gt;Site as $site)
-{
-	$attributes =  $site-&gt;attributes();</p>
-
-<pre><code>print "Site: ".$attributes-&gt;Name."\n";
-print "User: ".$attributes-&gt;User."\n";
-print "Encrypted Pass: ".$attributes-&gt;Pass."\n";
-print "Unencrypted Pass:".decryptPass((string)$attributes-&gt;Pass)."\n\n"; }
-</code></pre>
-
-<p>function decryptPass($pass) 
-{
-        // Encryption Key for FileZilla 2 Passwords
-	$key = “FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ”;</p>
-
-<pre><code>// Find the offset position in the key for this pass
-$pos=(strlen($pass)/3) % strlen($key);
-$decrypt = '';
-
-$t=0;
-	
-//Loop through each 3rd of the password
-for($i=0;$i &amp;lt; strlen($pass) / 3;$i++) {
-	    
-    //Get 3 characters, remove the 0 at the 
-//front to get ASCII code to represent the character 
-$num = substr($pass,$i * 3,3);
-
-if (substr($num,0,1) == 0) {
-	$num = substr($num,1,2);
-}
-		
-//Get the ascii code of the unencrypted character
-//by performing XOR against current ASCII and key
-//before converting back and adding to decrypted pass
-	$t = $num ^ ord($key[($i + $pos) % strlen($pass)]);
-	 $decrypt .= chr($t);
-	    
-}
-	
-// Return the decrypted pass
-   return $decrypt; }
-</code></pre>
-<p>&lt;/pre&gt;</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/decryption">decryption</a>, <a href="/tag/filezilla">filezilla</a>, <a href="/tag/PHP">PHP</a>,  | <a href="/2008/01/05/decrypting-filezilla-passwords-with-php/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+   
+   	<title>ianwootten.co.uk - Tag: python</title>
+   
+   <link>http://ianwootten.co.uk</link>
+   <description>I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.</description>
+   <language>en-us</language>
+   <managingEditor>I.M.Wootten</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+
+    
+	  <item>
+        <title>Splitting a date range in Python</title>
+        <link>http://ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2014-07-01T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python</guid>
+		<description><![CDATA[
+		   <p>Dates are one of those annoying things that shouldn’t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments in a recent analytics part of an app I’m currently working on. Hopefully someone else will find them helpful.</p>
+
+<div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">calendar</span>
+
+<span class="c"># Find the delta between two dates based on a desired number of ranges</span>
+<span class="k">def</span> <span class="nf">datedelta</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">no_of_ranges</span><span class="p">):</span>
+    <span class="n">start_epoch</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">startdate</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+    <span class="n">end_epoch</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">enddate</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+
+    <span class="n">date_diff</span> <span class="o">=</span> <span class="n">end_epoch</span> <span class="o">-</span> <span class="n">start_epoch</span>
+
+    <span class="n">step</span> <span class="o">=</span> <span class="n">date_diff</span> <span class="o">/</span> <span class="n">no_of_ranges</span>
+
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">step</span><span class="p">)</span></code></pre></div>
+
+<p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
+
+<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
+    <span class="n">currentdate</span> <span class="o">=</span> <span class="n">startdate</span>
+    <span class="k">while</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="n">enddate</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">currentdate</span><span class="p">,</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span>
+        <span class="n">currentdate</span> <span class="o">+=</span> <span class="n">delta</span></code></pre></div>
+
+<p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
+
+<div class="highlight"><pre><code class="python"><span class="c"># Get timedeltas based on splitting the range by 10</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="n">date_delta</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">from_datetime</span><span class="p">,</span> <span class="n">to_datetime</span> <span class="ow">in</span> <span class="n">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">from_datetime</span><span class="p">,</span> <span class="n">to_datetime</span></code></pre></div>
+
+<p>The result forms part of the following d3 chart:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Made some updates to that there commerce dashboard (now uses summary ranges on x-axis), what do people think? <a href="http://t.co/AatFxBRnsC">pic.twitter.com/AatFxBRnsC</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/481780932496863233">June 25, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+		]]></description>
+	  </item>
+    
+  </channel>
+</rss>
