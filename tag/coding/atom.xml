@@ -19,7 +19,7 @@
 		<pubDate>2014-07-01T00:00:00+01:00</pubDate>
 		<guid>http://ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python</guid>
 		<description><![CDATA[
-		   <p>Dates are one of those annoying things that shouldn’t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments in a recent analytics part of an app I’m currently working on. Hopefully someone else will find them helpful.</p>
+		   <p>Dates are one of those annoying things that shouldn’t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I’m currently working on. Hopefully someone else will find them helpful.</p>
 
 <div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">calendar</span>
 
