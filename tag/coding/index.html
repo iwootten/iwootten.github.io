@@ -61,11 +61,18 @@
 
 <p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
 
-<div class="highlight"><pre><code class="python"><span class="k">def</span> <span class="nf">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
+<div class="highlight"><pre><code class="python"><span class="c"># Edit 18/07/2014 - I realised dates needed the hrs, mins an secs correctly</span>
+<span class="c"># adjusted to beginning / end of day</span>
+<span class="k">def</span> <span class="nf">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
     <span class="n">currentdate</span> <span class="o">=</span> <span class="n">startdate</span>
+
     <span class="k">while</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="n">enddate</span><span class="p">:</span>
-        <span class="k">yield</span> <span class="n">currentdate</span><span class="p">,</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span>
-        <span class="n">currentdate</span> <span class="o">+=</span> <span class="n">delta</span></code></pre></div>
+        <span class="n">todate</span> <span class="o">=</span> <span class="p">(</span><span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span><span class="n">second</span><span class="o">=</span><span class="mi">59</span><span class="p">)</span>
+
+        <span class="k">yield</span> <span class="n">currentdate</span><span class="p">,</span> <span class="n">todate</span>
+
+        <span class="n">currentdate</span> <span class="o">+=</span> <span class="n">delta</span>
+        <span class="n">currentdate</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code></pre></div>
 
 <p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
 
