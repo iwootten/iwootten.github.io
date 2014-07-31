@@ -42,6 +42,52 @@
       
 
 <div class="post">
+<h1><a href="/2013/01/22/the-move-towards-static-websites">The Move Towards Static Websites</a></h1>
+<div class="author_meta">22 Jan 2013</div>
+<p>There’s some discussion on new podcast <a href="http://backtofrontshow.com">“The Back to Front Show”</a> on why of late we’re seeing so many static websites cropping up. It seem like now more than ever, we’re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing. </p>
+
+<p>When I talk about a static site, I think of it of raw HTML sat on a server and nothing else. However, it seems as if the industry has adopted the term to refer to sites created from tools which are capable of creating/emulating this HTML, whether it be a local, dropbox or a hosted/self-hosted solution. Typically both types of tool are powered through conversion of flat files into the markup which is served publicly. Through using them you can achieve something akin to a typical blog, without the need for a database (or possibly even a server-side language to power it).</p>
+
+<p><strong>Pro’s</strong></p>
+
+<p>Simplicity – Most of the draw toward toward such setups seems to be on the simplicity over flexibility. I can power a site with a minimal setup, but still regularly and simply update and maintain it, using a partial based environment. With a dropbox based solution, I just need to drop my flat files into a folder and everything is updated transparently. Mark Boulton <a href="http://markboulton.co.uk/journal/newblog-newcms">has previously written</a> about his requirements for writing on the web and why he went with <a href="http://statamic.com">Statamic</a>: </p>
+
+<blockquote>
+  <p>“I wanted a way of simply publishing words, rather than getting all wrapped up in php, theming files and database problems.”</p>
+</blockquote>
+
+<p>Simplicity it seems, rules.</p>
+
+<p>I previously <a href="http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">wrote an article</a> on how you could publish using Octopress and Amazon’s S3 service. For anyone who has a relatively low traffic site, such a setup could also work out cheaper than a monthly hosting package.</p>
+
+<p>Development Time – If you’re one for creating custom themes, a static site is also a much simpler solution than wrestling with styling the innerds of a full fledged cms. Typically posts are stored in markdown and can be styled along with assets using a partial templating system (eg. based on YAML or Liquid). Having recently developed a wordpress theme I can testify to the complexity of having to dig through documentation on function usage and to determine which template file should be modified to achieve what I want within a page.</p>
+
+<p>Source Control – As <a href="http://rickhurst.co.uk">Rick</a> quite rightly points out below in the comments, having all your posts available in flat files makes them perfect for managing/backing up through your revision control tools of choice.</p>
+
+<p><strong>Cons</strong></p>
+
+<p>Customisation – For me, the big loss is the lack of flexibility. I hear everyone cry, “Well, duh – it’s static”. Without a server side language handling requests, I’m unable to schedule posts, handle comments, create forms or trigger email. If I intend on continuing to offer them, I have to find third party services to deal with each of these aspects. I’m well aware there’s services like disqus and wufoo that may solve some of these problems, but it seems like a major hassle to integrate each time something like this is required. It may be that this is just me, you may be perfectly happy using these solutions, or may not require them.</p>
+
+<p>Remote publishing – When using a local based solution (e.g. Jekyll), you don’t have the option of blogging remotely, due to the lack of tools to create and push out your content. Gone are the days of being able to log into a site from your phone and add a small update. For me, this is less of an issue as I can’t recall if I’ve ever written a post in this way and try to be more methodical, less spontaneous about what I’m writing from the comfort of my desktop.</p>
+
+<p><strong>Example Systems</strong></p>
+
+<p>If you’re interested in running a static site, then I’ve listed a few that seem pretty popular at the time of writing, along with a brief list of their features.</p>
+
+<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> – Locally run, File based, Open source, Powers Github pages.<br />
+<a href="http://octopress.org/">Octopress</a> – Locally run, Jekyll/File based, but with preconfigured HTML templates, CSS, Javascript, Open Source<br />
+<a href="http://statamic.com">Statamic</a> – Self Hosted, File Based, License Required<br />
+<a href="http://getkirby.com">Kirby</a> – Self Hosted, File based, jQuery inspired API, License Required<br />
+<a href="http://staceyapp.com">Stacey</a> – Self hosted, File based, Open source<br />
+<a href="http://scriptogr.am">Scriptogram</a> – Dropbox/File based</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/blogging">blogging</a>, <a href="/tag/blogs">blogs</a>,  | <a href="/2013/01/22/the-move-towards-static-websites/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2013/01/21/new-year-new-theme">New Year, New Theme</a></h1>
 <div class="author_meta">21 Jan 2013</div>
 <p>I’ve long made use of the default theme on WordPress, which I’ve always felt wasn’t entirely “me”. The theme now live is one I’ve been tinkering with for a while now based on the lovely preview design used in the <a href="http://prose.io">prose.io</a> document editing tool for github. I really like the focus on simplicity and think it suits me well.</p>
@@ -232,27 +278,6 @@
 <p>Steam/SteamApps/common/Indie Game The Movie/data/movies</p>
 
 <div class="entry_content">Tagged <a href="/tag/gamer">gamer</a>, <a href="/tag/games">games</a>, <a href="/tag/indie">indie</a>, <a href="/tag/movie">movie</a>,  | <a href="/2012/06/12/where-does-steam-store-indie-game-the-movie/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/05/03/if-you-build-it">If You Build It</a></h1>
-<div class="author_meta">03 May 2012</div>
-<p>If my years in academia have taught me anything, it’s that insight obvious to you isn’t often obvious to others. </p>
-
-<p>As a result, I’ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I’ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I’m in the fortunate position to have some of that available now and again. There’s a variety of reasons why I might attempt a project, ranging from it may later evolve into something able to draw an income further down the line, that I’m excited by learning from the tools I choose to use or that I feel moved enough by a problem to do something to try and prompt change. </p>
-
-<p>I had one of these ideas last weekend, whereby I was wondering what the specifics of the fees of kickstarter projects broke down to. The information on what fees are taken is published <a href="http://www.kickstarter.com/help/faq/creating%20a%20project#WhatFeesDoesKickChar" title="what fees does kickstarter charge">on their site</a>, so I set about a simple phantomjs script (available <a href="https://github.com/niftydigits/kickstarter.js">on github</a>) that could scrape the information from kickstarter. After doing so, the idea moved on to graphing said information via an app to a simple raphaeljs and again further once I’d realised some other stats that could be gathered from the info I was grabbing. The end result is <a href="http://starterstats.com">Starter Stats</a> – which is, (I think) a neat little site for showing stats on any kickstarter project.</p>
-
-<p><a href="http://starterstats.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/05/Screen-Shot-2012-05-03-at-10.16.42-1024x817.png" alt="" title="Starter Stats" width="640" height="510" class="alignnone size-large wp-image-536" /></a></p>
-
-<p>It took a little longer than I’d hoped, but I’m really pleased with the final site as it stands. You should also be able to just replace the beginning of any kickstarter project page (http://kickstarter.com) with “http://starterstats.com” and you’ll be sent to the relevant stats page on the app. Pages are generated on-demand every 15 minutes. Go on, take a look and let me know what you think.</p>
-
-<p>I could have not spent my time on this, instead kicking back and waiting for someone else to build such a tool. But I couldn’t see that happening. No, better for me to build, learn whilst doing so and move on to my next project. What do you get by not building?</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/kickstarter">kickstarter</a>, <a href="/tag/phantomjs">phantomjs</a>, <a href="/tag/raphaeljs">raphaeljs</a>,  | <a href="/2012/05/03/if-you-build-it/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

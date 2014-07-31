@@ -42,6 +42,27 @@
       
 
 <div class="post">
+<h1><a href="/2012/05/03/if-you-build-it">If You Build It</a></h1>
+<div class="author_meta">03 May 2012</div>
+<p>If my years in academia have taught me anything, it’s that insight obvious to you isn’t often obvious to others. </p>
+
+<p>As a result, I’ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I’ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I’m in the fortunate position to have some of that available now and again. There’s a variety of reasons why I might attempt a project, ranging from it may later evolve into something able to draw an income further down the line, that I’m excited by learning from the tools I choose to use or that I feel moved enough by a problem to do something to try and prompt change. </p>
+
+<p>I had one of these ideas last weekend, whereby I was wondering what the specifics of the fees of kickstarter projects broke down to. The information on what fees are taken is published <a href="http://www.kickstarter.com/help/faq/creating%20a%20project#WhatFeesDoesKickChar" title="what fees does kickstarter charge">on their site</a>, so I set about a simple phantomjs script (available <a href="https://github.com/niftydigits/kickstarter.js">on github</a>) that could scrape the information from kickstarter. After doing so, the idea moved on to graphing said information via an app to a simple raphaeljs and again further once I’d realised some other stats that could be gathered from the info I was grabbing. The end result is <a href="http://starterstats.com">Starter Stats</a> – which is, (I think) a neat little site for showing stats on any kickstarter project.</p>
+
+<p><a href="http://starterstats.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/05/Screen-Shot-2012-05-03-at-10.16.42-1024x817.png" alt="" title="Starter Stats" width="640" height="510" class="alignnone size-large wp-image-536" /></a></p>
+
+<p>It took a little longer than I’d hoped, but I’m really pleased with the final site as it stands. You should also be able to just replace the beginning of any kickstarter project page (http://kickstarter.com) with “http://starterstats.com” and you’ll be sent to the relevant stats page on the app. Pages are generated on-demand every 15 minutes. Go on, take a look and let me know what you think.</p>
+
+<p>I could have not spent my time on this, instead kicking back and waiting for someone else to build such a tool. But I couldn’t see that happening. No, better for me to build, learn whilst doing so and move on to my next project. What do you get by not building?</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/kickstarter">kickstarter</a>, <a href="/tag/phantomjs">phantomjs</a>, <a href="/tag/raphaeljs">raphaeljs</a>,  | <a href="/2012/05/03/if-you-build-it/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2012/03/01/how-to-switch-your-vps-in-2-hours">How to Switch Your VPS in 2 Hours</a></h1>
 <div class="author_meta">01 Mar 2012</div>
 <p>Friday last week I woke up to a barrage of emails coming into my inbox. All of these were coming from notification of spam comments upon this very blog. By the time I’d woken up I’d had something like 75 emails. This was pretty strange given that Akismet was there guarding my blog ever since it’s been available and I’d never had a email about a dodgy comment since I’d set it up (something like 5 years ago). They continued to flood in during my breakfast as fast as I could delete them.</p>
@@ -421,45 +442,6 @@ into such circles yourself, I’m not entirely sure what they would get from the
 
 
 <div class="entry_content">Tagged <a href="/tag/express">express</a>, <a href="/tag/expressjs">expressjs</a>, <a href="/tag/node">node</a>, <a href="/tag/nodejs">nodejs</a>, <a href="/tag/socket.io">socket.io</a>,  | <a href="/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2011/05/07/updating-wordpress-automatically-over-sftp">Updating WordPress Automatically over SFTP</a></h1>
-<div class="author_meta">07 May 2011</div>
-<p>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it’s more secure and means I don’t have to open up FTP on my virtual server and open another port up in the firewall.</p>
-
-<p>I’m using ubuntu and the sequence of commands I followed were:</p>
-
-<pre class="bash">sudo apt-get install libssh2-1-dev libssh2-php
-</pre>
-
-<p>You should now find that if you list the modules installed in php and check if ssh2 is now there, you get the result “ssh2″:</p>
-
-<pre class="bash">php -m | grep ssh2
-</pre>
-
-<p>You’ll need to restart apache for the changes to begin being used.</p>
-
-<pre class="bash">sudo /etc/init.d/apache2 restart
-</pre>
-
-<p>If you head to updates in your dashboard, you should now see an extra option “SSH2″ and spaces for public and private authentication keys. I had to head back to the terminal and create these particular files.</p>
-
-<pre class="bash">cd ~
-ssh-keygen
-cat .ssh/id_rsa.pub &gt;&gt; .ssh/authorized_keys
-chmod 755 .ssh
-chmod 644 .ssh/*
-sudo chown -R ian:www-data /var/www/pathtowordpress/
-</pre>
-
-<p>Now you can head into the updates page again, enter your username and password and the locations to your public and private keys (/home/ian/.ssh/id_rsa.pub and /home/ian/.ssh/id_rsa in my case). If you’re running ssh on a non standard port, be sure to append that to your hostname. </p>
-
-<p>Thanks to the following helpful posts: http://kevin.vanzonneveld.net/techblog/article/make_ssh_connections_with_php/</p>
-
-<div class="entry_content">Tagged <a href="/tag/sftp">sftp</a>, <a href="/tag/update">update</a>,  | <a href="/2011/05/07/updating-wordpress-automatically-over-sftp/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

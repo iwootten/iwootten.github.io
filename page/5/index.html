@@ -42,6 +42,45 @@
       
 
 <div class="post">
+<h1><a href="/2011/05/07/updating-wordpress-automatically-over-sftp">Updating WordPress Automatically over SFTP</a></h1>
+<div class="author_meta">07 May 2011</div>
+<p>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it’s more secure and means I don’t have to open up FTP on my virtual server and open another port up in the firewall.</p>
+
+<p>I’m using ubuntu and the sequence of commands I followed were:</p>
+
+<pre class="bash">sudo apt-get install libssh2-1-dev libssh2-php
+</pre>
+
+<p>You should now find that if you list the modules installed in php and check if ssh2 is now there, you get the result “ssh2″:</p>
+
+<pre class="bash">php -m | grep ssh2
+</pre>
+
+<p>You’ll need to restart apache for the changes to begin being used.</p>
+
+<pre class="bash">sudo /etc/init.d/apache2 restart
+</pre>
+
+<p>If you head to updates in your dashboard, you should now see an extra option “SSH2″ and spaces for public and private authentication keys. I had to head back to the terminal and create these particular files.</p>
+
+<pre class="bash">cd ~
+ssh-keygen
+cat .ssh/id_rsa.pub &gt;&gt; .ssh/authorized_keys
+chmod 755 .ssh
+chmod 644 .ssh/*
+sudo chown -R ian:www-data /var/www/pathtowordpress/
+</pre>
+
+<p>Now you can head into the updates page again, enter your username and password and the locations to your public and private keys (/home/ian/.ssh/id_rsa.pub and /home/ian/.ssh/id_rsa in my case). If you’re running ssh on a non standard port, be sure to append that to your hostname. </p>
+
+<p>Thanks to the following helpful posts: http://kevin.vanzonneveld.net/techblog/article/make_ssh_connections_with_php/</p>
+
+<div class="entry_content">Tagged <a href="/tag/sftp">sftp</a>, <a href="/tag/update">update</a>,  | <a href="/2011/05/07/updating-wordpress-automatically-over-sftp/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2011/03/31/a-survey-of-hype-in-web-development-podcasts">A Survey of Hype in Web Development Podcasts</a></h1>
 <div class="author_meta">31 Mar 2011</div>
 <p>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they’re allowed to, it is their own podcast after all, often from their own businesses etc. I’m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless. </p>
@@ -548,33 +587,6 @@
 <p><a href="http://www.fairandbare.com">Fair &#038; Bare</a> &#8211; The little shop I run (with a little help from my wife) is having a January Sale right now in celebration of entering the year 2010. Every shirt we&#8217;ve made to date is just 10 squid! Hurry up people, it only runs until Sunday.</p>
 
 <div class="entry_content">Tagged <a href="/tag/fairtrade">fairtrade</a>, <a href="/tag/fashion">fashion</a>, <a href="/tag/internet">internet</a>, <a href="/tag/tees">tees</a>, <a href="/tag/tshirts">tshirts</a>,  | <a href="/2010/01/07/fair-bare-january-10-sale/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2009/10/25/discovering-google">Discovering Google</a></h1>
-<div class="author_meta">25 Oct 2009</div>
-<p>I’ve recently read a post over on the <a href="http://www.guardian.co.uk/technology/2009/oct/23/internet-40-history-arpanet">guardians technology site</a> which gave a whistle-stop history of the internet as it turns 40. I thought I’d share here my own experiences of growing up alongside the web, more for my own record than anything.</p>
-
-<p>I remember at school a time at which there was no external connection, nor internal network (which we the pupils used) so the <a href="http://en.wikipedia.org/wiki/Acorn_Network_Computer">Acorn machines</a> used at our school at the time could communicate with one another. Computers, for me at that point were standalone. I had as much of an interest in computing then as I do now and I can remember early on, staying around after school to use one of the only PC’s in the school (which was bought to run a piece of career piece software called Kudos), in order to attempt to run the demo games from cds found on pc mags at the time (the only one I can remember was a <a href="http://www.imdb.com/title/tt0104692/">lawnmower man</a> demo). I did this until ofter one time a friend and I accidentally removing the <a href="http://en.wikipedia.org/wiki/AUTOEXEC.BAT">autoexec.bat</a> file which I hadn’t backed up…..oopsy</p>
-
-<p><img src="http://www.ianwootten.co.uk/wp-content/uploads/2009/10/riscosoldlook-300x225.gif" alt="RiscOS. Old School. Literally. Taken from toastytech.com" title="riscosoldlook" width="300" height="225" class="size-medium wp-image-350" /></p>
-
-<p>I of course had to stick around at school because we didn’t have our own pc at home, because they were very, very expensive (When we did finally get one, it was a Crappard Bell 486 DX2 66, 4 MB of RAM, 400MB HD and was over £1000). I felt a little jealous of my friends who both had PC’s and were able to use <a href="http://en.wikipedia.org/wiki/Encarta">Microsoft’s Encarta</a> to help them out with their homework at that time. (Interestingly Encarta later also became a <a href="http://uk.encarta.msn.com/">website</a> and is to be discontinued later this week).</p>
-
-<p>Bizarrely, I’d opted for A-Levels at 6th Form which didn’t allow me to experiment with pc’s much, not that it would have mattered as although the rest of the world was transitioning toward them, the <a href="http://www.gryphon.dorset.sch.uk/">Gryphon school</a> I attended had a whole computing lab full of <a href="http://en.wikipedia.org/wiki/RiscPC">RiscPC</a>‘s. I think I went there once in the two years of A-Levels I did and kept my nose upturned whilst I was there.</p>
-
-<p>Some point over this time, I’d also got hooked on a magazine called <a href="http://www.pcformat.co.uk/">PC Format</a> since the latter years of school, which allowed me to get all the games demos I wanted without spending however many years (and £’s) it would have taken to download them all. (I kept all 4 years worth of magazines I’d bought and cds/dvds right up unto moving in with my wife). At home, even though we were now in the year 1999, my parents hadn’t yet opted to purchase a dial-up modem and make that leap online. I was of course, still jealous of those mates – who now were connected. I got myself a hotmail account, where I eagerly awaited emails from no-one.</p>
-
-<p>I can remember going to college and being scared about the prospect of doing a computing course but never having had any prior experience of using the web. My parents finally got a modem that year, but I still used to use the computing labs after teaching. I could download 1MB samples of music from <a href="http://www.juno.co.uk">Juno records</a> much more quickly over the leased line than I ever could waiting on the 56Kbps dialup at home. I also began working at <a href="http://www.dixons.co.uk/">Dixons</a> (for my sins), getting paid a pittance to talk to many clueless customers about “stereos”, “cd players” and “N64′s”. Working at Dixons did at least afford me the opportunity to experience playing Quake in Yeovils one and only internet cafe on a LAN against my friends and the staff that worked there. </p>
-
-<p>My LAN parties moved to the computing labs at the university, outside of working hours (because as their 10 year old posters claim, you’re not allowed to use games on them during working hours…). Over several years of using the web, I’d never once heard of Google until it was mentioned by one of the research students taking our internet computing lectures. “You’ve probably heard of this” he said. “Er, no”, I thought – why did no-one tell me? I’d used a number of search engines such as <a href="http://www.lycos.co.uk/">lycos</a> and later <a href="http://www.webcrawler.com/">webcrawler</a>, but all were pretty awful in terms of giving me what I wanted – results. Instead they seemed content with a ridiculous number of adverts and making me hunt through a huge number of pages. Their pages now seem to indicate a new direction. </p>
-
-<p>A bit of a trip down memory lane, but that’s how I ended up being introduced to Google. How about you?</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/acorn computers">acorn computers</a>, <a href="/tag/biography">biography</a>, <a href="/tag/history">history</a>, <a href="/tag/internet">internet</a>, <a href="/tag/nostalgia">nostalgia</a>,  | <a href="/2009/10/25/discovering-google/#disqus_thread">Leave a comment</a></div>
 </div>
 
 

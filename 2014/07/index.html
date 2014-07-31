@@ -42,6 +42,41 @@
       
 
 <div class="post">
+<h1><a href="/2014/07/31/extracting-shot-thumbnails-using-ffmpeg">Extracting Shot Thumbnails from a video using FFMPEG</a></h1>
+<div class="author_meta">31 Jul 2014</div>
+<p>Recently, Andy Davies asked the following question on twitter:</p>
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p>Any ideas on how I can easily convert a video to a filmstrip?</p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/491878215464808450">July 23, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I found this pretty interesting, especially given I’d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.</p>
+
+<p>After a bit of digging last night, I discovered it’s <a href="http://superuser.com/questions/538112/meaningful-thumbnails-for-a-video-using-ffmpeg">actually possible to extract images based on changes in the video</a>. We can use this to extract a rough approximation to individual shots.</p>
+
+<p>I’ve run the following command on the Big Buck Bunny in order to extract 138 individual changes from the 10 min short. I’m using ffmpeg version 2.3 (I had tried using ffmbc 0.7, but it is unable to parse some of the options).</p>
+
+<div class="highlight"><pre><code class="bash">ffmpeg -ss 3 -i big_buck_bunny_1080p_surround.avi -vf <span class="s2">&quot;select=gt(scene\,0.2)&quot;</span> -vsync vfr -s vga -f image2 out%02d.jpg</code></pre></div>
+
+<p>The real gold here is the ‘-vf “select=gt(scene\,0.2)”’, which grabs scene changes based on a difference in the frame of 20% or more. There are certain discrepancies in a couple of shots, but in the main this method works well and quickly. I specify the output format (-f) and size (-s) so that I can get small thumbs rather than the 1920x1080 the short is in.</p>
+
+<p>You can see how well this performs through the selections made for the first 10 changes shown below.</p>
+
+<p><img src="http://ianwootten.co.uk/images/ffmpeg-board-sample.jpg" title="Sample ffmpeg scene changes" /></p>
+
+<p>In order to assemble the thumbs into an individual image I’ve used the <a href="http://www.imagemagick.org/Usage/montage/">“montage”</a> command from imagemajick.</p>
+
+<div class="highlight"><pre><code class="bash">montage *.jpg -geometry 320x180+2+2 -tile 3x4 sample.jpg</code></pre></div>
+
+<p>This assembles the images in the current directory in a 3x4 grid and outputs them to sample.jpg. If there are more images that will fit in a 3x4 grid, multiple output images will be created to represent the strip.</p>
+
+<p>Animation is a really good exemplar for this technique, probably due to the obvious changes between each shot. However I can imagine it would fare less well with say a live action feature, where scene changes may be more gradual and/or lighting is more subtle.</p>
+
+<div class="entry_content">Tagged <a href="/tag/imagemajick">imagemajick</a>, <a href="/tag/ffmpeg">ffmpeg</a>,  | <a href="/2014/07/31/extracting-shot-thumbnails-using-ffmpeg/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2014/07/01/splitting-a-date-range-in-python">Splitting a date range in Python</a></h1>
 <div class="author_meta">01 Jul 2014</div>
 <p>Dates are one of those annoying things that shouldn’t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I’m currently working on. Hopefully someone else will find them helpful.</p>
