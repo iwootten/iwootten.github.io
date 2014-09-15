@@ -42,6 +42,52 @@
       
 
 <div class="post">
+<h1><a href="/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3">Scaling a Linear Domain to an Ordinal Range with d3</a></h1>
+<div class="author_meta">07 Mar 2014</div>
+<p>I’ve had the opportunity of using <a href="http://d3js.org/">d3</a> quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.</p>
+
+<p>Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</p>
+
+<p>I’d picked out a colour palette I wanted to use for a particular graph, as per below:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#B8D0DE&quot;</span><span class="p">,</span> <span class="s2">&quot;#9FC2D6&quot;</span><span class="p">,</span> <span class="s2">&quot;#86B4CF&quot;</span><span class="p">,</span> <span class="s2">&quot;#73A2BD&quot;</span><span class="p">,</span> <span class="s2">&quot;#6792AB&quot;</span><span class="p">];</span></code></pre></div>
+
+<p>The only examples I’ve seen similar to this are where it is assumed you want to vary darkness of colours based on value or <a href="http://stackoverflow.com/questions/17321139/mapping-in-d3-ordinal-scales">vary the domain</a> based on the number of colours you want. Not a good fit.</p>
+
+<p>I wanted to pick one of my values based on a linear value from my data set. My first thought was to make use of the ordinal scale function provided by d3. Something like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colour</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">ordinal</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">domain</span><span class="p">(</span><span class="nx">mySortedDataValues</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="nx">colours</span><span class="p">);</span></code></pre></div>
+
+<p>In doing this, I got something that *looked* a bit like it was working, but not the way I expected. In fact, the way an ordinal scale works is that it provides a 1-to-1 mapping of domain values to the range, rather than any kind of interpolation between them. In this case, it was expecting only 5 distinct data values (to match up against the colours) and for everything over and above that, it wrapped them round to the beginning of the domain again. The solution then is fairly simple once you’ve got your head around that.</p>
+
+<p>What I did next, was to create a scale that gave the index of the colour we were going to be mapping to. This works well, because the indices are linear and d3 has the ability to do the dirty work in that respect.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colourIndex</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">linear</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">domain</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">data</span><span class="p">)])</span>
+  <span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">colours</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+
+<span class="nx">svg</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">enter</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">colours</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">colourIndex</span><span class="p">(</span><span class="nx">d</span><span class="p">))];</span>
+   <span class="p">});</span></code></pre></div>
+
+<p>Here we end up with an index ranging across all the indices of the colour array, and a colour appropriately selected from the palette as expected. You can see the resultant effect in the graph linked to below:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Working on some funky graphs for <a href="https://twitter.com/UseHourglass">@usehourglass</a>. This one shows how often you work certain times of the week: <a href="http://t.co/xRHE39HmTu">pic.twitter.com/xRHE39HmTu</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/441595966613774336">March 6, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<div class="entry_content">Tagged <a href="/tag/charting">charting</a>, <a href="/tag/d3">d3</a>,  | <a href="/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2014/03/03/shipping-in-march">Shipping in March</a></h1>
 <div class="author_meta">03 Mar 2014</div>
 <p>This month, I’ve decided to take some time out to ship projects. </p>
@@ -353,33 +399,11 @@
 
 
 
-<div class="post">
-<h1><a href="/2013/02/07/introvert-interfacing">Introvert Interfacing</a></h1>
-<div class="author_meta">07 Feb 2013</div>
-<p>You pay for your ticket, hotels, travel and then spend the rest of the year excitedly awaiting being able to attend <em>the conference</em> everyone is speaking about. Having travelled halfway across the country, braving weather you’d never ordinarily leave the house for, you arrive in the unrecognisable city. You’ve left your family to be here, which is heart wrenching at the best of times and your lonely hotel room is no comfort (especially given the number of beds it has). </p>
-
-<p>You hurredly beaver off to the first fringe event with butterflies in anticipation of the luminaries that are possibly going to be there too. On arrival, the room is bustling with faces from avatars you recognise. How exciting! You know so much about these people from following them day to day; even what they ate for breakfast, the bars they attended, who they hang with.</p>
-
-<p>Yet these cheery personas are only facets of their real life. Chances are, any person you recognise is someone you admire in the industry – but what could you possibly have to talk about? Your lowly 9-5 pales in comparison to the waves these trendsetters are making, they wouldn’t really care what you do would they? Maybe we have something in common? Unfortunately, it’s always far easier to remain silent than waltz up to someone new or that you recognise and drum up a conversation. Inevitably, this more than often happens. </p>
-
-<p>The organisers have done a fantastic job. “Talk with everyone else, make friends”, they prompt – if only you were able to. The conference itself is amazing, inspiring and useful, but others seem to get so much more from it. New friendships are forged, existing ones cemented. Are you the issue here?</p>
-
-<p>Finding food is a problem. Do you venture out in the hope of finding people to talk to, or do you eat out on your own? It becomes easier to ask via twitter, than face to face. At least the conference day provides lunch for you, even if you choose to eat it on your own. You feel like a teenager.</p>
-
-<p>The after-party is much like being back at a school disco. People stare longingly into their empty glasses, whilst propping up walls, longing for company. Why don’t you talk to them? Others circle back into their longstanding groups and attract fresh blood. Those in groups wear similar clothes. Maybe you should buy plaid? You return to the hotel at a reasonable hour, missing out on the later rawkus highjinks.</p>
-
-<p>In the morning, you skulk back onto your bus, wishing you’d coughed up the extra to go via train just to get home sooner.</p>
-
-<div class="entry_content">Tagged <a href="/tag/events">events</a>,  | <a href="/2013/02/07/introvert-interfacing/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
 <div class="pagination">
 
   <a href="/page/1" class="previous">Previous</a>
 
-<span class="page_number ">Page: 2 of 28</span>
+<span class="page_number ">Page: 2 of 29</span>
 
   <a href="/page/3" class="next">Next</a>
 

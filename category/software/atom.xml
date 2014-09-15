@@ -13,6 +13,85 @@
 
     
 	  <item>
+        <title>Processing Camera RAWs with OpenImageIO and Python</title>
+        <link>http://ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python</link>
+		<author>I.M.Wootten<</author>
+		<pubDate>2014-09-15T00:00:00+01:00</pubDate>
+		<guid>http://ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python</guid>
+		<description><![CDATA[
+		   <p>I recently discovered the library <a href="http://www.openimageio.org">OpenImageIO</a>, an awesome tool for reading and writing image files. What makes this of particular interest is the sheer variety of image files supported (BMP, Cineon, JPG, JPG-2000, GIF, DPX, OpenEXR, Targa, TIFF) (as well as variety of camera raw formats) and the fact it can perform image transformations upon them very easily. Given it’s designed for use in media and VFX environments it sounds like it will be useful for the type of work I’ve previously been involved with in stop motion.</p>
+
+<p>Additionally, it comes with Python bindings, so you can do all of this without having to learn C++ if, like me, it’s been 10 years since you last used it. It also means not having to resort to use of the commandline tools I’ve often used in the past for similar transformations.</p>
+
+<h2 id="mac-installation">Mac Installation</h2>
+
+<p>I’m on a mac and as such, brew is my weapon of choice for installing libraries. Unfortunately, openimageio is only available through a tap and an old version at that. I managed to compile openimageio outside of brew, but found that I couldn’t get python to read the bindings correctly. I wanted to install a 1.5 version of the library, so found the best solution was to download the formulae, modify it and tap homebrew/science to get the libraries it depends on. Your local openimageio formulae takes precedence over the tapped version, so it won’t get overwritten.</p>
+
+<div class="highlight"><pre><code class="bash">wget -O /usr/local/Library/Formula/openimageio.rb https://raw.githubusercontent.com/Homebrew/homebrew-science/master/openimageio.rb
+brew tap homebrew/science</code></pre></div>
+
+<p>You can edit the formulae here if required, using more recent version.</p>
+
+<div class="highlight"><pre><code class="bash">brew install openimageio</code></pre></div>
+
+<p>If all goes to plan, brew should install openimageio along with all dependencies. Additionally, I’ve edited my $DYLD_LIBRARY_PATH to include the path to the installation (/usr/local/Cellar/openimageio/1.5.3dev/lib).</p>
+
+<h1 id="reading-and-processing-raws">Reading and Processing RAWs</h1>
+
+<p>OpenImageIO uses the ImageBuf class to handle representation and manipulation of images in memory and functions of the ImageBufAlgo class to transform them. It’s best to demonstrate through some examples.</p>
+
+<div class="highlight"><pre><code class="python"><span class="kn">from</span> <span class="nn">OpenImageIO</span> <span class="kn">import</span> <span class="n">oiio</span>
+
+<span class="c"># Read a camera raw, crop and write out to a tiff</span>
+<span class="n">buf</span> <span class="o">=</span> <span class="n">oiio</span><span class="o">.</span><span class="n">ImageBuf</span><span class="p">(</span><span class="s">&quot;Dino_001_01_X1_0066.cr2&quot;</span><span class="p">)</span>
+<span class="n">cropped</span> <span class="o">=</span> <span class="n">oiio</span><span class="o">.</span><span class="n">ImageBuf</span><span class="p">()</span>
+<span class="n">oiio</span><span class="o">.</span><span class="n">ImageBufAlgo</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="n">cropped</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="n">oiio</span><span class="o">.</span><span class="n">ROI</span><span class="p">(</span><span class="mi">1208</span><span class="p">,</span> <span class="mi">4901</span><span class="p">,</span> <span class="mi">814</span><span class="p">,</span> <span class="mi">2385</span><span class="p">))</span>
+<span class="n">cropped</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;cropped.tiff&quot;</span><span class="p">)</span>
+
+<span class="c"># Create a new larger buffer and paste the crop into it, vertically centred</span>
+<span class="n">extended</span> <span class="o">=</span> <span class="n">oiio</span><span class="o">.</span><span class="n">ImageBuf</span><span class="p">(</span><span class="n">oiio</span><span class="o">.</span><span class="n">ImageSpec</span> <span class="p">(</span><span class="mi">3693</span><span class="p">,</span> <span class="mi">2077</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">oiio</span><span class="o">.</span><span class="n">FLOAT</span><span class="p">))</span>
+<span class="n">oiio</span><span class="o">.</span><span class="n">ImageBufAlgo</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">extended</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cropped</span><span class="p">)</span>
+
+<span class="c"># Create a new buffer, resize the extended image to 1920x1080 and add some text</span>
+<span class="n">resized</span> <span class="o">=</span> <span class="n">oiio</span><span class="o">.</span><span class="n">ImageBuf</span><span class="p">(</span><span class="n">oiio</span><span class="o">.</span><span class="n">ImageSpec</span> <span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">1080</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">oiio</span><span class="o">.</span><span class="n">FLOAT</span><span class="p">))</span>
+<span class="n">oiio</span><span class="o">.</span><span class="n">ImageBufAlgo</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">resized</span><span class="p">,</span> <span class="n">extended</span><span class="p">)</span>
+<span class="n">oiio</span><span class="o">.</span><span class="n">ImageBufAlgo</span><span class="o">.</span><span class="n">render_text</span><span class="p">(</span><span class="n">resized</span><span class="p">,</span> <span class="mi">1300</span><span class="p">,</span> <span class="mi">1030</span><span class="p">,</span> <span class="s">&quot;00066.cr2&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s">&quot;Arial&quot;</span><span class="p">)</span>
+<span class="n">oiio</span><span class="o">.</span><span class="n">ImageBufAlgo</span><span class="o">.</span><span class="n">render_text</span><span class="p">(</span><span class="n">resized</span><span class="p">,</span> <span class="mi">1600</span><span class="p">,</span> <span class="mi">1030</span><span class="p">,</span> <span class="s">&quot;00:00:02:18&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s">&quot;Arial&quot;</span><span class="p">)</span>
+<span class="n">resized</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;final.jpg&quot;</span><span class="p">)</span></code></pre></div>
+
+<p>THat ultimately takes the following lovely shot of a dino from RAW form to that with extended borders and burnt in information.</p>
+
+<p><img src="http://ianwootten.co.uk/images/Dino_001_01_X1_0066_original.jpg" title="Original RAW" /></p>
+
+<p><img src="http://ianwootten.co.uk/images/dino-final.jpg" title="Processed image with metadata" /></p>
+
+<p>What’s great about this is that we’ve used a single library to perform this series of transformations and we’ve not had to break out to use commandline operations to do so, instead manipulating them from the comfort of python.</p>
+
+<h2 id="chaining-commands">Chaining commands</h2>
+
+<p>From using various javascript libraries (jQuery, Underscore), I’ve become used to the simplicity of being able to quickly chain a whole bunch of commands together. For that reason, I wrapped a number of the OpenImageIO ImageBufAlgo methods up into a single class OiioChain so that it’s possible to perform the same set of above transformations using a somewhat more concise syntax.</p>
+
+<div class="highlight"><pre><code class="python"><span class="kn">from</span> <span class="nn">oiio_chain</span> <span class="kn">import</span> <span class="n">OiioChain</span>
+
+<span class="n">chain</span> <span class="o">=</span> <span class="n">OiioChain</span><span class="p">(</span><span class="s">&quot;Dino_001_01_X1_0066.cr2&quot;</span><span class="p">)</span>
+
+<span class="n">chain</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="mi">1208</span><span class="p">,</span> <span class="mi">4901</span><span class="p">,</span> <span class="mi">814</span><span class="p">,</span> <span class="mi">2385</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="mi">3693</span><span class="p">,</span> <span class="mi">2077</span><span class="p">)</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">1080</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1300</span><span class="p">,</span> <span class="mi">1030</span><span class="p">,</span> <span class="s">&quot;00066.cr2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1600</span><span class="p">,</span> <span class="mi">1030</span><span class="p">,</span> <span class="s">&quot;00:00:02:18&quot;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;final.jpg&quot;</span><span class="p">)</span></code></pre></div>
+
+<h1 id="displaying-images-with-image-viewer">Displaying Images with Image Viewer</h1>
+
+<p>OpenImageIO even comes with it’s own built in image viewer, (iv) to handle quick display of images or to incorporate viewing capabilities into your own software.</p>
+
+<p><img src="http://ianwootten.co.uk/images/screen_shot-15-09-2014.png" title="Image Viewer" /></p>
+
+<p>I’m really enjoying experimenting with OpenImageIO and am currently experimenting putting it into a service which performs on demand storage and transformation of media which I’ll write about further at a later date. Currently, there’s no means of being able to process stills into videos, for which further tools would be required, but I’ve heard word that work is ongoing to implement libav capabilities. There’s such a huge amount that’s possible with the library which I’ve not covered and it should definitely be at the top of your list if you’re looking at handling RAW media for your own projects.</p>
+
+		]]></description>
+	  </item>
+    
+	  <item>
         <title>Extracting Shot Thumbnails from a video using FFMPEG</title>
         <link>http://ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-using-ffmpeg</link>
 		<author>I.M.Wootten<</author>

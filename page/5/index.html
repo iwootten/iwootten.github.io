@@ -42,6 +42,66 @@
       
 
 <div class="post">
+<h1><a href="/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io">Maintaining References to Sockets with Express and Socket.io</a></h1>
+<div class="author_meta">04 Jul 2011</div>
+<p>I hit a frustrating problem when trying to use expressjs alongside <a href="http://socket.io">socket.io</a> recently. The solution may seem somewhat trivial, but I struggled with it for a while, until finally asking for help on the <a href="http://socket.io">socket.io</a> irc channel. I’m not sure if a better solution exists for my case, but this is what I have for now.</p>
+
+<p>In the main route of my express app, I needed to iterate across an array, performing a REST call using each element as a parameter and spit the results back for socket.io to send out to the browser. To get some idea of what that would look like, imagine the following.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+     <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<p>My problem then became, how do I emit in this way, given my use case? All examples I could find on the <a href="http://socket.io">socket.io</a> homepages demonstrate emitting msgs on connection, like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// send custom events to browser socket</span>
+  <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;i can send&#39;</span><span class="o">:</span> <span class="s1">&#39;json!&#39;</span> <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>But I wanted to emit messages as part of a loop, within an app route. How would I do that? I could wrap the loop with the connection logic:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+      <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+         <span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+
+<p>But if I do this, then my connection listener would be added on every refresh of the route. This would mean I’d end up with duplicate binding of event listeners and a load more results messages would be emitted than I’d expect. This would result in crazy behavior for any user who might choose to refresh your app.</p>
+
+<p>Actually, the solution is rather simple although not entirely obvious given the nature of using node. If you maintain a reference to the socket as a global variable and then later emit upon that same socket, like so:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">global_socket</span><span class="p">;</span>
+
+<span class="nx">io</span><span class="p">.</span><span class="nx">sockets</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">global_socket</span> <span class="o">=</span> <span class="nx">socket</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">someArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">someVariable</span> <span class="o">=</span> <span class="nx">doSomething</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">){</span>
+      <span class="nx">global_socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;msg&#39;</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<p>This way, a connection will be established and maintained and we won’t get duplicate bindings when refreshing the route of the app. Simple when you know how. I had a rather interesting discussion following this on irc about whether the use of express and socket.io together is warranted, given that socket.io supports use of variable passing and ultimately could entirely replace an express app.</p>
+
+
+<div class="entry_content">Tagged <a href="/tag/express">express</a>, <a href="/tag/expressjs">expressjs</a>, <a href="/tag/node">node</a>, <a href="/tag/nodejs">nodejs</a>, <a href="/tag/socket.io">socket.io</a>,  | <a href="/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io/#disqus_thread">Leave a comment</a></div>
+</div>
+
+
+
+<div class="post">
 <h1><a href="/2011/05/07/updating-wordpress-automatically-over-sftp">Updating WordPress Automatically over SFTP</a></h1>
 <div class="author_meta">07 May 2011</div>
 <p>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it’s more secure and means I don’t have to open up FTP on my virtual server and open another port up in the firewall.</p>
@@ -576,26 +636,11 @@ sudo chown -R ian:www-data /var/www/pathtowordpress/
 
 
 
-<div class="post">
-<h1><a href="/2010/01/07/fair-bare-january-10-sale">Fair &#038; Bare &#8211; January £10 Sale!</a></h1>
-<div class="author_meta">07 Jan 2010</div>
-<p><a href="http://www.fairandbare.com"><img src="http://s3.amazonaws.com/fairandbare/images/banners/jansale.jpg" alt="£10 January Sale" /></a></p>
-<p><a href="http://www.fairandbare.com/product/7/my_own_personal_robot"><br />
-<img src="http://www.fairandbare.com/images/shirts/7/1.jpg" alt="My Own Personal Robot" /><br />
-</a></p>
-<p><a href="http://www.fairandbare.com/product/6/the_red_sparrows"><img src="http://www.fairandbare.com/images/shirts/6/1.jpg" alt="The Red Sparrows" /></a></p>
-<p><a href="http://www.fairandbare.com">Fair &#038; Bare</a> &#8211; The little shop I run (with a little help from my wife) is having a January Sale right now in celebration of entering the year 2010. Every shirt we&#8217;ve made to date is just 10 squid! Hurry up people, it only runs until Sunday.</p>
-
-<div class="entry_content">Tagged <a href="/tag/fairtrade">fairtrade</a>, <a href="/tag/fashion">fashion</a>, <a href="/tag/internet">internet</a>, <a href="/tag/tees">tees</a>, <a href="/tag/tshirts">tshirts</a>,  | <a href="/2010/01/07/fair-bare-january-10-sale/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
 <div class="pagination">
 
   <a href="/page/4" class="previous">Previous</a>
 
-<span class="page_number ">Page: 5 of 28</span>
+<span class="page_number ">Page: 5 of 29</span>
 
   <a href="/page/6" class="next">Next</a>
 
