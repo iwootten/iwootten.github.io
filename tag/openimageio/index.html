@@ -50,12 +50,12 @@
 
 <h2 id="mac-installation">Mac Installation</h2>
 
-<p>I’m on a mac and as such, brew is my weapon of choice for installing libraries. Unfortunately, openimageio is only available through a tap and an old version at that. I managed to compile openimageio outside of brew, but found that I couldn’t get python to read the bindings correctly. I wanted to install a 1.5 version of the library, so found the best solution was to download the formulae, modify it and tap homebrew/science to get the libraries it depends on. Your local openimageio formulae takes precedence over the tapped version, so it won’t get overwritten.</p>
+<p>I’m on a mac and as such, brew is my weapon of choice for installing libraries. Unfortunately, openimageio is only available through a tap and an old version at that. I managed to compile outside of brew, but found that I couldn’t get python to read the bindings correctly. I wanted to install a 1.5 version of the library, so found the best solution was to download the formula, modify it and tap homebrew/science to get the libraries it depends on. Your local openimageio formula takes precedence over the tapped version, so it won’t get overwritten.</p>
 
 <div class="highlight"><pre><code class="bash">wget -O /usr/local/Library/Formula/openimageio.rb https://raw.githubusercontent.com/Homebrew/homebrew-science/master/openimageio.rb
 brew tap homebrew/science</code></pre></div>
 
-<p>You can edit the formulae here if required, using more recent version.</p>
+<p>You can edit the formula here if required, using more recent version.</p>
 
 <div class="highlight"><pre><code class="bash">brew install openimageio</code></pre></div>
 
@@ -107,11 +107,13 @@ brew tap homebrew/science</code></pre></div>
 
 <h1 id="displaying-images-with-image-viewer">Displaying Images with Image Viewer</h1>
 
-<p>OpenImageIO even comes with it’s own built in image viewer, (iv) to handle quick display of images or to incorporate viewing capabilities into your own software.</p>
+<p>OpenImageIO even comes with it’s own built in image viewer, to handle quick display of images or to incorporate viewing capabilities into your own software. You can access this from the terminal by using the executable “iv”.</p>
 
 <p><img src="http://ianwootten.co.uk/images/screen_shot-15-09-2014.png" title="Image Viewer" /></p>
 
-<p>I’m really enjoying experimenting with OpenImageIO and am currently experimenting putting it into a service which performs on demand storage and transformation of media which I’ll write about further at a later date. Currently, there’s no means of being able to process stills into videos, for which further tools would be required, but I’ve heard word that work is ongoing to implement libav capabilities. There’s such a huge amount that’s possible with the library which I’ve not covered and it should definitely be at the top of your list if you’re looking at handling RAW media for your own projects.</p>
+<p>I’m really enjoying experimenting with OpenImageIO and am currently experimenting putting it into a service which performs on demand storage and transformation of media which I’ll write about further at a later date. Currently, there’s no means of being able to process stills into videos, for which further tools would be required, but I’ve heard word that work is ongoing to implement libav capabilities.</p>
+
+<p>There’s such a huge amount that’s possible with the library which I’ve not covered and it should definitely be at the top of your list if you’re looking at handling RAW media for your own projects.</p>
 
 	<div class="entry_content">Tagged <a href="/tag/openimageio">openimageio</a>, <a href="/tag/python">python</a>,  | <a href="/2014/09/15/processing-camera-raws-with-openimageio-and-python/#disqus_thread">Leave a comment</a></div>
 	</div>
