@@ -65,7 +65,7 @@ brew tap homebrew/science</code></pre></div>
 
 <p>OpenImageIO uses the ImageBuf class to handle representation and manipulation of images in memory and functions of the ImageBufAlgo class to transform them. It’s best to demonstrate through some examples.</p>
 
-<div class="highlight"><pre><code class="python"><span class="kn">from</span> <span class="nn">OpenImageIO</span> <span class="kn">import</span> <span class="n">oiio</span>
+<div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">OpenImageIO</span> <span class="kn">as</span> <span class="nn">oiio</span>
 
 <span class="c"># Read a camera raw, crop and write out to a tiff</span>
 <span class="n">buf</span> <span class="o">=</span> <span class="n">oiio</span><span class="o">.</span><span class="n">ImageBuf</span><span class="p">(</span><span class="s">&quot;Dino_001_01_X1_0066.cr2&quot;</span><span class="p">)</span>
