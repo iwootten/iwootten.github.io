@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ian Wootten - Web Developer, Cardiff</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/fonts/open-sans.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/syntax.css" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,410 +18,218 @@
       ga('send', 'pageview');
 
     </script>
-    </head>
-    <body>
+</head>
+<body>
 
-
-    <div class="container blog">
-      <header>
-        <nav>
-        <ul class="nav">
-          <li><a class="blog active" href="/">Blog</a></li>
-          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
-          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
-          <li><a class="about" href="/about">About</a></li>
-          <li><a class="contact" href="/contact">Contact</a></li>
-        </ul>
-        </nav>
-        <div class="clear"></div>
-      </header>
+<div class="container blog">
+    <header>
+      <nav>
+      <ul class="nav">
+        <li><a class="blog active" href="/">Blog</a></li>
+        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
+        <li><a class="web-apps " href="/category/web-apps">Web Apps</a></li>
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="contact" href="/contact">Contact</a></li>
+      </ul>
+      </nav>
+      <div class="clear"></div>
+    </header>
 
       
-
-<div class="post">
-<h1><a href="/2012/06/12/where-does-steam-store-indie-game-the-movie">Where does Steam store Indie Game The Movie?</a></h1>
-<div class="author_meta">12 Jun 2012</div>
-<p>A quickie – but for all those that have downloaded “Indie Game the Movie” today from steam and are wondering where the video files are stored, you can find them here:</p>
-
-<p>Steam/SteamApps/common/Indie Game The Movie/data/movies</p>
-
-<div class="entry_content">Tagged <a href="/tag/gamer">gamer</a>, <a href="/tag/games">games</a>, <a href="/tag/indie">indie</a>, <a href="/tag/movie">movie</a>,  | <a href="/2012/06/12/where-does-steam-store-indie-game-the-movie/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/05/03/if-you-build-it">If You Build It</a></h1>
-<div class="author_meta">03 May 2012</div>
-<p>If my years in academia have taught me anything, it’s that insight obvious to you isn’t often obvious to others. </p>
-
-<p>As a result, I’ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I’ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I’m in the fortunate position to have some of that available now and again. There’s a variety of reasons why I might attempt a project, ranging from it may later evolve into something able to draw an income further down the line, that I’m excited by learning from the tools I choose to use or that I feel moved enough by a problem to do something to try and prompt change. </p>
-
-<p>I had one of these ideas last weekend, whereby I was wondering what the specifics of the fees of kickstarter projects broke down to. The information on what fees are taken is published <a href="http://www.kickstarter.com/help/faq/creating%20a%20project#WhatFeesDoesKickChar" title="what fees does kickstarter charge">on their site</a>, so I set about a simple phantomjs script (available <a href="https://github.com/niftydigits/kickstarter.js">on github</a>) that could scrape the information from kickstarter. After doing so, the idea moved on to graphing said information via an app to a simple raphaeljs and again further once I’d realised some other stats that could be gathered from the info I was grabbing. The end result is <a href="http://starterstats.com">Starter Stats</a> – which is, (I think) a neat little site for showing stats on any kickstarter project.</p>
-
-<p><a href="http://starterstats.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/05/Screen-Shot-2012-05-03-at-10.16.42-1024x817.png" alt="" title="Starter Stats" width="640" height="510" class="alignnone size-large wp-image-536" /></a></p>
-
-<p>It took a little longer than I’d hoped, but I’m really pleased with the final site as it stands. You should also be able to just replace the beginning of any kickstarter project page (http://kickstarter.com) with “http://starterstats.com” and you’ll be sent to the relevant stats page on the app. Pages are generated on-demand every 15 minutes. Go on, take a look and let me know what you think.</p>
-
-<p>I could have not spent my time on this, instead kicking back and waiting for someone else to build such a tool. But I couldn’t see that happening. No, better for me to build, learn whilst doing so and move on to my next project. What do you get by not building?</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/kickstarter">kickstarter</a>, <a href="/tag/phantomjs">phantomjs</a>, <a href="/tag/raphaeljs">raphaeljs</a>,  | <a href="/2012/05/03/if-you-build-it/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/03/01/how-to-switch-your-vps-in-2-hours">How to Switch Your VPS in 2 Hours</a></h1>
-<div class="author_meta">01 Mar 2012</div>
-<p>Friday last week I woke up to a barrage of emails coming into my inbox. All of these were coming from notification of spam comments upon this very blog. By the time I’d woken up I’d had something like 75 emails. This was pretty strange given that Akismet was there guarding my blog ever since it’s been available and I’d never had a email about a dodgy comment since I’d set it up (something like 5 years ago). They continued to flood in during my breakfast as fast as I could delete them.</p>
-
-<p>The problem stemmed from the fact that network connectivity from my slicehost account had been knocked out of action – which had never happened before. I presumed this was down to the migration of slicehost over to Rackspace infrastructure, which I’d been informed of, but the network dying was probably unintended.</p>
-
-<p>Either way, it was frustrating and I instantly decided to finally migrate away from slicehost and setup a second linode account. The funny thing is, that most of this was aided by slicehosts own documentation on configuring your server. If you’re doing little more than hosting a number of mysql / php driven sites, it is in fact really simple to switch. Here’s how I went about it, my sites all experience fairly low traffic, so I’m aware this solution might not be right for everyone.</p>
-
-<h2 id="backup-all-your-important-data">Backup All Your Important Data</h2>
-
-<p>First of all, you’re going to need to backup everything you have in your sites directory. For me, that’s everything under /var/www.</p>
-
-<pre class="bash">tar -zcvf backup-feb-2012.tar.gz /var/www</pre>
-
-<p>Next, you’ll want to do the same for your Apache sites:</p>
-
-<pre class="bash">tar -zcvf backup-apache-feb-2012.tar.gz /etc/apache2/sites-available</pre>
-
-<p>Finally, I took a mysqldump of my entire mysql setup:</p>
-
-<pre class="bash">mysqldump —-all-databases -u root -p password | gzip &gt;dbbackup-feb-2012.sql.gz</pre>
-
-<h2 id="setup-your-new-vps">Setup Your New VPS</h2>
-
-<p>Having done that, you have pretty much everything you need to bring your server back to life as it is now. Go and grab a new vps from linode or somewhere else and set it up using the details starting from here: <a href="http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1">http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1</a> I configured my vps to have exactly the same accounts and passwords as my original vps, to make life easier for me. Once SSH and your firewall has been setup and you’re all updated, you’ll be able to transfer all the files you just created onto your fresh vps setup, using filezilla, or a direct connection between the two machines. You’ll then need to install Apache: <a href="http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu">http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu</a>, PHP: <a href="http://articles.slicehost.com/2010/5/19/installing-php-on-ubuntu">http://articles.slicehost.com/2010/5/19/installing-php-on-ubuntu</a> and MySQL: <a href="http://articles.slicehost.com/2011/3/10/installing-mysql-server-on-ubuntu">http://articles.slicehost.com/2011/3/10/installing-mysql-server-on-ubuntu</a></p>
-
-<p>On your new machine, you’ll need to restore the files you backed up to /var/www.</p>
-
-<pre class="bash">tar -xzf backup-feb-2012.tar.gz
-sudo cp -r var/www/* /var/www/
-sudo chown -R www-data:www-data /var/www/*
-rm -rf ~/var</pre>
-
-<p>Then the apache site files:</p>
-
-<pre class="bash">tar -xzf backup-apache-feb-2012.tar.gz
-sudo cp etc/apache2/sites-available/* /etc/apache2/sites-available/</pre>
-
-<p>For every file that exists in the sites directory and is to be enabled, we need to enable it. You can use a2ensite for this if you like.</p>
-
-<pre class="bash">cd /etc/apache2/sites-enabled
-sudo ln -s ../sites-available/ianwootten.co.uk.conf ianwootten.co.uk.conf (for each site file)</pre>
-
-<p>Install any apache modules you might require and restart apache. If you’re using wordpress or a php framework like me, you’ll most likely need mod_rewrite.</p>
-
-<pre class="bash">sudo a2enmod rewrite
-sudo /etc/init.d/apache2 restart</pre>
-
-<p>You’ll then need to repopulate your new mysql install with all your old data.</p>
-
-<pre class="bash">gunzip -c databasebackup.sql.gz | mysql -u root -p</pre>
-
-<h2 id="configure-email">Configure Email</h2>
-
-<p>I use msmtp to handle all my email on my server, which sends through a single gmail automailer address for my domain. If you want to send email that way do the following:</p>
-
-<pre class="bash">sudo apt-get install msmtp ca-certificates
-sudo nano /etc/msmtprc</pre>
-
-<p>Paste the following setup in the file:</p>
-
-<p>`defaults<br />
-tls             on<br />
-tls_starttls    on<br />
-tls_trust_file  /etc/ssl/certs/ca-certificates.crt&lt;/p&gt;</p>
-<p>account default<br />
-host            smtp.gmail.com<br />
-port            587<br />
-auto_from       off<br />
-auth            on<br />
-user            automailer@somedomain.com<br />
-password        mymailpass<br />
-from            automailer@somedomain.com<br />
-maildomain      somedomain.com<br />
-logfile		/var/log/msmtp.log`
-
-<pre class="bash">sudo chmod 0644 /etc/msmtprc</pre>
-
-You can test whether it’s working using a the command as:
-
-<pre class="bash">echo -e "Subject: A Test Email\r\n\r\nThis is a test" |msmtp --debug --from=default -t mymail@gmail.com</pre>
-
-## Configure DNS
-
-You need to configure how your vps is going to handle particular requests for various domains. You’ve probably had to do this already with your current vps, so just copy the entries through whatever management system your new host provides. For sites that have a fairly simple setup, your host may provide a simple set of default entries to use, or you can clone entries that have the same setup as each other.
-
-We’re now at the point where we have a complete copy of our vps up and running, and the vps knows how to handle requests for domains, however currently our domain registrar points to our old vps, so the requests will never reach our new server. Head to your domain registrar and change the entries for a single domain, to point to your new vps (ns1.linode.com, ns2.linode.com etc). Now sit and wait patiently….Once that domain has propagated correctly (ping it to see if has a new or old ip), and you’re happy your site is working as expected, go ahead and change all of your domains dns entries to the ip address of your new vps.
-
-## Relax&#8230;
-
-All in all, I don&#8217;t think this took me more than a couple of hours working with the terminal open. I certainly didn&#8217;t worry about migrating in the way I have done previously. As I opted for a uk datacentre with linode, a side effect of the change is all my sites are much much faster &#8211; and a better setup with linode is in fact cheaper than slicehost. I left my slicehost account running for an entire week prior to shutting it down yesterday &#8211; just in case&#8230;
-</p>
-
-<div class="entry_content">Tagged <a href="/tag/dns">dns</a>, <a href="/tag/gmail">gmail</a>, <a href="/tag/linode">linode</a>, <a href="/tag/msmtp">msmtp</a>, <a href="/tag/server">server</a>, <a href="/tag/slicehost">slicehost</a>,  | <a href="/2012/03/01/how-to-switch-your-vps-in-2-hours/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/02/16/wheres-my-full-stack-payment-service">Where&#8217;s my Full Stack Payment Service?</a></h1>
-<div class="author_meta">16 Feb 2012</div>
-<p>Unless you’ve been living under a rock, you’ll realise that there’s an uprising against paypal amongst developers. Most of this stems from the multitude of <a href="http://www.huffingtonpost.com/2011/12/06/paypal-to-regretsy-sorry-_n_1132679.html">crazy requirements</a> they put upon sellers and the locks they can put upon your account without notice.</p>
-
-<p>This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal. None of these solutions are ideal though if you’re looking to make say, a service that bills on a monthly basis.</p>
-
-<p>Enter the subscription billing tools – there’s <a href="http://recurly.com/">recurly</a>, <a href="http://chargify.com/">Chargify</a> and <a href="http://saasy.com/">Saasy</a>, to name 3. All of these go some way to ease the management of customer subscriptions. This is great if you have an established banking history as a business and are able to get hold of a merchant account. Not so great for me – an independent developer with neither of those.</p>
-
-<p>Enter <a href="https://stripe.com/">Stripe</a>, a full-stack payment processor for developers which has no requirement on merchant accounts or gateways. Integration with your own website is as simple as pasting in some javascript. Sounds great…..Except I need to be in the US to use it. *Facepalm*. I even had beta access to stripe in it’s infancy and just had to smile at my invitation code.</p>
-
-<p>Recently here in the UK, <a href="http://gocardless.com">Go Cardless</a> has appeared with an interesting model, based around the use of direct debits to set up subscriptions and make payments. That strikes me as a little weird from a customer point of view. I’m ok paying my gas by direct debit, but would I be ok paying for a piece of software? Given it’s unusual for a website to bill this way, I’d argue most people wouldn’t be.</p>
-
-<p>Unfortunately for us independent developers in the UK, Go Cardless really is our best option until Stripe or some other full stack offering lands here. I know Stripe are supposedly working hard on doing so, but payments are at an incredibly frustrating point here right now.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/go cardless">go cardless</a>, <a href="/tag/payments">payments</a>, <a href="/tag/stripe">stripe</a>, <a href="/tag/the little guy">the little guy</a>,  | <a href="/2012/02/16/wheres-my-full-stack-payment-service/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/01/23/new-adventures-2012-self-help-for-web-designers">New Adventures 2012 &#8211; Self Help for Web Designers</a></h1>
-<div class="author_meta">23 Jan 2012</div>
-<p>Last week, like many others working on the web, I took the trip to Nottingham for <a href="http://2012.newadventuresconf.com/">New Adventures 2012</a>. I’d seen the wonderful praise dished out for it last year and felt like I wanted to see what it was all about first hand. </p>
-
-<p>I’ve learnt from experience that the most important part of any conference is not the talks or speakers involved, but the community around it and therefore I headed up the night before to ensure I didn’t miss a thing.</p>
-
-<p>Colly and his team had done a lovely job of organising enough to keep us busy what with bowling, screenprinting, fr00tball, the after party and of course the main event.</p>
-
-<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2012/01/20120119_092906_small.jpg"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/01/20120119_092906_small-1024x768.jpg" alt="" title="The Albert Hall" width="640" height="480" class="alignnone size-large wp-image-515" /></a></p>
-
-<p>Despite not actually branding myself as a web designer, it was great to feel welcomed and able to chat one on one with others about our day to day work. Dan Mall’s talked helped somewhat here, forcing introductions with everyone around me. I’m pretty much work in solitary confinement as a developer and to discuss the thoughts and ideas I have with other like minded creatives is always welcome.</p>
-
-<p>During a dinner following the conference, another dev commented that the most of the presentations weren’t specific to web design. They were in fact so abstract, that it was more a “Self Help Class for Web Designers”. I pretty much agree with this. But that’s with a caveat – what else do you attend these presentations for? NA Conf is there to share, inspire and enable designers to be better designers. I want to leave giddy eyed with possibilities. Remember there are workshops too for specifics…</p>
-
-<p>After the whole conference, I feel like there’s a whole lot more I could do to better myself at my craft. Hopefully over the course of the year I’ll do something about it. Most of the notes I made are to this effect too and I’m sure I’ll take away something different each time I look at them.</p>
-
-<p>There’s only so much that can be covered in 45 mins, and for me I want to see a speaker paint me the big picture. After NAConf, I’ve got a whole bunch of big pictures to get through.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/design">design</a>, <a href="/tag/naconf">naconf</a>, <a href="/tag/web design">web design</a>,  | <a href="/2012/01/23/new-adventures-2012-self-help-for-web-designers/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/01/12/goodbye-1-1">Goodbye 1 &#038; 1</a></h1>
-<div class="author_meta">12 Jan 2012</div>
-<p>I just sent the following email to 1 &#038; 1′s billing department. I’ve been with them for coming up to 7 years now and they were, when I first used them, the only registraar I knew about and I was really happy. </p>
-
-<p>As the number of domains I own has grown, their account admin has become really totally useless to manage them all. I recieved a payment request out of the blue today and it tipped me over the edge.</p>
-
-<blockquote>
-  <blockquote>
-    <p>We contacted you regarding a declined payment or an expired credit/debit card and have not yet heard back from you.<br />
-Our records indicate that there is an unpaid balance in your 1&#038;1 customer account no.: K####### as listed below.</p>
-  </blockquote>
-
-  <p>Firstly – No you didn’t.</p>
-
-  <p>Secondly – It would be far more useful telling me which domain name in my account a payment demand is in reference to rather than my account number, as I have more than 1 domain with you.</p>
-
-  <p>Thirdly – The steps you’ve listed here to find my payment details miss steps and references links that don’t exist.</p>
-
-  <p>Fourthly – Threatening action when you haven’t actually sent a primary payment request email is rude, forceful and obnoxious.</p>
-
-  <blockquote>
-    <p>Please be aware that if this matter is not resolved, you may be sent to a debt collection agency. If the account is sent to a debt collection agency a £15.00 &gt; charge will be added to the unpaid balance.</p>
-  </blockquote>
-
-  <p>I’ve decided to take all of my business elsewhere at the earliest opportunity. I’d hope you’d take heed of these comments and pay your other longstanding customers the respect they deserve.</p>
-</blockquote>
-
-<div class="entry_content">Tagged <a href="/tag/customer service">customer service</a>, <a href="/tag/domains">domains</a>,  | <a href="/2012/01/12/goodbye-1-1/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2011/11/02/pagination-in-couchdb-apps">Pagination in CouchDB Apps</a></h1>
-<div class="author_meta">02 Nov 2011</div>
-<p>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.</p>
-
-<p>I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I’ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out <a href="http://guide.couchdb.org/draft/recipes.html#pagination" title="CouchDB Pagination Recipe">I’ve always been doing it the “bad” way</a>. Oh, well that’s upsetting.</p>
-
-<h2 id="the-wrong-way">The Wrong Way</h2>
-
-<p>My “slow” approach has always been to take the page no as a argument in the url, generating “skip” and “limit” variables to be used as parameters to my store. So for example, if I wanted to have the 2nd page of my app showing 10 items:</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">skip</span> <span class="o">=</span> <span class="p">(</span><span class="nx">pageno</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="p">()</span> <span class="o">:</span> <span class="p">((</span><span class="nx">pageno</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span></code></pre></div>
-
-<div class="highlight"><pre><code class="bash">curl -X GET http://127.0.0.1:5984/stuff/_design/stuff/_view/by-name?skip<span class="o">=</span>10<span class="p">&amp;</span><span class="nv">limit</span><span class="o">=</span>10</code></pre></div>
-
-<p>It turns out, that although you might think you’re starting at a particular result, CouchDB still starts at the first result, due to the way the view is created from the b-tree index, couchDB just surpresses the results you skip. This isn’t good news when you’re trying to skip say, 10000 results.</p>
-
-<h2 id="the-suggested-way">The Suggested Way</h2>
-
-<p>The suggested solution is to perform requests and instead of using a “skip” parameter, keep track of the startkey at which the next page begins. This is possible, by requesting a page 1 item longer than that of the number of items on a page and using the key of the result in any requests. So now, for a first page my query is:</p>
-
-<div class="highlight"><pre><code class="bash">curl -X GET http://127.0.0.1:5984/stuff/_design/stuff/_view/by-name?limit<span class="o">=</span>11</code></pre></div>
-
-<p>Returning something like:</p>
-
-<div class="highlight"><pre><code class="json"><span class="p">{</span><span class="nt">&quot;total_rows&quot;</span><span class="p">:</span><span class="mi">17</span><span class="p">,</span><span class="nt">&quot;offset&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;rows&quot;</span><span class="p">:[</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;8177bf155b952652129836a5d354b30e&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Ian Wootten&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;bae2c490c70480aec7096d79e1e3bfc3&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Isambard Kingdom Brunel&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;eaae74cfbe5cd13ea6b50dfd090827ca&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Christopher Columbus&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;491e68b08d73256f060ebf4b8e063e1c&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Elizabeth Fry&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;b45d8a7b9edee9ca66ac0860196f4504&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Edward Jenner&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;8a4d3f46885701ffcc7532aeac7a5ae9&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Florence Nightingale&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;71e6534c17429eca2cd9450cfc95c6bb&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Samuel Pepys&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;6cbad847f0ae959b281b471a72d60587&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Pocahontas&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;e5b026ec5c92c20f1575a2901defe14e&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Mary Seacole&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;84a371a7b8414237fad1b6aaf68cd16a&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;George Stephenson&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
-  <span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;321aeb36e20d62660eb0d03c9fcd27b2&quot;</span><span class="p">,</span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;Joe Bloggs&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">}</span>
-<span class="p">]}</span></code></pre></div>
-
-<p>From the 11th returned result, I have the key “Joe Bloggs” – which can be used as a startkey arg to couch to obtain my second page. If we have duplicate keys, it is also neccessary to keep tabs on the last document’s id and supply as a startkey_docid arg in order to correctly page through everything.</p>
-
-<p>What personally I dislike about the suggested approach, is the inability to create simple requests to arbritrary pages, even with low numbers. We always need to follow a path of links from the first page in order to view particular results. CouchDB’s response is “Not even Google is doing that!”, which is kind of weak to me. I want nice clean urls ala myapp.com/page/2 or myapp.com?page=2.</p>
-
-<p>In fact, such a suggested approach only really allows us to have a single “more” type link in order to fetch results. Passing a startkey as part of a url param eg /page/321aeb36e20d62660eb0d03c9fcd27b2 just sounds (and looks) plain nasty and isn’t very good from a UX point of view for any users we may have.</p>
-
-<p>At the moment, clean tangible page urls (the right way) are only possible using custom middleware. I’ve yet to find anything suitable for <a href="http://nodejs.org">node.js</a>. I intend to investigate how to cache document keys for low numbered pages as a separate db in order to produce a solution for my current project and I hope to write a later post detailing how I’ve got on.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/articles">articles</a>, <a href="/tag/couchdb">couchdb</a>, <a href="/tag/nodejs">nodejs</a>,  | <a href="/2011/11/02/pagination-in-couchdb-apps/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">Hosting an Octopress Blog on Amazon S3</a></h1>
-<div class="author_meta">09 Sep 2011</div>
-<p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</p>
-
-<p>Using Octopress, you’d typically write your posts in markdown and process them locally. You’d then have a number of HTML pages to upload to your web server, which would appear no different than any other blog in terms of functionality.</p>
-
-<p>The most interesting thing that coincincides with the creation of jekyll is that it is now possible to serve static websites straight from Amazon S3, meaning that it isn’t neccessary to have a web server to serve a Octopress blog. I’ve been playing a little and have been able to serve my own octopress blog which you can see over at <a href="http://www.ianwootten.com">www.ianwootten.com</a>. Here’s how to do it:</p>
-
-<h2 id="configure-an-s3-bucket-to-act-as-a-website">Configure an S3 Bucket to Act as a Website</h2>
-
-<p>NB: If you want to use your own domain, then you’re going to need to create an S3 bucket from the AWS Console named the same as your domain (so for me I created a bucket called “www.ianwootten.com”. </p>
-
-<p>To configure your bucket as a website, from the AWS Console, select the new bucket and click “Properties”. Choose the “Website” tab from the box that appears and check “enabled” and set the Index document as “index.html”. Click “Save”. Now move to the “permissions” tab and click “Add bucket policy”. Enter a policy as below, with “www.ianwootten.com” replaced with the name of the bucket you’re using.</p>
-
-<p><code>&lt;br /&gt;
-{&lt;br /&gt;
-	"Version": "2008-10-17",&lt;br /&gt;
-	"Id": "",&lt;br /&gt;
-	"Statement": [&lt;br /&gt;
-		{&lt;br /&gt;
-			"Sid": "PublicReadForGetBucketObjects",&lt;br /&gt;
-			"Effect": "Allow",&lt;br /&gt;
-			"Principal": {&lt;br /&gt;
-				"AWS": "*"&lt;br /&gt;
-			},&lt;br /&gt;
-			"Action": "s3:GetObject",&lt;br /&gt;
-			"Resource": "arn:aws:s3:::www.ianwootten.com/*"&lt;br /&gt;
-		}&lt;br /&gt;
-	]&lt;br /&gt;
-}&lt;br /&gt;
-</code></p>
-
-<p>If you’ve opted not to use your own domain, then that’s it for S3. Your new bucket website will be available at a combination of the bucket name and the S3 storage location. In my case, this is <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/">http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/</a>. There’s a list of endpoints on the “website endpoints” page in <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a>.</p>
-
-<h2 id="configure-dns">Configure DNS</h2>
-
-<p>If you’re wanting to use your own domain, then you’ll need to visit your domain registraar and edit some DNS entries. In my case, I added a CNAME entry “www” pointing to www.ianwootten.com.s3-website-us-east-1.amazonaws.com. You’ll need to use a tool like <a href="http://wwwizer.com">wwwizer</a> in order to forward from the root of your domain to the www subdomain. e.g. “ianwootten.com” to “www.ianwootten.com”. To get that working, you’ll also need to modify the @ A record and point it to 174.129.25.170. Read this <a href="http://serverfault.com/questions/62527/how-to-create-a-cname-for-a-domains-root-name">serverfault post</a> if you’re interested to know why.</p>
-
-<p>For more info on CNAME configuration and S3 see <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a> (Specifically the notes on virtual hosting).</p>
-
-<h2 id="download-octopress-and-write-some-markdown">Download Octopress and write some Markdown</h2>
-
-<p>Having successfully configured Amazon S3 to host your blog, you need to tackle the age old problem of writing some content for it. This was particularly hard for me, given my lack of knowledge about markdown! You may like to take a look at <a href="http://daringfireball.net/projects/markdown/basics">John Grubers explanation of markdown</a> if you’re suffering like me. The <a href="http://octopress.org/docs/blogging/">Octopress blogging basics</a> gives a good overview of how your new local blogging workflow will work. Essentially new posts are written in the ./_source/posts folder and when <code>rake generate</code> is executed, your entire websites content is output to the ./public folder. You can also run <code>rake preview</code> in order to preview on a local server.</p>
-
-<p>TO publish your blog, it’s merely a matter of transferring your /public content to the S3 bucket you’ve generated.</p>
-
-<p>Having done all that you’ve now no need to run your own server. You’re still dependent on those that operate at S3, wwwizer and your domain registraar, but you’ve removed your own from the equation. You may be interested in checking out <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">Jerome Bernard’s</a> tip on easily deploying Octopress blogs with <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/amazon">amazon</a>, <a href="/tag/blog">blog</a>, <a href="/tag/blogging">blogging</a>, <a href="/tag/godaddy">godaddy</a>, <a href="/tag/jekyll">jekyll</a>, <a href="/tag/octopress">octopress</a>, <a href="/tag/s3">s3</a>,  | <a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2011/07/20/lovefilm-filmstream-plugin-v0-2">Lovefilm Filmstream Plugin v0.2</a></h1>
-<div class="author_meta">20 Jul 2011</div>
-<p>Just a quick note to say I’ve updated the plugin that generates my <a href="http://ianwootten.co.uk/filmstream">filmstream pages</a>. It’s become obvious that the <a href="http://developer.lovefilm.com">Lovefilm API</a> only exposes the last 10 features that you’ve rented in their “at home” list. This isn’t that great if you’ve been renting more than a few months. This is the same as the information you’d see in your account when logged in.</p>
-
-<p>I’ve made a simple modification to use the actual ids that <a href="http://lovefilm.com">Lovefilm</a> issue for films, rather than a autoincrement value. This way, there’s no need to empty what’s currently stored when updating and we capture the users history of rentals…</p>
-
-<p>You can grab it over <a href="http://www.ianwootten.co.uk/downloads/filmstream.zip">here</a></p>
-
-
-<div class="entry_content">Tagged <a href="/tag/lovefilm">lovefilm</a>, <a href="/tag/plugins">plugins</a>,  | <a href="/2011/07/20/lovefilm-filmstream-plugin-v0-2/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2011/07/14/participate-don%e2%80%99t-preach">Participate, Don’t Preach</a></h1>
-<div class="author_meta">14 Jul 2011</div>
-<p>Last week, tickets went on sale for dConstruct 2011 and sold out within an impressive 7 hours. Having attended in 2010 and 2008 and judging it to be filled with the highest calibre web celebs from across the globe, I coughed up the entrance fee as part of the excited gold-rush. The cost of £150 includes access to the pre and after parties and the conference itself.</p>
-
-<p>These type of events are stuffed to the brim with amazing, intelligent web professionals, many of whom I would consider to be colleagues. I’ve followed their progress, listened to them speak, bought their publications and hacked on code with them at many other previous events.</p>
-
-<p>It’s often quoted within tech circles that the best parts of these events are not the talks themselves, but the networking parties that surround them. I really struggle in these environments, nervously trying to find a crowd I feel comfortable chatting with, introducing myself and trying to strike up some cutting edge debate on the topics of the day. I’m a developer who usually lurks behind a computer screen for 8 hours a day, so why wouldn’t I find it awkward? It feels like uncharted territory every time I find myself there. Although meeting some great, interesting people, I have ultimately never forged any new lasting relations in this way, where the interaction is somewhat forced and artificial. Maybe it’s just me, but given the com mon nature of everyones work, you’d think it might be easier. As a friend once observed – it’s like everyone turns up to sell their product, but there are no buyers.</p>
-
-<p>It’s also great to be able to chat within the inner circle of the celebrities who attend. You’ve heard from them all year round and now have a brief opportunity to chat. I guess really I’d love to bounce questions and thoughts off of these guys all evening, but often I get the feeling I’m being evaluated against the rest of the attendees in the room in terms of worthiness. Until you’re edging<br />
-into such circles yourself, I’m not entirely sure what they would get from these conversations either.</p>
-
-<p>In fact, what I have found is that my most fruitful and long lasting relations have been founded at events when in a participatory nature. Most of these have been Hack Days (where you’re invited to quickly hack together software as an exemplar of new apis from a number of vendors) and some of them have been at Bar Camps (where all attendees have to speak on a subject close to their heart). I feel closer to these people than I could ever do with someone I spoke with briefly in a noisy bar. I’ll also remember faces and names of people even if I never had the chance to interact with them.</p>
-
-<p>This year, a new variety of geek meet has arisen, which flip these more traditional events on their heads and instead focus on providing environments that focus on “the best bits”. They allow everyone to participate on level pegging rather than follow a traditional conference structure. Earlier this month there was &lt;a href=“http://geekkart.in”&gt;Geek Karting&lt;/a&gt;, &lt;a href=“http://insitestour.com”&gt;The Insites Tour&lt;/a&gt; is kicking off next week and later this year there’s &lt;a href=“http://preparetoactivate.com”&gt;Activate&lt;/a&gt;. I really like the idea of these as a way of sparking interesting relationships and I’m hopefully going to head to Insites next week to see what Elliot and Keir have been able to cook up. I’d hope to see more of these unusual types of event and ultimately participate in more of them.</p>
-
-<p>I still feel that conferences have their place, otherwise I wouldn’t have coughed up the fee for dConstruct. I enjoy hearing what these illustrious speakers have to say. That part of the event is still important for sparking debate and learning from for months and years afterward. However, I just don’t find surrounding parties as valuable to me as I first would have thought.</p>
-
-<div class="entry_content">Tagged <a href="/tag/dConstruct">dConstruct</a>, <a href="/tag/events">events</a>, <a href="/tag/hacking">hacking</a>, <a href="/tag/Web">Web</a>,  | <a href="/2011/07/14/participate-don%e2%80%99t-preach/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="pagination">
-
-  <a href="/page/3" class="previous">Previous</a>
-
-<span class="page_number ">Page: 4 of 29</span>
-
-  <a href="/page/5" class="next">Next</a>
-
-</div>
-
-      <footer>
-        <div class="footer-about">
-          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+        <div class="post">
+          <h1><a href="/2013/03/01/breaking-up-relationships-with-couchdb">Breaking up Relationships with CouchDB</a></h1>
+      <div class="author_meta">01 Mar 2013</div>
+
+          <p><em>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat &#39;belated&#39;]</em></p>
+<p>Beware &#8211; there&#8217;s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.</p>
+<p>For me, my first experiments working with databases were performed with Oracle, the staple of our computer science course at the time. We were taught how to identify common structures in what we wanted to store (or had already been stored) and how to represent the relationships which existed between them. There was an entire series of lectures dedicated to this fine art, much of which I now can&#8217;t remember.</p>
+<p>There has been an uptake in the number of developers working with NoSQL, or document oriented databases. These alternatives do not require decisions on subdividing documents into multiple record structures to be made at all, instead allowing the entire document to be recorded as a series of simple variable types. The contents of each document can vary from one document to the next. For the majority of developers who work with relational databases, this might come as a bit of a shock.</p>
+<p>There are a number of varieties of NoSQL flavours currently available: CouchDB, Cassandra and MongoDB are a few of the hot ones right now. I&#8217;m not going to discuss the pros and cons of each right here (for that I&#8217;d refer you to The Changelog&#8217;s NoSQL smackdown podcasts), but rather give you a whistle stop tour of CouchDB, which I&#8217;ve been working with for a few years now.</p>
+<p>If you want to follow along, you&#8217;ll need to head to the CouchDB site and read up on <a href="http://wiki.apache.org/couchdb/Installation">installation</a> for your platform. I&#8217;m using the <a href="http://couchdb.apache.org/">CouchDB server app</a>, which is nice and self contained.</p>
+<p>Document oriented storage gives me the ability not to have to worry about the structure of my documents prior to storage. From my own point of view this is a huge timesaver as my apps often tend to focus on a single type of document. Think of a blog post stored in a mysql database, we have a table for the post along with all its metadata, a table for the comments and maybe another for recording pingbacks. The same blog post in couch could be represented like so:</p>
+<div class='hljs'><pre><code class='json'>{
+   "<span class="hljs-attribute">_id</span>": <span class="hljs-value"><span class="hljs-string">"83ab09b88836ab714f592293d4e02845"</span></span>,
+   "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"My Blog Post"</span></span>,
+   "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span></span>,
+   "<span class="hljs-attribute">comments</span>": <span class="hljs-value">[{"<span class="hljs-attribute">ian</span>": <span class="hljs-value"><span class="hljs-string">"You're a wally"</span></span>},{"<span class="hljs-attribute">Some user</span>": <span class="hljs-value"><span class="hljs-string">"This post sucks"</span></span>}]
+</span>}</code></pre></div><p>A document based db may well not be suitable for the nature of your application. However, I&#8217;ve found in lots of cases, it is.</p>
+<h2 id="rest-style-interface">Rest Style Interface</h2>
+<p>CouchDB works across a REST style interface. To write documents back to couch, you call a HTTP PUT or POST with your JSON structure. To read documents, you call a GET and to delete them you call DELETE. For example, to add a document with &#8220;_id=someid&#8221; to the database &#8220;blog&#8221;, you would call the following:</p>
+<div class='hljs'><pre><code class='bash'>curl http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">5984</span>/blog/someid -X PUT <span class="hljs-operator">-d</span> <span class="hljs-string">'{"Title":"Another Blog Post", "Content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}'</span></code></pre></div><p>Similarly you can HTTP GET this uri to return the document just added. Saving the document to a couch store will add another field, &#8220;_rev&#8221; which represents the particular revision of the document you&#8217;re storing. Every time you update this document, it will be stored as a new document, along with a new revision number. You have access to all these revisions within couch, or you can choose to cleanup the database by compacting and removing all but the most recent revision of documents. Another blog entry document without any comments would be perfectly valid stored in the same database, as well as a document featuring just an array of pingback items.</p>
+<p>You&#8217;ll notice that the structures are JSON objects. This is how all objects are exchanged between couch and other languages and over couch&#8217;s REST interface. Heading to where we stored the above blog document &#8220;<a href="http://127.0.0.1:5984/blog&amp;#8221">http://127.0.0.1:5984/blog&amp;#8221</a>; in your browser yields a collection of metadata expressed in a JSON structure about that particular database. Appending &#8220;/83ab09b88836ab714f592293d4e02845&#8243; (the id of the document) gives us the original blog document.</p>
+<p>This, in turn works wonderfully well with certain frontend frameworks &#8211; such as <a href="http://backbonejs.org">Backbone</a>. If you configure your backbone models to construct URLs the way CouchDB expects them, you can effectively have a frontend app driven by just a CouchDB store. As CouchDB returns JSON objects, it&#8217;s able to correctly parse and load them into your backbone app.</p>
+<h2 id="map-reduce">Map/Reduce</h2>
+<p>To support the extraction of substructures and sorting within these documents, couch has the concept of map/reduce built straight into its core. Futon, couch&#8217;s built in administration application, makes creation of these a very simple process. Maps and Reductions are described in Javascript, which is great given most of us are making more and more use of it these days. Head over to <a href="http://127.0.0.1:5984/_utils">http://127.0.0.1:5984/_utils</a> and you&#8217;ll see your collection of databases right away. Navigate to the blog database and under the view dropdown, select temporary view. Couch automatically populates this with a default temporary view:</p>
+<div class='hljs'><pre><code class='javascript'><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">doc</span>) </span>{
+  emit(<span class="hljs-literal">null</span>, doc);
+}</code></pre></div><p>This basically reads as: for each document emit an object with a null key and the document as the value which is what you&#8217;ll see if you go ahead and run it. Not particularly exciting really, but by changing the null key to doc.title, we can emit all those blog posts sorted by title. To do something a little more complicated, such as determining the number of comments for each blog post we can make use of the reduce function too.</p>
+<p>Map:</p>
+<div class='hljs'><pre><code class='javascript'><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">doc</span>) </span>{
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i &amp;lt; doc.comments.length; i++){
+   emit(doc.title, <span class="hljs-number">1</span>);
+  }
+}</code></pre></div><p>Reduce:</p>
+<div class='hljs'><pre><code class='javascript'><span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">keys, values</span>)</span>{
+   <span class="hljs-keyword">return</span> sum(values);
+}</code></pre></div><p>Here, we cycle each of the comments for every blog post and emit a single value 1 for every comment. Our reduce function takes both the entire key and value set which are emitted from the map function for each document and calculates the sum of values sent to it. With these two very basic functions we can support all the queries we might want to make of the database. You can permanently store this entire map/reduce query as a view within couch to be called later. When a document is inserted which effects the result of the query, the map/reduce will be re-evaluated on the next call. It turns out that storing and querying documents in this way can be extremely performant.</p>
+<p>I very much enjoy having the ability to write my queries in a language I&#8217;m familiar with to retrieve results, rather than having to dip into MySQL voodoo.</p>
+<p><em>So, there you have it, CouchDB &#8211; I may well follow this up at a later date with a comparison with Mongo, given I&#8217;m now a certified developer.</em></p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/backbone">backbone</a>,
+                
+                <a href="/tag/couchdb">couchdb</a>,
+                
+                <a href="/tag/databases">databases</a>,
+                
+                <a href="/tag/nosql">nosql</a>,
+                
+              
+              | <a href="2013/03/01/breaking-up-relationships-with-couchdb/#disqus_thread">Leave a comment</a>
+          </div>
         </div>
-      </footer>
-    </div>
-   <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+      
+        <div class="post">
+          <h1><a href="/2013/02/20/growing-a-business-with-developer-apis">Growing a Business with Developer APIs</a></h1>
+      <div class="author_meta">20 Feb 2013</div>
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-  </body>
+          <p>Those of your you who follow me on twitter will might be aware of a <a href="http://loveletterd.com">single day hack I attempted last week</a>, which takes output from Lovefilm&#8217;s customer history and formats it so it can easily be imported into the lovely Letterboxd. It&#8217;s named <a href="http://loveletterd.com">Loveletterd</a> and it seemed entirely appropriate to release it on Valentines day.</p>
+<p>After hearing that Letterboxd had created a CSV import tool for it&#8217;s community to use and as I&#8217;m a <a href="http://developer.lovefilm.com">Lovefilm developer</a>, I felt like it would be a great use of my time to get to work on Loveletterd. </p>
+<p>Originally, I&#8217;d thought I&#8217;d use Lovefilm&#8217;s OAuth sign-on, grab past rentals for a user and create a CSV from it formatting to Letterboxd&#8217;s import structure. I&#8217;d completely forgotten about a bug I raised on the developer forums; almost 3 years earlier &#8211; highlighting that actually this was impossible due to a bug which didn&#8217;t read a supplied argument, subsequently limiting the number of rental titles returned as the history. What&#8217;s more infuriating is that no one from Lovefilm had replied, even though the problem was reiterated by others in the same and other threads. There&#8217;s many different threads which highlight numerous other issues, all of which receive no or very little response from the Lovefilm developer team.</p>
+<p>This is an awful way to treat a community excited about building tools with your company data. If you don&#8217;t want to cushion the cost of supporting providing such an API yourself, don&#8217;t create one, or charge for access to it. Similar sentiment has been said about twitter recently on changing their API rendering it unusable for apps that have based their business models on it. Such is the feeling of discontent that it&#8217;s led to a niche for rivals.</p>
+<p>Lovefilm&#8217;s API &#8220;gallery&#8221; of developer apps features the message </p>
+<blockquote>
+<p>&#8220;We will be placing details of the latest and greatest applications using our API here. Be sure to check this page regularly as new ideas are developed.&#8221;</p>
+</blockquote>
+<p>Which is also the same as 3 years ago, shortly after the API&#8217;s first release. Good work Lovefilm.</p>
+<p>Remembering this, I walked away thinking, &#8220;Oh, well&#8221;, before going back to my workday. Explaining it to my wife, I realised there was another route to achieve what I wanted, which is what you see on the web now. Ultimately, this is nothing more than a bunch of regular expressions.</p>
+<p>Admittedly, I&#8217;m aware there&#8217;s changes at Lovefilm &#8211; they&#8217;ve been entirely bought out by Amazon and I can imagine the new owners would want to integrate the company with their brand better. It seems as if they&#8217;ve already switched off new developer registrations, so I&#8217;d imagine the whole API will be turned off before long.</p>
+<p>On the flip, take a look at where I want to take my data to &#8211; <a href="http://letterboxd.com">Letterboxd</a>. A site focused on film lovers and it shows. They&#8217;ve taken the route of paid pro accounts, which provide access to the <a href="http://letterboxd.com/about/importing-data/">import tools</a> I mentioned earlier. The majority of users won&#8217;t make use of this though; they just want to support a site providing a great service which is open and honest. They&#8217;re also planning on providing a full API, which I&#8217;ll be interested in playing with on release. As a result, I&#8217;m sure Letterboxd users will get a bunch of new toys they can use their accounts with that external developers decide to create.</p>
+<p>The best thing though? They&#8217;re real people who talk to me. After letting them know about my little hack, I got thanks that same day from <a href="http://letterbox.com/about/crew">Matthew</a> of the Letterboxd crew, with a <a href="http://feedback.letterboxd.com/forums/136771-general/suggestions/2360263-add-lovefilm-imports">ticket closure</a> shortly thereafter. That beats 3 years of waiting.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/films">films</a>,
+                
+                <a href="/tag/hacking">hacking</a>,
+                
+              
+              | <a href="2013/02/20/growing-a-business-with-developer-apis/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/02/07/introvert-interfacing">Introvert Interfacing</a></h1>
+      <div class="author_meta">07 Feb 2013</div>
+
+          <p>You pay for your ticket, hotels, travel and then spend the rest of the year excitedly awaiting being able to attend <em>the conference</em> everyone is speaking about. Having travelled halfway across the country, braving weather you&#8217;d never ordinarily leave the house for, you arrive in the unrecognisable city. You&#8217;ve left your family to be here, which is heart wrenching at the best of times and your lonely hotel room is no comfort (especially given the number of beds it has). </p>
+<p>You hurredly beaver off to the first fringe event with butterflies in anticipation of the luminaries that are possibly going to be there too. On arrival, the room is bustling with faces from avatars you recognise. How exciting! You know so much about these people from following them day to day; even what they ate for breakfast, the bars they attended, who they hang with.</p>
+<p>Yet these cheery personas are only facets of their real life. Chances are, any person you recognise is someone you admire in the industry &#8211; but what could you possibly have to talk about? Your lowly 9-5 pales in comparison to the waves these trendsetters are making, they wouldn&#8217;t really care what you do would they? Maybe we have something in common? Unfortunately, it&#8217;s always far easier to remain silent than waltz up to someone new or that you recognise and drum up a conversation. Inevitably, this more than often happens. </p>
+<p>The organisers have done a fantastic job. &#8220;Talk with everyone else, make friends&#8221;, they prompt &#8211; if only you were able to. The conference itself is amazing, inspiring and useful, but others seem to get so much more from it. New friendships are forged, existing ones cemented. Are you the issue here?</p>
+<p>Finding food is a problem. Do you venture out in the hope of finding people to talk to, or do you eat out on your own? It becomes easier to ask via twitter, than face to face. At least the conference day provides lunch for you, even if you choose to eat it on your own. You feel like a teenager.</p>
+<p>The after-party is much like being back at a school disco. People stare longingly into their empty glasses, whilst propping up walls, longing for company. Why don&#8217;t you talk to them? Others circle back into their longstanding groups and attract fresh blood. Those in groups wear similar clothes. Maybe you should buy plaid? You return to the hotel at a reasonable hour, missing out on the later rawkus highjinks.</p>
+<p>In the morning, you skulk back onto your bus, wishing you&#8217;d coughed up the extra to go via train just to get home sooner.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/events">events</a>,
+                
+              
+              | <a href="2013/02/07/introvert-interfacing/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/01/22/the-move-towards-static-websites">The Move Towards Static Websites</a></h1>
+      <div class="author_meta">22 Jan 2013</div>
+
+          <p>There&#8217;s some discussion on new podcast <a href="http://backtofrontshow.com">&#8220;The Back to Front Show&#8221;</a> on why of late we&#8217;re seeing so many static websites cropping up. It seem like now more than ever, we&#8217;re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing. </p>
+<p>When I talk about a static site, I think of it of raw HTML sat on a server and nothing else. However, it seems as if the industry has adopted the term to refer to sites created from tools which are capable of creating/emulating this HTML, whether it be a local, dropbox or a hosted/self-hosted solution. Typically both types of tool are powered through conversion of flat files into the markup which is served publicly. Through using them you can achieve something akin to a typical blog, without the need for a database (or possibly even a server-side language to power it).</p>
+<p><strong>Pro&#8217;s</strong></p>
+<p>Simplicity &#8211; Most of the draw toward toward such setups seems to be on the simplicity over flexibility. I can power a site with a minimal setup, but still regularly and simply update and maintain it, using a partial based environment. With a dropbox based solution, I just need to drop my flat files into a folder and everything is updated transparently. Mark Boulton <a href="http://markboulton.co.uk/journal/newblog-newcms">has previously written</a> about his requirements for writing on the web and why he went with <a href="http://statamic.com">Statamic</a>: </p>
+<blockquote>
+<p>&#8220;I wanted a way of simply publishing words, rather than getting all wrapped up in php, theming files and database problems.&#8221;</p>
+</blockquote>
+<p>Simplicity it seems, rules.</p>
+<p>I previously <a href="http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">wrote an article</a> on how you could publish using Octopress and Amazon&#8217;s S3 service. For anyone who has a relatively low traffic site, such a setup could also work out cheaper than a monthly hosting package.</p>
+<p>Development Time &#8211; If you&#8217;re one for creating custom themes, a static site is also a much simpler solution than wrestling with styling the innerds of a full fledged cms. Typically posts are stored in markdown and can be styled along with assets using a partial templating system (eg. based on YAML or Liquid). Having recently developed a wordpress theme I can testify to the complexity of having to dig through documentation on function usage and to determine which template file should be modified to achieve what I want within a page.</p>
+<p>Source Control &#8211; As <a href="http://rickhurst.co.uk">Rick</a> quite rightly points out below in the comments, having all your posts available in flat files makes them perfect for managing/backing up through your revision control tools of choice.</p>
+<p><strong>Cons</strong></p>
+<p>Customisation &#8211; For me, the big loss is the lack of flexibility. I hear everyone cry, &#8220;Well, duh &#8211; it&#8217;s static&#8221;. Without a server side language handling requests, I&#8217;m unable to schedule posts, handle comments, create forms or trigger email. If I intend on continuing to offer them, I have to find third party services to deal with each of these aspects. I&#8217;m well aware there&#8217;s services like disqus and wufoo that may solve some of these problems, but it seems like a major hassle to integrate each time something like this is required. It may be that this is just me, you may be perfectly happy using these solutions, or may not require them.</p>
+<p>Remote publishing &#8211; When using a local based solution (e.g. Jekyll), you don&#8217;t have the option of blogging remotely, due to the lack of tools to create and push out your content. Gone are the days of being able to log into a site from your phone and add a small update. For me, this is less of an issue as I can&#8217;t recall if I&#8217;ve ever written a post in this way and try to be more methodical, less spontaneous about what I&#8217;m writing from the comfort of my desktop.</p>
+<p><strong>Example Systems</strong></p>
+<p>If you&#8217;re interested in running a static site, then I&#8217;ve listed a few that seem pretty popular at the time of writing, along with a brief list of their features.</p>
+<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> &#8211; Locally run, File based, Open source, Powers Github pages.<br><a href="http://octopress.org/">Octopress</a> &#8211; Locally run, Jekyll/File based, but with preconfigured HTML templates, CSS, Javascript, Open Source<br><a href="http://statamic.com">Statamic</a> &#8211; Self Hosted, File Based, License Required<br><a href="http://getkirby.com">Kirby</a> &#8211; Self Hosted, File based, jQuery inspired API, License Required<br><a href="http://staceyapp.com">Stacey</a> &#8211; Self hosted, File based, Open source<br><a href="http://scriptogr.am">Scriptogram</a> &#8211; Dropbox/File based</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/blogging">blogging</a>,
+                
+                <a href="/tag/blogs">blogs</a>,
+                
+              
+              | <a href="2013/01/22/the-move-towards-static-websites/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/01/21/new-year-new-theme">New Year, New Theme</a></h1>
+      <div class="author_meta">21 Jan 2013</div>
+
+          <p>I&#8217;ve long made use of the default theme on WordPress, which I&#8217;ve always felt wasn&#8217;t entirely &#8220;me&#8221;. The theme now live is one I&#8217;ve been tinkering with for a while now based on the lovely preview design used in the <a href="http://prose.io">prose.io</a> document editing tool for github. I really like the focus on simplicity and think it suits me well.</p>
+<p>I&#8217;ve added some different styling for the navigation elements, given they didn&#8217;t already exist on <a href="http://prose.io">prose.io</a>. I&#8217;ve also added some subtle colour changes when navigating between pages, many of which are based on <a href="http://laurakalbag.com">Laura Kalbag</a>&#8216;s palettes over on <a href="http://www.colourlovers.com/lover/LJK">colour lovers</a>.</p>
+<p>One of the things I hadn&#8217;t counted on was consolidating 10 years worth of blog posts into sensible categories as it was becoming a bit of a mess. When I first started blogging, wordpress didn&#8217;t exist, let alone tagging and I think I started out using categories in a manner to replicate them.</p>
+<p>There&#8217;s still a few things I&#8217;m not entirely happy with, such as how navigation is represented for single posts. I intend to tidy the theme up and release it back to the WordPress community, but for now I&#8217;m enjoying having finally got it out in the open. Feel free to let me know what you think.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/blogging">blogging</a>,
+                
+              
+              | <a href="2013/01/21/new-year-new-theme/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+
+      <div class="pagination">
+          
+          <a href="/page/3" class="previous">Previous</a>
+          
+          <span class="page_number ">Page: 4 of 57</span>
+
+          
+          <a href="/page/5" class="next">Next</a>
+          
+      </div>
+    <footer>
+      <div class="footer-about">
+        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      </div>
+    </footer>
+  </div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
 </html>
+

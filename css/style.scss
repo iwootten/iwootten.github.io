@@ -1,0 +1,279 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+
+$blogColour : #3c3466;
+$javascriptColour : #BD1311;
+$aboutColour : #0c7bea;
+$webappsColour : #7ad466;
+$contactColour : #E0A421;
+
+/* #57676E */
+/* #BD1311 #11bd17 #0c7bea */
+$mainNavColour : #BD1311;
+$mainPageColour : darken($mainNavColour, 40%);
+
+$altPageColour : darken($mainPageColour, 10%);
+$altDarkerPageColour : darken($altPageColour, 10%);
+
+body {
+	font-family: 'OpenSans', sans-serif;
+	background-color: #E7EEF2;
+
+	@media screen and (max-width: 600px) {
+    	margin: 0;
+  	}
+}
+div.container{
+	margin: 0 auto;
+	max-width: 960px;
+}
+div.post, div.recent_posts{
+	padding: 100px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	color: $mainPageColour;
+	font-weight: 400;
+	font-size: 16px;
+
+	@media screen and (max-width: 600px) {
+    	padding: 40px;
+  	}
+}
+div.footer-about{
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 30px 100px;
+	background-color: white;
+	font-weight: 200;
+	font-size: 10px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
+}
+div.container a{
+	color: $altPageColour;
+	text-decoration: none;
+}
+div.container a:hover{
+	/* color: #3f4953 ; */
+	color: $altDarkerPageColour;
+	text-decoration: underline;
+}
+div.recent_posts ul{
+	list-style-type: none;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0px;
+}
+div.recent_posts ul li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.clear{
+	clear: both;
+}
+nav{
+	float: left;
+
+	@media screen and (max-width: 600px) {
+    	display:block;
+    	width: 100%;
+  	}
+}
+div.post h1 {
+	font-size: 36px;
+	font-weight: bold;
+	color: $mainPageColour;
+	margin: 10px 0 10px 0;
+
+	a, a:hover {
+		text-decoration: none;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 26px;
+  	}
+}
+div.post *{
+	line-height: 1.2em;
+
+	a {
+		text-decoration: underline;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+div.post p{
+	line-height: 1.5em;
+}
+div.post .author_meta,
+div.post .entry_content{
+	padding-top: 10px;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-top: 1px solid #d5e0e4;
+}
+div.recent_posts .meta{
+	padding-top: 15px;
+	padding-top: 10px;
+	font-size: 24px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #d5e0e4;
+}
+header h1{
+	float:right;
+	font-weight: 400;
+	font-size: 14px;
+	width: 250px;
+}
+ul.nav{
+	list-style-type: none;
+	padding: 0px;
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 10px;
+	margin-bottom: 0px;
+
+	@media screen and (max-width: 600px) {
+		margin: 10px;
+		font-size: 14px;
+	}
+}
+div.container.blog{
+	header {
+		border-bottom: 5px solid $blogColour;
+	}
+
+	.post {
+		border-bottom: 1px solid $blogColour;
+	}
+
+	.footer-about {
+		border-bottom: 5px solid $blogColour;
+	}
+}
+div.container.web-apps{
+	header {
+		border-bottom: 5px solid $webappsColour;
+	}
+
+	.post {
+		border-bottom: 1px solid $webappsColour;
+	}
+
+	.footer-about {
+		border-bottom: 5px solid $webappsColour;
+	}
+}
+
+div.container.javascript{
+	header {
+		border-bottom: 5px solid $javascriptColour;
+	}
+
+	.post {
+		border-bottom: 1px solid $javascriptColour;
+	}
+
+	.footer-about {
+		border-bottom: 5px solid $javascriptColour;
+	}
+}
+div.container.about .post{
+	border-bottom: 1px solid $aboutColour;
+	border-top: 5px solid $aboutColour;
+}
+div.container.contact .post{
+	border-bottom: 1px solid $contactColour;
+	border-top: 5px solid $contactColour;
+}
+div.container.blog .footer-about{
+	border-top: 1px solid $blogColour;
+	border-bottom: 5px solid $blogColour;
+}
+div.container.web-apps .footer-about{
+	border-bottom: 1px solid $webappsColour;
+	border-bottom: 5px solid $webappsColour;
+}
+div.container.javascript .footer-about{
+	border-bottom: 1px solid $javascriptColour;
+	border-bottom: 5px solid $javascriptColour;
+}
+div.container.about .footer-about{
+	border-bottom: 1px solid $aboutColour;
+	border-bottom: 5px solid $aboutColour;
+}
+div.container.contact .footer-about{
+	border-bottom: 1px solid $contactColour;
+	border-bottom: 5px solid $contactColour;
+}
+ul.nav li{
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@media screen and (max-width: 600px) {
+    	display:block;
+    	margin: 0px;
+  	}
+}
+ul.nav li a{
+	padding: 20px;
+
+	@media screen and (max-width: 600px) {
+    	display:block;
+    	padding: 10px;
+  	}
+}
+ul.nav li a:hover, ul.nav li a.active{
+	color: white;
+	text-decoration: none;
+	@include border-radius(20px 20px 0 0);
+
+	@media screen and (max-width: 600px) {
+    	@include border-radius(5px);
+  	}
+}
+ul.nav li a.blog:hover,
+ul.nav li a.blog.active{
+	background-color: $blogColour;
+}
+ul.nav li a.web-apps:hover,
+ul.nav li a.web-apps.active{
+	background-color: $webappsColour;
+}
+ul.nav li a.javascript:hover,
+ul.nav li a.javascript.active{
+	background-color: $javascriptColour;
+}
+ul.nav li a.about:hover,
+ul.nav li a.about.active{
+	background-color: $aboutColour;
+}
+ul.nav li a.contact:hover,
+ul.nav li a.contact.active{
+	background-color: $contactColour;
+}
+ul.nav li a:hover{
+	@include transition(background-color 100ms linear, color 100ms linear);
+}
+
+.highlight {
+	@include border-radius(5px);
+	overflow: auto;
+	padding: 20px;
+	margin: 20px 0;
+
+	pre {
+		margin: 0px;
+	}
+}
+.pagination {
+	padding: 20px;
+	background: white;
+	text-align: center;
+}
+#disqus_thread {
+	margin-top: 20px;
+}

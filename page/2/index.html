@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ian Wootten - Web Developer, Cardiff</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/fonts/open-sans.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/syntax.css" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,411 +18,203 @@
       ga('send', 'pageview');
 
     </script>
-    </head>
-    <body>
+</head>
+<body>
 
-
-    <div class="container blog">
-      <header>
-        <nav>
-        <ul class="nav">
-          <li><a class="blog active" href="/">Blog</a></li>
-          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
-          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
-          <li><a class="about" href="/about">About</a></li>
-          <li><a class="contact" href="/contact">Contact</a></li>
-        </ul>
-        </nav>
-        <div class="clear"></div>
-      </header>
+<div class="container blog">
+    <header>
+      <nav>
+      <ul class="nav">
+        <li><a class="blog active" href="/">Blog</a></li>
+        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
+        <li><a class="web-apps " href="/category/web-apps">Web Apps</a></li>
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="contact" href="/contact">Contact</a></li>
+      </ul>
+      </nav>
+      <div class="clear"></div>
+    </header>
 
       
+        <div class="post">
+          <h1><a href="/2014/05/18/bye-bye-wordpress">Bye Bye Wordpress</a></h1>
+      <div class="author_meta">18 May 2014</div>
 
-<div class="post">
-<h1><a href="/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3">Scaling a Linear Domain to an Ordinal Range with d3</a></h1>
-<div class="author_meta">07 Mar 2014</div>
-<p>I’ve had the opportunity of using <a href="http://d3js.org/">d3</a> quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.</p>
+          <p>I&#39;ve finally made the move to <a href="http://jekyllrb.com">jekyll</a> for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible <a href="https://github.com/iwootten/iwootten.github.io">on github</a> and revision control for post entries is handled there too.</p>
+<p>What finally convinced me with the release of jekyll 2 was the introduction of <a href="http://jekyllrb.com/news/2014/05/06/jekyll-turns-2-0-0/">native sass support</a>. Originally, the prose theme I&#39;m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it. I had the scss for the original design available and therefore thought the jump to using jekyll wouldn&#39;t be that great (or so I thought - overlooking all the features jekyll doesn&#39;t support compared to wordpress). I&#39;m going to blog individually about the pieces of the puzzle in other posts as there are number of things that tripped me up along the way.</p>
+<p>But for now, I&#39;d like to bid a fond farewell to wordpress - my go to blogging software for the last 10 years. You once were diminutive, got out of my way and let my voice be heard. That&#39;s no longer the case. These days the only time we speak is when you want me to update you. I&#39;ve got better things to do. Theres a ton of features the length of my arm which I&#39;ve never used and the majority of features which I use rarely. I long for those simpler days once again. You&#39;ve served me well, but I&#39;ve moved on.</p>
 
-<p>Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</p>
 
-<p>I’d picked out a colour palette I wanted to use for a particular graph, as per below:</p>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/jekyll">jekyll</a>,
+                
+                <a href="/tag/static-sites">static sites</a>,
+                
+                <a href="/tag/wordpress">wordpress</a>,
+                
+              
+              | <a href="2014/05/18/bye-bye-wordpress/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2014/04/07/copyright-law-finally-aligns-with-me">Copyright Law Finally Aligns with Me</a></h1>
+      <div class="author_meta">07 Apr 2014</div>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#B8D0DE&quot;</span><span class="p">,</span> <span class="s2">&quot;#9FC2D6&quot;</span><span class="p">,</span> <span class="s2">&quot;#86B4CF&quot;</span><span class="p">,</span> <span class="s2">&quot;#73A2BD&quot;</span><span class="p">,</span> <span class="s2">&quot;#6792AB&quot;</span><span class="p">];</span></code></pre></div>
+          <p>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.</p>
+<p>Finally, we&#8217;ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I&#8217;ve long made copies of my cd&#8217;s to listen to whilst coding (iTunes allows me to do so simply) &#8211; but it is not currently legal to move these files to another storage medium, such as an mp3 player. The fact is that most people have been ripping cds and copying them to iPods since it was technically possible, but music companies have never prosecuted anyone as the implications would stem far and wide and would the costs would too prohibitive to be able to enforce them.</p>
+<p>It&#8217;s also not currently legal to rip movies to another format. So copying a dvd to a mkv file to play elsewhere is construed illegal. The fact movie studios put protection in place on their dvds to prevent you from doing so puts most people off doing so anyway. From June 1st this also changes so it will also be legal (but probably will be as difficult due to the copy protection in place). The guidance doesn&#8217;t specifically mention blu-rays by name, but it does say &#8220;The exception will apply to any copies you have bought, other than computer programs&#8221; &#8211; which I see to include blu-rays. However, it does also mention that copy protection may still be in place on those formats. Which you can raise a complaint to the secretary of state about if you think it&#8217;s too restrictive (good luck getting a response there!).</p>
+<p>I&#8217;m a big fan of said changes, mainly due to the fact I own a huge amount of discs which aren&#8217;t currently allowed to be any format other than that they were distributed in. DVD&#8217;s, CD&#8217;s and Vinyl(!). I&#8217;ve found this frustrating, as my own stance is I should be able to manipulate the media to my hearts content within my own 4 walls. In fact, in order to listen to myself practicing when I used to dj, I need to make recordings which change their format. The fact that I&#8217;ll be able to do this within the law makes me a very happy chap indeed. Up until now, the law has been fairly grey on the matter, but hasn&#8217;t prosecuted anyone for format conversion (as far as I&#8217;m aware).</p>
+<p>The new guidance is quick to point out that it&#8217;ll still be illegal to distribute the media you create &#8211; You have to &#8220;own&#8221; the media you&#8217;re converting. Therefore duplicating a friends mp3 collection at work from their hard drive will still be illegal. If you sell the original format from which you made copies, then your copies will again be illegal. Again this aligns with how I feel things should be done. I feel like I should be paying someone for the entertainment I enjoy from said media. The artist/record labels decide a price and that&#8217;s what I should pay &#8211; but I don&#8217;t feel like they can make me pay multiple times for the same thing, especially if I can create said formats from media I already own. If you hold a copy but haven&#8217;t paid for it, I feel it fair for it to be deemed illegal, however possible it is technically to achieve.</p>
+<p>In summary, I feel these changes are great (but long overdue). </p>
+<p>You can read a full summary of changes to consumers issued by the Intellectual Property Office <a href="http://www.ipo.gov.uk/copyright-guidance-consumers.pdf">here</a>. Amusingly, the document explains you may be affected if you &#8220;read books, watch films or listen to music&#8221; &#8211; or my favourite &#8220;use electronic devices&#8221;. I guess that covers anyone reading this then.</p>
 
-<p>The only examples I’ve seen similar to this are where it is assumed you want to vary darkness of colours based on value or <a href="http://stackoverflow.com/questions/17321139/mapping-in-d3-ordinal-scales">vary the domain</a> based on the number of colours you want. Not a good fit.</p>
 
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/copyright">copyright</a>,
+                
+                <a href="/tag/law">law</a>,
+                
+                <a href="/tag/Music">Music</a>,
+                
+              
+              | <a href="2014/04/07/copyright-law-finally-aligns-with-me/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3">Scaling a Linear Domain to an Ordinal Range with d3</a></h1>
+      <div class="author_meta">07 Mar 2014</div>
+
+          <p>I&#8217;ve had the opportunity of using <a href="http://d3js.org/">d3</a> quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.</p>
+<p>Anyway, I thought I&#8217;d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who&#8217;re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</p>
+<p>I&#8217;d picked out a colour palette I wanted to use for a particular graph, as per below:</p>
+<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> colours = [<span class="hljs-string">"#B8D0DE"</span>, <span class="hljs-string">"#9FC2D6"</span>, <span class="hljs-string">"#86B4CF"</span>, <span class="hljs-string">"#73A2BD"</span>, <span class="hljs-string">"#6792AB"</span>];</code></pre></div><p>The only examples I&#8217;ve seen similar to this are where it is assumed you want to vary darkness of colours based on value or <a href="http://stackoverflow.com/questions/17321139/mapping-in-d3-ordinal-scales">vary the domain</a> based on the number of colours you want. Not a good fit.</p>
 <p>I wanted to pick one of my values based on a linear value from my data set. My first thought was to make use of the ordinal scale function provided by d3. Something like this:</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colour</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">ordinal</span><span class="p">()</span>
-  <span class="p">.</span><span class="nx">domain</span><span class="p">(</span><span class="nx">mySortedDataValues</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="nx">colours</span><span class="p">);</span></code></pre></div>
-
-<p>In doing this, I got something that *looked* a bit like it was working, but not the way I expected. In fact, the way an ordinal scale works is that it provides a 1-to-1 mapping of domain values to the range, rather than any kind of interpolation between them. In this case, it was expecting only 5 distinct data values (to match up against the colours) and for everything over and above that, it wrapped them round to the beginning of the domain again. The solution then is fairly simple once you’ve got your head around that.</p>
-
+<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> colour = d3.scale.ordinal()
+  .domain(mySortedDataValues)
+  .range(colours);</code></pre></div><p>In doing this, I got something that *looked* a bit like it was working, but not the way I expected. In fact, the way an ordinal scale works is that it provides a 1-to-1 mapping of domain values to the range, rather than any kind of interpolation between them. In this case, it was expecting only 5 distinct data values (to match up against the colours) and for everything over and above that, it wrapped them round to the beginning of the domain again. The solution then is fairly simple once you&#8217;ve got your head around that.</p>
 <p>What I did next, was to create a scale that gave the index of the colour we were going to be mapping to. This works well, because the indices are linear and d3 has the ability to do the dirty work in that respect.</p>
+<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> colourIndex = d3.scale.linear()
+  .domain([<span class="hljs-number">0</span>, d3.max(data)])
+  .range([<span class="hljs-number">0</span>, colours.length - <span class="hljs-number">1</span>]);
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">colourIndex</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">linear</span><span class="p">()</span>
-  <span class="p">.</span><span class="nx">domain</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">data</span><span class="p">)])</span>
-  <span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">colours</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
-
-<span class="nx">svg</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">enter</span><span class="p">()</span>
-  <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">){</span>
-    <span class="k">return</span> <span class="nx">colours</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">colourIndex</span><span class="p">(</span><span class="nx">d</span><span class="p">))];</span>
-   <span class="p">});</span></code></pre></div>
-
-<p>Here we end up with an index ranging across all the indices of the colour array, and a colour appropriately selected from the palette as expected. You can see the resultant effect in the graph linked to below:</p>
-
-<blockquote class="twitter-tweet" lang="en"><p>Working on some funky graphs for <a href="https://twitter.com/UseHourglass">@usehourglass</a>. This one shows how often you work certain times of the week: <a href="http://t.co/xRHE39HmTu">pic.twitter.com/xRHE39HmTu</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/441595966613774336">March 6, 2014</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<div class="entry_content">Tagged <a href="/tag/charting">charting</a>, <a href="/tag/d3">d3</a>,  | <a href="/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/#disqus_thread">Leave a comment</a></div>
-</div>
+svg.selectAll(<span class="hljs-string">"circle"</span>)
+  .data(data)
+  .enter()
+  .append(<span class="hljs-string">"circle"</span>)
+  .attr(<span class="hljs-string">"fill"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>)</span>{
+    <span class="hljs-keyword">return</span> colours[<span class="hljs-built_in">Math</span>.ceil(colourIndex(d))];
+   });</code></pre></div><p>Here we end up with an index ranging across all the indices of the colour array, and a colour appropriately selected from the palette as expected. You can see the resultant effect in the graph linked to below:</p>
+<p><blockquote class="twitter-tweet" lang="en"><p>Working on some funky graphs for <a href="https://twitter.com/UseHourglass">@usehourglass</a>. This one shows how often you work certain times of the week: <a href="http://t.co/xRHE39HmTu">pic.twitter.com/xRHE39HmTu</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/441595966613774336">March 6, 2014</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
-<div class="post">
-<h1><a href="/2014/03/03/shipping-in-march">Shipping in March</a></h1>
-<div class="author_meta">03 Mar 2014</div>
-<p>This month, I’ve decided to take some time out to ship projects. </p>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/charting">charting</a>,
+                
+                <a href="/tag/d3">d3</a>,
+                
+              
+              | <a href="2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2014/03/03/shipping-in-march">Shipping in March</a></h1>
+      <div class="author_meta">03 Mar 2014</div>
 
-<p>I have a huge list of projects accumulating I’d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.</p>
-
-<p>Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released. </p>
-
-<p>That sounds easy, but I’m well aware from past experience it isn’t. I don’t want to work outside of working hours (9-5.30pm) as I know the impact it has on my family. My hope is by setting myself some achievable goals I can at least get some way to ticking off some checkboxes on this growing todo list. </p>
-
-<p>Some of these projects are products I’ve not yet completed, projects I’ve released but need work or ideas that haven’t made it to the build stage yet. As a freelancer, I hope that some of them may even help out other people in a similar situation to me.</p>
-
-<p>Over the coming month, I’m going to attempt to ship at least 4 projects out of the door. 1 a week for 4 weeks. I’ll be blogging about my progress here, and posting summaries of how it went at the end of each week. The end date of the 28th is also my birthday, so it would be great present to myself to have come some way to meeting my goal.</p>
-
-<p>If you’re interested in receiving progress updates via email, signup here: <a href="http://eepurl.com/PxGe9">http://eepurl.com/PxGe9</a></p>
-
-<div class="entry_content">Tagged <a href="/tag/projects">projects</a>,  | <a href="/2014/03/03/shipping-in-march/#disqus_thread">Leave a comment</a></div>
-</div>
+          <p>This month, I&#8217;ve decided to take some time out to ship projects. </p>
+<p>I have a huge list of projects accumulating I&#8217;d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.</p>
+<p>Currently I don&#8217;t have any work booked in for a while, so along with Viv, we&#8217;ve decided I should try and get some of these projects released. </p>
+<p>That sounds easy, but I&#8217;m well aware from past experience it isn&#8217;t. I don&#8217;t want to work outside of working hours (9-5.30pm) as I know the impact it has on my family. My hope is by setting myself some achievable goals I can at least get some way to ticking off some checkboxes on this growing todo list. </p>
+<p>Some of these projects are products I&#8217;ve not yet completed, projects I&#8217;ve released but need work or ideas that haven&#8217;t made it to the build stage yet. As a freelancer, I hope that some of them may even help out other people in a similar situation to me.</p>
+<p>Over the coming month, I&#8217;m going to attempt to ship at least 4 projects out of the door. 1 a week for 4 weeks. I&#8217;ll be blogging about my progress here, and posting summaries of how it went at the end of each week. The end date of the 28th is also my birthday, so it would be great present to myself to have come some way to meeting my goal.</p>
+<p>If you&#8217;re interested in receiving progress updates via email, signup here: <a href="http://eepurl.com/PxGe9">http://eepurl.com/PxGe9</a></p>
 
 
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/projects">projects</a>,
+                
+              
+              | <a href="2014/03/03/shipping-in-march/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/10/27/setting-up-an-is-domain-with-isnic">Setting Up an .is Domain with ISNIC</a></h1>
+      <div class="author_meta">27 Oct 2013</div>
 
-<div class="post">
-<h1><a href="/2013/10/27/setting-up-an-is-domain-with-isnic">Setting Up an .is Domain with ISNIC</a></h1>
-<div class="author_meta">27 Oct 2013</div>
-<p>I’ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn’t great, given their somewhat confusing management interface. That’s summed up in a recent tweet below.</p>
+          <p>I&#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&#8217;t great, given their somewhat confusing management interface. That&#8217;s summed up in a recent tweet below.</p>
+<p><blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Given the potential savings compared to a ‘normal’ registrar, it’s likely you’ll want to make use of ISNIC themselves – who are much like an Icelandic version of Nominet.</p>
-
-<p>Here’s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it’s not necessary to use a “pre-approved” registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there’s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
-
-<p>Once you’ve gone through the process of checking your domain is available and registering it, you’ll need to ensure your hosting provider has appropriate dns entries for your domain. If you’re using, cPanel or something that basically means adding it there. If you’re managing your own dns entries, add the appropriate entries within your manager.</p>
-
-<p>Here’s the key bit. Now wait…. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
-
-<p>Following that wait, head to the “redelegate” option within your new “My Page” area at ISNIC. Choose the “Not Registered” when asked for your ISP.</p>
-
-<p>Go ahead and enter the nameservers you want to use. If the dns changes haven’t yet propagated, you’ll probably get the error “The nameserver ‘ns1.whatever.com’ has not been registered”, as shown below:</p>
-
+<p>Given the potential savings compared to a &#8216;normal&#8217; registrar, it&#8217;s likely you&#8217;ll want to make use of ISNIC themselves &#8211; who are much like an Icelandic version of Nominet.</p>
+<p>Here&#8217;s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it&#8217;s not necessary to use a &#8220;pre-approved&#8221; registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there&#8217;s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
+<p>Once you&#8217;ve gone through the process of checking your domain is available and registering it, you&#8217;ll need to ensure your hosting provider has appropriate dns entries for your domain. If you&#8217;re using, cPanel or something that basically means adding it there. If you&#8217;re managing your own dns entries, add the appropriate entries within your manager.</p>
+<p>Here&#8217;s the key bit. Now wait&#8230;. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
+<p>Following that wait, head to the &#8220;redelegate&#8221; option within your new &#8220;My Page&#8221; area at ISNIC. Choose the &#8220;Not Registered&#8221; when asked for your ISP.</p>
+<p>Go ahead and enter the nameservers you want to use. If the dns changes haven&#8217;t yet propagated, you&#8217;ll probably get the error &#8220;The nameserver &#8216;ns1.whatever.com&#8217; has not been registered&#8221;, as shown below:</p>
 <p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png" alt="Misleading Error" width="676" height="360" class="alignnone size-full wp-image-912" /></a></p>
-
-<p>This is a pretty misleading error, given what it actually means is “your domain doesn’t seem to be registered yet on those nameservers”. So wait a bit more for propagation to occur…</p>
-
+<p>This is a pretty misleading error, given what it actually means is &#8220;your domain doesn&#8217;t seem to be registered yet on those nameservers&#8221;. So wait a bit more for propagation to occur&#8230;</p>
 <p>Be aware of the <a href="https://www.isnic.is/en/host/req">rules</a> for ISNIC nameservers and check your host complies with them, otherwise you may find you encounter other errors. When the changes are picked up, you should finally be able to add the entries without getting an array of red boxes, much like below.</p>
-
 <p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png" alt="Successful nameserver entry" width="684" height="577" class="alignnone size-full wp-image-913" /></a></p>
 
 
-<div class="entry_content">Tagged <a href="/tag/dns">dns</a>, <a href="/tag/hosting">hosting</a>, <a href="/tag/iceland">iceland</a>, <a href="/tag/nameservers">nameservers</a>,  | <a href="/2013/10/27/setting-up-an-is-domain-with-isnic/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/08/14/a-decade-on-the-world-wide-web">A Decade on the World Wide Web</a></h1>
-<div class="author_meta">14 Aug 2013</div>
-<p>10 years ago today, <a href="http://www.ianwootten.co.uk/2003/08/14/blog-install">I started this blog</a>. That’s just under a 3rd of my life. In other words, that’s quite a long time ago.</p>
-
-<p>I started out using Movable type and very quickly (3 days later) <a href="http://www.ianwootten.co.uk/2003/08/17/all-change">ditched it</a> in favour of the <a href="http://cafelog.com">b2 “weblog tool”</a>, which WordPress was later spawned from.</p>
-
-<p>Back then, I blogged frequently about what was going on in my life, which tended to centre around University coursework rather than technical posts. These days, a lot has changed – I have a wife, son, house, business and as a result, blog a lot less frequently – which honestly, upsets me a little.</p>
-
-<p>It’s also crazy to look at the progress of WordPress over that time and how now, ten years on I’m considering moving away to a simpler, static tool.</p>
-
-<p>Given it’s now my industry, it would be easy for me to ponder what might have been over my time on the web (what if this, that..) but I’m left thinking that for all the facets of my life I do make visible on my blog, it’s the moments I don’t share that are most important to me.</p>
-
-<p>I wonder what the next decade will bring.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/Web">Web</a>,  | <a href="/2013/08/14/a-decade-on-the-world-wide-web/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/07/06/second-rate-britizens">Second Rate Britizens</a></h1>
-<div class="author_meta">06 Jul 2013</div>
-<p>I decided to attempt a simple app this week, first using <a href="http://gocardless.com">GoCardless</a>, then later the <a href="http://stripe.com">beta of Stripe</a>. It requires the payment of funds between two individuals, neither of which might be a business. GoCardless suggests signing up to use their <a href="https://gocardless.com/docs/partner_guide">partner programme</a>, which involves registering a user as a merchant. This isn’t entirely suitable given the individual will be asked many queries on the nature of their business (which they don’t have). Stripe have a similar offering, known as <a href="https://stripe.com/connect">“Connect”</a> which asks similar questions. It’s at this point users would probably start turning away.</p>
-
-<p>The recently announced <a href="https://stripe.com/blog/send-payouts-with-stripe">“Payouts”</a> from Stripe, seems like the most appropriate solution, but it doesn’t yet exist in the UK (and it’ll probably be a while before it does). Bigger players like Amazon’s fps require that you have a US card and haven’t ever made noises that they may be expanding into European markets.</p>
-
-<p>As developers in the UK, we get a bit of a bum deal. Software products are often first targeted towards the biggest (US) market and we fine folks have to sit around and wait until the smaller pieces of the puzzle are picked up and put in place. Sucks to be us.</p>
-
-<p>I’ve blogged in the past about the many payment providers cropping up and their services being unavailable in the UK. I can understand why this happens, but it’s frustrating not least because it hinders any momentum that might be able to be built at an earlier date. </p>
-
-<p>I doubt I’ll ever have the same momentum as I did with my idea this week. It’s unlikely therefore, it will ever see the light of day. A US counterpart could easily offer an international version of my idea today.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/rant business">rant business</a>,  | <a href="/2013/07/06/second-rate-britizens/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/06/27/the-developer-dream">The Developer Dream</a></h1>
-<div class="author_meta">27 Jun 2013</div>
-<p>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I’m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I’ve mainly created these by myself – a casualty of doing paid work in the main like this too. </p>
-
-<p>Most of these ideas in the have been simple hacks – <a href="http://loveletterd.com">solutions to things that bug me</a>. <a href="http://fairandbare.com">One of them has been a proper business too</a>. I’m able to do something and make it happen, to potentially tap a huge audience. Get them to that first step. The problem I have is, not a single one of these so much as turns a profit, though they serve as wonderful educational devices for me. I would hazard a guess that some of them have indirectly got me work.</p>
-
-<p>Some of my ideas never get past the domain registration phase before being knocked on the head. A friend many years ago gave me the great quote that ‘My domains are my todo list’. This totally hits the nail on the head for me – if I’ve felt like an idea was good enough to make it to the registration phase, there’s something there worth pursuing. Unfortunately, I have quite a long list to work through.</p>
-
-<p>I heard it said that “The Developer Dream” is that we (developers) “build a product/service which we’re able to earn a living from”. But the majority of developers I know, don’t even begin to pursue the ideas they have. This surprises me. </p>
-
-<p>There seems to be such an abundance of opportunities that I can’t imagine not building my own ideas, however bad they might seem to others. </p>
-
-<p>Why hold back? Time? Yes, we have other commitments – family, work and maybe even a hobby or two. I’m not suggesting we make drastic sacrifices or sell our kids in order to create stuff. I’d would however, like to think that the payoff for building our ideas might make our initial holdups seem insignificant longer term. <a href="http://www.ianwootten.co.uk/2012/05/03/if-you-build-it">I’ve said it before</a> and I can’t speak from as the voice of successful experience, but what do I get out of never trying?</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/hacking">hacking</a>, <a href="/tag/ideas">ideas</a>, <a href="/tag/webdev">webdev</a>,  | <a href="/2013/06/27/the-developer-dream/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/04/03/the-problem-with-full-stack-js-applications">The Problem with Full Stack JS Applications</a></h1>
-<div class="author_meta">03 Apr 2013</div>
-<p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It’s inevitable that there’s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you’re doing when knee deep in code.</p>
-
-<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I’ve certainly found myself tied up in this kind of knot. For example, if I’m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you’re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you’re working and if that’s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn’t the case when working in one language. My guess is you’re going to have to take a second glance in order to figure out where you are, which isn’t a big issue, but is frustrating.</p>
-
-<p>Currently my apps typically are structured like this:</p>
-
-<p>server.js (Main node/express file)<br />
--lib (Classes for DB Calls)<br />
--node_modules (Node requires)<br />
--public (Client backbone app)<br />
-    -css<br />
-    -images<br />
-    -js<br />
-        -lib (Backbone and other dependencies)<br />
-        -collections<br />
-        -models<br />
-        -templates<br />
-        -views<br />
--routes (Contains the main express routes)</p>
-
-<p>But I actually think the following is a better approach:</p>
-
-<p>-server<br />
-    server.js<br />
-    -lib<br />
-    -node_modules<br />
-    -routes<br />
--client (Renamed from public)<br />
-    -css<br />
-    -images<br />
-    -js<br />
-        -lib<br />
-        -collections<br />
-        -models<br />
-        -templates<br />
-        -views</p>
-
-<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn’t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don’t believe there is a solution.</p>
-
-<div class="entry_content">Tagged <a href="/tag/javascript">javascript</a>, <a href="/tag/web development">web development</a>,  | <a href="/2013/04/03/the-problem-with-full-stack-js-applications/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/03/28/so-you-want-to-run-a-fairtrade-business">So You Want to Run a Fairtrade Business?</a></h1>
-<div class="author_meta">28 Mar 2013</div>
-<p>This is a brief retrospective of what I’ve learned in the 6 years I’ve been running <a href="http://www.fairandbare.com" title="Fair &#038; Bare">Fair &#038; Bare</a>, a Fairtrade t-shirt company along with my wife. </p>
-
-<p>If you’re a new follower of mine, you heard right – <a href="http://www.fairandbare.com">I run a Fairtrade t-shirt company</a>. I’ve not actively been marketing it more recently for a number of reasons, but I still have a strong belief in our original vision. That vision was that Fairtrade shirts at the time weren’t being well received by the world, despite being available. We believed they could be, if we were only to find some that had good designs (and were possibly less ‘preachy’).</p>
-
-<p>So that’s what we set out to do. From 2007-2011 we were running as an online design competition, inspired mainly by Threadless and Emptees, and helped via a great community of designers through a site I built entirely myself (whilst doing a PhD, getting married and buying a house). I’ve since learned that I don’t believe the competition sourced design is the best fit for what we are trying to do, but it constantly excited me that we *could* do it. I still hope some day to be proved wrong though.</p>
-
-<h2 id="lessons-learned">Lessons Learned</h2>
-
-<p>The Ethical market pales in comparison to the cheaper alternatives. That probably won’t come as news to you. Most people – like it or not, will buy cheap over quality if they’re perceived to be comparable. This has certainly been my experience so far, having touted our wares at student markets, Fairtrade stalls and online. Be prepared to experience it first hand, and to repeatedly go over your story to get people to part with their cash. That is, after all, your unique selling point.</p>
-
-<p>While we’re at it, if you’re selling online, be prepared to experience the same. When so much hard work has gone into creating your goods, you’ll find it heartbreaking to have a couple of people take up an offer from a newsletter of thousands. My advice would be not to get your hopes up….</p>
-
-<p>But don’t entirely despair. When you make those few sales you’ll feel such a strong connection with your customer, even though you may never meet them. Repeat customers will give you a warm glow inside and smile all day long.</p>
-
-<p>The Fairtrade supply chain is slow(er) and (more) fallible. We constantly had trouble with every supplier we used for our shirts over how quickly we could obtain stock and sometimes with the stock itself. Obviously, once our community had selected a design, we wanted it printed and available for sale. We knew we would have to wait for designs to be printed, but what we hadn’t counted on was how long it could take to get hold of shirts we’d ordered. Other businesses might be able to cope better with such delays. 2 months to go from selected to online is not ideal for our business model that relies on constant momentum, especially when we were dealing with a a single product at a time. </p>
-
-<p>Depending on your supplier, you may also experience variations in sizes and colour. Be wary, you’re going to have to deal with all the resulting issues that arise from these problems with your customers or be lumbered with stock you’re unable to shift.</p>
-
-<p>Times are hard for everyone. Since having started, 2 of the 3 suppliers we used have shut up shop and the third has changed it’s supplier. This has drastically reduced the options for us to the point of being unviable, which is one of the reasons we haven’t put out a new design since 2011. (If anyone is able to point me in the direction of other wholesale ethical brands, I’d be keen to hear about them).</p>
-
-<p>Fairtrade cotton, Fairtrade or fair trade? Organic? Soil association certified? You need to be aware of the differences, because competitors will use similar terms. Even though they mean different things to you, most customers don’t know the difference and lump them all in the same good for the producer pot.</p>
-
-<p>First impressions count. Originally, we used to send out our t-shirts in recycled packaging we sourced from envelopes we had kicking around our house. I have to cringe at this now – the idea that old crumply packets were being received with sticky-taped-on labels. That was our first physical impression on our customer. *Sigh*. Our heart was in the right place though, we didn’t (and still don’t) want to be creating more waste. We’ve since moved on to shipping goods out in recycled packets.</p>
-
-<p>Marketing is key. When you’re not marketing your goods, you’re not seen to be active. Just by talking about your business, you’ll get interest in your product and make sales. Our buzz came from regular competitions and launches of new shirts. With every new shirt we’d let our mailing list, community and followers know of its arrival.</p>
-
-<p>Finally, a word on branding. I constantly wrestle with wether we would have been better off branding ourselves first and foremost a t-shirt design company, rather than a Fairtrade one. I think the answer is yes. Our whole ethos was originally based around the lack of well designed Fairtrade shirts. Ultimately, if a design looks good, a customer is going to be happy paying a little more if it’s what they want. The ethical aspect of the cotton is, in their mind, a bonus. But if they’re not even visiting your site or stall because they see you first and foremost as an ethical brand, and that doesn’t entirely float their boat, then you’ve lost a sale.</p>
-
-<p>The whole experience of running <a href="http://www.fairandbare.com">Fair &#038; Bare</a> has been a bit of a roller coaster of highs and lows. I’ve learned so much from running it and hope to continue to do so.</p>
-
-<p>It wouldn’t be right of me to post about <a href="http://www.fairandbare.com">Fair &#038; Bare</a> here without letting my readers in on a special offer. For this Easter weekend, when you buy two shirts, you’ll get the third free on using the code “EASTEREGG” when checking out.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/fairtrade">fairtrade</a>, <a href="/tag/tshirts">tshirts</a>,  | <a href="/2013/03/28/so-you-want-to-run-a-fairtrade-business/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/03/01/breaking-up-relationships-with-couchdb">Breaking up Relationships with CouchDB</a></h1>
-<div class="author_meta">01 Mar 2013</div>
-<p><em>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat ‘belated’]</em></p>
-
-<p>Beware – there’s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.</p>
-
-<p>For me, my first experiments working with databases were performed with Oracle, the staple of our computer science course at the time. We were taught how to identify common structures in what we wanted to store (or had already been stored) and how to represent the relationships which existed between them. There was an entire series of lectures dedicated to this fine art, much of which I now can’t remember.</p>
-
-<p>There has been an uptake in the number of developers working with NoSQL, or document oriented databases. These alternatives do not require decisions on subdividing documents into multiple record structures to be made at all, instead allowing the entire document to be recorded as a series of simple variable types. The contents of each document can vary from one document to the next. For the majority of developers who work with relational databases, this might come as a bit of a shock.</p>
-
-<p>There are a number of varieties of NoSQL flavours currently available: CouchDB, Cassandra and MongoDB are a few of the hot ones right now. I’m not going to discuss the pros and cons of each right here (for that I’d refer you to The Changelog’s NoSQL smackdown podcasts), but rather give you a whistle stop tour of CouchDB, which I’ve been working with for a few years now.</p>
-
-<p>If you want to follow along, you’ll need to head to the CouchDB site and read up on <a href="http://wiki.apache.org/couchdb/Installation">installation</a> for your platform. I’m using the <a href="http://couchdb.apache.org/">CouchDB server app</a>, which is nice and self contained.</p>
-
-<p>Document oriented storage gives me the ability not to have to worry about the structure of my documents prior to storage. From my own point of view this is a huge timesaver as my apps often tend to focus on a single type of document. Think of a blog post stored in a mysql database, we have a table for the post along with all its metadata, a table for the comments and maybe another for recording pingbacks. The same blog post in couch could be represented like so:</p>
-
-<div class="highlight"><pre><code class="json"><span class="p">{</span>
-   <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;83ab09b88836ab714f592293d4e02845&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;My Blog Post&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;ian&quot;</span><span class="p">:</span> <span class="s2">&quot;You&#39;re a wally&quot;</span><span class="p">},{</span><span class="nt">&quot;Some user&quot;</span><span class="p">:</span> <span class="s2">&quot;This post sucks&quot;</span><span class="p">}]</span>
-<span class="p">}</span></code></pre></div>
-
-<p>A document based db may well not be suitable for the nature of your application. However, I’ve found in lots of cases, it is.</p>
-
-<h2 id="rest-style-interface">Rest Style Interface</h2>
-
-<p>CouchDB works across a REST style interface. To write documents back to couch, you call a HTTP PUT or POST with your JSON structure. To read documents, you call a GET and to delete them you call DELETE. For example, to add a document with “_id=someid” to the database “blog”, you would call the following:</p>
-
-<div class="highlight"><pre><code class="bash">curl http://127.0.0.1:5984/blog/someid -X PUT -d <span class="s1">&#39;{&quot;Title&quot;:&quot;Another Blog Post&quot;, &quot;Content&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;}&#39;</span></code></pre></div>
-
-<p>Similarly you can HTTP GET this uri to return the document just added. Saving the document to a couch store will add another field, “_rev” which represents the particular revision of the document you’re storing. Every time you update this document, it will be stored as a new document, along with a new revision number. You have access to all these revisions within couch, or you can choose to cleanup the database by compacting and removing all but the most recent revision of documents. Another blog entry document without any comments would be perfectly valid stored in the same database, as well as a document featuring just an array of pingback items.</p>
-
-<p>You’ll notice that the structures are JSON objects. This is how all objects are exchanged between couch and other languages and over couch’s REST interface. Heading to where we stored the above blog document “http://127.0.0.1:5984/blog” in your browser yields a collection of metadata expressed in a JSON structure about that particular database. Appending “/83ab09b88836ab714f592293d4e02845″ (the id of the document) gives us the original blog document.</p>
-
-<p>This, in turn works wonderfully well with certain frontend frameworks – such as <a href="http://backbonejs.org">Backbone</a>. If you configure your backbone models to construct URLs the way CouchDB expects them, you can effectively have a frontend app driven by just a CouchDB store. As CouchDB returns JSON objects, it’s able to correctly parse and load them into your backbone app.</p>
-
-<h2 id="mapreduce">Map/Reduce</h2>
-
-<p>To support the extraction of substructures and sorting within these documents, couch has the concept of map/reduce built straight into its core. Futon, couch’s built in administration application, makes creation of these a very simple process. Maps and Reductions are described in Javascript, which is great given most of us are making more and more use of it these days. Head over to http://127.0.0.1:5984/_utils and you’ll see your collection of databases right away. Navigate to the blog database and under the view dropdown, select temporary view. Couch automatically populates this with a default temporary view:</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">emit</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">doc</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<p>This basically reads as: for each document emit an object with a null key and the document as the value which is what you’ll see if you go ahead and run it. Not particularly exciting really, but by changing the null key to doc.title, we can emit all those blog posts sorted by title. To do something a little more complicated, such as determining the number of comments for each blog post we can make use of the reduce function too.</p>
-
-<p>Map:</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-   <span class="nx">emit</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-
-<p>Reduce:</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">values</span><span class="p">){</span>
-   <span class="k">return</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">values</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<p>Here, we cycle each of the comments for every blog post and emit a single value 1 for every comment. Our reduce function takes both the entire key and value set which are emitted from the map function for each document and calculates the sum of values sent to it. With these two very basic functions we can support all the queries we might want to make of the database. You can permanently store this entire map/reduce query as a view within couch to be called later. When a document is inserted which effects the result of the query, the map/reduce will be re-evaluated on the next call. It turns out that storing and querying documents in this way can be extremely performant.</p>
-
-<p>I very much enjoy having the ability to write my queries in a language I’m familiar with to retrieve results, rather than having to dip into MySQL voodoo.</p>
-
-<p><em>So, there you have it, CouchDB – I may well follow this up at a later date with a comparison with Mongo, given I’m now a certified developer.</em></p>
-
-
-<div class="entry_content">Tagged <a href="/tag/backbone">backbone</a>, <a href="/tag/couchdb">couchdb</a>, <a href="/tag/databases">databases</a>, <a href="/tag/nosql">nosql</a>,  | <a href="/2013/03/01/breaking-up-relationships-with-couchdb/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/02/20/growing-a-business-with-developer-apis">Growing a Business with Developer APIs</a></h1>
-<div class="author_meta">20 Feb 2013</div>
-<p>Those of your you who follow me on twitter will might be aware of a <a href="http://loveletterd.com">single day hack I attempted last week</a>, which takes output from Lovefilm’s customer history and formats it so it can easily be imported into the lovely Letterboxd. It’s named <a href="http://loveletterd.com">Loveletterd</a> and it seemed entirely appropriate to release it on Valentines day.</p>
-
-<p>After hearing that Letterboxd had created a CSV import tool for it’s community to use and as I’m a <a href="http://developer.lovefilm.com">Lovefilm developer</a>, I felt like it would be a great use of my time to get to work on Loveletterd. </p>
-
-<p>Originally, I’d thought I’d use Lovefilm’s OAuth sign-on, grab past rentals for a user and create a CSV from it formatting to Letterboxd’s import structure. I’d completely forgotten about a bug I raised on the developer forums; almost 3 years earlier – highlighting that actually this was impossible due to a bug which didn’t read a supplied argument, subsequently limiting the number of rental titles returned as the history. What’s more infuriating is that no one from Lovefilm had replied, even though the problem was reiterated by others in the same and other threads. There’s many different threads which highlight numerous other issues, all of which receive no or very little response from the Lovefilm developer team.</p>
-
-<p>This is an awful way to treat a community excited about building tools with your company data. If you don’t want to cushion the cost of supporting providing such an API yourself, don’t create one, or charge for access to it. Similar sentiment has been said about twitter recently on changing their API rendering it unusable for apps that have based their business models on it. Such is the feeling of discontent that it’s led to a niche for rivals.</p>
-
-<p>Lovefilm’s API “gallery” of developer apps features the message </p>
-
-<blockquote>
-  <p>“We will be placing details of the latest and greatest applications using our API here. Be sure to check this page regularly as new ideas are developed.”</p>
-</blockquote>
-
-<p>Which is also the same as 3 years ago, shortly after the API’s first release. Good work Lovefilm.</p>
-
-<p>Remembering this, I walked away thinking, “Oh, well”, before going back to my workday. Explaining it to my wife, I realised there was another route to achieve what I wanted, which is what you see on the web now. Ultimately, this is nothing more than a bunch of regular expressions.</p>
-
-<p>Admittedly, I’m aware there’s changes at Lovefilm – they’ve been entirely bought out by Amazon and I can imagine the new owners would want to integrate the company with their brand better. It seems as if they’ve already switched off new developer registrations, so I’d imagine the whole API will be turned off before long.</p>
-
-<p>On the flip, take a look at where I want to take my data to – <a href="http://letterboxd.com">Letterboxd</a>. A site focused on film lovers and it shows. They’ve taken the route of paid pro accounts, which provide access to the <a href="http://letterboxd.com/about/importing-data/">import tools</a> I mentioned earlier. The majority of users won’t make use of this though; they just want to support a site providing a great service which is open and honest. They’re also planning on providing a full API, which I’ll be interested in playing with on release. As a result, I’m sure Letterboxd users will get a bunch of new toys they can use their accounts with that external developers decide to create.</p>
-
-<p>The best thing though? They’re real people who talk to me. After letting them know about my little hack, I got thanks that same day from <a href="http://letterbox.com/about/crew">Matthew</a> of the Letterboxd crew, with a <a href="http://feedback.letterboxd.com/forums/136771-general/suggestions/2360263-add-lovefilm-imports">ticket closure</a> shortly thereafter. That beats 3 years of waiting.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/films">films</a>, <a href="/tag/hacking">hacking</a>,  | <a href="/2013/02/20/growing-a-business-with-developer-apis/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="pagination">
-
-  <a href="/page/1" class="previous">Previous</a>
-
-<span class="page_number ">Page: 2 of 29</span>
-
-  <a href="/page/3" class="next">Next</a>
-
-</div>
-
-      <footer>
-        <div class="footer-about">
-          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/dns">dns</a>,
+                
+                <a href="/tag/hosting">hosting</a>,
+                
+                <a href="/tag/iceland">iceland</a>,
+                
+                <a href="/tag/nameservers">nameservers</a>,
+                
+              
+              | <a href="2013/10/27/setting-up-an-is-domain-with-isnic/#disqus_thread">Leave a comment</a>
+          </div>
         </div>
-      </footer>
-    </div>
-   <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+      
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-  </body>
+      <div class="pagination">
+          
+          <a href="/" class="previous">Previous</a>
+          
+          <span class="page_number ">Page: 2 of 57</span>
+
+          
+          <a href="/page/3" class="next">Next</a>
+          
+      </div>
+    <footer>
+      <div class="footer-about">
+        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      </div>
+    </footer>
+  </div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
 </html>
+

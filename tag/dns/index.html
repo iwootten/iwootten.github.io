@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ian Wootten - Web Developer, Cardiff</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/fonts/open-sans.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/syntax.css" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,127 +18,93 @@
       ga('send', 'pageview');
 
     </script>
-    </head>
-    <body>
+</head>
+<body>
 
+<div class="container blog">
+    <header>
+      <nav>
+      <ul class="nav">
+        <li><a class="blog active" href="/">Blog</a></li>
+        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
+        <li><a class="web-apps " href="/category/web-apps">Web Apps</a></li>
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="contact" href="/contact">Contact</a></li>
+      </ul>
+      </nav>
+      <div class="clear"></div>
+    </header>
 
-    <div class="container blog">
-      <header>
-        <nav>
-        <ul class="nav">
-          <li><a class="blog active" href="/">Blog</a></li>
-          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
-          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
-          <li><a class="about" href="/about">About</a></li>
-          <li><a class="contact" href="/contact">Contact</a></li>
-        </ul>
-        </nav>
-        <div class="clear"></div>
-      </header>
+      
+        <div class="post">
+          <h1><a href="/2013/10/27/setting-up-an-is-domain-with-isnic">Setting Up an .is Domain with ISNIC</a></h1>
+      <div class="author_meta">27 Oct 2013</div>
 
-          
+          <p>I&#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&#8217;t great, given their somewhat confusing management interface. That&#8217;s summed up in a recent tweet below.</p>
+<p><blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-	<div class="post">
-	<h1><a href="/2013/10/27/setting-up-an-is-domain-with-isnic">Setting Up an .is Domain with ISNIC</a></h1>
-<div class="author_meta">27 Oct 2013</div>
-	<p>I’ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn’t great, given their somewhat confusing management interface. That’s summed up in a recent tweet below.</p>
-
-<blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Given the potential savings compared to a ‘normal’ registrar, it’s likely you’ll want to make use of ISNIC themselves – who are much like an Icelandic version of Nominet.</p>
-
-<p>Here’s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it’s not necessary to use a “pre-approved” registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there’s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
-
-<p>Once you’ve gone through the process of checking your domain is available and registering it, you’ll need to ensure your hosting provider has appropriate dns entries for your domain. If you’re using, cPanel or something that basically means adding it there. If you’re managing your own dns entries, add the appropriate entries within your manager.</p>
-
-<p>Here’s the key bit. Now wait…. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
-
-<p>Following that wait, head to the “redelegate” option within your new “My Page” area at ISNIC. Choose the “Not Registered” when asked for your ISP.</p>
-
-<p>Go ahead and enter the nameservers you want to use. If the dns changes haven’t yet propagated, you’ll probably get the error “The nameserver ‘ns1.whatever.com’ has not been registered”, as shown below:</p>
-
+<p>Given the potential savings compared to a &#8216;normal&#8217; registrar, it&#8217;s likely you&#8217;ll want to make use of ISNIC themselves &#8211; who are much like an Icelandic version of Nominet.</p>
+<p>Here&#8217;s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it&#8217;s not necessary to use a &#8220;pre-approved&#8221; registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there&#8217;s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
+<p>Once you&#8217;ve gone through the process of checking your domain is available and registering it, you&#8217;ll need to ensure your hosting provider has appropriate dns entries for your domain. If you&#8217;re using, cPanel or something that basically means adding it there. If you&#8217;re managing your own dns entries, add the appropriate entries within your manager.</p>
+<p>Here&#8217;s the key bit. Now wait&#8230;. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
+<p>Following that wait, head to the &#8220;redelegate&#8221; option within your new &#8220;My Page&#8221; area at ISNIC. Choose the &#8220;Not Registered&#8221; when asked for your ISP.</p>
+<p>Go ahead and enter the nameservers you want to use. If the dns changes haven&#8217;t yet propagated, you&#8217;ll probably get the error &#8220;The nameserver &#8216;ns1.whatever.com&#8217; has not been registered&#8221;, as shown below:</p>
 <p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png" alt="Misleading Error" width="676" height="360" class="alignnone size-full wp-image-912" /></a></p>
-
-<p>This is a pretty misleading error, given what it actually means is “your domain doesn’t seem to be registered yet on those nameservers”. So wait a bit more for propagation to occur…</p>
-
+<p>This is a pretty misleading error, given what it actually means is &#8220;your domain doesn&#8217;t seem to be registered yet on those nameservers&#8221;. So wait a bit more for propagation to occur&#8230;</p>
 <p>Be aware of the <a href="https://www.isnic.is/en/host/req">rules</a> for ISNIC nameservers and check your host complies with them, otherwise you may find you encounter other errors. When the changes are picked up, you should finally be able to add the entries without getting an array of red boxes, much like below.</p>
-
 <p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png" alt="Successful nameserver entry" width="684" height="577" class="alignnone size-full wp-image-913" /></a></p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/dns">dns</a>, <a href="/tag/hosting">hosting</a>, <a href="/tag/iceland">iceland</a>, <a href="/tag/nameservers">nameservers</a>,  | <a href="/2013/10/27/setting-up-an-is-domain-with-isnic/#disqus_thread">Leave a comment</a></div>
-	</div>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/dns">dns</a>,
+                
+                <a href="/tag/hosting">hosting</a>,
+                
+                <a href="/tag/iceland">iceland</a>,
+                
+                <a href="/tag/nameservers">nameservers</a>,
+                
+              
+              | <a href="2013/10/27/setting-up-an-is-domain-with-isnic/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2012/03/01/how-to-switch-your-vps-in-2-hours">How to Switch Your VPS in 2 Hours</a></h1>
+      <div class="author_meta">01 Mar 2012</div>
 
-    
-
-	<div class="post">
-	<h1><a href="/2012/03/01/how-to-switch-your-vps-in-2-hours">How to Switch Your VPS in 2 Hours</a></h1>
-<div class="author_meta">01 Mar 2012</div>
-	<p>Friday last week I woke up to a barrage of emails coming into my inbox. All of these were coming from notification of spam comments upon this very blog. By the time I’d woken up I’d had something like 75 emails. This was pretty strange given that Akismet was there guarding my blog ever since it’s been available and I’d never had a email about a dodgy comment since I’d set it up (something like 5 years ago). They continued to flood in during my breakfast as fast as I could delete them.</p>
-
-<p>The problem stemmed from the fact that network connectivity from my slicehost account had been knocked out of action – which had never happened before. I presumed this was down to the migration of slicehost over to Rackspace infrastructure, which I’d been informed of, but the network dying was probably unintended.</p>
-
+          <p>Friday last week I woke up to a barrage of emails coming into my inbox. All of these were coming from notification of spam comments upon this very blog. By the time I’d woken up I’d had something like 75 emails. This was pretty strange given that Akismet was there guarding my blog ever since it’s been available and I’d never had a email about a dodgy comment since I’d set it up (something like 5 years ago). They continued to flood in during my breakfast as fast as I could delete them.</p>
+<p>The problem stemmed from the fact that network connectivity from my slicehost account had been knocked out of action &#8211; which had never happened before. I presumed this was down to the migration of slicehost over to Rackspace infrastructure, which I’d been informed of, but the network dying was probably unintended.</p>
 <p>Either way, it was frustrating and I instantly decided to finally migrate away from slicehost and setup a second linode account. The funny thing is, that most of this was aided by slicehosts own documentation on configuring your server. If you’re doing little more than hosting a number of mysql / php driven sites, it is in fact really simple to switch. Here’s how I went about it, my sites all experience fairly low traffic, so I’m aware this solution might not be right for everyone.</p>
-
 <h2 id="backup-all-your-important-data">Backup All Your Important Data</h2>
-
 <p>First of all, you’re going to need to backup everything you have in your sites directory. For me, that’s everything under /var/www.</p>
-
-<pre class="bash">tar -zcvf backup-feb-2012.tar.gz /var/www</pre>
-
-<p>Next, you’ll want to do the same for your Apache sites:</p>
-
-<pre class="bash">tar -zcvf backup-apache-feb-2012.tar.gz /etc/apache2/sites-available</pre>
-
-<p>Finally, I took a mysqldump of my entire mysql setup:</p>
-
-<pre class="bash">mysqldump —-all-databases -u root -p password | gzip &gt;dbbackup-feb-2012.sql.gz</pre>
-
-<h2 id="setup-your-new-vps">Setup Your New VPS</h2>
-
+<div class='hljs'><pre><code class='bash'>tar -zcvf backup-feb-2012.tar.gz /var/www</code></pre></div><p>Next, you’ll want to do the same for your Apache sites:</p>
+<div class='hljs'><pre><code class='bash'>tar -zcvf backup-apache-feb-2012.tar.gz /etc/apache2/sites-available</code></pre></div><p>Finally, I took a mysqldump of my entire mysql setup:</p>
+<div class='hljs'><pre><code class='bash'>mysqldump --all-databases -u root -p password | gzip &gt;dbbackup-feb-2012.sql.gz</code></pre></div><h2 id="setup-your-new-vps">Setup Your New VPS</h2>
 <p>Having done that, you have pretty much everything you need to bring your server back to life as it is now. Go and grab a new vps from linode or somewhere else and set it up using the details starting from here: <a href="http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1">http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1</a> I configured my vps to have exactly the same accounts and passwords as my original vps, to make life easier for me. Once SSH and your firewall has been setup and you’re all updated, you’ll be able to transfer all the files you just created onto your fresh vps setup, using filezilla, or a direct connection between the two machines. You’ll then need to install Apache: <a href="http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu">http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu</a>, PHP: <a href="http://articles.slicehost.com/2010/5/19/installing-php-on-ubuntu">http://articles.slicehost.com/2010/5/19/installing-php-on-ubuntu</a> and MySQL: <a href="http://articles.slicehost.com/2011/3/10/installing-mysql-server-on-ubuntu">http://articles.slicehost.com/2011/3/10/installing-mysql-server-on-ubuntu</a></p>
-
 <p>On your new machine, you’ll need to restore the files you backed up to /var/www.</p>
-
-<pre class="bash">tar -xzf backup-feb-2012.tar.gz
+<div class='hljs'><pre><code class='bash'>tar -xzf backup-feb-2012.tar.gz
 sudo cp -r var/www/* /var/www/
 sudo chown -R www-data:www-data /var/www/*
-rm -rf ~/var</pre>
-
-<p>Then the apache site files:</p>
-
-<pre class="bash">tar -xzf backup-apache-feb-2012.tar.gz
-sudo cp etc/apache2/sites-available/* /etc/apache2/sites-available/</pre>
-
-<p>For every file that exists in the sites directory and is to be enabled, we need to enable it. You can use a2ensite for this if you like.</p>
-
-<pre class="bash">cd /etc/apache2/sites-enabled
-sudo ln -s ../sites-available/ianwootten.co.uk.conf ianwootten.co.uk.conf (for each site file)</pre>
-
-<p>Install any apache modules you might require and restart apache. If you’re using wordpress or a php framework like me, you’ll most likely need mod_rewrite.</p>
-
-<pre class="bash">sudo a2enmod rewrite
-sudo /etc/init.d/apache2 restart</pre>
-
-<p>You’ll then need to repopulate your new mysql install with all your old data.</p>
-
-<pre class="bash">gunzip -c databasebackup.sql.gz | mysql -u root -p</pre>
-
-<h2 id="configure-email">Configure Email</h2>
-
+rm -rf ~/var</code></pre></div><p>Then the apache site files:</p>
+<div class='hljs'><pre><code class='bash'>tar -xzf backup-apache-feb-2012.tar.gz
+sudo cp etc/apache2/sites-available/* /etc/apache2/sites-available/</code></pre></div><p>For every file that exists in the sites directory and is to be enabled, we need to enable it. You can use a2ensite for this if you like.</p>
+<div class='hljs'><pre><code class='bash'><span class="hljs-built_in">cd</span> /etc/apache2/sites-enabled
+sudo ln <span class="hljs-operator">-s</span> ../sites-available/ianwootten.co.uk.conf ianwootten.co.uk.conf (<span class="hljs-keyword">for</span> each site file)</code></pre></div><p>Install any apache modules you might require and restart apache. If you’re using wordpress or a php framework like me, you’ll most likely need mod_rewrite.</p>
+<div class='hljs'><pre><code class='bash'>sudo a2enmod rewrite
+sudo /etc/init.d/apache2 restart</code></pre></div><p>You’ll then need to repopulate your new mysql install with all your old data.</p>
+<div class='hljs'><pre><code class='bash'>gunzip -c databasebackup.sql.gz | mysql -u root -p</code></pre></div><h2 id="configure-email">Configure Email</h2>
 <p>I use msmtp to handle all my email on my server, which sends through a single gmail automailer address for my domain. If you want to send email that way do the following:</p>
-
-<pre class="bash">sudo apt-get install msmtp ca-certificates
-sudo nano /etc/msmtprc</pre>
-
-<p>Paste the following setup in the file:</p>
-
+<div class='hljs'><pre><code class='bash'>sudo apt-get install msmtp ca-certificates
+sudo nano /etc/msmtprc</code></pre></div><p>Paste the following setup in the file:</p>
 <p>`defaults<br />
 tls             on<br />
 tls_starttls    on<br />
-tls_trust_file  /etc/ssl/certs/ca-certificates.crt&lt;/p&gt;</p>
-<p>account default<br />
+tls_trust_file  /etc/ssl/certs/ca-certificates.crt</p></p>
+<p><p>account default<br />
 host            smtp.gmail.com<br />
 port            587<br />
 auto_from       off<br />
@@ -150,58 +113,60 @@ user            automailer@somedomain.com<br />
 password        mymailpass<br />
 from            automailer@somedomain.com<br />
 maildomain      somedomain.com<br />
-logfile		/var/log/msmtp.log`
+logfile        /var/log/msmtp.log`</p>
+<div class='hljs'><pre><code class='bash'>sudo chmod 0644 /etc/msmtprc</code></pre></div><p>You can test whether it’s working using a the command as:</p>
+<div class='hljs'><pre><code class='bash'><span class="hljs-built_in">echo</span> <span class="hljs-operator">-e</span> <span class="hljs-string">"Subject: A Test Email\r\n\r\nThis is a test"</span> |msmtp --debug --from=default -t mymail@gmail.com</code></pre></div><h2 id="configure-dns">Configure DNS</h2>
+<p>You need to configure how your vps is going to handle particular requests for various domains. You’ve probably had to do this already with your current vps, so just copy the entries through whatever management system your new host provides. For sites that have a fairly simple setup, your host may provide a simple set of default entries to use, or you can clone entries that have the same setup as each other.</p>
+<p>We’re now at the point where we have a complete copy of our vps up and running, and the vps knows how to handle requests for domains, however currently our domain registrar points to our old vps, so the requests will never reach our new server. Head to your domain registrar and change the entries for a single domain, to point to your new vps (ns1.linode.com, ns2.linode.com etc). Now sit and wait patiently….Once that domain has propagated correctly (ping it to see if has a new or old ip), and you’re happy your site is working as expected, go ahead and change all of your domains dns entries to the ip address of your new vps.</p>
+<h2 id="relax-8230-">Relax&#8230;</h2>
+<p>All in all, I don&#8217;t think this took me more than a couple of hours working with the terminal open. I certainly didn&#8217;t worry about migrating in the way I have done previously. As I opted for a uk datacentre with linode, a side effect of the change is all my sites are much much faster &#8211; and a better setup with linode is in fact cheaper than slicehost. I left my slicehost account running for an entire week prior to shutting it down yesterday &#8211; just in case&#8230;</p>
 
-<pre class="bash">sudo chmod 0644 /etc/msmtprc</pre>
 
-You can test whether it’s working using a the command as:
-
-<pre class="bash">echo -e "Subject: A Test Email\r\n\r\nThis is a test" |msmtp --debug --from=default -t mymail@gmail.com</pre>
-
-## Configure DNS
-
-You need to configure how your vps is going to handle particular requests for various domains. You’ve probably had to do this already with your current vps, so just copy the entries through whatever management system your new host provides. For sites that have a fairly simple setup, your host may provide a simple set of default entries to use, or you can clone entries that have the same setup as each other.
-
-We’re now at the point where we have a complete copy of our vps up and running, and the vps knows how to handle requests for domains, however currently our domain registrar points to our old vps, so the requests will never reach our new server. Head to your domain registrar and change the entries for a single domain, to point to your new vps (ns1.linode.com, ns2.linode.com etc). Now sit and wait patiently….Once that domain has propagated correctly (ping it to see if has a new or old ip), and you’re happy your site is working as expected, go ahead and change all of your domains dns entries to the ip address of your new vps.
-
-## Relax&#8230;
-
-All in all, I don&#8217;t think this took me more than a couple of hours working with the terminal open. I certainly didn&#8217;t worry about migrating in the way I have done previously. As I opted for a uk datacentre with linode, a side effect of the change is all my sites are much much faster &#8211; and a better setup with linode is in fact cheaper than slicehost. I left my slicehost account running for an entire week prior to shutting it down yesterday &#8211; just in case&#8230;
-</p>
-
-	<div class="entry_content">Tagged <a href="/tag/dns">dns</a>, <a href="/tag/gmail">gmail</a>, <a href="/tag/linode">linode</a>, <a href="/tag/msmtp">msmtp</a>, <a href="/tag/server">server</a>, <a href="/tag/slicehost">slicehost</a>,  | <a href="/2012/03/01/how-to-switch-your-vps-in-2-hours/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/dns">dns</a>,
+                
+                <a href="/tag/gmail">gmail</a>,
+                
+                <a href="/tag/linode">linode</a>,
+                
+                <a href="/tag/msmtp">msmtp</a>,
+                
+                <a href="/tag/server">server</a>,
+                
+                <a href="/tag/slicehost">slicehost</a>,
+                
+              
+              | <a href="2012/03/01/how-to-switch-your-vps-in-2-hours/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
 
       <div class="pagination">
-        
-          <span class="previous">Previous</span>
-        
-        <span class="page_number ">Page: 1 of 1</span>
-        
-          <span class="next ">Next</span>
-        
+          
+          <span class="page_number ">Page: 1 of 1</span>
+
+          
       </div>
+    <footer>
+      <div class="footer-about">
+        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      </div>
+    </footer>
+  </div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
 
-      <footer>
-        <div class="footer-about">
-          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
-        </div>
-      </footer>
-    </div>
-   <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-  </body>
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
 </html>
+

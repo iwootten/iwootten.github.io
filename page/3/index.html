@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ian Wootten - Web Developer, Cardiff</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/fonts/open-sans.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/syntax.css" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,304 +18,181 @@
       ga('send', 'pageview');
 
     </script>
-    </head>
-    <body>
+</head>
+<body>
 
-
-    <div class="container blog">
-      <header>
-        <nav>
-        <ul class="nav">
-          <li><a class="blog active" href="/">Blog</a></li>
-          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
-          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
-          <li><a class="about" href="/about">About</a></li>
-          <li><a class="contact" href="/contact">Contact</a></li>
-        </ul>
-        </nav>
-        <div class="clear"></div>
-      </header>
+<div class="container blog">
+    <header>
+      <nav>
+      <ul class="nav">
+        <li><a class="blog active" href="/">Blog</a></li>
+        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
+        <li><a class="web-apps " href="/category/web-apps">Web Apps</a></li>
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="contact" href="/contact">Contact</a></li>
+      </ul>
+      </nav>
+      <div class="clear"></div>
+    </header>
 
       
-
-<div class="post">
-<h1><a href="/2013/02/07/introvert-interfacing">Introvert Interfacing</a></h1>
-<div class="author_meta">07 Feb 2013</div>
-<p>You pay for your ticket, hotels, travel and then spend the rest of the year excitedly awaiting being able to attend <em>the conference</em> everyone is speaking about. Having travelled halfway across the country, braving weather you’d never ordinarily leave the house for, you arrive in the unrecognisable city. You’ve left your family to be here, which is heart wrenching at the best of times and your lonely hotel room is no comfort (especially given the number of beds it has). </p>
-
-<p>You hurredly beaver off to the first fringe event with butterflies in anticipation of the luminaries that are possibly going to be there too. On arrival, the room is bustling with faces from avatars you recognise. How exciting! You know so much about these people from following them day to day; even what they ate for breakfast, the bars they attended, who they hang with.</p>
-
-<p>Yet these cheery personas are only facets of their real life. Chances are, any person you recognise is someone you admire in the industry – but what could you possibly have to talk about? Your lowly 9-5 pales in comparison to the waves these trendsetters are making, they wouldn’t really care what you do would they? Maybe we have something in common? Unfortunately, it’s always far easier to remain silent than waltz up to someone new or that you recognise and drum up a conversation. Inevitably, this more than often happens. </p>
-
-<p>The organisers have done a fantastic job. “Talk with everyone else, make friends”, they prompt – if only you were able to. The conference itself is amazing, inspiring and useful, but others seem to get so much more from it. New friendships are forged, existing ones cemented. Are you the issue here?</p>
-
-<p>Finding food is a problem. Do you venture out in the hope of finding people to talk to, or do you eat out on your own? It becomes easier to ask via twitter, than face to face. At least the conference day provides lunch for you, even if you choose to eat it on your own. You feel like a teenager.</p>
-
-<p>The after-party is much like being back at a school disco. People stare longingly into their empty glasses, whilst propping up walls, longing for company. Why don’t you talk to them? Others circle back into their longstanding groups and attract fresh blood. Those in groups wear similar clothes. Maybe you should buy plaid? You return to the hotel at a reasonable hour, missing out on the later rawkus highjinks.</p>
-
-<p>In the morning, you skulk back onto your bus, wishing you’d coughed up the extra to go via train just to get home sooner.</p>
-
-<div class="entry_content">Tagged <a href="/tag/events">events</a>,  | <a href="/2013/02/07/introvert-interfacing/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/01/22/the-move-towards-static-websites">The Move Towards Static Websites</a></h1>
-<div class="author_meta">22 Jan 2013</div>
-<p>There’s some discussion on new podcast <a href="http://backtofrontshow.com">“The Back to Front Show”</a> on why of late we’re seeing so many static websites cropping up. It seem like now more than ever, we’re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing. </p>
-
-<p>When I talk about a static site, I think of it of raw HTML sat on a server and nothing else. However, it seems as if the industry has adopted the term to refer to sites created from tools which are capable of creating/emulating this HTML, whether it be a local, dropbox or a hosted/self-hosted solution. Typically both types of tool are powered through conversion of flat files into the markup which is served publicly. Through using them you can achieve something akin to a typical blog, without the need for a database (or possibly even a server-side language to power it).</p>
-
-<p><strong>Pro’s</strong></p>
-
-<p>Simplicity – Most of the draw toward toward such setups seems to be on the simplicity over flexibility. I can power a site with a minimal setup, but still regularly and simply update and maintain it, using a partial based environment. With a dropbox based solution, I just need to drop my flat files into a folder and everything is updated transparently. Mark Boulton <a href="http://markboulton.co.uk/journal/newblog-newcms">has previously written</a> about his requirements for writing on the web and why he went with <a href="http://statamic.com">Statamic</a>: </p>
-
-<blockquote>
-  <p>“I wanted a way of simply publishing words, rather than getting all wrapped up in php, theming files and database problems.”</p>
-</blockquote>
-
-<p>Simplicity it seems, rules.</p>
-
-<p>I previously <a href="http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">wrote an article</a> on how you could publish using Octopress and Amazon’s S3 service. For anyone who has a relatively low traffic site, such a setup could also work out cheaper than a monthly hosting package.</p>
-
-<p>Development Time – If you’re one for creating custom themes, a static site is also a much simpler solution than wrestling with styling the innerds of a full fledged cms. Typically posts are stored in markdown and can be styled along with assets using a partial templating system (eg. based on YAML or Liquid). Having recently developed a wordpress theme I can testify to the complexity of having to dig through documentation on function usage and to determine which template file should be modified to achieve what I want within a page.</p>
-
-<p>Source Control – As <a href="http://rickhurst.co.uk">Rick</a> quite rightly points out below in the comments, having all your posts available in flat files makes them perfect for managing/backing up through your revision control tools of choice.</p>
-
-<p><strong>Cons</strong></p>
-
-<p>Customisation – For me, the big loss is the lack of flexibility. I hear everyone cry, “Well, duh – it’s static”. Without a server side language handling requests, I’m unable to schedule posts, handle comments, create forms or trigger email. If I intend on continuing to offer them, I have to find third party services to deal with each of these aspects. I’m well aware there’s services like disqus and wufoo that may solve some of these problems, but it seems like a major hassle to integrate each time something like this is required. It may be that this is just me, you may be perfectly happy using these solutions, or may not require them.</p>
-
-<p>Remote publishing – When using a local based solution (e.g. Jekyll), you don’t have the option of blogging remotely, due to the lack of tools to create and push out your content. Gone are the days of being able to log into a site from your phone and add a small update. For me, this is less of an issue as I can’t recall if I’ve ever written a post in this way and try to be more methodical, less spontaneous about what I’m writing from the comfort of my desktop.</p>
-
-<p><strong>Example Systems</strong></p>
-
-<p>If you’re interested in running a static site, then I’ve listed a few that seem pretty popular at the time of writing, along with a brief list of their features.</p>
-
-<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> – Locally run, File based, Open source, Powers Github pages.<br />
-<a href="http://octopress.org/">Octopress</a> – Locally run, Jekyll/File based, but with preconfigured HTML templates, CSS, Javascript, Open Source<br />
-<a href="http://statamic.com">Statamic</a> – Self Hosted, File Based, License Required<br />
-<a href="http://getkirby.com">Kirby</a> – Self Hosted, File based, jQuery inspired API, License Required<br />
-<a href="http://staceyapp.com">Stacey</a> – Self hosted, File based, Open source<br />
-<a href="http://scriptogr.am">Scriptogram</a> – Dropbox/File based</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/blogging">blogging</a>, <a href="/tag/blogs">blogs</a>,  | <a href="/2013/01/22/the-move-towards-static-websites/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/01/21/new-year-new-theme">New Year, New Theme</a></h1>
-<div class="author_meta">21 Jan 2013</div>
-<p>I’ve long made use of the default theme on WordPress, which I’ve always felt wasn’t entirely “me”. The theme now live is one I’ve been tinkering with for a while now based on the lovely preview design used in the <a href="http://prose.io">prose.io</a> document editing tool for github. I really like the focus on simplicity and think it suits me well.</p>
-
-<p>I’ve added some different styling for the navigation elements, given they didn’t already exist on <a href="http://prose.io">prose.io</a>. I’ve also added some subtle colour changes when navigating between pages, many of which are based on <a href="http://laurakalbag.com">Laura Kalbag</a>‘s palettes over on <a href="http://www.colourlovers.com/lover/LJK">colour lovers</a>.</p>
-
-<p>One of the things I hadn’t counted on was consolidating 10 years worth of blog posts into sensible categories as it was becoming a bit of a mess. When I first started blogging, wordpress didn’t exist, let alone tagging and I think I started out using categories in a manner to replicate them.</p>
-
-<p>There’s still a few things I’m not entirely happy with, such as how navigation is represented for single posts. I intend to tidy the theme up and release it back to the WordPress community, but for now I’m enjoying having finally got it out in the open. Feel free to let me know what you think.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/blogging">blogging</a>,  | <a href="/2013/01/21/new-year-new-theme/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/01/04/why-i-choose-popular-frameworks">Why I Choose Popular Frameworks</a></h1>
-<div class="author_meta">04 Jan 2013</div>
-<p>I feel compelled to write this post so late in the day after clocking <a href="https://gist.github.com/4454814">Tyler Renelle’s rant</a> on github about his problems with the popularity of certain JS frameworks (in the main <a href="http://backbonejs.org">Backbone.js</a>). After having written apps in a variety of JS frameworks (Backbone, Spine and Meteor), I’ve learned that the feature set of a framework is not the only thing I hold dear when making a choice between them.</p>
-
-<p>Documentation, support, learning curve and most importantly community are what also guide me when building anything. If I need to make an app quickly, I’ll of course develop it in my favourite tool (Backbone), because I’ve been using it for years and therefore doesn’t hold a cost. If I have a problem, I know there’s a ton of hackers who’ve probably already worked on solutions already and mechanisms are in place for them to offer advice. There may be better documented more capable tools, but I can’t foot the expense in the short term that might come with investigating something new and run the risk of hitting problems I can’t solve. In the long term, as a framework grows in popularity and garners these other factors then I may make that jump. </p>
-
-<p>The real reason these frameworks are popular right now is in part because they are already popular.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/backbone">backbone</a>, <a href="/tag/js">js</a>, <a href="/tag/popularity">popularity</a>,  | <a href="/2013/01/04/why-i-choose-popular-frameworks/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2013/01/02/2012">2012</a></h1>
-<div class="author_meta">02 Jan 2013</div>
-<p>So here we are in a brand new year. 2012 came and went without even the slightest apocalypse. Reflecting on what has been achieved this past year has found favour with others in the web profession so I thought I might try it. More importantly to me, it also seems like a good way to perhaps spur me on to achieve some firm targets this year.</p>
-
-<p>My circumstances have dramatically changed since January last year. I’ve gone from full time employment as a frontend/backend developer for Aardman to being self employed as a frontend developer for the majority of the year. This was (and still is) a scary leap. Finding work, managing finances whilst still trying to be a good father/husband is a sometimes difficult balancing act to perform. So far though (after 9 months and counting), I’m enjoying it.</p>
-
-<h2 id="events">Events</h2>
-
-<p>The amount of conferences/meetups that have been organised this side of the bridge has been fantastic, especially where I’ve not had such a long commute this year. I’ve been able to head along regularly but have had to be fairly choosy about the amount of events I can attend. It’s great to see such a blossoming community round here. I’ve also thought about organising my own event, though I think I have enough on my plate at the moment.</p>
-
-<h2 id="learning">Learning</h2>
-
-<p>JS has been my bread and butter this year. I’ve enjoyed digging deeper into various frontend frameworks and learning as much as I can about the language. Where I’ve known relatively little about the ins and outs of other backend languages, I feel like I actually have something to contribute here. I’ve continued tinkering with node.js on the backend and have used it as a build tool for much of the year. I spent some time learning a little Cocoa shortly after leaving Aardman and taking the <a href="https://education.10gen.com/">MongoDB developer training course by 10gen</a>. Whilst I found it difficult fitting the course in around everything, I can highly recommend it. I’ve even developed a couple of things myself, which I hope to tidy up and release over the coming year. I’ve not been able to write a great deal about what I’m learning, but hope that will soon change. Some of my most popular posts here relate to use of CouchDB and node.js from many moons ago.</p>
-
-<h2 id="focus">Focus</h2>
-
-<p>I already had a number of side projects running before the start of last year but I’ve had a number of ideas for tools and a fairly major service I’d like to work on across 2012. I plan on releasing more details soon, but would love to have a recurring revenue stream from one of these coming in at some point this year. I find I can easily stray from this path and get distracted by other less fruitful ideas I have. I’m going to make it a resolution that I remain committed to one thing at a time, whilst putting to bed ideas that haven’t worked out.</p>
-
-<h2 id="design">Design</h2>
-
-<p>As much as I feel like I have adequate design chops, I’ve not had the opportunity to demonstrate them publicly. I’d love to redesign <a href="http://ianwootten.co.uk">several</a> <a href="http://niftydigits.com">of my</a> <a href="http://fairandbare.com">sites</a> to a standard that I feel reflect my skills as a web craftsman. I’m currently working on developing a wordpress theme which I hope to contribute back to the community once I’m done.</p>
-
-<p>So in all, it’s been a good, 2012. I’ve not fitted everything I might like in, but much of the content of my projects and work I had no idea about back at the start of last year. That also means you have something to look forward to from me in 2013. </p>
-
-<p>Happy New Year everyone.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/events">events</a>, <a href="/tag/learning">learning</a>, <a href="/tag/life">life</a>, <a href="/tag/retrospective">retrospective</a>,  | <a href="/2013/01/02/2012/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/11/23/oh-crap-im-a-frontend-developer">Oh Crap, I&#8217;m a Frontend Developer</a></h1>
-<div class="author_meta">23 Nov 2012</div>
-<p>When I was first tiptoeing in the waters of web development (early 2000′s), getting a grips on job descriptions was simple. There were 2 types of people in our industry: designers or developers. You either drew websites, or you built websites – that was it.</p>
-
-<p>As time went on people seemed to invent new titles: “UX Designers” were the first to appear on the scene to me, and <a href="http://adactio.com/journal/1596">we’re still to this day figuring out what this role really entails</a>. The one that particularly got my hair up though was a “Frontend Developer”. Basically, going from the skills that were listed with these roles (HTML, CSS, JS) it was a designer who could also do a bit of jQuery…. Not a real developer then. Not someone who pokes around with backend scripts and really knows what’s going on, right? Someone who can properly structure apps and create proper object oriented classes. It got my hair up because it seemed like an attempt to poach credentials from us hardworking devs. How dare they. Losers.</p>
-
-<p>Time passed…. I got a real job….. The industry invented more job titles….</p>
-
-<p>My first role was as a PHP/MySQL developer. I also started having to make decisions on frontend design and behaviour without having a formal education in either. I was, in my own projects at least, the only person to do such work. Outside of work during my first job, I decided to play with two hot technologies at the time: CouchDB and node.js. I geeked out about both, using document based stores and Javascript server-side – but hated the steep learning curve that came with having to use JS. It also missed many of the constructs I’d become used to in other languages.</p>
-
-<p>I’d seen a great deal of realtime apps and knew behaviour in my own apps should be keeping up. What I had could be better, much better. It was about here I probably started appreciating how much work was involved in a typical browser based app. I started using <a href="http://backbonejs.org">backbone.js</a> with a view to better organising the mess of JS that typically sat next to my markup. There wasn’t a great deal of help around, so I read a book as an aide….. I had to properly approach what was going on in the browser as I would do any other software. Hmm, weird. JS in the browser had up until now, been an afterthought to “jazz stuff up”. Developing real, well designed software in the browser however really floated my boat. I prototyped a simple calendar app and it worked fantastically well.</p>
-
-<p>Since then, I’ve been lucky enough to move into a full time contract role as a Javascript Developer – or a Frontend Web Developer, if you like. I probably would have been shocked had someone suggested this 5 or so years ago.</p>
-
-<p>I’m really enjoying being part of the community around JS, the ever increasing list of libraries being posted and patterns for development. Hopefully I’ve learnt to be a little more discerning of job titles than I have been in the past.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/couchdb">couchdb</a>, <a href="/tag/js">js</a>, <a href="/tag/nodejs">nodejs</a>,  | <a href="/2012/11/23/oh-crap-im-a-frontend-developer/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/11/20/essential-cinema-lovefilm">Essential Cinema According to Lovefilm</a></h1>
-<div class="author_meta">20 Nov 2012</div>
-<p>Given there’s a bit of lovefilm bashing <a href="http://www.tomalloyd.com/lovefilm-hate-email/">going on in Wales</a> at the moment, I thought I’d chime in with the most frustrating thing I found with communications from lovefilm. </p>
-
-<p>Check out the following weekly email I used to receive (I’ve since unsubscribed), along with my annotations.</p>
-
-<p><a href="http://www.lovefilm.com/emailpublic/cmsnewsletter/uk-newsletter/LOVEFiLM-Newsletter/2012/Newsletter-Issue-No-409?cid=lfnl409tlweb&#038;brand=lovefilm"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/11/Read-Newsletter-Issue-409-5.jpg" alt="" title="Read Newsletter Issue 409 5" width="470" height="906" class="alignnone size-full wp-image-569" /></a></p>
-
-<p>I really couldn’t care less about who lovefilm are sending into cinema’s to perform reviews and certainly don’t want it to be the first text I see in relation to that image. </p>
-
-<p>Also, the first thing I’m drawn to is the image. Why lead me away from the title of that movie and make work to find the text for the heading? Don’t make the title and preview exactly the same size, or divide them up!</p>
-
-<p>End of rant.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/design">design</a>, <a href="/tag/lovefilm">lovefilm</a>,  | <a href="/2012/11/20/essential-cinema-lovefilm/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/09/04/recovering-images-from-sd-cards-with-photorec">Recovering Images from SD Cards with PhotoRec</a></h1>
-<div class="author_meta">04 Sep 2012</div>
-<p>I had the horrible situation last Sunday following removing a number of pictures using an SD reader from my SD card that when I inserted it in my camera, it registered nothing upon it. My heart sunk, because this card is stuffed full of images of me and my family (along with my 1 year old son growing up) and I was unsure of which ones I’d actually backed up. After perusing the hidden files on the card, all I could discover was the files I’d most recently transferred from the card….great…</p>
-
-<p>Partly this was my own fault – I’d already experienced problems with the reader in question when trying to write images for my <a href="http://raspberrypi.org">Raspberry Pi</a> and shouldn’t have used it for transferring images I care about. The card in question is a uber cheapo <a href="http://www.amazon.co.uk/Integral-USB-Single-Slot-Reader/dp/B000VY80AM/ref=sr_1_1?ie=UTF8&#038;qid=1346533453&#038;sr=8-1">Integral USB 2.0</a>. Despite what the amazon reviews say, steer well clear of it – this has been a pain from day one, with intermittent transfer problems which triggered this situation.</p>
-
-<p>After a little more digging, I came across <a href="http://www.cgsecurity.org/wiki/PhotoRec">Photorec</a>, a commandline utility which seemed like it would hopefully help recover some of the images. I attempted to use it with my card reader, but given it’s credentials I’ve given above, found the scanning process would cut out and couldn’t get through the whole card. At this point the card was being reported empty….great…Given the way PhotoRec works, I understood it would still be possible to extract the images despite this. I decided to order another reader and hold fire until it had arrived – this time I opted for a <a href="http://www.amazon.co.uk/Kingston-Technology-Multi-Card-Reader/dp/B007PFQ0PC/">Kingston USB 3.0</a> (which I haven’t had any such problems with so far).</p>
-
-<h2 id="the-solution">The Solution</h2>
-
-<p>Here are the steps I followed after receiving my new sd reader to recover images from the card using PhotoRec. I’m listing them for anyone else who may have the same horrendous stomach wrenching problem I did last Sunday. It seems to have worked pretty well, with only 1 movie file coming out corrupted and about 500 images recovered.</p>
-
-<p>Firstly, I wanted to take a copy of the card as it currently stood following my investigation. For this I used df, diskutil and ddrescue.</p>
-
-<p>To determine where the card is currently mounted (look for the one that’s about the right size):</p>
-
-<pre class="bash">df -h
-</pre>
-
-<p>To unmount the card so we can fiddle with it:</p>
-
-<pre class="bash">sudo diskutil unmount /dev/disk1s1
-</pre>
-
-<p>To backup the card to a disk image on your macbook:</p>
-
-<pre class="bash">sudo ddrescue /dev/disk1s1 ./sdbackup/image.img backuplog
-</pre>
-
-<p>Finally, using PhotoRec scan the disk image that was just created. My image was FAT formatted I scanned the whole thing rather than just unallocated blocks.</p>
-
-<pre class="bash">sudo ./photorec ~/sdbackup/image.img
-</pre>
-
-<p>The final piece of this saga was to rename all the files PhotoRec created so they were in folders according to their exif data. My photos are all in folders like “2012_06_30″, so to have 500 files named “f0677440.jpg”, “f0688768.jpg” in a random PhotoRec directory would be pretty annoying. I had looked at setting up an automator task for this, but I ended up using <a href="http://www.petrosit.de/index.php/apps/12-pexiftool">PexifTool</a> for simplicities sake (I’m sure there are other alternatives). I believe if you go the Automator route, you may well have to install plugins in order to be able to extract exif data from files.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/linux">linux</a>, <a href="/tag/mac">mac</a>, <a href="/tag/photorec">photorec</a>,  | <a href="/2012/09/04/recovering-images-from-sd-cards-with-photorec/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/08/29/a-scientist-in-an-adventure-with-pirates">A Scientist in an Adventure with Pirates</a></h1>
-<div class="author_meta">29 Aug 2012</div>
-<p>This is a talk I did back in May at <a href="http://unifieddiff.co.uk">unifieddiff</a> about my time working as a web developer at Aardman Features. I talk quite a bit about the production process and what we take from staff in order to help them do their jobs properly. I quite enjoyed giving this talk – more so than those I’ve given in an academic capacity in the past.</p>
-
-
-<div class="entry_content">Tagged <a href="/tag/films">films</a>, <a href="/tag/stop motion">stop motion</a>,  | <a href="/2012/08/29/a-scientist-in-an-adventure-with-pirates/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="post">
-<h1><a href="/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think">You’re Nowhere Near as Good a Hacker as You Think</a></h1>
-<div class="author_meta">13 Aug 2012</div>
-<p>What are you doing? Why would you go down that road? Shouldn’t you be building something else? How long have you been doing this?</p>
-
-<p>Sure you can fool your clients into thinking you’re adding value to their product. I know the truth. But how did you – with all your expertise get to the point in thinking that’s what you’re really doing?</p>
-
-<p>This is your first project? Shouldn’t you be focusing on your clients problems? </p>
-
-<p>Why are you busily building a framework, when you’re already overdue? You know there’s any flavour of ORM available already right? What’s wrong with you? Where are your requirements?</p>
-
-<p>Do you think that you’re going to be able to produce something better than the thousands of contributors to that open source project you’re avoiding using? They’ve been doing it for years already, for thousands of use cases. You think somehow yours falls outside it’s catchment area? Seriously? How arrogant are you?</p>
-
-<p>You’ve been blinkered into thinking you’re an expert in areas you’re not. When your time is spent solving the wrong problems and you’re not invited back, I hope you’ll realise that you’re nowhere near as good a hacker as you think.</p>
-
-<div class="entry_content">Tagged <a href="/tag/advice">advice</a>, <a href="/tag/code">code</a>, <a href="/tag/freelance">freelance</a>,  | <a href="/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think/#disqus_thread">Leave a comment</a></div>
-</div>
-
-
-
-<div class="pagination">
-
-  <a href="/page/2" class="previous">Previous</a>
-
-<span class="page_number ">Page: 3 of 29</span>
-
-  <a href="/page/4" class="next">Next</a>
-
-</div>
-
-      <footer>
-        <div class="footer-about">
-          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+        <div class="post">
+          <h1><a href="/2013/08/14/a-decade-on-the-world-wide-web">A Decade on the World Wide Web</a></h1>
+      <div class="author_meta">14 Aug 2013</div>
+
+          <p>10 years ago today, <a href="http://www.ianwootten.co.uk/2003/08/14/blog-install">I started this blog</a>. That&#8217;s just under a 3rd of my life. In other words, that&#8217;s quite a long time ago.</p>
+<p>I started out using Movable type and very quickly (3 days later) <a href="http://www.ianwootten.co.uk/2003/08/17/all-change">ditched it</a> in favour of the <a href="http://cafelog.com">b2 &#8220;weblog tool&#8221;</a>, which WordPress was later spawned from.</p>
+<p>Back then, I blogged frequently about what was going on in my life, which tended to centre around University coursework rather than technical posts. These days, a lot has changed &#8211; I have a wife, son, house, business and as a result, blog a lot less frequently &#8211; which honestly, upsets me a little.</p>
+<p>It&#8217;s also crazy to look at the progress of WordPress over that time and how now, ten years on I&#8217;m considering moving away to a simpler, static tool.</p>
+<p>Given it&#8217;s now my industry, it would be easy for me to ponder what might have been over my time on the web (what if this, that..) but I&#8217;m left thinking that for all the facets of my life I do make visible on my blog, it&#8217;s the moments I don&#8217;t share that are most important to me.</p>
+<p>I wonder what the next decade will bring.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/Web">Web</a>,
+                
+              
+              | <a href="2013/08/14/a-decade-on-the-world-wide-web/#disqus_thread">Leave a comment</a>
+          </div>
         </div>
-      </footer>
-    </div>
-   <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+      
+        <div class="post">
+          <h1><a href="/2013/07/06/second-rate-britizens">Second Rate Britizens</a></h1>
+      <div class="author_meta">06 Jul 2013</div>
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-  </body>
+          <p>I decided to attempt a simple app this week, first using <a href="http://gocardless.com">GoCardless</a>, then later the <a href="http://stripe.com">beta of Stripe</a>. It requires the payment of funds between two individuals, neither of which might be a business. GoCardless suggests signing up to use their <a href="https://gocardless.com/docs/partner_guide">partner programme</a>, which involves registering a user as a merchant. This isn&#8217;t entirely suitable given the individual will be asked many queries on the nature of their business (which they don&#8217;t have). Stripe have a similar offering, known as <a href="https://stripe.com/connect">&#8220;Connect&#8221;</a> which asks similar questions. It&#8217;s at this point users would probably start turning away.</p>
+<p>The recently announced <a href="https://stripe.com/blog/send-payouts-with-stripe">&#8220;Payouts&#8221;</a> from Stripe, seems like the most appropriate solution, but it doesn&#8217;t yet exist in the UK (and it&#8217;ll probably be a while before it does). Bigger players like Amazon&#8217;s fps require that you have a US card and haven&#8217;t ever made noises that they may be expanding into European markets.</p>
+<p>As developers in the UK, we get a bit of a bum deal. Software products are often first targeted towards the biggest (US) market and we fine folks have to sit around and wait until the smaller pieces of the puzzle are picked up and put in place. Sucks to be us.</p>
+<p>I&#8217;ve blogged in the past about the many payment providers cropping up and their services being unavailable in the UK. I can understand why this happens, but it&#8217;s frustrating not least because it hinders any momentum that might be able to be built at an earlier date. </p>
+<p>I doubt I&#8217;ll ever have the same momentum as I did with my idea this week. It&#8217;s unlikely therefore, it will ever see the light of day. A US counterpart could easily offer an international version of my idea today.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/rant-business">rant business</a>,
+                
+              
+              | <a href="2013/07/06/second-rate-britizens/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/06/27/the-developer-dream">The Developer Dream</a></h1>
+      <div class="author_meta">27 Jun 2013</div>
+
+          <p>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I&#8217;m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I&#8217;ve mainly created these by myself &#8211; a casualty of doing paid work in the main like this too. </p>
+<p>Most of these ideas in the have been simple hacks &#8211; <a href="http://loveletterd.com">solutions to things that bug me</a>. <a href="http://fairandbare.com">One of them has been a proper business too</a>. I&#8217;m able to do something and make it happen, to potentially tap a huge audience. Get them to that first step. The problem I have is, not a single one of these so much as turns a profit, though they serve as wonderful educational devices for me. I would hazard a guess that some of them have indirectly got me work.</p>
+<p>Some of my ideas never get past the domain registration phase before being knocked on the head. A friend many years ago gave me the great quote that &#8216;My domains are my todo list&#8217;. This totally hits the nail on the head for me &#8211; if I&#8217;ve felt like an idea was good enough to make it to the registration phase, there&#8217;s something there worth pursuing. Unfortunately, I have quite a long list to work through.</p>
+<p>I heard it said that &#8220;The Developer Dream&#8221; is that we (developers) &#8220;build a product/service which we&#8217;re able to earn a living from&#8221;. But the majority of developers I know, don&#8217;t even begin to pursue the ideas they have. This surprises me. </p>
+<p>There seems to be such an abundance of opportunities that I can&#8217;t imagine not building my own ideas, however bad they might seem to others. </p>
+<p>Why hold back? Time? Yes, we have other commitments &#8211; family, work and maybe even a hobby or two. I&#8217;m not suggesting we make drastic sacrifices or sell our kids in order to create stuff. I&#8217;d would however, like to think that the payoff for building our ideas might make our initial holdups seem insignificant longer term. <a href="http://www.ianwootten.co.uk/2012/05/03/if-you-build-it">I&#8217;ve said it before</a> and I can&#8217;t speak from as the voice of successful experience, but what do I get out of never trying?</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/hacking">hacking</a>,
+                
+                <a href="/tag/ideas">ideas</a>,
+                
+                <a href="/tag/webdev">webdev</a>,
+                
+              
+              | <a href="2013/06/27/the-developer-dream/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/04/03/the-problem-with-full-stack-js-applications">The Problem with Full Stack JS Applications</a></h1>
+      <div class="author_meta">03 Apr 2013</div>
+
+          <p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It&#8217;s inevitable that there&#8217;s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you&#8217;re doing when knee deep in code.</p>
+<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I&#8217;ve certainly found myself tied up in this kind of knot. For example, if I&#8217;m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you&#8217;re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you&#8217;re working and if that&#8217;s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn&#8217;t the case when working in one language. My guess is you&#8217;re going to have to take a second glance in order to figure out where you are, which isn&#8217;t a big issue, but is frustrating.</p>
+<p>Currently my apps typically are structured like this:</p>
+<p>server.js (Main node/express file)<br>-lib (Classes for DB Calls)<br>-node_modules (Node requires)<br>-public (Client backbone app)<br>&nbsp;&nbsp;&nbsp;&nbsp;-css<br>&nbsp;&nbsp;&nbsp;&nbsp;-images<br>&nbsp;&nbsp;&nbsp;&nbsp;-js<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lib (Backbone and other dependencies)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-collections<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-views<br>-routes (Contains the main express routes)</p>
+<p>But I actually think the following is a better approach:</p>
+<p>-server<br>&nbsp;&nbsp;&nbsp;&nbsp;server.js<br>&nbsp;&nbsp;&nbsp;&nbsp;-lib<br>&nbsp;&nbsp;&nbsp;&nbsp;-node_modules<br>&nbsp;&nbsp;&nbsp;&nbsp;-routes<br>-client (Renamed from public)<br>&nbsp;&nbsp;&nbsp;&nbsp;-css<br>&nbsp;&nbsp;&nbsp;&nbsp;-images<br>&nbsp;&nbsp;&nbsp;&nbsp;-js<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-collections<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-views</p>
+<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn&#8217;t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don&#8217;t believe there is a solution.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/javascript">javascript</a>,
+                
+                <a href="/tag/web-development">web development</a>,
+                
+              
+              | <a href="2013/04/03/the-problem-with-full-stack-js-applications/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2013/03/28/so-you-want-to-run-a-fairtrade-business">So You Want to Run a Fairtrade Business?</a></h1>
+      <div class="author_meta">28 Mar 2013</div>
+
+          <p>This is a brief retrospective of what I&#8217;ve learned in the 6 years I&#8217;ve been running <a href="http://www.fairandbare.com" title="Fair &#038; Bare">Fair &#038; Bare</a>, a Fairtrade t-shirt company along with my wife. </p>
+<p>If you&#8217;re a new follower of mine, you heard right &#8211; <a href="http://www.fairandbare.com">I run a Fairtrade t-shirt company</a>. I&#8217;ve not actively been marketing it more recently for a number of reasons, but I still have a strong belief in our original vision. That vision was that Fairtrade shirts at the time weren&#8217;t being well received by the world, despite being available. We believed they could be, if we were only to find some that had good designs (and were possibly less &#8216;preachy&#8217;).</p>
+<p>So that&#8217;s what we set out to do. From 2007-2011 we were running as an online design competition, inspired mainly by Threadless and Emptees, and helped via a great community of designers through a site I built entirely myself (whilst doing a PhD, getting married and buying a house). I&#8217;ve since learned that I don&#8217;t believe the competition sourced design is the best fit for what we are trying to do, but it constantly excited me that we *could* do it. I still hope some day to be proved wrong though.</p>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<p>The Ethical market pales in comparison to the cheaper alternatives. That probably won&#8217;t come as news to you. Most people &#8211; like it or not, will buy cheap over quality if they&#8217;re perceived to be comparable. This has certainly been my experience so far, having touted our wares at student markets, Fairtrade stalls and online. Be prepared to experience it first hand, and to repeatedly go over your story to get people to part with their cash. That is, after all, your unique selling point.</p>
+<p>While we&#8217;re at it, if you&#8217;re selling online, be prepared to experience the same. When so much hard work has gone into creating your goods, you&#8217;ll find it heartbreaking to have a couple of people take up an offer from a newsletter of thousands. My advice would be not to get your hopes up….</p>
+<p>But don&#8217;t entirely despair. When you make those few sales you&#8217;ll feel such a strong connection with your customer, even though you may never meet them. Repeat customers will give you a warm glow inside and smile all day long.</p>
+<p>The Fairtrade supply chain is slow(er) and (more) fallible. We constantly had trouble with every supplier we used for our shirts over how quickly we could obtain stock and sometimes with the stock itself. Obviously, once our community had selected a design, we wanted it printed and available for sale. We knew we would have to wait for designs to be printed, but what we hadn&#8217;t counted on was how long it could take to get hold of shirts we&#8217;d ordered. Other businesses might be able to cope better with such delays. 2 months to go from selected to online is not ideal for our business model that relies on constant momentum, especially when we were dealing with a a single product at a time. </p>
+<p>Depending on your supplier, you may also experience variations in sizes and colour. Be wary, you&#8217;re going to have to deal with all the resulting issues that arise from these problems with your customers or be lumbered with stock you&#8217;re unable to shift.</p>
+<p>Times are hard for everyone. Since having started, 2 of the 3 suppliers we used have shut up shop and the third has changed it&#8217;s supplier. This has drastically reduced the options for us to the point of being unviable, which is one of the reasons we haven&#8217;t put out a new design since 2011. (If anyone is able to point me in the direction of other wholesale ethical brands, I&#8217;d be keen to hear about them).</p>
+<p>Fairtrade cotton, Fairtrade or fair trade? Organic? Soil association certified? You need to be aware of the differences, because competitors will use similar terms. Even though they mean different things to you, most customers don&#8217;t know the difference and lump them all in the same good for the producer pot.</p>
+<p>First impressions count. Originally, we used to send out our t-shirts in recycled packaging we sourced from envelopes we had kicking around our house. I have to cringe at this now &#8211; the idea that old crumply packets were being received with sticky-taped-on labels. That was our first physical impression on our customer. *Sigh*. Our heart was in the right place though, we didn&#8217;t (and still don&#8217;t) want to be creating more waste. We&#8217;ve since moved on to shipping goods out in recycled packets.</p>
+<p>Marketing is key. When you&#8217;re not marketing your goods, you&#8217;re not seen to be active. Just by talking about your business, you&#8217;ll get interest in your product and make sales. Our buzz came from regular competitions and launches of new shirts. With every new shirt we&#8217;d let our mailing list, community and followers know of its arrival.</p>
+<p>Finally, a word on branding. I constantly wrestle with wether we would have been better off branding ourselves first and foremost a t-shirt design company, rather than a Fairtrade one. I think the answer is yes. Our whole ethos was originally based around the lack of well designed Fairtrade shirts. Ultimately, if a design looks good, a customer is going to be happy paying a little more if it&#8217;s what they want. The ethical aspect of the cotton is, in their mind, a bonus. But if they&#8217;re not even visiting your site or stall because they see you first and foremost as an ethical brand, and that doesn&#8217;t entirely float their boat, then you&#8217;ve lost a sale.</p>
+<p>The whole experience of running <a href="http://www.fairandbare.com">Fair &#038; Bare</a> has been a bit of a roller coaster of highs and lows. I&#8217;ve learned so much from running it and hope to continue to do so.</p>
+<p>It wouldn&#8217;t be right of me to post about <a href="http://www.fairandbare.com">Fair &#038; Bare</a> here without letting my readers in on a special offer. For this Easter weekend, when you buy two shirts, you&#8217;ll get the third free on using the code &#8220;EASTEREGG&#8221; when checking out.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/fairtrade">fairtrade</a>,
+                
+                <a href="/tag/tshirts">tshirts</a>,
+                
+              
+              | <a href="2013/03/28/so-you-want-to-run-a-fairtrade-business/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+
+      <div class="pagination">
+          
+          <a href="/page/2" class="previous">Previous</a>
+          
+          <span class="page_number ">Page: 3 of 57</span>
+
+          
+          <a href="/page/4" class="next">Next</a>
+          
+      </div>
+    <footer>
+      <div class="footer-about">
+        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      </div>
+    </footer>
+  </div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
 </html>
+

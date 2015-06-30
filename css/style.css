@@ -336,7 +336,7 @@ ul.nav li a:hover {
 }
 
 /* line 262, ../../_sass/style.scss */
-.highlight {
+.highlight, .hljs {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -347,7 +347,7 @@ ul.nav li a:hover {
   margin: 20px 0;
 }
 /* line 268, ../../_sass/style.scss */
-.highlight pre {
+.highlight pre, .hljs pre {
   margin: 0px;
 }
 

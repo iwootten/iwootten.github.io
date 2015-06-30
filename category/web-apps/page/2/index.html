@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ian Wootten - Web Developer, Cardiff</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/fonts/open-sans.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/syntax.css" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,175 +18,183 @@
       ga('send', 'pageview');
 
     </script>
-    </head>
-    <body>
+</head>
+<body>
+
+<div class="container web-apps">
+    <header>
+      <nav>
+      <ul class="nav">
+        <li><a class="blog " href="/">Blog</a></li>
+        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
+        <li><a class="web-apps active" href="/category/web-apps">Web Apps</a></li>
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="contact" href="/contact">Contact</a></li>
+      </ul>
+      </nav>
+      <div class="clear"></div>
+    </header>
+
+      
+        <div class="post">
+          <h1><a href="/2012/02/16/where-s-my-full-stack-payment-service">Where&#39;s my Full Stack Payment Service?</a></h1>
+      <div class="author_meta">16 Feb 2012</div>
+
+          <p>Unless you&#8217;ve been living under a rock, you&#8217;ll realise that there&#8217;s an uprising against paypal amongst developers. Most of this stems from the multitude of <a href="http://www.huffingtonpost.com/2011/12/06/paypal-to-regretsy-sorry-_n_1132679.html">crazy requirements</a> they put upon sellers and the locks they can put upon your account without notice.</p>
+<p>This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal. None of these solutions are ideal though if you&#8217;re looking to make say, a service that bills on a monthly basis.</p>
+<p>Enter the subscription billing tools &#8211; there&#8217;s <a href="http://recurly.com/">recurly</a>, <a href="http://chargify.com/">Chargify</a> and <a href="http://saasy.com/">Saasy</a>, to name 3. All of these go some way to ease the management of customer subscriptions. This is great if you have an established banking history as a business and are able to get hold of a merchant account. Not so great for me &#8211; an independent developer with neither of those.</p>
+<p>Enter <a href="https://stripe.com/">Stripe</a>, a full-stack payment processor for developers which has no requirement on merchant accounts or gateways. Integration with your own website is as simple as pasting in some javascript. Sounds great&#8230;..Except I need to be in the US to use it. *Facepalm*. I even had beta access to stripe in it&#8217;s infancy and just had to smile at my invitation code.</p>
+<p>Recently here in the UK, <a href="http://gocardless.com">Go Cardless</a> has appeared with an interesting model, based around the use of direct debits to set up subscriptions and make payments. That strikes me as a little weird from a customer point of view. I&#8217;m ok paying my gas by direct debit, but would I be ok paying for a piece of software? Given it&#8217;s unusual for a website to bill this way, I&#8217;d argue most people wouldn&#8217;t be.</p>
+<p>Unfortunately for us independent developers in the UK, Go Cardless really is our best option until Stripe or some other full stack offering lands here. I know Stripe are supposedly working hard on doing so, but payments are at an incredibly frustrating point here right now.</p>
 
 
-    <div class="container web-apps">
-      <header>
-        <nav>
-        <ul class="nav">
-          <li><a class="blog" href="/">Blog</a></li>
-          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
-          <li><a class="web-apps active" href="/category/web-apps">Web Apps</a></li>
-          <li><a class="about" href="/about">About</a></li>
-          <li><a class="contact" href="/contact">Contact</a></li>
-        </ul>
-        </nav>
-        <div class="clear"></div>
-      </header>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/go-cardless">go cardless</a>,
+                
+                <a href="/tag/payments">payments</a>,
+                
+                <a href="/tag/stripe">stripe</a>,
+                
+                <a href="/tag/the-little guy">the little guy</a>,
+                
+              
+              | <a href="2012/02/16/where-s-my-full-stack-payment-service/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2011/03/31/a-survey-of-hype-in-web-development-podcasts">A Survey of Hype in Web Development Podcasts</a></h1>
+      <div class="author_meta">31 Mar 2011</div>
 
-          
-
-	<div class="post">
-	<h1><a href="/2008/01/30/location-based-job-boards">Location Based Job Boards</a></h1>
-<div class="author_meta">30 Jan 2008</div>
-	<p>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent <a href="http://djangogigs.com">job</a> and <a href="http://simonwillison.net/2008/Jan/23/djangopeople/">profile sites</a> in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don’t have time myself to do this though unfortunately – perhaps someone might like to chat about collaborating). What I’ve concluded is that being aware of those jobs within a certain area might be quite useful – and simple to implement. What you’d basically end up with is a situation where you could subscribe to updates on jobs in a particular field within a certain area (think – “tell me about all dev jobs within 50 miles”). Whilst this feature may exist on some other sites (though I’m unaware of it) my experience tells me that it probably isn’t executed particularly well.</p>
-
-
-	<div class="entry_content">Tagged <a href="/tag/boards">boards</a>, <a href="/tag/django">django</a>, <a href="/tag/jobs">jobs</a>, <a href="/tag/natbat">natbat</a>, <a href="/tag/simon-willison">simon willison</a>,  | <a href="/2008/01/30/location-based-job-boards/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2007/08/31/sharing-too-much">Sharing too much?</a></h1>
-<div class="author_meta">31 Aug 2007</div>
-	<p>I&#8217;ve heard a <a href="http://www.readwriteweb.com/archives/would_you_share_your_search_history.php">couple</a> of <a href="http://googlesystem.blogspot.com/2007/08/google-facebook-app.html">rumours</a> this evening that google may be launching a facebook app that allows your friends to see your search trends over time via your facebook mini feed. There&#8217;s some discussion over on <a href="http://facereviews.com/2007/08/28/google-facebook-application-a-hoax/">facereviews.com</a> that anything like this exists, but for me it raises an interesting question about how much information people are willing to share within their own &#8220;social networks&#8221;. Would I be comfortable with everyone knowing what I was searching for? Probably not at all &#8211; I don&#8217;t want everyone to be clued in to all those random tee sites I&#8217;m able to find. Probably nobody would really be interested, so whats the point anyway?</p>
-<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2007/08/google-facebook-app.png" title="Google Facebook App"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2007/08/google-facebook-app.png" alt="Google Facebook App" /></a><br />
-Image taken from Google Operating System</p>
-<p>It also brings to mind an idea that I&#8217;ve been toying with for sharing how links between pages are made, where details of hyperlink clicks are captured to some repository somewhere. This would make it it possible for users to have a series of heatmaps upon any page to display details of common links that other users choose to follow from one page to another, and common routes accross the net to particular pages. Similar issues for whether or not takeup would occur, or the information is indeed useful to everyone exist also.</p>
-
-	<div class="entry_content">Tagged <a href="/tag/facebook">facebook</a>, <a href="/tag/ideas">ideas</a>,  | <a href="/2007/08/31/sharing-too-much/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2007/04/12/joost-beta">Joost Beta</a></h1>
-<div class="author_meta">12 Apr 2007</div>
-	<p>This afternoon I was quite chuffed to discover that I&#8217;d been selected for a Joost beta invite. Joost is, in a nutshell, TV for the web . Kind of the opposite to that Current TV channel on Virgin Media. I&#8217;ve been playing with it this evening, mainly perusing the XL-Recordings and gaming channels.It all seems very good &#8211; a good seelction of channels (for me) straight off, with the ability to search Joost&#8217;s catalog of channels and add more to your collection. The interface (see shots below) is pretty swish and the advertising between shows (The maximum I endured was 2 * 10 second clips) does not detract from the channel content too much. Presumeably these are targeted advertisements, though it didn&#8217;t seem so from the few I watched. There is also the ability to interact in channels and a widget interface. I must point out that Joost is a legal service &#8211; I&#8217;m not in the business of pirating. It uses P2P (peer-to-peer), to distribute content to users &#8211; I had hardly any lags on my measly 2MB connection, although the full-screen content is compressed at quite a low bit rate.Apparently, the Mac version of joost works with the Apple remote, which I could see would make this a very pleasant experience. I think I&#8217;ll be playing with this toy a fair few more times this week.<a href="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface1.JPG" title="Joost"><img src="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface1.thumbnail.JPG" alt="Joost" /></a><a href="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface2.JPG" title="joostinterface2.JPG"><img src="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface2.thumbnail.JPG" alt="joostinterface2.JPG" /></a><a href="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface3.JPG" title="joostinterface3.JPG"><img src="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface3.thumbnail.JPG" alt="joostinterface3.JPG" /></a><a href="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface4.JPG" title="joostinterface4.JPG"><img src="http://webtyrant.com/wp-content/uploads/2007/04/joostinterface4.thumbnail.JPG" alt="joostinterface4.JPG" /></a></p>
-
-	<div class="entry_content">Tagged  | <a href="/2007/04/12/joost-beta/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2007/03/19/threadless-launches-threadlesskidscom">Threadless launches Threadlesskids.com</a></h1>
-<div class="author_meta">19 Mar 2007</div>
-	<p>Threadless has launched <a href="http://threadlesskids.com">threadlesskids.com</a> – like threadless, but for kids. I suppose that should come in handy for Jake and Shondis <a href="http://jakeandshondi.com/index/35/The_new_addition">recent announcement</a>. Anyway, it looks wicked – its amazing how the kids stuff costs more than adult though! My friends told me kids are expensive.</p>
+          <p>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they&#8217;re allowed to, it is their own podcast after all, often from their own businesses etc. I&#8217;m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless. </p>
+<p>One of these things is the title of the show itself. I don&#8217;t really get why its necessary to repeat the title (Sure I do really, to drum it into my head), given it&#8217;s going to be within the title of the mp3. I know what I&#8217;m listening to after all, because my favourite media player tells me. </p>
+<p>I&#8217;ve been wanting to count the number of times a show utters it&#8217;s name over its duration. Sure, I realise this is somewhat ocd and geeky, but hey. Here&#8217;s my results for a typical set of podcasts that I often listen to in a week. I&#8217;ve linked up the data I&#8217;ve used to create this chart on <a href="https://spreadsheets.google.com/ccc?key=0AiyMcCUnltKwdG85QnNKMnhneUVXMjJNUzVCa0kzNEE&#038;hl=en&#038;pli=1&#038;authkey=CJbb9a0L#gid=0">google spreadsheets</a>, for anyone else who may be interested to contribute to and build upon further. I gathered the data all myself by listening to each podcast and counting when mentions of the show were made but it may be a good excuse for me to experiment with amazon turk. </p>
+<p>The big web show comes out tops with one mention over 40 mins worth of show and boagworld comes last with 24 mentions of the show over its duration. (It&#8217;s unfortunate for boagworld that its theme tune includes a voice repeating the title in the theme. I did originally include echos, which would be 34 mentions, but my colleagues inform me this may be taking the experiment a little too far :))</p>
+<p>I plan to do the same for product mentions (adverts I guess) in a weeks worth of (different) episodes, but if anyone wants to go ahead and update with their own findings that would be great.</p>
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png" alt="" title="Own Web Show Mentions per Minute" width="600" height="371" class="alignnone size-full wp-image-445" /></a></p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/news">news</a>,  | <a href="/2007/03/19/threadless-launches-threadlesskidscom/#disqus_thread">Leave a comment</a></div>
-	</div>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/Web-Apps">Web Apps</a>,
+                
+                <a href="/tag/web-development">web development</a>,
+                
+              
+              | <a href="2011/03/31/a-survey-of-hype-in-web-development-podcasts/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2010/03/21/mixbooth">Mixbooth</a></h1>
+      <div class="author_meta">21 Mar 2010</div>
 
-    
-
-	<div class="post">
-	<h1><a href="/2007/01/18/future-of-web-apps-future-of-web-design">Future of Web Apps, Future of Web Design</a></h1>
-<div class="author_meta">18 Jan 2007</div>
-	<p>If anyone would like to contribute to allow me to attend the <a href="http://futureofwebapps.com">Future of Web Apps</a> or the <a href="http://futureofwebdesign.com">Future of Web Design</a> conferences over the next few months, I’d put together some independent reviews of the events on this site. As the funds of a lowly research student are not all that much cop, you can donate some funds using the <a href="http://webtyrant.com/donate/">donation page</a>.At the moment, registration for Web Apps is £195 + VAT (£595 + VAT including workshops), and Web Design is £59 +VAT.</p>
-
-
-	<div class="entry_content">Tagged  | <a href="/2007/01/18/future-of-web-apps-future-of-web-design/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2006/12/01/got-no-hot-friends-fake-your-space">Got no hot friends? &#8211; Fake Your Space!</a></h1>
-<div class="author_meta">01 Dec 2006</div>
-	<p><a href="http://fakeyourspace.com"><img id="image36" src="http://webtyrant.com/wp-content/uploads/2006/12/fakeyourspace.PNG" alt="fakeyourspace" /></a>I heard about <a href="http://www.fakeyourspace.com">fakeyourspace</a> via <a href="http://mashable.com/2006/11/30/fakeyourspace-launches-buy-sexy-myspace-friends/">mashable</a> today, which offers the ability to purchase your own social networking friends to leave messages and comments on communities such as myspace and facebook (the only two web pages I ever see to be open when supervising university labs). In their own words:<em>“If you are tired of seeing everyone else with the hottest friends and want some hotties of your own, then this is the place for you.”</em>For the princely sum of $1.99 – or $0.99 as an introductory offer, you can purchase a friend to leave you two comments on your profile per week. The photo’s seem to all rather fake, as their name would suggest.I would give you some more stats, but it seems that fakeyourspace is either suffering from the mashable effect (being mashed?), or indeed that its been pulled for being completely and utterly ridiculous. I wouldn’t be surprised if myspace or facebook had been on their backs in order to cut the kind of fake networking that such a system would introduce. They could easily kill each of the profiles which had been created on any of their networks if not.</p>
+          <p><a href="http://www.mixbooth.com">Mixbooth</a> is a dj mix hosting service I created several years ago. At the time there wasn&#8217;t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you&#8217;d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it. It was good at the time and I got quite a buzz out of seeing new uploads appearing and hearing what others had created. I took the decision to end use of <a href="http://www.mixbooth.com">mixbooth</a> after about a year of having a couple of mixes a week uploaded. This was mainly due to academic commitments at the time.</p>
+<p>Anyway, I&#8217;ve been working on a rebuild of it for some time now. So I&#8217;m letting it loose on those who might be interested. I&#8217;m no longer hosting mixes, but hopefully exchanging useful info on them and those artists who feature within and allowing people to chat about them. It&#8217;s not everything I want it to be right now, but hopefully will serve to a use to djs other than myself. If you want to have a play, head to <a href="http://www.mixbooth.com/signup">www.mixbooth.com/signup</a> and I&#8217;ll get an invite out. I&#8217;ll also be tweeting updates via <a href="http://twitter.com/mixbooth">@mixbooth</a>.</p>
 
 
-	<div class="entry_content">Tagged  | <a href="/2006/12/01/got-no-hot-friends-fake-your-space/#disqus_thread">Leave a comment</a></div>
-	</div>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/dj">dj</a>,
+                
+                <a href="/tag/mixes">mixes</a>,
+                
+                <a href="/tag/Music">Music</a>,
+                
+              
+              | <a href="2010/03/21/mixbooth/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging">Stephen Fry and the Ascent of &quot;Micro Blogging&quot;</a></h1>
+      <div class="author_meta">06 Feb 2009</div>
 
-    
-
-	<div class="post">
-	<h1><a href="/2006/12/01/does-threadless-rule-or-not">Does Threadless rule or not?</a></h1>
-<div class="author_meta">01 Dec 2006</div>
-	<p><a href="http://www.threadless.com/?streetteam=scrumpyjack"><img src="http://www.threadless.com/scrap/myspace/lovethreadless.gif" border="0" /></a>Last night I perused a number of articles describing the success of my favourite t-shirt store <a href="http://threadless.com">threadless</a>, the first of which – over at <a href="http://www.37signals.com/svn/posts/68-7-reasons-why-threadless-rules">37Signals</a> reviews in a positive light and the <a href="http://www.hiphipuk.co.uk/2006/11/07/7-reasons-why-threadless-dont-rule-as-much-as-they-used-too/">second in a more negative one</a>.<a href="http://threadless.com">Threadless</a> is a t-shirt company with a difference, it’s a 24-7 competition allow you to become the designer. Designs are chosen by the team, and are able to be rated by the community that operates around the website.For anyone who knows me, they’ll know I love threadless tees – I believe I’m on my 4th one this week, and I have more in the post. I even got <a href="http://flickr.com/photos/imw/256308445/">engaged in one of their t-shirts</a>, although it was possibly the most highly innappropriate one to do it in.<center>
-  <a href="http://www.flickr.com/photos/imw/256308445/" title="Engaged"><img src="http://static.flickr.com/79/256308445_df791e697c.jpg" width="500" height="375" alt="CIMG7458.JPG" /></a>
-</center>I </p>
-
-<p><a href="http://flickr.com/photos/imw/255906494/">visited</a> <a href="http://flickr.com/photos/imw/255906648/">them</a> when as I was about in Chicago, though I think they probably thought I was a bit of an English loon. I find their designs original and amusing but it seems that those who kicked off the site are kicking back with some negative comments on what the sites community now represents. It shook me a bit that not everyone is as overly enthusiastic with them as I.<center>
-  <a href="http://www.flickr.com/photos/imw/255906494/" title="The coolest dude on earth"><img src="http://static.flickr.com/110/255906494_650a733365.jpg" width="375" height="500" alt="Chicago - Day 5 001" /></a>
-</center>+’s:(from 37Signals) </p>
-
-<p><strong>They’re playful</strong> – I have to say that this is one of the aspects I find most appealing, just the sheer comedy value to be found in not only their shirt designs, but the website (including many videos of daily threadless life), their emails, their attitude to the popularity. It’s great, it makes people feel good.<strong>It’s driven by community</strong> – This is what makes any web app successful but it seems threadless have been at it from day one and done a really good job at integrating it into their site. 37Signals points out the fact that participation is equal (though is visually far larger on their design), to the main consumer reason for visiting the site. When I was about to head out to Chicago, I contacted threadless as a customer to query the length of time it was taking to get an order out to me, and cheekily asked if they had any recommendations for places to visit while I was out there. Brianne, their customer service lass, replied with a huge description of what there was to do in the area, along with her personal favourites – its that kind of dedication to their community which builds them loyal customers.-’s:<strong>Bad Canvas, Second Rate Knock Offs</strong> – I don’t think their t-shirts are bad quality! Blimey, they’re only $10 half the time! Seriously, the printing quality claims and ‘feel’ of the shirts used are all a bit unfounded I think and more likely the result of teens who don’t know how to execute proper household management. The second aspect there however is going to be tackled when they soon start using their <a href="http://www.threadless.com/news/88235/EXCITING_NEWS_ABOUT_THE_TEES_WE_PRINT_ON">own specially designed material</a>. I read one example of a chap complaining of bad quality, who then went on to say he’d purchased a bunch more – surely they can’t be all that bad to warrant further purchases? As for second rate knock offs, I can’t say that I know the design community inside out, but I know I’ve never seen any of the designs anywhere else, and thats half the reason I love them.<strong>It’s myspace with t-shirts</strong> – Ah, yes, I feel your pain. Although I love what I can get out of threadless with a passion (i.e tees), I certainly despise myspace with a huge amount of disgust. I’ve previously blogged about the fact that <a href="http://webtyrant.com/2006/11/13/do-web-users-want-web-standards/">myspace</a> needs to sort out its web standards, I also have a certain distaste for the types of people who hang out in such virtual communities, with nothing better to do. If threadless is the t-shirt equivalent of myspace, they’ve got two aspects right (t-shirts, web standards), but then nothing can alter the types of people that hang out there, at least not this instant. I think these types are always going to be of a certain nature. I’m oblivious to these users, as I’m not actively contributing in this manner, I’m just the consumer, so what does that really matter to me? Of course it would be embarrasing to meet said teens in my university class wearing the same shirts, but I’m in the uk and I haven’t seen many people with threadless this side of the country. In fact, I’ve only ever seen them in Chicago (go figure!), and Singapore.Anyway, I still assert that I love threadless, despite other opinions and people will still be getting shirts as presents over christmas. I may however, try to attempt getting tees from other equally good shirt sites, for fear of wearing clothing resembling my students.For those of who appreciate them also, check out this image of how one of their employees, charlie will soon be working daily:<center>
-  <a href="http://www.flickr.com/photos/skaw/310567934/"><img src="http://static.flickr.com/102/310567934_e3cef4d5af.jpg" /></a>
-</center>That’s just pure quality.</p>
-
-
-	<div class="entry_content">Tagged <a href="/tag/consumer">consumer</a>, <a href="/tag/news">news</a>,  | <a href="/2006/12/01/does-threadless-rule-or-not/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2006/11/14/future-of-web-applications-london-07">Future of Web Applications &#8211; London 07</a></h1>
-<div class="author_meta">14 Nov 2006</div>
-	<p><a href="http://futureofwebapps.com"><img id="image32" src="http://webtyrant.com/wp-content/uploads/2006/11/fowa2007-small.png" alt="FOWA07" /></a>Registration is open for the <a href="http://futureofwebapps.com">Future of Web Apps</a> conference in London 07. I’d love to go, loads of great companies/people talking (good to see Last.fm making an appearance), loads of schmoozing (if thats the appropriate word), but unfortunately absolutely jack to do with my PhD, so no funding.</p>
+          <p><a href="http://twitter.com/">Twitter</a> is all over the news at the moment. For the uninitiated, it allows you to list short updates of what you are doing at any time. BBC News seemed to have an all-out assault at the end of January raving about it at every opportunity &#8211; <a href="http://news.bbc.co.uk/1/hi/world/americas/7834755.stm">the first moments of the Hudson plane landing</a>, an short chat about it by Stephen Fry on Friday Night with Jonathan Ross and <a href="http://news.bbc.co.uk/1/hi/entertainment/7845823.stm">this short clip on iPlayer</a> by <a href="http://www.stephenfry.com/blog/2009/01/29/twitter/">Stephen Fry again</a>. For Stephen Fry, this has meant an insane amount of new followers, indicated by the stats by twittercounter, which are shown below.</p>
+<p><a href="http://twittercounter.com/stephenfry/month"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2009/02/stephenfry-twitcount-300x236.gif" alt="Stephenfry&#039;s Twittercounter" title="Stephenfry Twittercounter" width="300" height="236" class="size-medium wp-image-302" /></a></p>
+<p>Notice the stats for 27th January &#8211; a full 20,978 extra followers in a single day! My <a href="http://twitter.com/ironyboy">own profile</a> has a paltry 38 in comparison for all time!, which is about 30 more friends than I actually have offline&#8230;</p>
+<p>I guess this huge upsurge is in part due to the fact that Stephen is such a well known comedian in the UK and by no means a stranger to the web. Just yesterday <a href="http://www.kottke.org/09/02/stephen-fry-stuck-in-elevator-twittering">Jason Kottke observed his day as deciding &#8220;to start his own reality chat show after becoming stuck in an elevator&#8221;</a>. He also has an <a href="http://stephenfry.com">awesome blog</a> and <a href="http://www.stephenfry.com/media/audio/109/series-2-episode-3--language/">podcast</a>. He also is a very open advocate of <a href="http://www.gnu.org/fry/happy-birthday-to-gnu.html">open source</a> and free software. How on earth he finds the time to live both his life virtually and as television celebrity I do not know. But I like the cut of his jib.</p>
+<p>It seems micro-blogging is truly being picked up by the masses. I really enjoy it, but ideally I&#8217;d love to be using a decentralised open source service, hosted on my own personal webspace. I&#8217;d like to suggest the Open Micro Blogging service, <a href="http://laconi.ca">laconi.ca</a> as the way forward &#8211; but then I also want to be able to reply to my friends on twitter and them to me and I don&#8217;t think true two way cross network chat will happen for a while. I see <a href="http://wordpress.org">wordpress</a> to <a href="http://blogger.com">blogger</a> as <a href="http://laconi.ca">laconi.ca</a> is to <a href="http://twitter.com">twitter</a>. I&#8217;m actually surprised that there doesn&#8217;t seem to be a concerted effort from any one of the current big blog companies right now to push for a more open alternative. The automatticians have put out <a href="http://en.blog.wordpress.com/2008/01/28/introducing-prologue/">prologue</a> but it doesn&#8217;t seem to have been touched for over a year and only supports sharing amongst groups (as in a working environment)&#8230;that&#8217;s no fun for the rest of us.</p>
+<p>Bring on a true open web status service, (complete with adopters) where I can update any one of my friends on my activities by them following a status feed on my homepage and vice versa. This requires clients who make use of such services though and right now twitter is stronger in that regard.</p>
 
 
-	<div class="entry_content">Tagged <a href="/tag/news">news</a>,  | <a href="/2006/11/14/future-of-web-applications-london-07/#disqus_thread">Leave a comment</a></div>
-	</div>
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/microblogging">microblogging</a>,
+                
+                <a href="/tag/statistics">statistics</a>,
+                
+                <a href="/tag/stephenfry">stephenfry</a>,
+                
+                <a href="/tag/twitter">twitter</a>,
+                
+              
+              | <a href="2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
+          <h1><a href="/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming">Sweetcron is pretty sweet at Lifestreaming</a></h1>
+      <div class="author_meta">31 Aug 2008</div>
 
-    
-
-	<div class="post">
-	<h1><a href="/2006/11/13/do-web-users-want-web-standards">Do Web Users Want Web Standards?</a></h1>
-<div class="author_meta">13 Nov 2006</div>
-	<p>I was thinking about this earlier and was trying to make an educated answer. What I would note is that it is primarily content which drives users to use sites, we can see that through all manner of feeds and low bandwidth sites across the net. Without content, theres no point in sticking up a website. You can see demonstrations of that assertion here from time to time. It’s also fairly visible through all manner of seedy content on the web as users will be quite happy to sit through the many pop-ups and poorly formatted text to get to that bunch of images which they’re after.Design ends up just being the icing on the cake for users, but for other (perhaps) more hardcore users such as any number of programmers, it can be an ultimate turn off to see the horrendous environment which content which we thought we might be interested in is displayed.I think the reason I’ve been pondering this is the huge amount of extremely popular social networking sites which I’ve accessed which just don’t seem to abide by the rules which those of us who have been programming on the web have become accustomed to adhering to. I am of course referring to <a href="http://webstandards.org">web standards</a> and their apparent lack of appearance at <a href="http://myspace.com">myspace</a>. They’ve recently risen to light (as if they ever went away) as <a href="http://myspace.com">myspace</a> have been in talks with O2 about the <a href="http://uk.techcrunch.com/2006/11/13/myspace-in-talks-with-uk-mobile-networks/">possibilities of accessing pages via mobile</a>. How can they get away by flouting design rules? Have we been lied to? Should we never have bothered? It’s kind of a joke that an application so recently on the scene is so buggy.I for one feel accomplished at the end of the day knowing that whatever I’ve produced is beautiful code (or at least my best attempt at it). It’s going to work well, and hopefully for a long time if standards are adhered to by browsers in the future too. It doesn’t need <a href="http://www.techcrunch.com/2006/08/14/browster-20-makes-myspace-easier-to-use/">other applications</a> to make it navigable either. Despite all its buggy pages though, <a href="http://myspace.com">myspace</a> must be good at something, right? It’s not just all for the kids? It’s allowed people and artists to listen to full tracks by one another and browse for similar music via those peoples friends. Oh what? – That’s it?A recent perusal through a free music mag “salvo” from my local fopp shows that out of the 10 up-and-coming artists listed, none are without a myspace page, and none offer any other point of contact. It’s kinda nice when communication is provided like this to those who want/need it, but for my part I’d much prefer if they had a wordpress blog sat on their own domain, or at least used <a href="http://wordpress.com">wordpress.com</a>.</p>
+          <p>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to <a href="http://sweetcron.com">Sweetcron</a>. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web. You can see mine over <a href="http://ianwootten.co.uk/stream">here</a> (although is mostly twitter updates for the minute).</p>
+<p>What sets this lifestream software apart from others is that as its opensource it can be downloaded, modified and hosted upon your own servers. That means you&#8217;re free to mess about with it as you like and maybe customise the page in your own snazzy design. It&#8217;s also based on the lovely codeigniter PHP framework from the peeps at ellislabs, which I&#8217;ve used a number of times now. You&#8217;ll need to modify the .htaccess and codeigniter config to get it working in a sub-folder, but it&#8217;s all fairly easy and self explanatory. </p>
+<p>The author, <a href="http://www.yongfook.com">Yong Fook</a> has done well to put this out as a side project all on his tod. Whilst my design looks fairly basic, there is a more fancy version included that looks a lot like Yongs homepage.</p>
+<p>If you&#8217;re a proper geek, a <a href="http://adactio.com/journal/1202">homebrewed version of a lifestream</a> might be more your style.</p>
 
 
-	<div class="entry_content">Tagged  | <a href="/2006/11/13/do-web-users-want-web-standards/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
-	<div class="post">
-	<h1><a href="/2006/11/07/carson-systems-shows-us-the-money">Carson Systems shows us the money</a></h1>
-<div class="author_meta">07 Nov 2006</div>
-	<p><a href="http://www.carsonsystems.com/">Carson Systems</a> is showing the details of how <a href="http://www.barenakedapp.com/dropsend/dropsend-monthly-profit">dropsend stacks up in terms of monthly profit</a>. Ryan states that at a conservative estimate by December ’07, it’ll be making $21k/mo. He also seems to be beating off a bit of bad feedback on the advertising which has/hasn’t been done.</p>
-
-
-	<div class="entry_content">Tagged <a href="/tag/news">news</a>,  | <a href="/2006/11/07/carson-systems-shows-us-the-money/#disqus_thread">Leave a comment</a></div>
-	</div>
-
-    
-
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/codeiginiter">codeiginiter</a>,
+                
+                <a href="/tag/ellislabs">ellislabs</a>,
+                
+                <a href="/tag/lifestream">lifestream</a>,
+                
+                <a href="/tag/opensource">opensource</a>,
+                
+                <a href="/tag/PHP">PHP</a>,
+                
+              
+              | <a href="2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
 
       <div class="pagination">
-        
-          <a href="/category/web-apps/page/1" class="previous">Previous</a>
-        
-        <span class="page_number ">Page: 2 of 3</span>
-        
-          <a href="/category/web-apps/page/3" class="next">Next</a>
-        
+          
+          <a href="/category/Web-Apps" class="previous">Previous</a>
+          
+          <span class="page_number ">Page: 2 of 5</span>
+
+          
+          <a href="/category/Web-Apps/page/3" class="next">Next</a>
+          
       </div>
+    <footer>
+      <div class="footer-about">
+        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      </div>
+    </footer>
+  </div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
 
-      <footer>
-        <div class="footer-about">
-          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
-        </div>
-      </footer>
-    </div>
-   <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-  </body>
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
 </html>
+

@@ -1,15 +1,13 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Splitting a date range in Python</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/fonts/open-sans.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/syntax.css" />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,73 +18,69 @@
       ga('send', 'pageview');
 
     </script>
-    </head>
-    <body>
+</head>
+<body>
 
-    
-        <div class="container web-apps">
+<div class="container blog">
       <header>
         <nav>
         <ul class="nav">
-          <li><a class="blog" href="/">Blog</a></li>
+          <li><a class="blog active" href="/">Blog</a></li>
           <li><a class="javascript" href="/category/javascript">Javascript</a></li>
-          <li><a class="web-apps active" href="/category/web-apps">Web Apps</a></li>
+          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
           <li><a class="about" href="/about">About</a></li>
           <li><a class="contact" href="/contact">Contact</a></li>
         </ul>
         </nav>
         <div class="clear"></div>
       </header>
-    
 
       <div class="post">
-	<h1><a href="/2014/07/01/splitting-a-date-range-in-python">Splitting a date range in Python</a></h1>
-<div class="author_meta">01 Jul 2014</div>
-<p>Dates are one of those annoying things that shouldn’t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I’m currently working on. Hopefully someone else will find them helpful.</p>
+        <h1><a href="/2014/07/01/splitting-a-date-range-in-python">Splitting a date range in Python</a></h1>
+        <div class="author_meta">01 Jul 2014</div>
+        <p>Dates are one of those annoying things that shouldn&#39;t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I&#39;m currently working on. Hopefully someone else will find them helpful.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-keyword">import</span> datetime, calendar
 
-<div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">calendar</span>
+<span class="hljs-comment"># Find the delta between two dates based on a desired number of ranges</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datedelta</span><span class="hljs-params">(startdate, enddate, no_of_ranges)</span>:</span>
+    start_epoch = calendar.timegm(startdate.timetuple())
+    end_epoch = calendar.timegm(enddate.timetuple())
 
-<span class="c"># Find the delta between two dates based on a desired number of ranges</span>
-<span class="k">def</span> <span class="nf">datedelta</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">no_of_ranges</span><span class="p">):</span>
-    <span class="n">start_epoch</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">startdate</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
-    <span class="n">end_epoch</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">enddate</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+    date_diff = end_epoch - start_epoch
 
-    <span class="n">date_diff</span> <span class="o">=</span> <span class="n">end_epoch</span> <span class="o">-</span> <span class="n">start_epoch</span>
+    step = date_diff / no_of_ranges
 
-    <span class="n">step</span> <span class="o">=</span> <span class="n">date_diff</span> <span class="o">/</span> <span class="n">no_of_ranges</span>
+    <span class="hljs-keyword">return</span> datetime.timedelta(seconds=step)</code></pre></div><p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-comment"># Edit 18/07/2014 - I realised dates needed the hrs, mins an secs correctly</span>
+<span class="hljs-comment"># adjusted to beginning / end of day</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datespan</span><span class="hljs-params">(startdate, enddate, delta=datetime.timedelta<span class="hljs-params">(days=<span class="hljs-number">1</span>)</span>)</span>:</span>
+    currentdate = startdate
 
-    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">step</span><span class="p">)</span></code></pre></div>
+    <span class="hljs-keyword">while</span> currentdate + delta &lt; enddate:
+        todate = (currentdate + delta).replace(hour=<span class="hljs-number">23</span>, minute=<span class="hljs-number">59</span>,second=<span class="hljs-number">59</span>)
 
-<p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
+        <span class="hljs-keyword">yield</span> currentdate, todate
 
-<div class="highlight"><pre><code class="python"><span class="c"># Edit 18/07/2014 - I realised dates needed the hrs, mins an secs correctly</span>
-<span class="c"># adjusted to beginning / end of day</span>
-<span class="k">def</span> <span class="nf">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
-    <span class="n">currentdate</span> <span class="o">=</span> <span class="n">startdate</span>
+        currentdate += delta
+        currentdate.replace(hour=<span class="hljs-number">0</span>, minute=<span class="hljs-number">0</span>,second=<span class="hljs-number">0</span>)</code></pre></div><p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-comment"># Get timedeltas based on splitting the range by 10</span>
+delta = date_delta(startdate, enddate, <span class="hljs-number">10</span>)
 
-    <span class="k">while</span> <span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="n">enddate</span><span class="p">:</span>
-        <span class="n">todate</span> <span class="o">=</span> <span class="p">(</span><span class="n">currentdate</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span><span class="n">second</span><span class="o">=</span><span class="mi">59</span><span class="p">)</span>
+<span class="hljs-keyword">for</span> from_datetime, to_datetime <span class="hljs-keyword">in</span> datespan(startdate, enddate, delta):
+    <span class="hljs-keyword">print</span> from_datetime, to_datetime</code></pre></div><p>The result forms part of the following d3 chart:</p>
+<p><blockquote class="twitter-tweet" lang="en"><p>Made some updates to that there commerce dashboard (now uses summary ranges on x-axis), what do people think? <a href="http://t.co/AatFxBRnsC">pic.twitter.com/AatFxBRnsC</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/481780932496863233">June 25, 2014</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-        <span class="k">yield</span> <span class="n">currentdate</span><span class="p">,</span> <span class="n">todate</span>
+        <div class="entry_content">Tagged
+            
+              
+              <a href="/tag/coding">coding</a>,
+              
+              <a href="/tag/python">python</a>,
+              
+            
+        </div>
 
-        <span class="n">currentdate</span> <span class="o">+=</span> <span class="n">delta</span>
-        <span class="n">currentdate</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code></pre></div>
-
-<p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
-
-<div class="highlight"><pre><code class="python"><span class="c"># Get timedeltas based on splitting the range by 10</span>
-<span class="n">delta</span> <span class="o">=</span> <span class="n">date_delta</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">from_datetime</span><span class="p">,</span> <span class="n">to_datetime</span> <span class="ow">in</span> <span class="n">datespan</span><span class="p">(</span><span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">,</span> <span class="n">delta</span><span class="p">):</span>
-    <span class="k">print</span> <span class="n">from_datetime</span><span class="p">,</span> <span class="n">to_datetime</span></code></pre></div>
-
-<p>The result forms part of the following d3 chart:</p>
-
-<blockquote class="twitter-tweet" lang="en"><p>Made some updates to that there commerce dashboard (now uses summary ranges on x-axis), what do people think? <a href="http://t.co/AatFxBRnsC">pic.twitter.com/AatFxBRnsC</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/481780932496863233">June 25, 2014</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-	<div class="entry_content">Tagged <a href="/tag/coding">coding</a>, <a href="/tag/python">python</a>, </div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -101,7 +95,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+      </div>
 
 
       <footer>
@@ -110,5 +104,18 @@
         </div>
       </footer>
     </div>
-  </body>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
 </html>
+
