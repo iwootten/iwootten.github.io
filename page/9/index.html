@@ -37,6 +37,30 @@
 
       
         <div class="post">
+          <h1><a href="/2011/03/31/a-survey-of-hype-in-web-development-podcasts">A Survey of Hype in Web Development Podcasts</a></h1>
+      <div class="author_meta">31 Mar 2011</div>
+
+          <p>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they&#8217;re allowed to, it is their own podcast after all, often from their own businesses etc. I&#8217;m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless. </p>
+<p>One of these things is the title of the show itself. I don&#8217;t really get why its necessary to repeat the title (Sure I do really, to drum it into my head), given it&#8217;s going to be within the title of the mp3. I know what I&#8217;m listening to after all, because my favourite media player tells me. </p>
+<p>I&#8217;ve been wanting to count the number of times a show utters it&#8217;s name over its duration. Sure, I realise this is somewhat ocd and geeky, but hey. Here&#8217;s my results for a typical set of podcasts that I often listen to in a week. I&#8217;ve linked up the data I&#8217;ve used to create this chart on <a href="https://spreadsheets.google.com/ccc?key=0AiyMcCUnltKwdG85QnNKMnhneUVXMjJNUzVCa0kzNEE&#038;hl=en&#038;pli=1&#038;authkey=CJbb9a0L#gid=0">google spreadsheets</a>, for anyone else who may be interested to contribute to and build upon further. I gathered the data all myself by listening to each podcast and counting when mentions of the show were made but it may be a good excuse for me to experiment with amazon turk. </p>
+<p>The big web show comes out tops with one mention over 40 mins worth of show and boagworld comes last with 24 mentions of the show over its duration. (It&#8217;s unfortunate for boagworld that its theme tune includes a voice repeating the title in the theme. I did originally include echos, which would be 34 mentions, but my colleagues inform me this may be taking the experiment a little too far :))</p>
+<p>I plan to do the same for product mentions (adverts I guess) in a weeks worth of (different) episodes, but if anyone wants to go ahead and update with their own findings that would be great.</p>
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png" alt="" title="Own Web Show Mentions per Minute" width="600" height="371" class="alignnone size-full wp-image-445" /></a></p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/Web-Apps">Web Apps</a>,
+                
+                <a href="/tag/web-development">web development</a>,
+                
+              
+              | <a href="2011/03/31/a-survey-of-hype-in-web-development-podcasts/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2011/02/07/blog-rolling-with-couchdb-express-and-node-js">Blog rolling with CouchDB, Express and Node.js</a></h1>
       <div class="author_meta">07 Feb 2011</div>
 
@@ -404,53 +428,6 @@ exports.ArticleProvider = ArticleProvider;</code></pre></div><p>I added the foll
                 
               
               | <a href="2010/07/24/how-not-to-do-a-hack-day/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2010/06/15/installing-mplayer-on-snow-leopard">Installing MPlayer on Snow Leopard</a></h1>
-      <div class="author_meta">15 Jun 2010</div>
-
-          <p>Here&#8217;s a heads up for anyone installing MPlayer on Snow Leopard. I&#8217;ve been playing a fair amount with tools recently and inevitably ending up running round in circles in installing, compiling, setting flags etc. Here&#8217;s a quick one liner param for anyone compiling mplayer (and freetype as its dependency) which people on Snow Leopard may find useful.</p>
-<p>You&#8217;ll first need to download latest versions of <a href="http://www.freetype.org/download.html">freetype</a> and <a href="http://www.mplayerhq.hu/design7/news.html">mplayer</a>. Uncompress both. <div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;"><span style="color: #7a0874; font-weight: bold;">cd</span> freetype
-.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #007800;">CXXFLAGS</span>=<span style="color: #ff0000;">&quot;-m64&quot;</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p>
-<p>(Check here that the command &#8220;file /usr/local/lib/libfreetype.dylib&#8221; returns &#8220;Mach-O 64-bit dynamically linked shared library x86_64&#8243;) <div class="wp_syntax">
-  <table>
-    <tr>
-      <td class="code">
-        <pre class="bash" style="font-family:monospace;"><span style="color: #7a0874; font-weight: bold;">cd</span> mplayer-checkout-<span style="color: #000000;">2010</span>-06-<span style="color: #000000;">14</span><span style="color: #000000; font-weight: bold;">/</span>
-<span style="color: #c20cb9; font-weight: bold;">tar</span> <span style="color: #660033;">-xjvf</span> mplayer-checkout-snapshot.tar.bz2
-.<span style="color: #000000; font-weight: bold;">/</span>configure
-<span style="color: #c20cb9; font-weight: bold;">make</span>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
-      </td>
-    </tr>
-  </table>
-</div></p>
-<p>The killer here for me was sudo make CXXFLAGS=&#8221;-m64&#8243;. Without it, mplayer&#8217;s make command failed with &#8220;ld: warning: in /usr/local/lib/libfreetype.dylib, file is not of required architecture&#8221;. I&#8217;ve encountered problems like this before, where the file is compiled for 32 Bit leopard rather than 64, but they&#8217;re usually solved with setting a CFLAGS variable.</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/freetype">freetype</a>,
-                
-                <a href="/tag/mplayer">mplayer</a>,
-                
-                <a href="/tag/snow-leopard">snow leopard</a>,
-                
-              
-              | <a href="2010/06/15/installing-mplayer-on-snow-leopard/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

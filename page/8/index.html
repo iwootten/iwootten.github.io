@@ -37,6 +37,64 @@
 
       
         <div class="post">
+          <h1><a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">Hosting an Octopress Blog on Amazon S3</a></h1>
+      <div class="author_meta">09 Sep 2011</div>
+
+          <p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&#8217;t need all the bells and whistles on our blog I&#8217;m sure you&#8217;ll agree.</p>
+<p>Using Octopress, you&#8217;d typically write your posts in markdown and process them locally. You&#8217;d then have a number of HTML pages to upload to your web server, which would appear no different than any other blog in terms of functionality.</p>
+<p>The most interesting thing that coincincides with the creation of jekyll is that it is now possible to serve static websites straight from Amazon S3, meaning that it isn&#8217;t neccessary to have a web server to serve a Octopress blog. I&#8217;ve been playing a little and have been able to serve my own octopress blog which you can see over at <a href="http://www.ianwootten.com">www.ianwootten.com</a>. Here&#8217;s how to do it:</p>
+<h2 id="configure-an-s3-bucket-to-act-as-a-website">Configure an S3 Bucket to Act as a Website</h2>
+<p>NB: If you want to use your own domain, then you&#8217;re going to need to create an S3 bucket from the AWS Console named the same as your domain (so for me I created a bucket called &#8220;www.ianwootten.com&#8221;. </p>
+<p>To configure your bucket as a website, from the AWS Console, select the new bucket and click &#8220;Properties&#8221;. Choose the &#8220;Website&#8221; tab from the box that appears and check &#8220;enabled&#8221; and set the Index document as &#8220;index.html&#8221;. Click &#8220;Save&#8221;. Now move to the &#8220;permissions&#8221; tab and click &#8220;Add bucket policy&#8221;. Enter a policy as below, with &#8220;www.ianwootten.com&#8221; replaced with the name of the bucket you&#8217;re using.</p>
+<p><code>&lt;br /&gt;
+{&lt;br /&gt;
+    &quot;Version&quot;: &quot;2008-10-17&quot;,&lt;br /&gt;
+    &quot;Id&quot;: &quot;&quot;,&lt;br /&gt;
+    &quot;Statement&quot;: [&lt;br /&gt;
+        {&lt;br /&gt;
+            &quot;Sid&quot;: &quot;PublicReadForGetBucketObjects&quot;,&lt;br /&gt;
+            &quot;Effect&quot;: &quot;Allow&quot;,&lt;br /&gt;
+            &quot;Principal&quot;: {&lt;br /&gt;
+                &quot;AWS&quot;: &quot;*&quot;&lt;br /&gt;
+            },&lt;br /&gt;
+            &quot;Action&quot;: &quot;s3:GetObject&quot;,&lt;br /&gt;
+            &quot;Resource&quot;: &quot;arn:aws:s3:::www.ianwootten.com/*&quot;&lt;br /&gt;
+        }&lt;br /&gt;
+    ]&lt;br /&gt;
+}&lt;br /&gt;</code></p>
+<p>If you&#8217;ve opted not to use your own domain, then that&#8217;s it for S3. Your new bucket website will be available at a combination of the bucket name and the S3 storage location. In my case, this is <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/">http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/</a>. There&#8217;s a list of endpoints on the &#8220;website endpoints&#8221; page in <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a>.</p>
+<h2 id="configure-dns">Configure DNS</h2>
+<p>If you&#8217;re wanting to use your own domain, then you&#8217;ll need to visit your domain registraar and edit some DNS entries. In my case, I added a CNAME entry &#8220;www&#8221; pointing to www.ianwootten.com.s3-website-us-east-1.amazonaws.com. You&#8217;ll need to use a tool like <a href="http://wwwizer.com">wwwizer</a> in order to forward from the root of your domain to the www subdomain. e.g. &#8220;ianwootten.com&#8221; to &#8220;www.ianwootten.com&#8221;. To get that working, you&#8217;ll also need to modify the @ A record and point it to 174.129.25.170. Read this <a href="http://serverfault.com/questions/62527/how-to-create-a-cname-for-a-domains-root-name">serverfault post</a> if you&#8217;re interested to know why.</p>
+<p>For more info on CNAME configuration and S3 see <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a> (Specifically the notes on virtual hosting).</p>
+<h2 id="download-octopress-and-write-some-markdown">Download Octopress and write some Markdown</h2>
+<p>Having successfully configured Amazon S3 to host your blog, you need to tackle the age old problem of writing some content for it. This was particularly hard for me, given my lack of knowledge about markdown! You may like to take a look at <a href="http://daringfireball.net/projects/markdown/basics">John Grubers explanation of markdown</a> if you&#8217;re suffering like me. The <a href="http://octopress.org/docs/blogging/">Octopress blogging basics</a> gives a good overview of how your new local blogging workflow will work. Essentially new posts are written in the ./_source/posts folder and when <code>rake generate</code> is executed, your entire websites content is output to the ./public folder. You can also run <code>rake preview</code> in order to preview on a local server.</p>
+<p>TO publish your blog, it&#8217;s merely a matter of transferring your /public content to the S3 bucket you&#8217;ve generated.</p>
+<p>Having done all that you&#8217;ve now no need to run your own server. You&#8217;re still dependent on those that operate at S3, wwwizer and your domain registraar, but you&#8217;ve removed your own from the equation. You may be interested in checking out <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">Jerome Bernard&#8217;s</a> tip on easily deploying Octopress blogs with <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/amazon">amazon</a>,
+                
+                <a href="/tag/blog">blog</a>,
+                
+                <a href="/tag/blogging">blogging</a>,
+                
+                <a href="/tag/godaddy">godaddy</a>,
+                
+                <a href="/tag/jekyll">jekyll</a>,
+                
+                <a href="/tag/octopress">octopress</a>,
+                
+                <a href="/tag/s3">s3</a>,
+                
+              
+              | <a href="2011/09/09/hosting-an-octopress-blog-on-amazon-s3/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2011/07/20/lovefilm-filmstream-plugin-v0-2">Lovefilm Filmstream Plugin v0.2</a></h1>
       <div class="author_meta">20 Jul 2011</div>
 
@@ -185,30 +243,6 @@ sudo chown -R ian:www-data /var/www/pathtowordpress/
                 
               
               | <a href="2011/05/07/updating-wordpress-automatically-over-sftp/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2011/03/31/a-survey-of-hype-in-web-development-podcasts">A Survey of Hype in Web Development Podcasts</a></h1>
-      <div class="author_meta">31 Mar 2011</div>
-
-          <p>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they&#8217;re allowed to, it is their own podcast after all, often from their own businesses etc. I&#8217;m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless. </p>
-<p>One of these things is the title of the show itself. I don&#8217;t really get why its necessary to repeat the title (Sure I do really, to drum it into my head), given it&#8217;s going to be within the title of the mp3. I know what I&#8217;m listening to after all, because my favourite media player tells me. </p>
-<p>I&#8217;ve been wanting to count the number of times a show utters it&#8217;s name over its duration. Sure, I realise this is somewhat ocd and geeky, but hey. Here&#8217;s my results for a typical set of podcasts that I often listen to in a week. I&#8217;ve linked up the data I&#8217;ve used to create this chart on <a href="https://spreadsheets.google.com/ccc?key=0AiyMcCUnltKwdG85QnNKMnhneUVXMjJNUzVCa0kzNEE&#038;hl=en&#038;pli=1&#038;authkey=CJbb9a0L#gid=0">google spreadsheets</a>, for anyone else who may be interested to contribute to and build upon further. I gathered the data all myself by listening to each podcast and counting when mentions of the show were made but it may be a good excuse for me to experiment with amazon turk. </p>
-<p>The big web show comes out tops with one mention over 40 mins worth of show and boagworld comes last with 24 mentions of the show over its duration. (It&#8217;s unfortunate for boagworld that its theme tune includes a voice repeating the title in the theme. I did originally include echos, which would be 34 mentions, but my colleagues inform me this may be taking the experiment a little too far :))</p>
-<p>I plan to do the same for product mentions (adverts I guess) in a weeks worth of (different) episodes, but if anyone wants to go ahead and update with their own findings that would be great.</p>
-<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2011/03/chart_1.png" alt="" title="Own Web Show Mentions per Minute" width="600" height="371" class="alignnone size-full wp-image-445" /></a></p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/Web-Apps">Web Apps</a>,
-                
-                <a href="/tag/web-development">web development</a>,
-                
-              
-              | <a href="2011/03/31/a-survey-of-hype-in-web-development-podcasts/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

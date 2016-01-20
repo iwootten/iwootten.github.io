@@ -37,6 +37,37 @@
 
       
         <div class="post">
+          <h1><a href="/2012/09/04/recovering-images-from-sd-cards-with-photorec">Recovering Images from SD Cards with PhotoRec</a></h1>
+      <div class="author_meta">04 Sep 2012</div>
+
+          <p>I had the horrible situation last Sunday following removing a number of pictures using an SD reader from my SD card that when I inserted it in my camera, it registered nothing upon it. My heart sunk, because this card is stuffed full of images of me and my family (along with my 1 year old son growing up) and I was unsure of which ones I&#8217;d actually backed up. After perusing the hidden files on the card, all I could discover was the files I&#8217;d most recently transferred from the card&#8230;.great&#8230;</p>
+<p>Partly this was my own fault &#8211; I&#8217;d already experienced problems with the reader in question when trying to write images for my <a href="http://raspberrypi.org">Raspberry Pi</a> and shouldn&#8217;t have used it for transferring images I care about. The card in question is a uber cheapo <a href="http://www.amazon.co.uk/Integral-USB-Single-Slot-Reader/dp/B000VY80AM/ref=sr_1_1?ie=UTF8&#038;qid=1346533453&#038;sr=8-1">Integral USB 2.0</a>. Despite what the amazon reviews say, steer well clear of it &#8211; this has been a pain from day one, with intermittent transfer problems which triggered this situation.</p>
+<p>After a little more digging, I came across <a href="http://www.cgsecurity.org/wiki/PhotoRec">Photorec</a>, a commandline utility which seemed like it would hopefully help recover some of the images. I attempted to use it with my card reader, but given it&#8217;s credentials I&#8217;ve given above, found the scanning process would cut out and couldn&#8217;t get through the whole card. At this point the card was being reported empty&#8230;.great&#8230;Given the way PhotoRec works, I understood it would still be possible to extract the images despite this. I decided to order another reader and hold fire until it had arrived &#8211; this time I opted for a <a href="http://www.amazon.co.uk/Kingston-Technology-Multi-Card-Reader/dp/B007PFQ0PC/">Kingston USB 3.0</a> (which I haven&#8217;t had any such problems with so far).</p>
+<h2 id="the-solution">The Solution</h2>
+<p>Here are the steps I followed after receiving my new sd reader to recover images from the card using PhotoRec. I&#8217;m listing them for anyone else who may have the same horrendous stomach wrenching problem I did last Sunday. It seems to have worked pretty well, with only 1 movie file coming out corrupted and about 500 images recovered.</p>
+<p>Firstly, I wanted to take a copy of the card as it currently stood following my investigation. For this I used df, diskutil and ddrescue.</p>
+<p>To determine where the card is currently mounted (look for the one that&#8217;s about the right size):</p>
+<div class='hljs'><pre><code class='bash'>df -h</code></pre></div><p>To unmount the card so we can fiddle with it:</p>
+<div class='hljs'><pre><code class='bash'>sudo diskutil unmount /dev/disk1s1</code></pre></div><p>To backup the card to a disk image on your macbook:</p>
+<div class='hljs'><pre><code class='bash'>sudo ddrescue /dev/disk1s1 ./sdbackup/image.img backuplog</code></pre></div><p>Finally, using PhotoRec scan the disk image that was just created. My image was FAT formatted I scanned the whole thing rather than just unallocated blocks.</p>
+<div class='hljs'><pre><code class='bash'>sudo ./photorec ~/sdbackup/image.img</code></pre></div><p>The final piece of this saga was to rename all the files PhotoRec created so they were in folders according to their exif data. My photos are all in folders like &#8220;2012_06_30&#8243;, so to have 500 files named &#8220;f0677440.jpg&#8221;, &#8220;f0688768.jpg&#8221; in a random PhotoRec directory would be pretty annoying. I had looked at setting up an automator task for this, but I ended up using <a href="http://www.petrosit.de/index.php/apps/12-pexiftool">PexifTool</a> for simplicities sake (I&#8217;m sure there are other alternatives). I believe if you go the Automator route, you may well have to install plugins in order to be able to extract exif data from files.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/linux">linux</a>,
+                
+                <a href="/tag/mac">mac</a>,
+                
+                <a href="/tag/photorec">photorec</a>,
+                
+              
+              | <a href="2012/09/04/recovering-images-from-sd-cards-with-photorec/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2012/08/29/a-scientist-in-an-adventure-with-pirates">A Scientist in an Adventure with Pirates</a></h1>
       <div class="author_meta">29 Aug 2012</div>
 
@@ -128,76 +159,6 @@
                 
               
               | <a href="2012/05/03/if-you-build-it/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2012/03/01/how-to-switch-your-vps-in-2-hours">How to Switch Your VPS in 2 Hours</a></h1>
-      <div class="author_meta">01 Mar 2012</div>
-
-          <p>Friday last week I woke up to a barrage of emails coming into my inbox. All of these were coming from notification of spam comments upon this very blog. By the time I’d woken up I’d had something like 75 emails. This was pretty strange given that Akismet was there guarding my blog ever since it’s been available and I’d never had a email about a dodgy comment since I’d set it up (something like 5 years ago). They continued to flood in during my breakfast as fast as I could delete them.</p>
-<p>The problem stemmed from the fact that network connectivity from my slicehost account had been knocked out of action &#8211; which had never happened before. I presumed this was down to the migration of slicehost over to Rackspace infrastructure, which I’d been informed of, but the network dying was probably unintended.</p>
-<p>Either way, it was frustrating and I instantly decided to finally migrate away from slicehost and setup a second linode account. The funny thing is, that most of this was aided by slicehosts own documentation on configuring your server. If you’re doing little more than hosting a number of mysql / php driven sites, it is in fact really simple to switch. Here’s how I went about it, my sites all experience fairly low traffic, so I’m aware this solution might not be right for everyone.</p>
-<h2 id="backup-all-your-important-data">Backup All Your Important Data</h2>
-<p>First of all, you’re going to need to backup everything you have in your sites directory. For me, that’s everything under /var/www.</p>
-<div class='hljs'><pre><code class='bash'>tar -zcvf backup-feb-2012.tar.gz /var/www</code></pre></div><p>Next, you’ll want to do the same for your Apache sites:</p>
-<div class='hljs'><pre><code class='bash'>tar -zcvf backup-apache-feb-2012.tar.gz /etc/apache2/sites-available</code></pre></div><p>Finally, I took a mysqldump of my entire mysql setup:</p>
-<div class='hljs'><pre><code class='bash'>mysqldump --all-databases -u root -p password | gzip &gt;dbbackup-feb-2012.sql.gz</code></pre></div><h2 id="setup-your-new-vps">Setup Your New VPS</h2>
-<p>Having done that, you have pretty much everything you need to bring your server back to life as it is now. Go and grab a new vps from linode or somewhere else and set it up using the details starting from here: <a href="http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1">http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1</a> I configured my vps to have exactly the same accounts and passwords as my original vps, to make life easier for me. Once SSH and your firewall has been setup and you’re all updated, you’ll be able to transfer all the files you just created onto your fresh vps setup, using filezilla, or a direct connection between the two machines. You’ll then need to install Apache: <a href="http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu">http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu</a>, PHP: <a href="http://articles.slicehost.com/2010/5/19/installing-php-on-ubuntu">http://articles.slicehost.com/2010/5/19/installing-php-on-ubuntu</a> and MySQL: <a href="http://articles.slicehost.com/2011/3/10/installing-mysql-server-on-ubuntu">http://articles.slicehost.com/2011/3/10/installing-mysql-server-on-ubuntu</a></p>
-<p>On your new machine, you’ll need to restore the files you backed up to /var/www.</p>
-<div class='hljs'><pre><code class='bash'>tar -xzf backup-feb-2012.tar.gz
-sudo cp -r var/www/* /var/www/
-sudo chown -R www-data:www-data /var/www/*
-rm -rf ~/var</code></pre></div><p>Then the apache site files:</p>
-<div class='hljs'><pre><code class='bash'>tar -xzf backup-apache-feb-2012.tar.gz
-sudo cp etc/apache2/sites-available/* /etc/apache2/sites-available/</code></pre></div><p>For every file that exists in the sites directory and is to be enabled, we need to enable it. You can use a2ensite for this if you like.</p>
-<div class='hljs'><pre><code class='bash'><span class="hljs-built_in">cd</span> /etc/apache2/sites-enabled
-sudo ln <span class="hljs-operator">-s</span> ../sites-available/ianwootten.co.uk.conf ianwootten.co.uk.conf (<span class="hljs-keyword">for</span> each site file)</code></pre></div><p>Install any apache modules you might require and restart apache. If you’re using wordpress or a php framework like me, you’ll most likely need mod_rewrite.</p>
-<div class='hljs'><pre><code class='bash'>sudo a2enmod rewrite
-sudo /etc/init.d/apache2 restart</code></pre></div><p>You’ll then need to repopulate your new mysql install with all your old data.</p>
-<div class='hljs'><pre><code class='bash'>gunzip -c databasebackup.sql.gz | mysql -u root -p</code></pre></div><h2 id="configure-email">Configure Email</h2>
-<p>I use msmtp to handle all my email on my server, which sends through a single gmail automailer address for my domain. If you want to send email that way do the following:</p>
-<div class='hljs'><pre><code class='bash'>sudo apt-get install msmtp ca-certificates
-sudo nano /etc/msmtprc</code></pre></div><p>Paste the following setup in the file:</p>
-<p>`defaults<br />
-tls             on<br />
-tls_starttls    on<br />
-tls_trust_file  /etc/ssl/certs/ca-certificates.crt</p></p>
-<p><p>account default<br />
-host            smtp.gmail.com<br />
-port            587<br />
-auto_from       off<br />
-auth            on<br />
-user            automailer@somedomain.com<br />
-password        mymailpass<br />
-from            automailer@somedomain.com<br />
-maildomain      somedomain.com<br />
-logfile        /var/log/msmtp.log`</p>
-<div class='hljs'><pre><code class='bash'>sudo chmod 0644 /etc/msmtprc</code></pre></div><p>You can test whether it’s working using a the command as:</p>
-<div class='hljs'><pre><code class='bash'><span class="hljs-built_in">echo</span> <span class="hljs-operator">-e</span> <span class="hljs-string">"Subject: A Test Email\r\n\r\nThis is a test"</span> |msmtp --debug --from=default -t mymail@gmail.com</code></pre></div><h2 id="configure-dns">Configure DNS</h2>
-<p>You need to configure how your vps is going to handle particular requests for various domains. You’ve probably had to do this already with your current vps, so just copy the entries through whatever management system your new host provides. For sites that have a fairly simple setup, your host may provide a simple set of default entries to use, or you can clone entries that have the same setup as each other.</p>
-<p>We’re now at the point where we have a complete copy of our vps up and running, and the vps knows how to handle requests for domains, however currently our domain registrar points to our old vps, so the requests will never reach our new server. Head to your domain registrar and change the entries for a single domain, to point to your new vps (ns1.linode.com, ns2.linode.com etc). Now sit and wait patiently….Once that domain has propagated correctly (ping it to see if has a new or old ip), and you’re happy your site is working as expected, go ahead and change all of your domains dns entries to the ip address of your new vps.</p>
-<h2 id="relax-8230-">Relax&#8230;</h2>
-<p>All in all, I don&#8217;t think this took me more than a couple of hours working with the terminal open. I certainly didn&#8217;t worry about migrating in the way I have done previously. As I opted for a uk datacentre with linode, a side effect of the change is all my sites are much much faster &#8211; and a better setup with linode is in fact cheaper than slicehost. I left my slicehost account running for an entire week prior to shutting it down yesterday &#8211; just in case&#8230;</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/dns">dns</a>,
-                
-                <a href="/tag/gmail">gmail</a>,
-                
-                <a href="/tag/linode">linode</a>,
-                
-                <a href="/tag/msmtp">msmtp</a>,
-                
-                <a href="/tag/server">server</a>,
-                
-                <a href="/tag/slicehost">slicehost</a>,
-                
-              
-              | <a href="2012/03/01/how-to-switch-your-vps-in-2-hours/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

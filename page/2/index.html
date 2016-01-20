@@ -37,6 +37,34 @@
 
       
         <div class="post">
+          <h1><a href="/2014/06/16/tips-for-being-a-more-productive-freelancer">Tips for being a more Productive Freelancer</a></h1>
+      <div class="author_meta">16 Jun 2014</div>
+
+          <p>Having heard the question raised on <a href="http://workingoutpodcast.com">@workingoutshow</a>, I thought I&#39;d take some time to share the things that I&#39;ve found have really helped me be productive in my work. These may not work for everyone, but hopefully some points will help for others.</p>
+<h2 id="find-a-good-environment">Find a Good Environment</h2>
+<p>The single biggest change I&#39;ve found which has had a major impact on my work is changing my environment. We&#39;re lucky enough to have a small garden at our house and with the arrival of my daughter back in October, I was quick to realise that working in the open plan lounge in our house just wasn&#39;t a viable option any more. Here in Cardiff, we&#39;ve been lucky enough to have several co-working spaces open locally, but for me I prefer being able to switch off background noise and clear my head when I really need to knuckle down and focus. Around the same time, we made some major changes to the back of our house and garden which meant that there was space enough for a desk in our sunroom which overlooks it. I now spend 90% of my working time looking out over our little green space, which makes for a welcome break from staring at my screen and gives me a self-contained and more importantly, quiet environment in which to think. I also get to enjoy the space more overlooking the various wildlife that visits during the day. It&#39;s funny how good a little bird taking a dust bath every now and again will make you feel.</p>
+<h2 id="organise-your-tasks">Organise Your Tasks</h2>
+<p>I use trello for organising tasks I want to get done, with a board for each project. These are organised in descending priority, using trellos card defaults of &quot;To Do&quot;, &quot;Done&quot; and &quot;Doing&quot; to track what I&#39;ve achieved for a project. If whilst during the course of one task, I realise something needs doing over and above the scope of the task I&#39;m currently working on, I&#39;ll add it to my todo list and work on it when all other tasks with a higher priority have been completed. This strategy works well for me in terms of being able to blast through a whole heap of development tasks without having to think too much about what I need to do next.</p>
+<h2 id="plan-your-next-day-before-leaving-your-desk">Plan Your Next Day Before Leaving Your Desk</h2>
+<p>I like to end my day at a distinct break between tasks. If my day ends at a point where something is incomplete, I&#39;ll be sure to keep it in my to-do list for the following day, where I can come back to it. Before I leave my desk each day I&#39;ll generally try and plan out what makes sense to cover (given the time I have) in the following working day. This allows me to hit the ground running each day, without any getting up to speed time first thing in the morning.</p>
+<h2 id="track-your-time">Track Your Time</h2>
+<p>Tracking my time is important not only for my client work, but also my own projects. As well as giving me exact totals for invoicing, it allows me to compare estimates against the reality of a project and all the unforeseen problems that may arise during the course of it. My time tracking is a simple project based on/off approach, where I use a <a href="http://hourglass.io">custom tool</a> I developed myself.</p>
+<h2 id="eliminate-distractions">Eliminate Distractions</h2>
+<p>Although obvious, trying to cut down on distractions pays dividends. Switch off tweetdeck, close skype and either disable notifications on your phone or (my favourite) put it out of your sight completely. I don&#39;t tend to pay any thought to my phone if I can&#39;t see it, and it&#39;s like a nervous twitch to pick it up and check whether anything has happened in the last 5 mins. When not aware it&#39;s an option, I probably get twice as much work done. It&#39;s easy to kid yourself that checking devices like this is part of your work, but when at the detriment of your day&#39;s schedule you need to switch off and focus on the bigger picture.</p>
+<p>These are just a few measures I take to be more productive in my day - I&#39;d welcome any tips other freelancers have for their own situations.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/productivity">productivity</a>,
+                
+              
+              | <a href="2014/06/16/tips-for-being-a-more-productive-freelancer/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2014/05/18/bye-bye-wordpress">Bye Bye Wordpress</a></h1>
       <div class="author_meta">18 May 2014</div>
 
@@ -147,42 +175,6 @@ svg.selectAll(<span class="hljs-string">"circle"</span>)
                 
               
               | <a href="2014/03/03/shipping-in-march/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2013/10/27/setting-up-an-is-domain-with-isnic">Setting Up an .is Domain with ISNIC</a></h1>
-      <div class="author_meta">27 Oct 2013</div>
-
-          <p>I&#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&#8217;t great, given their somewhat confusing management interface. That&#8217;s summed up in a recent tweet below.</p>
-<p><blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote></p>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Given the potential savings compared to a &#8216;normal&#8217; registrar, it&#8217;s likely you&#8217;ll want to make use of ISNIC themselves &#8211; who are much like an Icelandic version of Nominet.</p>
-<p>Here&#8217;s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it&#8217;s not necessary to use a &#8220;pre-approved&#8221; registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there&#8217;s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
-<p>Once you&#8217;ve gone through the process of checking your domain is available and registering it, you&#8217;ll need to ensure your hosting provider has appropriate dns entries for your domain. If you&#8217;re using, cPanel or something that basically means adding it there. If you&#8217;re managing your own dns entries, add the appropriate entries within your manager.</p>
-<p>Here&#8217;s the key bit. Now wait&#8230;. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
-<p>Following that wait, head to the &#8220;redelegate&#8221; option within your new &#8220;My Page&#8221; area at ISNIC. Choose the &#8220;Not Registered&#8221; when asked for your ISP.</p>
-<p>Go ahead and enter the nameservers you want to use. If the dns changes haven&#8217;t yet propagated, you&#8217;ll probably get the error &#8220;The nameserver &#8216;ns1.whatever.com&#8217; has not been registered&#8221;, as shown below:</p>
-<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png" alt="Misleading Error" width="676" height="360" class="alignnone size-full wp-image-912" /></a></p>
-<p>This is a pretty misleading error, given what it actually means is &#8220;your domain doesn&#8217;t seem to be registered yet on those nameservers&#8221;. So wait a bit more for propagation to occur&#8230;</p>
-<p>Be aware of the <a href="https://www.isnic.is/en/host/req">rules</a> for ISNIC nameservers and check your host complies with them, otherwise you may find you encounter other errors. When the changes are picked up, you should finally be able to add the entries without getting an array of red boxes, much like below.</p>
-<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png" alt="Successful nameserver entry" width="684" height="577" class="alignnone size-full wp-image-913" /></a></p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/dns">dns</a>,
-                
-                <a href="/tag/hosting">hosting</a>,
-                
-                <a href="/tag/iceland">iceland</a>,
-                
-                <a href="/tag/nameservers">nameservers</a>,
-                
-              
-              | <a href="2013/10/27/setting-up-an-is-domain-with-isnic/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

@@ -37,6 +37,53 @@
 
       
         <div class="post">
+          <h1><a href="/2010/06/15/installing-mplayer-on-snow-leopard">Installing MPlayer on Snow Leopard</a></h1>
+      <div class="author_meta">15 Jun 2010</div>
+
+          <p>Here&#8217;s a heads up for anyone installing MPlayer on Snow Leopard. I&#8217;ve been playing a fair amount with tools recently and inevitably ending up running round in circles in installing, compiling, setting flags etc. Here&#8217;s a quick one liner param for anyone compiling mplayer (and freetype as its dependency) which people on Snow Leopard may find useful.</p>
+<p>You&#8217;ll first need to download latest versions of <a href="http://www.freetype.org/download.html">freetype</a> and <a href="http://www.mplayerhq.hu/design7/news.html">mplayer</a>. Uncompress both. <div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;"><span style="color: #7a0874; font-weight: bold;">cd</span> freetype
+.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #007800;">CXXFLAGS</span>=<span style="color: #ff0000;">&quot;-m64&quot;</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+</div></p>
+<p>(Check here that the command &#8220;file /usr/local/lib/libfreetype.dylib&#8221; returns &#8220;Mach-O 64-bit dynamically linked shared library x86_64&#8243;) <div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="bash" style="font-family:monospace;"><span style="color: #7a0874; font-weight: bold;">cd</span> mplayer-checkout-<span style="color: #000000;">2010</span>-06-<span style="color: #000000;">14</span><span style="color: #000000; font-weight: bold;">/</span>
+<span style="color: #c20cb9; font-weight: bold;">tar</span> <span style="color: #660033;">-xjvf</span> mplayer-checkout-snapshot.tar.bz2
+.<span style="color: #000000; font-weight: bold;">/</span>configure
+<span style="color: #c20cb9; font-weight: bold;">make</span>
+<span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">make</span> <span style="color: #c20cb9; font-weight: bold;">install</span></pre>
+      </td>
+    </tr>
+  </table>
+</div></p>
+<p>The killer here for me was sudo make CXXFLAGS=&#8221;-m64&#8243;. Without it, mplayer&#8217;s make command failed with &#8220;ld: warning: in /usr/local/lib/libfreetype.dylib, file is not of required architecture&#8221;. I&#8217;ve encountered problems like this before, where the file is compiled for 32 Bit leopard rather than 64, but they&#8217;re usually solved with setting a CFLAGS variable.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/freetype">freetype</a>,
+                
+                <a href="/tag/mplayer">mplayer</a>,
+                
+                <a href="/tag/snow-leopard">snow leopard</a>,
+                
+              
+              | <a href="2010/06/15/installing-mplayer-on-snow-leopard/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2010/04/18/lovefilm-filmstream-plugin-for-wordpress">Lovefilm Filmstream Plugin for WordPress</a></h1>
       <div class="author_meta">18 Apr 2010</div>
 
@@ -146,36 +193,6 @@
                 
               
               | <a href="2009/10/25/discovering-google/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2009/10/25/amazon-associates-wordpress-plugin-v0-2">Amazon Associates WordPress Plugin v0.2</a></h1>
-      <div class="author_meta">25 Oct 2009</div>
-
-          <p>I&#8217;ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.</p>
-<p>This now also means you&#8217;ll have to enter your amazon secret access key in the plugin configuration page.</p>
-<p>You can download the updated version over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
-<p>It also means <a href="http://www.ianwootten.co.uk/wishlist">my wishlist</a> has finally been brought back to life. Just in time for Christmas&#8230;</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/amazon">amazon</a>,
-                
-                <a href="/tag/associates">associates</a>,
-                
-                <a href="/tag/aws">aws</a>,
-                
-                <a href="/tag/PHP">PHP</a>,
-                
-                <a href="/tag/web-services">web services</a>,
-                
-                <a href="/tag/wishlist">wishlist</a>,
-                
-              
-              | <a href="2009/10/25/amazon-associates-wordpress-plugin-v0-2/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       
