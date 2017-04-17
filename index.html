@@ -37,6 +37,132 @@
 
       
         <div class="post">
+          <h1><a href="/2017/04/18/user-generated-forms-with-wtforms">User Generated Forms with WTForms</a></h1>
+      <div class="author_meta">18 Apr 2017</div>
+
+          <p>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their <a href="https://github.com/ONSdigital/eq-survey-runner">Electronic Questionnaire</a> which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer. This was identified early on as a feature that shared a lot in common with existing form libraries, but our current renderer wasn&#39;t able to be easily isolated from the rest of the system and was therefore pushed onto a debt backlog after a possible approach had been prototyped.</p>
+<p>Due to the hard work of the entire team, we&#39;d made some strategic changes to the system that meant this was possible in my later months. <a href="https://github.com/wtforms/wtforms">WTForms</a> was the library we wanted to use, but we needed a number of features which weren&#39;t documented or supported out of the box. Chief among these was the ability to create forms dynamically, informed by a JSON description.</p>
+<h2 id="dynamic-form-definition">Dynamic form definition</h2>
+<p>WTForms generally expects metaclasses that describe form definitions, as per the following example from their docs:</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyForm</span><span class="hljs-params">(Form)</span>:</span>
+  first_name = StringField(<span class="hljs-string">u'First Name'</span>, validators=[validators.input_required()])
+  last_name  = StringField(<span class="hljs-string">u'Last Name'</span>, validators=[validators.optional()])</code></pre></div><p>I found it easier to think as these definitions as &#39;schemas&#39; for form classes. Typically you&#39;d use them to describe a class which doesn&#39;t change, so WTForms use of them for describing our dynamic forms led to some problems.</p>
+<p>When the instantiated form is passed to jinja and rendered as part of a template helper call, appropriate inputs will be rendered for each field definition, with names corresponding to the attribute names (first_name, last_name). We can then take the post request form and pass as an argument to our form class to validate during a submission.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span><span class="hljs-params">(request)</span>:</span>
+  form = MyForm(request.POST)
+  <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">'POST'</span> <span class="hljs-keyword">and</span> form.validate():
+      user = MyForm()
+      user.first_name = form.first_name.data
+      user.last_name = form.last_name.data
+      user.save()
+      redirect(<span class="hljs-string">'register'</span>)
+  <span class="hljs-keyword">return</span> render_response(<span class="hljs-string">'register.html'</span>, form=form)</code></pre></div><p>The approach taken for the ONS was to read in a json description from file and set field attributes dynamically within a method upon what was essentially an empty form class. I&#39;ve simplified the actual project code below to remove detail outside the example.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_answer_fields</span><span class="hljs-params">(question, data)</span>:</span>
+    answer_fields = {}
+    <span class="hljs-keyword">for</span> answer <span class="hljs-keyword">in</span> question[<span class="hljs-string">'answers'</span>]:
+        name = answer.get(<span class="hljs-string">'label'</span>) <span class="hljs-keyword">or</span> question.get(<span class="hljs-string">'title'</span>)
+        answer_fields[answer[<span class="hljs-string">'id'</span>]] = get_field(answer, name)
+    <span class="hljs-keyword">return</span> answer_fields
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_form</span><span class="hljs-params">(json_for_page, data)</span>:</span>
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">QuestionnaireForm</span><span class="hljs-params">(Form)</span>:</span>
+        answer_fields = {}
+
+        <span class="hljs-keyword">for</span> question <span class="hljs-keyword">in</span> SchemaHelper.get_questions(json_for_page):
+
+            answer_fields.update(get_answer_fields(question, data))
+
+            <span class="hljs-keyword">for</span> answer_id, field <span class="hljs-keyword">in</span> answer_fields.items():
+                setattr(QuestionnaireForm, answer_id, field)
+
+        <span class="hljs-keyword">if</span> data:
+            form = QuestionnaireForm(MultiDict(data))
+        <span class="hljs-keyword">else</span>:
+            form = QuestionnaireForm()
+
+        <span class="hljs-keyword">return</span> form</code></pre></div><p>Here you see that we retrieve details of the json structure for a survey page, and maintain a map of answer fields to be set on the class. The answer ids within the page structure will always be unique and is used as the key for the mapping to each field type. In this way, the resultant form is a collection of fields able to be driven dynamically from our json description.</p>
+<h2 id="validating-dynamic-forms">Validating Dynamic Forms</h2>
+<p>As well as the fields on our forms being customisable, the validators used upon them were too. This meant for instance, that some fields were optional or required and the messages used for validation needed to be informed by the survey&#39;s json description.</p>
+<p>Below you can see an example of the message for a DateRequired validator being updated based on the message from the schema. You can also see an example of modifying the behaviour of the validator, based on whether or not the date validator includes a day attribute as part of the data sent. This allows for the same validator to be used for different form representations of dates.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRequired</span><span class="hljs-params">(object)</span>:</span>
+     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, message=None)</span>:</span>
+         <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> message:
+             message = error_messages[<span class="hljs-string">'MANDATORY'</span>]
+         self.message = message
+
+     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self, form, field)</span>:</span>
+         <span class="hljs-keyword">if</span> hasattr(form, <span class="hljs-string">'day'</span>):
+             <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> form.day.data <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> form.month.data <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> form.year.data:
+                 <span class="hljs-keyword">raise</span> validators.StopValidation(self.message)
+         <span class="hljs-keyword">else</span>:
+             <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> form.month.data <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> form.year.data:
+                 <span class="hljs-keyword">raise</span> validators.StopValidation(self.message)</code></pre></div><p>In more complex situations, it was necessary to pass custom data to our validators to later check against. You can see below, when validating custom date ranges, we pass the &#39;to&#39; date and initialise the validator with it, before the call to the validator is made with the form (in this case a subform for just a date).</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRangeCheck</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, to_field_data=None, messages=None)</span>:</span>
+        self.to_field_data = to_field_data
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> messages:
+            messages = error_messages
+        self.messages = messages
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self, form, from_field)</span>:</span>
+
+        <span class="hljs-keyword">if</span> form.day <span class="hljs-keyword">and</span> form.month <span class="hljs-keyword">and</span> form.year <span class="hljs-keyword">and</span> self.to_field_data:
+            to_date_str = <span class="hljs-string">"{:02d}/{:02d}/{}"</span>.format(int(self.to_field_data[<span class="hljs-string">'day'</span>] <span class="hljs-keyword">or</span> <span class="hljs-number">0</span>), int(self.to_field_data[<span class="hljs-string">'month'</span>] <span class="hljs-keyword">or</span> <span class="hljs-number">0</span>),
+                                                    self.to_field_data[<span class="hljs-string">'year'</span>] <span class="hljs-keyword">or</span> <span class="hljs-string">''</span>)
+            from_date_str = <span class="hljs-string">"{:02d}/{:02d}/{}"</span>.format(int(form.day.data <span class="hljs-keyword">or</span> <span class="hljs-number">0</span>), int(form.month.data <span class="hljs-keyword">or</span> <span class="hljs-number">0</span>),
+                                                      form.year.data <span class="hljs-keyword">or</span> <span class="hljs-string">''</span>)
+
+            from_date = datetime.strptime(from_date_str, <span class="hljs-string">"%d/%m/%Y"</span>)
+            to_date = datetime.strptime(to_date_str, <span class="hljs-string">"%d/%m/%Y"</span>)
+
+            date_diff = to_date - from_date
+
+            <span class="hljs-keyword">if</span> date_diff.total_seconds() == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">raise</span> validators.ValidationError(self.messages[<span class="hljs-string">'INVALID_DATE_RANGE_TO_FROM_SAME'</span>])
+            <span class="hljs-keyword">elif</span> date_diff.total_seconds() &lt; <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">raise</span> validators.ValidationError(self.messages[<span class="hljs-string">'INVALID_DATE_RANGE_TO_BEFORE_FROM'</span>])</code></pre></div><p>We actually found it necessary to go one step further in that we needed to halt validation for forms in surveys which were considered optional. The solution was an OptionalForm, allowing empty forms to be considered valid if they had no content.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OptionalForm</span><span class="hljs-params">(object)</span>:</span>
+     <span class="hljs-string">"""
+     Allows completely empty form and stops the validation chain from continuing.
+     Will not stop the validation chain if any one of the fields is populated.
+     """</span>
+     field_flags = (<span class="hljs-string">'optional'</span>,)
+
+     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self, form, field)</span>:</span>
+         empty_form = <span class="hljs-keyword">True</span>
+
+         <span class="hljs-keyword">for</span> formfield <span class="hljs-keyword">in</span> form:
+             has_raw_data = hasattr(formfield, <span class="hljs-string">'raw_data'</span>)
+
+             is_empty = has_raw_data <span class="hljs-keyword">and</span> len(formfield.raw_data) == <span class="hljs-number">0</span>
+             is_blank = has_raw_data <span class="hljs-keyword">and</span> len(formfield.raw_data) &gt;= <span class="hljs-number">1</span> \
+                 <span class="hljs-keyword">and</span> isinstance(formfield.raw_data[<span class="hljs-number">0</span>], string_types) <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> formfield.raw_data[<span class="hljs-number">0</span>]
+
+             <span class="hljs-comment"># By default we'll receive empty arrays for values not posted, so need to allow empty lists</span>
+             empty_field = <span class="hljs-keyword">True</span> <span class="hljs-keyword">if</span> is_empty <span class="hljs-keyword">else</span> is_blank
+
+             empty_form &amp;= empty_field
+
+         <span class="hljs-keyword">if</span> empty_form:
+             <span class="hljs-keyword">raise</span> validators.StopValidation()</code></pre></div><h2 id="final-thoughts">Final Thoughts</h2>
+<p>One of the main pain points with WTForms adoption was the lack of form-level validation supported out of the box. We had for instance a number of custom forms, which fell outside the generic examples above, where it was necessary to override the validate method on the form itself. This added complexity to the form that I felt belonged in a validator, similar to the field level ones WTForms supports defined in separate classes. Adding to option of form validators would be great and cover most of the bases and seems like an <a href="https://github.com/wtforms/wtforms/issues/55">oft-requested feature</a>.</p>
+<p> I felt that the use of WTForms really helped create a far more structured approach to form design, creation and validation within our project. Getting to the point where we could isolate and shift it over to a common library was a real achievement.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/python">python</a>,
+                
+                <a href="/tag/wtforms">wtforms</a>,
+                
+              
+              | <a href="2017/04/18/user-generated-forms-with-wtforms/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2016/01/20/there-s-no-such-thing-as-a-side-project">There&#39;s No Such Thing as a Side Project</a></h1>
       <div class="author_meta">20 Jan 2016</div>
 
@@ -215,56 +341,6 @@ chain.crop(<span class="hljs-number">1208</span>, <span class="hljs-number">4901
                 
               
               | <a href="2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2014/07/01/splitting-a-date-range-in-python">Splitting a date range in Python</a></h1>
-      <div class="author_meta">01 Jul 2014</div>
-
-          <p>Dates are one of those annoying things that shouldn&#39;t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I&#39;m currently working on. Hopefully someone else will find them helpful.</p>
-<div class='hljs'><pre><code class='python'><span class="hljs-keyword">import</span> datetime, calendar
-
-<span class="hljs-comment"># Find the delta between two dates based on a desired number of ranges</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datedelta</span><span class="hljs-params">(startdate, enddate, no_of_ranges)</span>:</span>
-    start_epoch = calendar.timegm(startdate.timetuple())
-    end_epoch = calendar.timegm(enddate.timetuple())
-
-    date_diff = end_epoch - start_epoch
-
-    step = date_diff / no_of_ranges
-
-    <span class="hljs-keyword">return</span> datetime.timedelta(seconds=step)</code></pre></div><p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
-<div class='hljs'><pre><code class='python'><span class="hljs-comment"># Edit 18/07/2014 - I realised dates needed the hrs, mins an secs correctly</span>
-<span class="hljs-comment"># adjusted to beginning / end of day</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datespan</span><span class="hljs-params">(startdate, enddate, delta=datetime.timedelta<span class="hljs-params">(days=<span class="hljs-number">1</span>)</span>)</span>:</span>
-    currentdate = startdate
-
-    <span class="hljs-keyword">while</span> currentdate + delta &lt; enddate:
-        todate = (currentdate + delta).replace(hour=<span class="hljs-number">23</span>, minute=<span class="hljs-number">59</span>,second=<span class="hljs-number">59</span>)
-
-        <span class="hljs-keyword">yield</span> currentdate, todate
-
-        currentdate += delta
-        currentdate.replace(hour=<span class="hljs-number">0</span>, minute=<span class="hljs-number">0</span>,second=<span class="hljs-number">0</span>)</code></pre></div><p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
-<div class='hljs'><pre><code class='python'><span class="hljs-comment"># Get timedeltas based on splitting the range by 10</span>
-delta = date_delta(startdate, enddate, <span class="hljs-number">10</span>)
-
-<span class="hljs-keyword">for</span> from_datetime, to_datetime <span class="hljs-keyword">in</span> datespan(startdate, enddate, delta):
-    <span class="hljs-keyword">print</span> from_datetime, to_datetime</code></pre></div><p>The result forms part of the following d3 chart:</p>
-<p><blockquote class="twitter-tweet" lang="en"><p>Made some updates to that there commerce dashboard (now uses summary ranges on x-axis), what do people think? <a href="http://t.co/AatFxBRnsC">pic.twitter.com/AatFxBRnsC</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/481780932496863233">June 25, 2014</a></blockquote></p>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/coding">coding</a>,
-                
-                <a href="/tag/python">python</a>,
-                
-              
-              | <a href="2014/07/01/splitting-a-date-range-in-python/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

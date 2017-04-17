@@ -37,6 +37,31 @@
 
       
         <div class="post">
+          <h1><a href="/2013/04/03/the-problem-with-full-stack-js-applications">The Problem with Full Stack JS Applications</a></h1>
+      <div class="author_meta">03 Apr 2013</div>
+
+          <p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It&#8217;s inevitable that there&#8217;s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you&#8217;re doing when knee deep in code.</p>
+<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I&#8217;ve certainly found myself tied up in this kind of knot. For example, if I&#8217;m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you&#8217;re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you&#8217;re working and if that&#8217;s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn&#8217;t the case when working in one language. My guess is you&#8217;re going to have to take a second glance in order to figure out where you are, which isn&#8217;t a big issue, but is frustrating.</p>
+<p>Currently my apps typically are structured like this:</p>
+<p>server.js (Main node/express file)<br>-lib (Classes for DB Calls)<br>-node_modules (Node requires)<br>-public (Client backbone app)<br>&nbsp;&nbsp;&nbsp;&nbsp;-css<br>&nbsp;&nbsp;&nbsp;&nbsp;-images<br>&nbsp;&nbsp;&nbsp;&nbsp;-js<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lib (Backbone and other dependencies)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-collections<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-views<br>-routes (Contains the main express routes)</p>
+<p>But I actually think the following is a better approach:</p>
+<p>-server<br>&nbsp;&nbsp;&nbsp;&nbsp;server.js<br>&nbsp;&nbsp;&nbsp;&nbsp;-lib<br>&nbsp;&nbsp;&nbsp;&nbsp;-node_modules<br>&nbsp;&nbsp;&nbsp;&nbsp;-routes<br>-client (Renamed from public)<br>&nbsp;&nbsp;&nbsp;&nbsp;-css<br>&nbsp;&nbsp;&nbsp;&nbsp;-images<br>&nbsp;&nbsp;&nbsp;&nbsp;-js<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-collections<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-views</p>
+<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn&#8217;t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don&#8217;t believe there is a solution.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/javascript">javascript</a>,
+                
+                <a href="/tag/web-development">web development</a>,
+                
+              
+              | <a href="2013/04/03/the-problem-with-full-stack-js-applications/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2013/03/28/so-you-want-to-run-a-fairtrade-business">So You Want to Run a Fairtrade Business?</a></h1>
       <div class="author_meta">28 Mar 2013</div>
 
@@ -177,41 +202,6 @@
                 
               
               | <a href="2013/02/07/introvert-interfacing/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2013/01/22/the-move-towards-static-websites">The Move Towards Static Websites</a></h1>
-      <div class="author_meta">22 Jan 2013</div>
-
-          <p>There&#8217;s some discussion on new podcast <a href="http://backtofrontshow.com">&#8220;The Back to Front Show&#8221;</a> on why of late we&#8217;re seeing so many static websites cropping up. It seem like now more than ever, we&#8217;re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing. </p>
-<p>When I talk about a static site, I think of it of raw HTML sat on a server and nothing else. However, it seems as if the industry has adopted the term to refer to sites created from tools which are capable of creating/emulating this HTML, whether it be a local, dropbox or a hosted/self-hosted solution. Typically both types of tool are powered through conversion of flat files into the markup which is served publicly. Through using them you can achieve something akin to a typical blog, without the need for a database (or possibly even a server-side language to power it).</p>
-<p><strong>Pro&#8217;s</strong></p>
-<p>Simplicity &#8211; Most of the draw toward toward such setups seems to be on the simplicity over flexibility. I can power a site with a minimal setup, but still regularly and simply update and maintain it, using a partial based environment. With a dropbox based solution, I just need to drop my flat files into a folder and everything is updated transparently. Mark Boulton <a href="http://markboulton.co.uk/journal/newblog-newcms">has previously written</a> about his requirements for writing on the web and why he went with <a href="http://statamic.com">Statamic</a>: </p>
-<blockquote>
-<p>&#8220;I wanted a way of simply publishing words, rather than getting all wrapped up in php, theming files and database problems.&#8221;</p>
-</blockquote>
-<p>Simplicity it seems, rules.</p>
-<p>I previously <a href="http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">wrote an article</a> on how you could publish using Octopress and Amazon&#8217;s S3 service. For anyone who has a relatively low traffic site, such a setup could also work out cheaper than a monthly hosting package.</p>
-<p>Development Time &#8211; If you&#8217;re one for creating custom themes, a static site is also a much simpler solution than wrestling with styling the innerds of a full fledged cms. Typically posts are stored in markdown and can be styled along with assets using a partial templating system (eg. based on YAML or Liquid). Having recently developed a wordpress theme I can testify to the complexity of having to dig through documentation on function usage and to determine which template file should be modified to achieve what I want within a page.</p>
-<p>Source Control &#8211; As <a href="http://rickhurst.co.uk">Rick</a> quite rightly points out below in the comments, having all your posts available in flat files makes them perfect for managing/backing up through your revision control tools of choice.</p>
-<p><strong>Cons</strong></p>
-<p>Customisation &#8211; For me, the big loss is the lack of flexibility. I hear everyone cry, &#8220;Well, duh &#8211; it&#8217;s static&#8221;. Without a server side language handling requests, I&#8217;m unable to schedule posts, handle comments, create forms or trigger email. If I intend on continuing to offer them, I have to find third party services to deal with each of these aspects. I&#8217;m well aware there&#8217;s services like disqus and wufoo that may solve some of these problems, but it seems like a major hassle to integrate each time something like this is required. It may be that this is just me, you may be perfectly happy using these solutions, or may not require them.</p>
-<p>Remote publishing &#8211; When using a local based solution (e.g. Jekyll), you don&#8217;t have the option of blogging remotely, due to the lack of tools to create and push out your content. Gone are the days of being able to log into a site from your phone and add a small update. For me, this is less of an issue as I can&#8217;t recall if I&#8217;ve ever written a post in this way and try to be more methodical, less spontaneous about what I&#8217;m writing from the comfort of my desktop.</p>
-<p><strong>Example Systems</strong></p>
-<p>If you&#8217;re interested in running a static site, then I&#8217;ve listed a few that seem pretty popular at the time of writing, along with a brief list of their features.</p>
-<p><a href="https://github.com/mojombo/jekyll">Jekyll</a> &#8211; Locally run, File based, Open source, Powers Github pages.<br><a href="http://octopress.org/">Octopress</a> &#8211; Locally run, Jekyll/File based, but with preconfigured HTML templates, CSS, Javascript, Open Source<br><a href="http://statamic.com">Statamic</a> &#8211; Self Hosted, File Based, License Required<br><a href="http://getkirby.com">Kirby</a> &#8211; Self Hosted, File based, jQuery inspired API, License Required<br><a href="http://staceyapp.com">Stacey</a> &#8211; Self hosted, File based, Open source<br><a href="http://scriptogr.am">Scriptogram</a> &#8211; Dropbox/File based</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/blogging">blogging</a>,
-                
-                <a href="/tag/blogs">blogs</a>,
-                
-              
-              | <a href="2013/01/22/the-move-towards-static-websites/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

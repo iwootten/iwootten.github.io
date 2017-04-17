@@ -1,0 +1,224 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ian Wootten - Web Developer, Cardiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/open-sans.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-263865-2', 'ianwootten.co.uk');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+
+<div class="container blog">
+      <header>
+        <nav>
+        <ul class="nav">
+          <li><a class="blog active" href="/">Blog</a></li>
+          <li><a class="javascript" href="/category/javascript">Javascript</a></li>
+          <li><a class="web-apps" href="/category/web-apps">Web Apps</a></li>
+          <li><a class="about" href="/about">About</a></li>
+          <li><a class="contact" href="/contact">Contact</a></li>
+        </ul>
+        </nav>
+        <div class="clear"></div>
+      </header>
+
+      <div class="post">
+        <h1><a href="/posts/2014-06-02-porting-a-wordpress-blog-to-jekyll-2"></a></h1>
+        <div class="author_meta">NaN undefined NaN</div>
+        <p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&#39;ve replicated wordpress&#39;s default permalink structure on my own blog.</p>
+<h2 id="creating-category-and-tag-pages">Creating Category and Tag Pages</h2>
+<p>Jekyll doesn&#39;t create category or tag index pages for those categories listed in your _posts source. Instead, you&#39;ll need to use a plugin to recreate them. I used the tutorial <a href="http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/">here</a> as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.rb source below:</p>
+<div class='hljs'><pre><code class='ruby'><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Jekyll</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CatsAndTags</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Generator</span></span></span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> </span>generate(site)
+          site.categories.each <span class="hljs-keyword">do</span> |category|
+            build_subpages(site, <span class="hljs-string">"category"</span>, category)
+          <span class="hljs-keyword">end</span>
+
+          site.tags.each <span class="hljs-keyword">do</span> |tag|
+            build_subpages(site, <span class="hljs-string">"tag"</span>, tag)
+          <span class="hljs-keyword">end</span>
+        <span class="hljs-keyword">end</span>
+
+        <span class="hljs-comment"># Do the actual generation.</span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> </span>build_subpages(site, type, posts)
+          posts[<span class="hljs-number">1</span>] = posts[<span class="hljs-number">1</span>].sort_by { |p| -p.date.to_f }
+          atomize(site, type, posts)
+          paginate(site, type, posts)
+        <span class="hljs-keyword">end</span>
+
+        <span class="hljs-function"><span class="hljs-keyword">def</span> </span>atomize(site, type, posts)
+          path = <span class="hljs-string">"/<span class="hljs-subst">#{type}</span>/<span class="hljs-subst">#{posts[<span class="hljs-number">0</span>]}</span>"</span>
+          atom = <span class="hljs-constant">AtomPage</span>.new(site, site.source, path, type, posts[<span class="hljs-number">0</span>], posts[<span class="hljs-number">1</span>])
+          site.pages &lt;&lt; atom
+        <span class="hljs-keyword">end</span>
+
+        <span class="hljs-function"><span class="hljs-keyword">def</span> </span>paginate(site, type, posts)
+          pages = <span class="hljs-constant">Pager</span>.calculate_pages(posts[<span class="hljs-number">1</span>], site.config[<span class="hljs-string">'paginate'</span>].to_i)
+          (<span class="hljs-number">1</span>..pages).each <span class="hljs-keyword">do</span> |num_page|
+            pager = <span class="hljs-constant">Pager</span>.new(site, num_page, posts[<span class="hljs-number">1</span>], pages)
+            slug = posts[<span class="hljs-number">0</span>].gsub(<span class="hljs-string">' '</span>, <span class="hljs-string">'-'</span>)
+            base_path = <span class="hljs-string">"/<span class="hljs-subst">#{type}</span>/<span class="hljs-subst">#{slug}</span>"</span>
+            path = base_path
+            <span class="hljs-keyword">if</span> num_page &gt; <span class="hljs-number">1</span>
+              path += <span class="hljs-string">"/page/<span class="hljs-subst">#{num_page}</span>"</span>
+            <span class="hljs-keyword">end</span>
+            newpage = <span class="hljs-constant">GroupSubPage</span>.new(site, site.source, path, base_path, type, posts[<span class="hljs-number">0</span>])
+            newpage.pager = pager
+            site.pages &lt;&lt; newpage
+
+          <span class="hljs-keyword">end</span>
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GroupSubPage</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Page</span></span></span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(site, base, dir, base_path, type, val)
+          <span class="hljs-variable">@site</span> = site
+          <span class="hljs-variable">@base</span> = base
+          <span class="hljs-variable">@dir</span> = dir
+          <span class="hljs-variable">@name</span> = <span class="hljs-string">'index.html'</span>
+
+          <span class="hljs-keyword">self</span>.process(<span class="hljs-variable">@name</span>)
+          <span class="hljs-keyword">self</span>.read_yaml(<span class="hljs-constant">File</span>.join(base, <span class="hljs-string">'_layouts'</span>), <span class="hljs-string">"group_index.html"</span>)
+          <span class="hljs-keyword">self</span>.data[type] = val
+          <span class="hljs-keyword">self</span>.data[<span class="hljs-string">'base'</span>] = base_path
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AtomPage</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Page</span></span></span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(site, base, dir, type, val, posts)
+            <span class="hljs-variable">@site</span> = site
+            <span class="hljs-variable">@base</span> = base
+            <span class="hljs-variable">@dir</span> = dir
+            <span class="hljs-variable">@name</span> = <span class="hljs-string">'atom.xml'</span>
+
+            <span class="hljs-keyword">self</span>.process(<span class="hljs-variable">@name</span>)
+            <span class="hljs-keyword">self</span>.read_yaml(<span class="hljs-constant">File</span>.join(base, <span class="hljs-string">'_layouts'</span>), <span class="hljs-string">"group_atom.xml"</span>)
+            <span class="hljs-keyword">self</span>.data[type] = val
+            <span class="hljs-keyword">self</span>.data[<span class="hljs-string">"grouptype"</span>] = type
+            <span class="hljs-keyword">self</span>.data[<span class="hljs-string">"posts"</span>] = posts[<span class="hljs-number">0</span>..<span class="hljs-number">9</span>]
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre></div><p>I chose to pass in an extra parameter to the Pager, defining the &quot;base_path&quot; for which an index page has been generated. This enables absolute links to pages and prevents situations like /category/javascript/category/javascript/page/1, which occur when relative pagination is generated when on a category page.</p>
+<p>A view making use of it would look like the following:</p>
+<div class='hljs'><pre><code class='html'><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pagination"</span>&gt;</span>
+        {% if paginator.previous_page %}
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"{{ page.base }}/page/{{ paginator.previous_page }}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"previous"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        {% else %}
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"previous"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        {% endif %}
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page_number "</span>&gt;</span>Page: {{ paginator.page }} of {{ paginator.total_pages }}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        {% if paginator.next_page %}
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"{{ page.base }}/page/{{ paginator.next_page }}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"next"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        {% else %}
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"next "</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        {% endif %}
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><h2 id="creating-archive-pages">Creating Archive Pages</h2>
+<p>In a similar fashion, Jekyll doesn&#39;t create pages or pagination for previous years or months. Even if they are not oft used by others, I find it useful myself to hit up my archives for <a href="http://ianwootten.co.uk/2004">previous years</a> on occasion and <a href="http://www.ianwootten.co.uk/2004/05/06/chicken-breasts/">laugh at the random work I did for my undergraduate</a>.</p>
+<p>I created the following plugin to generate indexes at /{year} /{year}/{month} and /{year}/page/{pageNo} and /{year}/{month}/page/{pageNo} if necessary.</p>
+<div class='hljs'><pre><code class='ruby'><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Jekyll</span></span>
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArchiveGenerator</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Generator</span></span></span>
+    safe <span class="hljs-keyword">true</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>generate(site)
+      <span class="hljs-keyword">if</span> site.layouts.key? <span class="hljs-string">'archive_index'</span>
+        site.posts.group_by{ |c| {<span class="hljs-string">"month"</span> =&gt; c.date.month, <span class="hljs-string">"year"</span> =&gt; c.date.year} }.each <span class="hljs-keyword">do</span> |period, posts|
+          posts = posts.sort_by { |p| -p.date.to_f }
+          archive_dir = <span class="hljs-constant">File</span>.join(period[<span class="hljs-string">"year"</span>].to_s(), <span class="hljs-string">"%02d"</span> % period[<span class="hljs-string">"month"</span>].to_s())
+          paginate(site, archive_dir, posts)
+        <span class="hljs-keyword">end</span>
+        site.posts.group_by{ |c| {<span class="hljs-string">"year"</span> =&gt; c.date.year} }.each <span class="hljs-keyword">do</span> |period, posts|
+          posts = posts.sort_by { |p| -p.date.to_f }
+          archive_dir = period[<span class="hljs-string">"year"</span>].to_s()
+          paginate(site, archive_dir, posts)
+        <span class="hljs-keyword">end</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>paginate(site, dir, posts)
+      pages = <span class="hljs-constant">Pager</span>.calculate_pages(posts, site.config[<span class="hljs-string">'paginate'</span>].to_i)
+      (<span class="hljs-number">1</span>..pages).each <span class="hljs-keyword">do</span> |num_page|
+        pager = <span class="hljs-constant">Pager</span>.new(site, num_page, posts, pages)
+        archive_path = <span class="hljs-string">"/"</span> + dir
+        path = archive_path
+        <span class="hljs-keyword">if</span> num_page &gt; <span class="hljs-number">1</span>
+          path += <span class="hljs-string">"/page/<span class="hljs-subst">#{num_page}</span>"</span>
+        <span class="hljs-keyword">end</span>
+        newpage = <span class="hljs-constant">ArchiveIndex</span>.new(site, site.source, path, archive_path, posts)
+        newpage.pager = pager
+        site.pages &lt;&lt; newpage
+
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArchiveIndex</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Page</span></span></span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(site, base, dir, base_path, posts)
+      <span class="hljs-variable">@site</span> = site
+      <span class="hljs-variable">@base</span> = base
+      <span class="hljs-variable">@dir</span> = dir
+      <span class="hljs-variable">@name</span> = <span class="hljs-string">'index.html'</span>
+
+      <span class="hljs-keyword">self</span>.process(<span class="hljs-variable">@name</span>)
+      <span class="hljs-keyword">self</span>.read_yaml(<span class="hljs-constant">File</span>.join(base, <span class="hljs-string">'_layouts'</span>), <span class="hljs-string">'archive_index.html'</span>)
+      <span class="hljs-keyword">self</span>.data[<span class="hljs-string">'base'</span>] = base_path
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre></div><p>The layout of the paginator for the archives is the same as that for categories and tags.</p>
+<p>That&#39;s it for my jekyll roundup, I other long time wordpress users find this information useful.</p>
+
+        <div class="entry_content">Tagged
+            
+        </div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+
+
+      <footer>
+        <div class="footer-about">
+          I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+        </div>
+      </footer>
+    </div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+</body>
+</html>
+

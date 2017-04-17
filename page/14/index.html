@@ -37,6 +37,27 @@
 
       
         <div class="post">
+          <h1><a href="/2008/05/30/johnny-lee-s-innovative-uses-of-common-technology">Johnny Lee&#39;s Innovative Uses of Common Technology</a></h1>
+      <div class="author_meta">30 May 2008</div>
+
+          <p>I&#8217;m not sure how many visitors have caught this ted talk before, but I&#8217;d thought I&#8217;d post it anyway. Johnny Chung Lee is amazing, turning a $40 wii remote into use an interactive whiteboard or a new way to interact with video games via head tracking. He&#8217;s been at this sort of thing for ages previously putting out a <a href="http://www.littlegreatideas.com/steadycam/">$14 steadycam</a>.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/steadycam">steadycam</a>,
+                
+                <a href="/tag/whiteboard">whiteboard</a>,
+                
+                <a href="/tag/wii">wii</a>,
+                
+              
+              | <a href="2008/05/30/johnny-lee-s-innovative-uses-of-common-technology/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2008/05/06/fair-and-bare-bringing-design-to-fairtrade">Fair and Bare - Bringing Design to Fairtrade</a></h1>
       <div class="author_meta">06 May 2008</div>
 
@@ -148,76 +169,6 @@
                 
               
               | <a href="2008/01/30/location-based-job-boards/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2008/01/05/decrypting-filezilla-passwords-with-php">Decrypting Filezilla Passwords with PHP</a></h1>
-      <div class="author_meta">05 Jan 2008</div>
-
-          <p>One of the most frustrating things I find in managing a number of websites is that I&#8217;m always forgetting passwords. The version of Filezilla I&#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&#8217;ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I&#8217;ve added some comments to roughly describe what is going on.</p>
-<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that&#8217;ll make my job easier now.</p>
-<div class='hljs'><pre><code class='php'><span class="hljs-variable">$filezilla_password_file</span> = <span class="hljs-string">"FileZilla.xml"</span>;
-
-<span class="hljs-variable">$xml</span> = file_get_contents(<span class="hljs-variable">$filezilla_password_file</span>);
-
-<span class="hljs-variable">$simple_xml</span> = simplexml_load_string(<span class="hljs-variable">$xml</span>);
-
-<span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$simple_xml</span>-&gt;Sites-&gt;Site <span class="hljs-keyword">as</span> <span class="hljs-variable">$site</span>)
-{
-    <span class="hljs-variable">$attributes</span> =  <span class="hljs-variable">$site</span>-&gt;attributes();
-
-    <span class="hljs-keyword">print</span> <span class="hljs-string">"Site: "</span>.<span class="hljs-variable">$attributes</span>-&gt;Name.<span class="hljs-string">"\n"</span>;
-    <span class="hljs-keyword">print</span> <span class="hljs-string">"User: "</span>.<span class="hljs-variable">$attributes</span>-&gt;User.<span class="hljs-string">"\n"</span>;
-    <span class="hljs-keyword">print</span> <span class="hljs-string">"Encrypted Pass: "</span>.<span class="hljs-variable">$attributes</span>-&gt;Pass.<span class="hljs-string">"\n"</span>;
-    <span class="hljs-keyword">print</span> <span class="hljs-string">"Unencrypted Pass:"</span>.decryptPass((string)<span class="hljs-variable">$attributes</span>-&gt;Pass).<span class="hljs-string">"\n\n"</span>;
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">decryptPass</span><span class="hljs-params">(<span class="hljs-variable">$pass</span>)</span>
-</span>{
-        <span class="hljs-comment">// Encryption Key for FileZilla 2 Passwords</span>
-    <span class="hljs-variable">$key</span> = <span class="hljs-string">"FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>;
-
-    <span class="hljs-comment">// Find the offset position in the key for this pass</span>
-    <span class="hljs-variable">$pos</span>=(strlen(<span class="hljs-variable">$pass</span>)/<span class="hljs-number">3</span>) % strlen(<span class="hljs-variable">$key</span>);
-    <span class="hljs-variable">$decrypt</span> = <span class="hljs-string">''</span>;
-
-    <span class="hljs-variable">$t</span>=<span class="hljs-number">0</span>;
-
-    <span class="hljs-comment">//Loop through each 3rd of the password</span>
-    <span class="hljs-keyword">for</span>(<span class="hljs-variable">$i</span>=<span class="hljs-number">0</span>;<span class="hljs-variable">$i</span> &amp;lt; strlen(<span class="hljs-variable">$pass</span>) / <span class="hljs-number">3</span>;<span class="hljs-variable">$i</span>++) {
-
-        <span class="hljs-comment">//Get 3 characters, remove the 0 at the</span>
-    <span class="hljs-comment">//front to get ASCII code to represent the character</span>
-    <span class="hljs-variable">$num</span> = substr(<span class="hljs-variable">$pass</span>,<span class="hljs-variable">$i</span> * <span class="hljs-number">3</span>,<span class="hljs-number">3</span>);
-
-    <span class="hljs-keyword">if</span> (substr(<span class="hljs-variable">$num</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>) == <span class="hljs-number">0</span>) {
-        <span class="hljs-variable">$num</span> = substr(<span class="hljs-variable">$num</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
-    }
-
-    <span class="hljs-comment">//Get the ascii code of the unencrypted character</span>
-    <span class="hljs-comment">//by performing XOR against current ASCII and key</span>
-    <span class="hljs-comment">//before converting back and adding to decrypted pass</span>
-        <span class="hljs-variable">$t</span> = <span class="hljs-variable">$num</span> ^ ord(<span class="hljs-variable">$key</span>[(<span class="hljs-variable">$i</span> + <span class="hljs-variable">$pos</span>) % strlen(<span class="hljs-variable">$pass</span>)]);
-         <span class="hljs-variable">$decrypt</span> .= chr(<span class="hljs-variable">$t</span>);
-
-    }
-
-    <span class="hljs-comment">// Return the decrypted pass</span>
-       <span class="hljs-keyword">return</span> <span class="hljs-variable">$decrypt</span>;
-}</code></pre></div>
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/decryption">decryption</a>,
-                
-                <a href="/tag/filezilla">filezilla</a>,
-                
-                <a href="/tag/PHP">PHP</a>,
-                
-              
-              | <a href="2008/01/05/decrypting-filezilla-passwords-with-php/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

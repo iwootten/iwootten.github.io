@@ -37,6 +37,50 @@
 
       
         <div class="post">
+          <h1><a href="/2011/11/02/pagination-in-couchdb-apps">Pagination in CouchDB Apps</a></h1>
+      <div class="author_meta">02 Nov 2011</div>
+
+          <p>I&#8217;ve been working on some fun little node.js / couchdb projects of late. Given the fact I don&#8217;t use either as part of my work, I&#8217;ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.</p>
+<p>I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I&#8217;ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out <a href="http://guide.couchdb.org/draft/recipes.html#pagination" title="CouchDB Pagination Recipe">I&#8217;ve always been doing it the &#8220;bad&#8221; way</a>. Oh, well that&#8217;s upsetting.</p>
+<h2 id="the-wrong-way">The Wrong Way</h2>
+<p>My &#8220;slow&#8221; approach has always been to take the page no as a argument in the url, generating &#8220;skip&#8221; and &#8220;limit&#8221; variables to be used as parameters to my store. So for example, if I wanted to have the 2nd page of my app showing 10 items:</p>
+<div class='hljs'><pre><code class='javascript'>  <span class="hljs-keyword">var</span> skip = (pageno==<span class="hljs-number">1</span>) ? () : ((pageno-<span class="hljs-number">1</span>) * <span class="hljs-number">10</span>);</code></pre></div><div class='hljs'><pre><code class='bash'>  curl -X GET http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">5984</span>/stuff/_design/stuff/_view/by-name?skip=<span class="hljs-number">10</span>&amp;<span class="hljs-built_in">limit</span>=<span class="hljs-number">10</span></code></pre></div><p>It turns out, that although you might think you&#8217;re starting at a particular result, CouchDB still starts at the first result, due to the way the view is created from the b-tree index, couchDB just surpresses the results you skip. This isn&#8217;t good news when you&#8217;re trying to skip say, 10000 results.</p>
+<h2 id="the-suggested-way">The Suggested Way</h2>
+<p>The suggested solution is to perform requests and instead of using a &#8220;skip&#8221; parameter, keep track of the startkey at which the next page begins. This is possible, by requesting a page 1 item longer than that of the number of items on a page and using the key of the result in any requests. So now, for a first page my query is:</p>
+<div class='hljs'><pre><code class='bash'>  curl -X GET http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">5984</span>/stuff/_design/stuff/_view/by-name?<span class="hljs-built_in">limit</span>=<span class="hljs-number">11</span></code></pre></div><p>Returning something like:</p>
+<div class='hljs'><pre><code class='json'> {"<span class="hljs-attribute">total_rows</span>":<span class="hljs-value"><span class="hljs-number">17</span></span>,"<span class="hljs-attribute">offset</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">rows</span>":<span class="hljs-value">[
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"8177bf155b952652129836a5d354b30e"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Ian Wootten"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"bae2c490c70480aec7096d79e1e3bfc3"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Isambard Kingdom Brunel"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"eaae74cfbe5cd13ea6b50dfd090827ca"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Christopher Columbus"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"491e68b08d73256f060ebf4b8e063e1c"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Elizabeth Fry"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"b45d8a7b9edee9ca66ac0860196f4504"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Edward Jenner"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"8a4d3f46885701ffcc7532aeac7a5ae9"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Florence Nightingale"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"71e6534c17429eca2cd9450cfc95c6bb"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Samuel Pepys"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"6cbad847f0ae959b281b471a72d60587"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Pocahontas"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"e5b026ec5c92c20f1575a2901defe14e"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Mary Seacole"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"84a371a7b8414237fad1b6aaf68cd16a"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"George Stephenson"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
+  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"321aeb36e20d62660eb0d03c9fcd27b2"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Joe Bloggs"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>}
+]</span>}</code></pre></div><p>From the 11th returned result, I have the key &#8220;Joe Bloggs&#8221; &#8211; which can be used as a startkey arg to couch to obtain my second page. If we have duplicate keys, it is also neccessary to keep tabs on the last document&#8217;s id and supply as a startkey_docid arg in order to correctly page through everything.</p>
+<p>What personally I dislike about the suggested approach, is the inability to create simple requests to arbritrary pages, even with low numbers. We always need to follow a path of links from the first page in order to view particular results. CouchDB&#8217;s response is &#8220;Not even Google is doing that!&#8221;, which is kind of weak to me. I want nice clean urls ala myapp.com/page/2 or myapp.com?page=2.</p>
+<p>In fact, such a suggested approach only really allows us to have a single &#8220;more&#8221; type link in order to fetch results. Passing a startkey as part of a url param eg /page/321aeb36e20d62660eb0d03c9fcd27b2 just sounds (and looks) plain nasty and isn&#8217;t very good from a UX point of view for any users we may have.</p>
+<p>At the moment, clean tangible page urls (the right way) are only possible using custom middleware. I&#8217;ve yet to find anything suitable for <a href="http://nodejs.org">node.js</a>. I intend to investigate how to cache document keys for low numbered pages as a separate db in order to produce a solution for my current project and I hope to write a later post detailing how I&#8217;ve got on.</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/articles">articles</a>,
+                
+                <a href="/tag/couchdb">couchdb</a>,
+                
+                <a href="/tag/nodejs">nodejs</a>,
+                
+              
+              | <a href="2011/11/02/pagination-in-couchdb-apps/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2011/09/09/hosting-an-octopress-blog-on-amazon-s3">Hosting an Octopress Blog on Amazon S3</a></h1>
       <div class="author_meta">09 Sep 2011</div>
 
@@ -201,48 +245,6 @@ app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span 
                 
               
               | <a href="2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2011/05/07/updating-wordpress-automatically-over-sftp">Updating WordPress Automatically over SFTP</a></h1>
-      <div class="author_meta">07 May 2011</div>
-
-          <p>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it&#8217;s more secure and means I don&#8217;t have to open up FTP on my virtual server and open another port up in the firewall.</p>
-<p>I&#8217;m using ubuntu and the sequence of commands I followed were:</p>
-<pre class="bash">sudo apt-get install libssh2-1-dev libssh2-php
-</pre>
-
-<p>You should now find that if you list the modules installed in php and check if ssh2 is now there, you get the result &#8220;ssh2&#8243;:</p>
-<pre class="bash">php -m | grep ssh2
-</pre>
-
-<p>You&#8217;ll need to restart apache for the changes to begin being used.</p>
-<pre class="bash">sudo /etc/init.d/apache2 restart
-</pre>
-
-<p>If you head to updates in your dashboard, you should now see an extra option &#8220;SSH2&#8243; and spaces for public and private authentication keys. I had to head back to the terminal and create these particular files.</p>
-<pre class="bash">cd ~
-ssh-keygen
-cat .ssh/id_rsa.pub >> .ssh/authorized_keys
-chmod 755 .ssh
-chmod 644 .ssh/*
-sudo chown -R ian:www-data /var/www/pathtowordpress/
-</pre>
-
-<p>Now you can head into the updates page again, enter your username and password and the locations to your public and private keys (/home/ian/.ssh/id_rsa.pub and /home/ian/.ssh/id_rsa in my case). If you&#8217;re running ssh on a non standard port, be sure to append that to your hostname. </p>
-<p>Thanks to the following helpful posts: <a href="http://kevin.vanzonneveld.net/techblog/article/make\_ssh\_connections\_with\_php/">http://kevin.vanzonneveld.net/techblog/article/make\_ssh\_connections\_with\_php/</a></p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/sftp">sftp</a>,
-                
-                <a href="/tag/update">update</a>,
-                
-              
-              | <a href="2011/05/07/updating-wordpress-automatically-over-sftp/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

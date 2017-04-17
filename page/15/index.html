@@ -37,6 +37,76 @@
 
       
         <div class="post">
+          <h1><a href="/2008/01/05/decrypting-filezilla-passwords-with-php">Decrypting Filezilla Passwords with PHP</a></h1>
+      <div class="author_meta">05 Jan 2008</div>
+
+          <p>One of the most frustrating things I find in managing a number of websites is that I&#8217;m always forgetting passwords. The version of Filezilla I&#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&#8217;ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I&#8217;ve added some comments to roughly describe what is going on.</p>
+<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that&#8217;ll make my job easier now.</p>
+<div class='hljs'><pre><code class='php'><span class="hljs-variable">$filezilla_password_file</span> = <span class="hljs-string">"FileZilla.xml"</span>;
+
+<span class="hljs-variable">$xml</span> = file_get_contents(<span class="hljs-variable">$filezilla_password_file</span>);
+
+<span class="hljs-variable">$simple_xml</span> = simplexml_load_string(<span class="hljs-variable">$xml</span>);
+
+<span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$simple_xml</span>-&gt;Sites-&gt;Site <span class="hljs-keyword">as</span> <span class="hljs-variable">$site</span>)
+{
+    <span class="hljs-variable">$attributes</span> =  <span class="hljs-variable">$site</span>-&gt;attributes();
+
+    <span class="hljs-keyword">print</span> <span class="hljs-string">"Site: "</span>.<span class="hljs-variable">$attributes</span>-&gt;Name.<span class="hljs-string">"\n"</span>;
+    <span class="hljs-keyword">print</span> <span class="hljs-string">"User: "</span>.<span class="hljs-variable">$attributes</span>-&gt;User.<span class="hljs-string">"\n"</span>;
+    <span class="hljs-keyword">print</span> <span class="hljs-string">"Encrypted Pass: "</span>.<span class="hljs-variable">$attributes</span>-&gt;Pass.<span class="hljs-string">"\n"</span>;
+    <span class="hljs-keyword">print</span> <span class="hljs-string">"Unencrypted Pass:"</span>.decryptPass((string)<span class="hljs-variable">$attributes</span>-&gt;Pass).<span class="hljs-string">"\n\n"</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">decryptPass</span><span class="hljs-params">(<span class="hljs-variable">$pass</span>)</span>
+</span>{
+        <span class="hljs-comment">// Encryption Key for FileZilla 2 Passwords</span>
+    <span class="hljs-variable">$key</span> = <span class="hljs-string">"FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>;
+
+    <span class="hljs-comment">// Find the offset position in the key for this pass</span>
+    <span class="hljs-variable">$pos</span>=(strlen(<span class="hljs-variable">$pass</span>)/<span class="hljs-number">3</span>) % strlen(<span class="hljs-variable">$key</span>);
+    <span class="hljs-variable">$decrypt</span> = <span class="hljs-string">''</span>;
+
+    <span class="hljs-variable">$t</span>=<span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">//Loop through each 3rd of the password</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-variable">$i</span>=<span class="hljs-number">0</span>;<span class="hljs-variable">$i</span> &amp;lt; strlen(<span class="hljs-variable">$pass</span>) / <span class="hljs-number">3</span>;<span class="hljs-variable">$i</span>++) {
+
+        <span class="hljs-comment">//Get 3 characters, remove the 0 at the</span>
+    <span class="hljs-comment">//front to get ASCII code to represent the character</span>
+    <span class="hljs-variable">$num</span> = substr(<span class="hljs-variable">$pass</span>,<span class="hljs-variable">$i</span> * <span class="hljs-number">3</span>,<span class="hljs-number">3</span>);
+
+    <span class="hljs-keyword">if</span> (substr(<span class="hljs-variable">$num</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>) == <span class="hljs-number">0</span>) {
+        <span class="hljs-variable">$num</span> = substr(<span class="hljs-variable">$num</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+    }
+
+    <span class="hljs-comment">//Get the ascii code of the unencrypted character</span>
+    <span class="hljs-comment">//by performing XOR against current ASCII and key</span>
+    <span class="hljs-comment">//before converting back and adding to decrypted pass</span>
+        <span class="hljs-variable">$t</span> = <span class="hljs-variable">$num</span> ^ ord(<span class="hljs-variable">$key</span>[(<span class="hljs-variable">$i</span> + <span class="hljs-variable">$pos</span>) % strlen(<span class="hljs-variable">$pass</span>)]);
+         <span class="hljs-variable">$decrypt</span> .= chr(<span class="hljs-variable">$t</span>);
+
+    }
+
+    <span class="hljs-comment">// Return the decrypted pass</span>
+       <span class="hljs-keyword">return</span> <span class="hljs-variable">$decrypt</span>;
+}</code></pre></div>
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/decryption">decryption</a>,
+                
+                <a href="/tag/filezilla">filezilla</a>,
+                
+                <a href="/tag/PHP">PHP</a>,
+                
+              
+              | <a href="2008/01/05/decrypting-filezilla-passwords-with-php/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2007/12/20/stick-to-your-guns-you-ll-be-rewarded">Stick to your guns - You&#39;ll be rewarded</a></h1>
       <div class="author_meta">20 Dec 2007</div>
 
@@ -70,20 +140,6 @@
         </div>
       
         <div class="post">
-          <h1><a href="/2007/09/20/first-cardiff-geek-meetup">First Cardiff Geek Meetup</a></h1>
-      <div class="author_meta">20 Sep 2007</div>
-
-          <p>The <a href="http://www.cardiffgeeks.net">Cardiff geeks</a> will be <a href="http://upcoming.yahoo.com/event/268798/">having its first ever face to face on Wednesday 17th October from 7pm</a> at <a href="http://www.cafefloyd.co.uk">Cafe Floyd</a>, just <a href="http://maps.google.co.uk/maps?f=q&#038;hl=en&#038;q=CF10%201PT&#038;ie=UTF8&#038;om=1&#038;z=16&#038;iwloc=addr">opposite the castle</a>. Props to <a href="http://www.oreillynet.com/pub/au/2379">Dan Zambonini</a> for organising the venue.</p>
-<p>This is an informal, introduction between us all. If you&#8217;re a geek, or interested in chatting with us about what we and you are passionate about, make sure you get over there!</p>
-
-
-          <div class="entry_content">Tagged
-              
-              | <a href="2007/09/20/first-cardiff-geek-meetup/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
           <h1><a href="/2007/09/20/undeserved-job-titles">Undeserved Job Titles</a></h1>
       <div class="author_meta">20 Sep 2007</div>
 
@@ -102,20 +158,16 @@
         </div>
       
         <div class="post">
-          <h1><a href="/2007/09/11/which-would-you-rather-introduce-yourself-with">Which would you rather introduce yourself with?</a></h1>
-      <div class="author_meta">11 Sep 2007</div>
+          <h1><a href="/2007/09/20/first-cardiff-geek-meetup">First Cardiff Geek Meetup</a></h1>
+      <div class="author_meta">20 Sep 2007</div>
 
-          <p>Last night I attended the FOWA Roadtrip in Cardiff, which was great. Unfortunately my &#8220;business&#8221; cards were a little lacking, due to me making a rather late order from moo and having to put something together by hand for the interim. They instead arrived today, about 14 hours too late. I felt like writing &#8220;beta&#8221; on hand hand-made ones or something&#8230;</p>
-<p><a href="http://www.flickr.com/photos/imw/1358538413/" title="Photo Sharing"><img src="http://farm2.static.flickr.com/1399/1358538413_8f41f4ee63.jpg" width="500" height="375" alt="Which would you rather introduce yourself with?" /></a></p>
+          <p>The <a href="http://www.cardiffgeeks.net">Cardiff geeks</a> will be <a href="http://upcoming.yahoo.com/event/268798/">having its first ever face to face on Wednesday 17th October from 7pm</a> at <a href="http://www.cafefloyd.co.uk">Cafe Floyd</a>, just <a href="http://maps.google.co.uk/maps?f=q&#038;hl=en&#038;q=CF10%201PT&#038;ie=UTF8&#038;om=1&#038;z=16&#038;iwloc=addr">opposite the castle</a>. Props to <a href="http://www.oreillynet.com/pub/au/2379">Dan Zambonini</a> for organising the venue.</p>
+<p>This is an informal, introduction between us all. If you&#8217;re a geek, or interested in chatting with us about what we and you are passionate about, make sure you get over there!</p>
 
 
           <div class="entry_content">Tagged
               
-                
-                <a href="/tag/design">design</a>,
-                
-              
-              | <a href="2007/09/11/which-would-you-rather-introduce-yourself-with/#disqus_thread">Leave a comment</a>
+              | <a href="2007/09/20/first-cardiff-geek-meetup/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

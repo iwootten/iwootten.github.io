@@ -37,6 +37,43 @@
 
       
         <div class="post">
+          <h1><a href="/posts/2014-05-20-porting-a-wordpress-blog-to-jekyll"></a></h1>
+      <div class="author_meta">NaN undefined NaN</div>
+
+          <p>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&#39;ve overcome them.</p>
+<h2 id="using-compass-for-a-jekyll-theme">Using Compass for a Jekyll theme</h2>
+<p>The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog. When attempting to use <a href="https://github.com/mscharley/jekyll-compass">jekyll-compass</a> to enable that, I hit the following error:</p>
+<div class='hljs'><pre><code class='bash'>Unable to activate compass-0.12.6, because sass-3.3.7 conflicts with sass (~&gt; 3.2.19) (Gem::LoadError)</code></pre></div><p>After searching for a bit I came across the <a href="https://github.com/jekyll/jekyll/issues/2263">following issue</a> which detailed a solution - but unfortunately it didn&#39;t work for me. Being somewhat of a newbie to Ruby, I didn&#39;t realise that after creating a Gem as instructed in the fix, I actually needed to &quot;bundle install&quot; it. After a little more digging and tweaking against <a href="http://twitter.com/markturner">Mark Turners</a> advice, I ended up with a Gem file like so:</p>
+<div class='hljs'><pre><code class='ruby'>source <span class="hljs-string">"https://rubygems.org"</span>
+
+gem <span class="hljs-string">'sass'</span>, <span class="hljs-string">"~&gt; 3.2.19"</span>
+gem <span class="hljs-string">'jekyll-compass'</span>, <span class="hljs-string">"1.0.6"</span></code></pre></div><p>Which has finally given me what I wanted.</p>
+<h2 id="using-custom-pygments-themes-for-syntax-highlighting">Using Custom Pygments Themes for Syntax highlighting</h2>
+<p>Jekyll uses pygments for fancy pants syntax highlighting. Although an example syntax.css is linked to in the jekyll documentation, I prefer a darker theme myself. Jekyll doesn&#39;t tell you it&#39;s possible to generate any one of the numerous pygments styles like this:</p>
+<div class='hljs'><pre><code class='bash'>pygmentize <span class="hljs-operator">-f</span> html -S monokai <span class="hljs-operator">-a</span> .highlight &gt; monokai.css</code></pre></div><p>I&#39;ve used the monokai theme for my own highlighting. There are demos of each of the themes on the pygments site - <a href="http://pygments.org/demo/357593/">here is an example</a>. You can then use that as the basis for your own custom highlighting. I&#39;ve created each one of the 19 possible themes and <a href="https://github.com/iwootten/jekyll-syntax">put them up on github</a>.</p>
+<h2 id="moving-to-disqus-commenting">Moving to Disqus Commenting</h2>
+<p>Given I now had a static site, I needed a means of continuing supporting comments. Disqus does just that by embedding comments using javascript into post pages. Adding disqus  proved to be the biggest hurdle for me. I had a large number of comments from people on my blog over the years and therefore I didn&#39;t want to lose them. After exporting my site as xml and uploading them to disqus, I finally set jekyll loose on my site along with disqus embeds, but I couldn&#39;t see them. The problem I found after a frustrating hour or two of uploading new versions of my site over ftp, was jekyll used a trailing slash (as the post is an index within a directory) to denote links to posts. It&#39;s possible however to do away with this using .htaccess if you&#39;re using Apache.</p>
+<div class='hljs'><pre><code class='apache'><span class="hljs-keyword"><span class="hljs-common">Options</span></span> -Multiviews +FollowSymLinks
+<span class="hljs-keyword"><span class="hljs-common">RewriteEngine</span></span> <span class="hljs-literal">On</span>
+<span class="hljs-keyword">RewriteBase</span> /
+<span class="hljs-keyword">DirectorySlash</span> <span class="hljs-literal">Off</span>
+
+<span class="hljs-comment"># remove the trailing slash</span>
+<span class="hljs-keyword"><span class="hljs-common">RewriteRule</span></span> ^(.*)\/(\?.*)?$ <span class="hljs-number">$1</span><span class="hljs-number">$2</span><span class="hljs-sqbracket"> [R=301,L]</span>
+
+<span class="hljs-comment"># rewrite /dir/file to /dir/file/index.html</span>
+<span class="hljs-keyword"><span class="hljs-common">RewriteRule</span></span> ^([\w\/-]+)(\?.*)?$ <span class="hljs-number">$1</span>/index.html<span class="hljs-number">$2</span><span class="hljs-sqbracket"> [L,T=application/x-httpd-html]</span></code></pre></div><p>However, when I began using github pages, this fix didn&#39;t work as github only serves static files and doesn&#39;t allow use of htaccess. Instead, I had to resign to the fact that I would have to have trailing slashes (apparently they&#39;re quicker anyway). This then meant I had to use the Redirect Crawler option of disqus&#39;s &quot;Migrate Threads&quot; wizard (seen below) to crawl my new blog on github and determine where the posts were now located.</p>
+<p><img src="http://ianwootten.co.uk/images/screen-2014-05-20.png" title="Disqus Migrate Threads Wizard" /></p>
+<p>In my next post I&#39;ll go through how I use plugins to support archive, category and tag pages in jekyll.</p>
+
+
+          <div class="entry_content">Tagged
+              
+              | <a href="posts/2014-05-20-porting-a-wordpress-blog-to-jekyll/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/posts/2014-03-23-shipping-in-march-weeks-2-3"></a></h1>
       <div class="author_meta">NaN undefined NaN</div>
 

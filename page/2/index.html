@@ -37,6 +37,56 @@
 
       
         <div class="post">
+          <h1><a href="/2014/07/01/splitting-a-date-range-in-python">Splitting a date range in Python</a></h1>
+      <div class="author_meta">01 Jul 2014</div>
+
+          <p>Dates are one of those annoying things that shouldn&#39;t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I&#39;m currently working on. Hopefully someone else will find them helpful.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-keyword">import</span> datetime, calendar
+
+<span class="hljs-comment"># Find the delta between two dates based on a desired number of ranges</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datedelta</span><span class="hljs-params">(startdate, enddate, no_of_ranges)</span>:</span>
+    start_epoch = calendar.timegm(startdate.timetuple())
+    end_epoch = calendar.timegm(enddate.timetuple())
+
+    date_diff = end_epoch - start_epoch
+
+    step = date_diff / no_of_ranges
+
+    <span class="hljs-keyword">return</span> datetime.timedelta(seconds=step)</code></pre></div><p>date_delta allows me to create the timedeltas between two dates based on a desired number of segments.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-comment"># Edit 18/07/2014 - I realised dates needed the hrs, mins an secs correctly</span>
+<span class="hljs-comment"># adjusted to beginning / end of day</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datespan</span><span class="hljs-params">(startdate, enddate, delta=datetime.timedelta<span class="hljs-params">(days=<span class="hljs-number">1</span>)</span>)</span>:</span>
+    currentdate = startdate
+
+    <span class="hljs-keyword">while</span> currentdate + delta &lt; enddate:
+        todate = (currentdate + delta).replace(hour=<span class="hljs-number">23</span>, minute=<span class="hljs-number">59</span>,second=<span class="hljs-number">59</span>)
+
+        <span class="hljs-keyword">yield</span> currentdate, todate
+
+        currentdate += delta
+        currentdate.replace(hour=<span class="hljs-number">0</span>, minute=<span class="hljs-number">0</span>,second=<span class="hljs-number">0</span>)</code></pre></div><p>I can then pass the delta into datespan above, which returns an iterable I can then use.</p>
+<div class='hljs'><pre><code class='python'><span class="hljs-comment"># Get timedeltas based on splitting the range by 10</span>
+delta = date_delta(startdate, enddate, <span class="hljs-number">10</span>)
+
+<span class="hljs-keyword">for</span> from_datetime, to_datetime <span class="hljs-keyword">in</span> datespan(startdate, enddate, delta):
+    <span class="hljs-keyword">print</span> from_datetime, to_datetime</code></pre></div><p>The result forms part of the following d3 chart:</p>
+<p><blockquote class="twitter-tweet" lang="en"><p>Made some updates to that there commerce dashboard (now uses summary ranges on x-axis), what do people think? <a href="http://t.co/AatFxBRnsC">pic.twitter.com/AatFxBRnsC</a></p>&mdash; Ian Wootten (@iwootten) <a href="https://twitter.com/iwootten/statuses/481780932496863233">June 25, 2014</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/coding">coding</a>,
+                
+                <a href="/tag/python">python</a>,
+                
+              
+              | <a href="2014/07/01/splitting-a-date-range-in-python/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2014/06/16/tips-for-being-a-more-productive-freelancer">Tips for being a more Productive Freelancer</a></h1>
       <div class="author_meta">16 Jun 2014</div>
 
@@ -152,29 +202,6 @@ svg.selectAll(<span class="hljs-string">"circle"</span>)
                 
               
               | <a href="2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2014/03/03/shipping-in-march">Shipping in March</a></h1>
-      <div class="author_meta">03 Mar 2014</div>
-
-          <p>This month, I&#8217;ve decided to take some time out to ship projects. </p>
-<p>I have a huge list of projects accumulating I&#8217;d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.</p>
-<p>Currently I don&#8217;t have any work booked in for a while, so along with Viv, we&#8217;ve decided I should try and get some of these projects released. </p>
-<p>That sounds easy, but I&#8217;m well aware from past experience it isn&#8217;t. I don&#8217;t want to work outside of working hours (9-5.30pm) as I know the impact it has on my family. My hope is by setting myself some achievable goals I can at least get some way to ticking off some checkboxes on this growing todo list. </p>
-<p>Some of these projects are products I&#8217;ve not yet completed, projects I&#8217;ve released but need work or ideas that haven&#8217;t made it to the build stage yet. As a freelancer, I hope that some of them may even help out other people in a similar situation to me.</p>
-<p>Over the coming month, I&#8217;m going to attempt to ship at least 4 projects out of the door. 1 a week for 4 weeks. I&#8217;ll be blogging about my progress here, and posting summaries of how it went at the end of each week. The end date of the 28th is also my birthday, so it would be great present to myself to have come some way to meeting my goal.</p>
-<p>If you&#8217;re interested in receiving progress updates via email, signup here: <a href="http://eepurl.com/PxGe9">http://eepurl.com/PxGe9</a></p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/projects">projects</a>,
-                
-              
-              | <a href="2014/03/03/shipping-in-march/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

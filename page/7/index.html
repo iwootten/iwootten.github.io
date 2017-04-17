@@ -37,6 +37,32 @@
 
       
         <div class="post">
+          <h1><a href="/2012/05/03/if-you-build-it">If You Build It</a></h1>
+      <div class="author_meta">03 May 2012</div>
+
+          <p>If my years in academia have taught me anything, it&#8217;s that insight obvious to you isn&#8217;t often obvious to others. </p>
+<p>As a result, I&#8217;ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I&#8217;ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I&#8217;m in the fortunate position to have some of that available now and again. There&#8217;s a variety of reasons why I might attempt a project, ranging from it may later evolve into something able to draw an income further down the line, that I&#8217;m excited by learning from the tools I choose to use or that I feel moved enough by a problem to do something to try and prompt change. </p>
+<p>I had one of these ideas last weekend, whereby I was wondering what the specifics of the fees of kickstarter projects broke down to. The information on what fees are taken is published <a href="http://www.kickstarter.com/help/faq/creating%20a%20project#WhatFeesDoesKickChar" title="what fees does kickstarter charge">on their site</a>, so I set about a simple phantomjs script (available <a href="https://github.com/niftydigits/kickstarter.js">on github</a>) that could scrape the information from kickstarter. After doing so, the idea moved on to graphing said information via an app to a simple raphaeljs and again further once I&#8217;d realised some other stats that could be gathered from the info I was grabbing. The end result is <a href="http://starterstats.com">Starter Stats</a> &#8211; which is, (I think) a neat little site for showing stats on any kickstarter project.</p>
+<p><a href="http://starterstats.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2012/05/Screen-Shot-2012-05-03-at-10.16.42-1024x817.png" alt="" title="Starter Stats" width="640" height="510" class="alignnone size-large wp-image-536" /></a></p>
+<p>It took a little longer than I&#8217;d hoped, but I&#8217;m really pleased with the final site as it stands. You should also be able to just replace the beginning of any kickstarter project page (<a href="http://kickstarter.com">http://kickstarter.com</a>) with &#8220;<a href="http://starterstats.com&amp;#8221">http://starterstats.com&amp;#8221</a>; and you&#8217;ll be sent to the relevant stats page on the app. Pages are generated on-demand every 15 minutes. Go on, take a look and let me know what you think.</p>
+<p>I could have not spent my time on this, instead kicking back and waiting for someone else to build such a tool. But I couldn&#8217;t see that happening. No, better for me to build, learn whilst doing so and move on to my next project. What do you get by not building?</p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/kickstarter">kickstarter</a>,
+                
+                <a href="/tag/phantomjs">phantomjs</a>,
+                
+                <a href="/tag/raphaeljs">raphaeljs</a>,
+                
+              
+              | <a href="2012/05/03/if-you-build-it/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2012/03/01/how-to-switch-your-vps-in-2-hours">How to Switch Your VPS in 2 Hours</a></h1>
       <div class="author_meta">01 Mar 2012</div>
 
@@ -192,50 +218,6 @@ logfile        /var/log/msmtp.log`</p>
                 
               
               | <a href="2012/01/12/goodbye-1-1/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2011/11/02/pagination-in-couchdb-apps">Pagination in CouchDB Apps</a></h1>
-      <div class="author_meta">02 Nov 2011</div>
-
-          <p>I&#8217;ve been working on some fun little node.js / couchdb projects of late. Given the fact I don&#8217;t use either as part of my work, I&#8217;ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.</p>
-<p>I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I&#8217;ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out <a href="http://guide.couchdb.org/draft/recipes.html#pagination" title="CouchDB Pagination Recipe">I&#8217;ve always been doing it the &#8220;bad&#8221; way</a>. Oh, well that&#8217;s upsetting.</p>
-<h2 id="the-wrong-way">The Wrong Way</h2>
-<p>My &#8220;slow&#8221; approach has always been to take the page no as a argument in the url, generating &#8220;skip&#8221; and &#8220;limit&#8221; variables to be used as parameters to my store. So for example, if I wanted to have the 2nd page of my app showing 10 items:</p>
-<div class='hljs'><pre><code class='javascript'>  <span class="hljs-keyword">var</span> skip = (pageno==<span class="hljs-number">1</span>) ? () : ((pageno-<span class="hljs-number">1</span>) * <span class="hljs-number">10</span>);</code></pre></div><div class='hljs'><pre><code class='bash'>  curl -X GET http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">5984</span>/stuff/_design/stuff/_view/by-name?skip=<span class="hljs-number">10</span>&amp;<span class="hljs-built_in">limit</span>=<span class="hljs-number">10</span></code></pre></div><p>It turns out, that although you might think you&#8217;re starting at a particular result, CouchDB still starts at the first result, due to the way the view is created from the b-tree index, couchDB just surpresses the results you skip. This isn&#8217;t good news when you&#8217;re trying to skip say, 10000 results.</p>
-<h2 id="the-suggested-way">The Suggested Way</h2>
-<p>The suggested solution is to perform requests and instead of using a &#8220;skip&#8221; parameter, keep track of the startkey at which the next page begins. This is possible, by requesting a page 1 item longer than that of the number of items on a page and using the key of the result in any requests. So now, for a first page my query is:</p>
-<div class='hljs'><pre><code class='bash'>  curl -X GET http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">5984</span>/stuff/_design/stuff/_view/by-name?<span class="hljs-built_in">limit</span>=<span class="hljs-number">11</span></code></pre></div><p>Returning something like:</p>
-<div class='hljs'><pre><code class='json'> {"<span class="hljs-attribute">total_rows</span>":<span class="hljs-value"><span class="hljs-number">17</span></span>,"<span class="hljs-attribute">offset</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,"<span class="hljs-attribute">rows</span>":<span class="hljs-value">[
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"8177bf155b952652129836a5d354b30e"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Ian Wootten"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"bae2c490c70480aec7096d79e1e3bfc3"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Isambard Kingdom Brunel"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"eaae74cfbe5cd13ea6b50dfd090827ca"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Christopher Columbus"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"491e68b08d73256f060ebf4b8e063e1c"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Elizabeth Fry"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"b45d8a7b9edee9ca66ac0860196f4504"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Edward Jenner"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"8a4d3f46885701ffcc7532aeac7a5ae9"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Florence Nightingale"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"71e6534c17429eca2cd9450cfc95c6bb"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Samuel Pepys"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"6cbad847f0ae959b281b471a72d60587"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Pocahontas"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"e5b026ec5c92c20f1575a2901defe14e"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Mary Seacole"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"84a371a7b8414237fad1b6aaf68cd16a"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"George Stephenson"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>},
-  {"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"321aeb36e20d62660eb0d03c9fcd27b2"</span></span>,"<span class="hljs-attribute">key</span>":<span class="hljs-value"><span class="hljs-string">"Joe Bloggs"</span></span>,"<span class="hljs-attribute">value</span>":<span class="hljs-value"><span class="hljs-literal">null</span></span>}
-]</span>}</code></pre></div><p>From the 11th returned result, I have the key &#8220;Joe Bloggs&#8221; &#8211; which can be used as a startkey arg to couch to obtain my second page. If we have duplicate keys, it is also neccessary to keep tabs on the last document&#8217;s id and supply as a startkey_docid arg in order to correctly page through everything.</p>
-<p>What personally I dislike about the suggested approach, is the inability to create simple requests to arbritrary pages, even with low numbers. We always need to follow a path of links from the first page in order to view particular results. CouchDB&#8217;s response is &#8220;Not even Google is doing that!&#8221;, which is kind of weak to me. I want nice clean urls ala myapp.com/page/2 or myapp.com?page=2.</p>
-<p>In fact, such a suggested approach only really allows us to have a single &#8220;more&#8221; type link in order to fetch results. Passing a startkey as part of a url param eg /page/321aeb36e20d62660eb0d03c9fcd27b2 just sounds (and looks) plain nasty and isn&#8217;t very good from a UX point of view for any users we may have.</p>
-<p>At the moment, clean tangible page urls (the right way) are only possible using custom middleware. I&#8217;ve yet to find anything suitable for <a href="http://nodejs.org">node.js</a>. I intend to investigate how to cache document keys for low numbered pages as a separate db in order to produce a solution for my current project and I hope to write a later post detailing how I&#8217;ve got on.</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/articles">articles</a>,
-                
-                <a href="/tag/couchdb">couchdb</a>,
-                
-                <a href="/tag/nodejs">nodejs</a>,
-                
-              
-              | <a href="2011/11/02/pagination-in-couchdb-apps/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       

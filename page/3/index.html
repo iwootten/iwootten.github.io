@@ -37,6 +37,29 @@
 
       
         <div class="post">
+          <h1><a href="/2014/03/03/shipping-in-march">Shipping in March</a></h1>
+      <div class="author_meta">03 Mar 2014</div>
+
+          <p>This month, I&#8217;ve decided to take some time out to ship projects. </p>
+<p>I have a huge list of projects accumulating I&#8217;d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.</p>
+<p>Currently I don&#8217;t have any work booked in for a while, so along with Viv, we&#8217;ve decided I should try and get some of these projects released. </p>
+<p>That sounds easy, but I&#8217;m well aware from past experience it isn&#8217;t. I don&#8217;t want to work outside of working hours (9-5.30pm) as I know the impact it has on my family. My hope is by setting myself some achievable goals I can at least get some way to ticking off some checkboxes on this growing todo list. </p>
+<p>Some of these projects are products I&#8217;ve not yet completed, projects I&#8217;ve released but need work or ideas that haven&#8217;t made it to the build stage yet. As a freelancer, I hope that some of them may even help out other people in a similar situation to me.</p>
+<p>Over the coming month, I&#8217;m going to attempt to ship at least 4 projects out of the door. 1 a week for 4 weeks. I&#8217;ll be blogging about my progress here, and posting summaries of how it went at the end of each week. The end date of the 28th is also my birthday, so it would be great present to myself to have come some way to meeting my goal.</p>
+<p>If you&#8217;re interested in receiving progress updates via email, signup here: <a href="http://eepurl.com/PxGe9">http://eepurl.com/PxGe9</a></p>
+
+
+          <div class="entry_content">Tagged
+              
+                
+                <a href="/tag/projects">projects</a>,
+                
+              
+              | <a href="2014/03/03/shipping-in-march/#disqus_thread">Leave a comment</a>
+          </div>
+        </div>
+      
+        <div class="post">
           <h1><a href="/2013/10/27/setting-up-an-is-domain-with-isnic">Setting Up an .is Domain with ISNIC</a></h1>
       <div class="author_meta">27 Oct 2013</div>
 
@@ -138,31 +161,6 @@
                 
               
               | <a href="2013/06/27/the-developer-dream/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
-      
-        <div class="post">
-          <h1><a href="/2013/04/03/the-problem-with-full-stack-js-applications">The Problem with Full Stack JS Applications</a></h1>
-      <div class="author_meta">03 Apr 2013</div>
-
-          <p>Whilst node.js heralded an era of being able to use a single language for both server and client side development, nobody mentioned the confusion such an approach could cause. It&#8217;s inevitable that there&#8217;s going to be similarities in code that constructs data on the server and that which presents it on the client. The fact that the two are written in the same language and the structure of them is so tightly coupled can make it easy to lose track of where you are and what you&#8217;re doing when knee deep in code.</p>
-<p>Having primarily been using a full js stack (express on the server, backbone on the client) for side projects over the last year or so, I&#8217;ve certainly found myself tied up in this kind of knot. For example, if I&#8217;m looking at event.js, which represents an event on a calendar it could be the server event representation, used as an accessor for a db or a client side backbone model presenting the events attributes as part of a view. Usually (if you&#8217;re using a sensible class naming scheme) it is enough to know the file (.php or .js) within which you&#8217;re working and if that&#8217;s not enough, then the language syntax usually is a dead giveaway for where you are in your codebase. But this isn&#8217;t the case when working in one language. My guess is you&#8217;re going to have to take a second glance in order to figure out where you are, which isn&#8217;t a big issue, but is frustrating.</p>
-<p>Currently my apps typically are structured like this:</p>
-<p>server.js (Main node/express file)<br>-lib (Classes for DB Calls)<br>-node_modules (Node requires)<br>-public (Client backbone app)<br>&nbsp;&nbsp;&nbsp;&nbsp;-css<br>&nbsp;&nbsp;&nbsp;&nbsp;-images<br>&nbsp;&nbsp;&nbsp;&nbsp;-js<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lib (Backbone and other dependencies)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-collections<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-views<br>-routes (Contains the main express routes)</p>
-<p>But I actually think the following is a better approach:</p>
-<p>-server<br>&nbsp;&nbsp;&nbsp;&nbsp;server.js<br>&nbsp;&nbsp;&nbsp;&nbsp;-lib<br>&nbsp;&nbsp;&nbsp;&nbsp;-node_modules<br>&nbsp;&nbsp;&nbsp;&nbsp;-routes<br>-client (Renamed from public)<br>&nbsp;&nbsp;&nbsp;&nbsp;-css<br>&nbsp;&nbsp;&nbsp;&nbsp;-images<br>&nbsp;&nbsp;&nbsp;&nbsp;-js<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-collections<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-models<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-views</p>
-<p>At least with the second approach, it is easier to have a clear idea of where to find classes on first opening them. Unfortunately, this doesn&#8217;t however solve my problem of moving between server side and client logic and pausing for a moment before realising I am where I need to work. This is a first world problem for which I don&#8217;t believe there is a solution.</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/javascript">javascript</a>,
-                
-                <a href="/tag/web-development">web development</a>,
-                
-              
-              | <a href="2013/04/03/the-problem-with-full-stack-js-applications/#disqus_thread">Leave a comment</a>
           </div>
         </div>
       
