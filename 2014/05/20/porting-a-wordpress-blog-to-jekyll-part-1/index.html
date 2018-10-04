@@ -227,7 +227,7 @@ RewriteRule ^(.*)\/(\?.*)?$ $1$2 [R=301,L]
 RewriteRule ^([\w\/-]+)(\?.*)?$ $1/index.html$2 [L,T=application/x-httpd-html]</code></pre></div>
 <p>However, when I began using github pages, this fix didn&rsquo;t work as github only serves static files and doesn&rsquo;t allow use of htaccess. Instead, I had to resign to the fact that I would have to have trailing slashes (apparently they&rsquo;re quicker anyway). This then meant I had to use the Redirect Crawler option of disqus&rsquo;s &ldquo;Migrate Threads&rdquo; wizard (seen below) to crawl my new blog on github and determine where the posts were now located.</p>
 
-<p><img src="http://ianwootten.co.uk/images/screen-2014-05-20.png" title="Disqus Migrate Threads Wizard" /></p>
+<p><img src="https://ianwootten.co.uk/images/screen-2014-05-20.png" title="Disqus Migrate Threads Wizard" /></p>
 
 <p>In my next post I&rsquo;ll go through how I use plugins to support archive, category and tag pages in jekyll.</p>
 
