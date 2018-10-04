@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2014/09 on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/2014/09/</link>
+    <link>https://www.ianwootten.co.uk/2014/09/</link>
     <description>Recent content in 2014/09 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 15 Sep 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/2014/09/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/2014/09/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Processing Camera RAWs with OpenImageIO and Python</title>
-      <link>http://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</link>
+      <link>https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</link>
       <pubDate>Mon, 15 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</guid>
+      <guid>https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</guid>
       <description>I recently discovered the library OpenImageIO, an awesome tool for reading and writing image files. What makes this of particular interest is the sheer variety of image files supported (BMP, Cineon, JPG, JPG-2000, GIF, DPX, OpenEXR, Targa, TIFF) (as well as variety of camera raw formats) and the fact it can perform image transformations upon them very easily. Given it&amp;rsquo;s designed for use in media and VFX environments it sounds like it will be useful for the type of work I&amp;rsquo;ve previously been involved with in stop motion.</description>
     </item>
     

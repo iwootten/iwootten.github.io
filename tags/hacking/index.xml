@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hacking on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/tags/hacking/</link>
+    <link>https://www.ianwootten.co.uk/tags/hacking/</link>
     <description>Recent content in Hacking on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Developer Dream</title>
-      <link>http://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</link>
+      <link>https://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</link>
       <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</guid>
+      <guid>https://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</guid>
       <description>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I&amp;#8217;m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I&amp;#8217;ve mainly created these by myself &amp;#8211; a casualty of doing paid work in the main like this too.</description>
     </item>
     
     <item>
       <title>Growing a Business with Developer APIs</title>
-      <link>http://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</link>
+      <link>https://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</link>
       <pubDate>Wed, 20 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</guid>
+      <guid>https://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</guid>
       <description>Those of your you who follow me on twitter will might be aware of a single day hack I attempted last week, which takes output from Lovefilm&amp;#8217;s customer history and formats it so it can easily be imported into the lovely Letterboxd. It&amp;#8217;s named Loveletterd and it seemed entirely appropriate to release it on Valentines day.
 After hearing that Letterboxd had created a CSV import tool for it&amp;#8217;s community to use and as I&amp;#8217;m a Lovefilm developer, I felt like it would be a great use of my time to get to work on Loveletterd.</description>
     </item>
     
     <item>
       <title>Participate, Don’t Preach</title>
-      <link>http://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</link>
+      <link>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</link>
       <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</guid>
       <description>Last week, tickets went on sale for dConstruct 2011 and sold out within an impressive 7 hours. Having attended in 2010 and 2008 and judging it to be filled with the highest calibre web celebs from across the globe, I coughed up the entrance fee as part of the excited gold-rush. The cost of £150 includes access to the pre and after parties and the conference itself.
 These type of events are stuffed to the brim with amazing, intelligent web professionals, many of whom I would consider to be colleagues.</description>
     </item>
     
     <item>
       <title>How not to: Do A Hack Day</title>
-      <link>http://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</link>
+      <link>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</link>
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</guid>
       <description>It&amp;#8217;s been well over a month since I attended science hack day and I&amp;#8217;d thought I&amp;#8217;d put out some notes on my time there. Rather than do a run down of the event, for which I&amp;#8217;m sure there&amp;#8217;s far more comprehensive blog posts available already, I thought I&amp;#8217;d share my experiences based on attendance of a number of different hack events I&amp;#8217;ve been to over the years. I went with the full intention of doing some hardcore hacking, but didn&amp;#8217;t entirely meet my own expectations.</description>
     </item>
     

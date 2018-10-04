@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gamer on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/tags/gamer/</link>
+    <link>https://www.ianwootten.co.uk/tags/gamer/</link>
     <description>Recent content in Gamer on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 12 Jun 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/tags/gamer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/tags/gamer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Where does Steam store Indie Game The Movie?</title>
-      <link>http://www.ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie/</link>
+      <link>https://www.ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie/</link>
       <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie/</guid>
+      <guid>https://www.ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie/</guid>
       <description>A quickie &amp;#8211; but for all those that have downloaded &amp;#8220;Indie Game the Movie&amp;#8221; today from steam and are wondering where the video files are stored, you can find them here:
 Steam/SteamApps/common/Indie Game The Movie/data/movies</description>
     </item>

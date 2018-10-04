@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/categories/wordpress/</link>
+    <link>https://www.ianwootten.co.uk/categories/wordpress/</link>
     <description>Recent content in Wordpress on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 21 Jan 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Year, New Theme</title>
-      <link>http://www.ianwootten.co.uk/2013/01/21/new-year-new-theme/</link>
+      <link>https://www.ianwootten.co.uk/2013/01/21/new-year-new-theme/</link>
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2013/01/21/new-year-new-theme/</guid>
+      <guid>https://www.ianwootten.co.uk/2013/01/21/new-year-new-theme/</guid>
       <description>I&amp;#8217;ve long made use of the default theme on WordPress, which I&amp;#8217;ve always felt wasn&amp;#8217;t entirely &amp;#8220;me&amp;#8221;. The theme now live is one I&amp;#8217;ve been tinkering with for a while now based on the lovely preview design used in the prose.io document editing tool for github. I really like the focus on simplicity and think it suits me well.
 I&amp;#8217;ve added some different styling for the navigation elements, given they didn&amp;#8217;t already exist on prose.</description>
     </item>
     
     <item>
       <title>Lovefilm Filmstream Plugin v0.2</title>
-      <link>http://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link>
+      <link>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link>
       <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid>
       <description>Just a quick note to say I&amp;#8217;ve updated the plugin that generates my filmstream pages. It&amp;#8217;s become obvious that the Lovefilm API only exposes the last 10 features that you&amp;#8217;ve rented in their &amp;#8220;at home&amp;#8221; list. This isn&amp;#8217;t that great if you&amp;#8217;ve been renting more than a few months. This is the same as the information you&amp;#8217;d see in your account when logged in.
 I&amp;#8217;ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description>
     </item>
     
     <item>
       <title>Updating WordPress Automatically over SFTP</title>
-      <link>http://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</link>
+      <link>https://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</link>
       <pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</guid>
       <description>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it&amp;#8217;s more secure and means I don&amp;#8217;t have to open up FTP on my virtual server and open another port up in the firewall.
 I&amp;#8217;m using ubuntu and the sequence of commands I followed were:
 sudo apt-get install libssh2-1-dev libssh2-php  You should now find that if you list the modules installed in php and check if ssh2 is now there, you get the result &amp;#8220;ssh2&amp;#8243;:</description>
@@ -44,28 +44,28 @@ sudo apt-get install libssh2-1-dev libssh2-php  You should now find that if you 
     
     <item>
       <title>Amazon Associates WordPress Wishlist Plugin is No More</title>
-      <link>http://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</link>
+      <link>https://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</link>
       <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</guid>
       <description>I think my post title says it all really. I&amp;#8217;ve just discovered that amazon has deprecated use of its ListLookup method since October 15th. I had used this in order to retrieve details of my amazon wishlist and display neatly on my blog using my wishlist plugin. Now it seems I&amp;#8217;m forced to generate one with their own widget builder. This in turn means my wordpress plugin will no longer work.</description>
     </item>
     
     <item>
       <title>Lovefilm Filmstream Plugin for WordPress</title>
-      <link>http://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link>
+      <link>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link>
       <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid>
       <description>Something I&amp;#8217;ve thought I&amp;#8217;d like to have on my site for a while is a list of movies that I&amp;#8217;ve recently seen and some brief opinions on them. I&amp;#8217;m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I&amp;#8217;ve watched, but a recent television upgrade has now meant I&amp;#8217;ve got the opportunity to do this.</description>
     </item>
     
     <item>
       <title>Amazon Associates WordPress Plugin v0.2</title>
-      <link>http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</link>
+      <link>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</link>
       <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</guid>
+      <guid>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</guid>
       <description>I&amp;#8217;ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.
 This now also means you&amp;#8217;ll have to enter your amazon secret access key in the plugin configuration page.
 You can download the updated version over here.
@@ -74,19 +74,19 @@ It also means my wishlist has finally been brought back to life. Just in time fo
     
     <item>
       <title>Create Your Own TinyURL Service for WordPress</title>
-      <link>http://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</link>
+      <link>https://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</link>
       <pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</guid>
+      <guid>https://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</guid>
       <description>I don&amp;#8217;t particularly like using URL shortening services. I think I first noticed them getting used rather prolificly in the Guardians technology section to include lots of random links to bizarre web content. TinyURL&amp;#8217;s own web site wouldn&amp;#8217;t particularly inspire me to go ahead and make use of it either. But, because of my own use of services such as twitter, I&amp;#8217;m forced to shrink down links to get within those 144 characters.</description>
     </item>
     
     <item>
       <title>Amazon Associates WordPress Wishlist Plugin</title>
-      <link>http://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</link>
+      <link>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</link>
       <pubDate>Wed, 02 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</guid>
+      <guid>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</guid>
       <description>One of the things that&amp;#8217;s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they&amp;#8217;re unable to find my wishlist. This is mainly because they&amp;#8217;re simple folk who might not think to check amazon for my name. I&amp;#8217;m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage.</description>
     </item>
     

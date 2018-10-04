@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/categories/tutorials/</link>
+    <link>https://www.ianwootten.co.uk/categories/tutorials/</link>
     <description>Recent content in Tutorials on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 27 Oct 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setting Up an .is Domain with ISNIC</title>
-      <link>http://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</link>
+      <link>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</link>
       <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</guid>
+      <guid>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</guid>
       <description>I&amp;#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&amp;#8217;t great, given their somewhat confusing management interface. That&amp;#8217;s summed up in a recent tweet below.
 Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.
 &amp;mdash; Craig Lockwood (@craiginwales) October 26, 2013</description>
@@ -24,47 +24,47 @@ Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.
     
     <item>
       <title>Recovering Images from SD Cards with PhotoRec</title>
-      <link>http://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</link>
+      <link>https://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</link>
       <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</guid>
+      <guid>https://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</guid>
       <description>I had the horrible situation last Sunday following removing a number of pictures using an SD reader from my SD card that when I inserted it in my camera, it registered nothing upon it. My heart sunk, because this card is stuffed full of images of me and my family (along with my 1 year old son growing up) and I was unsure of which ones I&amp;#8217;d actually backed up.</description>
     </item>
     
     <item>
       <title>How to Switch Your VPS in 2 Hours</title>
-      <link>http://www.ianwootten.co.uk/2012/03/01/how-to-switch-your-vps-in-2-hours/</link>
+      <link>https://www.ianwootten.co.uk/2012/03/01/how-to-switch-your-vps-in-2-hours/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2012/03/01/how-to-switch-your-vps-in-2-hours/</guid>
+      <guid>https://www.ianwootten.co.uk/2012/03/01/how-to-switch-your-vps-in-2-hours/</guid>
       <description>Friday last week I woke up to a barrage of emails coming into my inbox. All of these were coming from notification of spam comments upon this very blog. By the time I’d woken up I’d had something like 75 emails. This was pretty strange given that Akismet was there guarding my blog ever since it’s been available and I’d never had a email about a dodgy comment since I’d set it up (something like 5 years ago).</description>
     </item>
     
     <item>
       <title>Hosting an Octopress Blog on Amazon S3</title>
-      <link>http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</link>
+      <link>https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</link>
       <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</guid>
       <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&amp;#8217;t need all the bells and whistles on our blog I&amp;#8217;m sure you&amp;#8217;ll agree.</description>
     </item>
     
     <item>
       <title>Installing gPhoto on Snow Leopard</title>
-      <link>http://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</link>
+      <link>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</link>
       <pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</guid>
       <description>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I&amp;#8217;m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn&amp;#8217;t really up to the job and FrameByFrame doesn&amp;#8217;t work with such high-end cameras.
 So, I got to thinking wether there was any other route? I was aware of the gPhoto commandline interface and libgphoto pointed out by a colleague some time ago, so I thought I&amp;#8217;d see what I might be able to do with it.</description>
     </item>
     
     <item>
       <title>Installing MPlayer on Snow Leopard</title>
-      <link>http://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</link>
+      <link>https://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</link>
       <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</guid>
       <description>Here&amp;#8217;s a heads up for anyone installing MPlayer on Snow Leopard. I&amp;#8217;ve been playing a fair amount with tools recently and inevitably ending up running round in circles in installing, compiling, setting flags etc. Here&amp;#8217;s a quick one liner param for anyone compiling mplayer (and freetype as its dependency) which people on Snow Leopard may find useful.
 You&amp;#8217;ll first need to download latest versions of freetype and mplayer. Uncompress both.   cd freetype .</description>
     </item>

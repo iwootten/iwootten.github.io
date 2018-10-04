@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hardware on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/categories/hardware/</link>
+    <link>https://www.ianwootten.co.uk/categories/hardware/</link>
     <description>Recent content in Hardware on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 06 Sep 2007 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/categories/hardware/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/categories/hardware/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New iPods - 160Gb or Touch Interface?</title>
-      <link>http://www.ianwootten.co.uk/2007/09/06/new-ipods---160gb-or-touch-interface/</link>
+      <link>https://www.ianwootten.co.uk/2007/09/06/new-ipods---160gb-or-touch-interface/</link>
       <pubDate>Thu, 06 Sep 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2007/09/06/new-ipods---160gb-or-touch-interface/</guid>
+      <guid>https://www.ianwootten.co.uk/2007/09/06/new-ipods---160gb-or-touch-interface/</guid>
       <description>Wow, Apple have released a new touch version of the iPod (think the iPhone with no phone) as well as updating the classic iPod (160Gb!) and new nano versions. This actually means I&amp;#8217;d be able to have an iPod which fits my entire music collection upon it with room to spare. I&amp;#8217;ve waited a long time for that. The iPod touch also allows wireless browsing and download of new music via iTunes.</description>
     </item>
     
     <item>
       <title>New Coloured iPod Shuffle</title>
-      <link>http://www.ianwootten.co.uk/2007/02/01/new-coloured-ipod-shuffle/</link>
+      <link>https://www.ianwootten.co.uk/2007/02/01/new-coloured-ipod-shuffle/</link>
       <pubDate>Thu, 01 Feb 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2007/02/01/new-coloured-ipod-shuffle/</guid>
+      <guid>https://www.ianwootten.co.uk/2007/02/01/new-coloured-ipod-shuffle/</guid>
       <description>Thought I&amp;#8217;d just point out that apple uk are touting the new ipod shuffle today. Basically they have launched a bunch of extra colours, with no change to size or capacity, but they do look rather pretty.   .</description>
     </item>
     
     <item>
       <title>Techno Graveyard</title>
-      <link>http://www.ianwootten.co.uk/2006/11/03/techno-graveyard/</link>
+      <link>https://www.ianwootten.co.uk/2006/11/03/techno-graveyard/</link>
       <pubDate>Fri, 03 Nov 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/11/03/techno-graveyard/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/11/03/techno-graveyard/</guid>
       <description>Our front room is looking a bit of a technology graveyard at the moment. Not only do we have the two archaic computers which have been there since forever, but now we also sport an unused fridge which has been replaced by one of our housemates parents (much larger) hand-me-downs.
 This time last year saw the cleaning out of the Cardiff Department of Computer Science&amp;#8217;s cupboards, with a large amount of the machines having to be &amp;#8220;properly disposed of&amp;#8221;, due to their burden of having huge crt monitors from yesteryear.</description>
     </item>
     
     <item>
       <title>Slug&#39;s Talking Nicely</title>
-      <link>http://www.ianwootten.co.uk/2006/08/19/slugs-talking-nicely/</link>
+      <link>https://www.ianwootten.co.uk/2006/08/19/slugs-talking-nicely/</link>
       <pubDate>Sat, 19 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/08/19/slugs-talking-nicely/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/08/19/slugs-talking-nicely/</guid>
       <description>I&amp;#8217;ve had a couple of problems getting my slug working nice under ubuntu. Firstly, although it is recognised by default and I can connect and browse via samba, when I actually came to playing my media, everything got screwed up, with Amarok trying to launch kmail&amp;#8230;&amp;#8230; I could copy files to ubuntu and play them properly from there, but straight off of the slug was a no go.I found the solution was to mount it under ubuntu using the command:sudo mount -t smbfs //NAS/DISK 1 /media/slug -o username=user,password=passWhere user and pass are your username and password for the slug respectively and the backslash indicates a space.</description>
     </item>
     
     <item>
       <title>Icy Slugs</title>
-      <link>http://www.ianwootten.co.uk/2006/08/13/icy-slugs/</link>
+      <link>https://www.ianwootten.co.uk/2006/08/13/icy-slugs/</link>
       <pubDate>Sun, 13 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/08/13/icy-slugs/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/08/13/icy-slugs/</guid>
       <description>A couple of weeks back I discovered a slug in cash converters. Well, a usb2 external disk to nas drive converter affectionately known as the slug. Seeing as how I&amp;#8217;ve been considering purchasing one, I figured shelling out the £25 was worth it for an experiment with installing linux on it for a bit. The D-Link nslu2 features two usb2 connection points for hooking up usb2 drives, but I didn&amp;#8217;t really feel like sacrificing my university external box as this usually comes in quite useful.</description>
     </item>
     
     <item>
       <title>More Ubuntu? - ATI 9600 and SBLive</title>
-      <link>http://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</link>
+      <link>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</link>
       <pubDate>Sat, 12 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</guid>
       <description>Another post about ubuntu? Where will it end?I was fairly excited from thursday evenings antics of getting things working on my machine at home, I thought I&amp;#8217;d give it a try with my dev machine at uni. My graphics card, a 9600 (yes ATI, I know!) had been screwed since the day I&amp;#8217;d put on Dapper, and to be honest, as I&amp;#8217;m not using it that much for GL stuff, I wasn&amp;#8217;t really bothered about it.</description>
     </item>
     
     <item>
       <title>Did I speak too soon?</title>
-      <link>http://www.ianwootten.co.uk/2006/08/10/did-i-speak-too-soon/</link>
+      <link>https://www.ianwootten.co.uk/2006/08/10/did-i-speak-too-soon/</link>
       <pubDate>Thu, 10 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/08/10/did-i-speak-too-soon/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/08/10/did-i-speak-too-soon/</guid>
       <description>It seems I may have spoken too soon about my linux joys with ubuntu. After performing a dist-upgrade on my previous beta version of Dapper, I discovered I&amp;#8217;d have to go through the same problems of downloading kernel source and linux header packages for my new kernel version.I also discovered after doing this that actually there were further problems on booting Dapper straight up. Apparently the pointers to drives get screwed up somewhere in the process.</description>
     </item>
     
     <item>
       <title>Ubuntu Working</title>
-      <link>http://www.ianwootten.co.uk/2006/08/07/ubuntu-working/</link>
+      <link>https://www.ianwootten.co.uk/2006/08/07/ubuntu-working/</link>
       <pubDate>Mon, 07 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/08/07/ubuntu-working/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/08/07/ubuntu-working/</guid>
       <description>FInally, after a grand total of 10 months, I have a 64bit version of Ubuntu Linux working upon my home machine.This is great news, not only does it mean that I have a wonderful OS to try out for size, but that I can easily convert my subversion server code and latex source to my machine.As I&amp;#8217;ve never mentioned it before, I&amp;#8217;ll detail what the problem was here. First up, the graphics card didn&amp;#8217;t have drivers which were working which meant that my X800 was pretty pathetic to be quite honest with you.</description>
     </item>
     
     <item>
       <title>MSI RS480M2-IL Motherboard</title>
-      <link>http://www.ianwootten.co.uk/2006/02/09/msi-rs480m2-il-motherboard/</link>
+      <link>https://www.ianwootten.co.uk/2006/02/09/msi-rs480m2-il-motherboard/</link>
       <pubDate>Thu, 09 Feb 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/02/09/msi-rs480m2-il-motherboard/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/02/09/msi-rs480m2-il-motherboard/</guid>
       <description>For those of you who would like to have a stable SFF machine, lest ye take heed of my advice&amp;#8230;do not buy MSI.I bought a mATX MSI RS480M2-IL back in october, with a view to putting it in my new Antec Aria SFF case. It looked deceptively feature packed with its 939 madness and 3 x PCI and PCI-E slots. There it still currently resides sitting quietly all day until I return from work in the evening to perhaps do a little web design or listen to the 70 odd gigs of music I have stashed away.</description>
     </item>
     

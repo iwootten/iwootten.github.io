@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2003/10 on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/2003/10/</link>
+    <link>https://www.ianwootten.co.uk/2003/10/</link>
     <description>Recent content in 2003/10 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 28 Oct 2003 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/2003/10/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/2003/10/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Oh deary me..</title>
-      <link>http://www.ianwootten.co.uk/2003/10/28/oh-deary-me../</link>
+      <link>https://www.ianwootten.co.uk/2003/10/28/oh-deary-me../</link>
       <pubDate>Tue, 28 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/10/28/oh-deary-me../</guid>
+      <guid>https://www.ianwootten.co.uk/2003/10/28/oh-deary-me../</guid>
       <description>I&amp;#8217;ve been trying to make some headway on my cms project today in order to get ahead and not end up in the same situation as I had in the second year. Seeing as I have a distinct lack of all things coursework related at the mo, I thought that would be a diamond idea. Unfortunately my knowledge of what now goes into a project is somewhat sparse, and I&amp;#8217;m finding it a right job knowing where to tackle first.</description>
     </item>
     
     <item>
       <title>And so it begins..</title>
-      <link>http://www.ianwootten.co.uk/2003/10/22/and-so-it-begins../</link>
+      <link>https://www.ianwootten.co.uk/2003/10/22/and-so-it-begins../</link>
       <pubDate>Wed, 22 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/10/22/and-so-it-begins../</guid>
+      <guid>https://www.ianwootten.co.uk/2003/10/22/and-so-it-begins../</guid>
       <description>Used today (yesterday, actually) to take a look over the various things that can be done when using XML and XLST together. All in all it seems very impressive, and can hugely alter the way which a document may first be formatted. This may be a valid reason to choose this method over more standard CSS techniques, which generally just alter bog standard settings like color, font-size &amp;#8230;.
 On a side note, I also managed to get an NT install of CVS sorted and working nicely on my machine.</description>
     </item>
     
     <item>
       <title>He ain&#39;t Heavy</title>
-      <link>http://www.ianwootten.co.uk/2003/10/22/he-aint-heavy/</link>
+      <link>https://www.ianwootten.co.uk/2003/10/22/he-aint-heavy/</link>
       <pubDate>Wed, 22 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/10/22/he-aint-heavy/</guid>
+      <guid>https://www.ianwootten.co.uk/2003/10/22/he-aint-heavy/</guid>
       <description>Having just installed the latest version of wordpress over b2 (thus ruining said previous mood plugin) I now have a working image upload abilities! Just to give you an idea of what goes on up in Cardiff, have a look at this pic of me and my long lost brother.
  
   </description>
@@ -43,20 +43,20 @@ On a side note, I also managed to get an NT install of CVS sorted and working ni
     
     <item>
       <title>Moody</title>
-      <link>http://www.ianwootten.co.uk/2003/10/09/moody/</link>
+      <link>https://www.ianwootten.co.uk/2003/10/09/moody/</link>
       <pubDate>Thu, 09 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/10/09/moody/</guid>
+      <guid>https://www.ianwootten.co.uk/2003/10/09/moody/</guid>
       <description>Just messing about with a new mood plugin I&amp;#8217;ve put up here..
 Would be cool to let you guys know how I&amp;#8217;m feeling right now..</description>
     </item>
     
     <item>
       <title>Woe is me</title>
-      <link>http://www.ianwootten.co.uk/2003/10/06/woe-is-me/</link>
+      <link>https://www.ianwootten.co.uk/2003/10/06/woe-is-me/</link>
       <pubDate>Mon, 06 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/10/06/woe-is-me/</guid>
+      <guid>https://www.ianwootten.co.uk/2003/10/06/woe-is-me/</guid>
       <description>Oh dear, today has not been good&amp;#8230;
 After missing Church this morning, I proceeded to backup most of my hard disk onto my old ATA100 so that I could revert my main ATA150 partition back to a &amp;#8220;simple&amp;#8221; partition, so I *might * be able to install Linux.
 After spending the best part of the afternoon backing up, I proceeded to download a partition tool to manage my partitions if Linux couldn&amp;#8217;t handle it.</description>
@@ -64,10 +64,10 @@ After spending the best part of the afternoon backing up, I proceeded to downloa
     
     <item>
       <title>Back with a vengeance</title>
-      <link>http://www.ianwootten.co.uk/2003/10/03/back-with-a-vengeance/</link>
+      <link>https://www.ianwootten.co.uk/2003/10/03/back-with-a-vengeance/</link>
       <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/10/03/back-with-a-vengeance/</guid>
+      <guid>https://www.ianwootten.co.uk/2003/10/03/back-with-a-vengeance/</guid>
       <description>After having my account removed (presumably because I should&amp;#8217;ve theoretically graduated by now), making the move up to Cardiff, having my account reinstated and finally finding out that the web hosting had changed servers, with the mysql databases remaining on the same server (meaning that I had to change the &amp;#8220;99% of the time you won&amp;#8217;t need to change this&amp;#8221; value) I am now able to have b2 back up and running smoothly.</description>
     </item>
     

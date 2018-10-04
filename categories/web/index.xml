@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/categories/web/</link>
+    <link>https://www.ianwootten.co.uk/categories/web/</link>
     <description>Recent content in Web on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 14 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/categories/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Decade on the World Wide Web</title>
-      <link>http://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</link>
+      <link>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</link>
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</guid>
+      <guid>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</guid>
       <description>10 years ago today, I started this blog. That&amp;#8217;s just under a 3rd of my life. In other words, that&amp;#8217;s quite a long time ago.
 I started out using Movable type and very quickly (3 days later) ditched it in favour of the b2 &amp;#8220;weblog tool&amp;#8221;, which WordPress was later spawned from.
 Back then, I blogged frequently about what was going on in my life, which tended to centre around University coursework rather than technical posts.</description>
@@ -24,174 +24,174 @@ Back then, I blogged frequently about what was going on in my life, which tended
     
     <item>
       <title>My Vicious Circle of Posting Quality Content</title>
-      <link>http://www.ianwootten.co.uk/2009/05/15/my-vicious-circle-of-posting-quality-content/</link>
+      <link>https://www.ianwootten.co.uk/2009/05/15/my-vicious-circle-of-posting-quality-content/</link>
       <pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2009/05/15/my-vicious-circle-of-posting-quality-content/</guid>
+      <guid>https://www.ianwootten.co.uk/2009/05/15/my-vicious-circle-of-posting-quality-content/</guid>
       <description>I&amp;#8217;ve been looking back at the posts on this site and the commitment that I supposedly made (internally) a couple of months ago about posting regular, interesting content. But it seemed to die a death very promptly.
 I think that there may be a bit of a vicious circle here (in my own situation at least). I&amp;#8217;d love to post regular interesting stuff, but for that to happen I need to feel that it might be read.</description>
     </item>
     
     <item>
       <title>Are Music Blogs getting a Raw Deal?</title>
-      <link>http://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</link>
+      <link>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</link>
       <pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</guid>
+      <guid>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</guid>
       <description>I can&amp;#8217;t help but feel a little sorry for music blogs as of late. I&amp;#8217;m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I&amp;#8217;ve found it really interesting to browse around and discover new artists.</description>
     </item>
     
     <item>
       <title>Check the Prices in Your Area</title>
-      <link>http://www.ianwootten.co.uk/2007/04/17/check-the-prices-in-your-area/</link>
+      <link>https://www.ianwootten.co.uk/2007/04/17/check-the-prices-in-your-area/</link>
       <pubDate>Tue, 17 Apr 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2007/04/17/check-the-prices-in-your-area/</guid>
+      <guid>https://www.ianwootten.co.uk/2007/04/17/check-the-prices-in-your-area/</guid>
       <description>Did you know that not only can http://rightmove.co.uk hunt down all the prices of current houses for sale in your area, it will also give you the prices that houses have gone for for the last 7 years? I didn&amp;#8217;t, but tonight I enjoyed checking out the fact that someone bought a house in my road for &amp;pound;40k in January (but I think either this is a typo, or the place is a hole!</description>
     </item>
     
     <item>
       <title>OpenID - The end of multiple passwords?</title>
-      <link>http://www.ianwootten.co.uk/2007/03/08/openid---the-end-of-multiple-passwords/</link>
+      <link>https://www.ianwootten.co.uk/2007/03/08/openid---the-end-of-multiple-passwords/</link>
       <pubDate>Thu, 08 Mar 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2007/03/08/openid---the-end-of-multiple-passwords/</guid>
+      <guid>https://www.ianwootten.co.uk/2007/03/08/openid---the-end-of-multiple-passwords/</guid>
       <description>I&amp;#8217;ve been hearing some really good stuff about openID recently. For those who don&amp;#8217;t know, this is a online identity standard which promises to be the end of having multiple passwords at just about every single website you visit. It&amp;#8217;s recently risen to light with the adoption by WordPress.com as a provider and digg as an adopter.Complaints against wordpress.com&amp;#8217;s non-allowance of logins with openID&amp;#8217;s created anywhere else than wordpress.com seem quite well founded.</description>
     </item>
     
     <item>
       <title>Hotdealsuk - Indexing the webs best deals</title>
-      <link>http://www.ianwootten.co.uk/2007/01/24/hotdealsuk---indexing-the-webs-best-deals/</link>
+      <link>https://www.ianwootten.co.uk/2007/01/24/hotdealsuk---indexing-the-webs-best-deals/</link>
       <pubDate>Wed, 24 Jan 2007 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2007/01/24/hotdealsuk---indexing-the-webs-best-deals/</guid>
+      <guid>https://www.ianwootten.co.uk/2007/01/24/hotdealsuk---indexing-the-webs-best-deals/</guid>
       <description>I came across hotdealsuk prior to christmas and I think its an absolute must for any techie thats currently residing in the uk. Basically, a sophisticated messageboard, bargains of interest to the community are highlighted and then voted upon. Those more highly voted make it through to the front page.
 I absolutely love it and so far have managed to purchase 1 xbox (with 4 games) @ £50 and a 400Gb harddrive @ £83.</description>
     </item>
     
     <item>
       <title>TechcrunchUK Non-Pantomime Continues</title>
-      <link>http://www.ianwootten.co.uk/2006/12/21/techcrunchuk-non-pantomime-continues/</link>
+      <link>https://www.ianwootten.co.uk/2006/12/21/techcrunchuk-non-pantomime-continues/</link>
       <pubDate>Thu, 21 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/12/21/techcrunchuk-non-pantomime-continues/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/12/21/techcrunchuk-non-pantomime-continues/</guid>
       <description>Apparently, according to the free English dictionary there is a couple of definitions other than the traditional UK understanding of the word pantomime. For those international readers who don&amp;#8217;t know, a pantomime is a pretty awful example of B-List celebrities acting ability in the UK in which involves them dressing up in bad costumes and acting out a fairy tale or story. In Cardiff, the big panto is Jack and the Giant Beanstalk &amp;#8211; where Jack is played by John Barrowman (or Captain Jack from Torchwood and Dr Who).</description>
     </item>
     
     <item>
       <title>Digg gets Video and Podcasts</title>
-      <link>http://www.ianwootten.co.uk/2006/12/19/digg-gets-video-and-podcasts/</link>
+      <link>https://www.ianwootten.co.uk/2006/12/19/digg-gets-video-and-podcasts/</link>
       <pubDate>Tue, 19 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/12/19/digg-gets-video-and-podcasts/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/12/19/digg-gets-video-and-podcasts/</guid>
       <description>Digg.com is sporting the ability to be able to now rate online video and podcasts. Postcast searching is in limited beta for registered users only.I just spent a while perusing some items of interest, and found a great segment of play! over on google. This just builds on the fact that Mario has the most awesome music ever.The searching of podcasts is dangerously close to an idea I&amp;#8217;ve currently working on myself for a while now.</description>
     </item>
     
     <item>
       <title>Sam Sethi has Nowhere to Blog?</title>
-      <link>http://www.ianwootten.co.uk/2006/12/14/sam-sethi-has-nowhere-to-blog/</link>
+      <link>https://www.ianwootten.co.uk/2006/12/14/sam-sethi-has-nowhere-to-blog/</link>
       <pubDate>Thu, 14 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/12/14/sam-sethi-has-nowhere-to-blog/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/12/14/sam-sethi-has-nowhere-to-blog/</guid>
       <description>It seems, according to Ben Metcalfe, that Sam Sethi has had his typepad account disabled by Six Apart, rendering him unable to post any updates on his recent departure from TechcrunchUK. Loic Le Meur (Executive Vice President of Six Apart and General Manager of Europe, Middle East and Africa) is currently giving no information about the whole scenario upon his own blog.UPDATE: Apparently Sam Sethi&amp;#8217;s blog is up and running, though he has to yet confirm this and post his take on the whole scenario.</description>
     </item>
     
     <item>
       <title>Sam Sethi is sacked from Techcrunch UK</title>
-      <link>http://www.ianwootten.co.uk/2006/12/14/sam-sethi-is-sacked-from-techcrunch-uk/</link>
+      <link>https://www.ianwootten.co.uk/2006/12/14/sam-sethi-is-sacked-from-techcrunch-uk/</link>
       <pubDate>Thu, 14 Dec 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/12/14/sam-sethi-is-sacked-from-techcrunch-uk/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/12/14/sam-sethi-is-sacked-from-techcrunch-uk/</guid>
       <description>Techcrunch UK, Techcrunch&amp;#8217;s european sister site has recently had a lot of activiity from some notes which the editor at the time, Sam Sethi made about the recent leweb3 event.This invited some comments from Six Apart’s Loic Le Meur in which he called Sam &amp;#8220;an asshole&amp;#8221;. Sam subsequently posted another blog about the fact that TechcrunchUK would be setting up its own events and workshops in the forthcoming year. It seems this displeased techcrunch&amp;#8217;s Mike Arrington enough to give Sam the boot.</description>
     </item>
     
     <item>
       <title>Zach Braff Makes an Appearance at Threadless</title>
-      <link>http://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</link>
+      <link>https://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</link>
       <pubDate>Tue, 14 Nov 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</guid>
       <description>The amazing Zach Braff has made an appearance over at threadless to show off the t-shirt which was designed to promote his new film, &amp;#8220;The Last Kiss&amp;#8221;. Apparently according to the audio interview he gave, he also was going to try to wear it on scrubs at some point, with a cheeky reference to the film. It&amp;#8217;s also featuring as part of their current $10 sale in the run up to christmas.</description>
     </item>
     
     <item>
       <title>Firefox 2.0 is Out!</title>
-      <link>http://www.ianwootten.co.uk/2006/10/23/firefox-2.0-is-out/</link>
+      <link>https://www.ianwootten.co.uk/2006/10/23/firefox-2.0-is-out/</link>
       <pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/10/23/firefox-2.0-is-out/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/10/23/firefox-2.0-is-out/</guid>
       <description>Firefox 2.0 is out! Wikked wikked bwaaad bwoy!Get your ass over to mozilla.org while its still hot.</description>
     </item>
     
     <item>
       <title>UK Jobs in Web 2.0</title>
-      <link>http://www.ianwootten.co.uk/2006/09/26/uk-jobs-in-web-2.0/</link>
+      <link>https://www.ianwootten.co.uk/2006/09/26/uk-jobs-in-web-2.0/</link>
       <pubDate>Tue, 26 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/09/26/uk-jobs-in-web-2.0/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/09/26/uk-jobs-in-web-2.0/</guid>
       <description>I&amp;#8217;ve been following a number of so called &amp;#8220;web 2.0&amp;#8243; companies in the uk recently via techcrunch.co.uk in order to explore what might be available to me when I need to start work this time next year. It&amp;#8217;s quite interesting that actually, there is a number of companies cited around the Cardiff/Bristol/Bath areas that I&amp;#8217;d never realised were in the UK.In Bath, there&amp;#8217;s Carson Systems, which also host a number of web application workshops around the uk, with a Drop Send and Amigo.</description>
     </item>
     
     <item>
       <title>The Web is Just to Darn Big</title>
-      <link>http://www.ianwootten.co.uk/2006/09/14/the-web-is-just-to-darn-big/</link>
+      <link>https://www.ianwootten.co.uk/2006/09/14/the-web-is-just-to-darn-big/</link>
       <pubDate>Thu, 14 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/09/14/the-web-is-just-to-darn-big/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/09/14/the-web-is-just-to-darn-big/</guid>
       <description>I&amp;#8217;ve been suffering at the hands of the sheer size of the web recently. Just starting off at popurls yields many hours spent just browsing randomly across many, many web buzz sites. Although its all very interesting, its not particularly useful to my research, or in fact my own projects.</description>
     </item>
     
     <item>
       <title>Choosing domain names</title>
-      <link>http://www.ianwootten.co.uk/2006/06/06/choosing-domain-names/</link>
+      <link>https://www.ianwootten.co.uk/2006/06/06/choosing-domain-names/</link>
       <pubDate>Tue, 06 Jun 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/06/06/choosing-domain-names/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/06/06/choosing-domain-names/</guid>
       <description>Currently, I&amp;#8217;ve been spending many an hour pondering domain name choices for a fair trade t-shirt site I&amp;#8217;d like to set-up, but never actually committing to one, due to the rather lacklustre responses of others on hearing my suggestions, or not finding anything suitable which conveys what I am trying to get across (a hip, trendy t-shirt place, ala threadless.com).If anyone can think of anything clever &amp;#8211; let me know.</description>
     </item>
     
     <item>
       <title>My world has ended</title>
-      <link>http://www.ianwootten.co.uk/2006/06/06/my-world-has-ended/</link>
+      <link>https://www.ianwootten.co.uk/2006/06/06/my-world-has-ended/</link>
       <pubDate>Tue, 06 Jun 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/06/06/my-world-has-ended/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/06/06/my-world-has-ended/</guid>
       <description>Interestingly, two of my most used sites hotmail and ebay, seem to be unavailable at the moment for me to peruse in my daily late night browsing routine. Maybe ntl is doing something stupid at the moment, in fact this is most likely the problem as large amounts of images around the web are unable to be displayed for one reason or another.</description>
     </item>
     
     <item>
       <title>The Ebay Experiment</title>
-      <link>http://www.ianwootten.co.uk/2006/04/04/the-ebay-experiment/</link>
+      <link>https://www.ianwootten.co.uk/2006/04/04/the-ebay-experiment/</link>
       <pubDate>Tue, 04 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/04/04/the-ebay-experiment/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/04/04/the-ebay-experiment/</guid>
       <description>I&amp;#8217;m always coming up with concepts for websites, but I thought this one was worth blogging about. Basically, my idea is that you give yourself a budget of say 99p on ebay and see what kind of profit you can get from that by selling it again&amp;#8230;.on ebay&amp;#8230; and so on until you flop and lose all your profit, or give up and bag the benefits of being able to spell and take photographs.</description>
     </item>
     
     <item>
       <title>worpdress</title>
-      <link>http://www.ianwootten.co.uk/2006/03/17/worpdress/</link>
+      <link>https://www.ianwootten.co.uk/2006/03/17/worpdress/</link>
       <pubDate>Fri, 17 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/03/17/worpdress/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/03/17/worpdress/</guid>
       <description>A few weeks ago, I noticed that worpdress.com, org and net weren&amp;#8217;t registered, despite their similarity to the excellent blogging tool wordpress&amp;#8217;s domain. I thought it was too good an opportunity to be missed, and registered the lot of them.After a couple of posts on the wordpress forums, and the realisation that there was no way in hell I&amp;#8217;d ever have the time to put anything there, I decided to donate them to Matt Mullenweg, so at least they were redirecting the one or two people who might hit them to the correct wordpress site.</description>
     </item>
     
     <item>
       <title>Digg It</title>
-      <link>http://www.ianwootten.co.uk/2006/03/06/digg-it/</link>
+      <link>https://www.ianwootten.co.uk/2006/03/06/digg-it/</link>
       <pubDate>Mon, 06 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2006/03/06/digg-it/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/03/06/digg-it/</guid>
       <description>I&amp;#8217;ve recently, through many searches to do with AJAX, Web 2.0 and the like been perusing digg.com, that fairly new web site for geeks.Basically, it&amp;#8217;s a social booking marking site where users &amp;#8220;digg&amp;#8221; those sites which they find interesting, as more users digg the same pages, they get promoted up through to the main page, or higher up through the rankings within particular categories. Its a really interesting concept, quite similar to del.</description>
     </item>
     
     <item>
       <title>Blog Install</title>
-      <link>http://www.ianwootten.co.uk/2003/08/14/blog-install/</link>
+      <link>https://www.ianwootten.co.uk/2003/08/14/blog-install/</link>
       <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2003/08/14/blog-install/</guid>
+      <guid>https://www.ianwootten.co.uk/2003/08/14/blog-install/</guid>
       <description>So, I&amp;#8217;ve installed Movable Type on my website. I figured it was about time that I get up to speed on this whole &amp;#8220;Blogging&amp;#8221; thing, but I could of even missed the bus already.
 I&amp;#8217;ve spent half of the evening just looking at what can be done with MT, and it seems to integrate well with Invision Board as the MT crew have an example of a forum set up with it on their site.</description>
     </item>

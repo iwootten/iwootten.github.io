@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2011/05 on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/2011/05/</link>
+    <link>https://www.ianwootten.co.uk/2011/05/</link>
     <description>Recent content in 2011/05 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 May 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/2011/05/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/2011/05/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Updating WordPress Automatically over SFTP</title>
-      <link>http://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</link>
+      <link>https://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</link>
       <pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</guid>
       <description>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it&amp;#8217;s more secure and means I don&amp;#8217;t have to open up FTP on my virtual server and open another port up in the firewall.
 I&amp;#8217;m using ubuntu and the sequence of commands I followed were:
 sudo apt-get install libssh2-1-dev libssh2-php  You should now find that if you list the modules installed in php and check if ssh2 is now there, you get the result &amp;#8220;ssh2&amp;#8243;:</description>

@@ -2,77 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2010 on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/2010/</link>
+    <link>https://www.ianwootten.co.uk/2010/</link>
     <description>Recent content in 2010 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Nov 2010 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/2010/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/2010/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Amazon Associates WordPress Wishlist Plugin is No More</title>
-      <link>http://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</link>
+      <link>https://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</link>
       <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</guid>
       <description>I think my post title says it all really. I&amp;#8217;ve just discovered that amazon has deprecated use of its ListLookup method since October 15th. I had used this in order to retrieve details of my amazon wishlist and display neatly on my blog using my wishlist plugin. Now it seems I&amp;#8217;m forced to generate one with their own widget builder. This in turn means my wordpress plugin will no longer work.</description>
     </item>
     
     <item>
       <title>Installing gPhoto on Snow Leopard</title>
-      <link>http://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</link>
+      <link>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</link>
       <pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</guid>
       <description>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I&amp;#8217;m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn&amp;#8217;t really up to the job and FrameByFrame doesn&amp;#8217;t work with such high-end cameras.
 So, I got to thinking wether there was any other route? I was aware of the gPhoto commandline interface and libgphoto pointed out by a colleague some time ago, so I thought I&amp;#8217;d see what I might be able to do with it.</description>
     </item>
     
     <item>
       <title>How not to: Do A Hack Day</title>
-      <link>http://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</link>
+      <link>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</link>
       <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</guid>
       <description>It&amp;#8217;s been well over a month since I attended science hack day and I&amp;#8217;d thought I&amp;#8217;d put out some notes on my time there. Rather than do a run down of the event, for which I&amp;#8217;m sure there&amp;#8217;s far more comprehensive blog posts available already, I thought I&amp;#8217;d share my experiences based on attendance of a number of different hack events I&amp;#8217;ve been to over the years. I went with the full intention of doing some hardcore hacking, but didn&amp;#8217;t entirely meet my own expectations.</description>
     </item>
     
     <item>
       <title>Installing MPlayer on Snow Leopard</title>
-      <link>http://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</link>
+      <link>https://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</link>
       <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</guid>
       <description>Here&amp;#8217;s a heads up for anyone installing MPlayer on Snow Leopard. I&amp;#8217;ve been playing a fair amount with tools recently and inevitably ending up running round in circles in installing, compiling, setting flags etc. Here&amp;#8217;s a quick one liner param for anyone compiling mplayer (and freetype as its dependency) which people on Snow Leopard may find useful.
 You&amp;#8217;ll first need to download latest versions of freetype and mplayer. Uncompress both.   cd freetype .</description>
     </item>
     
     <item>
       <title>Lovefilm Filmstream Plugin for WordPress</title>
-      <link>http://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link>
+      <link>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link>
       <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid>
       <description>Something I&amp;#8217;ve thought I&amp;#8217;d like to have on my site for a while is a list of movies that I&amp;#8217;ve recently seen and some brief opinions on them. I&amp;#8217;m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I&amp;#8217;ve watched, but a recent television upgrade has now meant I&amp;#8217;ve got the opportunity to do this.</description>
     </item>
     
     <item>
       <title>Mixbooth</title>
-      <link>http://www.ianwootten.co.uk/2010/03/21/mixbooth/</link>
+      <link>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</link>
       <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid>
       <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn&amp;#8217;t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you&amp;#8217;d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
     </item>
     
     <item>
       <title>Fair  Bare - January £10 Sale!</title>
-      <link>http://www.ianwootten.co.uk/2010/01/07/fair--bare---january-10-sale/</link>
+      <link>https://www.ianwootten.co.uk/2010/01/07/fair--bare---january-10-sale/</link>
       <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2010/01/07/fair--bare---january-10-sale/</guid>
+      <guid>https://www.ianwootten.co.uk/2010/01/07/fair--bare---january-10-sale/</guid>
       <description>Fair &amp;#038; Bare &amp;#8211; The little shop I run (with a little help from my wife) is having a January Sale right now in celebration of entering the year 2010. Every shirt we&amp;#8217;ve made to date is just 10 squid! Hurry up people, it only runs until Sunday.</description>
     </item>
     

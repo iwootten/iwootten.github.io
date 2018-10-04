@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/tags/aws/</link>
+    <link>https://www.ianwootten.co.uk/tags/aws/</link>
     <description>Recent content in Aws on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 25 Oct 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Amazon Associates WordPress Plugin v0.2</title>
-      <link>http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</link>
+      <link>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</link>
       <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</guid>
+      <guid>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</guid>
       <description>I&amp;#8217;ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.
 This now also means you&amp;#8217;ll have to enter your amazon secret access key in the plugin configuration page.
 You can download the updated version over here.
@@ -25,10 +25,10 @@ It also means my wishlist has finally been brought back to life. Just in time fo
     
     <item>
       <title>Amazon Associates WordPress Wishlist Plugin</title>
-      <link>http://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</link>
+      <link>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</link>
       <pubDate>Wed, 02 Apr 2008 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</guid>
+      <guid>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</guid>
       <description>One of the things that&amp;#8217;s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they&amp;#8217;re unable to find my wishlist. This is mainly because they&amp;#8217;re simple folk who might not think to check amazon for my name. I&amp;#8217;m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage.</description>
     </item>
     

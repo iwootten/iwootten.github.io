@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Animation on Ian Wootten</title>
-    <link>http://www.ianwootten.co.uk/tags/animation/</link>
+    <link>https://www.ianwootten.co.uk/tags/animation/</link>
     <description>Recent content in Animation on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 26 Sep 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.ianwootten.co.uk/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ianwootten.co.uk/tags/animation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aardman</title>
-      <link>http://www.ianwootten.co.uk/2009/09/26/aardman/</link>
+      <link>https://www.ianwootten.co.uk/2009/09/26/aardman/</link>
       <pubDate>Sat, 26 Sep 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.ianwootten.co.uk/2009/09/26/aardman/</guid>
+      <guid>https://www.ianwootten.co.uk/2009/09/26/aardman/</guid>
       <description>In order for me to generate this post I&amp;#8217;ve created something quite novel on my blog &amp;#8211; a new category which I&amp;#8217;ve not had a great deal of experience in previously, &amp;#8220;work&amp;#8221;. For the last couple of months I&amp;#8217;ve been working for Aardman features in Bristol on their forthcoming feature film, &amp;#8220;Pirates&amp;#8221; &amp;#8211; building software, which I&amp;#8217;ll be doing at least for the next couple of months too.
 I&amp;#8217;ve been having an amazing experience over this time.</description>
     </item>
