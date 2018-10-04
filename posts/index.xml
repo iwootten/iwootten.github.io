@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.ianwootten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blogging with Hugo</title>
+      <link>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</guid>
+      <description>All my most recent blog posts seem to be about updating my blog tooling (much as Rick commented earlier today). By recent, I obviously mean within the last 5 years.
+I think I change blog platforms more often than I blog!
+&amp;mdash; Rick Hurst (@rickhurst) October 4, 2018 
+I back tracked through my blog updates and discovered I&amp;rsquo;ve used 5 different tools over my 15 year history on the web.</description>
+    </item>
     
     <item>
       <title>User Generated Forms with WTForms</title>

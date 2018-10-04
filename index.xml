@@ -6,10 +6,22 @@
     <description>Recent content on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blogging with Hugo</title>
+      <link>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</guid>
+      <description>All my most recent blog posts seem to be about updating my blog tooling (much as Rick commented earlier today). By recent, I obviously mean within the last 5 years.
+I think I change blog platforms more often than I blog!
+&amp;mdash; Rick Hurst (@rickhurst) October 4, 2018 
+I back tracked through my blog updates and discovered I&amp;rsquo;ve used 5 different tools over my 15 year history on the web.</description>
+    </item>
     
     <item>
       <title>User Generated Forms with WTForms</title>
@@ -2731,7 +2743,7 @@ I&amp;#8217;m having a right job trying to get the image side of MT working. I w
       <guid>https://www.ianwootten.co.uk/about/</guid>
       <description>Hi, I&amp;#8217;m Ian.
 I&amp;#8217;m a software engineer living in Cardiff, UK. I run a small software development company, Nifty Digits Ltd which specialises in Python and Javascript. Since 2012, I&amp;#8217;ve worked on tools for companies such as the Office for National Statistics, BBC, Aardman Features and Clothcat Animation.
-I write software in Python and JavaScript, with frameworks like Django, Flask and Vue.js. I&amp;rsquo;ve written tools that collect surveys for the largest businesses on the web and ensure complex studio animation pipelines run smoothly.</description>
+I often write software with frameworks like Django, Flask and Vue.js. I&amp;rsquo;ve written tools that collect surveys for the largest businesses on the web and ensure complex studio animation pipelines run smoothly.</description>
     </item>
     
     <item>
@@ -2740,7 +2752,7 @@ I write software in Python and JavaScript, with frameworks like Django, Flask an
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/contact/</guid>
-      <description>If you&amp;#8217;re interested in hiring me, or just want to say hi &amp;#8211; drop me an email at hi@niftydigits.com.</description>
+      <description>I&amp;rsquo;m always interested in hearing from people who find what I write about useful or interesting. If you&amp;#8217;re interested in hiring me, or just want to say hi &amp;#8211; drop me an email at hi@niftydigits.com.</description>
     </item>
     
   </channel>
