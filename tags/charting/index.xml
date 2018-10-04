@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Charting on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/tags/charting/</link>
+    <description>Recent content in Charting on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 07 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/tags/charting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scaling a Linear Domain to an Ordinal Range with d3</title>
+      <link>http://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</link>
+      <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</guid>
+      <description>I&amp;#8217;ve had the opportunity of using d3 quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.
+Anyway, I thought I&amp;#8217;d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who&amp;#8217;re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/tags/community/</link>
+    <description>Recent content in Community on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 07 Sep 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/tags/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cardiff Geeks</title>
+      <link>http://www.ianwootten.co.uk/2007/09/07/cardiff-geeks/</link>
+      <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/09/07/cardiff-geeks/</guid>
+      <description>I&amp;#8217;ve long wondered why there doesn&amp;#8217;t seem to be much happening in terms of community of the web professionals in wales. There is a vibrant collection of people sporting different skill sets in the area, yet as I can see not a lot of chat amongst everyone in between different groups. On a whim, I decided to create a facebook group &amp;#8220;Cardiff Web Geeks&amp;#8221; to try and get people to come out of their shells and actually participate in a bit of discussion about tech topics in wales.</description>
+    </item>
+    
+  </channel>
+</rss>

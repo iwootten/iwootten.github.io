@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2011/07 on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/2011/07/</link>
+    <description>Recent content in 2011/07 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Jul 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/2011/07/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lovefilm Filmstream Plugin v0.2</title>
+      <link>http://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link>
+      <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid>
+      <description>Just a quick note to say I&amp;#8217;ve updated the plugin that generates my filmstream pages. It&amp;#8217;s become obvious that the Lovefilm API only exposes the last 10 features that you&amp;#8217;ve rented in their &amp;#8220;at home&amp;#8221; list. This isn&amp;#8217;t that great if you&amp;#8217;ve been renting more than a few months. This is the same as the information you&amp;#8217;d see in your account when logged in.
+I&amp;#8217;ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description>
+    </item>
+    
+    <item>
+      <title>Participate, Don’t Preach</title>
+      <link>http://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</link>
+      <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</guid>
+      <description>Last week, tickets went on sale for dConstruct 2011 and sold out within an impressive 7 hours. Having attended in 2010 and 2008 and judging it to be filled with the highest calibre web celebs from across the globe, I coughed up the entrance fee as part of the excited gold-rush. The cost of £150 includes access to the pre and after parties and the conference itself.
+These type of events are stuffed to the brim with amazing, intelligent web professionals, many of whom I would consider to be colleagues.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining References to Sockets with Express and Socket.io</title>
+      <link>http://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</guid>
+      <description>I hit a frustrating problem when trying to use expressjs alongside socket.io recently. The solution may seem somewhat trivial, but I struggled with it for a while, until finally asking for help on the socket.io irc channel. I&amp;#8217;m not sure if a better solution exists for my case, but this is what I have for now.
+In the main route of my express app, I needed to iterate across an array, performing a REST call using each element as a parameter and spit the results back for socket.</description>
+    </item>
+    
+  </channel>
+</rss>

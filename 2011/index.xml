@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2011 on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/2011/</link>
+    <description>Recent content in 2011 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Nov 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/2011/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pagination in CouchDB Apps</title>
+      <link>http://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</link>
+      <pubDate>Wed, 02 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</guid>
+      <description>I&amp;#8217;ve been working on some fun little node.js / couchdb projects of late. Given the fact I don&amp;#8217;t use either as part of my work, I&amp;#8217;ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.
+I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I&amp;#8217;ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out I&amp;#8217;ve always been doing it the &amp;#8220;bad&amp;#8221; way.</description>
+    </item>
+    
+    <item>
+      <title>Hosting an Octopress Blog on Amazon S3</title>
+      <link>http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</guid>
+      <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&amp;#8217;t need all the bells and whistles on our blog I&amp;#8217;m sure you&amp;#8217;ll agree.</description>
+    </item>
+    
+    <item>
+      <title>Lovefilm Filmstream Plugin v0.2</title>
+      <link>http://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link>
+      <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid>
+      <description>Just a quick note to say I&amp;#8217;ve updated the plugin that generates my filmstream pages. It&amp;#8217;s become obvious that the Lovefilm API only exposes the last 10 features that you&amp;#8217;ve rented in their &amp;#8220;at home&amp;#8221; list. This isn&amp;#8217;t that great if you&amp;#8217;ve been renting more than a few months. This is the same as the information you&amp;#8217;d see in your account when logged in.
+I&amp;#8217;ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description>
+    </item>
+    
+    <item>
+      <title>Participate, Don’t Preach</title>
+      <link>http://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</link>
+      <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</guid>
+      <description>Last week, tickets went on sale for dConstruct 2011 and sold out within an impressive 7 hours. Having attended in 2010 and 2008 and judging it to be filled with the highest calibre web celebs from across the globe, I coughed up the entrance fee as part of the excited gold-rush. The cost of £150 includes access to the pre and after parties and the conference itself.
+These type of events are stuffed to the brim with amazing, intelligent web professionals, many of whom I would consider to be colleagues.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining References to Sockets with Express and Socket.io</title>
+      <link>http://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</guid>
+      <description>I hit a frustrating problem when trying to use expressjs alongside socket.io recently. The solution may seem somewhat trivial, but I struggled with it for a while, until finally asking for help on the socket.io irc channel. I&amp;#8217;m not sure if a better solution exists for my case, but this is what I have for now.
+In the main route of my express app, I needed to iterate across an array, performing a REST call using each element as a parameter and spit the results back for socket.</description>
+    </item>
+    
+    <item>
+      <title>Updating WordPress Automatically over SFTP</title>
+      <link>http://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</link>
+      <pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/05/07/updating-wordpress-automatically-over-sftp/</guid>
+      <description>Heres a quick how to on getting wordpress to update over SFTP. On a default install of php, wordpress only gives the option to update over FTP. I wanted to get it working as it&amp;#8217;s more secure and means I don&amp;#8217;t have to open up FTP on my virtual server and open another port up in the firewall.
+I&amp;#8217;m using ubuntu and the sequence of commands I followed were:
+sudo apt-get install libssh2-1-dev libssh2-php  You should now find that if you list the modules installed in php and check if ssh2 is now there, you get the result &amp;#8220;ssh2&amp;#8243;:</description>
+    </item>
+    
+    <item>
+      <title>A Survey of Hype in Web Development Podcasts</title>
+      <link>http://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</link>
+      <pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</guid>
+      <description>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they&amp;#8217;re allowed to, it is their own podcast after all, often from their own businesses etc. I&amp;#8217;m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless.
+One of these things is the title of the show itself.</description>
+    </item>
+    
+    <item>
+      <title>Blog rolling with CouchDB, Express and Node.js</title>
+      <link>http://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</link>
+      <pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</guid>
+      <description>Over the last little while, I&amp;#8217;ve been doing a lot of playing with Node.js, mostly to run data collection scripts. Last week, I started following Ciaran Jessup&amp;#8217;s tutorial on getting started with node.js, Express and mongoDB. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar server side language. I hit a few problems along the way in the tutorial, so I thought I&amp;#8217;ve list a few of my findings here.</description>
+    </item>
+    
+  </channel>
+</rss>

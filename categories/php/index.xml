@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/categories/php/</link>
+    <description>Recent content in Php on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Jan 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Book Review: Code Igniter for Rapid PHP Application Development</title>
+      <link>http://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</guid>
+      <description>In this book, author David Upton walks you through use of the Code Igniter framework, which is essentially PHP&amp;#8217;s answer to Ruby on Rails. I&amp;#8217;ve been a avid user of Code Igniter since I discovered it last year, which is a nice waypoint for anyone trying to understand model-view-controller architectures and not wanting to make the move over to ROR quite yet.
+The angle of this book is taken from a first time CI developer, but one with some knowledge of both PHP and web development in general.</description>
+    </item>
+    
+  </channel>
+</rss>

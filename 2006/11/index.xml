@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2006/11 on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/2006/11/</link>
+    <description>Recent content in 2006/11 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Nov 2006 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/2006/11/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On Demand Access</title>
+      <link>http://www.ianwootten.co.uk/2006/11/19/on-demand-access/</link>
+      <pubDate>Sun, 19 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/19/on-demand-access/</guid>
+      <description>I don&amp;#8217;t really understand microsoft, over the last few days, their live network has been experiencing problems every time I&amp;#8217;ve tried to logon to access my email. Who knows what my 8 emails contain which are hidden within live mail, I certainly don&amp;#8217;t. You would think that more people would be in uproar about this &amp;#8211; I mean what if these were payment requests, final demands or quick response business proposals?</description>
+    </item>
+    
+    <item>
+      <title>Future of Web Applications - London 07</title>
+      <link>http://www.ianwootten.co.uk/2006/11/14/future-of-web-applications---london-07/</link>
+      <pubDate>Tue, 14 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/14/future-of-web-applications---london-07/</guid>
+      <description>Registration is open for the Future of Web Apps conference in London 07. I&amp;#8217;d love to go, loads of great companies/people talking (good to see Last.fm making an appearance), loads of schmoozing (if thats the appropriate word), but unfortunately absolutely jack to do with my PhD, so no funding.</description>
+    </item>
+    
+    <item>
+      <title>Zach Braff Makes an Appearance at Threadless</title>
+      <link>http://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</link>
+      <pubDate>Tue, 14 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</guid>
+      <description>The amazing Zach Braff has made an appearance over at threadless to show off the t-shirt which was designed to promote his new film, &amp;#8220;The Last Kiss&amp;#8221;. Apparently according to the audio interview he gave, he also was going to try to wear it on scrubs at some point, with a cheeky reference to the film. It&amp;#8217;s also featuring as part of their current $10 sale in the run up to christmas.</description>
+    </item>
+    
+    <item>
+      <title>Do Web Users Want Web Standards?</title>
+      <link>http://www.ianwootten.co.uk/2006/11/13/do-web-users-want-web-standards/</link>
+      <pubDate>Mon, 13 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/13/do-web-users-want-web-standards/</guid>
+      <description>I was thinking about this earlier and was trying to make an educated answer. What I would note is that it is primarily content which drives users to use sites, we can see that through all manner of feeds and low bandwidth sites across the net. Without content, theres no point in sticking up a website. You can see demonstrations of that assertion here from time to time. It&amp;#8217;s also fairly visible through all manner of seedy content on the web as users will be quite happy to sit through the many pop-ups and poorly formatted text to get to that bunch of images which they&amp;#8217;re after.</description>
+    </item>
+    
+    <item>
+      <title>Carson Systems shows us the money</title>
+      <link>http://www.ianwootten.co.uk/2006/11/07/carson-systems-shows-us-the-money/</link>
+      <pubDate>Tue, 07 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/07/carson-systems-shows-us-the-money/</guid>
+      <description>Carson Systems is showing the details of how dropsend stacks up in terms of monthly profit. Ryan states that at a conservative estimate by December &amp;#8217;07, it&amp;#8217;ll be making $21k/mo. He also seems to be beating off a bit of bad feedback on the advertising which has/hasn&amp;#8217;t been done.</description>
+    </item>
+    
+    <item>
+      <title>DropSend is up for sale</title>
+      <link>http://www.ianwootten.co.uk/2006/11/06/dropsend-is-up-for-sale/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/06/dropsend-is-up-for-sale/</guid>
+      <description>Carson Systems DropSend has recently been put up for sale by Ryan Carson. He states that currently they don&amp;#8217;t have enough time to give it the attention it deserves, although the application is profitable with customers accumulating month by month.DropSend allows users to email huge files to one another via uploading them to dropsend and sending an email to the reciever to detail where it can be collected from. It&amp;#8217;s quite interesting as the costs involved in its building are quite detailed within Ryans talk at a previous Future of Web Apps conference (also broken down here at 37 signals).</description>
+    </item>
+    
+    <item>
+      <title>I love useful error messages</title>
+      <link>http://www.ianwootten.co.uk/2006/11/06/i-love-useful-error-messages/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/06/i-love-useful-error-messages/</guid>
+      <description>I love it when I get useful error messages such as those often uttered by hotmail.</description>
+    </item>
+    
+    <item>
+      <title>Techno Graveyard</title>
+      <link>http://www.ianwootten.co.uk/2006/11/03/techno-graveyard/</link>
+      <pubDate>Fri, 03 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/03/techno-graveyard/</guid>
+      <description>Our front room is looking a bit of a technology graveyard at the moment. Not only do we have the two archaic computers which have been there since forever, but now we also sport an unused fridge which has been replaced by one of our housemates parents (much larger) hand-me-downs.
+This time last year saw the cleaning out of the Cardiff Department of Computer Science&amp;#8217;s cupboards, with a large amount of the machines having to be &amp;#8220;properly disposed of&amp;#8221;, due to their burden of having huge crt monitors from yesteryear.</description>
+    </item>
+    
+  </channel>
+</rss>

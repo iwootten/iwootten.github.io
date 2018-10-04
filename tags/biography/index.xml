@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biography on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/tags/biography/</link>
+    <description>Recent content in Biography on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Oct 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/tags/biography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Discovering Google</title>
+      <link>http://www.ianwootten.co.uk/2009/10/25/discovering-google/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2009/10/25/discovering-google/</guid>
+      <description>I&amp;#8217;ve recently read a post over on the guardians technology site which gave a whistle-stop history of the internet as it turns 40. I thought I&amp;#8217;d share here my own experiences of growing up alongside the web, more for my own record than anything.
+I remember at school a time at which there was no external connection, nor internal network (which we the pupils used) so the Acorn machines used at our school at the time could communicate with one another.</description>
+    </item>
+    
+  </channel>
+</rss>

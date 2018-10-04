@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2007/08 on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/2007/08/</link>
+    <description>Recent content in 2007/08 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 31 Aug 2007 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/2007/08/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sharing too much?</title>
+      <link>http://www.ianwootten.co.uk/2007/08/31/sharing-too-much/</link>
+      <pubDate>Fri, 31 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/08/31/sharing-too-much/</guid>
+      <description>I&amp;#8217;ve heard a couple of rumours this evening that google may be launching a facebook app that allows your friends to see your search trends over time via your facebook mini feed. There&amp;#8217;s some discussion over on facereviews.com that anything like this exists, but for me it raises an interesting question about how much information people are willing to share within their own &amp;#8220;social networks&amp;#8221;. Would I be comfortable with everyone knowing what I was searching for?</description>
+    </item>
+    
+    <item>
+      <title>Neckache</title>
+      <link>http://www.ianwootten.co.uk/2007/08/16/neckache/</link>
+      <pubDate>Thu, 16 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/08/16/neckache/</guid>
+      <description>The other evening I managed to stretch my back awkwardly and I&amp;#8217;ve been feeling the repercussions of it ever since. It&amp;#8217;s extremely painful to move my head, arm or neck and I&amp;#8217;m getting really frustrated by not being able to sit at the computer without being uncomfortable. Wednesday night I was flat out in bed not able to move an inch, and little more of an improvement last night. It&amp;#8217;s making me really tired and irritable.</description>
+    </item>
+    
+    <item>
+      <title>FOWA Roadtrip Bristol</title>
+      <link>http://www.ianwootten.co.uk/2007/08/08/fowa-roadtrip-bristol/</link>
+      <pubDate>Wed, 08 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/08/08/fowa-roadtrip-bristol/</guid>
+      <description>Yesterday evening I had the pleasure of meeting up with a bunch of fellow geeks and web peeps over in Bristol as part of Ryan Carsons Future of Web Applications Roadtrip. It was a bit of a crazy evening, with me stuck in Cardiff for the best part of two hours prior to leaving. This was due to a &amp;#8220;large fire&amp;#8221; in Newport which was smoking out the rail line so the fire brigade shut everything down.</description>
+    </item>
+    
+  </channel>
+</rss>

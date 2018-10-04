@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.49" />
+
+    
+    
+    
+
+<title>Setting Up an .is Domain with ISNIC • Ian Wootten</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setting Up an .is Domain with ISNIC"/>
+<meta name="twitter:description" content="I&#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&#8217;t great, given their somewhat confusing management interface. That&#8217;s summed up in a recent tweet below.
+Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.
+&mdash; Craig Lockwood (@craiginwales) October 26, 2013"/>
+
+<meta property="og:title" content="Setting Up an .is Domain with ISNIC" />
+<meta property="og:description" content="I&#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&#8217;t great, given their somewhat confusing management interface. That&#8217;s summed up in a recent tweet below.
+Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.
+&mdash; Craig Lockwood (@craiginwales) October 26, 2013" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/" /><meta property="article:published_time" content="2013-10-27T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2013-10-27T00:00:00&#43;00:00"/>
+
+
+    
+
+
+<link rel="stylesheet" href="/css/hyde-hyde.css">
+<link rel="stylesheet" href="/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://www.ianwootten.co.uk/">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="http://www.ianwootten.co.uk/"><img src="http://www.ianwootten.co.uk//images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center"></a>
+      </div>
+      
+      <p class="site__description">
+         Web Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/contact/">
+						<span>Contact</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/ianwootten" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2018 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="/2013/10/27/setting-up-an-.is-domain-with-isnic/">Setting Up an .is Domain with ISNIC</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Oct 27, 2013
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/tutorials">TUTORIALS</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/dns">dns</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/hosting">hosting</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/iceland">iceland</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/nameservers">nameservers</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 3 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>I&#8217;ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn&#8217;t great, given their somewhat confusing management interface. That&#8217;s summed up in a recent tweet below.</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p>Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.</p>&mdash; Craig Lockwood (@craiginwales) <a href="https://twitter.com/craiginwales/statuses/394167434196058112">October 26, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>Given the potential savings compared to a &#8216;normal&#8217; registrar, it&#8217;s likely you&#8217;ll want to make use of ISNIC themselves &#8211; who are much like an Icelandic version of Nominet.</p>
+
+<p>Here&#8217;s the process I went through to configure my domain to make use of the nameservers provided by my (non-icelandic) host. The information provided <a href="http://web.peterhartree.co.uk/2012/how-to-register-an-icelandic-is-domain-name/">here</a> is a little misleading as it&#8217;s not necessary to use a &#8220;pre-approved&#8221; registrar according to the rules outlined <a href="https://www.isnic.is/en/host/req">here</a>. To be clear, there&#8217;s no need to use something like x.is, and you can point ISNIC directly to your hosts nameservers.</p>
+
+<p>Once you&#8217;ve gone through the process of checking your domain is available and registering it, you&#8217;ll need to ensure your hosting provider has appropriate dns entries for your domain. If you&#8217;re using, cPanel or something that basically means adding it there. If you&#8217;re managing your own dns entries, add the appropriate entries within your manager.</p>
+
+<p>Here&#8217;s the key bit. Now wait&#8230;. Seriously, for about 6 hours or so do something else. It will take some time for these dns changes to propagate and ISNIC to accept them. Basically these details need to be bounced up through the hierarchy of dns servers to the root dns servers that will respond to a request for your new domain, which takes time. In the olden days, I remember waiting days for this to happen.</p>
+
+<p>Following that wait, head to the &#8220;redelegate&#8221; option within your new &#8220;My Page&#8221; area at ISNIC. Choose the &#8220;Not Registered&#8221; when asked for your ISP.</p>
+
+<p>Go ahead and enter the nameservers you want to use. If the dns changes haven&#8217;t yet propagated, you&#8217;ll probably get the error &#8220;The nameserver &#8216;ns1.whatever.com&#8217; has not been registered&#8221;, as shown below:</p>
+
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-23.57.26.png" alt="Misleading Error" width="676" height="360" class="alignnone size-full wp-image-912" /></a></p>
+
+<p>This is a pretty misleading error, given what it actually means is &#8220;your domain doesn&#8217;t seem to be registered yet on those nameservers&#8221;. So wait a bit more for propagation to occur&#8230;</p>
+
+<p>Be aware of the <a href="https://www.isnic.is/en/host/req">rules</a> for ISNIC nameservers and check your host complies with them, otherwise you may find you encounter other errors. When the changes are picked up, you should finally be able to add the entries without getting an array of red boxes, much like below.</p>
+
+<p><a href="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png"><img src="http://www.ianwootten.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-26-at-20.05.05.png" alt="Successful nameserver entry" width="684" height="577" class="alignnone size-full wp-image-913" /></a></p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/2013/08/14/a-decade-on-the-world-wide-web/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">A Decade on the World Wide Web</span>
+    </a>
+    
+    
+    <a href="/2014/03/03/shipping-in-march/" class="navigation-next">
+      <span class="navigation-tittle">Shipping in March</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ianwootten';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-263865-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

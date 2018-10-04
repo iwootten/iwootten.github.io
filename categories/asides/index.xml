@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asides on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/categories/asides/</link>
+    <description>Recent content in Asides on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Jun 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/categories/asides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Where does Steam store Indie Game The Movie?</title>
+      <link>http://www.ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2012/06/12/where-does-steam-store-indie-game-the-movie/</guid>
+      <description>A quickie &amp;#8211; but for all those that have downloaded &amp;#8220;Indie Game the Movie&amp;#8221; today from steam and are wondering where the video files are stored, you can find them here:
+Steam/SteamApps/common/Indie Game The Movie/data/movies</description>
+    </item>
+    
+    <item>
+      <title>Johnny Lee&#39;s Innovative Uses of Common Technology</title>
+      <link>http://www.ianwootten.co.uk/2008/05/30/johnny-lees-innovative-uses-of-common-technology/</link>
+      <pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/05/30/johnny-lees-innovative-uses-of-common-technology/</guid>
+      <description>I&amp;#8217;m not sure how many visitors have caught this ted talk before, but I&amp;#8217;d thought I&amp;#8217;d post it anyway. Johnny Chung Lee is amazing, turning a $40 wii remote into use an interactive whiteboard or a new way to interact with video games via head tracking. He&amp;#8217;s been at this sort of thing for ages previously putting out a $14 steadycam.</description>
+    </item>
+    
+    <item>
+      <title>Undeserved Job Titles</title>
+      <link>http://www.ianwootten.co.uk/2007/09/20/undeserved-job-titles/</link>
+      <pubDate>Thu, 20 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/09/20/undeserved-job-titles/</guid>
+      <description>Today on the return from uni I passed the new Subway that is opening up soon near Queen Street train station. On one of their job adverts, they were advertising for team leaders and sandwich artists. I&amp;#8217;ve never really noticed my sandwiches being arranged in a artistic fashion before, maybe it would brighten my day if they were. I feel sorry for the poor art school graduate who ends up filling baguettes for a living.</description>
+    </item>
+    
+    <item>
+      <title>pMachine changes its name</title>
+      <link>http://www.ianwootten.co.uk/2007/03/09/pmachine-changes-its-name/</link>
+      <pubDate>Fri, 09 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/03/09/pmachine-changes-its-name/</guid>
+      <description>pMachine has changed its name to Ellislab, and are sporting a shiny new website for all to see. The reason for the change is the expansion over the last 6 years to encompass products which don&amp;#8217;t fall under the same banner now. I&amp;#8217;m glad to see that the CodeIgniter website has got a facelift. 31three did the hard graft on the design and they all look awesome.</description>
+    </item>
+    
+    <item>
+      <title>What colour are you?</title>
+      <link>http://www.ianwootten.co.uk/2005/10/08/what-colour-are-you/</link>
+      <pubDate>Sat, 08 Oct 2005 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2005/10/08/what-colour-are-you/</guid>
+      <description>I found a wicked animation by Maria Claudia Cortes describing what personalities a bunch of colours are often attributed with. I reckon I&amp;#8217;m a mixture of red and blue, my wardrobe reflects this as well. What colour are you?</description>
+    </item>
+    
+  </channel>
+</rss>

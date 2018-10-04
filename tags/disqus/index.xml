@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Disqus on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/tags/disqus/</link>
+    <description>Recent content in Disqus on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Porting a Wordpress blog to Jekyll: Part 1</title>
+      <link>http://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</guid>
+      <description>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&amp;rsquo;ve overcome them.
+Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.</description>
+    </item>
+    
+  </channel>
+</rss>

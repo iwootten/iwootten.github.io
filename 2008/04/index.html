@@ -1,99 +1,180 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Ian Wootten - Web Developer, Cardiff</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/fonts/open-sans.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/syntax.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.49" />
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    
+    
 
-      ga('create', 'UA-263865-2', 'ianwootten.co.uk');
-      ga('send', 'pageview');
+<title>2008/04 • Ian Wootten</title>
 
-    </script>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2008/04"/>
+<meta name="twitter:description" content="Web Developer, Cardiff"/>
+
+<meta property="og:title" content="2008/04" />
+<meta property="og:description" content="Web Developer, Cardiff" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.ianwootten.co.uk/2008/04/" />
+<meta property="og:updated_time" content="2008-04-02T00:00:00&#43;00:00"/>
+
+
+    
+
+
+<link rel="stylesheet" href="/css/hyde-hyde.css">
+<link rel="stylesheet" href="/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+<link href="http://www.ianwootten.co.uk/2008/04/index.xml" rel="alternate" type="application/rss+xml" title="Ian Wootten" />
+<link href="http://www.ianwootten.co.uk/2008/04/index.xml" rel="feed" type="application/rss+xml" title="Ian Wootten" />
+
+
 </head>
-<body>
 
-<div class="container blog">
-    <header>
-      <nav>
-      <ul class="nav">
-        <li><a class="blog active" href="/">Blog</a></li>
-        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
-        <li><a class="web-apps " href="/category/web-apps">Web Apps</a></li>
-        <li><a class="about" href="/about">About</a></li>
-        <li><a class="contact" href="/contact">Contact</a></li>
-      </ul>
-      </nav>
-      <div class="clear"></div>
-    </header>
 
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://www.ianwootten.co.uk/">Ian Wootten</a>
+      </span>
       
-        <div class="post">
-          <h1><a href="/2008/04/02/amazon-associates-wordpress-wishlist-plugin">Amazon Associates WordPress Wishlist Plugin</a></h1>
-      <div class="author_meta">02 Apr 2008</div>
-
-          <p>One of the things that&#8217;s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they&#8217;re unable to find my wishlist. This is mainly because they&#8217;re simple folk who might not think to check amazon for my name. I&#8217;m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage. All this data is available on the web already its just a case of putting it together.</p>
-<p>Some keen readers might of noticed the wishlist page I stuck up recently and want something similar on their own site and (like myself) either can&#8217;t be bothered or didn&#8217;t have the time to create a plugin to pull this data together. I&#8217;m putting up here my own quick and dirty plugin I built a few weeks ago to achieve this.</p>
-<p>It uses amazon web services to look up a wishlist, stick in a specified associates id in each of my item links and replace where I put the text <!-- wishlist_content --> (without spaces) in a post with my wishlist items. The plugin regularly updates this (hourly) as a scheduled event in wordpress in case someone decides to actually buy me something. Of course you&#8217;ll need a services key to use it, which you can easily get by signing up with amazon at aws.amazon.com. Fill out your services id, your wishlist id (found by logging into amazon and heading to your wishlist page) and your locale (the bit after amazon. so mine is .co.uk) and press the fetch items to pull all the items in. If you don&#8217;t have an associates id, feel free to leave as my own : )</p>
-<p>I used curl to get the remote data from amazon as the file_get_content methods generally aren&#8217;t enabled on normal web hosts. If you&#8217;d like the items to be fetched less regularly, then install the plugin with and updated wp_schedule_event method in the main wishlist.php to a value of your choice.</p>
-<p>You can download it over <a href="http://ianwootten.co.uk/downloads/wishlist.zip">here</a>.</p>
-<p><em>Double alliteration in a post title? Not sure I&#8217;ve attempted that before.</em></p>
-<p>[Edit: You&#39;ll need to be running on PHP5 to make use of this plugin]<br>[Edit: I released an updated version based on Amazon&#39;s move to use of signitures, see the details <a href="http://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0-2">here</a>]</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/amazon">amazon</a>,
-                
-                <a href="/tag/associates">associates</a>,
-                
-                <a href="/tag/aws">aws</a>,
-                
-                <a href="/tag/PHP">PHP</a>,
-                
-                <a href="/tag/web-services">web services</a>,
-                
-                <a href="/tag/wishlist">wishlist</a>,
-                
-              
-              | <a href="2008/04/02/amazon-associates-wordpress-wishlist-plugin/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
       
-
-      <div class="pagination">
-          
-          <span class="page_number ">Page: 1 of 1</span>
-
-          
+      
+      <div class="author-image">
+        <a href="http://www.ianwootten.co.uk/"><img src="http://www.ianwootten.co.uk//images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center"></a>
       </div>
-    <footer>
-      <div class="footer-about">
-        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly Python/Javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      
+      <p class="site__description">
+         Web Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/contact/">
+						<span>Contact</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/ianwootten" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
       </div>
-    </footer>
+    </div>
+    <p class="copyright">
+      &copy;2003-2018 Ian Wootten
+    </p>
   </div>
-<script type="text/javascript">
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+  <div>
+  </div>
+</div>
 
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
+        <div class="content container">
+            
+    <span class="section__title">2008/04</span>
+<ul class="posts">
+    
+        
+<li>
+  <span class="list__title--small">
+    <a href="/2008/04/02/amazon-associates-wordpress-wishlist-plugin/">Amazon Associates WordPress Wishlist Plugin</a>
+      
+      <time class="pull-right hidden-tablet">Apr 02 &#39;08</time>
+      
+  </span>
+</li>
+
+    
+</ul>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-263865-2', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-</body>
-</html>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+
+    </body>
+</html>

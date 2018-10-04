@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octopress on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/tags/octopress/</link>
+    <description>Recent content in Octopress on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Sep 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hosting an Octopress Blog on Amazon S3</title>
+      <link>http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</guid>
+      <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&amp;#8217;t need all the bells and whistles on our blog I&amp;#8217;m sure you&amp;#8217;ll agree.</description>
+    </item>
+    
+  </channel>
+</rss>

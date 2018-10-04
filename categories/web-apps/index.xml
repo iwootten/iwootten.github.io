@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Apps on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/categories/web-apps/</link>
+    <description>Recent content in Web Apps on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/categories/web-apps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Splitting a date range in Python</title>
+      <link>http://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</guid>
+      <description>Dates are one of those annoying things that shouldn&amp;rsquo;t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I&amp;rsquo;m currently working on. Hopefully someone else will find them helpful.
+import datetime, calendar # Find the delta between two dates based on a desired number of ranges def datedelta(startdate, enddate, no_of_ranges): start_epoch = calendar.</description>
+    </item>
+    
+    <item>
+      <title>The Developer Dream</title>
+      <link>http://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</guid>
+      <description>I suffer from idea overload. It seems that every day I have an idea for something. As a developer, I&amp;#8217;m lucky in that to be able to take an idea to inception very quickly. Best of all, I can show it at inception stage to a huge audience (if I had one), garner feedback and quickly iterate on that idea. To date, I&amp;#8217;ve mainly created these by myself &amp;#8211; a casualty of doing paid work in the main like this too.</description>
+    </item>
+    
+    <item>
+      <title>Growing a Business with Developer APIs</title>
+      <link>http://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</link>
+      <pubDate>Wed, 20 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</guid>
+      <description>Those of your you who follow me on twitter will might be aware of a single day hack I attempted last week, which takes output from Lovefilm&amp;#8217;s customer history and formats it so it can easily be imported into the lovely Letterboxd. It&amp;#8217;s named Loveletterd and it seemed entirely appropriate to release it on Valentines day.
+After hearing that Letterboxd had created a CSV import tool for it&amp;#8217;s community to use and as I&amp;#8217;m a Lovefilm developer, I felt like it would be a great use of my time to get to work on Loveletterd.</description>
+    </item>
+    
+    <item>
+      <title>The Move Towards Static Websites</title>
+      <link>http://www.ianwootten.co.uk/2013/01/22/the-move-towards-static-websites/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2013/01/22/the-move-towards-static-websites/</guid>
+      <description>There&amp;#8217;s some discussion on new podcast &amp;#8220;The Back to Front Show&amp;#8221; on why of late we&amp;#8217;re seeing so many static websites cropping up. It seem like now more than ever, we&amp;#8217;re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing.
+When I talk about a static site, I think of it of raw HTML sat on a server and nothing else.</description>
+    </item>
+    
+    <item>
+      <title>If You Build It</title>
+      <link>http://www.ianwootten.co.uk/2012/05/03/if-you-build-it/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2012/05/03/if-you-build-it/</guid>
+      <description>If my years in academia have taught me anything, it&amp;#8217;s that insight obvious to you isn&amp;#8217;t often obvious to others.
+As a result, I&amp;#8217;ve pretty much adopted a gung-ho hacker attitude towards getting my own ideas built whereby I&amp;#8217;ll just often work to get an iteration of an site out as fast as possible. The only factor here is my own time and I&amp;#8217;m in the fortunate position to have some of that available now and again.</description>
+    </item>
+    
+    <item>
+      <title>Where&#39;s my Full Stack Payment Service?</title>
+      <link>http://www.ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service/</guid>
+      <description>Unless you&amp;#8217;ve been living under a rock, you&amp;#8217;ll realise that there&amp;#8217;s an uprising against paypal amongst developers. Most of this stems from the multitude of crazy requirements they put upon sellers and the locks they can put upon your account without notice.
+This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal.</description>
+    </item>
+    
+    <item>
+      <title>A Survey of Hype in Web Development Podcasts</title>
+      <link>http://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</link>
+      <pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</guid>
+      <description>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they&amp;#8217;re allowed to, it is their own podcast after all, often from their own businesses etc. I&amp;#8217;m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless.
+One of these things is the title of the show itself.</description>
+    </item>
+    
+    <item>
+      <title>Mixbooth</title>
+      <link>http://www.ianwootten.co.uk/2010/03/21/mixbooth/</link>
+      <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid>
+      <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn&amp;#8217;t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you&amp;#8217;d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
+    </item>
+    
+    <item>
+      <title>Stephen Fry and the Ascent of &#34;Micro Blogging&#34;</title>
+      <link>http://www.ianwootten.co.uk/2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging/</link>
+      <pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging/</guid>
+      <description>Twitter is all over the news at the moment. For the uninitiated, it allows you to list short updates of what you are doing at any time. BBC News seemed to have an all-out assault at the end of January raving about it at every opportunity &amp;#8211; the first moments of the Hudson plane landing, an short chat about it by Stephen Fry on Friday Night with Jonathan Ross and this short clip on iPlayer by Stephen Fry again.</description>
+    </item>
+    
+    <item>
+      <title>Sweetcron is pretty sweet at Lifestreaming</title>
+      <link>http://www.ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/</link>
+      <pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/</guid>
+      <description>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to Sweetcron. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web.</description>
+    </item>
+    
+    <item>
+      <title>Location Based Job Boards</title>
+      <link>http://www.ianwootten.co.uk/2008/01/30/location-based-job-boards/</link>
+      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/01/30/location-based-job-boards/</guid>
+      <description>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent job and profile sites in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don&amp;#8217;t have time myself to do this though unfortunately &amp;#8211; perhaps someone might like to chat about collaborating).</description>
+    </item>
+    
+    <item>
+      <title>Sharing too much?</title>
+      <link>http://www.ianwootten.co.uk/2007/08/31/sharing-too-much/</link>
+      <pubDate>Fri, 31 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/08/31/sharing-too-much/</guid>
+      <description>I&amp;#8217;ve heard a couple of rumours this evening that google may be launching a facebook app that allows your friends to see your search trends over time via your facebook mini feed. There&amp;#8217;s some discussion over on facereviews.com that anything like this exists, but for me it raises an interesting question about how much information people are willing to share within their own &amp;#8220;social networks&amp;#8221;. Would I be comfortable with everyone knowing what I was searching for?</description>
+    </item>
+    
+    <item>
+      <title>Joost Beta</title>
+      <link>http://www.ianwootten.co.uk/2007/04/12/joost-beta/</link>
+      <pubDate>Thu, 12 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/04/12/joost-beta/</guid>
+      <description>This afternoon I was quite chuffed to discover that I&amp;#8217;d been selected for a Joost beta invite. Joost is, in a nutshell, TV for the web . Kind of the opposite to that Current TV channel on Virgin Media. I&amp;#8217;ve been playing with it this evening, mainly perusing the XL-Recordings and gaming channels.It all seems very good &amp;#8211; a good seelction of channels (for me) straight off, with the ability to search Joost&amp;#8217;s catalog of channels and add more to your collection.</description>
+    </item>
+    
+    <item>
+      <title>Threadless launches Threadlesskids.com</title>
+      <link>http://www.ianwootten.co.uk/2007/03/19/threadless-launches-threadlesskids.com/</link>
+      <pubDate>Mon, 19 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/03/19/threadless-launches-threadlesskids.com/</guid>
+      <description>Threadless has launched threadlesskids.com &amp;#8211; like threadless, but for kids. I suppose that should come in handy for Jake and Shondis recent announcement. Anyway, it looks wicked &amp;#8211; its amazing how the kids stuff costs more than adult though! My friends told me kids are expensive.</description>
+    </item>
+    
+    <item>
+      <title>Future of Web Apps, Future of Web Design</title>
+      <link>http://www.ianwootten.co.uk/2007/01/18/future-of-web-apps-future-of-web-design/</link>
+      <pubDate>Thu, 18 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2007/01/18/future-of-web-apps-future-of-web-design/</guid>
+      <description>If anyone would like to contribute to allow me to attend the Future of Web Apps or the Future of Web Design conferences over the next few months, I&amp;#8217;d put together some independent reviews of the events on this site. As the funds of a lowly research student are not all that much cop, you can donate some funds using the donation page.At the moment, registration for Web Apps is £195 + VAT (£595 + VAT including workshops), and Web Design is £59 +VAT.</description>
+    </item>
+    
+    <item>
+      <title>Does Threadless rule or not?</title>
+      <link>http://www.ianwootten.co.uk/2006/12/01/does-threadless-rule-or-not/</link>
+      <pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/12/01/does-threadless-rule-or-not/</guid>
+      <description>Last night I perused a number of articles describing the success of my favourite t-shirt store threadless, the first of which &amp;#8211; over at 37Signals reviews in a positive light and the second in a more negative one.Threadless is a t-shirt company with a difference, it&amp;#8217;s a 24-7 competition allow you to become the designer. Designs are chosen by the team, and are able to be rated by the community that operates around the website.</description>
+    </item>
+    
+    <item>
+      <title>Got no hot friends? - Fake Your Space!</title>
+      <link>http://www.ianwootten.co.uk/2006/12/01/got-no-hot-friends---fake-your-space/</link>
+      <pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/12/01/got-no-hot-friends---fake-your-space/</guid>
+      <description>I heard about fakeyourspace via mashable today, which offers the ability to purchase your own social networking friends to leave messages and comments on communities such as myspace and facebook (the only two web pages I ever see to be open when supervising university labs). In their own words:*&amp;#8220;If you are tired of seeing everyone else with the hottest friends and want some hotties of your own, then this is the place for you.</description>
+    </item>
+    
+    <item>
+      <title>Future of Web Applications - London 07</title>
+      <link>http://www.ianwootten.co.uk/2006/11/14/future-of-web-applications---london-07/</link>
+      <pubDate>Tue, 14 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/14/future-of-web-applications---london-07/</guid>
+      <description>Registration is open for the Future of Web Apps conference in London 07. I&amp;#8217;d love to go, loads of great companies/people talking (good to see Last.fm making an appearance), loads of schmoozing (if thats the appropriate word), but unfortunately absolutely jack to do with my PhD, so no funding.</description>
+    </item>
+    
+    <item>
+      <title>Do Web Users Want Web Standards?</title>
+      <link>http://www.ianwootten.co.uk/2006/11/13/do-web-users-want-web-standards/</link>
+      <pubDate>Mon, 13 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/13/do-web-users-want-web-standards/</guid>
+      <description>I was thinking about this earlier and was trying to make an educated answer. What I would note is that it is primarily content which drives users to use sites, we can see that through all manner of feeds and low bandwidth sites across the net. Without content, theres no point in sticking up a website. You can see demonstrations of that assertion here from time to time. It&amp;#8217;s also fairly visible through all manner of seedy content on the web as users will be quite happy to sit through the many pop-ups and poorly formatted text to get to that bunch of images which they&amp;#8217;re after.</description>
+    </item>
+    
+    <item>
+      <title>Carson Systems shows us the money</title>
+      <link>http://www.ianwootten.co.uk/2006/11/07/carson-systems-shows-us-the-money/</link>
+      <pubDate>Tue, 07 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/07/carson-systems-shows-us-the-money/</guid>
+      <description>Carson Systems is showing the details of how dropsend stacks up in terms of monthly profit. Ryan states that at a conservative estimate by December &amp;#8217;07, it&amp;#8217;ll be making $21k/mo. He also seems to be beating off a bit of bad feedback on the advertising which has/hasn&amp;#8217;t been done.</description>
+    </item>
+    
+    <item>
+      <title>DropSend is up for sale</title>
+      <link>http://www.ianwootten.co.uk/2006/11/06/dropsend-is-up-for-sale/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/06/dropsend-is-up-for-sale/</guid>
+      <description>Carson Systems DropSend has recently been put up for sale by Ryan Carson. He states that currently they don&amp;#8217;t have enough time to give it the attention it deserves, although the application is profitable with customers accumulating month by month.DropSend allows users to email huge files to one another via uploading them to dropsend and sending an email to the reciever to detail where it can be collected from. It&amp;#8217;s quite interesting as the costs involved in its building are quite detailed within Ryans talk at a previous Future of Web Apps conference (also broken down here at 37 signals).</description>
+    </item>
+    
+    <item>
+      <title>I love useful error messages</title>
+      <link>http://www.ianwootten.co.uk/2006/11/06/i-love-useful-error-messages/</link>
+      <pubDate>Mon, 06 Nov 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/11/06/i-love-useful-error-messages/</guid>
+      <description>I love it when I get useful error messages such as those often uttered by hotmail.</description>
+    </item>
+    
+    <item>
+      <title>All change</title>
+      <link>http://www.ianwootten.co.uk/2003/08/17/all-change/</link>
+      <pubDate>Sun, 17 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2003/08/17/all-change/</guid>
+      <description>Due to MT being incompatible with my Uni server from an imaging point of view, and the fact that its all coded in Perl &amp;#8211; which I haven&amp;#8217;t bothered looking at for a hell of a long time, I&amp;#8217;ve ditched it and shifted my blog over to b2. Now I can actually post images! Woohoo! b2 is nice and tiny also, a mere 527Kb compared to MT&amp;#8217;s 3Mb.
+I&amp;#8217;m actually toying with the idea of developing a blogging tool as a final year project, I think that might be very rewarding.</description>
+    </item>
+    
+    <item>
+      <title>Sonic Flux</title>
+      <link>http://www.ianwootten.co.uk/2003/08/14/sonic-flux/</link>
+      <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2003/08/14/sonic-flux/</guid>
+      <description>I&amp;#8217;m pondering whether or not it might be a good idea to upgrade Ben&amp;#8217;s Sonicflux site to use MT. I don&amp;#8217;t think that over the last year much has been done to update his site, (well I know it hasn&amp;#8217;t &amp;#8211; I&amp;#8217;ve been maintaining it, bad idea) and I&amp;#8217;m sure he&amp;#8217;d make use of it. He sends out regular updates via email to let everyone know whats going on, I&amp;#8217;m sure I could get MT to send regular email updates.</description>
+    </item>
+    
+    <item>
+      <title>netpbm woes</title>
+      <link>http://www.ianwootten.co.uk/2003/08/14/netpbm-woes/</link>
+      <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2003/08/14/netpbm-woes/</guid>
+      <description>Right, Sonic Flux didn&amp;#8217;t happen. Went to Martins instead to sort out a new monitor to replace his dying old one.
+I&amp;#8217;m having a right job trying to get the image side of MT working. I want to post images from my t610 on here, but it seems somethings afoot as when trying to submit thumbnails I get a lovely page of hex! Ah well&amp;#8230;Maybe MT wasn&amp;#8217;t such a good move&amp;#8230;</description>
+    </item>
+    
+  </channel>
+</rss>

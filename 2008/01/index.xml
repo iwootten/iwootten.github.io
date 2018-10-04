@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2008/01 on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/2008/01/</link>
+    <description>Recent content in 2008/01 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Jan 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/2008/01/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Book Review: Code Igniter for Rapid PHP Application Development</title>
+      <link>http://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</guid>
+      <description>In this book, author David Upton walks you through use of the Code Igniter framework, which is essentially PHP&amp;#8217;s answer to Ruby on Rails. I&amp;#8217;ve been a avid user of Code Igniter since I discovered it last year, which is a nice waypoint for anyone trying to understand model-view-controller architectures and not wanting to make the move over to ROR quite yet.
+The angle of this book is taken from a first time CI developer, but one with some knowledge of both PHP and web development in general.</description>
+    </item>
+    
+    <item>
+      <title>Location Based Job Boards</title>
+      <link>http://www.ianwootten.co.uk/2008/01/30/location-based-job-boards/</link>
+      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/01/30/location-based-job-boards/</guid>
+      <description>One of the most frustrating things I find about hearing about possible web development jobs on certain sites is the sheer amount of them which are simply unviable due to my UK location. Previously I decided to post all those jobs I could find to my own webtyrant site and the recent job and profile sites in the django communities has got me thinking about how these two pieces of information on locality could be aggregated together (I don&amp;#8217;t have time myself to do this though unfortunately &amp;#8211; perhaps someone might like to chat about collaborating).</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Learning jQuery</title>
+      <link>http://www.ianwootten.co.uk/2008/01/09/book-review-learning-jquery/</link>
+      <pubDate>Wed, 09 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/01/09/book-review-learning-jquery/</guid>
+      <description>Learning jQuery takes a look at the JavaScript library jQuery by Jonathan Chaffer and Karl Swedberg, whom run learningjquery.com, a popular resource to jQuery developers. Jonathan and Karl work through a example based approach of common problems in web application development to demonstrate how jQuery can be used to minimize the amount of code written by developers and instead focus on the functionality of their code. The book is set for the developer with some knowledge of HTML, CSS and Javascript but a jQuery novice.</description>
+    </item>
+    
+    <item>
+      <title>Decrypting Filezilla Passwords with PHP</title>
+      <link>http://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</link>
+      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</guid>
+      <description>One of the most frustrating things I find in managing a number of websites is that I&amp;#8217;m always forgetting passwords. The version of Filezilla I&amp;#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&amp;#8217;ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecommerce on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/tags/ecommerce/</link>
+    <description>Recent content in Ecommerce on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/tags/ecommerce/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shipping in March: Weeks 2 &amp; 3</title>
+      <link>http://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2--3/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2--3/</guid>
+      <description>So, anybody paying close attention may have noticed I&amp;#8217;ve skipped a week on updating my progress on shipping in March. There wasn&amp;#8217;t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn&amp;#8217;t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description>
+    </item>
+    
+  </channel>
+</rss>

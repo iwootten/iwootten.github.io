@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/categories/tools/</link>
+    <description>Recent content in Tools on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Dec 2004 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple PHP Gallery</title>
+      <link>http://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</link>
+      <pubDate>Mon, 13 Dec 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</guid>
+      <description>I&amp;#8217;ve got rid of the old phpautogallery that I had and dumped simple php gallery up instead. I&amp;#8217;ve also converted shedloads of photos over so that peeps can see what I&amp;#8217;ve been up to recently and not so recently. This includes most of the weddings I&amp;#8217;ve attended over the last few years of very close friends, plus a few random ones for good measure.
+Check them all out here http://users.cs.cf.ac.uk/I.M.Wootten/gallery</description>
+    </item>
+    
+    <item>
+      <title>Ming</title>
+      <link>http://www.ianwootten.co.uk/2004/01/05/ming/</link>
+      <pubDate>Mon, 05 Jan 2004 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2004/01/05/ming/</guid>
+      <description>I should really write something about whats been going on over the Christmas hols, but I don&amp;#8217;t want to waste any time which could be used for revision. What I will say though is that I&amp;#8217;ve just discovered a sourceforge project called &amp;#8220;Ming&amp;#8221; which allows for easy SWF (Flash) output with php.
+This could come in really handy in that it could be used to generate templates with animated content, such as recent additions or news feeds in side blocks.</description>
+    </item>
+    
+  </channel>
+</rss>

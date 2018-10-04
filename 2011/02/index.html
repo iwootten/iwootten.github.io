@@ -1,293 +1,180 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Ian Wootten - Web Developer, Cardiff</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/fonts/open-sans.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/syntax.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.49" />
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    
+    
 
-      ga('create', 'UA-263865-2', 'ianwootten.co.uk');
-      ga('send', 'pageview');
+<title>2011/02 • Ian Wootten</title>
 
-    </script>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2011/02"/>
+<meta name="twitter:description" content="Web Developer, Cardiff"/>
+
+<meta property="og:title" content="2011/02" />
+<meta property="og:description" content="Web Developer, Cardiff" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.ianwootten.co.uk/2011/02/" />
+<meta property="og:updated_time" content="2011-02-07T00:00:00&#43;00:00"/>
+
+
+    
+
+
+<link rel="stylesheet" href="/css/hyde-hyde.css">
+<link rel="stylesheet" href="/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+<link href="http://www.ianwootten.co.uk/2011/02/index.xml" rel="alternate" type="application/rss+xml" title="Ian Wootten" />
+<link href="http://www.ianwootten.co.uk/2011/02/index.xml" rel="feed" type="application/rss+xml" title="Ian Wootten" />
+
+
 </head>
-<body>
 
-<div class="container blog">
-    <header>
-      <nav>
-      <ul class="nav">
-        <li><a class="blog active" href="/">Blog</a></li>
-        <li><a class="javascript " href="/category/javascript">Javascript</a></li>
-        <li><a class="web-apps " href="/category/web-apps">Web Apps</a></li>
-        <li><a class="about" href="/about">About</a></li>
-        <li><a class="contact" href="/contact">Contact</a></li>
-      </ul>
-      </nav>
-      <div class="clear"></div>
-    </header>
 
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://www.ianwootten.co.uk/">Ian Wootten</a>
+      </span>
       
-        <div class="post">
-          <h1><a href="/2011/02/07/blog-rolling-with-couchdb-express-and-node-js">Blog rolling with CouchDB, Express and Node.js</a></h1>
-      <div class="author_meta">07 Feb 2011</div>
-
-          <p>Over the last little while, I&#8217;ve been doing a lot of playing with <a href="http://nodejs.org">Node.js</a>, mostly to run data collection scripts. Last week, I started following <a href="http://howtonode.org/express-mongodb">Ciaran Jessup&#8217;s tutorial</a> on getting started with <a href="http://nodejs.org">node.js</a>, <a href="http://github.com/visionmedia/express">Express</a> and <a href="http://www.mongodb.org/">mongoDB</a>. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar <a href="http://en.wikipedia.org/wiki/JavaScript">server side language</a>. I hit a few problems along the way in the tutorial, so I thought I&#8217;ve list a few of my findings here. I also wanted to make use of my preferred flavour of nosql &#8211; <a href="http://couchdb.apache.org/">couchdb</a> with express, which proved extremely easy to port the mongo model over to it. I hope someone out there finds this useful as I&#8217;ve yet to find a vast community using couchdb/express.</p>
-<p>First things first, you&#8217;ll want to install <a href="http://nodejs.org">Node</a> and <a href="http://npmjs.org">npm</a> (the node package manager) in order to be able to easily install node packages. You&#8217;ll also probably find it handy to have the <a href="http://howtonode.org/express-mongodb">original tutorial open</a> alongside this one. I&#8217;ve been using the latest versions of node (0.3.7) and npm (0.2.17) at the time of writing.</p>
-<p>Once that&#8217;s done, grab copies of the packages that we&#8217;ll be using:</p>
-<div class='hljs'><pre><code class='bash'>npm install express</code></pre></div><div class='hljs'><pre><code class='bash'>npm install jade</code></pre></div><div class='hljs'><pre><code class='bash'>npm install sass</code></pre></div><p>If you want to use couchdb, then make sure you have it installed &#8211; grab it over <a href="http://www.couchone.com/get">here</a> and then install the package for talking to node.</p>
-<div class='hljs'><pre><code class='bash'>npm install cradle</code></pre></div><p>The first hurdle I found was that the way in which that express is called has changed a little.</p>
-<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
-
-<span class="hljs-keyword">var</span> app = express.createServer();
-
-app.configure(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-  app.use(express.methodOverride());
-  app.use(express.bodyDecoder());
-  app.use(express.logger());
-});
-
-app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>)</span>{
-    res.send(<span class="hljs-string">'Hello World'</span>);
-});
-
-app.listen(<span class="hljs-number">3000</span>);</code></pre></div><p>Then by saving to a file called app.js and calling using:</p>
-<div class='hljs'><pre><code class='bash'>node app.js</code></pre></div><p>Once that&#8217;s done. You can then visit 127.0.0.1:3000 in your browser to see a rivetting message!</p>
-<p>After creating folder beneath our original app.js in which to put views, you can use the original <a href="http://howtonode.org/express-mongodb/articleprovider-memory.js">article provider file</a> and the updated app.js below in order to have an app with a few articles shown.</p>
-<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
-
-<span class="hljs-keyword">var</span> ArticleProvider = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./articleprovider-memory'</span>).ArticleProvider;
-
-<span class="hljs-keyword">var</span> app = express.createServer();
-
-app.configure(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-  app.use(express.methodOverride());
-  app.use(express.bodyDecoder());
-  app.use(express.logger());
-});
-
-<span class="hljs-keyword">var</span> articleProvider= <span class="hljs-keyword">new</span> ArticleProvider();
-
-app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>)</span>{
-  articleProvider.findAll(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, docs</span>)</span>{
-    res.send(<span class="hljs-built_in">require</span>(<span class="hljs-string">'sys'</span>).inspect(docs));
-  })
-});
-
-app.listen(<span class="hljs-number">3000</span>);</code></pre></div><p>Now when you re-run, you&#8217;ll see 3 separate articles. Oooh fancy!</p>
-<p>Next I hit my first hurdle. Express no longer uses the HAML HTML template language and instead uses JADE by default. This requires converting the HAML templates across to their equivalent JADE counterparts. Basically, this is as simple as dropping the &#8216;%&#8217; from the beginning of each line (I also replaced braces with brackets in later templates).</p>
-<div class='hljs'><pre><code class='jade'>html
-  head
-    title= title
-    link(rel: 'stylesheet', href: '/style.css' )
-  body
-    #wrapper
-      != body</code></pre></div><div class='hljs'><pre><code class='jade'>h1= title
-#articles
-  - each article in articles
-    div.article
-      div.created_at= article.created_at
-      div.title= article.title
-      div.body= article.body</code></pre></div><p>The app.js now becomes:</p>
-<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
-
-<span class="hljs-keyword">var</span> app = express.createServer();
-
-app.configure(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-  app.set(<span class="hljs-string">'view engine'</span>, <span class="hljs-string">'jade'</span>);
-  app.set(<span class="hljs-string">'views'</span>, __dirname + <span class="hljs-string">'/views'</span>);
-  app.use(express.methodOverride());
-  app.use(express.bodyDecoder());
-  app.use(express.logger());
-  app.use(app.router);
-  app.use(express.compiler({ src: __dirname + <span class="hljs-string">'/views'</span>, enable: [<span class="hljs-string">'sass'</span>] }));
-});
-
-<span class="hljs-keyword">var</span> ArticleProvider = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./articleprovider-memory'</span>).ArticleProvider;
-
-app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
-  articleProvider.findAll(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, docs</span>)</span>{
-    res.render(<span class="hljs-string">'blogs_index.jade'</span>, {
-      locals: {
-        title: <span class="hljs-string">'Blog'</span>,
-        articles: docs
-      }
-    });
-  })
-})
-
-app.get(<span class="hljs-string">'/*.css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
-  res.render(req.params[<span class="hljs-number">0</span>] + <span class="hljs-string">'.css.sass'</span>, { layout: <span class="hljs-literal">false</span> });
-});
-
-app.listen(<span class="hljs-number">3000</span>);</code></pre></div><p>You&#8217;ll notice that here we enable the CSS compiler sass and HTML compiler jade. If you download the original <a href="http://howtonode.org/express-mongodb/views/style.css.sass">sass CSS template</a> into your views folder, you can now restart the app and inspect the fruits of your labour. The CSS shouldn&#8217;t actually sit in the views folder, according to the creator of Express, and should instead should be compiled with the sass package itself. I&#8217;ve yet to discover the correct way of doing this. To request a stylesheet in the view, we need to do the following:</p>
-<div class='hljs'><pre><code class='jade'>html
-  head
-    title= title
-    link(rel: 'stylesheet', href: '/style.css' )
-  body
-    #wrapper
-      != body</code></pre></div><p>If you reload now and visit <a href="http://127.0.0.1:3000">127.0.0.1:3000</a> you should see your posts with a little more style.</p>
-<p>Creating a form for new posts looks like this:</p>
-<div class='hljs'><pre><code class='jade'>h1= title
-form( method= 'post' )
-  div
-    div
-      span Title :
-      input(type='text', name= 'title', id= 'editArticleTitle' )
-    div
-      span Body :
-      textarea( name= 'body', rows= 20, id= 'editArticleBody' )
-    div#editArticleSubmit
-      input( type= 'submit', value= 'Send' )</code></pre></div><p>And the new app.js routes are as follows:</p>
-<div class='hljs'><pre><code class='javascript'>app.get(<span class="hljs-string">'/blog/new'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
-  res.render(<span class="hljs-string">'blog_new'</span>, {
-    locals: {
-      title: <span class="hljs-string">'New Post'</span>
-    }
-  });
-});
-
-app.post(<span class="hljs-string">'/blog/new'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
-  articleProvider.save({
-    title: req.param(<span class="hljs-string">'title'</span>),
-    body: req.param(<span class="hljs-string">'body'</span>)
-  }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, docs</span>) </span>{
-    res.redirect(<span class="hljs-string">'/'</span>)
-  });
-});</code></pre></div><p>In order to add persistence using mongodb, nothing changes in the original model file, <a href="http://howtonode.org/express-mongodb/articleprovider-mongodb.js">so go ahead and use that</a>. You&#8217;ll need to have installed the package &#8216;mongodb&#8217; if you&#8217;d like to try out using it though and update your instantiation of the articleprovider class by supplying a port number to which mongo is installed.</p>
-<h1 id="adding-couchdb-persistence">Adding CouchDB Persistence</h1>
-<p>Here, I took my own angle on the tutorial and decided to give attempting to make my own persistence model using couchdb a go. It proved to be extremely easy, given the JSON representation and HTTP/GET method of access already built in to it.</p>
-<div class='hljs'><pre><code class='javascript'><span class="hljs-keyword">var</span> cradle = <span class="hljs-built_in">require</span>(<span class="hljs-string">'cradle'</span>);
-
-ArticleProvider = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">host, port</span>) </span>{
-  <span class="hljs-keyword">this</span>.connection= <span class="hljs-keyword">new</span> (cradle.Connection)(host, port, {
-    cache: <span class="hljs-literal">true</span>,
-    raw: <span class="hljs-literal">false</span>
-  });
-  <span class="hljs-keyword">this</span>.db = <span class="hljs-keyword">this</span>.connection.database(<span class="hljs-string">'articles'</span>);
-};
-
-ArticleProvider.prototype.findAll = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">callback</span>) </span>{
-    <span class="hljs-keyword">this</span>.db.view(<span class="hljs-string">'articles/all'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, result</span>) </span>{
-      <span class="hljs-keyword">if</span>( error ){
-        callback(error)
-      }<span class="hljs-keyword">else</span>{
-        <span class="hljs-keyword">var</span> docs = [];
-        result.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">row</span>)</span>{
-          docs.push(row);
-        });
-        callback(<span class="hljs-literal">null</span>, docs);
-      }
-    });
-};
-
-ArticleProvider.prototype.findById = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">id, callback</span>) </span>{
-    <span class="hljs-keyword">this</span>.db.get(id, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, result</span>) </span>{
-        <span class="hljs-keyword">if</span>( error ) callback(error)
-        <span class="hljs-keyword">else</span> callback(<span class="hljs-literal">null</span>, result)
-      });
-};
-
-ArticleProvider.prototype.save = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">articles, callback</span>) </span>{
-    <span class="hljs-keyword">if</span>( <span class="hljs-keyword">typeof</span>(articles.length)==<span class="hljs-string">"undefined"</span>)
-      articles = [articles];
-
-    <span class="hljs-keyword">for</span>( <span class="hljs-keyword">var</span> i =<span class="hljs-number">0</span>;i&lt; articles.length;i++ ) {
-      article = articles[i];
-      article.created_at = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
-      <span class="hljs-keyword">if</span>( article.comments === <span class="hljs-literal">undefined</span> ) article.comments = [];
-      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j =<span class="hljs-number">0</span>;j&lt; article.comments.length; j++) {
-        article.comments[j].created_at = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
-      }
-    }
-
-    <span class="hljs-keyword">this</span>.db.save(articles, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, result</span>) </span>{
-      <span class="hljs-keyword">if</span>( error ) callback(error)
-      <span class="hljs-keyword">else</span> callback(<span class="hljs-literal">null</span>, articles);
-    });
-};
-
-exports.ArticleProvider = ArticleProvider;</code></pre></div><p>I added the following view and route to my app.js too, to allow support for clicking upon articles.</p>
-<div class='hljs'><pre><code class='jade'>div.article
-  h1= article.title
-  div.created_at= article.created_at
-  div.body= article.body</code></pre></div><div class='hljs'><pre><code class='javascript'>app.get(<span class="hljs-string">'/blog/view/:id'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
-   articleProvider.findById(req.params.id,
-     <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, doc</span>)</span>{
-       res.render(<span class="hljs-string">'blog_view'</span>, {
-       locals: {
-         title: <span class="hljs-string">'New Post'</span>,
-         article: doc
-       }
-     });
-  });
-});</code></pre></div><p>And in order to support it, the main view now becomes as follows:</p>
-<div class='hljs'><pre><code class='jade'>h1= title
-#articles
-  - each article in articles
-    div.article
-      div.created_at= article.created_at
-      - var articlelink = 'blog/view/' + article._id;
-      a(href=articlelink)
-        div.title= article.title
-      div.body= article.body
-
-  a(href='blog/new')
-    Add new post</code></pre></div><p>Anyway, so far I&#8217;ve not yet added comment support, but given the headway I made here, I&#8217;d imagine it would be extremely easy to integrate into my couchdb article model. I&#8217;ll update here if I ever get round to adding it!</p>
-
-
-          <div class="entry_content">Tagged
-              
-                
-                <a href="/tag/couchdb">couchdb</a>,
-                
-                <a href="/tag/expressjs">expressjs</a>,
-                
-                <a href="/tag/mongdb">mongdb</a>,
-                
-                <a href="/tag/node">node</a>,
-                
-                <a href="/tag/nodejs">nodejs</a>,
-                
-              
-              | <a href="2011/02/07/blog-rolling-with-couchdb-express-and-node-js/#disqus_thread">Leave a comment</a>
-          </div>
-        </div>
       
-
-      <div class="pagination">
-          
-          <span class="page_number ">Page: 1 of 1</span>
-
-          
+      
+      <div class="author-image">
+        <a href="http://www.ianwootten.co.uk/"><img src="http://www.ianwootten.co.uk//images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center"></a>
       </div>
-    <footer>
-      <div class="footer-about">
-        I'm a Web Developer  working at <a href="http://niftydigits.com">Nifty Digits</a> in Cardiff, UK. Here, I enjoy talking code - mostly Python/Javascript. I'm <a href="http://twitter.com/iwootten">@iwootten</a> on twitter.
+      
+      <p class="site__description">
+         Web Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/contact/">
+						<span>Contact</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/ianwootten" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
       </div>
-    </footer>
+    </div>
+    <p class="copyright">
+      &copy;2003-2018 Ian Wootten
+    </p>
   </div>
-<script type="text/javascript">
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'ianwootten'; // required: replace example with your forum shortname
+  <div>
+  </div>
+</div>
 
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
+        <div class="content container">
+            
+    <span class="section__title">2011/02</span>
+<ul class="posts">
+    
+        
+<li>
+  <span class="list__title--small">
+    <a href="/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/">Blog rolling with CouchDB, Express and Node.js</a>
+      
+      <time class="pull-right hidden-tablet">Feb 07 &#39;11</time>
+      
+  </span>
+</li>
+
+    
+</ul>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-263865-2', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-</body>
-</html>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2006/10 on Ian Wootten</title>
+    <link>http://www.ianwootten.co.uk/2006/10/</link>
+    <description>Recent content in 2006/10 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Oct 2006 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.ianwootten.co.uk/2006/10/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Halloween</title>
+      <link>http://www.ianwootten.co.uk/2006/10/31/halloween/</link>
+      <pubDate>Tue, 31 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/10/31/halloween/</guid>
+      <description>Does anyone else get the distinct impression that halloween is reserved for lamers? I mean, correct me if I&amp;#8217;m wrong, it stems from a pagan festival celebrating a time at which spirits can make contact with the physical world. Is that something people really want to be celebrating?
+I assume that the majority of the world goes along with the fact its just a bit of fun, a time at which kids get dressed up and collect sweets door-to-door, punishing those who don&amp;#8217;t pay up with a bombing of baking compnents and parents play the niave fools.</description>
+    </item>
+    
+    <item>
+      <title>Nobody Tells Me Anything</title>
+      <link>http://www.ianwootten.co.uk/2006/10/29/nobody-tells-me-anything/</link>
+      <pubDate>Sun, 29 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/10/29/nobody-tells-me-anything/</guid>
+      <description>Somebody should really remind me the evening before the clocks go back. I got up at 7.30 today and could have done with that extra hours lie-in. Oh well!</description>
+    </item>
+    
+    <item>
+      <title>Firefox 2.0 is Out!</title>
+      <link>http://www.ianwootten.co.uk/2006/10/23/firefox-2.0-is-out/</link>
+      <pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/10/23/firefox-2.0-is-out/</guid>
+      <description>Firefox 2.0 is out! Wikked wikked bwaaad bwoy!Get your ass over to mozilla.org while its still hot.</description>
+    </item>
+    
+    <item>
+      <title>God is a DJ</title>
+      <link>http://www.ianwootten.co.uk/2006/10/17/god-is-a-dj/</link>
+      <pubDate>Tue, 17 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/10/17/god-is-a-dj/</guid>
+      <description>This short vid is quite clever:</description>
+    </item>
+    
+    <item>
+      <title>Bash bash</title>
+      <link>http://www.ianwootten.co.uk/2006/10/16/bash-bash/</link>
+      <pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/10/16/bash-bash/</guid>
+      <description>I was quite impressed with myself the other day that I&amp;#8217;d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
+I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that.</description>
+    </item>
+    
+    <item>
+      <title>Ow! My arse!</title>
+      <link>http://www.ianwootten.co.uk/2006/10/13/ow-my-arse/</link>
+      <pubDate>Fri, 13 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ianwootten.co.uk/2006/10/13/ow-my-arse/</guid>
+      <description>For the 3rd time I can remember ever I came off my bike this morning. I took a corner too sharply and ended up sliding across the road. So I am currently sitting here with gravel ridden hands and a really sore arse. I thought to go and check my arse when I finally arrived at uni and decided that it might be an idea to find something to stop the injury oozing all over my underwear.</description>
+    </item>
+    
+  </channel>
+</rss>
