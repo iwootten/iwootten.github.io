@@ -6,10 +6,20 @@
     <description>Recent content on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What’s in a name?</title>
+      <link>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</guid>
+      <description>I usually get one of two looks when I announce the name of my company - Nifty Digits. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
+When I picked the name, I was still a PhD student at University and wanted something that “sounded technical (digits), but also sort of British (nifty)”. I also was heavily influenced number of web design bloggers at the time, particularly Dan Cedarholm’s blog “Simple Bits”.</description>
+    </item>
     
     <item>
       <title>Blogging with Hugo</title>
