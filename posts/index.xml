@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.ianwootten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Web Development Stack in 2018</title>
+      <link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</guid>
+      <description>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
+I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.</description>
+    </item>
     
     <item>
       <title>What’s in a name?</title>
