@@ -1438,6 +1438,12 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2003/</loc>
     <lastmod>2003-12-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -2424,6 +2430,12 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/tags/domains/</loc>
     <lastmod>2012-01-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -3031,7 +3043,7 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/tags/python/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3187,7 +3199,7 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
