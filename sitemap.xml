@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2018/12/06/purpose/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/</loc>
     <lastmod>2018-11-21T00:00:00+00:00</lastmod>
   </url>
@@ -2104,7 +2109,7 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/2018/</loc>
-    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2117,6 +2122,12 @@
   <url>
     <loc>https://www.ianwootten.co.uk/2018/11/</loc>
     <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2018/12/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2240,7 +2251,7 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/categories/business/</loc>
-    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -2658,7 +2669,7 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3012,7 +3023,7 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
