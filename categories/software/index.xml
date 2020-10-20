@@ -6,7 +6,16 @@
     <description>Recent content in Software on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Oct 2020 10:04:11 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publishing a Package to PyPI with Poetry</title>
+      <link>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</link>
+      <pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</guid>
+      <description>I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</description>
+    </item>
+    
     <item>
       <title>My Web Development Stack in 2018</title>
       <link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link>
