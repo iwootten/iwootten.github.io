@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,13 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "Bash bash",
     "headline" : "Bash bash",
-    "description" : "I was quite impressed with myself the other day that I&#8217;d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
-I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that.",
+    "description" : "I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.\nI found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -38,9 +37,9 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2006",
-    "datePublished": "2006-10-16 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2006-10-16 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2006/10/16/bash-bash/",
+    "datePublished": "2006-10-16 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2006-10-16 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2006\/10\/16\/bash-bash\/",
     "wordCount" : "167",
     "keywords" : [ "linux","Blog" ]
 }
@@ -49,15 +48,16 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bash bash"/>
-<meta name="twitter:description" content="I was quite impressed with myself the other day that I&#8217;d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
+<meta name="twitter:description" content="I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
 I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that."/>
 
 <meta property="og:title" content="Bash bash" />
-<meta property="og:description" content="I was quite impressed with myself the other day that I&#8217;d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
+<meta property="og:description" content="I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
 I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2006/10/16/bash-bash/" /><meta property="article:published_time" content="2006-10-16T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2006-10-16T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2006/10/16/bash-bash/" />
+<meta property="article:published_time" content="2006-10-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2006-10-16T00:00:00+00:00" />
 
 
     
@@ -96,7 +96,7 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -154,7 +154,7 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -206,17 +206,19 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
   
   
   <div class="post">
-    <p>I was quite impressed with myself the other day that I&#8217;d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.</p>
-
+    <p>I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.</p>
 <p>I found a program called <a href="http://fileschanged.sourceforge.net">fileschanged</a>, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that. What it did allow me to do however was pass the filename as an argument (along with some other parameter) to another program. I duely spent an hour or so trying to figure out a script to take that filename and report back its filesize and the current time (which I assume is close enough to that which the file was changed). This is what it looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#75715e">#!/bin/bash</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
     exit
 <span style="color:#66d9ef">fi</span>
 FN<span style="color:#f92672">=</span>$2
 DATE<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%s<span style="color:#66d9ef">)</span>
 FILESIZE<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>stat -c%s <span style="color:#e6db74">&#34;</span>$FN<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>
-echo <span style="color:#e6db74">&#34;</span>$DATE<span style="color:#e6db74">,</span>$FN<span style="color:#e6db74">,</span>$FILESIZE<span style="color:#e6db74">&#34;</span></code></pre></div>
+echo <span style="color:#e6db74">&#34;</span>$DATE<span style="color:#e6db74">,</span>$FN<span style="color:#e6db74">,</span>$FILESIZE<span style="color:#e6db74">&#34;</span>
+
+</code></pre></div>
   </div>
   
 

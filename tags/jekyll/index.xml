@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jekyll on Ian Wootten</title>
+    <title>jekyll on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/jekyll/</link>
-    <description>Recent content in Jekyll on Ian Wootten</description>
+    <description>Recent content in jekyll on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Porting a Wordpress blog to Jekyll: Part 2</title>
       <link>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</link>
@@ -47,7 +43,7 @@ What finally convinced me with the release of jekyll 2 was the introduction of n
       <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</guid>
-      <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&amp;#8217;t need all the bells and whistles on our blog I&amp;#8217;m sure you&amp;#8217;ll agree.</description>
+      <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</description>
     </item>
     
   </channel>

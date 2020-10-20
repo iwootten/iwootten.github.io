@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software on Ian Wootten</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Software on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/categories/software/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Web Development Stack in 2018</title>
       <link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link>
@@ -46,10 +42,8 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
       
       <guid>https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/</guid>
       <description>Recently, Andy Davies asked the following question on twitter:
-Any ideas on how I can easily convert a video to a filmstrip?
-&amp;mdash; Andy Davies (@AndyDavies) July 23, 2014 
 I found this pretty interesting, especially given I&amp;rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
-After a bit of digging last night, I discovered it&amp;rsquo;s actually possible to extract images based on changes in the video.</description>
+After a bit of digging last night, I discovered it&amp;rsquo;s actually possible to extract images based on changes in the video. We can use this to extract a rough approximation to individual shots.</description>
     </item>
     
   </channel>

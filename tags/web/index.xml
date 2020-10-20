@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Ian Wootten</title>
@@ -6,19 +6,15 @@
     <description>Recent content in Web on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Aug 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 14 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Decade on the World Wide Web</title>
       <link>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</link>
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</guid>
-      <description>10 years ago today, I started this blog. That&amp;#8217;s just under a 3rd of my life. In other words, that&amp;#8217;s quite a long time ago.
-I started out using Movable type and very quickly (3 days later) ditched it in favour of the b2 &amp;#8220;weblog tool&amp;#8221;, which WordPress was later spawned from.
+      <description>10 years ago today, I started this blog. That’s just under a 3rd of my life. In other words, that’s quite a long time ago.
+I started out using Movable type and very quickly (3 days later) ditched it in favour of the b2 “weblog tool”, which WordPress was later spawned from.
 Back then, I blogged frequently about what was going on in my life, which tended to centre around University coursework rather than technical posts.</description>
     </item>
     
@@ -38,7 +34,7 @@ These type of events are stuffed to the brim with amazing, intelligent web profe
       <pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2009/02/15/how-has-web-use-changed-your-life/</guid>
-      <description>I&amp;#8217;ve been pondering this morning how the use of the internet has (or may have) changed my life. As a child/teen during the web&amp;#8217;s infancy, I was blissfully unaware that so many lifes/careers/relationships would be enabled or changed as a result of the interactions it might facilitate. I hadn&amp;#8217;t even heard of google prior to arriving at university and two years prior to that had never had internet access anywhere locally.</description>
+      <description>I’ve been pondering this morning how the use of the internet has (or may have) changed my life. As a child/teen during the web’s infancy, I was blissfully unaware that so many lifes/careers/relationships would be enabled or changed as a result of the interactions it might facilitate. I hadn’t even heard of google prior to arriving at university and two years prior to that had never had internet access anywhere locally.</description>
     </item>
     
     <item>
@@ -47,7 +43,7 @@ These type of events are stuffed to the brim with amazing, intelligent web profe
       <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2008/05/31/cardiff-web-meetup-#3/</guid>
-      <description>Just a quick note to remind people that this coming week is the third Cardiff meetup for web types in wales. It&amp;#8217;s in 10 Feet Tall on Church St on Wednesday 4th June from 6.30pm. Featured speakers include Matthew Cashmore (Development Producer for BBC Future Media &amp;#038; Technology, Research and Innovation) and Tim Holmes (Course co-ordinator for the Postgraduate Diploma in Magazine Journalism and the MA International Journalism: Magazine Pathway at Cardiff University&amp;#8217;s School of Journalism, Media and Cultural Studies).</description>
+      <description>Just a quick note to remind people that this coming week is the third Cardiff meetup for web types in wales. It’s in 10 Feet Tall on Church St on Wednesday 4th June from 6.30pm. Featured speakers include Matthew Cashmore (Development Producer for BBC Future Media � Technology, Research and Innovation) and Tim Holmes (Course co-ordinator for the Postgraduate Diploma in Magazine Journalism and the MA International Journalism: Magazine Pathway at Cardiff University’s School of Journalism, Media and Cultural Studies).</description>
     </item>
     
   </channel>

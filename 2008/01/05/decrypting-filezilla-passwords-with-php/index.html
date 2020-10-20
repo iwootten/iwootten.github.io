@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,12 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "Decrypting Filezilla Passwords with PHP",
     "headline" : "Decrypting Filezilla Passwords with PHP",
-    "description" : "One of the most frustrating things I find in managing a number of websites is that I&#8217;m always forgetting passwords. The version of Filezilla I&#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&#8217;ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.",
+    "description" : "One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -37,9 +37,9 @@
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2008",
-    "datePublished": "2008-01-05 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2008-01-05 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/",
+    "datePublished": "2008-01-05 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2008-01-05 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2008\/01\/05\/decrypting-filezilla-passwords-with-php\/",
     "wordCount" : "283",
     "keywords" : [ "decryption","filezilla","PHP","Blog" ]
 }
@@ -48,13 +48,14 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Decrypting Filezilla Passwords with PHP"/>
-<meta name="twitter:description" content="One of the most frustrating things I find in managing a number of websites is that I&#8217;m always forgetting passwords. The version of Filezilla I&#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&#8217;ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script."/>
+<meta name="twitter:description" content="One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script."/>
 
 <meta property="og:title" content="Decrypting Filezilla Passwords with PHP" />
-<meta property="og:description" content="One of the most frustrating things I find in managing a number of websites is that I&#8217;m always forgetting passwords. The version of Filezilla I&#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&#8217;ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script." />
+<meta property="og:description" content="One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/" /><meta property="article:published_time" content="2008-01-05T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2008-01-05T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/" />
+<meta property="article:published_time" content="2008-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2008-01-05T00:00:00+00:00" />
 
 
     
@@ -93,7 +94,7 @@
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -151,7 +152,7 @@
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -209,64 +210,64 @@
   
   
   <div class="post">
-    <p>One of the most frustrating things I find in managing a number of websites is that I&#8217;m always forgetting passwords. The version of Filezilla I&#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&#8217;ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I&#8217;ve added some comments to roughly describe what is going on.</p>
+    <p>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the <a href="http://www.devpro.it/filezilla_pr/">Filezilla Password Recover</a>, but it turns out that this is also extremely easy to extract them using a simple PHP script. The following code makes use of the nice XML parsing in PHP5 and a decryption function I found over <a href="http://www.thinksheep.nl/php-filezilla-passwords-ophalen">here</a>. I’ve added some comments to roughly describe what is going on.</p>
+<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that’ll make my job easier now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$filezilla_password_file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;FileZilla.xml&#34;</span>;
 
-<p>Note: Apparently this encryption has been dropped from version 3 with absolutely no encryption featured at all, that&#8217;ll make my job easier now.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$filezilla_password_file = &#34;FileZilla.xml&#34;;
+$xml <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($filezilla_password_file);
 
-$xml = file_get_contents($filezilla_password_file);
+$simple_xml <span style="color:#f92672">=</span> <span style="color:#a6e22e">simplexml_load_string</span>($xml);
 
-$simple_xml = simplexml_load_string($xml);
-
-foreach($simple_xml-&gt;Sites-&gt;Site as $site)
+<span style="color:#66d9ef">foreach</span>($simple_xml<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Sites</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Site</span> <span style="color:#66d9ef">as</span> $site)
 {
-	$attributes =  $site-&gt;attributes();
+	$attributes <span style="color:#f92672">=</span>  $site<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">attributes</span>();
 
-	print &#34;Site: &#34;.$attributes-&gt;Name.&#34;\n&#34;;
-	print &#34;User: &#34;.$attributes-&gt;User.&#34;\n&#34;;
-	print &#34;Encrypted Pass: &#34;.$attributes-&gt;Pass.&#34;\n&#34;;
-	print &#34;Unencrypted Pass:&#34;.decryptPass((string)$attributes-&gt;Pass).&#34;\n\n&#34;;
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;Site: &#34;</span><span style="color:#f92672">.</span>$attributes<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Name</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;User: &#34;</span><span style="color:#f92672">.</span>$attributes<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">User</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;Encrypted Pass: &#34;</span><span style="color:#f92672">.</span>$attributes<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Pass</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;Unencrypted Pass:&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">decryptPass</span>((<span style="color:#a6e22e">string</span>)$attributes<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Pass</span>)<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span>;
 }
 
-function decryptPass($pass)
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decryptPass</span>($pass)
 {
-        // Encryption Key for FileZilla 2 Passwords
-	$key = &#34;FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;;
+        <span style="color:#75715e">// Encryption Key for FileZilla 2 Passwords
+</span><span style="color:#75715e"></span>	$key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;FILEZILLA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>;
 
-	// Find the offset position in the key for this pass
-	$pos=(strlen($pass)/3) % strlen($key);
-	$decrypt = &#39;&#39;;
+	<span style="color:#75715e">// Find the offset position in the key for this pass
+</span><span style="color:#75715e"></span>	$pos<span style="color:#f92672">=</span>(<span style="color:#a6e22e">strlen</span>($pass)<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">strlen</span>($key);
+	$decrypt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
 
-	$t=0;
+	$t<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
 
-	//Loop through each 3rd of the password
-	for($i=0;$i &amp;lt; strlen($pass) / 3;$i++) {
+	<span style="color:#75715e">//Loop through each 3rd of the password
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span>($i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;$i <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">lt</span>; <span style="color:#a6e22e">strlen</span>($pass) <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span>;$i<span style="color:#f92672">++</span>) {
 
-        //Get 3 characters, remove the 0 at the
-	//front to get ASCII code to represent the character
-	$num = substr($pass,$i * 3,3);
+        <span style="color:#75715e">//Get 3 characters, remove the 0 at the
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//front to get ASCII code to represent the character
+</span><span style="color:#75715e"></span>	$num <span style="color:#f92672">=</span> <span style="color:#a6e22e">substr</span>($pass,$i <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>);
 
-	if (substr($num,0,1) == 0) {
-		$num = substr($num,1,2);
+	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">substr</span>($num,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+		$num <span style="color:#f92672">=</span> <span style="color:#a6e22e">substr</span>($num,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
 	}
 
-	//Get the ascii code of the unencrypted character
-	//by performing XOR against current ASCII and key
-	//before converting back and adding to decrypted pass
-		$t = $num ^ ord($key[($i + $pos) % strlen($pass)]);
-		 $decrypt .= chr($t);
+	<span style="color:#75715e">//Get the ascii code of the unencrypted character
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//by performing XOR against current ASCII and key
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//before converting back and adding to decrypted pass
+</span><span style="color:#75715e"></span>		$t <span style="color:#f92672">=</span> $num <span style="color:#f92672">^</span> <span style="color:#a6e22e">ord</span>($key[($i <span style="color:#f92672">+</span> $pos) <span style="color:#f92672">%</span> <span style="color:#a6e22e">strlen</span>($pass)]);
+		 $decrypt <span style="color:#f92672">.=</span> <span style="color:#a6e22e">chr</span>($t);
 
 	}
 
-	// Return the decrypted pass
-       return $decrypt;
-}</code></pre></div>
+	<span style="color:#75715e">// Return the decrypted pass
+</span><span style="color:#75715e"></span>       <span style="color:#66d9ef">return</span> $decrypt;
+}
+</code></pre></div>
   </div>
   
 
 <div class="navigation navigation-single">
     
-    <a href="https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns---youll-be-rewarded/" class="navigation-prev">
+    <a href="https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns-youll-be-rewarded/" class="navigation-prev">
       <i aria-hidden="true" class="fa fa-chevron-left"></i>
       <span class="navigation-tittle">Stick to your guns - You&#39;ll be rewarded</span>
     </a>

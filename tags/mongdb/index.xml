@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mongdb on Ian Wootten</title>
+    <title>mongdb on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/mongdb/</link>
-    <description>Recent content in Mongdb on Ian Wootten</description>
+    <description>Recent content in mongdb on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Feb 2011 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/mongdb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 07 Feb 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/mongdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog rolling with CouchDB, Express and Node.js</title>
       <link>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</link>
       <pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</guid>
-      <description>Over the last little while, I&amp;#8217;ve been doing a lot of playing with Node.js, mostly to run data collection scripts. Last week, I started following Ciaran Jessup&amp;#8217;s tutorial on getting started with node.js, Express and mongoDB. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar server side language. I hit a few problems along the way in the tutorial, so I thought I&amp;#8217;ve list a few of my findings here.</description>
+      <description>Over the last little while, I’ve been doing a lot of playing with Node.js, mostly to run data collection scripts. Last week, I started following Ciaran Jessup’s tutorial on getting started with node.js, Express and mongoDB. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar server side language. I hit a few problems along the way in the tutorial, so I thought I’ve list a few of my findings here.</description>
     </item>
     
   </channel>

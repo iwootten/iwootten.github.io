@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,13 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "Porting a Wordpress blog to Jekyll: Part 2",
     "headline" : "Porting a Wordpress blog to Jekyll: Part 2",
-    "description" : "In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
-Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.",
+    "description" : "In the second of my posts in porting a wordpress blog over to jekyll, I outline how I\u0026rsquo;ve replicated wordpress\u0026rsquo;s default permalink structure on my own blog.\nCreating Category and Tag Pages Jekyll doesn\u0026rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you\u0026rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category\/tag generator, with my plugins\/generate_cats_and_tags.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -38,9 +37,9 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2014",
-    "datePublished": "2014-06-02 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2014-06-02 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/",
+    "datePublished": "2014-06-02 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2014-06-02 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2014\/06\/02\/porting-a-wordpress-blog-to-jekyll-part-2\/",
     "wordCount" : "626",
     "keywords" : [ "jekyll","static sites","wordpress","Blog" ]
 }
@@ -56,8 +55,9 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
 <meta property="og:description" content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
 Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/" /><meta property="article:published_time" content="2014-06-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-06-02T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/" />
+<meta property="article:published_time" content="2014-06-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-06-02T00:00:00+00:00" />
 
 
     
@@ -96,7 +96,7 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -154,7 +154,7 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -212,12 +212,8 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
   
   
   <div class="post">
-    
-
-<p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.</p>
-
+    <p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.</p>
 <h2 id="creating-category-and-tag-pages">Creating Category and Tag Pages</h2>
-
 <p>Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial <a href="http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/">here</a> as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.rb source below:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Jekyll
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CatsAndTags</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Generator</span>
@@ -290,9 +286,8 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
             self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;posts&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> posts<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">..</span><span style="color:#ae81ff">9</span><span style="color:#f92672">]</span>
         <span style="color:#66d9ef">end</span>
     <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span></code></pre></div>
-<p>I chose to pass in an extra parameter to the Pager, defining the &ldquo;base_path&rdquo; for which an index page has been generated. This enables absolute links to pages and prevents situations like /category/javascript/category/javascript/page/1, which occur when relative pagination is generated when on a category page.</p>
-
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>I chose to pass in an extra parameter to the Pager, defining the &ldquo;base_path&rdquo; for which an index page has been generated. This enables absolute links to pages and prevents situations like /category/javascript/category/javascript/page/1, which occur when relative pagination is generated when on a category page.</p>
 <p>A view making use of it would look like the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
         {% if paginator.previous_page %}
@@ -306,11 +301,9 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
         {% else %}
           &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;next &#34;</span>&gt;Next&lt;/<span style="color:#f92672">span</span>&gt;
         {% endif %}
-&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
-<h2 id="creating-archive-pages">Creating Archive Pages</h2>
-
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h2 id="creating-archive-pages">Creating Archive Pages</h2>
 <p>In a similar fashion, Jekyll doesn&rsquo;t create pages or pagination for previous years or months. Even if they are not oft used by others, I find it useful myself to hit up my archives for <a href="https://www.ianwootten.co.uk/2004">previous years</a> on occasion and <a href="https://www.ianwootten.co.uk/2004/05/06/chicken-breasts/">laugh at the random work I did for my undergraduate</a>.</p>
-
 <p>I created the following plugin to generate indexes at /{year} /{year}/{month} and /{year}/page/{pageNo} and /{year}/{month}/page/{pageNo} if necessary.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Jekyll
 
@@ -320,8 +313,8 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
       <span style="color:#66d9ef">if</span> site<span style="color:#f92672">.</span>layouts<span style="color:#f92672">.</span>key? <span style="color:#e6db74">&#39;archive_index&#39;</span>
         site<span style="color:#f92672">.</span>posts<span style="color:#f92672">.</span>group_by{ <span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> {<span style="color:#e6db74">&#34;month&#34;</span> <span style="color:#f92672">=&gt;</span> c<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>month, <span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#f92672">=&gt;</span> c<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>year} }<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>period, posts<span style="color:#f92672">|</span>
           posts <span style="color:#f92672">=</span> posts<span style="color:#f92672">.</span>sort_by { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> <span style="color:#f92672">-</span>p<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>to_f }
-          archive_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(period<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">].</span>to_s(), <span style="color:#e6db74">&#34;%02d&#34;</span> <span style="color:#e6db74">% period[&#34;month&#34;].to_s())
-</span><span style="color:#e6db74"> </span>          paginate(site, archive_dir, posts)
+          archive_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(period<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">].</span>to_s(), <span style="color:#e6db74">&#34;%02d&#34;</span> <span style="color:#f92672">%</span> period<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">].</span>to_s())
+          paginate(site, archive_dir, posts)
         <span style="color:#66d9ef">end</span>
         site<span style="color:#f92672">.</span>posts<span style="color:#f92672">.</span>group_by{ <span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> {<span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#f92672">=&gt;</span> c<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>year} }<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>period, posts<span style="color:#f92672">|</span>
           posts <span style="color:#f92672">=</span> posts<span style="color:#f92672">.</span>sort_by { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> <span style="color:#f92672">-</span>p<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>to_f }
@@ -360,9 +353,8 @@ Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag inde
       self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;base&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> base_path
     <span style="color:#66d9ef">end</span>
   <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span></code></pre></div>
-<p>The layout of the paginator for the archives is the same as that for categories and tags.</p>
-
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>The layout of the paginator for the archives is the same as that for categories and tags.</p>
 <p>That&rsquo;s it for my jekyll roundup, I other long time wordpress users find this information useful.</p>
 
   </div>

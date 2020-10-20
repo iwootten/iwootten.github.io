@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,12 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "Hosting an Octopress Blog on Amazon S3",
     "headline" : "Hosting an Octopress Blog on Amazon S3",
-    "description" : "Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&#8217;t need all the bells and whistles on our blog I&#8217;m sure you&#8217;ll agree.",
+    "description" : "Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -37,9 +37,9 @@
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2011",
-    "datePublished": "2011-09-09 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2011-09-09 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/",
+    "datePublished": "2011-09-09 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2011-09-09 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2011\/09\/09\/hosting-an-octopress-blog-on-amazon-s3\/",
     "wordCount" : "694",
     "keywords" : [ "amazon","blog","blogging","godaddy","jekyll","octopress","s3","Blog" ]
 }
@@ -48,13 +48,14 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hosting an Octopress Blog on Amazon S3"/>
-<meta name="twitter:description" content="Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&#8217;t need all the bells and whistles on our blog I&#8217;m sure you&#8217;ll agree."/>
+<meta name="twitter:description" content="Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree."/>
 
 <meta property="og:title" content="Hosting an Octopress Blog on Amazon S3" />
-<meta property="og:description" content="Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&#8217;t need all the bells and whistles on our blog I&#8217;m sure you&#8217;ll agree." />
+<meta property="og:description" content="Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/" /><meta property="article:published_time" content="2011-09-09T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2011-09-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/" />
+<meta property="article:published_time" content="2011-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2011-09-09T00:00:00+00:00" />
 
 
     
@@ -93,7 +94,7 @@
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -151,7 +152,7 @@
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -221,53 +222,21 @@
   
   
   <div class="post">
-    
-
-<p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&#8217;t need all the bells and whistles on our blog I&#8217;m sure you&#8217;ll agree.</p>
-
-<p>Using Octopress, you&#8217;d typically write your posts in markdown and process them locally. You&#8217;d then have a number of HTML pages to upload to your web server, which would appear no different than any other blog in terms of functionality.</p>
-
-<p>The most interesting thing that coincincides with the creation of jekyll is that it is now possible to serve static websites straight from Amazon S3, meaning that it isn&#8217;t neccessary to have a web server to serve a Octopress blog. I&#8217;ve been playing a little and have been able to serve my own octopress blog which you can see over at <a href="http://www.ianwootten.com">www.ianwootten.com</a>. Here&#8217;s how to do it:</p>
-
+    <p><a href="http://octopress.org">Octopress</a> is a framework for blogging based on the static site generator <a href="https://github.com/mojombo/jekyll">jekyll</a>. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</p>
+<p>Using Octopress, you’d typically write your posts in markdown and process them locally. You’d then have a number of HTML pages to upload to your web server, which would appear no different than any other blog in terms of functionality.</p>
+<p>The most interesting thing that coincincides with the creation of jekyll is that it is now possible to serve static websites straight from Amazon S3, meaning that it isn’t neccessary to have a web server to serve a Octopress blog. I’ve been playing a little and have been able to serve my own octopress blog which you can see over at <a href="http://www.ianwootten.com">www.ianwootten.com</a>. Here’s how to do it:</p>
 <h2 id="configure-an-s3-bucket-to-act-as-a-website">Configure an S3 Bucket to Act as a Website</h2>
-
-<p>NB: If you want to use your own domain, then you&#8217;re going to need to create an S3 bucket from the AWS Console named the same as your domain (so for me I created a bucket called &#8220;www.ianwootten.com&#8221;.</p>
-
-<p>To configure your bucket as a website, from the AWS Console, select the new bucket and click &#8220;Properties&#8221;. Choose the &#8220;Website&#8221; tab from the box that appears and check &#8220;enabled&#8221; and set the Index document as &#8220;index.html&#8221;. Click &#8220;Save&#8221;. Now move to the &#8220;permissions&#8221; tab and click &#8220;Add bucket policy&#8221;. Enter a policy as below, with &#8220;www.ianwootten.com&#8221; replaced with the name of the bucket you&#8217;re using.</p>
-
-<p><code>&lt;br /&gt;
-{&lt;br /&gt;
-    &quot;Version&quot;: &quot;2008-10-17&quot;,&lt;br /&gt;
-    &quot;Id&quot;: &quot;&quot;,&lt;br /&gt;
-    &quot;Statement&quot;: [&lt;br /&gt;
-        {&lt;br /&gt;
-            &quot;Sid&quot;: &quot;PublicReadForGetBucketObjects&quot;,&lt;br /&gt;
-            &quot;Effect&quot;: &quot;Allow&quot;,&lt;br /&gt;
-            &quot;Principal&quot;: {&lt;br /&gt;
-                &quot;AWS&quot;: &quot;*&quot;&lt;br /&gt;
-            },&lt;br /&gt;
-            &quot;Action&quot;: &quot;s3:GetObject&quot;,&lt;br /&gt;
-            &quot;Resource&quot;: &quot;arn:aws:s3:::www.ianwootten.com/*&quot;&lt;br /&gt;
-        }&lt;br /&gt;
-    ]&lt;br /&gt;
-}&lt;br /&gt;
-</code></p>
-
-<p>If you&#8217;ve opted not to use your own domain, then that&#8217;s it for S3. Your new bucket website will be available at a combination of the bucket name and the S3 storage location. In my case, this is <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/">http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/</a>. There&#8217;s a list of endpoints on the &#8220;website endpoints&#8221; page in <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a>.</p>
-
+<p>NB: If you want to use your own domain, then you’re going to need to create an S3 bucket from the AWS Console named the same as your domain (so for me I created a bucket called “www.ianwootten.com”.</p>
+<p>To configure your bucket as a website, from the AWS Console, select the new bucket and click “Properties”. Choose the “Website” tab from the box that appears and check “enabled” and set the Index document as “index.html”. Click “Save”. Now move to the “permissions” tab and click “Add bucket policy”. Enter a policy as below, with “www.ianwootten.com” replaced with the name of the bucket you’re using.</p>
+<p><code>&lt;br /&gt; {&lt;br /&gt; &quot;Version&quot;: &quot;2008-10-17&quot;,&lt;br /&gt; &quot;Id&quot;: &quot;&quot;,&lt;br /&gt; &quot;Statement&quot;: [&lt;br /&gt; {&lt;br /&gt; &quot;Sid&quot;: &quot;PublicReadForGetBucketObjects&quot;,&lt;br /&gt; &quot;Effect&quot;: &quot;Allow&quot;,&lt;br /&gt; &quot;Principal&quot;: {&lt;br /&gt; &quot;AWS&quot;: &quot;*&quot;&lt;br /&gt; },&lt;br /&gt; &quot;Action&quot;: &quot;s3:GetObject&quot;,&lt;br /&gt; &quot;Resource&quot;: &quot;arn:aws:s3:::www.ianwootten.com/*&quot;&lt;br /&gt; }&lt;br /&gt; ]&lt;br /&gt; }&lt;br /&gt;</code></p>
+<p>If you’ve opted not to use your own domain, then that’s it for S3. Your new bucket website will be available at a combination of the bucket name and the S3 storage location. In my case, this is <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/">http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com/</a>. There’s a list of endpoints on the “website endpoints” page in <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a>.</p>
 <h2 id="configure-dns">Configure DNS</h2>
-
-<p>If you&#8217;re wanting to use your own domain, then you&#8217;ll need to visit your domain registraar and edit some DNS entries. In my case, I added a CNAME entry &#8220;www&#8221; pointing to www.ianwootten.com.s3-website-us-east-1.amazonaws.com. You&#8217;ll need to use a tool like <a href="http://wwwizer.com">wwwizer</a> in order to forward from the root of your domain to the www subdomain. e.g. &#8220;ianwootten.com&#8221; to &#8220;www.ianwootten.com&#8221;. To get that working, you&#8217;ll also need to modify the @ A record and point it to 174.129.25.170. Read this <a href="http://serverfault.com/questions/62527/how-to-create-a-cname-for-a-domains-root-name">serverfault post</a> if you&#8217;re interested to know why.</p>
-
+<p>If you’re wanting to use your own domain, then you’ll need to visit your domain registraar and edit some DNS entries. In my case, I added a CNAME entry “www” pointing to <a href="http://www.ianwootten.com.s3-website-us-east-1.amazonaws.com">www.ianwootten.com.s3-website-us-east-1.amazonaws.com</a>. You’ll need to use a tool like <a href="http://wwwizer.com">wwwizer</a> in order to forward from the root of your domain to the www subdomain. e.g. “ianwootten.com” to “www.ianwootten.com”. To get that working, you’ll also need to modify the @ A record and point it to 174.129.25.170. Read this <a href="http://serverfault.com/questions/62527/how-to-create-a-cname-for-a-domains-root-name">serverfault post</a> if you’re interested to know why.</p>
 <p>For more info on CNAME configuration and S3 see <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/index.html?WebsiteHosting.html">Amazons S3 website docs</a> (Specifically the notes on virtual hosting).</p>
-
 <h2 id="download-octopress-and-write-some-markdown">Download Octopress and write some Markdown</h2>
-
-<p>Having successfully configured Amazon S3 to host your blog, you need to tackle the age old problem of writing some content for it. This was particularly hard for me, given my lack of knowledge about markdown! You may like to take a look at <a href="http://daringfireball.net/projects/markdown/basics">John Grubers explanation of markdown</a> if you&#8217;re suffering like me. The <a href="http://octopress.org/docs/blogging/">Octopress blogging basics</a> gives a good overview of how your new local blogging workflow will work. Essentially new posts are written in the ./_source/posts folder and when <code>rake generate</code> is executed, your entire websites content is output to the ./public folder. You can also run <code>rake preview</code> in order to preview on a local server.</p>
-
-<p>TO publish your blog, it&#8217;s merely a matter of transferring your /public content to the S3 bucket you&#8217;ve generated.</p>
-
-<p>Having done all that you&#8217;ve now no need to run your own server. You&#8217;re still dependent on those that operate at S3, wwwizer and your domain registraar, but you&#8217;ve removed your own from the equation. You may be interested in checking out <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">Jerome Bernard&#8217;s</a> tip on easily deploying Octopress blogs with <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
+<p>Having successfully configured Amazon S3 to host your blog, you need to tackle the age old problem of writing some content for it. This was particularly hard for me, given my lack of knowledge about markdown! You may like to take a look at <a href="http://daringfireball.net/projects/markdown/basics">John Grubers explanation of markdown</a> if you’re suffering like me. The <a href="http://octopress.org/docs/blogging/">Octopress blogging basics</a> gives a good overview of how your new local blogging workflow will work. Essentially new posts are written in the ./_source/posts folder and when <code>rake generate</code> is executed, your entire websites content is output to the ./public folder. You can also run <code>rake preview</code> in order to preview on a local server.</p>
+<p>TO publish your blog, it’s merely a matter of transferring your /public content to the S3 bucket you’ve generated.</p>
+<p>Having done all that you’ve now no need to run your own server. You’re still dependent on those that operate at S3, wwwizer and your domain registraar, but you’ve removed your own from the equation. You may be interested in checking out <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-s3/">Jerome Bernard’s</a> tip on easily deploying Octopress blogs with <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
 
   </div>
   

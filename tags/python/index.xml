@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Ian Wootten</title>
+    <title>python on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/python/</link>
-    <description>Recent content in Python on Ian Wootten</description>
+    <description>Recent content in python on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Web Development Stack in 2018</title>
       <link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link>

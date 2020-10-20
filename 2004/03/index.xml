@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2004/03 on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/2004/03/</link>
     <description>Recent content in 2004/03 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 05 Mar 2004 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/2004/03/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/03/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image Processing - Connected Component Analysis</title>
-      <link>https://www.ianwootten.co.uk/2004/03/05/image-processing---connected-component-analysis/</link>
+      <link>https://www.ianwootten.co.uk/2004/03/05/image-processing-connected-component-analysis/</link>
       <pubDate>Fri, 05 Mar 2004 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2004/03/05/image-processing---connected-component-analysis/</guid>
+      <guid>https://www.ianwootten.co.uk/2004/03/05/image-processing-connected-component-analysis/</guid>
       <description>Ahh, theres a result.
-I&amp;#8217;ve been working some image processing coursework trying to correctly label an B+W image with a different label for each object in the image&amp;#8230;it&amp;#8217;s taken ages!&amp;#8230;.
+I’ve been working some image processing coursework trying to correctly label an B+W image with a different label for each object in the image…it’s taken ages!….
 The basic premise is, go through each pixel in the image. If this pixel has a neighbour which is labelled, label it with that label, if two pixel neighbours labels differ, store the equivalence in a table and resolve it later.</description>
     </item>
     

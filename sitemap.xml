@@ -1,10 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2018/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/business/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2018/12/06/purpose/</loc>
     <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/mindfulness/</loc>
+    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/personal/</loc>
+    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,8 +58,38 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/js/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/software/</loc>
+    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/general/</loc>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,8 +103,33 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2017/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/</loc>
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/wtforms/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2016/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/business/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/projects/</loc>
+    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -38,8 +138,43 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2015/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/blogging/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/</loc>
     <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/javascript/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/javascript/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/metalsmith/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2014/</loc>
+    <lastmod>2014-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/openimageio/</loc>
+    <lastmod>2014-09-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,8 +188,33 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/ffmpeg/</loc>
+    <lastmod>2014-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/imagemajick/</loc>
+    <lastmod>2014-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/coding/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/web-apps/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/productivity/</loc>
+    <lastmod>2014-06-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,12 +223,42 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/categories/blog/</loc>
+    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/jekyll/</loc>
+    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</loc>
     <lastmod>2014-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/static-sites/</loc>
+    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/wordpress/</loc>
+    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/disqus/</loc>
+    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</loc>
+    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/pygments/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,18 +268,68 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/copyright/</loc>
+    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</loc>
     <lastmod>2014-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2--3/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/law/</loc>
+    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/music/</loc>
+    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/music/</loc>
+    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/ecommerce/</loc>
     <lastmod>2014-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</loc>
+    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/shopping/</loc>
+    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/time-tracking/</loc>
+    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/projects/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/charting/</loc>
+    <lastmod>2014-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/d3/</loc>
+    <lastmod>2014-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -103,7 +343,37 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2013/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/dns/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/hosting/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/iceland/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/nameservers/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/tutorials/</loc>
     <lastmod>2013-10-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,12 +383,42 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/web/</loc>
+    <lastmod>2013-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/web/</loc>
+    <lastmod>2013-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/rant-business/</loc>
+    <lastmod>2013-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/07/06/second-rate-britizens/</loc>
     <lastmod>2013-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/hacking/</loc>
+    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/ideas/</loc>
+    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/06/27/the-developer-dream/</loc>
+    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/webdev/</loc>
     <lastmod>2013-06-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -128,8 +428,28 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/web-development/</loc>
+    <lastmod>2013-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/fairtrade/</loc>
+    <lastmod>2013-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/03/28/so-you-want-to-run-a-fairtrade-business/</loc>
     <lastmod>2013-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/tshirts/</loc>
+    <lastmod>2013-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/backbone/</loc>
+    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -138,13 +458,43 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/couchdb/</loc>
+    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/databases/</loc>
+    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/nosql/</loc>
+    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/films/</loc>
+    <lastmod>2013-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</loc>
     <lastmod>2013-02-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/events/</loc>
+    <lastmod>2013-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/02/07/introvert-interfacing/</loc>
     <lastmod>2013-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/blogs/</loc>
+    <lastmod>2013-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -158,6 +508,16 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/categories/wordpress/</loc>
+    <lastmod>2013-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/popularity/</loc>
+    <lastmod>2013-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2013/01/04/why-i-choose-popular-frameworks/</loc>
     <lastmod>2013-01-04T00:00:00+00:00</lastmod>
   </url>
@@ -168,13 +528,73 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/learning/</loc>
+    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/life/</loc>
+    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/retrospective/</loc>
+    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/work/</loc>
+    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2012/</loc>
+    <lastmod>2012-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/nodejs/</loc>
+    <lastmod>2012-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2012/11/23/oh-crap-im-a-frontend-developer/</loc>
     <lastmod>2012-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/design/</loc>
+    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2012/11/20/essential-cinema-according-to-lovefilm/</loc>
     <lastmod>2012-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/lovefilm/</loc>
+    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/rant/</loc>
+    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/linux/</loc>
+    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/mac/</loc>
+    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/photorec/</loc>
+    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -188,8 +608,58 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/categories/events/</loc>
+    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/stop-motion/</loc>
+    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/advice/</loc>
+    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/code/</loc>
+    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/freelance/</loc>
+    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think/</loc>
     <lastmod>2012-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/asides/</loc>
+    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/gamer/</loc>
+    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/games/</loc>
+    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/indie/</loc>
+    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/movie/</loc>
+    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -203,8 +673,68 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/kickstarter/</loc>
+    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/phantomjs/</loc>
+    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/raphaeljs/</loc>
+    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/gmail/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2012/03/01/how-to-switch-your-vps-in-2-hours/</loc>
     <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/linode/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/msmtp/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/server/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/slicehost/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/go-cardless/</loc>
+    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/payments/</loc>
+    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/stripe/</loc>
+    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/the-little-guy/</loc>
+    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -213,13 +743,43 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2012/01/23/new-adventures-2012---self-help-for-web-designers/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/naconf/</loc>
     <lastmod>2012-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2012/01/12/goodbye-1--1/</loc>
+    <loc>https://www.ianwootten.co.uk/2012/01/23/new-adventures-2012-self-help-for-web-designers/</loc>
+    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/web-design/</loc>
+    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/customer-service/</loc>
     <lastmod>2012-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/domains/</loc>
+    <lastmod>2012-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2012/01/12/goodbye-1-1/</loc>
+    <lastmod>2012-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2011/</loc>
+    <lastmod>2011-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/articles/</loc>
+    <lastmod>2011-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -228,7 +788,32 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/amazon/</loc>
+    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/blog/</loc>
+    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/godaddy/</loc>
+    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</loc>
+    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/octopress/</loc>
+    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/s3/</loc>
     <lastmod>2011-09-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -238,13 +823,53 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/plugins/</loc>
+    <lastmod>2011-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/dconstruct/</loc>
+    <lastmod>2011-07-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</loc>
     <lastmod>2011-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/express/</loc>
+    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/expressjs/</loc>
+    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</loc>
     <lastmod>2011-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/node/</loc>
+    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/socket.io/</loc>
+    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/sftp/</loc>
+    <lastmod>2011-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/update/</loc>
+    <lastmod>2011-05-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -258,13 +883,33 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/web-apps/</loc>
+    <lastmod>2011-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</loc>
     <lastmod>2011-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/mongdb/</loc>
+    <lastmod>2011-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2010/</loc>
+    <lastmod>2010-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2010/11/28/amazon-associates-wordpress-wishlist-plugin-is-no-more/</loc>
     <lastmod>2010-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/camera/</loc>
+    <lastmod>2010-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -278,7 +923,27 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/sciencehackday/</loc>
+    <lastmod>2010-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/freetype/</loc>
+    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2010/06/15/installing-mplayer-on-snow-leopard/</loc>
+    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/mplayer/</loc>
+    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/snow-leopard/</loc>
     <lastmod>2010-06-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -288,17 +953,82 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/movies/</loc>
+    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/php/</loc>
+    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/plugin/</loc>
+    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/dj/</loc>
+    <lastmod>2010-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</loc>
     <lastmod>2010-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2010/01/07/fair--bare---january-10-sale/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/mixes/</loc>
+    <lastmod>2010-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2010/01/07/fair-bare-january-10-sale/</loc>
     <lastmod>2010-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/fashion/</loc>
+    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/internet/</loc>
+    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/tees/</loc>
+    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2009/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/acorn-computers/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/associates/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/aws/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/biography/</loc>
     <lastmod>2009-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -308,8 +1038,43 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/history/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/nostalgia/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/web-services/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/wishlist/</loc>
+    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2009/09/26/aardman/</loc>
     <lastmod>2009-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/aardman/</loc>
+    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/animation/</loc>
+    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/canonical/</loc>
+    <lastmod>2009-05-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -318,8 +1083,33 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/tinyurl/</loc>
+    <lastmod>2009-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/content/</loc>
+    <lastmod>2009-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/copy/</loc>
+    <lastmod>2009-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2009/05/15/my-vicious-circle-of-posting-quality-content/</loc>
     <lastmod>2009-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/quality/</loc>
+    <lastmod>2009-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/geek/</loc>
+    <lastmod>2009-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -328,7 +1118,27 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/microblogging/</loc>
+    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/statistics/</loc>
+    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2009/02/06/stephen-fry-and-the-ascent-of-micro-blogging/</loc>
+    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/stephenfry/</loc>
+    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/twitter/</loc>
     <lastmod>2009-02-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -338,8 +1148,28 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/hype-machine/</loc>
+    <lastmod>2009-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/research/</loc>
+    <lastmod>2009-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2009/01/29/what-do-i-have-to-contribute/</loc>
     <lastmod>2009-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/clothing/</loc>
+    <lastmod>2009-01-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/ethical/</loc>
+    <lastmod>2009-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -348,13 +1178,63 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2008/11/20/new-t-shirts-from-fair--bare/</loc>
+    <loc>https://www.ianwootten.co.uk/2008/</loc>
     <lastmod>2008-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2008/11/03/fair--bare-snowdodgers-challenge/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/bikes/</loc>
+    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/fair-trade/</loc>
+    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/force/</loc>
+    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2008/11/20/new-t-shirts-from-fair-bare/</loc>
+    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/t-shirts/</loc>
+    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/waterbased-inks/</loc>
+    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2008/11/03/fair-bare-snowdodgers-challenge/</loc>
     <lastmod>2008-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/codeiginiter/</loc>
+    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/ellislabs/</loc>
+    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/lifestream/</loc>
+    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/opensource/</loc>
+    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -363,12 +1243,37 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/competition/</loc>
+    <lastmod>2008-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/cotton/</loc>
+    <lastmod>2008-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2008/07/22/fair-and-bares-first-shirt/</loc>
     <lastmod>2008-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/bbc/</loc>
+    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/cardiff-geeks/</loc>
+    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2008/05/31/cardiff-web-meetup-#3/</loc>
+    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/journalism/</loc>
     <lastmod>2008-05-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -378,7 +1283,22 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2008/05/06/fair-and-bare---bringing-design-to-fairtrade/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/steadycam/</loc>
+    <lastmod>2008-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/whiteboard/</loc>
+    <lastmod>2008-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/wii/</loc>
+    <lastmod>2008-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2008/05/06/fair-and-bare-bringing-design-to-fairtrade/</loc>
     <lastmod>2008-05-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -388,12 +1308,52 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/book-review/</loc>
+    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</loc>
     <lastmod>2008-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/code-igniter/</loc>
+    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/php/</loc>
+    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/boards/</loc>
+    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/django/</loc>
+    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/jobs/</loc>
+    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2008/01/30/location-based-job-boards/</loc>
+    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/natbat/</loc>
+    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/simon-willison/</loc>
     <lastmod>2008-01-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -403,17 +1363,57 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/jquery/</loc>
+    <lastmod>2008-01-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</loc>
     <lastmod>2008-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns---youll-be-rewarded/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/decryption/</loc>
+    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/filezilla/</loc>
+    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2007/</loc>
+    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/marine-parade/</loc>
+    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/principles/</loc>
+    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/standards/</loc>
+    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns-youll-be-rewarded/</loc>
     <lastmod>2007-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/09/20/first-cardiff-geek-meetup/</loc>
+    <lastmod>2007-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/humour/</loc>
     <lastmod>2007-09-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -443,8 +1443,23 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2007/09/06/new-ipods---160gb-or-touch-interface/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/community/</loc>
+    <lastmod>2007-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/hardware/</loc>
     <lastmod>2007-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2007/09/06/new-ipods-160gb-or-touch-interface/</loc>
+    <lastmod>2007-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/facebook/</loc>
+    <lastmod>2007-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -465,6 +1480,11 @@
   <url>
     <loc>https://www.ianwootten.co.uk/2007/07/22/my-stag-do/</loc>
     <lastmod>2007-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/holidays/</loc>
+    <lastmod>2007-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -508,7 +1528,12 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2007/05/04/microsoft-to-acquire-yahoo---cost-50-billion/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/microsoft/</loc>
+    <lastmod>2007-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2007/05/04/microsoft-to-acquire-yahoo-cost-50-billion/</loc>
     <lastmod>2007-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -543,12 +1568,17 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/news/</loc>
+    <lastmod>2007-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2007/03/19/threadless-launches-threadlesskids.com/</loc>
     <lastmod>2007-03-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2007/03/19/wed-designer---i-wish-i-had-one/</loc>
+    <loc>https://www.ianwootten.co.uk/2007/03/19/wed-designer-i-wish-i-had-one/</loc>
     <lastmod>2007-03-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -563,13 +1593,23 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2007/03/08/openid---the-end-of-multiple-passwords/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/identity/</loc>
+    <lastmod>2007-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2007/03/08/openid-the-end-of-multiple-passwords/</loc>
     <lastmod>2007-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/03/07/its-my-birthday-soon/</loc>
     <lastmod>2007-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/film/</loc>
+    <lastmod>2007-02-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -593,7 +1633,12 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2007/01/24/hotdealsuk---indexing-the-webs-best-deals/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/hotdealsuk/</loc>
+    <lastmod>2007-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2007/01/24/hotdealsuk-indexing-the-webs-best-deals/</loc>
     <lastmod>2007-01-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -615,6 +1660,11 @@
   <url>
     <loc>https://www.ianwootten.co.uk/2007/01/16/why-cant-every-day-be-a-holiday/</loc>
     <lastmod>2007-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2006/</loc>
+    <lastmod>2006-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -643,8 +1693,13 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/12/04/crazy-fools---learn-to-drive/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/12/04/crazy-fools-learn-to-drive/</loc>
     <lastmod>2006-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/consumer/</loc>
+    <lastmod>2006-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -653,7 +1708,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/12/01/got-no-hot-friends---fake-your-space/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/12/01/got-no-hot-friends-fake-your-space/</loc>
     <lastmod>2006-12-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -663,7 +1718,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/11/14/future-of-web-applications---london-07/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/11/14/future-of-web-applications-london-07/</loc>
     <lastmod>2006-11-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -713,6 +1768,11 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/software/</loc>
+    <lastmod>2006-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2006/10/17/god-is-a-dj/</loc>
     <lastmod>2006-10-17T00:00:00+00:00</lastmod>
   </url>
@@ -743,6 +1803,11 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/categories/university/</loc>
+    <lastmod>2006-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2006/09/17/anyone-want-to-buy-a-car/</loc>
     <lastmod>2006-09-17T00:00:00+00:00</lastmod>
   </url>
@@ -753,7 +1818,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64---too-much-to-ask/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask/</loc>
     <lastmod>2006-09-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -783,7 +1848,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu-ati-9600-and-sblive/</loc>
     <lastmod>2006-08-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -833,7 +1898,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/05/22/singapore-day-7---sentosa-island-hopefully/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/05/22/singapore-day-7-sentosa-island-hopefully/</loc>
     <lastmod>2006-05-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -853,27 +1918,27 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/05/06/chicago-day-five---threadless-and-whitesox/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/05/06/chicago-day-five-threadless-and-whitesox/</loc>
     <lastmod>2006-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/05/06/chicago-day-six---last-day-in-hard-rock/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/05/06/chicago-day-six-last-day-in-hard-rock/</loc>
     <lastmod>2006-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/05/05/chicago-day-four---workshop/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/05/05/chicago-day-four-workshop/</loc>
     <lastmod>2006-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/05/04/chicago-day-three---workshop-start/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/05/04/chicago-day-three-workshop-start/</loc>
     <lastmod>2006-05-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2006/05/03/chicago-day-two---sears-tower-hancock-observatory/</loc>
+    <loc>https://www.ianwootten.co.uk/2006/05/03/chicago-day-two-sears-tower-hancock-observatory/</loc>
     <lastmod>2006-05-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -933,6 +1998,11 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/phd/</loc>
+    <lastmod>2006-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2006/02/02/whats-the-difference-between/</loc>
     <lastmod>2006-02-02T00:00:00+00:00</lastmod>
   </url>
@@ -968,12 +2038,27 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2005/</loc>
+    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/for-sale/</loc>
+    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2005/12/16/out-with-the-old/</loc>
     <lastmod>2005-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/12/05/encouragement/</loc>
+    <lastmod>2005-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/faith/</loc>
     <lastmod>2005-12-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -1053,6 +2138,11 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/categories/geek/</loc>
+    <lastmod>2005-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2005/09/09/its-not-quite-the-iflea-but.../</loc>
     <lastmod>2005-09-09T00:00:00+00:00</lastmod>
   </url>
@@ -1069,6 +2159,11 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/08/19/trials-unicycling/</loc>
+    <lastmod>2005-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/unicycling/</loc>
     <lastmod>2005-08-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -1123,7 +2218,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2005/06/23/pastis-and-miniatures---22/06/2005---23/06/2005/</loc>
+    <loc>https://www.ianwootten.co.uk/2005/06/23/pastis-and-miniatures-22/06/2005-23/06/2005/</loc>
     <lastmod>2005-06-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -1143,7 +2238,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2005/06/18/long-journeys---17/06/05---18/06/05/</loc>
+    <loc>https://www.ianwootten.co.uk/2005/06/18/long-journeys-17/06/05-18/06/05/</loc>
     <lastmod>2005-06-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -1158,7 +2253,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2005/06/03/blackalicious---make-you-feel-that-way/</loc>
+    <loc>https://www.ianwootten.co.uk/2005/06/03/blackalicious-make-you-feel-that-way/</loc>
     <lastmod>2005-06-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -1283,12 +2378,22 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2004/</loc>
+    <lastmod>2004-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/2004/12/14/vineyard-reclaiming-the-web/</loc>
     <lastmod>2004-12-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</loc>
+    <lastmod>2004-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/tools/</loc>
     <lastmod>2004-12-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -1328,7 +2433,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2004/03/05/image-processing---connected-component-analysis/</loc>
+    <loc>https://www.ianwootten.co.uk/2004/03/05/image-processing-connected-component-analysis/</loc>
     <lastmod>2004-03-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -1373,7 +2478,12 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2003/12/13/project---again.../</loc>
+    <loc>https://www.ianwootten.co.uk/2003/</loc>
+    <lastmod>2003-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2003/12/13/project-again.../</loc>
     <lastmod>2003-12-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -1438,7 +2548,7 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2003/08/14/sonic-flux/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/movable-type/</loc>
     <lastmod>2003-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -1448,693 +2558,400 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/2003/</loc>
-    <lastmod>2003-12-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://www.ianwootten.co.uk/2003/08/14/sonic-flux/</loc>
+    <lastmod>2003-08-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2003/08/</loc>
-    <lastmod>2003-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2003/10/</loc>
-    <lastmod>2003-10-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2003/11/</loc>
-    <lastmod>2003-11-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2003/12/</loc>
-    <lastmod>2003-12-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2004/</loc>
-    <lastmod>2004-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/01/</loc>
-    <lastmod>2004-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/02/</loc>
-    <lastmod>2004-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/03/</loc>
-    <lastmod>2004-03-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/05/</loc>
-    <lastmod>2004-05-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/08/</loc>
-    <lastmod>2004-08-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/10/</loc>
-    <lastmod>2004-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/11/</loc>
-    <lastmod>2004-11-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2004/12/</loc>
-    <lastmod>2004-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2005/</loc>
-    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/01/</loc>
-    <lastmod>2005-01-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/02/</loc>
-    <lastmod>2005-02-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/03/</loc>
-    <lastmod>2005-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/04/</loc>
-    <lastmod>2005-04-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/05/</loc>
-    <lastmod>2005-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/06/</loc>
-    <lastmod>2005-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/07/</loc>
-    <lastmod>2005-07-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/08/</loc>
-    <lastmod>2005-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/09/</loc>
-    <lastmod>2005-09-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/10/</loc>
-    <lastmod>2005-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/11/</loc>
-    <lastmod>2005-11-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2005/12/</loc>
-    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2006/</loc>
-    <lastmod>2006-12-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/01/</loc>
-    <lastmod>2006-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/02/</loc>
-    <lastmod>2006-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/03/</loc>
-    <lastmod>2006-03-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/04/</loc>
-    <lastmod>2006-04-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/05/</loc>
-    <lastmod>2006-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/06/</loc>
-    <lastmod>2006-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/07/</loc>
-    <lastmod>2006-07-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/08/</loc>
-    <lastmod>2006-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/09/</loc>
-    <lastmod>2006-09-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/10/</loc>
-    <lastmod>2006-10-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/11/</loc>
-    <lastmod>2006-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2006/12/</loc>
-    <lastmod>2006-12-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2007/</loc>
-    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/01/</loc>
-    <lastmod>2007-01-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/02/</loc>
-    <lastmod>2007-02-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/03/</loc>
-    <lastmod>2007-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/04/</loc>
-    <lastmod>2007-04-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/05/</loc>
-    <lastmod>2007-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/06/</loc>
-    <lastmod>2007-06-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/07/</loc>
-    <lastmod>2007-07-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/08/</loc>
-    <lastmod>2007-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/09/</loc>
-    <lastmod>2007-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2007/12/</loc>
-    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2008/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2008/01/</loc>
-    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2008/04/</loc>
-    <lastmod>2008-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2008/05/</loc>
-    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2008/07/</loc>
-    <lastmod>2008-07-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2008/08/</loc>
-    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2008/11/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2009/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2009/01/</loc>
-    <lastmod>2009-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2009/02/</loc>
-    <lastmod>2009-02-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2009/05/</loc>
-    <lastmod>2009-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2009/09/</loc>
-    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2009/10/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2010/</loc>
-    <lastmod>2010-11-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/01/</loc>
-    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/03/</loc>
-    <lastmod>2010-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/04/</loc>
-    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/06/</loc>
-    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/07/</loc>
-    <lastmod>2010-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/09/</loc>
-    <lastmod>2010-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2010/11/</loc>
-    <lastmod>2010-11-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2011/</loc>
-    <lastmod>2011-11-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2011/02/</loc>
-    <lastmod>2011-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2011/03/</loc>
-    <lastmod>2011-03-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2011/05/</loc>
-    <lastmod>2011-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2011/07/</loc>
-    <lastmod>2011-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2011/09/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2011/11/</loc>
-    <lastmod>2011-11-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2012/</loc>
-    <lastmod>2012-11-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/01/</loc>
-    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/02/</loc>
-    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/03/</loc>
-    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/05/</loc>
-    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/06/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/08/</loc>
-    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/09/</loc>
-    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2012/11/</loc>
-    <lastmod>2012-11-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2013/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/01/</loc>
-    <lastmod>2013-01-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/02/</loc>
-    <lastmod>2013-02-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/03/</loc>
-    <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/04/</loc>
-    <lastmod>2013-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/06/</loc>
-    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/07/</loc>
-    <lastmod>2013-07-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/08/</loc>
-    <lastmod>2013-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2013/10/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2014/</loc>
-    <lastmod>2014-09-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/03/</loc>
-    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/04/</loc>
-    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/05/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/06/</loc>
-    <lastmod>2014-06-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/07/</loc>
-    <lastmod>2014-07-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2014/09/</loc>
-    <lastmod>2014-09-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2015/</loc>
-    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2015/06/</loc>
-    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2016/</loc>
-    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2016/01/</loc>
-    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2017/</loc>
-    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2017/04/</loc>
-    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/2018/</loc>
-    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2018/10/</loc>
-    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2018/11/</loc>
-    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2018/12/</loc>
-    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/aardman/</loc>
-    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -2142,1249 +2959,11 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/tags/acorn-computers/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/advice/</loc>
-    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/amazon/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/animation/</loc>
-    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/articles/</loc>
-    <lastmod>2011-11-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/asides/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/associates/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/aws/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/backbone/</loc>
-    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/bbc/</loc>
-    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/bikes/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/biography/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/blog/</loc>
-    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/blog/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/blogging/</loc>
-    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/blogs/</loc>
-    <lastmod>2013-01-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/boards/</loc>
-    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/book-review/</loc>
-    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/business/</loc>
-    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/business/</loc>
-    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/camera/</loc>
-    <lastmod>2010-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/canonical/</loc>
-    <lastmod>2009-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/cardiff-geeks/</loc>
-    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/charting/</loc>
-    <lastmod>2014-03-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/clothing/</loc>
-    <lastmod>2009-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/code/</loc>
-    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/code-igniter/</loc>
-    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/codeiginiter/</loc>
-    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/coding/</loc>
-    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/community/</loc>
-    <lastmod>2007-09-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/competition/</loc>
-    <lastmod>2008-07-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/consumer/</loc>
-    <lastmod>2006-12-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ianwootten.co.uk/contact/</loc>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/tags/content/</loc>
-    <lastmod>2009-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/copy/</loc>
-    <lastmod>2009-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/copyright/</loc>
-    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/cotton/</loc>
-    <lastmod>2008-07-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/couchdb/</loc>
-    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/customer-service/</loc>
-    <lastmod>2012-01-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/d3/</loc>
-    <lastmod>2014-03-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/databases/</loc>
-    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/dconstruct/</loc>
-    <lastmod>2011-07-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/decryption/</loc>
-    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/design/</loc>
-    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/disqus/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/dj/</loc>
-    <lastmod>2010-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/django/</loc>
-    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/dns/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/domains/</loc>
-    <lastmod>2012-01-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/ecommerce/</loc>
-    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/ellislabs/</loc>
-    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/ethical/</loc>
-    <lastmod>2009-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/events/</loc>
-    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/events/</loc>
-    <lastmod>2013-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/express/</loc>
-    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/expressjs/</loc>
-    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/facebook/</loc>
-    <lastmod>2007-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/fair-trade/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/fairtrade/</loc>
-    <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/faith/</loc>
-    <lastmod>2005-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/fashion/</loc>
-    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/ffmpeg/</loc>
-    <lastmod>2014-07-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/filezilla/</loc>
-    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/film/</loc>
-    <lastmod>2007-02-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/films/</loc>
-    <lastmod>2013-02-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/for-sale/</loc>
-    <lastmod>2005-12-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/force/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/freelance/</loc>
-    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/freetype/</loc>
-    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/gamer/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/games/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/geek/</loc>
-    <lastmod>2005-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/geek/</loc>
-    <lastmod>2009-02-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/general/</loc>
-    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/gmail/</loc>
-    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/go-cardless/</loc>
-    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/godaddy/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/hacking/</loc>
-    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/hardware/</loc>
-    <lastmod>2007-09-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/history/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/holidays/</loc>
-    <lastmod>2007-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/hosting/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/hotdealsuk/</loc>
-    <lastmod>2007-01-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/humour/</loc>
-    <lastmod>2007-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/hype-machine/</loc>
-    <lastmod>2009-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/iceland/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/ideas/</loc>
-    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/identity/</loc>
-    <lastmod>2007-03-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/imagemajick/</loc>
-    <lastmod>2014-07-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/indie/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/internet/</loc>
-    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/javascript/</loc>
-    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/javascript/</loc>
-    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/jekyll/</loc>
-    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/jobs/</loc>
-    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/journalism/</loc>
-    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/jquery/</loc>
-    <lastmod>2008-01-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/js/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/kickstarter/</loc>
-    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/law/</loc>
-    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/learning/</loc>
-    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/life/</loc>
-    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/lifestream/</loc>
-    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/linode/</loc>
-    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/linux/</loc>
-    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/lovefilm/</loc>
-    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/mac/</loc>
-    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/marine-parade/</loc>
-    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/metalsmith/</loc>
-    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/microblogging/</loc>
-    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/microsoft/</loc>
-    <lastmod>2007-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/mindfulness/</loc>
-    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/mixes/</loc>
-    <lastmod>2010-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/mongdb/</loc>
-    <lastmod>2011-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ianwootten.co.uk/month/</loc>
-    <lastmod>2003-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/movable-type/</loc>
-    <lastmod>2003-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/movie/</loc>
-    <lastmod>2012-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/movies/</loc>
-    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/mplayer/</loc>
-    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/msmtp/</loc>
-    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/music/</loc>
-    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/music/</loc>
-    <lastmod>2014-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/naconf/</loc>
-    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/nameservers/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/natbat/</loc>
-    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/news/</loc>
-    <lastmod>2007-03-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/node/</loc>
-    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/nodejs/</loc>
-    <lastmod>2012-11-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/nosql/</loc>
-    <lastmod>2013-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/nostalgia/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/octopress/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/openimageio/</loc>
-    <lastmod>2014-09-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/opensource/</loc>
-    <lastmod>2008-08-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/payments/</loc>
-    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/personal/</loc>
-    <lastmod>2018-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/phantomjs/</loc>
-    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/phd/</loc>
-    <lastmod>2006-02-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/photorec/</loc>
-    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/php/</loc>
-    <lastmod>2008-01-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/php/</loc>
-    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/plugin/</loc>
-    <lastmod>2010-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/plugins/</loc>
-    <lastmod>2011-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/popularity/</loc>
-    <lastmod>2013-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/principles/</loc>
-    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/productivity/</loc>
-    <lastmod>2014-06-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/projects/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/projects/</loc>
-    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/pygments/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/quality/</loc>
-    <lastmod>2009-05-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/rant/</loc>
-    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/rant-business/</loc>
-    <lastmod>2013-07-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/raphaeljs/</loc>
-    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/research/</loc>
-    <lastmod>2009-01-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/retrospective/</loc>
-    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/s3/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/sciencehackday/</loc>
-    <lastmod>2010-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/server/</loc>
-    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/sftp/</loc>
-    <lastmod>2011-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/shopping/</loc>
-    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/simon-willison/</loc>
-    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/slicehost/</loc>
-    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/snow-leopard/</loc>
-    <lastmod>2010-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/socket.io/</loc>
-    <lastmod>2011-07-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/software/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/software/</loc>
-    <lastmod>2006-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/standards/</loc>
-    <lastmod>2007-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/static-sites/</loc>
-    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/statistics/</loc>
-    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/steadycam/</loc>
-    <lastmod>2008-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/stephenfry/</loc>
-    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/stop-motion/</loc>
-    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/stripe/</loc>
-    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/t-shirts/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2009-09-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/tees/</loc>
-    <lastmod>2010-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/the-little-guy/</loc>
-    <lastmod>2012-02-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/time-tracking/</loc>
-    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/tinyurl/</loc>
-    <lastmod>2009-05-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/tools/</loc>
-    <lastmod>2004-12-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/tshirts/</loc>
-    <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/tutorials/</loc>
-    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/twitter/</loc>
-    <lastmod>2009-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/unicycling/</loc>
-    <lastmod>2005-08-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/university/</loc>
-    <lastmod>2006-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/update/</loc>
-    <lastmod>2011-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/waterbased-inks/</loc>
-    <lastmod>2008-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/web/</loc>
-    <lastmod>2013-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/web/</loc>
-    <lastmod>2013-08-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/web-apps/</loc>
-    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/web-apps/</loc>
-    <lastmod>2011-03-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/web-design/</loc>
-    <lastmod>2012-01-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/web-development/</loc>
-    <lastmod>2013-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/web-services/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/webdev/</loc>
-    <lastmod>2013-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/whiteboard/</loc>
-    <lastmod>2008-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/wii/</loc>
-    <lastmod>2008-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/wishlist/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/wordpress/</loc>
-    <lastmod>2013-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/wordpress/</loc>
-    <lastmod>2014-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/work/</loc>
-    <lastmod>2013-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/wtforms/</loc>
-    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
-    <lastmod>2003-12-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

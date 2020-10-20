@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2003/12 on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/2003/12/</link>
     <description>Recent content in 2003/12 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 13 Dec 2003 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/2003/12/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2003/12/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project - again...</title>
-      <link>https://www.ianwootten.co.uk/2003/12/13/project---again.../</link>
+      <link>https://www.ianwootten.co.uk/2003/12/13/project-again.../</link>
       <pubDate>Sat, 13 Dec 2003 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2003/12/13/project---again.../</guid>
-      <description>After having been working like theres no tomorrow on other coursework, I&amp;#8217;ve finally managed to come back to my project work.
-I&amp;#8217;ve really not got very much productive work done on it aside from a few class diagrams and workflow routines which I&amp;#8217;ve put together. I have been working on a prototype over the last month however in order to have that side of things produced on time. Currently it doesn&amp;#8217;t do a lot more than add or delete users and needs to come a lot further before its something impressive which is worthy to be shown to my supervisor.</description>
+      <guid>https://www.ianwootten.co.uk/2003/12/13/project-again.../</guid>
+      <description>After having been working like theres no tomorrow on other coursework, I’ve finally managed to come back to my project work.
+I’ve really not got very much productive work done on it aside from a few class diagrams and workflow routines which I’ve put together. I have been working on a prototype over the last month however in order to have that side of things produced on time. Currently it doesn’t do a lot more than add or delete users and needs to come a lot further before its something impressive which is worthy to be shown to my supervisor.</description>
     </item>
     
   </channel>

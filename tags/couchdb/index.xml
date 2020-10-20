@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Couchdb on Ian Wootten</title>
+    <title>couchdb on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/couchdb/</link>
-    <description>Recent content in Couchdb on Ian Wootten</description>
+    <description>Recent content in couchdb on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Mar 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/couchdb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 01 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/couchdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breaking up Relationships with CouchDB</title>
       <link>https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/</guid>
       <description>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat &amp;lsquo;belated&amp;rsquo;]
-Beware &amp;#8211; there&amp;#8217;s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.
+Beware – there’s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.
 For me, my first experiments working with databases were performed with Oracle, the staple of our computer science course at the time.</description>
     </item>
     
@@ -28,8 +24,8 @@ For me, my first experiments working with databases were performed with Oracle, 
       <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2012/11/23/oh-crap-im-a-frontend-developer/</guid>
-      <description>When I was first tiptoeing in the waters of web development (early 2000&amp;#8242;s), getting a grips on job descriptions was simple. There were 2 types of people in our industry: designers or developers. You either drew websites, or you built websites &amp;#8211; that was it.
-As time went on people seemed to invent new titles: &amp;#8220;UX Designers&amp;#8221; were the first to appear on the scene to me, and we&amp;#8217;re still to this day figuring out what this role really entails.</description>
+      <description>When I was first tiptoeing in the waters of web development (early 2000′s), getting a grips on job descriptions was simple. There were 2 types of people in our industry: designers or developers. You either drew websites, or you built websites – that was it.
+As time went on people seemed to invent new titles: “UX Designers” were the first to appear on the scene to me, and we’re still to this day figuring out what this role really entails.</description>
     </item>
     
     <item>
@@ -38,8 +34,8 @@ As time went on people seemed to invent new titles: &amp;#8220;UX Designers&amp;
       <pubDate>Wed, 02 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</guid>
-      <description>I&amp;#8217;ve been working on some fun little node.js / couchdb projects of late. Given the fact I don&amp;#8217;t use either as part of my work, I&amp;#8217;ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.
-I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I&amp;#8217;ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out I&amp;#8217;ve always been doing it the &amp;#8220;bad&amp;#8221; way.</description>
+      <description>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.
+I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I’ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out I’ve always been doing it the “bad” way.</description>
     </item>
     
     <item>
@@ -48,7 +44,7 @@ I hit what I consider to be a fairly frustrating hurdle that couchdb threw up th
       <pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</guid>
-      <description>Over the last little while, I&amp;#8217;ve been doing a lot of playing with Node.js, mostly to run data collection scripts. Last week, I started following Ciaran Jessup&amp;#8217;s tutorial on getting started with node.js, Express and mongoDB. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar server side language. I hit a few problems along the way in the tutorial, so I thought I&amp;#8217;ve list a few of my findings here.</description>
+      <description>Over the last little while, I’ve been doing a lot of playing with Node.js, mostly to run data collection scripts. Last week, I started following Ciaran Jessup’s tutorial on getting started with node.js, Express and mongoDB. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar server side language. I hit a few problems along the way in the tutorial, so I thought I’ve list a few of my findings here.</description>
     </item>
     
   </channel>

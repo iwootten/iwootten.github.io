@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Decryption on Ian Wootten</title>
+    <title>decryption on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/decryption/</link>
-    <description>Recent content in Decryption on Ian Wootten</description>
+    <description>Recent content in decryption on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Jan 2008 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/decryption/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 05 Jan 2008 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/decryption/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decrypting Filezilla Passwords with PHP</title>
       <link>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</link>
       <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</guid>
-      <description>One of the most frustrating things I find in managing a number of websites is that I&amp;#8217;m always forgetting passwords. The version of Filezilla I&amp;#8217;m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I&amp;#8217;ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description>
+      <description>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description>
     </item>
     
   </channel>

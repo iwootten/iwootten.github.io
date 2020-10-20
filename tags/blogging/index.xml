@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogging on Ian Wootten</title>
+    <title>blogging on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/blogging/</link>
-    <description>Recent content in Blogging on Ian Wootten</description>
+    <description>Recent content in blogging on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 30 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogging with Metalsmith</title>
       <link>https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/</link>
@@ -26,7 +22,7 @@
       <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/01/22/the-move-towards-static-websites/</guid>
-      <description>There&amp;#8217;s some discussion on new podcast &amp;#8220;The Back to Front Show&amp;#8221; on why of late we&amp;#8217;re seeing so many static websites cropping up. It seem like now more than ever, we&amp;#8217;re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing.
+      <description>There’s some discussion on new podcast “The Back to Front Show” on why of late we’re seeing so many static websites cropping up. It seem like now more than ever, we’re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing.
 When I talk about a static site, I think of it of raw HTML sat on a server and nothing else.</description>
     </item>
     
@@ -36,8 +32,8 @@ When I talk about a static site, I think of it of raw HTML sat on a server and n
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/01/21/new-year-new-theme/</guid>
-      <description>I&amp;#8217;ve long made use of the default theme on WordPress, which I&amp;#8217;ve always felt wasn&amp;#8217;t entirely &amp;#8220;me&amp;#8221;. The theme now live is one I&amp;#8217;ve been tinkering with for a while now based on the lovely preview design used in the prose.io document editing tool for github. I really like the focus on simplicity and think it suits me well.
-I&amp;#8217;ve added some different styling for the navigation elements, given they didn&amp;#8217;t already exist on prose.</description>
+      <description>I’ve long made use of the default theme on WordPress, which I’ve always felt wasn’t entirely “me”. The theme now live is one I’ve been tinkering with for a while now based on the lovely preview design used in the prose.io document editing tool for github. I really like the focus on simplicity and think it suits me well.
+I’ve added some different styling for the navigation elements, given they didn’t already exist on prose.</description>
     </item>
     
     <item>
@@ -46,7 +42,7 @@ I&amp;#8217;ve added some different styling for the navigation elements, given t
       <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2011/09/09/hosting-an-octopress-blog-on-amazon-s3/</guid>
-      <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won&amp;#8217;t need all the bells and whistles on our blog I&amp;#8217;m sure you&amp;#8217;ll agree.</description>
+      <description>Octopress is a framework for blogging based on the static site generator jekyll. In short jekyll takes markdown and turns it into blog style html ready to be served straight away with Apache whilst Octopress dresses it up nicely with HTML5, responsive layout goodness and gives you a bunch of options for code formatting and the like. A perfect little blogging setup for hackers for those of us who typically won’t need all the bells and whistles on our blog I’m sure you’ll agree.</description>
     </item>
     
     <item>
@@ -55,7 +51,7 @@ I&amp;#8217;ve added some different styling for the navigation elements, given t
       <pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</guid>
-      <description>I can&amp;#8217;t help but feel a little sorry for music blogs as of late. I&amp;#8217;m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I&amp;#8217;ve found it really interesting to browse around and discover new artists.</description>
+      <description>I can’t help but feel a little sorry for music blogs as of late. I’m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I’ve found it really interesting to browse around and discover new artists.</description>
     </item>
     
     <item>
@@ -64,7 +60,7 @@ I&amp;#8217;ve added some different styling for the navigation elements, given t
       <pubDate>Thu, 29 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2009/01/29/what-do-i-have-to-contribute/</guid>
-      <description>It has struck me over the last couple of days and it&amp;#8217;s a reflection of my attitude to being interested in geeky things in general. I&amp;#8217;m an elitist. When I started my blog back in 2003, I loved the fact that relatively few of them existed. It was a reflection of my day to day life and I felt my voice was being heard (even though I had no analytics tools to back that up and it was not particularly interesting).</description>
+      <description>It has struck me over the last couple of days and it’s a reflection of my attitude to being interested in geeky things in general. I’m an elitist. When I started my blog back in 2003, I loved the fact that relatively few of them existed. It was a reflection of my day to day life and I felt my voice was being heard (even though I had no analytics tools to back that up and it was not particularly interesting).</description>
     </item>
     
     <item>
@@ -73,7 +69,7 @@ I&amp;#8217;ve added some different styling for the navigation elements, given t
       <pubDate>Sun, 08 Aug 2004 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2004/08/08/security/</guid>
-      <description>Blimey, some cheeky blighter signed up and posted on my blog! Well, I suppose it was my fault really seeing as how wordpress was configured to allow it! Anyway, I removed the offending post and reconfigured so we&amp;#8217;re now back to normality&amp;#8230;</description>
+      <description>Blimey, some cheeky blighter signed up and posted on my blog! Well, I suppose it was my fault really seeing as how wordpress was configured to allow it! Anyway, I removed the offending post and reconfigured so we’re now back to normality…</description>
     </item>
     
     <item>
@@ -82,8 +78,8 @@ I&amp;#8217;ve added some different styling for the navigation elements, given t
       <pubDate>Sun, 17 Aug 2003 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2003/08/17/all-change/</guid>
-      <description>Due to MT being incompatible with my Uni server from an imaging point of view, and the fact that its all coded in Perl &amp;#8211; which I haven&amp;#8217;t bothered looking at for a hell of a long time, I&amp;#8217;ve ditched it and shifted my blog over to b2. Now I can actually post images! Woohoo! b2 is nice and tiny also, a mere 527Kb compared to MT&amp;#8217;s 3Mb.
-I&amp;#8217;m actually toying with the idea of developing a blogging tool as a final year project, I think that might be very rewarding.</description>
+      <description>Due to MT being incompatible with my Uni server from an imaging point of view, and the fact that its all coded in Perl – which I haven’t bothered looking at for a hell of a long time, I’ve ditched it and shifted my blog over to b2. Now I can actually post images! Woohoo! b2 is nice and tiny also, a mere 527Kb compared to MT’s 3Mb.
+I’m actually toying with the idea of developing a blogging tool as a final year project, I think that might be very rewarding.</description>
     </item>
     
   </channel>

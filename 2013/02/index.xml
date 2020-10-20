@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2013/02 on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/2013/02/</link>
     <description>Recent content in 2013/02 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 20 Feb 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/2013/02/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2013/02/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Growing a Business with Developer APIs</title>
       <link>https://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</link>
       <pubDate>Wed, 20 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/02/20/growing-a-business-with-developer-apis/</guid>
-      <description>Those of your you who follow me on twitter will might be aware of a single day hack I attempted last week, which takes output from Lovefilm&amp;#8217;s customer history and formats it so it can easily be imported into the lovely Letterboxd. It&amp;#8217;s named Loveletterd and it seemed entirely appropriate to release it on Valentines day.
-After hearing that Letterboxd had created a CSV import tool for it&amp;#8217;s community to use and as I&amp;#8217;m a Lovefilm developer, I felt like it would be a great use of my time to get to work on Loveletterd.</description>
+      <description>Those of your you who follow me on twitter will might be aware of a single day hack I attempted last week, which takes output from Lovefilm’s customer history and formats it so it can easily be imported into the lovely Letterboxd. It’s named Loveletterd and it seemed entirely appropriate to release it on Valentines day.
+After hearing that Letterboxd had created a CSV import tool for it’s community to use and as I’m a Lovefilm developer, I felt like it would be a great use of my time to get to work on Loveletterd.</description>
     </item>
     
     <item>
@@ -27,7 +22,7 @@ After hearing that Letterboxd had created a CSV import tool for it&amp;#8217;s c
       <pubDate>Thu, 07 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/02/07/introvert-interfacing/</guid>
-      <description>You pay for your ticket, hotels, travel and then spend the rest of the year excitedly awaiting being able to attend the conference everyone is speaking about. Having travelled halfway across the country, braving weather you&amp;#8217;d never ordinarily leave the house for, you arrive in the unrecognisable city. You&amp;#8217;ve left your family to be here, which is heart wrenching at the best of times and your lonely hotel room is no comfort (especially given the number of beds it has).</description>
+      <description>You pay for your ticket, hotels, travel and then spend the rest of the year excitedly awaiting being able to attend the conference everyone is speaking about. Having travelled halfway across the country, braving weather you’d never ordinarily leave the house for, you arrive in the unrecognisable city. You’ve left your family to be here, which is heart wrenching at the best of times and your lonely hotel room is no comfort (especially given the number of beds it has).</description>
     </item>
     
   </channel>

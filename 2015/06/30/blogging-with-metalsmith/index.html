@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,12 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "Blogging with Metalsmith",
     "headline" : "Blogging with Metalsmith",
-    "description" : "I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home.",
+    "description" : "I\u0026rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I\u0026rsquo;m not overly familiar with) has been a problem. I\u0026rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it\u0026rsquo;s never felt like home.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -37,10 +37,10 @@
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2015",
-    "datePublished": "2015-06-30 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2015-06-30 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/",
-    "wordCount" : "352",
+    "datePublished": "2015-06-30 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2015-06-30 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2015\/06\/30\/blogging-with-metalsmith\/",
+    "wordCount" : "359",
     "keywords" : [ "metalsmith","blogging","javascript","Blog" ]
 }
 </script>
@@ -53,8 +53,9 @@
 <meta property="og:title" content="Blogging with Metalsmith" />
 <meta property="og:description" content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/" /><meta property="article:published_time" content="2015-06-30T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2015-06-30T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/" />
+<meta property="article:published_time" content="2015-06-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-06-30T00:00:00+00:00" />
 
 
     
@@ -93,7 +94,7 @@
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -151,7 +152,7 @@
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -209,14 +210,9 @@
   
   
   <div class="post">
-    
-
-<p>I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together <a href="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/">scripts</a> to deal with the custom parts of my blog build, but it&rsquo;s never felt like home.</p>
-
+    <p>I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together <a href="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/">scripts</a> to deal with the custom parts of my blog build, but it&rsquo;s never felt like home.</p>
 <p>I&rsquo;ve decided to start using <a href="http://metalsmith.io">Metalsmith</a> - a static site generator written in Javascript. It&rsquo;s existed before my switch to Jekyll and now seems to have enough of a plugin ecosystem in order to provide a collection of plugins to provide behaviour I need to make use of.</p>
-
 <h2 id="metalsmith">Metalsmith</h2>
-
 <p>Metalsmith operates much like a task runner like gulp, where a set of functions manipulate a number of files, one after another in order to eventually build a static site to your liking. A simple build script could be as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Metalsmith</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;metalsmith&#39;</span>),
     <span style="color:#a6e22e">markdown</span>   <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;metalsmith-markdown&#39;</span>),
@@ -226,20 +222,19 @@
   .<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">markdown</span>())
   .<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">templates</span>(<span style="color:#e6db74">&#39;swig&#39;</span>))
   .<span style="color:#a6e22e">build</span>();
-</code></pre></div>
-<p>This is just standard node script with dependencies installed via npm. Metalsmith assumes defaults of src and build for the source of markdown and destination of html. An example of markdown containing some useful front-matter might be as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>title: Blogging with Metalsmith<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>author: Ian<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>date: 2015-06-30<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>categories:
-  <span style="color:#66d9ef">-</span> Javascript<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>tags:
-  <span style="color:#66d9ef">-</span> metalsmith<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#66d9ef">-</span> javascript<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>---<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>I&#39;m switching blogging platforms once more...</code></pre></div>
-<p>It also assumes a default template directory under templates, containing a default post template &lsquo;post.html&rsquo; - which in the example is written in a swig template as below.</p>
+</code></pre></div><p>This is just standard node script with dependencies installed via npm. Metalsmith assumes defaults of src and build for the source of markdown and destination of html. An example of markdown containing some useful front-matter might be as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: Blogging with Metalsmith
+author: Ian
+date: 2015-06-30
+categories:
+  <span style="color:#66d9ef">-</span> Javascript
+tags:
+  <span style="color:#66d9ef">-</span> metalsmith
+  <span style="color:#66d9ef">-</span> javascript
+---
+I&#39;m switching blogging platforms once more...
+</code></pre></div><p>It also assumes a default template directory under templates, containing a default post template &lsquo;post.html&rsquo; - which in the example is written in a swig template as below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-twig" data-lang="twig">&lt;html&gt;
   &lt;body&gt;
     &lt;div class=&#34;post&#34;&gt;
@@ -248,9 +243,8 @@
     <span style="color:#75715e">{{</span> contents <span style="color:#f92672">|</span> <span style="color:#a6e22e">safe</span> <span style="color:#75715e">}}</span>
     &lt;/div&gt;
   &lt;/body&gt;
-&lt;/div&gt;</code></pre></div>
-<p>I&rsquo;ve managed to reduce my build time (though I&rsquo;m not currently compiling sass and have added a new sitemap), but am much more familiar with the toolchain in question. Hopefully that&rsquo;ll lead to further, more frequent updates not just in content, but also the design of my company site and this blog.</p>
-
+&lt;/div&gt;
+</code></pre></div><p>I&rsquo;ve managed to reduce my build time (though I&rsquo;m not currently compiling sass and have added a new sitemap), but am much more familiar with the toolchain in question. Hopefully that&rsquo;ll lead to further, more frequent updates not just in content, but also the design of my company site and this blog.</p>
 <p>I&rsquo;ll be adding future blogs about my metalsmith toolchain and hurdles with that I&rsquo;ve overcome.</p>
 
   </div>

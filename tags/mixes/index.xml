@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mixes on Ian Wootten</title>
+    <title>mixes on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/mixes/</link>
-    <description>Recent content in Mixes on Ian Wootten</description>
+    <description>Recent content in mixes on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Mar 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/mixes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 21 Mar 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/mixes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mixbooth</title>
       <link>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</link>
       <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid>
-      <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn&amp;#8217;t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you&amp;#8217;d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
+      <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn’t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you’d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
     </item>
     
   </channel>

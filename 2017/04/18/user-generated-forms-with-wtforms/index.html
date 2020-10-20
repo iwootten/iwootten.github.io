@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,7 +24,7 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "User Generated Forms with WTForms",
@@ -37,9 +37,9 @@
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2017",
-    "datePublished": "2017-04-18 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2017-04-18 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/",
+    "datePublished": "2017-04-18 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2017-04-18 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2017\/04\/18\/user-generated-forms-with-wtforms\/",
     "wordCount" : "1081",
     "keywords" : [ "python","wtforms","Blog" ]
 }
@@ -53,8 +53,9 @@
 <meta property="og:title" content="User Generated Forms with WTForms" />
 <meta property="og:description" content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/" /><meta property="article:published_time" content="2017-04-18T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-04-18T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/" />
+<meta property="article:published_time" content="2017-04-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-04-18T00:00:00+00:00" />
 
 
     
@@ -93,7 +94,7 @@
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -151,7 +152,7 @@
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -206,20 +207,14 @@
   
   
   <div class="post">
-    
-
-<p>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer. This was identified early on as a feature that shared a lot in common with existing form libraries, but our current renderer wasn&rsquo;t able to be easily isolated from the rest of the system and was therefore pushed onto a debt backlog after a possible approach had been prototyped.</p>
-
+    <p>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer. This was identified early on as a feature that shared a lot in common with existing form libraries, but our current renderer wasn&rsquo;t able to be easily isolated from the rest of the system and was therefore pushed onto a debt backlog after a possible approach had been prototyped.</p>
 <p>Due to the hard work of the entire team, we&rsquo;d made some strategic changes to the system that meant this was possible in my later months. <a href="https://github.com/wtforms/wtforms">WTForms</a> was the library we wanted to use, but we needed a number of features which weren&rsquo;t documented or supported out of the box. Chief among these was the ability to create forms dynamically, informed by a JSON description.</p>
-
 <h2 id="dynamic-form-definition">Dynamic form definition</h2>
-
 <p>WTForms generally expects metaclasses that describe form definitions, as per the following example from their docs:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyForm</span>(Form):
   first_name <span style="color:#f92672">=</span> StringField(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;First Name&#39;</span>, validators<span style="color:#f92672">=</span>[validators<span style="color:#f92672">.</span>input_required()])
-  last_name  <span style="color:#f92672">=</span> StringField(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;Last Name&#39;</span>, validators<span style="color:#f92672">=</span>[validators<span style="color:#f92672">.</span>optional()])</code></pre></div>
-<p>I found it easier to think as these definitions as &lsquo;schemas&rsquo; for form classes. Typically you&rsquo;d use them to describe a class which doesn&rsquo;t change, so WTForms use of them for describing our dynamic forms led to some problems.</p>
-
+  last_name  <span style="color:#f92672">=</span> StringField(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;Last Name&#39;</span>, validators<span style="color:#f92672">=</span>[validators<span style="color:#f92672">.</span>optional()])
+</code></pre></div><p>I found it easier to think as these definitions as &lsquo;schemas&rsquo; for form classes. Typically you&rsquo;d use them to describe a class which doesn&rsquo;t change, so WTForms use of them for describing our dynamic forms led to some problems.</p>
 <p>When the instantiated form is passed to jinja and rendered as part of a template helper call, appropriate inputs will be rendered for each field definition, with names corresponding to the attribute names (first_name, last_name). We can then take the post request form and pass as an argument to our form class to validate during a submission.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">register</span>(request):
   form <span style="color:#f92672">=</span> MyForm(request<span style="color:#f92672">.</span>POST)
@@ -229,8 +224,8 @@
       user<span style="color:#f92672">.</span>last_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>last_name<span style="color:#f92672">.</span>data
       user<span style="color:#f92672">.</span>save()
       redirect(<span style="color:#e6db74">&#39;register&#39;</span>)
-  <span style="color:#66d9ef">return</span> render_response(<span style="color:#e6db74">&#39;register.html&#39;</span>, form<span style="color:#f92672">=</span>form)</code></pre></div>
-<p>The approach taken for the ONS was to read in a json description from file and set field attributes dynamically within a method upon what was essentially an empty form class. I&rsquo;ve simplified the actual project code below to remove detail outside the example.</p>
+  <span style="color:#66d9ef">return</span> render_response(<span style="color:#e6db74">&#39;register.html&#39;</span>, form<span style="color:#f92672">=</span>form)
+</code></pre></div><p>The approach taken for the ONS was to read in a json description from file and set field attributes dynamically within a method upon what was essentially an empty form class. I&rsquo;ve simplified the actual project code below to remove detail outside the example.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_answer_fields</span>(question, data):
     answer_fields <span style="color:#f92672">=</span> {}
     <span style="color:#66d9ef">for</span> answer <span style="color:#f92672">in</span> question[<span style="color:#e6db74">&#39;answers&#39;</span>]:
@@ -255,13 +250,10 @@
         <span style="color:#66d9ef">else</span>:
             form <span style="color:#f92672">=</span> QuestionnaireForm()
 
-        <span style="color:#66d9ef">return</span> form</code></pre></div>
-<p>Here you see that we retrieve details of the json structure for a survey page, and maintain a map of answer fields to be set on the class. The answer ids within the page structure will always be unique and is used as the key for the mapping to each field type. In this way, the resultant form is a collection of fields able to be driven dynamically from our json description.</p>
-
+        <span style="color:#66d9ef">return</span> form
+</code></pre></div><p>Here you see that we retrieve details of the json structure for a survey page, and maintain a map of answer fields to be set on the class. The answer ids within the page structure will always be unique and is used as the key for the mapping to each field type. In this way, the resultant form is a collection of fields able to be driven dynamically from our json description.</p>
 <h2 id="validating-dynamic-forms">Validating Dynamic Forms</h2>
-
 <p>As well as the fields on our forms being customisable, the validators used upon them were too. This meant for instance, that some fields were optional or required and the messages used for validation needed to be informed by the survey&rsquo;s json description.</p>
-
 <p>Below you can see an example of the message for a DateRequired validator being updated based on the message from the schema. You can also see an example of modifying the behaviour of the validator, based on whether or not the date validator includes a day attribute as part of the data sent. This allows for the same validator to be used for different form representations of dates.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DateRequired</span>(object):
      <span style="color:#66d9ef">def</span> __init__(self, message<span style="color:#f92672">=</span>None):
@@ -275,8 +267,8 @@
                  <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation(self<span style="color:#f92672">.</span>message)
          <span style="color:#66d9ef">else</span>:
              <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>month<span style="color:#f92672">.</span>data <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>year<span style="color:#f92672">.</span>data:
-                 <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation(self<span style="color:#f92672">.</span>message)</code></pre></div>
-<p>In more complex situations, it was necessary to pass custom data to our validators to later check against. You can see below, when validating custom date ranges, we pass the &lsquo;to&rsquo; date and initialise the validator with it, before the call to the validator is made with the form (in this case a subform for just a date).</p>
+                 <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation(self<span style="color:#f92672">.</span>message)
+</code></pre></div><p>In more complex situations, it was necessary to pass custom data to our validators to later check against. You can see below, when validating custom date ranges, we pass the &lsquo;to&rsquo; date and initialise the validator with it, before the call to the validator is made with the form (in this case a subform for just a date).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DateRangeCheck</span>(object):
     <span style="color:#66d9ef">def</span> __init__(self, to_field_data<span style="color:#f92672">=</span>None, messages<span style="color:#f92672">=</span>None):
         self<span style="color:#f92672">.</span>to_field_data <span style="color:#f92672">=</span> to_field_data
@@ -300,8 +292,8 @@
             <span style="color:#66d9ef">if</span> date_diff<span style="color:#f92672">.</span>total_seconds() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
                 <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>ValidationError(self<span style="color:#f92672">.</span>messages[<span style="color:#e6db74">&#39;INVALID_DATE_RANGE_TO_FROM_SAME&#39;</span>])
             <span style="color:#66d9ef">elif</span> date_diff<span style="color:#f92672">.</span>total_seconds() <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
-                <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>ValidationError(self<span style="color:#f92672">.</span>messages[<span style="color:#e6db74">&#39;INVALID_DATE_RANGE_TO_BEFORE_FROM&#39;</span>])</code></pre></div>
-<p>We actually found it necessary to go one step further in that we needed to halt validation for forms in surveys which were considered optional. The solution was an OptionalForm, allowing empty forms to be considered valid if they had no content.</p>
+                <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>ValidationError(self<span style="color:#f92672">.</span>messages[<span style="color:#e6db74">&#39;INVALID_DATE_RANGE_TO_BEFORE_FROM&#39;</span>])
+</code></pre></div><p>We actually found it necessary to go one step further in that we needed to halt validation for forms in surveys which were considered optional. The solution was an OptionalForm, allowing empty forms to be considered valid if they had no content.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OptionalForm</span>(object):
      <span style="color:#e6db74">&#34;&#34;&#34;
 </span><span style="color:#e6db74">     Allows completely empty form and stops the validation chain from continuing.
@@ -325,11 +317,9 @@
              empty_form <span style="color:#f92672">&amp;=</span> empty_field
 
          <span style="color:#66d9ef">if</span> empty_form:
-             <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation()</code></pre></div>
-<h2 id="final-thoughts">Final Thoughts</h2>
-
+             <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation()
+</code></pre></div><h2 id="final-thoughts">Final Thoughts</h2>
 <p>One of the main pain points with WTForms adoption was the lack of form-level validation supported out of the box. We had for instance a number of custom forms, which fell outside the generic examples above, where it was necessary to override the validate method on the form itself. This added complexity to the form that I felt belonged in a validator, similar to the field level ones WTForms supports defined in separate classes. Adding to option of form validators would be great and cover most of the bases and seems like an <a href="https://github.com/wtforms/wtforms/issues/55">oft-requested feature</a>.</p>
-
 <p>I felt that the use of WTForms really helped create a far more structured approach to form design, creation and validation within our project. Getting to the point where we could isolate and shift it over to a common library was a real achievement.</p>
 
   </div>

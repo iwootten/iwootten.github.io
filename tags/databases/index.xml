@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Databases on Ian Wootten</title>
+    <title>databases on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/databases/</link>
-    <description>Recent content in Databases on Ian Wootten</description>
+    <description>Recent content in databases on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Mar 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/databases/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 01 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/databases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breaking up Relationships with CouchDB</title>
       <link>https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/</guid>
       <description>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat &amp;lsquo;belated&amp;rsquo;]
-Beware &amp;#8211; there&amp;#8217;s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.
+Beware – there’s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.
 For me, my first experiments working with databases were performed with Oracle, the staple of our computer science course at the time.</description>
     </item>
     

@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Js on Ian Wootten</title>
+    <title>js on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/js/</link>
-    <description>Recent content in Js on Ian Wootten</description>
+    <description>Recent content in js on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/js/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Web Development Stack in 2018</title>
       <link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link>
@@ -27,7 +23,7 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
       <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/01/04/why-i-choose-popular-frameworks/</guid>
-      <description>I feel compelled to write this post so late in the day after clocking Tyler Renelle&amp;#8217;s rant on github about his problems with the popularity of certain JS frameworks (in the main Backbone.js). After having written apps in a variety of JS frameworks (Backbone, Spine and Meteor), I&amp;#8217;ve learned that the feature set of a framework is not the only thing I hold dear when making a choice between them.</description>
+      <description>I feel compelled to write this post so late in the day after clocking Tyler Renelle’s rant on github about his problems with the popularity of certain JS frameworks (in the main Backbone.js). After having written apps in a variety of JS frameworks (Backbone, Spine and Meteor), I’ve learned that the feature set of a framework is not the only thing I hold dear when making a choice between them.</description>
     </item>
     
     <item>
@@ -36,8 +32,8 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
       <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2012/11/23/oh-crap-im-a-frontend-developer/</guid>
-      <description>When I was first tiptoeing in the waters of web development (early 2000&amp;#8242;s), getting a grips on job descriptions was simple. There were 2 types of people in our industry: designers or developers. You either drew websites, or you built websites &amp;#8211; that was it.
-As time went on people seemed to invent new titles: &amp;#8220;UX Designers&amp;#8221; were the first to appear on the scene to me, and we&amp;#8217;re still to this day figuring out what this role really entails.</description>
+      <description>When I was first tiptoeing in the waters of web development (early 2000′s), getting a grips on job descriptions was simple. There were 2 types of people in our industry: designers or developers. You either drew websites, or you built websites – that was it.
+As time went on people seemed to invent new titles: “UX Designers” were the first to appear on the scene to me, and we’re still to this day figuring out what this role really entails.</description>
     </item>
     
   </channel>

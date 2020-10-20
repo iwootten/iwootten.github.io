@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2013/01 on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/2013/01/</link>
     <description>Recent content in 2013/01 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 22 Jan 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/2013/01/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2013/01/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Move Towards Static Websites</title>
       <link>https://www.ianwootten.co.uk/2013/01/22/the-move-towards-static-websites/</link>
       <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/01/22/the-move-towards-static-websites/</guid>
-      <description>There&amp;#8217;s some discussion on new podcast &amp;#8220;The Back to Front Show&amp;#8221; on why of late we&amp;#8217;re seeing so many static websites cropping up. It seem like now more than ever, we&amp;#8217;re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing.
+      <description>There’s some discussion on new podcast “The Back to Front Show” on why of late we’re seeing so many static websites cropping up. It seem like now more than ever, we’re seeing both developers and designers jump ship to this way of working, having long been using database backed solutions (such as WordPress/Drupal) to manage their publishing.
 When I talk about a static site, I think of it of raw HTML sat on a server and nothing else.</description>
     </item>
     
@@ -27,8 +22,8 @@ When I talk about a static site, I think of it of raw HTML sat on a server and n
       <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/01/21/new-year-new-theme/</guid>
-      <description>I&amp;#8217;ve long made use of the default theme on WordPress, which I&amp;#8217;ve always felt wasn&amp;#8217;t entirely &amp;#8220;me&amp;#8221;. The theme now live is one I&amp;#8217;ve been tinkering with for a while now based on the lovely preview design used in the prose.io document editing tool for github. I really like the focus on simplicity and think it suits me well.
-I&amp;#8217;ve added some different styling for the navigation elements, given they didn&amp;#8217;t already exist on prose.</description>
+      <description>I’ve long made use of the default theme on WordPress, which I’ve always felt wasn’t entirely “me”. The theme now live is one I’ve been tinkering with for a while now based on the lovely preview design used in the prose.io document editing tool for github. I really like the focus on simplicity and think it suits me well.
+I’ve added some different styling for the navigation elements, given they didn’t already exist on prose.</description>
     </item>
     
     <item>
@@ -37,7 +32,7 @@ I&amp;#8217;ve added some different styling for the navigation elements, given t
       <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2013/01/04/why-i-choose-popular-frameworks/</guid>
-      <description>I feel compelled to write this post so late in the day after clocking Tyler Renelle&amp;#8217;s rant on github about his problems with the popularity of certain JS frameworks (in the main Backbone.js). After having written apps in a variety of JS frameworks (Backbone, Spine and Meteor), I&amp;#8217;ve learned that the feature set of a framework is not the only thing I hold dear when making a choice between them.</description>
+      <description>I feel compelled to write this post so late in the day after clocking Tyler Renelle’s rant on github about his problems with the popularity of certain JS frameworks (in the main Backbone.js). After having written apps in a variety of JS frameworks (Backbone, Spine and Meteor), I’ve learned that the feature set of a framework is not the only thing I hold dear when making a choice between them.</description>
     </item>
     
     <item>

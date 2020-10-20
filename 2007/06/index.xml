@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2007/06 on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/2007/06/</link>
     <description>Recent content in 2007/06 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 19 Jun 2007 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/2007/06/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2007/06/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I want this Coffee Table Please</title>
       <link>https://www.ianwootten.co.uk/2007/06/19/i-want-this-coffee-table-please/</link>
       <pubDate>Tue, 19 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/06/19/i-want-this-coffee-table-please/</guid>
-      <description>It responds to when items are place upon it by lighting up leds under its surface. It&amp;#8217;s only $2,500 &amp;#8211; thats cheap like!</description>
+      <description></description>
     </item>
     
     <item>
@@ -35,7 +30,7 @@
       <pubDate>Fri, 15 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/06/15/were-off-to-see-the-hackers/</guid>
-      <description>The wonderful hackers of, er Britain. When I say we, I actually mean me because my wife to be has to head back to Abergavenny before me. Which means that actually I&amp;#8217;ll be the only one able to make use of my free invite to see the rumble strips. Oh well.I&amp;#8217;m actually a bit nervy about heading over &amp;#8211; I have done an extreme lack of preparation in terms of programming and I&amp;#8217;m going to be sleeping in a room full of nerds and pcs, or possibly not.</description>
+      <description>The wonderful hackers of, er Britain. When I say we, I actually mean me because my wife to be has to head back to Abergavenny before me. Which means that actually I’ll be the only one able to make use of my free invite to see the rumble strips. Oh well.I’m actually a bit nervy about heading over – I have done an extreme lack of preparation in terms of programming and I’m going to be sleeping in a room full of nerds and pcs, or possibly not.</description>
     </item>
     
     <item>
@@ -44,7 +39,7 @@
       <pubDate>Fri, 15 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/06/15/whats-up-with-last.fm/</guid>
-      <description>Last.fm seems to be down at the moment for the last couple of minutes. Anyone know what&amp;#8217;s going on?[Update:Looks like this was just a blip, ho hum]</description>
+      <description>Last.fm seems to be down at the moment for the last couple of minutes. Anyone know what’s going on?[Update:Looks like this was just a blip, ho hum]</description>
     </item>
     
     <item>
@@ -53,7 +48,7 @@
       <pubDate>Sun, 03 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/06/03/google-developer-day/</guid>
-      <description>I&amp;#8217;ve just returned from my stint in the South East after being invited to attend Googles London Developer day on thursday and remaining there to hang out in Haddenham for the weekend. Theres a ton of photo&amp;#8217;s over on a picasa web album which has been built up from peoples pics. I even got interviewed regarding using the google web toolkit, but my experience was not exactly extended so I don&amp;#8217;t know if it would get used at all.</description>
+      <description>I’ve just returned from my stint in the South East after being invited to attend Googles London Developer day on thursday and remaining there to hang out in Haddenham for the weekend. Theres a ton of photo’s over on a picasa web album which has been built up from peoples pics. I even got interviewed regarding using the google web toolkit, but my experience was not exactly extended so I don’t know if it would get used at all.</description>
     </item>
     
   </channel>

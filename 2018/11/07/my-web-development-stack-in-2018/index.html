@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,13 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "My Web Development Stack in 2018",
     "headline" : "My Web Development Stack in 2018",
-    "description" : "Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
-I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.",
+    "description" : "Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.\nI really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -38,9 +37,9 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2018",
-    "datePublished": "2018-11-07 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2018-11-07 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/",
+    "datePublished": "2018-11-07 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2018-11-07 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2018\/11\/07\/my-web-development-stack-in-2018\/",
     "wordCount" : "961",
     "keywords" : [ "js","docker","python","Blog" ]
 }
@@ -56,8 +55,9 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
 <meta property="og:description" content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
 I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/" /><meta property="article:published_time" content="2018-11-07T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-11-07T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/" />
+<meta property="article:published_time" content="2018-11-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-11-07T00:00:00+00:00" />
 
 
     
@@ -96,7 +96,7 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -154,7 +154,7 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -215,64 +215,34 @@ I really wanted to be a member of the Ruby crew for a time and ended up buying m
   
   
   <div class="post">
-    
-
-<p>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.</p>
-
+    <p>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.</p>
 <p>I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.  (As always happens with technical example based books). Other languages (such as Java) I’ve used regularly at my workplace and then promptly moved on from as I didn’t like the language.</p>
-
 <p>Over the last few years, things have settled down somewhat. I’ve got less time to spare and so I tend to be a little more selective over the tools I use. I seem to always pick up libraries that are familiar to me, where in the past I may have been a bit more adventurous. I thought I’d write down my web stack I have now in 2018 and explain why I use each tool. This is based on my now self identifying as a Python/JavaScript web developer.</p>
-
 <h2 id="direnv">Direnv</h2>
-
 <p><a href="https://github.com/direnv/direnv">Direnv</a> is a really useful tool for activating shell based .envrc files based on the directory you’re within. I find them a useful way to store project specific settings which I don’t want to commit and can easily ignore from source control.</p>
-
 <h2 id="docker">Docker</h2>
-
 <p><a href="https://www.docker.com">Docker</a> is the way I isolate my host machine from the app I’m developing. This is done through use of containers (which broadly are similar to virtual machines but use less host resource and are more performant).</p>
-
 <p>Docker is available on multiple platforms which makes taking something I’ve written on my Mac dev machine and getting it working in a cloud based linux environment much simpler than manually installing a host of libraries. As docker is driven by Dockerfiles, it means that much of that configuration is now captured as code and stored in source control.</p>
-
 <p>Where a project has requirements more complex than a single machine, docker has a command docker-compose which allows me to run a more complex setup. I can specify links between each of a projects required containers and keep the entire thing shielded from my machine.</p>
-
 <h2 id="pipenv">Pipenv</h2>
-
 <p><a href="https://pypi.org/project/pipenv/">Pipenv</a> is a Python environment management library which builds on top of other libraries such as pip and virtualenv. It allows for easy installation of libraries for a project and is easier to use and more secure by default than pip. It is written by <a href="https://www.kennethreitz.org/">Kenneth Reitz</a> who is also the creator of the popular Requests library.</p>
-
 <p>It took me some time to move over to pipenv due to the different workflow involved and being used to pip, but now saves me a lot of time with hunting for the location of virtual environments or remembering the location of my Python 3 install.</p>
-
 <h2 id="django">Django</h2>
-
 <p><a href="https://www.djangoproject.com/">Django</a> is my go to framework for most of my larger web based projects. It gives me everything I need to get a project off of the ground quickly, without having to immediately worry about building common core elements. Out of the box it includes authentication, models, database storage, migrations and somewhat uniquely from other frameworks - a dynamic admin interface.</p>
-
 <p>It also has a thriving open source community who develop a wide number of extension apps. If you’re looking to do something custom, it’s likely it’s already been built.</p>
-
 <h2 id="flask">Flask</h2>
-
 <p><a href="http://flask.pocoo.org/">Flask</a> is a micro framework I typically use for web projects with a small list of requirements.</p>
-
 <p>There are a long list of extensions available for it which can be easily installed, such as those for database storage or authentication. By only installing extensions you need, this results in a much smaller overall app which can be deployed and started more easily.</p>
-
 <p>Typically I might use flask as a simple api endpoint that doesn’t require any auth.</p>
-
-<h2 id="vue-js">Vue.js</h2>
-
+<h2 id="vuejs">Vue.js</h2>
 <p><a href="https://vuejs.org/">Vue.js</a> is the JavaScript framework I use to create single page applications. It allows me to easily break a complex set of behaviours into a more structured and well thought out application.</p>
-
 <p>I originally opted for Vue.js over react simply because I found it easier to understand. It also is simpler to migrate a existing js app over to Vue, or enhance a existing static page with Vue based components.</p>
-
 <p>I particularly like Vue’s cli. It makes it very easy to quickly scaffold an entire application and write end to end tests for it.</p>
-
 <h2 id="semantic-ui">Semantic UI</h2>
-
 <p><a href="https://semantic-ui.com/">Semantic UI</a> is a UI library I use when working on my own projects. This saves me a bunch of time when rapidly prototyping an application. I can build responsive pages and need not worry too much about browser differences for every element.</p>
-
 <p>Although I’ve used twitter’s bootstrap a lot in the past, I find the components in Semantic easier on the eye and their semantic naming makes more sense. It also helps that Semantic isn’t the most oft used library in my circles so in some small way contributes to it seeming different.</p>
-
 <p>Semantic also has an <a href="https://react.semantic-ui.com/">official ui react integration</a>, meaning if I ever did choose to make the move to react it would hopefully be simpler than manually creating them myself.</p>
-
 <h2 id="summary">Summary</h2>
-
 <p>So, that’s my current web stack in 2018. I could have gone in to far more detail on the extensions I use in each framework, but I may well save that for a future post. No doubt it will change over time, but hopefully more slowly than it has done previously. If you&rsquo;re interested in hiring me to use any of the above give me a shout at <a href="mailto:hi@niftydigits.com">hi@niftydigits.com</a></p>
 
   </div>

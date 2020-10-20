@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Ian Wootten</title>
+    <title>linux on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/linux/</link>
-    <description>Recent content in Linux on Ian Wootten</description>
+    <description>Recent content in linux on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Sep 2012 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 04 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recovering Images from SD Cards with PhotoRec</title>
       <link>https://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</link>
       <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</guid>
-      <description>I had the horrible situation last Sunday following removing a number of pictures using an SD reader from my SD card that when I inserted it in my camera, it registered nothing upon it. My heart sunk, because this card is stuffed full of images of me and my family (along with my 1 year old son growing up) and I was unsure of which ones I&amp;#8217;d actually backed up.</description>
+      <description>I had the horrible situation last Sunday following removing a number of pictures using an SD reader from my SD card that when I inserted it in my camera, it registered nothing upon it. My heart sunk, because this card is stuffed full of images of me and my family (along with my 1 year old son growing up) and I was unsure of which ones I’d actually backed up. After perusing the hidden files on the card, all I could discover was the files I’d most recently transferred from the card….</description>
     </item>
     
     <item>
@@ -26,17 +22,17 @@
       <pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/10/16/bash-bash/</guid>
-      <description>I was quite impressed with myself the other day that I&amp;#8217;d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
+      <description>I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
 I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that.</description>
     </item>
     
     <item>
       <title>XGL, Compiz on Dapper 64 - Too much to ask?</title>
-      <link>https://www.ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64---too-much-to-ask/</link>
+      <link>https://www.ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask/</link>
       <pubDate>Wed, 06 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64---too-much-to-ask/</guid>
-      <description>I spent a large amount of time last week, after realising that I could very easy install compiz and XGL on my machine at uni, trying to install it upon my home machine. As its 64 bit, and owing to previous problems I&amp;#8217;d experienced installing 64 bit applications (like linux for instance), I spent the best part of 2 days attempting to install both, before caving and completely giving up.I got to the stage where XGL is installed properly and seems to work ok, but the compiz gnome window manager isn&amp;#8217;t working properly, meaning I have no borders to any panes I create.</description>
+      <guid>https://www.ianwootten.co.uk/2006/09/06/xgl-compiz-on-dapper-64-too-much-to-ask/</guid>
+      <description>I spent a large amount of time last week, after realising that I could very easy install compiz and XGL on my machine at uni, trying to install it upon my home machine. As its 64 bit, and owing to previous problems I’d experienced installing 64 bit applications (like linux for instance), I spent the best part of 2 days attempting to install both, before caving and completely giving up.I got to the stage where XGL is installed properly and seems to work ok, but the compiz gnome window manager isn’t working properly, meaning I have no borders to any panes I create.</description>
     </item>
     
     <item>
@@ -45,16 +41,16 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
       <pubDate>Sat, 19 Aug 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/08/19/slugs-talking-nicely/</guid>
-      <description>I&amp;#8217;ve had a couple of problems getting my slug working nice under ubuntu. Firstly, although it is recognised by default and I can connect and browse via samba, when I actually came to playing my media, everything got screwed up, with Amarok trying to launch kmail&amp;#8230;&amp;#8230; I could copy files to ubuntu and play them properly from there, but straight off of the slug was a no go.I found the solution was to mount it under ubuntu using the command:sudo mount -t smbfs //NAS/DISK 1 /media/slug -o username=user,password=passWhere user and pass are your username and password for the slug respectively and the backslash indicates a space.</description>
+      <description>I’ve had a couple of problems getting my slug working nice under ubuntu. Firstly, although it is recognised by default and I can connect and browse via samba, when I actually came to playing my media, everything got screwed up, with Amarok trying to launch kmail…… I could copy files to ubuntu and play them properly from there, but straight off of the slug was a no go.I found the solution was to mount it under ubuntu using the command:sudo mount -t smbfs //NAS/DISK 1 /media/slug -o username=user,password=passWhere user and pass are your username and password for the slug respectively and the backslash indicates a space.</description>
     </item>
     
     <item>
       <title>More Ubuntu? - ATI 9600 and SBLive</title>
-      <link>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</link>
+      <link>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu-ati-9600-and-sblive/</link>
       <pubDate>Sat, 12 Aug 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu---ati-9600-and-sblive/</guid>
-      <description>Another post about ubuntu? Where will it end?I was fairly excited from thursday evenings antics of getting things working on my machine at home, I thought I&amp;#8217;d give it a try with my dev machine at uni. My graphics card, a 9600 (yes ATI, I know!) had been screwed since the day I&amp;#8217;d put on Dapper, and to be honest, as I&amp;#8217;m not using it that much for GL stuff, I wasn&amp;#8217;t really bothered about it.</description>
+      <guid>https://www.ianwootten.co.uk/2006/08/12/more-ubuntu-ati-9600-and-sblive/</guid>
+      <description>Another post about ubuntu? Where will it end?I was fairly excited from thursday evenings antics of getting things working on my machine at home, I thought I’d give it a try with my dev machine at uni. My graphics card, a 9600 (yes ATI, I know!) had been screwed since the day I’d put on Dapper, and to be honest, as I’m not using it that much for GL stuff, I wasn’t really bothered about it.</description>
     </item>
     
     <item>
@@ -63,7 +59,7 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
       <pubDate>Thu, 10 Aug 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/08/10/did-i-speak-too-soon/</guid>
-      <description>It seems I may have spoken too soon about my linux joys with ubuntu. After performing a dist-upgrade on my previous beta version of Dapper, I discovered I&amp;#8217;d have to go through the same problems of downloading kernel source and linux header packages for my new kernel version.I also discovered after doing this that actually there were further problems on booting Dapper straight up. Apparently the pointers to drives get screwed up somewhere in the process.</description>
+      <description>It seems I may have spoken too soon about my linux joys with ubuntu. After performing a dist-upgrade on my previous beta version of Dapper, I discovered I’d have to go through the same problems of downloading kernel source and linux header packages for my new kernel version.I also discovered after doing this that actually there were further problems on booting Dapper straight up. Apparently the pointers to drives get screwed up somewhere in the process.</description>
     </item>
     
     <item>
@@ -72,7 +68,7 @@ I found a program called fileschanged, which fulfilled half the problem, namely 
       <pubDate>Mon, 07 Aug 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/08/07/ubuntu-working/</guid>
-      <description>FInally, after a grand total of 10 months, I have a 64bit version of Ubuntu Linux working upon my home machine.This is great news, not only does it mean that I have a wonderful OS to try out for size, but that I can easily convert my subversion server code and latex source to my machine.As I&amp;#8217;ve never mentioned it before, I&amp;#8217;ll detail what the problem was here. First up, the graphics card didn&amp;#8217;t have drivers which were working which meant that my X800 was pretty pathetic to be quite honest with you.</description>
+      <description>FInally, after a grand total of 10 months, I have a 64bit version of Ubuntu Linux working upon my home machine.This is great news, not only does it mean that I have a wonderful OS to try out for size, but that I can easily convert my subversion server code and latex source to my machine.As I’ve never mentioned it before, I’ll detail what the problem was here. First up, the graphics card didn’t have drivers which were working which meant that my X800 was pretty pathetic to be quite honest with you.</description>
     </item>
     
   </channel>

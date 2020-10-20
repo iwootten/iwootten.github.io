@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Business on Ian Wootten</title>
+    <title>business on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/business/</link>
-    <description>Recent content in Business on Ian Wootten</description>
+    <description>Recent content in business on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Jan 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/business/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/business/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>There&#39;s No Such Thing as a Side Project</title>
       <link>https://www.ianwootten.co.uk/2016/01/20/theres-no-such-thing-as-a-side-project/</link>

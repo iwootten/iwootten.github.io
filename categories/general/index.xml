@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General on Ian Wootten</title>
@@ -6,11 +6,7 @@
     <description>Recent content in General on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/categories/general/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What’s in a name?</title>
       <link>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</link>
@@ -28,9 +24,8 @@ When I picked the name, I was still a PhD student at University and wanted somet
       
       <guid>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</guid>
       <description>All my most recent blog posts seem to be about updating my blog tooling (much as Rick commented earlier today). By recent, I obviously mean within the last 5 years.
-I think I change blog platforms more often than I blog!
-&amp;mdash; Rick Hurst (@rickhurst) October 4, 2018 
-I back tracked through my blog updates and discovered I&amp;rsquo;ve used 5 different tools over my 15 year history on the web.</description>
+I back tracked through my blog updates and discovered I&amp;rsquo;ve used 5 different tools over my 15 year history on the web.
+ Moveable Type (2003) b2/Cafelog (2003) WordPress (2003) Jekyll (2014) Metalsmith (2015) Hugo (2018)  Something got lost in the process of migrating through all these blogging platforms, using increasingly complex plugins to generate what is simple static html.</description>
     </item>
     
     <item>
@@ -49,7 +44,7 @@ As a developer, I sometimes feel it&amp;rsquo;s impossible to easily show a conc
       <pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2009/02/15/how-has-web-use-changed-your-life/</guid>
-      <description>I&amp;#8217;ve been pondering this morning how the use of the internet has (or may have) changed my life. As a child/teen during the web&amp;#8217;s infancy, I was blissfully unaware that so many lifes/careers/relationships would be enabled or changed as a result of the interactions it might facilitate. I hadn&amp;#8217;t even heard of google prior to arriving at university and two years prior to that had never had internet access anywhere locally.</description>
+      <description>I’ve been pondering this morning how the use of the internet has (or may have) changed my life. As a child/teen during the web’s infancy, I was blissfully unaware that so many lifes/careers/relationships would be enabled or changed as a result of the interactions it might facilitate. I hadn’t even heard of google prior to arriving at university and two years prior to that had never had internet access anywhere locally.</description>
     </item>
     
     <item>
@@ -58,7 +53,7 @@ As a developer, I sometimes feel it&amp;rsquo;s impossible to easily show a conc
       <pubDate>Tue, 19 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/06/19/i-want-this-coffee-table-please/</guid>
-      <description>It responds to when items are place upon it by lighting up leds under its surface. It&amp;#8217;s only $2,500 &amp;#8211; thats cheap like!</description>
+      <description></description>
     </item>
     
     <item>
@@ -67,15 +62,15 @@ As a developer, I sometimes feel it&amp;rsquo;s impossible to easily show a conc
       <pubDate>Thu, 24 May 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/05/24/yay-for-devday/</guid>
-      <description>Wow! A long time ago I signed up for google&amp;#8217;s developer day, to be on their waiting list. I&amp;#8217;d completely forgotten but just got an invite asking me if I wanted to come along. Crazy! First yahoo, now google! I&amp;#8217;m very, very excited.Obviously I am not more excited about either of these days than my wedding day&amp;#8230; </description>
+      <description>Wow! A long time ago I signed up for google’s developer day, to be on their waiting list. I’d completely forgotten but just got an invite asking me if I wanted to come along. Crazy! First yahoo, now google! I’m very, very excited.Obviously I am not more excited about either of these days than my wedding day… </description>
     </item>
     
     <item>
       <title>Microsoft to acquire Yahoo? - Cost? $50 Billion!</title>
-      <link>https://www.ianwootten.co.uk/2007/05/04/microsoft-to-acquire-yahoo---cost-50-billion/</link>
+      <link>https://www.ianwootten.co.uk/2007/05/04/microsoft-to-acquire-yahoo-cost-50-billion/</link>
       <pubDate>Fri, 04 May 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2007/05/04/microsoft-to-acquire-yahoo---cost-50-billion/</guid>
+      <guid>https://www.ianwootten.co.uk/2007/05/04/microsoft-to-acquire-yahoo-cost-50-billion/</guid>
       <description>Mashable is reporting that a Microsoft-Yahoo merger may be on the cards, which is a fairly bizarre prospect.
 The price? $50 Billion, is Yahoo only worth 30 odd YouTubes? I for one think not.</description>
     </item>
@@ -86,7 +81,7 @@ The price? $50 Billion, is Yahoo only worth 30 odd YouTubes? I for one think not
       <pubDate>Wed, 21 Mar 2007 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2007/03/21/threshers-voucher-number-2/</guid>
-      <description>[via Vecosys]I&amp;#8217;ve just read on vecosys&amp;#8217; blog that Stormhoek has just posted Threshers Voucher Number 2. This will most certainly come in handy for all that wine we need to get for the wedding&amp;#8230;.Go grab it over here.</description>
+      <description>[via Vecosys]I’ve just read on vecosys’ blog that Stormhoek has just posted Threshers Voucher Number 2. This will most certainly come in handy for all that wine we need to get for the wedding….Go grab it over here.</description>
     </item>
     
     <item>
@@ -123,8 +118,7 @@ The price? $50 Billion, is Yahoo only worth 30 odd YouTubes? I for one think not
       
       <guid>https://www.ianwootten.co.uk/2007/01/16/why-cant-every-day-be-a-holiday/</guid>
       <description>I had a some great times away on holidays recently. The first was at New Year in Rhayader with the usual suspects getting absolutely soaked and vowing never to let anyone else plan a walk ever again. It was good to get outside away from these pesky machines.
-  
-As if that wasn&amp;#8217;t enough, I went away to France to the slightly more exciting Alps for a skiing holiday for a week too.</description>
+As if that wasn’t enough, I went away to France to the slightly more exciting Alps for a skiing holiday for a week too.</description>
     </item>
     
     <item>
@@ -133,7 +127,7 @@ As if that wasn&amp;#8217;t enough, I went away to France to the slightly more e
       <pubDate>Thu, 21 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/12/21/techcrunchuk-non-pantomime-continues/</guid>
-      <description>Apparently, according to the free English dictionary there is a couple of definitions other than the traditional UK understanding of the word pantomime. For those international readers who don&amp;#8217;t know, a pantomime is a pretty awful example of B-List celebrities acting ability in the UK in which involves them dressing up in bad costumes and acting out a fairy tale or story. In Cardiff, the big panto is Jack and the Giant Beanstalk &amp;#8211; where Jack is played by John Barrowman (or Captain Jack from Torchwood and Dr Who).</description>
+      <description>Apparently, according to the free English dictionary there is a couple of definitions other than the traditional UK understanding of the word pantomime. For those international readers who don’t know, a pantomime is a pretty awful example of B-List celebrities acting ability in the UK in which involves them dressing up in bad costumes and acting out a fairy tale or story. In Cardiff, the big panto is Jack and the Giant Beanstalk – where Jack is played by John Barrowman (or Captain Jack from Torchwood and Dr Who).</description>
     </item>
     
     <item>
@@ -142,7 +136,7 @@ As if that wasn&amp;#8217;t enough, I went away to France to the slightly more e
       <pubDate>Tue, 19 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/12/19/digg-gets-video-and-podcasts/</guid>
-      <description>Digg.com is sporting the ability to be able to now rate online video and podcasts. Postcast searching is in limited beta for registered users only.I just spent a while perusing some items of interest, and found a great segment of play! over on google. This just builds on the fact that Mario has the most awesome music ever.The searching of podcasts is dangerously close to an idea I&amp;#8217;ve currently working on myself for a while now.</description>
+      <description>Digg.com is sporting the ability to be able to now rate online video and podcasts. Postcast searching is in limited beta for registered users only.I just spent a while perusing some items of interest, and found a great segment of play! over on google. This just builds on the fact that Mario has the most awesome music ever.The searching of podcasts is dangerously close to an idea I’ve currently working on myself for a while now.</description>
     </item>
     
     <item>
@@ -151,7 +145,7 @@ As if that wasn&amp;#8217;t enough, I went away to France to the slightly more e
       <pubDate>Tue, 19 Dec 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/12/19/everything-in-moderation/</guid>
-      <description>Apparently coke isn&amp;#8217;t that good for you &amp;#8211; a few of my friends might like to take heed of that advice. But, you can do some cool things with a lot of it.</description>
+      <description>Apparently coke isn’t that good for you – a few of my friends might like to take heed of that advice. But, you can do some cool things with a lot of it.</description>
     </item>
     
     <item>
@@ -160,7 +154,7 @@ As if that wasn&amp;#8217;t enough, I went away to France to the slightly more e
       <pubDate>Tue, 14 Nov 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/11/14/zach-braff-makes-an-appearance-at-threadless/</guid>
-      <description>The amazing Zach Braff has made an appearance over at threadless to show off the t-shirt which was designed to promote his new film, &amp;#8220;The Last Kiss&amp;#8221;. Apparently according to the audio interview he gave, he also was going to try to wear it on scrubs at some point, with a cheeky reference to the film. It&amp;#8217;s also featuring as part of their current $10 sale in the run up to christmas.</description>
+      <description>The amazing Zach Braff has made an appearance over at threadless to show off the t-shirt which was designed to promote his new film, “The Last Kiss”. Apparently according to the audio interview he gave, he also was going to try to wear it on scrubs at some point, with a cheeky reference to the film. It’s also featuring as part of their current $10 sale in the run up to christmas.</description>
     </item>
     
     <item>
@@ -169,8 +163,8 @@ As if that wasn&amp;#8217;t enough, I went away to France to the slightly more e
       <pubDate>Tue, 31 Oct 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/10/31/halloween/</guid>
-      <description>Does anyone else get the distinct impression that halloween is reserved for lamers? I mean, correct me if I&amp;#8217;m wrong, it stems from a pagan festival celebrating a time at which spirits can make contact with the physical world. Is that something people really want to be celebrating?
-I assume that the majority of the world goes along with the fact its just a bit of fun, a time at which kids get dressed up and collect sweets door-to-door, punishing those who don&amp;#8217;t pay up with a bombing of baking compnents and parents play the niave fools.</description>
+      <description>Does anyone else get the distinct impression that halloween is reserved for lamers? I mean, correct me if I’m wrong, it stems from a pagan festival celebrating a time at which spirits can make contact with the physical world. Is that something people really want to be celebrating?
+I assume that the majority of the world goes along with the fact its just a bit of fun, a time at which kids get dressed up and collect sweets door-to-door, punishing those who don’t pay up with a bombing of baking compnents and parents play the niave fools.</description>
     </item>
     
     <item>
@@ -206,7 +200,7 @@ I assume that the majority of the world goes along with the fact its just a bit 
       <pubDate>Sun, 03 Sep 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/09/03/hello/</guid>
-      <description>Hi there, we&amp;#8217;ve not spoken in a while. How&amp;#8217;s you?It seems I&amp;#8217;ve been succumbing to a lifestyle of late that I wish I would never end up at &amp;#8211; that of working within a &amp;#8220;routine&amp;#8221;. I must be getting old. The whole of last week seemed a little bit of a drain, working my ass off trying to get tiny parts of code to work properly in the day and the rest of the time being tired that I was staying up late to give myself alone time in the evenings.</description>
+      <description>Hi there, we’ve not spoken in a while. How’s you?It seems I’ve been succumbing to a lifestyle of late that I wish I would never end up at – that of working within a “routine”. I must be getting old. The whole of last week seemed a little bit of a drain, working my ass off trying to get tiny parts of code to work properly in the day and the rest of the time being tired that I was staying up late to give myself alone time in the evenings.</description>
     </item>
     
     <item>
@@ -215,7 +209,7 @@ I assume that the majority of the world goes along with the fact its just a bit 
       <pubDate>Mon, 14 Aug 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/08/14/i-want-to-contribute/</guid>
-      <description>I&amp;#8217;ve been wanting to create a site which attracts lot of attention for ages. Not to create some profit-making venture, just to know that my voice was being listened too elsewhere and hopefully appreciated. I suppose that goes for my PhD too. It&amp;#8217;s kind of depressing however that almost everything ever has been done, and every avenue seems blocked in both respects. How do you contribute to a world that is uninsterested in what you have to say?</description>
+      <description>I’ve been wanting to create a site which attracts lot of attention for ages. Not to create some profit-making venture, just to know that my voice was being listened too elsewhere and hopefully appreciated. I suppose that goes for my PhD too. It’s kind of depressing however that almost everything ever has been done, and every avenue seems blocked in both respects. How do you contribute to a world that is uninsterested in what you have to say?</description>
     </item>
     
     <item>
@@ -224,7 +218,7 @@ I assume that the majority of the world goes along with the fact its just a bit 
       <pubDate>Mon, 07 Aug 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/08/07/thieves/</guid>
-      <description>You&amp;#8217;d think that thieves would be content who&amp;#8217;d bent my door back along to try and nick my car, realising actually I have nothing of value. Or that by monitoring my movements over a period of time, the opportune time to get into it would be when I went away to Dublin, Chicago or Singapore for weeks on end. Apparently not, in fact, they think its such a prime example of Vauxhalls lack of security that they would in fact like to come back and try to nick it by bending out the other door right when I&amp;#8217;m here.</description>
+      <description>You’d think that thieves would be content who’d bent my door back along to try and nick my car, realising actually I have nothing of value. Or that by monitoring my movements over a period of time, the opportune time to get into it would be when I went away to Dublin, Chicago or Singapore for weeks on end. Apparently not, in fact, they think its such a prime example of Vauxhalls lack of security that they would in fact like to come back and try to nick it by bending out the other door right when I’m here.</description>
     </item>
     
     <item>
@@ -233,7 +227,7 @@ I assume that the majority of the world goes along with the fact its just a bit 
       <pubDate>Thu, 27 Jul 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/07/27/the-bitter-irony/</guid>
-      <description>Yesterday I got a little annoyed about the fact that it seemed as if play had forgotten all details of my existence and telling me my email address was wrong. After sending a little letter off to them complaining yesterday evening, I realised after their response that actually I&amp;#8217;d altered my saved email a little while before. I went ahead and placed my order of Sideways this morning which I&amp;#8217;d expected to be fairly good due to the rave reviews I&amp;#8217;d heard of it.</description>
+      <description>Yesterday I got a little annoyed about the fact that it seemed as if play had forgotten all details of my existence and telling me my email address was wrong. After sending a little letter off to them complaining yesterday evening, I realised after their response that actually I’d altered my saved email a little while before. I went ahead and placed my order of Sideways this morning which I’d expected to be fairly good due to the rave reviews I’d heard of it.</description>
     </item>
     
     <item>
@@ -242,18 +236,18 @@ I assume that the majority of the world goes along with the fact its just a bit 
       <pubDate>Sun, 23 Jul 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/07/23/what-does-it-take-to-make-a-good-wife/</guid>
-      <description>From &amp;#8220;How To Succeed With Women Without Really Trying&amp;#8221; c1957
-&amp;#8220;The first wife, as opposed to the fiancee, must be practicable and serviceable. She is neither a toy, an ornament, nor a playmate. She will be your wife during the early, hard years before you can afford a staff of servants. She will serve as mother, cook, housemaid, chauffeur, nurse, and charwoman. This will allow her, if she is nimble, six or seven hours of sleep a night, ample for a sturdy girl.</description>
+      <description>From “How To Succeed With Women Without Really Trying” c1957
+“The first wife, as opposed to the fiancee, must be practicable and serviceable. She is neither a toy, an ornament, nor a playmate. She will be your wife during the early, hard years before you can afford a staff of servants. She will serve as mother, cook, housemaid, chauffeur, nurse, and charwoman. This will allow her, if she is nimble, six or seven hours of sleep a night, ample for a sturdy girl.</description>
     </item>
     
     <item>
       <title>Singapore Day 7 - Sentosa Island (Hopefully!)</title>
-      <link>https://www.ianwootten.co.uk/2006/05/22/singapore-day-7---sentosa-island-hopefully/</link>
+      <link>https://www.ianwootten.co.uk/2006/05/22/singapore-day-7-sentosa-island-hopefully/</link>
       <pubDate>Mon, 22 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/05/22/singapore-day-7---sentosa-island-hopefully/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/05/22/singapore-day-7-sentosa-island-hopefully/</guid>
       <description>So I managed to make it to the zoo yesterday, which was very exciting. More exciting though, was the night safari, where everything is minimally lit with the animals there to give a night time experience (I expect). I was a bit worried about catching buses and the like, but it was fine in the end, everything was really very well laid out, it was a doddle.
-Today I&amp;#8217;m off to visit the somewhat artificial Sentosa island &amp;#8211; there seems to be a bit of controversy about the fact the land is all &amp;#8216;reclaimed&amp;#8217;.</description>
+Today I’m off to visit the somewhat artificial Sentosa island – there seems to be a bit of controversy about the fact the land is all ‘reclaimed’.</description>
     </item>
     
     <item>
@@ -280,55 +274,53 @@ Today I&amp;#8217;m off to visit the somewhat artificial Sentosa island &amp;#82
       <pubDate>Mon, 15 May 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/05/15/off-to-singapore/</guid>
-      <description>So despite having only been back in the UK for less than a week, I&amp;#8217;m now off to Singapore, to present another paper of my work at CCGrid06. I&amp;#8217;m slightly less nervewracked this time, but not looking forward to the ridiculous flight time (best part of 13 hours) and the time difference when I arrive (+ 7 hours). Viv tells me its a beautiful and amazingly techie place, so it sounds not at all distant from my own bedroom.</description>
+      <description>So despite having only been back in the UK for less than a week, I’m now off to Singapore, to present another paper of my work at CCGrid06. I’m slightly less nervewracked this time, but not looking forward to the ridiculous flight time (best part of 13 hours) and the time difference when I arrive (+ 7 hours). Viv tells me its a beautiful and amazingly techie place, so it sounds not at all distant from my own bedroom.</description>
     </item>
     
     <item>
       <title>Chicago Day Five - Threadless and Whitesox</title>
-      <link>https://www.ianwootten.co.uk/2006/05/06/chicago-day-five---threadless-and-whitesox/</link>
+      <link>https://www.ianwootten.co.uk/2006/05/06/chicago-day-five-threadless-and-whitesox/</link>
       <pubDate>Sat, 06 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/05/06/chicago-day-five---threadless-and-whitesox/</guid>
+      <guid>https://www.ianwootten.co.uk/2006/05/06/chicago-day-five-threadless-and-whitesox/</guid>
       <description>After the workshop ended in the early hours of the afternoon today, I thought it would be kinda cool to head over and see if I could find threadless in Chicago, to stock up on some more of their awesome t shirts. After a little bit of thinking and umming and ahh-ing about whether or not I could actually find the place, I decided to make a a go of it and try.</description>
     </item>
     
     <item>
       <title>Chicago Day Six - Last Day in Hard Rock</title>
-      <link>https://www.ianwootten.co.uk/2006/05/06/chicago-day-six---last-day-in-hard-rock/</link>
+      <link>https://www.ianwootten.co.uk/2006/05/06/chicago-day-six-last-day-in-hard-rock/</link>
       <pubDate>Sat, 06 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/05/06/chicago-day-six---last-day-in-hard-rock/</guid>
-      <description>So today marks the last day I&amp;#8217;m put up in the Hard Rock, and my last full day here in the states. I awoke to a bill that had been slipped under my door to announce that I&amp;#8217;d been charged for their &amp;#8220;intimacy kit&amp;#8221;, because I had moved it to have a look at it, and this constitutes a charge. I found this most amusing. I think I&amp;#8217;ll make sure that there are no more automated charges made before I leave, seeing as how I&amp;#8217;ve actually used nothing&amp;#8230;.</description>
+      <guid>https://www.ianwootten.co.uk/2006/05/06/chicago-day-six-last-day-in-hard-rock/</guid>
+      <description>So today marks the last day I’m put up in the Hard Rock, and my last full day here in the states. I awoke to a bill that had been slipped under my door to announce that I’d been charged for their “intimacy kit”, because I had moved it to have a look at it, and this constitutes a charge. I found this most amusing. I think I’ll make sure that there are no more automated charges made before I leave, seeing as how I’ve actually used nothing….</description>
     </item>
     
     <item>
       <title>Chicago Day Four - Workshop</title>
-      <link>https://www.ianwootten.co.uk/2006/05/05/chicago-day-four---workshop/</link>
+      <link>https://www.ianwootten.co.uk/2006/05/05/chicago-day-four-workshop/</link>
       <pubDate>Fri, 05 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/05/05/chicago-day-four---workshop/</guid>
-      <description>Hello. Today marked the second day in the workshop I&amp;#8217;m attending and the presentation of some of my own work and thoughts. I&amp;#8217;ve also experienced some very useful thoughts of not only my work, but my PhD as a whole. Today is a good day for that.
+      <guid>https://www.ianwootten.co.uk/2006/05/05/chicago-day-four-workshop/</guid>
+      <description>Hello. Today marked the second day in the workshop I’m attending and the presentation of some of my own work and thoughts. I’ve also experienced some very useful thoughts of not only my work, but my PhD as a whole. Today is a good day for that.
 Yesterday evening we attended an italian restaurant as part of the evening meals for the conference, which featured such a ridulous amount of food it was stupid.</description>
     </item>
     
     <item>
       <title>Chicago Day Three - Workshop Start</title>
-      <link>https://www.ianwootten.co.uk/2006/05/04/chicago-day-three---workshop-start/</link>
+      <link>https://www.ianwootten.co.uk/2006/05/04/chicago-day-three-workshop-start/</link>
       <pubDate>Thu, 04 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/05/04/chicago-day-three---workshop-start/</guid>
-      <description>So today marked the checking in and out of hotels to move down the road in preparation for my workshop I&amp;#8217;m attending while I&amp;#8217;m here. Here&amp;#8217;s some views of my hotel room looking out onto Sears, complete with the only person whom is here with me. I have to head out now, for the conference dinner etc. I shall be sure to post later.
- 9254
-9258</description>
+      <guid>https://www.ianwootten.co.uk/2006/05/04/chicago-day-three-workshop-start/</guid>
+      <description>So today marked the checking in and out of hotels to move down the road in preparation for my workshop I’m attending while I’m here. Here’s some views of my hotel room looking out onto Sears, complete with the only person whom is here with me. I have to head out now, for the conference dinner etc. I shall be sure to post later.</description>
     </item>
     
     <item>
       <title>Chicago Day Two - Sears Tower, Hancock Observatory</title>
-      <link>https://www.ianwootten.co.uk/2006/05/03/chicago-day-two---sears-tower-hancock-observatory/</link>
+      <link>https://www.ianwootten.co.uk/2006/05/03/chicago-day-two-sears-tower-hancock-observatory/</link>
       <pubDate>Wed, 03 May 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2006/05/03/chicago-day-two---sears-tower-hancock-observatory/</guid>
-      <description>Today, after yesterdays success, and it being fairly sunny, I decided to try and find Sears Tower (The USA&amp;#8217;s tallest building) and come home fresh in the knowledge I had ascended it. People were all trying to put me off going as the views from Sears weren&amp;#8217;t as good as those from the Hancock observatory, which sits on the Magnificent Mile and gives nice views of the shore of Lake Michigan.</description>
+      <guid>https://www.ianwootten.co.uk/2006/05/03/chicago-day-two-sears-tower-hancock-observatory/</guid>
+      <description>Today, after yesterdays success, and it being fairly sunny, I decided to try and find Sears Tower (The USA’s tallest building) and come home fresh in the knowledge I had ascended it. People were all trying to put me off going as the views from Sears weren’t as good as those from the Hancock observatory, which sits on the Magnificent Mile and gives nice views of the shore of Lake Michigan.</description>
     </item>
     
     <item>
@@ -337,7 +329,7 @@ Yesterday evening we attended an italian restaurant as part of the evening meals
       <pubDate>Tue, 02 May 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/05/02/chicago-day-one/</guid>
-      <description>I have an uncanny habit of organising travel on unique dates. Last year my journey to Edinburgh for a conference was held up because it was the day before the G8 summit, when Viv and I went to Dublin, I completely forgot about the fact St Patricks day would fall around that time. My journey to Chicago it would seem is not to be blessed without this feature either. I&amp;#8217;ll let you in on what happened in a sec.</description>
+      <description>I have an uncanny habit of organising travel on unique dates. Last year my journey to Edinburgh for a conference was held up because it was the day before the G8 summit, when Viv and I went to Dublin, I completely forgot about the fact St Patricks day would fall around that time. My journey to Chicago it would seem is not to be blessed without this feature either. I’ll let you in on what happened in a sec.</description>
     </item>
     
     <item>
@@ -346,8 +338,8 @@ Yesterday evening we attended an italian restaurant as part of the evening meals
       <pubDate>Tue, 02 May 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/05/02/travelling-to-chicago/</guid>
-      <description>So I&amp;#8217;ve arrived safe and sound in Chicago! I&amp;#8217;m quite glad about that as it means I&amp;#8217;m not dead, murdered or anything like that from what came from my whole journey&amp;#8230;
-I didn&amp;#8217;t realise how much of a strain etc travelling could be, mainly because I&amp;#8217;ve never come this far before (actually, I&amp;#8217;ve never been outside of Europe). I had to set off at around 8.00am from home, catching a train to get to Gatwick for 11.</description>
+      <description>So I’ve arrived safe and sound in Chicago! I’m quite glad about that as it means I’m not dead, murdered or anything like that from what came from my whole journey…
+I didn’t realise how much of a strain etc travelling could be, mainly because I’ve never come this far before (actually, I’ve never been outside of Europe). I had to set off at around 8.00am from home, catching a train to get to Gatwick for 11.</description>
     </item>
     
     <item>
@@ -356,7 +348,7 @@ I didn&amp;#8217;t realise how much of a strain etc travelling could be, mainly 
       <pubDate>Wed, 05 Apr 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/04/05/all-go/</guid>
-      <description>Its been a long time without me saying anything much, but lots and lots going on. The first event to note was that I had my car attempted to be broken into over here in Roath, I suppose that eventually that this was bound to happen being in a city centre and all I guess until now I&amp;#8217;ve been lucky. They tried to get in through the passenger side door, bending it out and giving up after not getting in.</description>
+      <description>Its been a long time without me saying anything much, but lots and lots going on. The first event to note was that I had my car attempted to be broken into over here in Roath, I suppose that eventually that this was bound to happen being in a city centre and all I guess until now I’ve been lucky. They tried to get in through the passenger side door, bending it out and giving up after not getting in.</description>
     </item>
     
     <item>
@@ -365,7 +357,7 @@ I didn&amp;#8217;t realise how much of a strain etc travelling could be, mainly 
       <pubDate>Wed, 08 Mar 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/03/08/nth-fest/</guid>
-      <description>Although I didn&amp;#8217;t attend it, it sounds like this event held at my church at home in Somerset was an absolute blast &amp;#8211; props to crackers for sorting it!</description>
+      <description>Although I didn’t attend it, it sounds like this event held at my church at home in Somerset was an absolute blast – props to crackers for sorting it!</description>
     </item>
     
     <item>
@@ -374,8 +366,8 @@ I didn&amp;#8217;t realise how much of a strain etc travelling could be, mainly 
       <pubDate>Thu, 02 Mar 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/03/02/flipping-pancakes/</guid>
-      <description>Flipping pancakes eh? They&amp;#8217;re crafty beggars they are..
-Would you believe that in my 24 years knocking around, I&amp;#8217;d never actually flipped a pancake until this tuesday? You could understand why I might be a little excited about that particular prospect, and a little nervous. I spent my evening with a bunch of girls, in all shapes and sizes (some tall, some short, some insanely strong) to celebrate this occasion, but when my time to shine came, it was all good.</description>
+      <description>Flipping pancakes eh? They’re crafty beggars they are..
+Would you believe that in my 24 years knocking around, I’d never actually flipped a pancake until this tuesday? You could understand why I might be a little excited about that particular prospect, and a little nervous. I spent my evening with a bunch of girls, in all shapes and sizes (some tall, some short, some insanely strong) to celebrate this occasion, but when my time to shine came, it was all good.</description>
     </item>
     
     <item>
@@ -394,7 +386,7 @@ Probably about £6 I guess.</description>
       <pubDate>Wed, 01 Feb 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/02/01/it-begins/</guid>
-      <description>and so it begins&amp;#8230;.a new website, a new era of web geeking to the max, free from the shackles of mere mortal mens minds.A place to be geeks are creative, explore and communicate&amp;#8230;Ladies and Gentlemen, I give you, The Web Tyrant.</description>
+      <description>and so it begins….a new website, a new era of web geeking to the max, free from the shackles of mere mortal mens minds.A place to be geeks are creative, explore and communicate…Ladies and Gentlemen, I give you, The Web Tyrant.</description>
     </item>
     
     <item>
@@ -403,7 +395,7 @@ Probably about £6 I guess.</description>
       <pubDate>Mon, 30 Jan 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/01/30/we-are-100/</guid>
-      <description>This post is the official 100th post on this site! Wow, how exciting. I know that it&amp;#8217;s marked up as #127, but these are of the ones that actually made it public here. The first one made it up back in August 03 and was rather boring. That makes an average blog per month rating of 3.4&amp;#8230;.Yeah, thats lame too. So, what can I talk about to make it all profound now?</description>
+      <description>This post is the official 100th post on this site! Wow, how exciting. I know that it’s marked up as #127, but these are of the ones that actually made it public here. The first one made it up back in August 03 and was rather boring. That makes an average blog per month rating of 3.4….Yeah, thats lame too. So, what can I talk about to make it all profound now?</description>
     </item>
     
     <item>
@@ -412,8 +404,8 @@ Probably about £6 I guess.</description>
       <pubDate>Thu, 19 Jan 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/01/19/live-in-the-moment/</guid>
-      <description>For Christmas, one of my gifts was an ace calendar providing helpful hints on worst case scenarios for each day of 2006. Todays one made me smile quite a lot &amp;#8211; &amp;#8220;How to survive psychological torture&amp;#8221;. The second part of it however sounds more applicable to everyday life, work, relationships etc rather than actual torture (except for the horrors part).
-Here&amp;#8217;s the advice:
+      <description>For Christmas, one of my gifts was an ace calendar providing helpful hints on worst case scenarios for each day of 2006. Todays one made me smile quite a lot – “How to survive psychological torture”. The second part of it however sounds more applicable to everyday life, work, relationships etc rather than actual torture (except for the horrors part).
+Here’s the advice:
 Do not worry about what comes next.</description>
     </item>
     
@@ -423,7 +415,7 @@ Do not worry about what comes next.</description>
       <pubDate>Sat, 14 Jan 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/01/14/life-goes-on/</guid>
-      <description>On the dawning of a new year, life continues much the same as it has done previously, I have lots of work to do, lots of pointless things to do and lots of people who want me to fix their computers because they heard I know a little about those sorts of things. On my quest to rid the world of all t-shirts by stocking up on them myself, I&amp;#8217;d quite like to pick up this t-shirt to reflect how I sometimes feel about this.</description>
+      <description>On the dawning of a new year, life continues much the same as it has done previously, I have lots of work to do, lots of pointless things to do and lots of people who want me to fix their computers because they heard I know a little about those sorts of things. On my quest to rid the world of all t-shirts by stocking up on them myself, I’d quite like to pick up this t-shirt to reflect how I sometimes feel about this.</description>
     </item>
     
     <item>
@@ -432,8 +424,8 @@ Do not worry about what comes next.</description>
       <pubDate>Thu, 05 Jan 2006 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2006/01/05/a-new-year/</guid>
-      <description>I&amp;#8217;ve not spoken in a long time on here and it seems I&amp;#8217;m getting harassed into doing so, so I thought I&amp;#8217;d air some stuff.
-It&amp;#8217;s the New Year! Woohoo! Christmas brought with it all the usual stuff, like parents moaning about computers and arguing about nothing. This year I only crept back for a very short time in which to see family and catch up. It seems like Yeovil is less and less like my home now, with friends moving away and all.</description>
+      <description>I’ve not spoken in a long time on here and it seems I’m getting harassed into doing so, so I thought I’d air some stuff.
+It’s the New Year! Woohoo! Christmas brought with it all the usual stuff, like parents moaning about computers and arguing about nothing. This year I only crept back for a very short time in which to see family and catch up. It seems like Yeovil is less and less like my home now, with friends moving away and all.</description>
     </item>
     
     <item>
@@ -451,7 +443,7 @@ It&amp;#8217;s the New Year! Woohoo! Christmas brought with it all the usual stu
       <pubDate>Sun, 04 Dec 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/12/04/so-long/</guid>
-      <description>On Thursday morning, Maggie, our eldest labrador at home was taken to the vet to be put down. She&amp;#8217;d been poorly for sometime and had become unable to walk, for any reason whatsoever. Maggie was a member of our family for the past 13 years, so it&amp;#8217;s understandably a bit of a loss to us all. It&amp;#8217;s strange to think back to when we first got her, making apologies to numerous teachers for the state the new books I&amp;#8217;d been given had gotten into so quickly.</description>
+      <description>On Thursday morning, Maggie, our eldest labrador at home was taken to the vet to be put down. She’d been poorly for sometime and had become unable to walk, for any reason whatsoever. Maggie was a member of our family for the past 13 years, so it’s understandably a bit of a loss to us all. It’s strange to think back to when we first got her, making apologies to numerous teachers for the state the new books I’d been given had gotten into so quickly.</description>
     </item>
     
     <item>
@@ -460,7 +452,7 @@ It&amp;#8217;s the New Year! Woohoo! Christmas brought with it all the usual stu
       <pubDate>Tue, 29 Nov 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/11/29/introducing.../</guid>
-      <description>I spent the weekend back at home in recognition of my parents 30th wedding anniversary. It&amp;#8217;s quite bizarre looking through their wedding photos (I&amp;#8217;d never seen them before) and picking out all my relatives in mini form. Said previous ladyfriend decided she&amp;#8217;d brave the border as well to make those &amp;#8220;all important&amp;#8221; first introductions. She might of thought better of it if she knew parentals were going to bring their saturday night party back to ours and keep everyone awake until the early hours.</description>
+      <description>I spent the weekend back at home in recognition of my parents 30th wedding anniversary. It’s quite bizarre looking through their wedding photos (I’d never seen them before) and picking out all my relatives in mini form. Said previous ladyfriend decided she’d brave the border as well to make those “all important” first introductions. She might of thought better of it if she knew parentals were going to bring their saturday night party back to ours and keep everyone awake until the early hours.</description>
     </item>
     
     <item>
@@ -469,7 +461,7 @@ It&amp;#8217;s the New Year! Woohoo! Christmas brought with it all the usual stu
       <pubDate>Thu, 17 Nov 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/11/17/oblivious/</guid>
-      <description>I think I&amp;#8217;m a little less than perceptive of situations in which I&amp;#8217;m involved. Recently, I&amp;#8217;ve been clued in to a number of things which makes me think I&amp;#8217;ve been carrying freeriding on this life while I could of been part of something so much more interesting. This isn&amp;#8217;t a direct attack on anyone but myself, so don&amp;#8217;t anyone take it to heart. I think this is best shown through the forming of a type of relationship I&amp;#8217;ve been starved of for the best part of my life, one with my lovely new girlfriend.</description>
+      <description>I think I’m a little less than perceptive of situations in which I’m involved. Recently, I’ve been clued in to a number of things which makes me think I’ve been carrying freeriding on this life while I could of been part of something so much more interesting. This isn’t a direct attack on anyone but myself, so don’t anyone take it to heart. I think this is best shown through the forming of a type of relationship I’ve been starved of for the best part of my life, one with my lovely new girlfriend.</description>
     </item>
     
     <item>
@@ -478,7 +470,7 @@ It&amp;#8217;s the New Year! Woohoo! Christmas brought with it all the usual stu
       <pubDate>Thu, 10 Nov 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/11/10/alarm-bells/</guid>
-      <description>Some of the thoughts in this post over at Barbara&amp;#8217;s really hit home with me today. I don&amp;#8217;t often take time to reflect on pointers like these but the majority of them are ringing alarm bells about some aspect of my life at the moment.</description>
+      <description>Some of the thoughts in this post over at Barbara’s really hit home with me today. I don’t often take time to reflect on pointers like these but the majority of them are ringing alarm bells about some aspect of my life at the moment.</description>
     </item>
     
     <item>
@@ -488,8 +480,8 @@ It&amp;#8217;s the New Year! Woohoo! Christmas brought with it all the usual stu
       
       <guid>https://www.ianwootten.co.uk/2005/11/08/positive-thoughts/</guid>
       <description>From a sample upon the dischandler (DJ Moneyshot):
-&amp;#8220;No one wants to be a failure, no one wants a life constantly filled with worry, fear and frustration. Therefore you must remember to reap that which you sow. If you sow negative thoughts, your life will be filled with negative things. If you sow positive thoughts, your life will be cheerful, successful and positive.&amp;#8221;
-Not so sure how this pads out in real life&amp;#8230;</description>
+“No one wants to be a failure, no one wants a life constantly filled with worry, fear and frustration. Therefore you must remember to reap that which you sow. If you sow negative thoughts, your life will be filled with negative things. If you sow positive thoughts, your life will be cheerful, successful and positive.”
+Not so sure how this pads out in real life…</description>
     </item>
     
     <item>
@@ -498,7 +490,7 @@ Not so sure how this pads out in real life&amp;#8230;</description>
       <pubDate>Mon, 26 Sep 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/09/26/fragile/</guid>
-      <description>I&amp;#8217;m feeling rather fragile at the moment, which is really annoying because the majority of the time I&amp;#8217;m the picture of health. It started yesterday, but I thought I&amp;#8217;d got over it only for headaches and tummy aches to return by the evening. Unfortunately, it meant I wasn&amp;#8217;t best of hosts to Hannah who stayed over on Sunday because of a stereophonics gig she was going to. I had to fix her up with Jon to go with as her mate decided to back out on her pretty late.</description>
+      <description>I’m feeling rather fragile at the moment, which is really annoying because the majority of the time I’m the picture of health. It started yesterday, but I thought I’d got over it only for headaches and tummy aches to return by the evening. Unfortunately, it meant I wasn’t best of hosts to Hannah who stayed over on Sunday because of a stereophonics gig she was going to. I had to fix her up with Jon to go with as her mate decided to back out on her pretty late.</description>
     </item>
     
     <item>
@@ -507,11 +499,11 @@ Not so sure how this pads out in real life&amp;#8230;</description>
       <pubDate>Sun, 18 Sep 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/09/18/job-requirements/</guid>
-      <description>That last post aside heres a mildly amusing anecdote that happened to me whilst in B&amp;#038;Q a couple of weeks ago featuring a sweet old welsh lady.
-Old Lady (Looking at lampshades): &amp;#8220;Is that the ACTUAL price of these!?&amp;#8221;
-Me (Bewildered, wondering past end of aisle): &amp;#8220;Well, yeah, it says so on the label&amp;#8221;
-Old Lady: &amp;#8220;&amp;pound;11.99! I saw &amp;#8216;em for &amp;pound;1 on Newport Road!&amp;#8221;
-Me (Still bewildered, now in aisle): &amp;#8220;Oh.</description>
+      <description>That last post aside heres a mildly amusing anecdote that happened to me whilst in B�Q a couple of weeks ago featuring a sweet old welsh lady.
+Old Lady (Looking at lampshades): “Is that the ACTUAL price of these!?”
+Me (Bewildered, wondering past end of aisle): “Well, yeah, it says so on the label”
+Old Lady: “£11.99! I saw ‘em for £1 on Newport Road!”
+Me (Still bewildered, now in aisle): “Oh.</description>
     </item>
     
     <item>
@@ -520,7 +512,7 @@ Me (Still bewildered, now in aisle): &amp;#8220;Oh.</description>
       <pubDate>Sun, 18 Sep 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/09/18/who-hid-the-bloomin-remote/</guid>
-      <description>I was contemplating all the stuff I generally tend to blog about. Most of the time, something rather huge has to happen for me in my week to be bothered to blog about it and then a large majority of that goes unnoticed by you, my readers (both of you), due to concerns about upsetting people, getting upset by people or not reflecting myself in the best of light. Other stuff, I just don&amp;#8217;t think is interesting at all, but I&amp;#8217;ve been told that while I think it mundane, it proves amusing to others.</description>
+      <description>I was contemplating all the stuff I generally tend to blog about. Most of the time, something rather huge has to happen for me in my week to be bothered to blog about it and then a large majority of that goes unnoticed by you, my readers (both of you), due to concerns about upsetting people, getting upset by people or not reflecting myself in the best of light. Other stuff, I just don’t think is interesting at all, but I’ve been told that while I think it mundane, it proves amusing to others.</description>
     </item>
     
     <item>
@@ -529,7 +521,7 @@ Me (Still bewildered, now in aisle): &amp;#8220;Oh.</description>
       <pubDate>Tue, 13 Sep 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/09/13/a-new-home/</guid>
-      <description>Some of you may have noticed that I&amp;#8217;ve moved. Whats that? You didn&amp;#8217;t? Oh well, cheers then, how much of a friend are you? I never read your blog either. For those who didn&amp;#8217;t &amp;#8211; take a look in the address bar, I&amp;#8217;m now at www.ianwootten.co.uk (Highly original I know!).
+      <description>Some of you may have noticed that I’ve moved. Whats that? You didn’t? Oh well, cheers then, how much of a friend are you? I never read your blog either. For those who didn’t – take a look in the address bar, I’m now at www.ianwootten.co.uk (Highly original I know!).
 This week I have been mostly stressing about work, sitting at home alone, watching repeats, finding interesting links through the wonder of del.</description>
     </item>
     
@@ -539,8 +531,8 @@ This week I have been mostly stressing about work, sitting at home alone, watchi
       <pubDate>Thu, 25 Aug 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/08/25/bizarre-dreams/</guid>
-      <description>I&amp;#8217;ve been having some really random dreams this week, the strangest part being I can actually remember them. Here&amp;#8217;s a few examples:
-Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp;#8217;re asleep and can control whats going on, but was face down on my bed and completely overcome by something and unable to move any part of my body. When I woke up, with a bit of a start, I&amp;#8217;d only been out for a half hour.</description>
+      <description>I’ve been having some really random dreams this week, the strangest part being I can actually remember them. Here’s a few examples:
+Sunday – I had one of those ones where, you’re aware you’re asleep and can control whats going on, but was face down on my bed and completely overcome by something and unable to move any part of my body. When I woke up, with a bit of a start, I’d only been out for a half hour.</description>
     </item>
     
     <item>
@@ -549,7 +541,7 @@ Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp
       <pubDate>Fri, 19 Aug 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/08/19/trials-unicycling/</guid>
-      <description>I was inspired yesterday by watching a few vids on the internet of crazy kids doing trials unicycling, so decided to go out for a ride in the evening round Roath Park. It&amp;#8217;s been a long time since I&amp;#8217;ve ridden, but it seems you don&amp;#8217;t forget. Nor do the &amp;#8216;oh I&amp;#8217;m original&amp;#8217; taunts cease, such as &amp;#8220;oi, mate, you&amp;#8217;ve lost a wheel!&amp;#8221;, &amp;#8220;pull a wheelie!&amp;#8221; etc etc. Anyway, it was nice to finally ride mine without fear of the horrid scratching which I usually obtain from my previous saddle.</description>
+      <description>I was inspired yesterday by watching a few vids on the internet of crazy kids doing trials unicycling, so decided to go out for a ride in the evening round Roath Park. It’s been a long time since I’ve ridden, but it seems you don’t forget. Nor do the ‘oh I’m original’ taunts cease, such as “oi, mate, you’ve lost a wheel!”, “pull a wheelie!” etc etc. Anyway, it was nice to finally ride mine without fear of the horrid scratching which I usually obtain from my previous saddle.</description>
     </item>
     
     <item>
@@ -558,7 +550,7 @@ Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp
       <pubDate>Wed, 17 Aug 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/08/17/sunny-somerset/</guid>
-      <description>I went back home this weekend for Tim and Becca&amp;#8217;s wedding. Although the weather didn&amp;#8217;t hold out &amp;#8211; it was raining all day, the guys made the most of it and the service was fab. Music was provided by Mr Maynard and a string quartet. By far the most amusing thing was the pastor&amp;#8217;s inability to use a radio mike without whispering the whole service. So amusing sentences like &amp;#8220;Don&amp;#8217;t fall down the steps&amp;#8230;.</description>
+      <description>I went back home this weekend for Tim and Becca’s wedding. Although the weather didn’t hold out – it was raining all day, the guys made the most of it and the service was fab. Music was provided by Mr Maynard and a string quartet. By far the most amusing thing was the pastor’s inability to use a radio mike without whispering the whole service. So amusing sentences like “Don’t fall down the steps….</description>
     </item>
     
     <item>
@@ -567,7 +559,7 @@ Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp
       <pubDate>Thu, 11 Aug 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/08/11/small-mercies/</guid>
-      <description>I went to watch Charlie and the Chocolate factory last night &amp;#8211; which I thought was great, compared to the original preconceptions I had of it from trailers, reviews and the like. Anyways, I was sat there at the end as all the children were walking out of the factory thinking, &amp;#8220;Well, at least I&amp;#8217;m not as thin as Mike TV&amp;#8221;.</description>
+      <description>I went to watch Charlie and the Chocolate factory last night – which I thought was great, compared to the original preconceptions I had of it from trailers, reviews and the like. Anyways, I was sat there at the end as all the children were walking out of the factory thinking, “Well, at least I’m not as thin as Mike TV”.</description>
     </item>
     
     <item>
@@ -576,7 +568,7 @@ Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp
       <pubDate>Wed, 10 Aug 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/08/10/unwanted-affection/</guid>
-      <description>So, after renewing my insurance policy today, I get handed the piece of paper with my policy number and the words &amp;#8220;Ashley, love&amp;#8221;. I&amp;#8217;m unsure whether the guy wrote this in awe of myself or indeed it had been written previously on the pad in use. Either way, the words in that order don&amp;#8217;t make any sense. Dyslexia perhaps? There&amp;#8217;s been a bit of talk and reading recently involving dating with integrity, not settling with second best and the like, but this ranks a few rungs below that upon my ladder unfortunately.</description>
+      <description>So, after renewing my insurance policy today, I get handed the piece of paper with my policy number and the words “Ashley, love”. I’m unsure whether the guy wrote this in awe of myself or indeed it had been written previously on the pad in use. Either way, the words in that order don’t make any sense. Dyslexia perhaps? There’s been a bit of talk and reading recently involving dating with integrity, not settling with second best and the like, but this ranks a few rungs below that upon my ladder unfortunately.</description>
     </item>
     
     <item>
@@ -585,7 +577,7 @@ Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp
       <pubDate>Wed, 03 Aug 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/08/03/ideal-images/</guid>
-      <description>On a lighter note, I went to a &amp;#8216;focus group&amp;#8217; last night which was fairly surreal. I&amp;#8217;d been asked last week to attend, and had agreed not actually knowing the subject matter. On sunday I was informed that it was going to be on &amp;#8216;mens cosmetics&amp;#8217; (something I&amp;#8217;m obviously very familiar with!) so didn&amp;#8217;t really know what to expect. After arriving, discovering two of my old coursemates were there (and on the same course as Garima), we sat down for like 45 minutes talking about our opinions about luxuries, cosmetics and as many tangents we could stray off on as possible.</description>
+      <description>On a lighter note, I went to a ‘focus group’ last night which was fairly surreal. I’d been asked last week to attend, and had agreed not actually knowing the subject matter. On sunday I was informed that it was going to be on ‘mens cosmetics’ (something I’m obviously very familiar with!) so didn’t really know what to expect. After arriving, discovering two of my old coursemates were there (and on the same course as Garima), we sat down for like 45 minutes talking about our opinions about luxuries, cosmetics and as many tangents we could stray off on as possible.</description>
     </item>
     
     <item>
@@ -594,8 +586,8 @@ Sunday &amp;#8211; I had one of those ones where, you&amp;#8217;re aware you&amp
       <pubDate>Tue, 12 Jul 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/07/12/what-a-difference-a-year-makes..../</guid>
-      <description>So, in the absence of students, life continues as normal for the various research teams down here in the Queens buildings. We wake, march to University and sit in our little boxes reading, theorising and tearing our hair out until 5 o&amp;#8217;clock when we march back, only to be repeated the next day. I hate routines&amp;#8230;
-Today marked the graduation of Year 3&amp;#8242;s which brought back memories of my graduation last year, which was pretty depressing to be honest.</description>
+      <description>So, in the absence of students, life continues as normal for the various research teams down here in the Queens buildings. We wake, march to University and sit in our little boxes reading, theorising and tearing our hair out until 5 o’clock when we march back, only to be repeated the next day. I hate routines…
+Today marked the graduation of Year 3′s which brought back memories of my graduation last year, which was pretty depressing to be honest.</description>
     </item>
     
     <item>
@@ -604,7 +596,7 @@ Today marked the graduation of Year 3&amp;#8242;s which brought back memories of
       <pubDate>Thu, 07 Jul 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/07/07/weddings-unicycles-and-money/</guid>
-      <description>It&amp;#8217;s been a good week thus far. Saturday marked a return to Somerset to attend Steve and Hannah&amp;#8217;s wedding, which I was a little late for due to having to pick up a number of interesting things I&amp;#8217;ve been given by Gran. I felt a little harsh having to dash in, collect and leave, it felt a little like Dad and I were looting the place.
+      <description>It’s been a good week thus far. Saturday marked a return to Somerset to attend Steve and Hannah’s wedding, which I was a little late for due to having to pick up a number of interesting things I’ve been given by Gran. I felt a little harsh having to dash in, collect and leave, it felt a little like Dad and I were looting the place.
 Being late was ok as one of the speakers was following in just after me (apparently a bit of a search was going on for him prior to the service), confirming we were good to creep through the large arched doors as the sound of singing could be heard.</description>
     </item>
     
@@ -614,7 +606,7 @@ Being late was ok as one of the speakers was following in just after me (apparen
       <pubDate>Tue, 28 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/28/writers-block/</guid>
-      <description>I forgot to write a classic quote I found in &amp;#8216;Boy&amp;#8217; while I was away so I thought I&amp;#8217;d shove it up now. I think it encompasses how I feel about work at the moment. Really enjoyed just lazing about reading in France for ages, finished Pi, although I found it to drag on somewhat, the quirky bit at the end made it fairly clever. Onto some Pratchett now after resisiting for ages.</description>
+      <description>I forgot to write a classic quote I found in ‘Boy’ while I was away so I thought I’d shove it up now. I think it encompasses how I feel about work at the moment. Really enjoyed just lazing about reading in France for ages, finished Pi, although I found it to drag on somewhat, the quirky bit at the end made it fairly clever. Onto some Pratchett now after resisiting for ages.</description>
     </item>
     
     <item>
@@ -623,16 +615,16 @@ Being late was ok as one of the speakers was following in just after me (apparen
       <pubDate>Sun, 26 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/26/normality-check/</guid>
-      <description>Our last day in Jard was rather less exciting than we&amp;#8217;d hoped, we decided to clean the place* we were staying in, so spent the morning doing that and unfortunately the weather was cack so didn&amp;#8217;t make for much of an afternoon either. We apparently caught the back end of a heatwave this week which has been rather fortunate, although pretty uncomfortable in the evenings. (Tim had it worse being in the same room as Mr &amp;#8216;Exorcist&amp;#8217; Pete, I had to endure that in Germany so it&amp;#8217;s his turn this time).</description>
+      <description>Our last day in Jard was rather less exciting than we’d hoped, we decided to clean the place* we were staying in, so spent the morning doing that and unfortunately the weather was cack so didn’t make for much of an afternoon either. We apparently caught the back end of a heatwave this week which has been rather fortunate, although pretty uncomfortable in the evenings. (Tim had it worse being in the same room as Mr ‘Exorcist’ Pete, I had to endure that in Germany so it’s his turn this time).</description>
     </item>
     
     <item>
       <title>Pastis and Miniatures - 22/06/2005 - 23/06/2005</title>
-      <link>https://www.ianwootten.co.uk/2005/06/23/pastis-and-miniatures---22/06/2005---23/06/2005/</link>
+      <link>https://www.ianwootten.co.uk/2005/06/23/pastis-and-miniatures-22/06/2005-23/06/2005/</link>
       <pubDate>Thu, 23 Jun 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2005/06/23/pastis-and-miniatures---22/06/2005---23/06/2005/</guid>
-      <description>Yesterday not a lot happened, except for much reading and bumming around the house whilst trying out my newly found juggling skills. We also went on our search for pastis, after discovering that it actually tasted much the same as oizo, a wicked aniseed flavour&amp;#8230;I think Rach may need to be educated in its use however, due to filling a wine glass neat with the stuff, which I would of been dead if I&amp;#8217;d actually consumed undiluted, or at least extremely quiet for the rest of the evening.</description>
+      <guid>https://www.ianwootten.co.uk/2005/06/23/pastis-and-miniatures-22/06/2005-23/06/2005/</guid>
+      <description>Yesterday not a lot happened, except for much reading and bumming around the house whilst trying out my newly found juggling skills. We also went on our search for pastis, after discovering that it actually tasted much the same as oizo, a wicked aniseed flavour…I think Rach may need to be educated in its use however, due to filling a wine glass neat with the stuff, which I would of been dead if I’d actually consumed undiluted, or at least extremely quiet for the rest of the evening.</description>
     </item>
     
     <item>
@@ -642,7 +634,7 @@ Being late was ok as one of the speakers was following in just after me (apparen
       
       <guid>https://www.ianwootten.co.uk/2005/06/21/beer-and-beaches/</guid>
       <description>Decided to make a move on to our next beach today, taking with us a picnic and a load of beer. This one is situated right next to a forest, which was ace for our picnic.
-Tim, after 3 years of living with one another has finally managed to teach me to juggle and give me the bug for continuing it. It&amp;#8217;s actually easier to learn using boule, forcing you to use correct arm movements, though its a little dangerous on the beach if you have a distinct lack of footwear.</description>
+Tim, after 3 years of living with one another has finally managed to teach me to juggle and give me the bug for continuing it. It’s actually easier to learn using boule, forcing you to use correct arm movements, though its a little dangerous on the beach if you have a distinct lack of footwear.</description>
     </item>
     
     <item>
@@ -651,7 +643,7 @@ Tim, after 3 years of living with one another has finally managed to teach me to
       <pubDate>Mon, 20 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/20/wine-and-marshes/</guid>
-      <description>Today we went over to the salt marshes in Olonne, it being slightly more manageable weather and all. Tim basically wanted to do a little birdwatching and Heledd and Dave didn&amp;#8217;t fancy such french beauty so went to have coffee in a suitable village somewhere. It was really cool, took lots of photos of the strange green murky waters and had a bunch of exercise too. Saw loads of eels while we were there &amp;#8211; horrible things writhing about&amp;#8230;.</description>
+      <description>Today we went over to the salt marshes in Olonne, it being slightly more manageable weather and all. Tim basically wanted to do a little birdwatching and Heledd and Dave didn’t fancy such french beauty so went to have coffee in a suitable village somewhere. It was really cool, took lots of photos of the strange green murky waters and had a bunch of exercise too. Saw loads of eels while we were there – horrible things writhing about….</description>
     </item>
     
     <item>
@@ -660,15 +652,15 @@ Tim, after 3 years of living with one another has finally managed to teach me to
       <pubDate>Sun, 19 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/19/wine-and-beaches/</guid>
-      <description>Sunday&amp;#8217;s morning events weren&amp;#8217;t overly exciting &amp;#8211; the weather has been so hot that it would be a bit much to go off and try to do anything. Instead has been a morning of reading (Dahl&amp;#8217;s &amp;#8216;Boy&amp;#8217; &amp;#8211; bizzarrely featuring Cardiff, La Rochelle and Somerset within) and people trying to juggle. The afternoon became overcast so we decided to make the trip down to the beach, where Tim, Rach and Pete all got rather dirty trying to recreate a eurotunnel experience, which was destroyed as soon as it was completed by Dave.</description>
+      <description>Sunday’s morning events weren’t overly exciting – the weather has been so hot that it would be a bit much to go off and try to do anything. Instead has been a morning of reading (Dahl’s ‘Boy’ – bizzarrely featuring Cardiff, La Rochelle and Somerset within) and people trying to juggle. The afternoon became overcast so we decided to make the trip down to the beach, where Tim, Rach and Pete all got rather dirty trying to recreate a eurotunnel experience, which was destroyed as soon as it was completed by Dave.</description>
     </item>
     
     <item>
       <title>Long Journeys - 17/06/05 - 18/06/05</title>
-      <link>https://www.ianwootten.co.uk/2005/06/18/long-journeys---17/06/05---18/06/05/</link>
+      <link>https://www.ianwootten.co.uk/2005/06/18/long-journeys-17/06/05-18/06/05/</link>
       <pubDate>Sat, 18 Jun 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2005/06/18/long-journeys---17/06/05---18/06/05/</guid>
+      <guid>https://www.ianwootten.co.uk/2005/06/18/long-journeys-17/06/05-18/06/05/</guid>
       <description>So, it begins, the holiday season that is and with it my two day trip across England and back down the west coast of France to Jard Su Mer. Todays trip was fairly long, spending two hours bombing down the M4 to meet with the guys in Reading, then a further few to reach the underside of London on the M25, and a bit more to finally bundle over toward the Eurotunnel.</description>
     </item>
     
@@ -678,8 +670,8 @@ Tim, after 3 years of living with one another has finally managed to teach me to
       <pubDate>Mon, 13 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/13/another-one-bites-the-dust/</guid>
-      <description>You&amp;#8217;d be forgiven for thinking that the title might refer to Pop&amp;#8217;s funeral this week, but no, I mean the fact that finally after 7 years in courtship Mike and Jo have become hitched. Thats strike 5 from the core Yeovil lad&amp;#8217;s posse&amp;#8230;
-It was a fab day, with schoolfriends from yesteryear I haven&amp;#8217;t kept up to date with, and family members I never knew existed. My sister always seems to find it amusing that Jo&amp;#8217;s sis, Sarah got hitched before them being a couple of years younger, having her been to school with Sarah and Jo in my form.</description>
+      <description>You’d be forgiven for thinking that the title might refer to Pop’s funeral this week, but no, I mean the fact that finally after 7 years in courtship Mike and Jo have become hitched. Thats strike 5 from the core Yeovil lad’s posse…
+It was a fab day, with schoolfriends from yesteryear I haven’t kept up to date with, and family members I never knew existed. My sister always seems to find it amusing that Jo’s sis, Sarah got hitched before them being a couple of years younger, having her been to school with Sarah and Jo in my form.</description>
     </item>
     
     <item>
@@ -688,8 +680,8 @@ It was a fab day, with schoolfriends from yesteryear I haven&amp;#8217;t kept up
       <pubDate>Sun, 05 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/05/sumo/</guid>
-      <description>No, not the monthly breaks event in Clwb Ifor, though you&amp;#8217;d be forgiven for thinking that&amp;#8217;s what this post would be about due to regular raving about it, no, *actual *Sumo.
-So I started my trip off at 9:45am &amp;#8211; realising that actually that Tesco&amp;#8217;s would be shut if I left earlier and I&amp;#8217;d not get fuel.. After faffing getting burgers and the like, I set off about 10:20am to Bournemouth.</description>
+      <description>No, not the monthly breaks event in Clwb Ifor, though you’d be forgiven for thinking that’s what this post would be about due to regular raving about it, no, *actual *Sumo.
+So I started my trip off at 9:45am – realising that actually that Tesco’s would be shut if I left earlier and I’d not get fuel.. After faffing getting burgers and the like, I set off about 10:20am to Bournemouth.</description>
     </item>
     
     <item>
@@ -698,7 +690,7 @@ So I started my trip off at 9:45am &amp;#8211; realising that actually that Tesc
       <pubDate>Fri, 03 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/03/happy-places/</guid>
-      <description>To cheer me up a bit I&amp;#8217;ve been trying to go to my happy place (which doesn&amp;#8217;t involve dwarfs on tricycles before you ask), merely great places nearby which hold fantastic memories for me &amp;#8211; &amp;#8216;Ham Hill&amp;#8217; and &amp;#8220;West Bay&amp;#8221; being two notable ones. Ham Hill has all those fantastic bike rides, barbeques, moonlit evenings, Christmas moments and stupid uni friends wondering where we got all the pigs from. West Bay holds a bunch more cycle rides, youth camps (with lots of sheep, golf courses and jogs), barbeques, baptisms (including my own), boating moments and horrible toilets.</description>
+      <description>To cheer me up a bit I’ve been trying to go to my happy place (which doesn’t involve dwarfs on tricycles before you ask), merely great places nearby which hold fantastic memories for me – ‘Ham Hill’ and “West Bay” being two notable ones. Ham Hill has all those fantastic bike rides, barbeques, moonlit evenings, Christmas moments and stupid uni friends wondering where we got all the pigs from. West Bay holds a bunch more cycle rides, youth camps (with lots of sheep, golf courses and jogs), barbeques, baptisms (including my own), boating moments and horrible toilets.</description>
     </item>
     
     <item>
@@ -707,7 +699,7 @@ So I started my trip off at 9:45am &amp;#8211; realising that actually that Tesc
       <pubDate>Thu, 02 Jun 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/06/02/highs-and-lows-peaks-and-troughs/</guid>
-      <description>It was great to have the bank holiday this monday once again, allowed me to recover from the mad weekend that I had. The Vineyardites met at Living Stones for a great packed lunch (which had been moved from the park due to Cardiff&amp;#8217;s dodgy weather), followed by new take on a game of miniature bowls on the snooker table by Jon and Rob. After this I moved on to Roath Park with Lewis and one of his mates from home before meeting up with Vineyardites once again and chucking bread at feathered creatures.</description>
+      <description>It was great to have the bank holiday this monday once again, allowed me to recover from the mad weekend that I had. The Vineyardites met at Living Stones for a great packed lunch (which had been moved from the park due to Cardiff’s dodgy weather), followed by new take on a game of miniature bowls on the snooker table by Jon and Rob. After this I moved on to Roath Park with Lewis and one of his mates from home before meeting up with Vineyardites once again and chucking bread at feathered creatures.</description>
     </item>
     
     <item>
@@ -716,8 +708,8 @@ So I started my trip off at 9:45am &amp;#8211; realising that actually that Tesc
       <pubDate>Mon, 30 May 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/05/30/same-old-same-old/</guid>
-      <description>So, its been a fair while, I&amp;#8217;ve been getting jip off of people about not writing, but to be honest, there&amp;#8217;s not exactly been a lot happening in my neck of the woods which is all that exciting. I&amp;#8217;ve pooled everything I can remember from the last two weeks and bunged them into one post&amp;#8230;
-Sat 14th &amp;#8211; Featured a grandma squashing her child by clipping her foot on a paving slab on albany junction and falling straight onto him whilst carrying.</description>
+      <description>So, its been a fair while, I’ve been getting jip off of people about not writing, but to be honest, there’s not exactly been a lot happening in my neck of the woods which is all that exciting. I’ve pooled everything I can remember from the last two weeks and bunged them into one post…
+Sat 14th – Featured a grandma squashing her child by clipping her foot on a paving slab on albany junction and falling straight onto him whilst carrying.</description>
     </item>
     
     <item>
@@ -726,7 +718,7 @@ Sat 14th &amp;#8211; Featured a grandma squashing her child by clipping her foot
       <pubDate>Fri, 13 May 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/05/13/put-on-a-brave-face/</guid>
-      <description>I&amp;#8217;ve been feeling a bit off today &amp;#8211; maybe its the fact I had to cook dinner amidst housemates washing up at like 8:30pm yesterday, I had my wall banged on by neighbours last night due to noisy Tim (he has a gig soon so can be forgiven), or couldn&amp;#8217;t get to sleep last night again for the same reason, radiators blaring and a noisy neighbour party or maybe its because I had to wait around forever at home today to collect a parcel from the Royal Snail.</description>
+      <description>I’ve been feeling a bit off today – maybe its the fact I had to cook dinner amidst housemates washing up at like 8:30pm yesterday, I had my wall banged on by neighbours last night due to noisy Tim (he has a gig soon so can be forgiven), or couldn’t get to sleep last night again for the same reason, radiators blaring and a noisy neighbour party or maybe its because I had to wait around forever at home today to collect a parcel from the Royal Snail.</description>
     </item>
     
     <item>
@@ -735,7 +727,7 @@ Sat 14th &amp;#8211; Featured a grandma squashing her child by clipping her foot
       <pubDate>Wed, 11 May 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/05/11/academia/</guid>
-      <description>I&amp;#8217;ve had the fairly bizarre experience this week of attending the CCGrid 05 conference at city hall. This is my first conference and by all means a first introduction to my peers outside of the group involved with the PASOA project I am working upon. I think the most interesting thing is how normal each of them actually are &amp;#8211; I was expecting them all to have some sort of superiority complex for some reason.</description>
+      <description>I’ve had the fairly bizarre experience this week of attending the CCGrid 05 conference at city hall. This is my first conference and by all means a first introduction to my peers outside of the group involved with the PASOA project I am working upon. I think the most interesting thing is how normal each of them actually are – I was expecting them all to have some sort of superiority complex for some reason.</description>
     </item>
     
     <item>
@@ -744,8 +736,8 @@ Sat 14th &amp;#8211; Featured a grandma squashing her child by clipping her foot
       <pubDate>Sat, 07 May 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/05/07/matthias-week/</guid>
-      <description>I&amp;#8217;ve had a really great week this week, mainly due to spending a large majority of it with the wonderful Matthias&amp;#8217;s and crew. I&amp;#8217;m not sure if this was altogether intentional, but it was great however it happened. I enjoy the crazy banter, furious sarcasm and witty jokes which are often made at others expense&amp;#8230;.
-Monday we spent the day at Jon and Cathy&amp;#8217;s eating and playing board games due to the unfortunate weather that occurred outside.</description>
+      <description>I’ve had a really great week this week, mainly due to spending a large majority of it with the wonderful Matthias’s and crew. I’m not sure if this was altogether intentional, but it was great however it happened. I enjoy the crazy banter, furious sarcasm and witty jokes which are often made at others expense….
+Monday we spent the day at Jon and Cathy’s eating and playing board games due to the unfortunate weather that occurred outside.</description>
     </item>
     
     <item>
@@ -754,7 +746,7 @@ Monday we spent the day at Jon and Cathy&amp;#8217;s eating and playing board ga
       <pubDate>Sat, 30 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/04/30/what-a-palava/</guid>
-      <description>I went off to meet up with my Sis and Viv in Swansea on Thursday night, the drive out there and around the bay was fantastic, beautiful scenery in wonderful weather that I don&amp;#8217;t often get to see around Cardiff. I think the comparison was made between the bay and Roath Park by Viv, but to be honest, there isn&amp;#8217;t much of one. After a full on carvery meal and everyone feeling like veritable fat jabba&amp;#8217;s, we drove over to the mumbles to munch on ice-cream (follow the logic there).</description>
+      <description>I went off to meet up with my Sis and Viv in Swansea on Thursday night, the drive out there and around the bay was fantastic, beautiful scenery in wonderful weather that I don’t often get to see around Cardiff. I think the comparison was made between the bay and Roath Park by Viv, but to be honest, there isn’t much of one. After a full on carvery meal and everyone feeling like veritable fat jabba’s, we drove over to the mumbles to munch on ice-cream (follow the logic there).</description>
     </item>
     
     <item>
@@ -763,7 +755,7 @@ Monday we spent the day at Jon and Cathy&amp;#8217;s eating and playing board ga
       <pubDate>Wed, 27 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/04/27/hitch-hikers-guide-to-the-skittle-alley/</guid>
-      <description>Every time I visit UGC Cardiff it brings back terrible memories of when I went to see &amp;#8216;Matrix Revolutions&amp;#8217; last year. A bit psyched by the fact that it may of be able to redeem the tragedy which was &amp;#8216;Matrix Reloaded&amp;#8217;, I went to see it with some of the Glamorgan crew on its day of release. All was going as well as could be expected, until when 3&amp;frasl;4 way through we were treated to a bit of a fight sequence and aerial acrobatics, which didn&amp;#8217;t really seem to fit with what we had been watching, but could of been some sort of trendy &amp;#8216;dream sequence&amp;#8217;.</description>
+      <description>Every time I visit UGC Cardiff it brings back terrible memories of when I went to see ‘Matrix Revolutions’ last year. A bit psyched by the fact that it may of be able to redeem the tragedy which was ‘Matrix Reloaded’, I went to see it with some of the Glamorgan crew on its day of release. All was going as well as could be expected, until when 3/4 way through we were treated to a bit of a fight sequence and aerial acrobatics, which didn’t really seem to fit with what we had been watching, but could of been some sort of trendy ‘dream sequence’.</description>
     </item>
     
     <item>
@@ -772,8 +764,8 @@ Monday we spent the day at Jon and Cathy&amp;#8217;s eating and playing board ga
       <pubDate>Tue, 26 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/04/26/some-things-you-might-not-know-about-cvers../</guid>
-      <description>Here&amp;#8217;s some interesting information I found about fellow Cardiff Vineyard&amp;#8217;ers*.
- Jon Mathais was the producer of the New Romantics and was cut from the Sony Open in Hawaii on the 2005 PGA Tour. Jonathan Morgan holds both a successful &amp;#8216;modeling&amp;#8217; career and since 1999 has also been a Conservative Assembly Member. Zoe Morgan once featured in a Dr Who Episode (Season 25, Episode 152 -&amp;#8217; Remembrance of the Daleks&amp;#8217;) as &amp;#8216;Girl&amp;#8217;.</description>
+      <description>Here’s some interesting information I found about fellow Cardiff Vineyard’ers*.
+ Jon Mathais was the producer of the New Romantics and was cut from the Sony Open in Hawaii on the 2005 PGA Tour. Jonathan Morgan holds both a successful ‘modeling’ career and since 1999 has also been a Conservative Assembly Member. Zoe Morgan once featured in a Dr Who Episode (Season 25, Episode 152 -’ Remembrance of the Daleks’) as ‘Girl’.</description>
     </item>
     
     <item>
@@ -782,8 +774,8 @@ Monday we spent the day at Jon and Cathy&amp;#8217;s eating and playing board ga
       <pubDate>Mon, 18 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/04/18/busy-busy-busy/</guid>
-      <description>I&amp;#8217;ve been running around a bit like a headless chicken recently, not content with spending lots of time at uni working, I&amp;#8217;ve been partying pretty hard as well.
-Spent Friday going to Kez&amp;#8217;s 21st birthday for a meal at Old Orleans, which was rather tasty. Bombed back to hang out with Vineyardites at Marty&amp;#8217;z Kitchen, which we were duely moved on from to Cafe aroma, and back to mine (after a few choice insults were uttered by me) for a nice cuppa.</description>
+      <description>I’ve been running around a bit like a headless chicken recently, not content with spending lots of time at uni working, I’ve been partying pretty hard as well.
+Spent Friday going to Kez’s 21st birthday for a meal at Old Orleans, which was rather tasty. Bombed back to hang out with Vineyardites at Marty’z Kitchen, which we were duely moved on from to Cafe aroma, and back to mine (after a few choice insults were uttered by me) for a nice cuppa.</description>
     </item>
     
     <item>
@@ -792,8 +784,8 @@ Spent Friday going to Kez&amp;#8217;s 21st birthday for a meal at Old Orleans, w
       <pubDate>Tue, 05 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/04/05/ebay-bargains/</guid>
-      <description>If I had something interesting to say I would say it, but I don&amp;#8217;t really so instead I&amp;#8217;ll hit you with a few ebay bargains I&amp;#8217;ve picked up of late. Currently I&amp;#8217;m holding a rating of 166 positive, I reckon thats pretty good. Anybody else bought anything interesting off the net lately?
- Cut N Paste &amp;#8211; Forget It [12&amp;rdquo; Single] (£1.99). I&amp;#8217;ve been after this ever since I heard it on a Fatboy Slim &amp;#8216;On the Floor at the Boutique&amp;#8217; mix CD donkeys years ago&amp;#8230;.</description>
+      <description>If I had something interesting to say I would say it, but I don’t really so instead I’ll hit you with a few ebay bargains I’ve picked up of late. Currently I’m holding a rating of 166 positive, I reckon thats pretty good. Anybody else bought anything interesting off the net lately?
+ Cut N Paste – Forget It [12&amp;quot; Single] (£1.99). I’ve been after this ever since I heard it on a Fatboy Slim ‘On the Floor at the Boutique’ mix CD donkeys years ago….</description>
     </item>
     
     <item>
@@ -802,7 +794,7 @@ Spent Friday going to Kez&amp;#8217;s 21st birthday for a meal at Old Orleans, w
       <pubDate>Tue, 05 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/04/05/signs/</guid>
-      <description>There&amp;#8217;s loads of places on the net where you can view silly or stupid signs. Most of the ones I&amp;#8217;ve seen aren&amp;#8217;t from the UK though, and I can&amp;#8217;t imagine them any kind of scenario, which I think would make them all the more funny. This place has loads, so many I can&amp;#8217;t afford to look through all of them. I can&amp;#8217;t believe I&amp;#8217;ve missed it before.</description>
+      <description>There’s loads of places on the net where you can view silly or stupid signs. Most of the ones I’ve seen aren’t from the UK though, and I can’t imagine them any kind of scenario, which I think would make them all the more funny. This place has loads, so many I can’t afford to look through all of them. I can’t believe I’ve missed it before.</description>
     </item>
     
     <item>
@@ -820,7 +812,7 @@ Spent Friday going to Kez&amp;#8217;s 21st birthday for a meal at Old Orleans, w
       <pubDate>Mon, 14 Mar 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/03/14/birthday-blues/</guid>
-      <description>I&amp;#8217;m trying to decide what to do for my birthday which falls on Bank holiday monday this year. Currently I&amp;#8217;m of the mind to do something on Good Friday like have a meal, then off to town (Chico Fresco and Phantom Beats will be at bsb apparently)&amp;#8230;.Leaving me free to go back and have easter and my actual birthday with family and friends. I&amp;#8217;m going to be 24&amp;#8230;24,24?!, no surely thats not right!</description>
+      <description>I’m trying to decide what to do for my birthday which falls on Bank holiday monday this year. Currently I’m of the mind to do something on Good Friday like have a meal, then off to town (Chico Fresco and Phantom Beats will be at bsb apparently)….Leaving me free to go back and have easter and my actual birthday with family and friends. I’m going to be 24…24,24?!, no surely thats not right!</description>
     </item>
     
     <item>
@@ -829,8 +821,8 @@ Spent Friday going to Kez&amp;#8217;s 21st birthday for a meal at Old Orleans, w
       <pubDate>Mon, 21 Feb 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/02/21/fun-packed-weekends/</guid>
-      <description>My weekends are getting more and more full of stuff being a PhD student. It&amp;#8217;s nice being able to confine my work to a 9-5 regime (or thereabouts) and do whatever I want outside of that, plus unlike being an undergrad, I get some money.
-This weeks been pretty packed, after the fan dabby dosy weekend at Port Eynon with Cardiff Vineyard last week, I stopped by my sis&amp;#8217;s in Swansea for a bit to say hi.</description>
+      <description>My weekends are getting more and more full of stuff being a PhD student. It’s nice being able to confine my work to a 9-5 regime (or thereabouts) and do whatever I want outside of that, plus unlike being an undergrad, I get some money.
+This weeks been pretty packed, after the fan dabby dosy weekend at Port Eynon with Cardiff Vineyard last week, I stopped by my sis’s in Swansea for a bit to say hi.</description>
     </item>
     
     <item>
@@ -839,7 +831,7 @@ This weeks been pretty packed, after the fan dabby dosy weekend at Port Eynon wi
       <pubDate>Thu, 20 Jan 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/01/20/old-photos/</guid>
-      <description>I&amp;#8217;ve uploaded some old photo&amp;#8217;s of me performing at an old Infusion gig back in 2003.</description>
+      <description>I’ve uploaded some old photo’s of me performing at an old Infusion gig back in 2003.</description>
     </item>
     
     <item>
@@ -848,7 +840,7 @@ This weeks been pretty packed, after the fan dabby dosy weekend at Port Eynon wi
       <pubDate>Fri, 07 Jan 2005 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2005/01/07/christmas-over-back-to-work/</guid>
-      <description>So, the holiday season is all over and now I suffer the mundane reality that is my own life&amp;#8230;boo hoo. Christmas was a little pants to be honest, as my Mum was in hospital the whole time I was at home, although it did make the place a lot quieter! Christmas Day was quite special as well, the fact that it snowed and all. It just so happened that this was when St John&amp;#8217;s Church doors were opened after the morning service too, so everyone there was quite exciteable.</description>
+      <description>So, the holiday season is all over and now I suffer the mundane reality that is my own life…boo hoo. Christmas was a little pants to be honest, as my Mum was in hospital the whole time I was at home, although it did make the place a lot quieter! Christmas Day was quite special as well, the fact that it snowed and all. It just so happened that this was when St John’s Church doors were opened after the morning service too, so everyone there was quite exciteable.</description>
     </item>
     
     <item>
@@ -858,7 +850,7 @@ This weeks been pretty packed, after the fan dabby dosy weekend at Port Eynon wi
       
       <guid>https://www.ianwootten.co.uk/2004/12/09/christmas-feelings/</guid>
       <description>Can it be December already? What have I been doing? Wheres the last 3 months gone? I have to say I feel more Christmas-sy this year in Cardiff than I have ever been up here.
-There seems to have been a bit of a build up so far.. Watching &amp;#8220;Bad Santa&amp;#8221; back in Nov (quite possibly the most amount of swearing I&amp;#8217;ve ever seen in a film), going to Germany the other week with all the festive fun over there.</description>
+There seems to have been a bit of a build up so far.. Watching “Bad Santa” back in Nov (quite possibly the most amount of swearing I’ve ever seen in a film), going to Germany the other week with all the festive fun over there.</description>
     </item>
     
     <item>
@@ -867,9 +859,9 @@ There seems to have been a bit of a build up so far.. Watching &amp;#8220;Bad Sa
       <pubDate>Mon, 08 Nov 2004 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2004/11/08/boo-hoo..../</guid>
-      <description>Thought I&amp;#8217;d have a moan about a few bits and bobs&amp;#8230;same old, same old
+      <description>Thought I’d have a moan about a few bits and bobs…same old, same old
 I had a bit of an interesting experience today when my speedo decided to die halfway to Rhwibina. Could have been worse I guess, could of been on the motorway. Anyway, best get that sorted.
-Uni seems to be going ok, the works piling up a bit though. It&amp;#8217;s a bit of a nightmare to think about teaching and researching within the same day, takes me ages to adjust and concentrate for that matter.</description>
+Uni seems to be going ok, the works piling up a bit though. It’s a bit of a nightmare to think about teaching and researching within the same day, takes me ages to adjust and concentrate for that matter.</description>
     </item>
     
     <item>
@@ -878,8 +870,8 @@ Uni seems to be going ok, the works piling up a bit though. It&amp;#8217;s a bit
       <pubDate>Mon, 11 Oct 2004 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2004/10/11/weddings-galore/</guid>
-      <description>I&amp;#8217;ve been to so many of my close mates wedding over the last couple of years&amp;#8230; In fact I don&amp;#8217;t actually think any of the old school crew are still single! Anyway in celebration of this, and Pauls recent marriage to Lisa, I&amp;#8217;ve shoved up a gallery to show off some of the pics I have for them.
-The gallery is located here, and for the blog here&amp;#8217;s Paul in his new found role:</description>
+      <description>I’ve been to so many of my close mates wedding over the last couple of years… In fact I don’t actually think any of the old school crew are still single! Anyway in celebration of this, and Pauls recent marriage to Lisa, I’ve shoved up a gallery to show off some of the pics I have for them.
+The gallery is located here, and for the blog here’s Paul in his new found role:</description>
     </item>
     
     <item>
@@ -888,8 +880,8 @@ The gallery is located here, and for the blog here&amp;#8217;s Paul in his new f
       <pubDate>Mon, 16 Aug 2004 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2004/08/16/update/</guid>
-      <description>Seeing as how I haven&amp;#8217;t posted anything here properly for far too long, I thought I&amp;#8217;d give an update on everything I&amp;#8217;ve been doing since we last spoke..
-Firstly, I got my degree, with the grades I wanted, although not perhaps in the subjects I expected to get them in, though I guess thats always the way. As a result of that, I&amp;#8217;m going to be staying on at Cardiff for a PhD conducting research into the PASOA project over the coming year.</description>
+      <description>Seeing as how I haven’t posted anything here properly for far too long, I thought I’d give an update on everything I’ve been doing since we last spoke..
+Firstly, I got my degree, with the grades I wanted, although not perhaps in the subjects I expected to get them in, though I guess thats always the way. As a result of that, I’m going to be staying on at Cardiff for a PhD conducting research into the PASOA project over the coming year.</description>
     </item>
     
     <item>
@@ -898,9 +890,9 @@ Firstly, I got my degree, with the grades I wanted, although not perhaps in the 
       <pubDate>Mon, 03 May 2004 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2004/05/03/its-been-a-while/</guid>
-      <description>Hmm, haven&amp;#8217;t really written much here in a while. Things are going ok, I have my final 4 exams over the next fortnight which I&amp;#8217;m currently struggling revising for. Will hopefully pull out the grades I want, but I&amp;#8217;m cutting it fine..
-I&amp;#8217;ve also finished my project, and its up and running on the web at www.understroke.com (requires client side XSL processing, IE 6+ Mozilla 1.4+).
-Anyway, thats all I have to say for now, I&amp;#8217;m off to watch Kill Bill 2.</description>
+      <description>Hmm, haven’t really written much here in a while. Things are going ok, I have my final 4 exams over the next fortnight which I’m currently struggling revising for. Will hopefully pull out the grades I want, but I’m cutting it fine..
+I’ve also finished my project, and its up and running on the web at www.understroke.com (requires client side XSL processing, IE 6+ Mozilla 1.4+).
+Anyway, thats all I have to say for now, I’m off to watch Kill Bill 2.</description>
     </item>
     
     <item>
@@ -909,7 +901,7 @@ Anyway, thats all I have to say for now, I&amp;#8217;m off to watch Kill Bill 2.
       <pubDate>Fri, 23 Jan 2004 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2004/01/23/huzzah/</guid>
-      <description>Hurrah, exams over for another few months. I&amp;#8217;m glad, and completely exhausted by them all. I was feeling completely overrun by them all. Still now its time to kick back and relax&amp;#8230;until er &amp;#8211; Monday</description>
+      <description>Hurrah, exams over for another few months. I’m glad, and completely exhausted by them all. I was feeling completely overrun by them all. Still now its time to kick back and relax…until er – Monday</description>
     </item>
     
     <item>
@@ -918,9 +910,7 @@ Anyway, thats all I have to say for now, I&amp;#8217;m off to watch Kill Bill 2.
       <pubDate>Wed, 22 Oct 2003 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2003/10/22/he-aint-heavy/</guid>
-      <description>Having just installed the latest version of wordpress over b2 (thus ruining said previous mood plugin) I now have a working image upload abilities! Just to give you an idea of what goes on up in Cardiff, have a look at this pic of me and my long lost brother.
- 
-  </description>
+      <description>Having just installed the latest version of wordpress over b2 (thus ruining said previous mood plugin) I now have a working image upload abilities! Just to give you an idea of what goes on up in Cardiff, have a look at this pic of me and my long lost brother.</description>
     </item>
     
     <item>
@@ -929,8 +919,8 @@ Anyway, thats all I have to say for now, I&amp;#8217;m off to watch Kill Bill 2.
       <pubDate>Tue, 19 Aug 2003 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2003/08/19/random-rummaging/</guid>
-      <description>Allow me to breathe a sigh of relief&amp;#8230;I&amp;#8217;ve just spent most of the last hour sorting out what&amp;#8217;s rubbish from most of the paper lying about my room, whilst searching for my student support details. I did find them, could of been a messy first few weeks back at Uni if I hadn&amp;#8217;t!
-I also found a mates wedding invitation and list, reminding me that I actually have to reply to say that I&amp;#8217;m attending, and buy them a present.</description>
+      <description>Allow me to breathe a sigh of relief…I’ve just spent most of the last hour sorting out what’s rubbish from most of the paper lying about my room, whilst searching for my student support details. I did find them, could of been a messy first few weeks back at Uni if I hadn’t!
+I also found a mates wedding invitation and list, reminding me that I actually have to reply to say that I’m attending, and buy them a present.</description>
     </item>
     
   </channel>

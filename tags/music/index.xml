@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Music on Ian Wootten</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Music on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Apr 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/music/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 07 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/music/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Copyright Law Finally Aligns with Me</title>
       <link>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</guid>
       <description>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.
-Finally, we&amp;#8217;ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I&amp;#8217;ve long made copies of my cd&amp;#8217;s to listen to whilst coding (iTunes allows me to do so simply) &amp;#8211; but it is not currently legal to move these files to another storage medium, such as an mp3 player.</description>
+Finally, we’ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I’ve long made copies of my cd’s to listen to whilst coding (iTunes allows me to do so simply) – but it is not currently legal to move these files to another storage medium, such as an mp3 player.</description>
     </item>
     
     <item>
@@ -27,7 +23,7 @@ Finally, we&amp;#8217;ll able to make personal conversions of digital media (at 
       <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid>
-      <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn&amp;#8217;t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you&amp;#8217;d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
+      <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn’t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you’d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
     </item>
     
     <item>
@@ -36,7 +32,7 @@ Finally, we&amp;#8217;ll able to make personal conversions of digital media (at 
       <pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</guid>
-      <description>I can&amp;#8217;t help but feel a little sorry for music blogs as of late. I&amp;#8217;m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I&amp;#8217;ve found it really interesting to browse around and discover new artists.</description>
+      <description>I can’t help but feel a little sorry for music blogs as of late. I’m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I’ve found it really interesting to browse around and discover new artists.</description>
     </item>
     
   </channel>

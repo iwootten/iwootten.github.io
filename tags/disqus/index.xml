@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Disqus on Ian Wootten</title>
+    <title>disqus on Ian Wootten</title>
     <link>https://www.ianwootten.co.uk/tags/disqus/</link>
-    <description>Recent content in Disqus on Ian Wootten</description>
+    <description>Recent content in disqus on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.ianwootten.co.uk/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Porting a Wordpress blog to Jekyll: Part 1</title>
       <link>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</link>

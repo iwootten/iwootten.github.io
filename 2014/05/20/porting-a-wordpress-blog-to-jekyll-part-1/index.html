@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.76.5" />
 
     
     
@@ -24,13 +24,12 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https://www.ianwootten.co.uk"
+         "@id": "https:\/\/www.ianwootten.co.uk"
     },
     "articleSection" : "posts",
     "name" : "Porting a Wordpress blog to Jekyll: Part 1",
     "headline" : "Porting a Wordpress blog to Jekyll: Part 1",
-    "description" : "As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&rsquo;ve overcome them.
-Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.",
+    "description" : "As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I\u0026rsquo;ve overcome them.\nUsing Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -38,9 +37,9 @@ Using Compass for a Jekyll theme The first problem I hit was my use of compass t
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2014",
-    "datePublished": "2014-05-20 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2014-05-20 00:00:00 &#43;0000 UTC",
-    "url" : "https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/",
+    "datePublished": "2014-05-20 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2014-05-20 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2014\/05\/20\/porting-a-wordpress-blog-to-jekyll-part-1\/",
     "wordCount" : "583",
     "keywords" : [ "jekyll","static sites","wordpress","disqus","pygments","Blog" ]
 }
@@ -56,8 +55,9 @@ Using Compass for a Jekyll theme The first problem I hit was my use of compass t
 <meta property="og:description" content="As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&rsquo;ve overcome them.
 Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/" /><meta property="article:published_time" content="2014-05-20T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-05-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/" />
+<meta property="article:published_time" content="2014-05-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-05-20T00:00:00+00:00" />
 
 
     
@@ -96,7 +96,7 @@ Using Compass for a Jekyll theme The first problem I hit was my use of compass t
       </div>
       
       <p class="site__description">
-         Web Developer, Cardiff 
+         Software Developer, Cardiff 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -154,7 +154,7 @@ Using Compass for a Jekyll theme The first problem I hit was my use of compass t
       </div>
     </div>
     <p class="copyright">
-      &copy;2003-2018 Ian Wootten
+      &copy;2003-2020 Ian Wootten
     </p>
   </div>
   <div>
@@ -218,29 +218,21 @@ Using Compass for a Jekyll theme The first problem I hit was my use of compass t
   
   
   <div class="post">
-    
-
-<p>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&rsquo;ve overcome them.</p>
-
+    <p>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&rsquo;ve overcome them.</p>
 <h2 id="using-compass-for-a-jekyll-theme">Using Compass for a Jekyll theme</h2>
-
 <p>The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog. When attempting to use <a href="https://github.com/mscharley/jekyll-compass">jekyll-compass</a> to enable that, I hit the following error:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Unable to activate compass-0.12.6, because sass-3.3.7 conflicts with sass <span style="color:#f92672">(</span>~&gt; <span style="color:#ae81ff">3</span>.2.19<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Gem::LoadError<span style="color:#f92672">)</span></code></pre></div>
-<p>After searching for a bit I came across the <a href="https://github.com/jekyll/jekyll/issues/2263">following issue</a> which detailed a solution - but unfortunately it didn&rsquo;t work for me. Being somewhat of a newbie to Ruby, I didn&rsquo;t realise that after creating a Gem as instructed in the fix, I actually needed to &ldquo;bundle install&rdquo; it. After a little more digging and tweaking against <a href="http://twitter.com/markturner">Mark Turners</a> advice, I ended up with a Gem file like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Unable to activate compass-0.12.6, because sass-3.3.7 conflicts with sass <span style="color:#f92672">(</span>~&gt; 3.2.19<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>Gem::LoadError<span style="color:#f92672">)</span>
+</code></pre></div><p>After searching for a bit I came across the <a href="https://github.com/jekyll/jekyll/issues/2263">following issue</a> which detailed a solution - but unfortunately it didn&rsquo;t work for me. Being somewhat of a newbie to Ruby, I didn&rsquo;t realise that after creating a Gem as instructed in the fix, I actually needed to &ldquo;bundle install&rdquo; it. After a little more digging and tweaking against <a href="http://twitter.com/markturner">Mark Turners</a> advice, I ended up with a Gem file like so:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">source <span style="color:#e6db74">&#34;https://rubygems.org&#34;</span>
 
 gem <span style="color:#e6db74">&#39;sass&#39;</span>, <span style="color:#e6db74">&#34;~&gt; 3.2.19&#34;</span>
-gem <span style="color:#e6db74">&#39;jekyll-compass&#39;</span>, <span style="color:#e6db74">&#34;1.0.6&#34;</span></code></pre></div>
-<p>Which has finally given me what I wanted.</p>
-
+gem <span style="color:#e6db74">&#39;jekyll-compass&#39;</span>, <span style="color:#e6db74">&#34;1.0.6&#34;</span>
+</code></pre></div><p>Which has finally given me what I wanted.</p>
 <h2 id="using-custom-pygments-themes-for-syntax-highlighting">Using Custom Pygments Themes for Syntax highlighting</h2>
-
 <p>Jekyll uses pygments for fancy pants syntax highlighting. Although an example syntax.css is linked to in the jekyll documentation, I prefer a darker theme myself. Jekyll doesn&rsquo;t tell you it&rsquo;s possible to generate any one of the numerous pygments styles like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pygmentize -f html -S monokai -a .highlight &gt; monokai.css</code></pre></div>
-<p>I&rsquo;ve used the monokai theme for my own highlighting. There are demos of each of the themes on the pygments site - <a href="http://pygments.org/demo/357593/">here is an example</a>. You can then use that as the basis for your own custom highlighting. I&rsquo;ve created each one of the 19 possible themes and <a href="https://github.com/iwootten/jekyll-syntax">put them up on github</a>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pygmentize -f html -S monokai -a .highlight &gt; monokai.css
+</code></pre></div><p>I&rsquo;ve used the monokai theme for my own highlighting. There are demos of each of the themes on the pygments site - <a href="http://pygments.org/demo/357593/">here is an example</a>. You can then use that as the basis for your own custom highlighting. I&rsquo;ve created each one of the 19 possible themes and <a href="https://github.com/iwootten/jekyll-syntax">put them up on github</a>.</p>
 <h2 id="moving-to-disqus-commenting">Moving to Disqus Commenting</h2>
-
 <p>Given I now had a static site, I needed a means of continuing supporting comments. Disqus does just that by embedding comments using javascript into post pages. Adding disqus  proved to be the biggest hurdle for me. I had a large number of comments from people on my blog over the years and therefore I didn&rsquo;t want to lose them. After exporting my site as xml and uploading them to disqus, I finally set jekyll loose on my site along with disqus embeds, but I couldn&rsquo;t see them. The problem I found after a frustrating hour or two of uploading new versions of my site over ftp, was jekyll used a trailing slash (as the post is an index within a directory) to denote links to posts. It&rsquo;s possible however to do away with this using .htaccess if you&rsquo;re using Apache.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-apache" data-lang="apache">Options -Multiviews +FollowSymLinks
 RewriteEngine <span style="color:#66d9ef">On</span>
@@ -251,11 +243,9 @@ DirectorySlash <span style="color:#66d9ef">Off</span>
 RewriteRule ^(.*)\/(\?.*)?$ $1$2 [R=301,L]
 
 <span style="color:#75715e"># rewrite /dir/file to /dir/file/index.html</span>
-RewriteRule ^([\w\/-]+)(\?.*)?$ $1/index.html$2 [L,T=application/x-httpd-html]</code></pre></div>
-<p>However, when I began using github pages, this fix didn&rsquo;t work as github only serves static files and doesn&rsquo;t allow use of htaccess. Instead, I had to resign to the fact that I would have to have trailing slashes (apparently they&rsquo;re quicker anyway). This then meant I had to use the Redirect Crawler option of disqus&rsquo;s &ldquo;Migrate Threads&rdquo; wizard (seen below) to crawl my new blog on github and determine where the posts were now located.</p>
-
-<p><img src="https://www.ianwootten.co.uk/images/screen-2014-05-20.png" title="Disqus Migrate Threads Wizard" /></p>
-
+RewriteRule ^([\w\/-]+)(\?.*)?$ $1/index.html$2 [L,T=application/x-httpd-html]
+</code></pre></div><p>However, when I began using github pages, this fix didn&rsquo;t work as github only serves static files and doesn&rsquo;t allow use of htaccess. Instead, I had to resign to the fact that I would have to have trailing slashes (apparently they&rsquo;re quicker anyway). This then meant I had to use the Redirect Crawler option of disqus&rsquo;s &ldquo;Migrate Threads&rdquo; wizard (seen below) to crawl my new blog on github and determine where the posts were now located.</p>
+<p><!-- raw HTML omitted --></p>
 <p>In my next post I&rsquo;ll go through how I use plugins to support archive, category and tag pages in jekyll.</p>
 
   </div>
