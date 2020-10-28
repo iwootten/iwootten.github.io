@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2020 10:00:19 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2020 10:13:59 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>digitalocean</title>
+      <link>https://www.ianwootten.co.uk/tags/digitalocean/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/digitalocean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://www.ianwootten.co.uk/tags/django/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.ianwootten.co.uk/tags/python/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://www.ianwootten.co.uk/tags/tutorial/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ci</title>
       <link>https://www.ianwootten.co.uk/tags/ci/</link>
@@ -26,11 +62,20 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://www.ianwootten.co.uk/tags/python/</link>
+      <title>pypi</title>
+      <link>https://www.ianwootten.co.uk/tags/pypi/</link>
       <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
+      <guid>https://www.ianwootten.co.uk/tags/pypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python-poetry</title>
+      <link>https://www.ianwootten.co.uk/tags/python-poetry/</link>
+      <pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python-poetry/</guid>
       <description></description>
     </item>
     
@@ -1408,15 +1453,6 @@
       <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/boards/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>django</title>
-      <link>https://www.ianwootten.co.uk/tags/django/</link>
-      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/django/</guid>
       <description></description>
     </item>
     

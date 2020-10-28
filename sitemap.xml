@@ -4,16 +4,61 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2020-10-23T10:00:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/ci/</loc>
-    <lastmod>2020-10-23T10:00:19+01:00</lastmod>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/categories/development/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/digitalocean/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/django/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/software/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/tutorial/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/ci/</loc>
     <lastmod>2020-10-23T10:00:19+01:00</lastmod>
   </url>
   
@@ -23,37 +68,22 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2020-10-23T10:00:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2020-10-23T10:00:19+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</loc>
     <lastmod>2020-10-23T10:00:19+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
-    <lastmod>2020-10-23T10:00:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/software/</loc>
-    <lastmod>2020-10-23T10:00:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <loc>https://www.ianwootten.co.uk/tags/pypi/</loc>
     <lastmod>2020-10-23T10:00:19+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</loc>
+    <lastmod>2020-10-20T10:04:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/python-poetry/</loc>
     <lastmod>2020-10-20T10:04:11+01:00</lastmod>
   </url>
   
@@ -1349,11 +1379,6 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/tags/boards/</loc>
-    <lastmod>2008-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/django/</loc>
     <lastmod>2008-01-30T00:00:00+00:00</lastmod>
   </url>
   
