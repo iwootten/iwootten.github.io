@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ianwootten.co.uk/2020/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
     <lastmod>2020-10-28T10:13:59+00:00</lastmod>
   </url>
@@ -58,6 +63,11 @@
   </url>
   
   <url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2020-10-28T10:13:59+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ianwootten.co.uk/tags/ci/</loc>
     <lastmod>2020-10-23T10:00:19+01:00</lastmod>
   </url>
@@ -99,11 +109,6 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/2018/12/06/purpose/</loc>
-    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
     <lastmod>2018-12-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -2997,6 +3002,10 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/2018/12/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/2020/10/</loc>
   </url>
   
   <url>
