@@ -13,7 +13,7 @@
       
       <guid>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</guid>
       <description>Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&amp;rsquo;d go through some of the points that tripped me up here.
-I&amp;rsquo;ve been looking for some time for a relatively simple and cheap method for deploying my projects, but often this is mired in complexity of building my own pipeline to trigger on changes.</description>
+I&amp;rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.</description>
     </item>
     
     <item>

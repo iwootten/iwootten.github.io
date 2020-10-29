@@ -29,7 +29,7 @@
     "articleSection" : "posts",
     "name" : "How to Deploy a Django App to the DigitalOcean App Platform",
     "headline" : "How to Deploy a Django App to the DigitalOcean App Platform",
-    "description" : "Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I\u0026rsquo;d go through some of the points that tripped me up here.\nI\u0026rsquo;ve been looking for some time for a relatively simple and cheap method for deploying my projects, but often this is mired in complexity of building my own pipeline to trigger on changes.",
+    "description" : "Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I\u0026rsquo;d go through some of the points that tripped me up here.\nI\u0026rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -40,7 +40,7 @@
     "datePublished": "2020-10-28 10:13:59 \u002b0000 UTC",
     "dateModified" : "2020-10-28 10:13:59 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2020\/10\/28\/how-to-deploy-a-django-app-to-the-digitalocean-app-platform\/",
-    "wordCount" : "828",
+    "wordCount" : "995",
     "keywords" : [ "python","django","digitalocean","tutorial","Blog" ]
 }
 </script>
@@ -49,11 +49,11 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Deploy a Django App to the DigitalOcean App Platform"/>
 <meta name="twitter:description" content="Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&rsquo;d go through some of the points that tripped me up here.
-I&rsquo;ve been looking for some time for a relatively simple and cheap method for deploying my projects, but often this is mired in complexity of building my own pipeline to trigger on changes."/>
+I&rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app."/>
 
 <meta property="og:title" content="How to Deploy a Django App to the DigitalOcean App Platform" />
 <meta property="og:description" content="Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&rsquo;d go through some of the points that tripped me up here.
-I&rsquo;ve been looking for some time for a relatively simple and cheap method for deploying my projects, but often this is mired in complexity of building my own pipeline to trigger on changes." />
+I&rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/" />
 <meta property="article:published_time" content="2020-10-28T10:13:59+00:00" />
@@ -119,6 +119,14 @@ I&rsquo;ve been looking for some time for a relatively simple and cheap method f
 				<li>
 					<a href="https://www.ianwootten.co.uk/contact/">
 						<span>Contact</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://nifty-digits-6344.ck.page/eeb7698c6f">
+						<span>Newsletter</span>
 					</a>
 				</li>
 			 
@@ -210,7 +218,7 @@ I&rsquo;ve been looking for some time for a relatively simple and cheap method f
     
     
     <br/>
-    <i class="fas fa-clock"></i> 4 min read
+    <i class="fas fa-clock"></i> 5 min read
 </div>
 
 
@@ -219,8 +227,21 @@ I&rsquo;ve been looking for some time for a relatively simple and cheap method f
   
   <div class="post">
     <p>Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&rsquo;d go through some of the points that tripped me up here.</p>
-<p>I&rsquo;ve been looking for some time for a relatively simple and cheap method for deploying my projects, but often this is mired in complexity of building my own pipeline to trigger on changes. With the introduction of the App platform it looks like I may well have found a very simple way to ship quickly and cheaply. The most basic app on Heroku for example costs $25/mo, where the most basic on DigitalOcean is $5/mo.</p>
+<p>I&rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app. Often getting this setup is mired in complexity of building my own pipeline to trigger a deployment when I make changes to my codebase. If you&rsquo;re looking to ship, you probably don&rsquo;t want to have hire an Ops person to manage it all for you or learn something like Kubernetes yourself before pushing to production. By making this the App platforms responsibility you&rsquo;re free to worry about other things.</p>
 <p>In this tutorial I&rsquo;ll be walking through the steps I used to deploy a django app <a href="https://github.com/iwootten/empty-django-app">empty-django-app</a> which  shows a simple &ldquo;Hello, world!&rdquo; response from its main view. I do this using the main DigitalOcean interface and the CLI using an App specification yaml.</p>
+<h4 id="pros">Pros:</h4>
+<ul>
+<li>Continuous deployments with little pipeline configuration neccessary</li>
+<li>Simpler than using a cloud provider such as AWS or Google Cloud</li>
+<li>Many <a href="https://www.digitalocean.com/docs/app-platform/languages-frameworks/">languages and frameworks supported</a></li>
+<li>Cheaper than Heroku - A simple App using both Postgres and Redis comes in at $90/mo on Heroku ($25 + $50 + $15) vs $42/mo on DigitalOcean ($12 + $15 + $15)</li>
+</ul>
+<h4 id="cons">Cons:</h4>
+<ul>
+<li>Only supports GitHub as a host at the moment (More hosts to be added soon).</li>
+<li>Less integrations out of the box than Heroku</li>
+<li>Lack of Documentation - However, the community is very active and <a href="https://www.digitalocean.com/community/questions/app-platform-instance_size_slug-options">I found questions I had were answered promptly</a>.</li>
+</ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>A github account</li>
@@ -262,7 +283,11 @@ ID                                      Spec Name           Default Ingress    A
 </code></pre></div><p>If you then head to the DigitalOcean web site, you should see your app deploying much the same way as before <a href="https://cloud.digitalocean.com/apps">on your apps homepage</a>.</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>I&rsquo;ve covered the basics of the DigitalOcean App platform here by deploying a simple Django application using the main user interface and doctl. This app is now configured to automatically deploy any changes made to my Django application as soon as they are merged to the main branch on Github.</p>
-<p>I think the platform offers really good value compared to other providers, where costs can really ramp up as the complexity of the project is non-trivial. With its launch I&rsquo;ll now be able to ship ideas much more quickly without worry of the costs or complexity involved.</p>
+<p>I think the platform offers really good value compared to other providers, where costs can really ramp up as the complexity of the project becomes non-trivial. With its launch I&rsquo;ll now be able to ship ideas much more quickly without too much worry of the costs or complexity involved.</p>
+<hr />
+
+<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join my newsletter below. You'll get updates on new content here and around the web on topics like Python, automation and the cloud once a week.</p>
+<script async data-uid="9a5d03a76a" src="https://nifty-digits-6344.ck.page/9a5d03a76a/index.js"></script>
 
   </div>
   
