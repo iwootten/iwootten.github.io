@@ -6,7 +6,16 @@
     <description>Recent content in Development on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2020 10:13:59 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Nov 2020 15:35:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Black to Format Python and get on with Your Life</title>
+      <link>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</link>
+      <pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</guid>
+      <description>When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&amp;rsquo;t meet formatting rules that were felt best for that piece of work. It didn&amp;rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was wrong on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again.</description>
+    </item>
+    
     <item>
       <title>How to Deploy a Django App to the DigitalOcean App Platform</title>
       <link>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</link>

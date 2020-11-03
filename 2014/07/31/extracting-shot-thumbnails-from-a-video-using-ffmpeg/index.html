@@ -29,7 +29,7 @@
     "articleSection" : "posts",
     "name" : "Extracting Shot Thumbnails from a video using FFMPEG",
     "headline" : "Extracting Shot Thumbnails from a video using FFMPEG",
-    "description" : "Recently, Andy Davies asked the following question on twitter:\nI found this pretty interesting, especially given I\u0026rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.\nAfter a bit of digging last night, I discovered it\u0026rsquo;s actually possible to extract images based on changes in the video. We can use this to extract a rough approximation to individual shots.",
+    "description" : "Recently, Andy Davies asked the following question on twitter: Any ideas on how I can easily convert a video to a filmstrip?\n\u0026mdash; Andy Davies (@AndyDavies) July 23, 2014  I found this pretty interesting, especially given I\u0026rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.\nAfter a bit of digging last night, I discovered it\u0026rsquo;s actually possible to extract images based on changes in the video.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -40,22 +40,22 @@
     "datePublished": "2014-07-31 00:00:00 \u002b0000 UTC",
     "dateModified" : "2014-07-31 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2014\/07\/31\/extracting-shot-thumbnails-from-a-video-using-ffmpeg\/",
-    "wordCount" : "326",
+    "wordCount" : "346",
     "keywords" : [ "imagemajick","ffmpeg","Blog" ]
 }
 </script>
 <meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
-<meta name="keywords" content="Developer, Programming, Cardiff">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, VueJS, Cardiff">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Extracting Shot Thumbnails from a video using FFMPEG"/>
-<meta name="twitter:description" content="Recently, Andy Davies asked the following question on twitter:
-I found this pretty interesting, especially given I&rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
-After a bit of digging last night, I discovered it&rsquo;s actually possible to extract images based on changes in the video. We can use this to extract a rough approximation to individual shots."/>
+<meta name="twitter:description" content="Recently, Andy Davies asked the following question on twitter: Any ideas on how I can easily convert a video to a filmstrip?
+&mdash; Andy Davies (@AndyDavies) July 23, 2014  I found this pretty interesting, especially given I&rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
+After a bit of digging last night, I discovered it&rsquo;s actually possible to extract images based on changes in the video."/>
 
 <meta property="og:title" content="Extracting Shot Thumbnails from a video using FFMPEG" />
-<meta property="og:description" content="Recently, Andy Davies asked the following question on twitter:
-I found this pretty interesting, especially given I&rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
-After a bit of digging last night, I discovered it&rsquo;s actually possible to extract images based on changes in the video. We can use this to extract a rough approximation to individual shots." />
+<meta property="og:description" content="Recently, Andy Davies asked the following question on twitter: Any ideas on how I can easily convert a video to a filmstrip?
+&mdash; Andy Davies (@AndyDavies) July 23, 2014  I found this pretty interesting, especially given I&rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
+After a bit of digging last night, I discovered it&rsquo;s actually possible to extract images based on changes in the video." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/" />
 <meta property="article:published_time" content="2014-07-31T00:00:00+00:00" />
@@ -142,6 +142,9 @@ After a bit of digging last night, I discovered it&rsquo;s actually possible to 
 	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
 	
 	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
 	
 	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 	
@@ -219,9 +222,12 @@ After a bit of digging last night, I discovered it&rsquo;s actually possible to 
   
   
   <div class="post">
-    <p>Recently, Andy Davies asked the following question on twitter:</p>
-<!-- raw HTML omitted -->
-<p>I found this pretty interesting, especially given I&rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.</p>
+    <p>Recently, Andy Davies asked the following question on twitter:
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p>Any ideas on how I can easily convert a video to a filmstrip?</p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/491878215464808450">July 23, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I found this pretty interesting, especially given I&rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.</p>
 <p>After a bit of digging last night, I discovered it&rsquo;s <a href="http://superuser.com/questions/538112/meaningful-thumbnails-for-a-video-using-ffmpeg">actually possible to extract images based on changes in the video</a>. We can use this to extract a rough approximation to individual shots.</p>
 <p>I&rsquo;ve run the following command on the Big Buck Bunny in order to extract 138 individual changes from the 10 min short. I&rsquo;m using ffmpeg version 2.3 (I had tried using ffmbc 0.7, but it is unable to parse some of the options).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -ss <span style="color:#ae81ff">3</span> -i big_buck_bunny_1080p_surround.avi -vf <span style="color:#e6db74">&#34;select=gt(scene\,0.2)&#34;</span> -vsync vfr -s vga -f image2 out%02d.jpg

@@ -13,9 +13,9 @@
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/</guid>
-      <description>Recently, Andy Davies asked the following question on twitter:
-I found this pretty interesting, especially given I&amp;rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
-After a bit of digging last night, I discovered it&amp;rsquo;s actually possible to extract images based on changes in the video. We can use this to extract a rough approximation to individual shots.</description>
+      <description>Recently, Andy Davies asked the following question on twitter: Any ideas on how I can easily convert a video to a filmstrip?
+&amp;mdash; Andy Davies (@AndyDavies) July 23, 2014  I found this pretty interesting, especially given I&amp;rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
+After a bit of digging last night, I discovered it&amp;rsquo;s actually possible to extract images based on changes in the video.</description>
     </item>
     
   </channel>
