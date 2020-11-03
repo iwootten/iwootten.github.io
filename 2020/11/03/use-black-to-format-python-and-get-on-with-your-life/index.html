@@ -40,7 +40,7 @@
     "datePublished": "2020-11-03 15:35:34 \u002b0000 UTC",
     "dateModified" : "2020-11-03 15:35:34 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2020\/11\/03\/use-black-to-format-python-and-get-on-with-your-life\/",
-    "wordCount" : "417",
+    "wordCount" : "437",
     "keywords" : [ "python","teams","ci","tips","Blog" ]
 }
 </script>
@@ -219,7 +219,7 @@
     
     
     <br/>
-    <i class="fas fa-clock"></i> 2 min read
+    <i class="fas fa-clock"></i> 3 min read
 </div>
 
 
@@ -227,7 +227,7 @@
   
   
   <div class="post">
-    <p>When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&rsquo;t meet formatting rules that were felt best for that piece of work. It didn&rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was <em>wrong</em> on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again.</p>
+    <p>When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&rsquo;t meet formatting rules that were felt best for that piece of work. It didn&rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was <em>wrong</em> on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again. The <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI">tabs vs spaces episode on Silicon Valley</a> is a really nice summary of how one such conversation might go.</p>
 <p>We&rsquo;d spend inordinate amounts of time defining what the rules for formatting should be and way too long arguing over why any particular format was better than another. This has also brought out the worst in myself and other devs and most of the time resulted the most opinionated or developer who shouted the loudest getting their own way. Not a great way to be working on a team.</p>
 <p><a href="https://github.com/psf/black">Black</a> is an &ldquo;Uncomprimising&rdquo; code formatter for Python with one aim to make code review faster and bring the focus back to your content. With black, code is formatted according to PEP8 and looks the same on every project it&rsquo;s used on. You run black, your code is formatted and everybody moves on with their lives.</p>
 <p>Since using black on multiple projects, it&rsquo;s been possible to quickly skip over these sorts of discussions on PRs and make them a part of an automated check in a ci:</p>
