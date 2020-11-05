@@ -14,9 +14,9 @@
       <guid>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</guid>
       <description>Here&amp;rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
 Full Release Notes
-Merging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.
+Merging and Updating Dictionaries PEP 584 - Dictionaries now have new union operators to work with them.
 Python 3.8:
-x = {&amp;#39;key&amp;#39;: &amp;#39;original_value&amp;#39;} y = {&amp;#39;key&amp;#39;: &amp;#39;updated_value&amp;#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.</description>
+x = {&amp;#39;key&amp;#39;: &amp;#39;original_value&amp;#39;} y = {&amp;#39;key&amp;#39;: &amp;#39;updated_value&amp;#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:</description>
     </item>
     
     <item>

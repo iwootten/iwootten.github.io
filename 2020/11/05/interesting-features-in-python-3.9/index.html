@@ -29,7 +29,7 @@
     "articleSection" : "posts",
     "name" : "Interesting Features in Python 3.9",
     "headline" : "Interesting Features in Python 3.9",
-    "description" : "Here\u0026rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.\nFull Release Notes\nMerging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.\nPython 3.8:\nx = {\u0026#39;key\u0026#39;: \u0026#39;original_value\u0026#39;} y = {\u0026#39;key\u0026#39;: \u0026#39;updated_value\u0026#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.",
+    "description" : "Here\u0026rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.\nFull Release Notes\nMerging and Updating Dictionaries PEP 584 - Dictionaries now have new union operators to work with them.\nPython 3.8:\nx = {\u0026#39;key\u0026#39;: \u0026#39;original_value\u0026#39;} y = {\u0026#39;key\u0026#39;: \u0026#39;updated_value\u0026#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -40,7 +40,7 @@
     "datePublished": "2020-11-05 13:57:34 \u002b0000 UTC",
     "dateModified" : "2020-11-05 13:57:34 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2020\/11\/05\/interesting-features-in-python-3.9\/",
-    "wordCount" : "454",
+    "wordCount" : "472",
     "keywords" : [ "python","tips","Blog" ]
 }
 </script>
@@ -50,16 +50,16 @@
 <meta name="twitter:title" content="Interesting Features in Python 3.9"/>
 <meta name="twitter:description" content="Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
 Full Release Notes
-Merging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.
+Merging and Updating Dictionaries PEP 584 - Dictionaries now have new union operators to work with them.
 Python 3.8:
-x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3."/>
+x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:"/>
 
 <meta property="og:title" content="Interesting Features in Python 3.9" />
 <meta property="og:description" content="Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
 Full Release Notes
-Merging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.
+Merging and Updating Dictionaries PEP 584 - Dictionaries now have new union operators to work with them.
 Python 3.8:
-x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3." />
+x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/" />
 <meta property="article:published_time" content="2020-11-05T13:57:34+00:00" />
@@ -232,7 +232,7 @@ x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_v
     <p>Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in <a href="https://www.youtube.com/watch?v=6Wtxe1vvluo">my latest video on youtube</a>.</p>
 <p><a href="https://www.python.org/downloads/release/python-390/">Full Release Notes</a></p>
 <h1 id="merging-and-updating-dictionaries">Merging and Updating Dictionaries</h1>
-<p>From <a href="https://www.python.org/dev/peps/pep-0584/">PEP 584</a> - Dictionaries now have new union operators to work with them.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0584/">PEP 584</a> - Dictionaries now have new union operators to work with them.</p>
 <p>Python 3.8:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;original_value&#39;</span>}
 y <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;updated_value&#39;</span>}
@@ -248,7 +248,7 @@ x <span style="color:#f92672">|=</span> y            <span style="color:#75715e"
 
 <span style="color:#66d9ef">print</span>(x)
 </code></pre></div><h1 id="removing-prefixessuffixes">Removing Prefixes/Suffixes</h1>
-<p>From <a href="https://www.python.org/dev/peps/pep-0616/">PEP 616</a> - Prefixes and suffixes may now be easily removed using .removeprefix() and .removesuffix()</p>
+<p><a href="https://www.python.org/dev/peps/pep-0616/">PEP 616</a> - Prefixes and suffixes may now be easily removed using .removeprefix() and .removesuffix()</p>
 <p>Not to be confused with lstrip() and rstrip() which strip collections of characters.</p>
 <p>Python 3.8:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>rstrip(<span style="color:#e6db74">&#34;Wootten&#34;</span>)
@@ -256,8 +256,8 @@ x <span style="color:#f92672">|=</span> y            <span style="color:#75715e"
 </code></pre></div><p>Python 3.9:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>removeprefix(<span style="color:#e6db74">&#34;Dr &#34;</span>)
 <span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>removeprefix(<span style="color:#e6db74">&#34;Dr &#34;</span>)<span style="color:#f92672">.</span>removesuffix(<span style="color:#e6db74">&#34; Wootten&#34;</span>)
-</code></pre></div><h1 id="type-hints-for-lists-and-dictionaries">Type Hints for Lists and Dictionaries</h1>
-<p>We no longer need to import from the typing module to use type hints.</p>
+</code></pre></div><h1 id="type-hints-for-lists-and-dictionaries-in-standard-collections">Type Hints for Lists and Dictionaries in Standard Collections</h1>
+<p><a href="https://www.python.org/dev/peps/pep-0585/">PEP 585</a> - It is no longer neccessary to import from the typing module to use type hints for standard collections like List, Tuple or ChainMap.</p>
 <p>Python 3.8</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List
 
@@ -281,7 +281,7 @@ squares: List[int] <span style="color:#f92672">=</span> [<span style="color:#ae8
 
 get_type_hints(square_number)
 </code></pre></div><h1 id="time-zone-support-with-zoneinfo">Time Zone Support with ZoneInfo</h1>
-<p>Python has only ever had time zone support via 3rd party modules like dateutil/pytz. Only UTC is in Python 3.8 and lower out of the box.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0615/">PEP 615</a> - Python has only ever had time zone support via 3rd party modules like dateutil/pytz. Only UTC is in Python 3.8 and lower out of the box.</p>
 <p>zoneinfo in Python 3.9 allows you to retrieve timezone information providing you have an Internet Assigned Numbers Authority (IANA) timezone database on your OS. Some OS&rsquo;s don&rsquo;t (i.e Windows) but you can install tzdata from PyPI as an alternative.</p>
 <p>This example shows when the datetime in London has just become Christmas Day 2020, it&rsquo;s still 7pm Christmas Eve in New York.</p>
 <p>Python 3.8:</p>
@@ -293,7 +293,8 @@ new_york_tz <span style="color:#f92672">=</span> timezone(<span style="color:#e6
 
 christmas_day <span style="color:#f92672">=</span> datetime(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, tzinfo<span style="color:#f92672">=</span>london_tz)
 christmas_day<span style="color:#f92672">.</span>astimezone(new_york_tz)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</code></pre></div><p>Python 3.9:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
 <span style="color:#f92672">from</span> zoneinfo <span style="color:#f92672">import</span> ZoneInfo
 
 london_tz <span style="color:#f92672">=</span> ZoneInfo(<span style="color:#e6db74">&#34;Europe/London&#34;</span>)
