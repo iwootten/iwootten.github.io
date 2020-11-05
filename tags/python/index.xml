@@ -6,7 +6,20 @@
     <description>Recent content in python on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2020 15:35:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 13:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting Features in Python 3.9</title>
+      <link>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</link>
+      <pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</guid>
+      <description>Here&amp;rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
+Full Release Notes
+Merging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.
+Python 3.8:
+x = {&amp;#39;key&amp;#39;: &amp;#39;original_value&amp;#39;} y = {&amp;#39;key&amp;#39;: &amp;#39;updated_value&amp;#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.</description>
+    </item>
+    
     <item>
       <title>Use Black to Format Python and get on with Your Life</title>
       <link>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</link>

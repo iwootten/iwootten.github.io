@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+    
+    
+    
+
+<title>Interesting Features in Python 3.9 - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "Interesting Features in Python 3.9",
+    "headline" : "Interesting Features in Python 3.9",
+    "description" : "Here\u0026rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.\nFull Release Notes\nMerging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.\nPython 3.8:\nx = {\u0026#39;key\u0026#39;: \u0026#39;original_value\u0026#39;} y = {\u0026#39;key\u0026#39;: \u0026#39;updated_value\u0026#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-11-05 13:57:34 \u002b0000 UTC",
+    "dateModified" : "2020-11-05 13:57:34 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2020\/11\/05\/interesting-features-in-python-3.9\/",
+    "wordCount" : "454",
+    "keywords" : [ "python","tips","Blog" ]
+}
+</script>
+<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, VueJS, Cardiff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Interesting Features in Python 3.9"/>
+<meta name="twitter:description" content="Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
+Full Release Notes
+Merging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.
+Python 3.8:
+x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3."/>
+
+<meta property="og:title" content="Interesting Features in Python 3.9" />
+<meta property="og:description" content="Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
+Full Release Notes
+Merging and Updating Dictionaries From PEP 584 - Dictionaries now have new union operators to work with them.
+Python 3.8:
+x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/" />
+<meta property="article:published_time" content="2020-11-05T13:57:34+00:00" />
+<meta property="article:modified_time" content="2020-11-05T13:57:34+00:00" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/contact/">
+						<span>Contact</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://nifty-digits-6344.ck.page/eeb7698c6f">
+						<span>Newsletter</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/ianwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2020 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/">Interesting Features in Python 3.9</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Nov 05, 2020
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
+              •
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/software">SOFTWARE</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/tips">tips</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 3 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in <a href="https://www.youtube.com/watch?v=6Wtxe1vvluo">my latest video on youtube</a>.</p>
+<p><a href="https://www.python.org/downloads/release/python-390/">Full Release Notes</a></p>
+<h1 id="merging-and-updating-dictionaries">Merging and Updating Dictionaries</h1>
+<p>From <a href="https://www.python.org/dev/peps/pep-0584/">PEP 584</a> - Dictionaries now have new union operators to work with them.</p>
+<p>Python 3.8:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;original_value&#39;</span>}
+y <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;updated_value&#39;</span>}
+
+<span style="color:#66d9ef">print</span>({<span style="color:#f92672">**</span>x, <span style="color:#f92672">**</span>y}) <span style="color:#75715e"># Python 3.8 unpacking, kind of confusing</span>
+</code></pre></div><p>Python 3.9:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;original_value&#39;</span>}
+y <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;key&#39;</span>: <span style="color:#e6db74">&#39;updated_value&#39;</span>}
+
+<span style="color:#66d9ef">print</span>(x <span style="color:#f92672">|</span> y)      <span style="color:#75715e"># PEP 584 - Union</span>
+
+x <span style="color:#f92672">|=</span> y            <span style="color:#75715e"># PEP 584 - In-Place Union</span>
+
+<span style="color:#66d9ef">print</span>(x)
+</code></pre></div><h1 id="removing-prefixessuffixes">Removing Prefixes/Suffixes</h1>
+<p>From <a href="https://www.python.org/dev/peps/pep-0616/">PEP 616</a> - Prefixes and suffixes may now be easily removed using .removeprefix() and .removesuffix()</p>
+<p>Not to be confused with lstrip() and rstrip() which strip collections of characters.</p>
+<p>Python 3.8:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>rstrip(<span style="color:#e6db74">&#34;Wootten&#34;</span>)
+<span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>rstrip(<span style="color:#e6db74">&#34;Woten&#34;</span>)
+</code></pre></div><p>Python 3.9:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>removeprefix(<span style="color:#e6db74">&#34;Dr &#34;</span>)
+<span style="color:#e6db74">&#34;Dr Ian Wootten&#34;</span><span style="color:#f92672">.</span>removeprefix(<span style="color:#e6db74">&#34;Dr &#34;</span>)<span style="color:#f92672">.</span>removesuffix(<span style="color:#e6db74">&#34; Wootten&#34;</span>)
+</code></pre></div><h1 id="type-hints-for-lists-and-dictionaries">Type Hints for Lists and Dictionaries</h1>
+<p>We no longer need to import from the typing module to use type hints.</p>
+<p>Python 3.8</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List
+
+squares: List[int] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">9</span>]
+</code></pre></div><p>Python 3.9</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">squares: list[int] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">9</span>]
+</code></pre></div><h1 id="flexible-annotation-hints">Flexible Annotation Hints</h1>
+<p><a href="https://www.python.org/dev/peps/pep-0593/">PEP 593</a> - Allows other uses for annotations than just the type itself, so we can include additional metadata, such as comments in the example below.</p>
+<p>Python 3.8:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">square_number</span>(number: int) <span style="color:#f92672">-&gt;</span> int:
+	<span style="color:#66d9ef">return</span> number <span style="color:#f92672">*</span> number
+</code></pre></div><p>Python 3.9:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Annotated
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">square_number</span>(number: Annotated[int, <span style="color:#e6db74">&#34;The number to square&#34;</span>]) <span style="color:#f92672">-&gt;</span> Annotated[int, <span style="color:#e6db74">&#34;the squared number&#34;</span>]:
+	<span style="color:#66d9ef">return</span> number <span style="color:#f92672">*</span> number
+</code></pre></div><p>Annotations can be inspected by using the <code>__annotations__</code> attribute:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">square_number<span style="color:#f92672">.</span>__annotations__
+</code></pre></div><p>Typing also now has a <code>get_type_hints()</code> method to provide details on the types used.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> get_type_hints
+
+get_type_hints(square_number)
+</code></pre></div><h1 id="time-zone-support-with-zoneinfo">Time Zone Support with ZoneInfo</h1>
+<p>Python has only ever had time zone support via 3rd party modules like dateutil/pytz. Only UTC is in Python 3.8 and lower out of the box.</p>
+<p>zoneinfo in Python 3.9 allows you to retrieve timezone information providing you have an Internet Assigned Numbers Authority (IANA) timezone database on your OS. Some OS&rsquo;s don&rsquo;t (i.e Windows) but you can install tzdata from PyPI as an alternative.</p>
+<p>This example shows when the datetime in London has just become Christmas Day 2020, it&rsquo;s still 7pm Christmas Eve in New York.</p>
+<p>Python 3.8:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+<span style="color:#f92672">from</span> pytz <span style="color:#f92672">import</span> timezone
+
+london_tz <span style="color:#f92672">=</span> timezone(<span style="color:#e6db74">&#34;Europe/London&#34;</span>)
+new_york_tz <span style="color:#f92672">=</span> timezone(<span style="color:#e6db74">&#34;America/New_York&#34;</span>)
+
+christmas_day <span style="color:#f92672">=</span> datetime(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, tzinfo<span style="color:#f92672">=</span>london_tz)
+christmas_day<span style="color:#f92672">.</span>astimezone(new_york_tz)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+<span style="color:#f92672">from</span> zoneinfo <span style="color:#f92672">import</span> ZoneInfo
+
+london_tz <span style="color:#f92672">=</span> ZoneInfo(<span style="color:#e6db74">&#34;Europe/London&#34;</span>)
+new_york_tz <span style="color:#f92672">=</span> ZoneInfo(<span style="color:#e6db74">&#34;America/New_York&#34;</span>)
+
+christmas_day <span style="color:#f92672">=</span> datetime(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, tzinfo<span style="color:#f92672">=</span>london_tz)
+christmas_day<span style="color:#f92672">.</span>astimezone(new_york_tz)
+</code></pre></div><hr />
+
+<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join my newsletter below. You'll get updates on new content here and around the web on topics like Python, automation and the cloud once a week.</p>
+<script async data-uid="9a5d03a76a" src="https://nifty-digits-6344.ck.page/9a5d03a76a/index.js"></script>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Use Black to Format Python and get on with Your Life</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ianwootten';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-263865-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2020 15:35:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 13:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python</title>
+      <link>https://www.ianwootten.co.uk/tags/python/</link>
+      <pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>https://www.ianwootten.co.uk/tags/tips/</link>
+      <pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tips/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ci</title>
       <link>https://www.ianwootten.co.uk/tags/ci/</link>
@@ -17,29 +35,11 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://www.ianwootten.co.uk/tags/python/</link>
-      <pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>teams</title>
       <link>https://www.ianwootten.co.uk/tags/teams/</link>
       <pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/teams/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tips</title>
-      <link>https://www.ianwootten.co.uk/tags/tips/</link>
-      <pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/tips/</guid>
       <description></description>
     </item>
     
