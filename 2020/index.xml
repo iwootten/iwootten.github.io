@@ -6,7 +6,17 @@
     <description>Recent content in 2020 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2020 13:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2020/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 15:15:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2020/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is a PEP and why should I care?</title>
+      <link>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</link>
+      <pubDate>Mon, 16 Nov 2020 15:15:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</guid>
+      <description>No doubt if you&amp;rsquo;ve been developing in Python for any length of time, you will have heard the acronym &amp;ldquo;PEP&amp;rdquo; mentioned quite frequently. More often than not you hear it when talking about Python code style, usually followed by the number &amp;ldquo;8&amp;rdquo;. So what is a PEP and why should you care?
+What is a PEP? PEP stands for &amp;ldquo;Python Enhancement Proposal&amp;rdquo;. They are used to describe and summarise the technical design and reasons for enhancements to Python and surrounding processes.</description>
+    </item>
+    
     <item>
       <title>Interesting Features in Python 3.9</title>
       <link>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</link>
