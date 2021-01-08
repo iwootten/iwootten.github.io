@@ -6,7 +6,16 @@
     <description>Recent content in python on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2020 15:15:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 15:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bootstrapping Python Projects with Cookiecutter and Makefiles</title>
+      <link>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</link>
+      <pubDate>Thu, 07 Jan 2021 15:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</guid>
+      <description>When starting a new project, it’s easy to get caught up in the excitement of starting the `shiny new thing’ and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</description>
+    </item>
+    
     <item>
       <title>What is a PEP and why should I care?</title>
       <link>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</link>

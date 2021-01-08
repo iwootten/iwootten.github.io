@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github actions on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/tags/github-actions/</link>
-    <description>Recent content in github actions on Ian Wootten</description>
+    <title>2021 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2021/</link>
+    <description>Recent content in 2021 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Jan 2021 15:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 15:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2021/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bootstrapping Python Projects with Cookiecutter and Makefiles</title>
       <link>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</link>
@@ -14,16 +14,6 @@
       
       <guid>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</guid>
       <description>When starting a new project, it’s easy to get caught up in the excitement of starting the `shiny new thing’ and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</description>
-    </item>
-    
-    <item>
-      <title>Publishing to PyPI Using Github Actions</title>
-      <link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link>
-      <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</guid>
-      <description>In creating my first package on PyPI, I realised that many of the tasks I&amp;rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
-Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.</description>
     </item>
     
   </channel>
