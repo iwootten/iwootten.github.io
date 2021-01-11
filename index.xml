@@ -2829,7 +2829,7 @@ I’m having a right job trying to get the image side of MT working. I want to p
       <guid>https://www.ianwootten.co.uk/about/</guid>
       <description>Hi, I’m Ian.
 I’m a software engineer living in Cardiff in the UK. I run a small software development company, Nifty Digits Ltd which specialises in Python. Since 2012, I’ve worked on tools for companies such as the Office for National Statistics, BBC, Aardman Features and Clothcat Animation.
-I often write software with frameworks like Django, Flask and Vue.js. I&amp;rsquo;m familiar with working in Agile teams using tools like terraform and kubernetes to deliver solutions and iterate quickly.</description>
+I often write software with frameworks like Django, Flask and Vue.js. I write infrastructure using tools like Serverless, Terraform and Kubernetes so I can ship fast and iterate quickly.</description>
     </item>
     
     <item>
