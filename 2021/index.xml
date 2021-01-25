@@ -6,7 +6,17 @@
     <description>Recent content in 2021 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Jan 2021 15:57:34 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2021/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2021 14:21:21 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2021/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Cookiecutter Template for Multiple Python Package Managers</title>
+      <link>https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/</link>
+      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/</guid>
+      <description>In my previous post, I described how you can use Python and Makefiles to quickly get new projects started. In this post I explore how you can use cookiecutters more advanced Jinja templating techniques to make a cookiecutter that can be used for multiple package managers. Specifically, we&amp;rsquo;ll be extending the existing template to build another that can be used with either Poetry or Pipenv.
+Our New Cookiecutter Template As a reminder, Cookiecutter allows us to template project and directory content and structure using Jinja2 logic.</description>
+    </item>
+    
     <item>
       <title>Bootstrapping Python Projects with Cookiecutter and Makefiles</title>
       <link>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</link>

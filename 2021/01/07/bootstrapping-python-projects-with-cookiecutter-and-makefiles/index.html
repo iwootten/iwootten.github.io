@@ -41,7 +41,7 @@
     "dateModified" : "2021-01-07 15:57:34 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/01\/07\/bootstrapping-python-projects-with-cookiecutter-and-makefiles\/",
     "wordCount" : "1079",
-    "keywords" : [ "python","cookiecutter","github actions","ci","Blog" ]
+    "keywords" : [ "python","jinja2","cookiecutter","github actions","ci","Blog" ]
 }
 </script>
 <meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
@@ -211,6 +211,9 @@
           <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
            
       
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/jinja2">jinja2</a>
+           
+      
           <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/cookiecutter">cookiecutter</a>
            
       
@@ -231,8 +234,7 @@
   
   
   <div class="post">
-    <h1 id="heading"></h1>
-<p>When starting a new project, it’s easy to get caught up in the excitement of starting the `shiny new thing’ and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</p>
+    <p>When starting a new project, it’s easy to get caught up in the excitement of starting the `shiny new thing’ and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</p>
 <p>Most of the things I want configured for a new project will always be the same. I use Python and Pipfile as the package manager for most of my projects. I’ve settled on black being my code formatter of choice for python and use pytest to run my tests. I’d want to be using git for version control and the code stored remotely with my preferred choice GitHub. It’s also likely that I’d want CI setup on a project which in my case would mean configuring GitHub actions.</p>
 <p>Many of these things are able to be automated away, though are often left forgotten until we’re deep into work. The good news is there’s a way to remove some of this pain.</p>
 <h2 id="templating-projects-with-cookiecutter">Templating Projects with Cookiecutter</h2>
@@ -326,7 +328,7 @@
 </code></pre></div><h1 id="conclusion">Conclusion</h1>
 <p>Automating away this much of my project setup is a massive win. I wish I&rsquo;d taken the time to set up a template such as this for previous team projects as it would have saved us quite a bit of time.</p>
 <p>What&rsquo;s nice about this basic python template is that it can be used as the basis for creating other templates for more complex apps with additional common dependencies or workflows - a flask/django webapp for instance running within a container with gitlab as a remote host for the repo. It&rsquo;s also really simple to switchout say Pipenv for poetry and use that instead.</p>
-<p>The entire template is up on .github and you can use it yourself with cookiecutter by calling:</p>
+<p>The entire template is up on github and you can use it yourself with cookiecutter by calling:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cookiecutter https://github.com/iwootten/python-pipenv-github
 </code></pre></div><hr />
 
@@ -343,6 +345,11 @@
       <span class="navigation-tittle">What is a PEP and why should I care?</span>
     </a>
     
+    
+    <a href="https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/" class="navigation-next">
+      <span class="navigation-tittle">Building a Cookiecutter Template for Multiple Python Package Managers</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
     
 </div>
 
