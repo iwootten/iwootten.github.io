@@ -40,7 +40,7 @@
     "datePublished": "2021-01-25 14:21:21 \u002b0000 UTC",
     "dateModified" : "2021-01-25 14:21:21 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/01\/25\/building-a-cookiecutter-template-for-multiple-python-package-managers\/",
-    "wordCount" : "1052",
+    "wordCount" : "1048",
     "keywords" : [ "python","jinja2","cookiecutter","github actions","ci","Blog" ]
 }
 </script>
@@ -129,7 +129,7 @@ Our New Cookiecutter Template As a reminder, Cookiecutter allows us to template 
 		 
 			 
 				<li>
-					<a href="https://nifty-digits-6344.ck.page/eeb7698c6f">
+					<a href="https://www.getrevue.co/profile/iwootten">
 						<span>Newsletter</span>
 					</a>
 				</li>
@@ -379,12 +379,12 @@ Choose from 1, <span style="color:#ae81ff">2</span> <span style="color:#f92672">
 rm <span style="color:#f92672">{{</span> <span style="color:#e6db74">&#34;Pipfile&#34;</span> <span style="color:#66d9ef">if</span> cookiecutter.package_manager <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;poetry&#34;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;pyproject.toml&#34;</span> <span style="color:#f92672">}}</span>
 </code></pre></div><p>As you can see, it&rsquo;s possible to use jinja templates and cookiecutter variables within the hook itself. We therefore define a hook to remove the package file we won&rsquo;t be using once the project is generated to make sure we don&rsquo;t have any files we don&rsquo;t want. This is then run immediately after our project folder is created by cookiecutter, removing the unneccessary file.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This template has become a lot more versatile since my original <a href="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/">Pipenv based one</a>. I started this with an idea to convert the original template to one which created poetry projects (which is also <a href="https://github.com/iwootten/python-poetry-github">available on github</a>), but extending it to encompass both together was pretty simple. I&rsquo;m definitely going to be using this on a number of projects in the future. If I wanted to, I can even extend this further to support additional package managers.</p>
+<p>This template has become a lot more versatile since my original <a href="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/">Pipenv based one</a>. I started this with an idea to convert the original template to one which created poetry projects (which is also <a href="https://github.com/iwootten/python-poetry-github">available on github</a>), but extending it to encompass both together was pretty simple. I&rsquo;ve successfully automated away even more of the pain when starting a new project. If I wanted to, I can even extend this further to support additional package managers.</p>
 <p>The entire Python/Pipenv template is up on github and you can use it yourself with cookiecutter by calling:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cookiecutter https://github.com/iwootten/cookiecutter-python-github
 </code></pre></div><hr />
 
-<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join my newsletter below. You'll get updates on new content here and around the web on topics like Python, automation and the cloud.</p>
+<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join my newsletter below. You'll get my story and others on the tools and code behind developers shipping great products.</p>
 <script async data-uid="9a5d03a76a" src="https://nifty-digits-6344.ck.page/9a5d03a76a/index.js"></script>
 
   </div>
@@ -397,6 +397,11 @@ rm <span style="color:#f92672">{{</span> <span style="color:#e6db74">&#34;Pipfil
       <span class="navigation-tittle">Bootstrapping Python Projects with Cookiecutter and Makefiles</span>
     </a>
     
+    
+    <a href="https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/" class="navigation-next">
+      <span class="navigation-tittle">The Years I&#39;ve Spent on Side Projects Have Not Been Wasted</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
     
 </div>
 
