@@ -29,7 +29,7 @@
     "articleSection" : "posts",
     "name" : "Creating Social Images with Puppeteer",
     "headline" : "Creating Social Images with Puppeteer",
-    "description" : "In this post I\u0026rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.",
+    "description" : "In this post I\u0026rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -40,8 +40,8 @@
     "datePublished": "2021-02-16 10:07:59 \u002b0000 UTC",
     "dateModified" : "2021-02-16 10:07:59 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/02\/16\/creating-social-images-with-puppeteer\/",
-    "wordCount" : "1260",
-    "keywords" : [ "js","puppeteer","open graph","Blog" ]
+    "wordCount" : "1258",
+    "keywords" : [ "js","puppeteer","open graph","hugo","Blog" ]
 }
 </script>
 <meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
@@ -50,10 +50,10 @@
 <meta name="twitter:image" content="https://www.ianwootten.co.uk/images/social-images/opengraph.jpg"/>
 
 <meta name="twitter:title" content="Creating Social Images with Puppeteer"/>
-<meta name="twitter:description" content="In this post I&rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview."/>
+<meta name="twitter:description" content="In this post I&rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview."/>
 
 <meta property="og:title" content="Creating Social Images with Puppeteer" />
-<meta property="og:description" content="In this post I&rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview." />
+<meta property="og:description" content="In this post I&rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/" />
 <meta property="og:image" content="https://www.ianwootten.co.uk/images/social-images/opengraph.jpg" />
@@ -215,6 +215,9 @@
            
       
           <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/open-graph">open graph</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/hugo">hugo</a>
           
       
     
@@ -228,11 +231,11 @@
   
   
   <div class="post">
-    <p>In this post I&rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include <a href="https://ogp.me/">open graph</a> meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview. In a future post I&rsquo;ll show how we can take this design and use it as the basis of a template within a serverless function we can query via an API.</p>
+    <p>In this post I&rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include <a href="https://ogp.me/">open graph</a> meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview. In a future post I&rsquo;ll show how we can take this design and use it as the basis of a template within a serverless function we can query via an API.</p>
 <p>A lot of the details here have been simplified and adapted/updated from this <a href="https://egghead.io/courses/building-an-opengraph-image-generation-api-with-cloudinary-netlify-functions-and-react-914e">OpenGraph tutorial on egghead.io</a> from <a href="http://twitter.com/chrisbiscardi">Chris Biscardi</a>. My own preferences for this are to use Puppeteer over Playwright and I also found a couple of the Netlify steps were outdated so future posts will detail changes I made to get them to work.</p>
 <h1 id="coming-up-with-a-design">Coming Up with a Design</h1>
 <p>I found the best way of getting started with social image generation is keeping things simple: A hard coded html/css page! This way, we get to mockup a design that works for us without any of the complexities of anything else in the mix. You&rsquo;re going to be reusing the design a lot, so taking your time here to get something that looks good and you want to use to promote your posts in your feeds is important.  You can even stick with this approach if your image needs aren&rsquo;t all that complex. For my own particular use case this is great, as I can insert a unique image into each blog post which will be marked up with appropriate meta tags by my blogging app Hugo.</p>
-<p><img src="https://www.ianwootten.co.uk/images/social-images/opengraph.jpg" alt="What we hopefully will end up with"></p>
+<p><img src="https://www.ianwootten.co.uk/images/social-images/opengraph.jpg" alt="The image that we hopefully will end up with"></p>
 <p>I&rsquo;m using a simple flexbox layout, with font&rsquo;s taken from Google fonts and a background gradient taken from <a href="https://www.gradientmagic.com">gradient magic</a> as the main theme for my design. This means it&rsquo;s possible for me to easily switch out the background with another gradient if I want to use different styles. There&rsquo;s a multitude of designs that will suit a variety of purposes, or you could use a simple image from <a href="http://unsplash.com">unsplash</a> for example. I&rsquo;ve included all the source for this in my <a href="https://github.com/iwootten/opengraph-puppeteer">opengraph-puppeteer</a> repo.</p>
 <p>Getting a flexbox layout I was happy with took me a while. The beauty of this approach however is that we have all the features of CSS to our advantage, including all those <em>fancy</em> features such as flexbox, gradients and drop shadows.</p>
 <p>My html page uses dimensions of 1200px x 630px set by a class. This allows me to easily switch to use different dimensions by applying other classes if I decide to generate images for different platforms. These dimensions are taken from <a href="https://www.figma.com/community/file/820337605519256142">this brilliant figma</a> template by <a href="http://twitter.com/ryanwarnercodes">Ryan Warner</a>, which allows us to see image previews across a multitude of different platforms to ensure consistent branding.</p>
@@ -304,7 +307,7 @@ images:
 <p>I&rsquo;ve demonstrated how you can generate consistent branding for your site, by using a puppeteer script locally. This will hopefully make me more efficient (and seem more professional) when it comes to writing interesting posts. In the future, I could further develop this idea to use serverless functions to wrap an api for around script which can be called from other services.</p>
 <hr />
 
-<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join my newsletter <a href="https://www.getrevue.co/profile/iwootten">"Shipping Stuff"</a>. You'll get my story and others on the tools and code behind developers shipping great products.</p>
+<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join my newsletter <a href="https://www.getrevue.co/profile/iwootten">"Shipping Stuff"</a>. You'll get my story and others on the tools and code developers use to ship great products.</p>
 
   </div>
   
