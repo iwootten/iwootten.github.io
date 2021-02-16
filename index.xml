@@ -6,7 +6,16 @@
     <description>Recent content on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Feb 2021 10:04:41 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 10:07:59 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating Social Images with Puppeteer</title>
+      <link>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</link>
+      <pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</guid>
+      <description>In this post I&amp;rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.</description>
+    </item>
+    
     <item>
       <title>The Years I&#39;ve Spent on Side Projects Have Not Been Wasted</title>
       <link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link>
@@ -2857,7 +2866,9 @@ I often write software with frameworks like Django, Flask and Vue.js. I write in
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/contact/</guid>
-      <description>I&amp;rsquo;m always interested in hearing from people who find what I write about useful or interesting. If you’re interested in hiring me, or just want to say hi – drop me an email at hi@niftydigits.com or check out my company website.</description>
+      <description>Want to talk? I&amp;rsquo;d love to heard from you if you found anything useful or want to discuss further.
+If you’re interested in hiring me, or just want to say hi – you can drop me an email at hi@niftydigits.com.
+If you have a need for any development work - please take a look at my company website Nifty Digits Ltd first for the sorts of things I do.</description>
     </item>
     
   </channel>

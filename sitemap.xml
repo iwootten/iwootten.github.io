@@ -3,12 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.ianwootten.co.uk/categories/business/</loc>
-    <lastmod>2021-02-04T10:04:41+00:00</lastmod>
+    <loc>https://www.ianwootten.co.uk/categories/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/categories/</loc>
+    <loc>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/js/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/open-graph/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/puppeteer/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ianwootten.co.uk/categories/business/</loc>
     <lastmod>2021-02-04T10:04:41+00:00</lastmod>
   </url>
   
@@ -18,27 +58,12 @@
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2021-02-04T10:04:41+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ianwootten.co.uk/tags/learning/</loc>
     <lastmod>2021-02-04T10:04:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2021-02-04T10:04:41+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ianwootten.co.uk/tags/products/</loc>
-    <lastmod>2021-02-04T10:04:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
     <lastmod>2021-02-04T10:04:41+00:00</lastmod>
   </url>
   
@@ -69,11 +94,6 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/tags/cookiecutter/</loc>
-    <lastmod>2021-01-25T14:21:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
     <lastmod>2021-01-25T14:21:21+00:00</lastmod>
   </url>
   
@@ -209,11 +229,6 @@
   
   <url>
     <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ianwootten.co.uk/tags/js/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url>
   
