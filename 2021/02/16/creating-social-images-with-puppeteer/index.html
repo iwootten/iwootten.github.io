@@ -40,14 +40,14 @@
     "datePublished": "2021-02-16 10:07:59 \u002b0000 UTC",
     "dateModified" : "2021-02-16 10:07:59 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/02\/16\/creating-social-images-with-puppeteer\/",
-    "wordCount" : "1206",
+    "wordCount" : "1241",
     "keywords" : [ "js","puppeteer","open graph","Blog" ]
 }
 </script>
 <meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
 <meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/open-graph-images/open-graph-images-puppeteer.jpg"/>
+<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/social-images/opengraph.jpg"/>
 
 <meta name="twitter:title" content="Creating Social Images with Puppeteer"/>
 <meta name="twitter:description" content="In this post I&rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview."/>
@@ -56,7 +56,7 @@
 <meta property="og:description" content="In this post I&rsquo;m going to show how to generate images to display summaries of site content for social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/images/open-graph-images/open-graph-images-puppeteer.jpg" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/images/social-images/opengraph.jpg" />
 <meta property="article:published_time" content="2021-02-16T10:07:59+00:00" />
 <meta property="article:modified_time" content="2021-02-16T10:07:59+00:00" />
 
@@ -293,7 +293,9 @@ images:
 <li><a href="https://developers.facebook.com/tools/debug/">Facebooks Sharing Debugger</a></li>
 <li><a href="https://www.linkedin.com/post-inspector/">Linked In&rsquo;s Post Inspector</a></li>
 </ul>
-<p>Here&rsquo;s how the validator renders that:</p>
+<p>As an example - here&rsquo;s how is rendered if the image meta tag is broken - which happened during the course of publishing this post, so it&rsquo;s definitely worth checking!</p>
+<p><img src="https://www.ianwootten.co.uk/images/social-images/card-validator-failed.png" alt="A twitter card validator representation of our post if things are broken"></p>
+<p>Here&rsquo;s how the validator renders when the tags are correctly set:</p>
 <p><img src="https://www.ianwootten.co.uk/images/social-images/card-validator.png" alt="A twitter card validator representation of our post"></p>
 <h1 id="summary">Summary</h1>
 <p>I&rsquo;ve demonstrated how you can generate consistent branding for your site, by using a puppeteer script locally. This will hopefully make me more efficient (and seem more professional) when it comes to writing interesting posts. In the future, I could further develop this idea to use serverless functions to wrap an api for around script which can be called from other services.</p>
