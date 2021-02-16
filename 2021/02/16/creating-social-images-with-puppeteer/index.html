@@ -40,7 +40,7 @@
     "datePublished": "2021-02-16 10:07:59 \u002b0000 UTC",
     "dateModified" : "2021-02-16 10:07:59 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/02\/16\/creating-social-images-with-puppeteer\/",
-    "wordCount" : "1240",
+    "wordCount" : "1260",
     "keywords" : [ "js","puppeteer","open graph","Blog" ]
 }
 </script>
@@ -236,7 +236,7 @@
 <h1 id="capturing-an-image">Capturing an Image</h1>
 <p>In order to capture this as an image, I use Puppeteer from Google locally. Puppeteer controls Chrome headlessly and allows me to do anything I might usually do within a browser. You can install it using yarn with:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn install puppeteer
-</code></pre></div><p>The puppeteer script below mounts the webpage we&rsquo;ve designed from a local file, renders it and takes a screenshot, using the outer container dimensions to capture the image position. Capturing the dimensions in this way means we only need change</p>
+</code></pre></div><p>The puppeteer script below mounts the webpage we&rsquo;ve designed from a local file, renders it and takes a screenshot, using the outer container dimensions to capture the image position. Capturing the dimensions in this way means we only need change a class to create images of different sizes which is useful when creating images for different social networks.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">const puppeteer <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#39;puppeteer&#39;</span>)
 const fs <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#39;fs&#39;</span>);
 const html <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>readFileSync(<span style="color:#e6db74">&#34;./index.html&#34;</span>, <span style="color:#e6db74">&#34;utf-8&#34;</span>);
@@ -293,7 +293,7 @@ images:
 <li><a href="https://developers.facebook.com/tools/debug/">Facebooks Sharing Debugger</a></li>
 <li><a href="https://www.linkedin.com/post-inspector/">Linked In&rsquo;s Post Inspector</a></li>
 </ul>
-<p>As an example - here&rsquo;s how is rendered if the image meta tag is broken - which happened during the course of publishing this post, so it&rsquo;s definitely worth checking!</p>
+<p>As an example - here&rsquo;s how the post is rendered if the image meta tag is broken - which happened during the course of publishing this post, so it&rsquo;s definitely worth checking!</p>
 <p><img src="https://www.ianwootten.co.uk/images/social-images/card-validator-failed.png" alt="A twitter card validator representation of our post if things are broken"></p>
 <p>Here&rsquo;s how the validator renders when the tags are correctly set:</p>
 <p><img src="https://www.ianwootten.co.uk/images/social-images/card-validator.png" alt="A twitter card validator representation of our post"></p>
