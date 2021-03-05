@@ -6,7 +6,16 @@
     <description>Recent content on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Feb 2021 11:32:30 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Mar 2021 10:45:07 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up a New M1 Mac for Development</title>
+      <link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</guid>
+      <description>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&amp;rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.</description>
+    </item>
+    
     <item>
       <title>Comparing VAT Solutions for Bootstrapped UK Businesses</title>
       <link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link>

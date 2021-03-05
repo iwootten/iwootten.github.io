@@ -6,7 +6,16 @@
     <description>Recent content in mac on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Mar 2021 10:45:07 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up a New M1 Mac for Development</title>
+      <link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</guid>
+      <description>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&amp;rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.</description>
+    </item>
+    
     <item>
       <title>Recovering Images from SD Cards with PhotoRec</title>
       <link>https://www.ianwootten.co.uk/2012/09/04/recovering-images-from-sd-cards-with-photorec/</link>
