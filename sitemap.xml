@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/business/</loc>
+    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/youtube/</loc>
+    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/</loc>
+    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/apple-silicon/</loc>
     <lastmod>2021-03-05T10:45:07+00:00</lastmod>
   </url><url>
@@ -11,19 +29,10 @@
     <loc>https://www.ianwootten.co.uk/categories/development/</loc>
     <lastmod>2021-03-05T10:45:07+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2021-03-05T10:45:07+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/mac/</loc>
     <lastmod>2021-03-05T10:45:07+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2021-03-05T10:45:07+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</loc>
-    <lastmod>2021-03-05T10:45:07+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
     <lastmod>2021-03-05T10:45:07+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/tutorial/</loc>
@@ -195,9 +204,6 @@
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2016/</loc>
-    <lastmod>2016-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/business/</loc>
     <lastmod>2016-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/projects/</loc>
