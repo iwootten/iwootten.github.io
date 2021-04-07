@@ -40,7 +40,7 @@
     "datePublished": "2021-04-07 17:13:00 \u002b0100 BST",
     "dateModified" : "2021-04-07 17:13:00 \u002b0100 BST",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/04\/07\/installing-module-extras-with-pipenv-and-poetry\/",
-    "wordCount" : "199",
+    "wordCount" : "204",
     "keywords" : [ "python","pipenv","poetry","til","Blog" ]
 }
 </script>
@@ -223,7 +223,7 @@ As an example, take the following pip command:" />
     <p>I thought it worth documenting how to install <a href="https://pip.pypa.io/en/stable/reference/pip_install/">&ldquo;extra&rdquo; dependencies</a> in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with <a href="https://www.uvicorn.org/">uvicorn</a> where the websockets module hadn&rsquo;t been installed as a result of not including the &ldquo;standard&rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.</p>
 <p>As an example, take the following pip command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install uvicorn<span style="color:#f92672">[</span>standard<span style="color:#f92672">]</span>
-</code></pre></div><p>With <a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>, the equivalent is a Pipfile that looks something like this (I can&rsquo;t see a way to do this from Pipenvs cli):</p>
+</code></pre></div><p>With <a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>, the equivalent would be to pip install a Pipfile that looks something like this (I can&rsquo;t see a way to do this from Pipenvs cli):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[[</span>source<span style="color:#f92672">]]</span>
 name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pypi&#34;</span>
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://pypi.org/simple&#34;</span>
@@ -234,7 +234,7 @@ uvicorn <span style="color:#f92672">=</span> <span style="color:#f92672">{</span
 
 <span style="color:#f92672">[</span>requires<span style="color:#f92672">]</span>
 python_version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;3.9.1&#34;</span>
-</code></pre></div><p>In <a href="https://python-poetry.org/docs/">poetry</a> you can add extras from the cli using:</p>
+</code></pre></div><p>In <a href="https://python-poetry.org/docs/">poetry</a> the same can be done from the cli using:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry add uvicorn -E standard
 </code></pre></div><p>Which will create a pyproject.toml for poetry as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>tool.poetry<span style="color:#f92672">]</span>
@@ -252,7 +252,7 @@ uvicorn <span style="color:#f92672">=</span> <span style="color:#f92672">{</span
 <span style="color:#f92672">[</span>build-system<span style="color:#f92672">]</span>
 requires <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;poetry-core&gt;=1.0.0&#34;</span><span style="color:#f92672">]</span>
 build-backend <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;poetry.core.masonry.api&#34;</span>
-</code></pre></div><p>The -E option on the add command for poetry appears to be <a href="https://python-poetry.org/docs/cli/#add">documented on install only</a>.</p>
+</code></pre></div><p>The &ldquo;-E&rdquo; option on the add command for poetry appears to be <a href="https://python-poetry.org/docs/cli/#add">documented on install only</a>.</p>
 
   </div>
   
