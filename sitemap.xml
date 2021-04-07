@@ -2,16 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.ianwootten.co.uk/tags/business/</loc>
-    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</loc>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/pipenv/</loc>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/poetry/</loc>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2021-03-30T13:07:26+01:00</lastmod>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/til/</loc>
+    <lastmod>2021-04-07T17:13:00+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/business/</loc>
     <lastmod>2021-03-30T13:07:26+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/youtube/</loc>
@@ -51,9 +66,6 @@
     <lastmod>2021-02-23T11:32:30+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/payments/</loc>
-    <lastmod>2021-02-23T11:32:30+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/til/</loc>
     <lastmod>2021-02-23T11:32:30+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/vat/</loc>
@@ -108,9 +120,6 @@
     <lastmod>2021-01-25T14:21:21+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/jinja2/</loc>
-    <lastmod>2021-01-25T14:21:21+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
     <lastmod>2021-01-25T14:21:21+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/year/</loc>

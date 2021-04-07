@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Mar 2021 13:07:26 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Apr 2021 17:13:00 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pipenv</title>
+      <link>https://www.ianwootten.co.uk/tags/pipenv/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pipenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poetry</title>
+      <link>https://www.ianwootten.co.uk/tags/poetry/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/poetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.ianwootten.co.uk/tags/python/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>til</title>
+      <link>https://www.ianwootten.co.uk/tags/til/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/til/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>business</title>
       <link>https://www.ianwootten.co.uk/tags/business/</link>
@@ -76,15 +112,6 @@
       <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/payments/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>til</title>
-      <link>https://www.ianwootten.co.uk/tags/til/</link>
-      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/til/</guid>
       <description></description>
     </item>
     
@@ -193,15 +220,6 @@
       <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/jinja2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.ianwootten.co.uk/tags/python/</link>
-      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
       <description></description>
     </item>
     
