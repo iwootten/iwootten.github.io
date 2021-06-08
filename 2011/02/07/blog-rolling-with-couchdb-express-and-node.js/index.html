@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.83.1" />
 
     
     
@@ -301,12 +301,12 @@
 
 <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">configure</span>(<span style="color:#66d9ef">function</span>(){
   <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;view engine&#39;</span>, <span style="color:#e6db74">&#39;jade&#39;</span>);
-  <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;views&#39;</span>, <span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/views&#39;</span>);
+  <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;views&#39;</span>, <span style="color:#ae81ff">__</span><span style="color:#a6e22e">dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/views&#39;</span>);
   <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">methodOverride</span>());
   <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">bodyDecoder</span>());
   <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">logger</span>());
   <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">router</span>);
-  <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">compiler</span>({ <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/views&#39;</span>, <span style="color:#a6e22e">enable</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;sass&#39;</span>] }));
+  <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">compiler</span>({ <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">__</span><span style="color:#a6e22e">dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/views&#39;</span>, <span style="color:#a6e22e">enable</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;sass&#39;</span>] }));
 });
 
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ArticleProvider</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./articleprovider-memory&#39;</span>).<span style="color:#a6e22e">ArticleProvider</span>;
