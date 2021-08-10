@@ -40,7 +40,7 @@
     "datePublished": "2021-07-08 15:03:34 \u002b0100 BST",
     "dateModified" : "2021-07-08 15:03:34 \u002b0100 BST",
     "url" : "https:\/\/www.ianwootten.co.uk\/2021\/07\/08\/why-python-devs-love-requests\/",
-    "wordCount" : "592",
+    "wordCount" : "590",
     "keywords" : [ "python","Blog" ]
 }
 </script>
@@ -283,7 +283,7 @@ resp<span style="color:#f92672">.</span>json()
 </code></pre></div><h2 id="differences-to-urllib3">Differences to urllib3</h2>
 <p>One obvious difference here is that we no longer need to create a PoolManager to make our requests. Having to define this for each script could get tedious, so Requests does away with it. <em>Oddly, the <a href="https://urllib3.readthedocs.io/en/latest/user-guide.html#making-requests">urllib3 docs state</a> there is top-level urllib3.request() to save us doing this, though the examples don&rsquo;t seem to work when I was testing with version 1.26.6.</em></p>
 <h3 id="http-methods">HTTP Methods</h3>
-<p>The major difference here is simple, but ultimately what makes Requests <em>so</em> much easier to work with - the HTTP method interface. There&rsquo;s only a finite amount of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> so they might as well all be functions of our client. It also makes it very Pythonic to work with - I want to call a GET on this URL, so I supply the URL as an argument to .get() - simple. There&rsquo;s less potential for mistakes here given we don&rsquo;t supply the method type as an argument, calling a known method. It is this interface that makes code so beautifully simple when compared to other urllib3.</p>
+<p>The major difference here is simple, but ultimately what makes Requests <em>so</em> much easier to work with - the HTTP method interface. There&rsquo;s only a finite amount of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> so they might as well all be functions of our client. It also makes it very Pythonic to work with - I want to call a GET on this URL, so I supply the URL as an argument to .get() - simple. There&rsquo;s less potential for mistakes here given we don&rsquo;t supply the method type as an argument, calling a known method. It is this interface that makes code so beautifully simple when compared to urllib3.</p>
 <h3 id="built-in-json-encodingdecoding">Built-In JSON Encoding/Decoding</h3>
 <p>Another difference is that requests handles JSON encoding/decoding for us, common operations we&rsquo;re going to be doing a lot when talking to JSON services. Simple enough for any dev to write, but annoying given every dev who uses the library will have to themselves. All those utils.py files littering our project will have a couple less functions in them. Look how much simpler that final example becomes as a result. All the cruft is gone!</p>
 <h1 id="conclusion">Conclusion</h1>
@@ -292,7 +292,7 @@ resp<span style="color:#f92672">.</span>json()
 <hr />
 
 <p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join <a
-    href="https://www.getrevue.co/profile/iwootten">my fortnightly newsletter</a> below. </p>
+    href="https://www.getrevue.co/profile/iwootten">my newsletter</a> below. </p>
 
 <div id="revue-embed">
   <form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
@@ -320,6 +320,11 @@ resp<span style="color:#f92672">.</span>json()
       <span class="navigation-tittle">Build Your Own Pico Powered Midi Controller for $35</span>
     </a>
     
+    
+    <a href="https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/" class="navigation-next">
+      <span class="navigation-tittle">Comparing Low-Code Tools as a Developer</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
     
 </div>
 

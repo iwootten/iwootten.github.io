@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.1" />
+
+    
+    
+    
+
+<title>Comparing Low-Code Tools as a Developer - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "Comparing Low-Code Tools as a Developer",
+    "headline" : "Comparing Low-Code Tools as a Developer",
+    "description" : "When first hearing of the concept of \u0026ldquo;no-code\u0026rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn\u0026rsquo;t lead to anything genuinely valuable.\nI come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-08-10 09:02:47 \u002b0100 BST",
+    "dateModified" : "2021-08-10 09:02:47 \u002b0100 BST",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2021\/08\/10\/comparing-low-code-tools-as-a-developer\/",
+    "wordCount" : "1591",
+    "keywords" : [ "serverless","no-code","low-code","Blog" ]
+}
+</script>
+<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/comparing-low-code-tools/opengraph.jpg"/>
+
+<meta name="twitter:title" content="Comparing Low-Code Tools as a Developer"/>
+<meta name="twitter:description" content="When first hearing of the concept of &ldquo;no-code&rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&rsquo;t lead to anything genuinely valuable.
+I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation."/>
+
+<meta property="og:title" content="Comparing Low-Code Tools as a Developer" />
+<meta property="og:description" content="When first hearing of the concept of &ldquo;no-code&rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&rsquo;t lead to anything genuinely valuable.
+I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/comparing-low-code-tools/opengraph.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-10T09:02:47&#43;01:00" />
+<meta property="article:modified_time" content="2021-08-10T09:02:47&#43;01:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/contact/">
+						<span>Contact</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Newsletter</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2021 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/">Comparing Low-Code Tools as a Developer</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Aug 10, 2021
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/serverless">serverless</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/no-code">no-code</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/low-code">low-code</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 8 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>When first hearing of the concept of &ldquo;no-code&rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&rsquo;t lead to anything genuinely valuable.</p>
+<p>I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation. Devs and potentially the agencies they were part of were the gatekeepers to the simple software that people often required.</p>
+<p>After working on many smaller integrations myself for the animation industry I&rsquo;ve learned that the value of them can be massive. When a animator for example dedicates an inordinate amount of time to having to organise assets, or every member of the crew has to learn the correct render settings for a project, being able to quickly put together something that saves them hours each day is a life saver.</p>
+<p>The fact that companies now are using more remote services and can approach this without ever having to look into hiring anyone technical is also a huge burden lifted for them.</p>
+<p>I myself have been on my own journey through &ldquo;no-code&rdquo; and &ldquo;low-code&rdquo; services recently. As a grumpy pessimistic developer I resist change, but I&rsquo;m happy to get on board and admit I&rsquo;m wrong when an approach is around long enough to warrant it. I am a massive serverless fan, but I&rsquo;d also always wanted to find a nicer solution than having to work with lambdas within the complexity of AWS each time I wanted to hack on something or perform an experiment.</p>
+<p>For my first no-code workflow, I wanted to find a way of getting a regular summary of tweets I&rsquo;d liked so I could curate interesting links for my newsletter. I didn&rsquo;t want to save <em>all</em> my liked tweets as many of them aren&rsquo;t links to articles so wouldn&rsquo;t be that useful at a later date. Therefore, being able to have a ready to roll authentication for services as well as run my own code was important to me.</p>
+<h2 id="zapier-first-steps">Zapier: First Steps</h2>
+<p>First I started by looking at the oft-recommended Zapier and very quickly realising how incredibly expensive it could become.</p>
+<p>Zapier offers a offers over 3000 service integrations and a user friendly interface to walk through connecting to each of them. However, it isn&rsquo;t all that flexible on its free plan and doesn&rsquo;t allow you to filter any data returned or run workflows with multiple steps - so if I wanted to I&rsquo;d need to be using their &lsquo;Starter&rsquo; plan at a cost of $239.88 (£173.25) / year. Whilst it might be the most well known of the services I tried, that&rsquo;s the cost of a few Digital Ocean instances before seeing if anything would even work.</p>
+
+    <a href='https://www.ianwootten.co.uk/comparing-low-code-tools/zapier_hue841ed71357c4738f21cf83c03385af6_51275_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/comparing-low-code-tools/zapier_hue841ed71357c4738f21cf83c03385af6_51275_700x0_resize_box_2.png' />
+    </a>
+
+<p>Zapier prices are by individual steps, rather than the entire workflow so depending on how much activity I had on twitter could mean I&rsquo;d need to upgrade plans even further in the future. I guess this isn&rsquo;t a tool really designed for developers and is definitely targeting individuals who are happy to throw money at a problem. If you had several workflows this could well become useful, but I found it a bit of a frustrating introduction to no-code and decided to check out some other options.</p>
+<p>See ya later Zapier!</p>
+<h2 id="n8nio-good-but-not-right">n8n.io: Good, but not right</h2>
+<p>Next, I took a look at n8n.io - an open source, fair-code (?) licensed workflow tool which almost worked for me. I particularly was taken by the way n8n.io represents its workflows as a directed acyclic graph (DAG), which felt familiar to me as this is how execution is represented in animation and vfx tooling.</p>
+
+    <a href='https://www.ianwootten.co.uk/comparing-low-code-tools/n8n-wf_hu6ba4d90d168751f9299af64320190703_71765_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/comparing-low-code-tools/n8n-wf_hu6ba4d90d168751f9299af64320190703_71765_700x0_resize_box_2.png' />
+    </a>
+
+<p>n8n.io ticked a lot of boxes for me. Firstly, it&rsquo;s built for developers and open source so offers a lot of flexibility for customisation. It allows you to drag and drop pre-defined integrations or run your own code as individual steps. This meant I was able to easily filter search results from twitter for those that contained urls using javascript. I do this without paying anything to experiment. A great start.</p>
+
+    <a href='https://www.ianwootten.co.uk/comparing-low-code-tools/n8n-step_hu1ce70a84fd069bb8520883417cda3253_139920_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/comparing-low-code-tools/n8n-step_hu1ce70a84fd069bb8520883417cda3253_139920_700x0_resize_box_2.png' />
+    </a>
+
+<p>Where n8n.io fell short was the complexity of setting things up myself as a developer with twitter in order to configure auth to get it running locally. It involved a few emails to twitter in order to get approved (It looks like things are possibly changing here though, using a v2/Project based version of their API). I also needed to create my own version of the twitter integration n8n.io had by default to correctly integrate with it. Granted, these aren&rsquo;t problems with n8n.io, but more the cost of running it as a service locally. I wanted to use these tools to make things more productive and having to customise core integrations to get things working didn&rsquo;t seem like the way I should be going.</p>
+<p>n8n.io didn&rsquo;t offer an integration with raindrop.io, meaning I&rsquo;d need to write it myself. Additionally, the interface used to write custom functions also was a bit clunky as you can see from these images.</p>
+<p>I generally prefer for others to be hosting my services as I don&rsquo;t really want to also support the infra as well as my software (or in this case workflows). n8n.io does have a cloud offering that would made some of these problems go away and also offers a free trial which is better than Zapier. This comes in at €20 ($23/£16.95)/ month or $281.80 (£203.49) a year, so more expensive than Zapier but with many more task executions.</p>
+<h2 id="pipedream-just-right">Pipedream: Just right</h2>
+<p>It was here I happened across pipedream.com, after seeing it presented by <a href="https://www.youtube.com/watch?v=mzuXVuccaqI&amp;t=2610s">David McKay on Alex Ellis&rsquo;s youtube channel</a>. It looked very interesting and similar to what I was after.</p>
+<p>Pipedream is a hosted service which offers a lot of integrations, but also offers the flexibility to execute any code of my own for each step in javascript. If a pre defined step isn&rsquo;t quite right, then you can customise the code as you like and create a custom version of it very quickly. Each step or workflow can be saved and shared with other Pipedream users. It offers github auth as a way of signing up and getting started.</p>
+
+    <a href='https://www.ianwootten.co.uk/comparing-low-code-tools/pipedream-step_hu8ef69d5c8ddae49f7ecd1307dd35b841_116823_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/comparing-low-code-tools/pipedream-step_hu8ef69d5c8ddae49f7ecd1307dd35b841_116823_700x0_resize_box_2.png' />
+    </a>
+
+<p>A workflow in pipedream starts with a source, followed by a number of steps which can each store data for access in later steps. My particular workflow for saving tweets uses a liked tweet source, which ends the workflow if it doesn&rsquo;t contain a link. If a link is found, the url is scraped and saved to my bookmark manager raindrop.io</p>
+
+    <a href='https://www.ianwootten.co.uk/comparing-low-code-tools/pipedream-wf_hu488b6a58cb1d00309f7a233fc459c5ad_394209_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/comparing-low-code-tools/pipedream-wf_hu488b6a58cb1d00309f7a233fc459c5ad_394209_700x0_resize_box_2.png' />
+    </a>
+
+<p>I can do all of this as well as much more on their very generous free plan offering. Their professional plan costs $19 (£13.71)/month for 20,000 invocations or $228 (£164.54) a year. Although I&rsquo;m fairly used to seeing usage based pricing these days, it&rsquo;s often difficult to determine the invocation cost of a workflow, so this is available as a chart under your settings. Mine shows here the many different workflows I now run daily and allows me to see if I might need to upgrade.</p>
+
+    <a href='https://www.ianwootten.co.uk/comparing-low-code-tools/pipedream-billing_hu43107393e02e13d68aee03d57094f5b3_64512_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/comparing-low-code-tools/pipedream-billing_hu43107393e02e13d68aee03d57094f5b3_64512_700x0_resize_box_2.png' />
+    </a>
+
+<p>I&rsquo;ve been lucky enough to sit down with some of the team and discuss their vision for their services future earlier in the year. I&rsquo;m pleased to see a number of features (such as organisation accounts) have been added since we spoke and I&rsquo;m looking forward to when we get to the point when we can define Pipedream scripts within version control.</p>
+<p><em>One thing to note here before you go searching for details - Pipedream shares its name with a line of adult toys(!). I even had to talk to my UK broadband provider in order for the domain to be unblocked. You may want to be very specific with your search terms before you get an eyeful of NSFW content.</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I&rsquo;ve summarised below a few of each services features, along with their yearly cost.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Number of Integrations</th>
+<th>Type</th>
+<th>Invocations</th>
+<th>Cost / yr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zapier</td>
+<td>3000+</td>
+<td>Service</td>
+<td>750 steps</td>
+<td>239.88</td>
+</tr>
+<tr>
+<td>n8n.io</td>
+<td>200+</td>
+<td>Open Source</td>
+<td>5000 workflows (Hosted)</td>
+<td>281.80</td>
+</tr>
+<tr>
+<td>Pipedream</td>
+<td>400+</td>
+<td>Service</td>
+<td>10,000 steps / workflows</td>
+<td>228</td>
+</tr>
+</tbody>
+</table>
+<p>After spending time with each of them, I&rsquo;m now a convert to Pipedream. Their product seems to sit right at the sweet spot of the complexity scale for me as a dev.</p>
+<p>n8n.io is a close second - With both, if I need to, I can still jump in and modify code as necessary to tweak to my use cases. If I had a lot of workflows to run, or ran them more frequently then I&rsquo;d be more inclined to invest the time writing my own integrations for services that didn&rsquo;t already exist.</p>
+<p>With Pipedream though I can forget about authentication and quickly spin up a serverless workflow using multiple available services hosted on their infrastructure. Best of all, I can do this for my simple scripts for free and the hosted service being the cheapest of those I&rsquo;ve looked had.</p>
+<p>The no/low-code space has many more offerings than those I&rsquo;ve looked at here. It caters to clients and devs alike, at many levels of complexity so if you&rsquo;ve been put off in the past now may be the time to take another look.</p>
+<hr />
+
+<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join <a
+    href="https://www.getrevue.co/profile/iwootten">my newsletter</a> below. </p>
+
+<div id="revue-embed">
+  <form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
+    target="_blank" style="background: #e7daf1; padding: 1rem; border: 2px solid #300030;">
+    <div class="revue-form-group">
+      <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
+        id="member_email" style="width: 100%;font-size: 20px;">
+    </div>
+    <div class="revue-form-actions">
+      <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+    </div>
+    <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank"
+        href="https://www.getrevue.co/terms">Terms</a> and <a target="_blank"
+        href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+  </form>
+</div>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Why Python devs love Requests</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ianwootten';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>
