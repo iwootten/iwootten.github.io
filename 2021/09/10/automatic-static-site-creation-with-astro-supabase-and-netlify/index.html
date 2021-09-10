@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.1" />
+
+    
+    
+    
+
+<title>Automatic Static Site creation with Astro, Supabase and Netlify - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "Automatic Static Site creation with Astro, Supabase and Netlify",
+    "headline" : "Automatic Static Site creation with Astro, Supabase and Netlify",
+    "description" : "Introduction This week, I revealed mixes.it - a very simple site I\u0026rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ\u0026rsquo;s I like to see what new music they were playing and that I didn\u0026rsquo;t have to spend much time supporting.\nI used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-09-10 10:27:51 \u002b0100 BST",
+    "dateModified" : "2021-09-10 10:27:51 \u002b0100 BST",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2021\/09\/10\/automatic-static-site-creation-with-astro-supabase-and-netlify\/",
+    "wordCount" : "1094",
+    "keywords" : [ "web scraping","spotify","serverless","supabase","astro","js","Blog" ]
+}
+</script>
+<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/automatic-static-site/opengraph.jpg"/>
+
+<meta name="twitter:title" content="Automatic Static Site creation with Astro, Supabase and Netlify"/>
+<meta name="twitter:description" content="Introduction This week, I revealed mixes.it - a very simple site I&rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&rsquo;s I like to see what new music they were playing and that I didn&rsquo;t have to spend much time supporting.
+I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify."/>
+
+<meta property="og:title" content="Automatic Static Site creation with Astro, Supabase and Netlify" />
+<meta property="og:description" content="Introduction This week, I revealed mixes.it - a very simple site I&rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&rsquo;s I like to see what new music they were playing and that I didn&rsquo;t have to spend much time supporting.
+I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/automatic-static-site/opengraph.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-10T10:27:51&#43;01:00" />
+<meta property="article:modified_time" content="2021-09-10T10:27:51&#43;01:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/contact/">
+						<span>Contact</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Newsletter</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2021 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/">Automatic Static Site creation with Astro, Supabase and Netlify</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Sep 10, 2021
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/web-scraping">web scraping</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/spotify">spotify</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/serverless">serverless</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/supabase">supabase</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/astro">astro</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/js">js</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <h2 id="introduction">Introduction</h2>
+<p>This week, I revealed <a href="https://mixes.it">mixes.it</a> - a very simple site I&rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&rsquo;s I like to see what new music they were playing and that I didn&rsquo;t have to spend much time supporting.</p>
+<p>I used <a href="https://astro.build">Astro</a> and <a href="https://supabase.com">Supabase</a> to create the site itself and the whole thing is currently built using <a href="https://netlify.com">Netlify</a>. The nice thing about this is that the sites creation is completely automated once my scraping workflow has collected new data to my database and triggered a build hook on Netlify.</p>
+<h2 id="working-with-astro">Working with Astro</h2>
+<p><a href="https://astro.build">Astro</a> is a new framework to help you ship less JavaScript in your static sites. It&rsquo;s designed so you can use your own framework of choice - be it React, Vue, something else or even HTML and CSS (!). It also has some other nice features such as automatic sitemap generation.</p>
+<p>I could have looked at other frameworks like 11ty (which is probably the sensible route given the amount of other devs using it), but I fancied playing with something new and shiny.</p>
+<p>Astro is really simple to work with, using a <a href="https://docs.astro.build/core-concepts/astro-components">page and component syntax</a> very similar to JSX. It works very much like a static site generator, like Hugo or Jekyll. Creating a page within the pages directory maps directly to the final builds location, so pages/index.astro goes to your index page.</p>
+<p>My whole mixes.it site consists of just 3 components and two pages. Here&rsquo;s the code behind my pages/index.astro page.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#f92672">---</span>
+<span style="color:#75715e">// Component Imports
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Mixes</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../components/Mixes&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Nav</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../components/Nav&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../components/Header&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mixes.it - The Best DJ Mix Playlists from around the web&#39;</span>;
+<span style="color:#f92672">---</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">Header</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">title</span>} /&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+        &lt;<span style="color:#f92672">main</span>&gt;
+            &lt;<span style="color:#f92672">Nav</span> /&gt;
+            &lt;<span style="color:#f92672">Mixes</span> /&gt;
+        &lt;/<span style="color:#f92672">main</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>You can see each of the components here, which are all fairly self explanatory. The mixes component breaks down to the code you see below, where you can see I&rsquo;m pulling my data from Supabase using its REST API and using a map on the results to generate a table of mixes. I found working with a fetch call much simpler than interpreting the Supabase clients return errors and this way we don&rsquo;t have any additional dependencies to install over Astro itself.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#f92672">---</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">__SNOWPACK_ENV__</span>.<span style="color:#a6e22e">SNOWPACK_PUBLIC_SUPABASE_URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/rest/v1/mixes?select=*&amp;order=first_broadcast.desc`</span>, {<span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+  <span style="color:#e6db74">&#39;apikey&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__SNOWPACK_ENV__</span>.<span style="color:#a6e22e">SNOWPACK_PUBLIC_SUPABASE_KEY</span>
+}});
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mixes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+<span style="color:#f92672">---</span>
+&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table table-striped table-hover&#34;</span>&gt;
+  &lt;<span style="color:#f92672">thead</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Title</span>&lt;/<span style="color:#f92672">th</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Artist</span>&lt;/<span style="color:#f92672">th</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Broadcast</span>&lt;/<span style="color:#f92672">th</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Spotify</span> <span style="color:#a6e22e">Playlist</span>&lt;/<span style="color:#f92672">th</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+  &lt;/<span style="color:#f92672">thead</span>&gt;
+  &lt;<span style="color:#f92672">tbody</span>&gt;
+    {<span style="color:#a6e22e">mixes</span>
+        .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">spotify_playlist</span>)
+        .<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">mix</span>) =&gt; (
+            &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">`./mix/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>}&gt;{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">title</span>}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">artist</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">first_broadcast</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">spotify_playlist</span>}&gt;[<span style="color:#a6e22e">Spotify</span>]&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;/<span style="color:#f92672">tr</span>&gt;
+        ))
+    }
+&lt;/<span style="color:#f92672">tbody</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><p>The part of this that took me the longest was actually finding a way of getting environment variables to propagate from the .env file I had created to my views. Snowpack, on which Astro is based can have this feature enabled when @snowpack/plugin-dotenv is installed. However, it will only read environment vars <a href="https://www.snowpack.dev/reference/environment-variables">when they are prefixed with &ldquo;SNOWPACK_PUBLIC_&quot;</a>, in order to ensure you understand they will be exposed in the application at build time. As I don&rsquo;t actually use the variables within the content of my HTML, this isn&rsquo;t a worry as the JS is removed.</p>
+<h2 id="dynamic-routes">Dynamic Routes</h2>
+<p>As well as the main index page, I wanted individual pages for each of the mixes found. This is achievable using [bracket] notation where a file at pages/mix/[mid].astro would be responsible for returning mix/1 mix/2 etc.</p>
+<p>Within this page, it&rsquo;s necessary to define a getStaticPaths function for returning all the individual id&rsquo;s and page content that would need to be known at build time. Here&rsquo;s how that individual page looks in my app.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#f92672">---</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Header</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../../components/Header&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Nav</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../../components/Nav&#39;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getStaticPaths</span>() {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">__SNOWPACK_ENV__</span>.<span style="color:#a6e22e">SNOWPACK_PUBLIC_SUPABASE_URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/rest/v1/mixes?select=*,mixes_tracks(artistname,trackname,label)`</span>, {<span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#39;apikey&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__SNOWPACK_ENV__</span>.<span style="color:#a6e22e">SNOWPACK_PUBLIC_SUPABASE_KEY</span>
+    }});
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mixes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mixes</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">mix</span>) =&gt; {
+        <span style="color:#66d9ef">return</span> { 
+            <span style="color:#a6e22e">params</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">mid</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">toString</span>() },
+            <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">mix</span> }
+        };
+    });
+}
+
+<span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">mid</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">Astro</span>.<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">params</span>;
+<span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">mix</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">Astro</span>.<span style="color:#a6e22e">props</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">artist</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: mixes.it`</span>
+<span style="color:#f92672">---</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">Header</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">title</span>} /&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+    &lt;<span style="color:#f92672">Nav</span> /&gt;
+
+&lt;<span style="color:#f92672">h1</span>&gt;{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">title</span>} <span style="color:#f92672">-</span> {<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">artist</span>}&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">first_broadcast</span>}&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">url</span>}&gt;{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">url</span>}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">spotify_playlist</span>}&gt;<span style="color:#a6e22e">Spotify</span> <span style="color:#a6e22e">Playlist</span>&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table table-striped table-hover&#34;</span>&gt;
+  &lt;<span style="color:#f92672">thead</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#960050;background-color:#1e0010">#</span>&lt;/<span style="color:#f92672">th</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Track</span>&lt;/<span style="color:#f92672">th</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Artist</span>&lt;/<span style="color:#f92672">th</span>&gt;
+      &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">scope</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;<span style="color:#a6e22e">Label</span>&lt;/<span style="color:#f92672">th</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+  &lt;/<span style="color:#f92672">thead</span>&gt;
+  &lt;<span style="color:#f92672">tbody</span>&gt;
+{<span style="color:#a6e22e">mix</span>.<span style="color:#a6e22e">mixes_tracks</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">track</span>, <span style="color:#a6e22e">index</span>) =&gt; (
+  &lt;<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">track</span>.<span style="color:#a6e22e">trackname</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">track</span>.<span style="color:#a6e22e">artistname</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">track</span>.<span style="color:#a6e22e">label</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+  &lt;/<span style="color:#f92672">tr</span>&gt;
+))}
+  &lt;/<span style="color:#f92672">tbody</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>The getStaticPaths function could in fact just return a list of mix ids, however we want to display the mix data returned within the page so it needs us to map the array so we can pass the full mix object as a prop and access it within the page.</p>
+<h2 id="building-with-netlify">Building with Netlify</h2>
+<p>Building the final site is a simple <code>npm run build</code>, so can be executed on any continuous integration platform you choose. I&rsquo;ve opted for netlify as it&rsquo;s free for publishing sites for my purposes and has the simplest amount of configuration I need to setup.</p>
+<p>Exposing my project as a github repo complete with a <code>netlify.toml</code> file means that its incredibly simple to get my site visible on the web.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">build</span>]
+  <span style="color:#a6e22e">command</span> = <span style="color:#e6db74">&#34;npm run build&#34;</span>
+  <span style="color:#a6e22e">publish</span> = <span style="color:#e6db74">&#34;dist&#34;</span>
+</code></pre></div><p>I also added a Netlify build hook, so that I could trigger builds from my scraping workflow. Netlify makes this easy, allowing you to select the relevant branch from a project and request a hook URL. Once created, you can make a POST request to that hook and trigger a build.</p>
+
+    <a href='https://www.ianwootten.co.uk/automatic-static-site/netlify-hook_hu21a25e90e1c5083d15f04944490a5a9f_59987_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/automatic-static-site/netlify-hook_hu21a25e90e1c5083d15f04944490a5a9f_59987_700x0_resize_box_2.png' />
+    </a>
+
+<p>All that remains is configuring your custom domain to point to netlify correctly, which you can find details of within &ldquo;Domain management&rdquo; in Netlify.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This was a quick an dirty example with Astro, but I feel one that really shows the power of these tools together. I like that I can pick and choose sources to push back to Supabase and kick off builds asynchronously when updates have been made from scraping data. I&rsquo;m planning on adding a number of other sources over time.</p>
+<p>It&rsquo;s mostly completely hands off, except for if I&rsquo;d like to make changes (which lets face it I most likely will). With netlify in hand, these changes are immediately published when pushed back to my github repo.</p>
+<p>In a future article, I will detail how you can scrape data to Supabase in the way I&rsquo;m doing here to something structured (like a playlist) for use at a later date.</p>
+<hr />
+
+<p>If you liked this post, <a href="http://twitter.com/iwootten">follow me on twitter</a> or join <a
+    href="https://www.getrevue.co/profile/iwootten">my newsletter</a> below. </p>
+
+<div id="revue-embed">
+  <form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
+    target="_blank" style="background: #e7daf1; padding: 1rem; border: 2px solid #300030;">
+    <div class="revue-form-group">
+      <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
+        id="member_email" style="width: 100%;font-size: 20px;">
+    </div>
+    <div class="revue-form-actions">
+      <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+    </div>
+    <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank"
+        href="https://www.getrevue.co/terms">Terms</a> and <a target="_blank"
+        href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+  </form>
+</div>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Comparing Low-Code Tools as a Developer</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ianwootten';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

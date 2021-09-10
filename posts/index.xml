@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Aug 2021 09:02:47 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 10:27:51 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatic Static Site creation with Astro, Supabase and Netlify</title>
+      <link>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid>
+      <description>Introduction This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
+I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description>
+    </item>
+    
     <item>
       <title>Comparing Low-Code Tools as a Developer</title>
       <link>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</link>

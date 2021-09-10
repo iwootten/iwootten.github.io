@@ -2,25 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</loc>
-    <lastmod>2021-08-10T09:02:47+01:00</lastmod>
+    <loc>https://www.ianwootten.co.uk/tags/astro/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/js/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/serverless/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/spotify/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/supabase/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/web-scraping/</loc>
+    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</loc>
     <lastmod>2021-08-10T09:02:47+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/low-code/</loc>
     <lastmod>2021-08-10T09:02:47+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/no-code/</loc>
-    <lastmod>2021-08-10T09:02:47+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2021-08-10T09:02:47+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/serverless/</loc>
-    <lastmod>2021-08-10T09:02:47+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
     <lastmod>2021-08-10T09:02:47+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/python/</loc>
@@ -105,9 +123,6 @@
     <lastmod>2021-02-16T10:07:59+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/hugo/</loc>
-    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/js/</loc>
     <lastmod>2021-02-16T10:07:59+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/open-graph/</loc>
