@@ -13,7 +13,7 @@
       <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid>
-      <description>Introduction This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
+      <description>This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
 I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description>
     </item>
     
