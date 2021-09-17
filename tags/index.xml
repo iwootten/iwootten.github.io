@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Sep 2021 10:27:51 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Sep 2021 12:52:29 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://www.ianwootten.co.uk/tags/blog/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disqus</title>
+      <link>https://www.ianwootten.co.uk/tags/disqus/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/disqus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>https://www.ianwootten.co.uk/tags/performance/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/performance/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>astro</title>
       <link>https://www.ianwootten.co.uk/tags/astro/</link>
@@ -517,15 +544,6 @@
       <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/wordpress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>disqus</title>
-      <link>https://www.ianwootten.co.uk/tags/disqus/</link>
-      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/disqus/</guid>
       <description></description>
     </item>
     
@@ -1066,15 +1084,6 @@
       <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/amazon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://www.ianwootten.co.uk/tags/blog/</link>
-      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/blog/</guid>
       <description></description>
     </item>
     

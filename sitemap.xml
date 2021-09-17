@@ -2,19 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.ianwootten.co.uk/tags/blog/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/disqus/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/performance/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/09/17/remove-disqus-and-3x-your-blog-performance/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/astro/</loc>
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</loc>
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/js/</loc>
-    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/serverless/</loc>
@@ -24,9 +39,6 @@
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/supabase/</loc>
-    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/web-scraping/</loc>
@@ -331,9 +343,6 @@
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/wordpress/</loc>
     <lastmod>2014-06-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/disqus/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
@@ -645,9 +654,6 @@
     <lastmod>2011-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/amazon/</loc>
-    <lastmod>2011-09-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/blog/</loc>
     <lastmod>2011-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/godaddy/</loc>
