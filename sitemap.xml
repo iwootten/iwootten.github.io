@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.ianwootten.co.uk/2021/</loc>
+    <lastmod>2021-11-29T17:29:55+00:00</lastmod>
+  </url><url>
     <loc>https://www.ianwootten.co.uk/2021/11/29/how-to-setup-raspberry-pi-os-bullseye-like-a-python-pro/</loc>
     <lastmod>2021-11-29T17:29:55+00:00</lastmod>
   </url><url>
@@ -32,7 +35,16 @@
     <loc>https://www.ianwootten.co.uk/tags/</loc>
     <lastmod>2021-11-29T17:29:55+00:00</lastmod>
   </url><url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2021-11-29T17:29:55+00:00</lastmod>
+  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/blog/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/</loc>
+    <lastmod>2021-09-17T12:52:29+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
     <lastmod>2021-09-17T12:52:29+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/disqus/</loc>
@@ -107,12 +119,6 @@
     <loc>https://www.ianwootten.co.uk/tags/apple-silicon/</loc>
     <lastmod>2021-03-05T10:45:07+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2021-03-05T10:45:07+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
-    <lastmod>2021-03-05T10:45:07+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/mac/</loc>
     <lastmod>2021-03-05T10:45:07+00:00</lastmod>
   </url><url>
@@ -167,9 +173,6 @@
     <loc>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</loc>
     <lastmod>2021-02-04T10:04:41+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/2021/</loc>
-    <lastmod>2021-01-25T14:21:21+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/categories/automation/</loc>
     <lastmod>2021-01-25T14:21:21+00:00</lastmod>
   </url><url>
@@ -186,9 +189,6 @@
     <lastmod>2021-01-25T14:21:21+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/jinja2/</loc>
-    <lastmod>2021-01-25T14:21:21+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
     <lastmod>2021-01-25T14:21:21+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</loc>
@@ -1922,6 +1922,22 @@
     <loc>https://www.ianwootten.co.uk/2020/11/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2021/01/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/02/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/03/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/04/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/06/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/07/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/08/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/09/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2021/11/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/about/</loc>
   </url><url>

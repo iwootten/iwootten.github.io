@@ -6,7 +6,56 @@
     <description>Recent content in Development on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Mar 2021 10:45:07 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Sep 2021 12:52:29 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remove Disqus and 3x Your Blog Performance</title>
+      <link>https://www.ianwootten.co.uk/2021/09/17/remove-disqus-and-3x-your-blog-performance/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/09/17/remove-disqus-and-3x-your-blog-performance/</guid>
+      <description>I got fed up recently of the insane number of requests that were given over to my use of disqus here on my blog. I&amp;rsquo;ve had it enabled since moving from Wordpress to various other blogging engines, wanting to take my comments with me to a static blogging engine, but enough is enough. I remember disqus being a darling in the startup scene when it first launched in 2007 but it&amp;rsquo;s changed hands several times since and the idea that randoms ads may turn up on my blog at some point is a massive turn off.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Static Site Creation with Astro, Supabase and Netlify</title>
+      <link>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid>
+      <description>This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
+I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description>
+    </item>
+    
+    <item>
+      <title>Comparing Low-Code Tools as a Developer</title>
+      <link>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</link>
+      <pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</guid>
+      <description>When first hearing of the concept of &amp;ldquo;no-code&amp;rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&amp;rsquo;t lead to anything genuinely valuable.
+I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation.</description>
+    </item>
+    
+    <item>
+      <title>Why Python devs love Requests</title>
+      <link>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</link>
+      <pubDate>Thu, 08 Jul 2021 15:03:34 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</guid>
+      <description>Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
+At the time of Requests original release in 2011 urllib3 was the high level HTTP library of choice and Requests actually uses it as a dependency.</description>
+    </item>
+    
+    <item>
+      <title>Installing Module Extras with Pipenv and Poetry</title>
+      <link>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</guid>
+      <description>I thought it worth documenting how to install &amp;ldquo;extra&amp;rdquo; dependencies in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with uvicorn where the websockets module hadn&amp;rsquo;t been installed as a result of not including the &amp;ldquo;standard&amp;rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.
+As an example, take the following pip command:</description>
+    </item>
+    
     <item>
       <title>Setting Up a New M1 Mac for Development</title>
       <link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link>
