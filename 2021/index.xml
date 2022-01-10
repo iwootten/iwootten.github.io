@@ -6,7 +6,17 @@
     <description>Recent content in 2021 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Nov 2021 17:29:55 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2021/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Dec 2021 12:15:49 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2021/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Code Christmas Tree LEDs (and find their 3D Coordinates)</title>
+      <link>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</link>
+      <pubDate>Wed, 29 Dec 2021 12:15:49 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</guid>
+      <description>This Christmas, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That&amp;rsquo;s tongue and cheek, but also ended up being very true.
+I&amp;rsquo;d been inspired by mathematician Matt Parker in 2020 where he did this. In this post I&amp;rsquo;ll describe all the hardware I used and how it was connected and I&amp;rsquo;ll share the code I needed to write to capture the LED&amp;rsquo;s coordinates.</description>
+    </item>
+    
     <item>
       <title>How to Setup Raspberry Pi OS: Bullseye like a Python Pro</title>
       <link>https://www.ianwootten.co.uk/2021/11/29/how-to-setup-raspberry-pi-os-bullseye-like-a-python-pro/</link>
