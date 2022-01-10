@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2022/01 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2022/01/</link>
+    <description>Recent content in 2022/01 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2022/01/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Code Christmas Tree LEDs (and find their 3D Coordinates)</title>
+      <link>https://www.ianwootten.co.uk/2022/01/10/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</link>
+      <pubDate>Mon, 10 Jan 2022 12:15:49 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/01/10/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</guid>
+      <description>For the Christmas of 2021, I decided to make our Christmas tree lights incredibly complex so that I could marvel at my own animations running on them. That&amp;rsquo;s tongue and cheek, but also ended up being very true.
+I&amp;rsquo;d been inspired by mathematician Matt Parker in 2020 where he did this. In this post I&amp;rsquo;ll describe all the hardware I used and how it was connected and I&amp;rsquo;ll share the code I needed to write to capture the LED&amp;rsquo;s coordinates.</description>
+    </item>
+    
+  </channel>
+</rss>
