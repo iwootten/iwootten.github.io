@@ -40,7 +40,7 @@
     "datePublished": "2022-01-27 11:58:06 \u002b0000 UTC",
     "dateModified" : "2022-01-27 11:58:06 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2022\/01\/27\/how-to-create-aws-lambda-layers-for-python-dependencies\/",
-    "wordCount" : "393",
+    "wordCount" : "413",
     "keywords" : [ "python","aws","docker","serverless","Blog" ]
 }
 </script>
@@ -254,7 +254,8 @@ aws <span style="color:#66d9ef">lambda</span> publish<span style="color:#f92672"
 rm <span style="color:#f92672">-</span>rf build <span style="color:#f92672">*.</span>zip
 </code></pre></div><p>You&rsquo;ll then be able to see the Layer under &ldquo;Additional Resources&rdquo; from the AWS Lambda console and make use of it from any of your Lambda functions.</p>
 <h3 id="alternative-approaches">Alternative approaches</h3>
-<p>This works great for runtimes up to Python 3.8, but later ones are unavailable from the lambci dockerhub images. For other projects, I&rsquo;d normally tackle bundling dependencies using something like the <a href="serverless.com">serverless.com</a> framework though I&rsquo;ve grown a bit tired of Python playing a second class citizen to JS - debugging errors quickly becomes difficult.</p>
+<p>This works great for runtimes up to Python 3.8, but later ones are unavailable from the lambci dockerhub images. Amazon have their own base images, though I&rsquo;ve not had success using them to build images using the approach above.</p>
+<p>For other projects, I&rsquo;d normally tackle bundling dependencies using something like the <a href="serverless.com">serverless.com</a> framework though I&rsquo;ve grown a bit tired of Python playing a second class citizen to JS - debugging errors quickly becomes difficult.</p>
 <p>Another alternative approach could be to use the <a href="https://aws.amazon.com/serverless/sam/">Serverless Application Model</a> (SAM) by Amazon themselves. This is definitely something I want to check out. For now, I decided I wanted to understand what was going on and keep it simple rather than jumping through multiple frameworks.</p>
 <form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
   target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
