@@ -233,7 +233,7 @@
   <div class="post">
     <p>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless you needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</p>
 <p>Layers are bundled as a zip archive, but you&rsquo;ll be running a different architecture on a dev machine than the Lambda does itself which could present problems for certain packages. Therefore, you need to create your lambda layer within docker.</p>
-<p>After trying a few different approaches, I found the <a href="https://gist.github.com/haranjackson/81ab8dc3ae54bbe91c623d7c4f1e4f14">following script</a> by <a href="twitter.com/haranjackson">haranjackson</a> the best solution. It uses a docker image from lambci ans the AWS CLI to build and publish an image to AWS. I&rsquo;ve modified this below, and <a href="https://gist.github.com/iwootten/1b3d51acabb07770dca024dc33390905">created a gist</a> which will install from a requirements.txt file within in the same folder.</p>
+<p>After trying a few different approaches, I found the <a href="https://gist.github.com/haranjackson/81ab8dc3ae54bbe91c623d7c4f1e4f14">following script</a> by <a href="twitter.com/haranjackson">haranjackson</a> the best solution. It uses a docker image from lambci and the AWS CLI to build and publish an image to AWS. I&rsquo;ve modified this below, and <a href="https://gist.github.com/iwootten/1b3d51acabb07770dca024dc33390905">created a gist</a> which will install from a requirements.txt file within in the same folder.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">REGION<span style="color:#f92672">=</span>eu<span style="color:#f92672">-</span>west<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>
 RUNTIME<span style="color:#f92672">=</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span>
 LAYER_NAME<span style="color:#f92672">=</span>app
@@ -257,7 +257,7 @@ rm <span style="color:#f92672">-</span>rf build <span style="color:#f92672">*.</
 <p>Another alternative approach could be to use the <a href="https://aws.amazon.com/serverless/sam/">Serverless Application Model</a> (SAM) by Amazon themselves. This is definitely something I want to check out. For now, I decided I wanted to understand what was going on and keep it simple rather than jumping through multiple frameworks.</p>
 <form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
   target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
-  <h3 style="margin-top:0">Get More Dev Tips with My Newsletter</h3>
+  <h3 style="margin-top:0">Dev Tips Delivered Directly to your Inbox</h3>
   <p>My <a href="https://www.getrevue.co/profile/iwootten">newsletter</a> comes out every few
     weeks and is stuffed with helpful stories and code from devs shipping stuff. It features articles and videos I've
     recently published here so you'll never miss out.
