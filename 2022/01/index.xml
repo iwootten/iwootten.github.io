@@ -7,13 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://www.ianwootten.co.uk/2022/01/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Code Christmas Tree LEDs (and find their 3D Coordinates)</title>
-      <link>https://www.ianwootten.co.uk/2022/01/10/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</link>
-      <pubDate>Mon, 10 Jan 2022 12:15:49 +0000</pubDate>
+      <title>How to Create AWS Lambda Layers for Python Dependencies</title>
+      <link>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</link>
+      <pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2022/01/10/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</guid>
-      <description>For the Christmas of 2021, I decided to make our Christmas tree lights incredibly complex so that I could marvel at my own animations running on them. That&amp;rsquo;s tongue and cheek, but also ended up being very true.
-I&amp;rsquo;d been inspired by mathematician Matt Parker in 2020 where he did this. In this post I&amp;rsquo;ll describe all the hardware I used and how it was connected and I&amp;rsquo;ll share the code I needed to write to capture the LED&amp;rsquo;s coordinates.</description>
+      <guid>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</guid>
+      <description>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless you needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</description>
     </item>
     
   </channel>

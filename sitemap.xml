@@ -2,14 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.ianwootten.co.uk/2022/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/aws/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2022-01-10T12:46:34+00:00</lastmod>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/development/</loc>
-    <lastmod>2022-01-10T12:46:34+00:00</lastmod>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2022-01-10T12:46:34+00:00</lastmod>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/serverless/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/tutorial/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/leds/</loc>
     <lastmod>2022-01-10T12:46:34+00:00</lastmod>
@@ -23,13 +53,7 @@
     <loc>https://www.ianwootten.co.uk/tags/p5js/</loc>
     <lastmod>2022-01-10T12:46:34+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2022-01-10T12:46:34+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/categories/projects/</loc>
-    <lastmod>2022-01-10T12:46:34+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
     <lastmod>2022-01-10T12:46:34+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/raspberry-pi/</loc>
@@ -38,16 +62,10 @@
     <loc>https://www.ianwootten.co.uk/2022/01/10/rendering-a-christmas-tree-that-never-comes-down-with-p5.js/</loc>
     <lastmod>2022-01-10T12:46:34+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2022-01-10T12:46:34+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/2021/</loc>
     <lastmod>2021-12-29T12:15:49+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</loc>
-    <lastmod>2021-12-29T12:15:49+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
     <lastmod>2021-12-29T12:15:49+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2021/11/29/how-to-setup-raspberry-pi-os-bullseye-like-a-python-pro/</loc>
@@ -84,9 +102,6 @@
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/js/</loc>
-    <lastmod>2021-09-10T10:27:51+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/serverless/</loc>
     <lastmod>2021-09-10T10:27:51+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/spotify/</loc>
@@ -177,9 +192,6 @@
     <lastmod>2021-02-16T10:07:59+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/puppeteer/</loc>
-    <lastmod>2021-02-16T10:07:59+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/tutorial/</loc>
     <lastmod>2021-02-16T10:07:59+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/goals/</loc>
@@ -274,9 +286,6 @@
   </url><url>
     <loc>https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/</loc>
     <lastmod>2018-11-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
-    <lastmod>2018-11-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</loc>
     <lastmod>2018-11-07T00:00:00+00:00</lastmod>
@@ -816,9 +825,6 @@
     <lastmod>2009-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/associates/</loc>
-    <lastmod>2009-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/aws/</loc>
     <lastmod>2009-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/biography/</loc>
@@ -1958,6 +1964,8 @@
     <loc>https://www.ianwootten.co.uk/2021/11/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2021/12/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/01/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/about/</loc>
   </url><url>
