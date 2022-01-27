@@ -29,7 +29,7 @@
     "articleSection" : "posts",
     "name" : "How to Create AWS Lambda Layers for Python Dependencies",
     "headline" : "How to Create AWS Lambda Layers for Python Dependencies",
-    "description" : "Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless you needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.",
+    "description" : "Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -50,10 +50,10 @@
 <meta name="twitter:image" content="https://www.ianwootten.co.uk/images/how-to-create-lambda-layers/opengraph.jpg"/>
 
 <meta name="twitter:title" content="How to Create AWS Lambda Layers for Python Dependencies"/>
-<meta name="twitter:description" content="Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless you needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up."/>
+<meta name="twitter:description" content="Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up."/>
 
 <meta property="og:title" content="How to Create AWS Lambda Layers for Python Dependencies" />
-<meta property="og:description" content="Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless you needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up." />
+<meta property="og:description" content="Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/how-to-create-lambda-layers/opengraph.jpg" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-27T11:58:06&#43;00:00" />
@@ -231,7 +231,7 @@
   
   
   <div class="post">
-    <p>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless you needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</p>
+    <p>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</p>
 <p>Layers are bundled as a zip archive, but you&rsquo;ll be running a different architecture on a dev machine than the Lambda does itself which could present problems for certain packages. Therefore, you need to create your lambda layer within docker.</p>
 <p>After trying a few different approaches, I found the <a href="https://gist.github.com/haranjackson/81ab8dc3ae54bbe91c623d7c4f1e4f14">following script</a> by <a href="twitter.com/haranjackson">haranjackson</a> the best solution. It uses a docker image from lambci and the AWS CLI to build and publish an image to AWS. I&rsquo;ve modified this below, and <a href="https://gist.github.com/iwootten/1b3d51acabb07770dca024dc33390905">created a gist</a> which will install from a requirements.txt file within in the same folder.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">REGION<span style="color:#f92672">=</span>eu<span style="color:#f92672">-</span>west<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>
