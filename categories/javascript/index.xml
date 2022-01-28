@@ -87,10 +87,10 @@ In the main route of my express app, I needed to iterate across an array, perfor
     
     <item>
       <title>Blog rolling with CouchDB, Express and Node.js</title>
-      <link>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</link>
+      <link>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js/</link>
       <pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node.js/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js/</guid>
       <description>Over the last little while, I’ve been doing a lot of playing with Node.js, mostly to run data collection scripts. Last week, I started following Ciaran Jessup’s tutorial on getting started with node.js, Express and mongoDB. Express acts as a framework to node.js, allowing you to work in a familiar mvc format in a not so familar server side language. I hit a few problems along the way in the tutorial, so I thought I’ve list a few of my findings here.</description>
     </item>
     
