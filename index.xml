@@ -706,10 +706,10 @@ These type of events are stuffed to the brim with amazing, intelligent web profe
     
     <item>
       <title>Maintaining References to Sockets with Express and Socket.io</title>
-      <link>https://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</link>
+      <link>https://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io/</link>
       <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket.io/</guid>
+      <guid>https://www.ianwootten.co.uk/2011/07/04/maintaining-references-to-sockets-with-express-and-socket-io/</guid>
       <description>I hit a frustrating problem when trying to use expressjs alongside socket.io recently. The solution may seem somewhat trivial, but I struggled with it for a while, until finally asking for help on the socket.io irc channel. I’m not sure if a better solution exists for my case, but this is what I have for now.
 In the main route of my express app, I needed to iterate across an array, performing a REST call using each element as a parameter and spit the results back for socket.</description>
     </item>

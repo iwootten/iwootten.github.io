@@ -44,7 +44,8 @@
     "keywords" : [ "python","pipenv","poetry","til","Blog" ]
 }
 </script>
-<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
+<meta name="description" content="I thought it worth documenting how to install &ldquo;extra&rdquo; dependencies in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with uvicorn where the websockets module hadn&rsquo;t been installed as a result of not including the &ldquo;standard&rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.
+As an example, take the following pip command:">
 <meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.ianwootten.co.uk/images/installing-module-extras-with-pipenv-poetry/opengraph.jpg"/>
