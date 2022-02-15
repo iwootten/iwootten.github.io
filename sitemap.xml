@@ -3,15 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.ianwootten.co.uk/2022/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/aws/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/client-work/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/data-analysis/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/development/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/product-hunt/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/tutorial/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2022-02-15T11:28:10+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/aws/</loc>
     <lastmod>2022-01-27T11:58:06+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/docker/</loc>
@@ -20,25 +50,7 @@
     <loc>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</loc>
     <lastmod>2022-01-27T11:58:06+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/serverless/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/tutorial/</loc>
-    <lastmod>2022-01-27T11:58:06+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
     <lastmod>2022-01-27T11:58:06+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/leds/</loc>
@@ -1966,6 +1978,8 @@
     <loc>https://www.ianwootten.co.uk/2021/12/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/01/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/02/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/about/</loc>
   </url><url>
