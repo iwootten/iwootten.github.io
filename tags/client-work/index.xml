@@ -13,7 +13,7 @@
       <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</guid>
-      <description>I recently wrote an article for Pierre and Kevin over at ScrapingBee which was very well received over at Hacker News. It focused on retrieving details for the 90,000+ featured products from Product Hunt API and digging into interesting facets of the data. I was excited to see it sat at the #1 spot on Hacker News for 4 hours whilst I repeatedly took screenshots to regale my children with in later life.</description>
+      <description>I recently wrote an article for Pierre and Kevin over at ScrapingBee which was very well received on Hacker News. It focused on retrieving details for the 90,000+ featured products from Product Hunt API and digging into interesting facets of the data. I was excited to see it sat at the #1 spot on Hacker News for 4 hours whilst I repeatedly took screenshots to regale my children with in later life.</description>
     </item>
     
   </channel>
