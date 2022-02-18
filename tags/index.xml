@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Feb 2022 11:28:10 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Feb 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>poetry</title>
+      <link>https://www.ianwootten.co.uk/tags/poetry/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/poetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.ianwootten.co.uk/tags/python/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>client work</title>
       <link>https://www.ianwootten.co.uk/tags/client-work/</link>
@@ -31,15 +49,6 @@
       <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/product-hunt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.ianwootten.co.uk/tags/python/</link>
-      <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
       <description></description>
     </item>
     
@@ -130,15 +139,6 @@
       <pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/pipx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>poetry</title>
-      <link>https://www.ianwootten.co.uk/tags/poetry/</link>
-      <pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/poetry/</guid>
       <description></description>
     </item>
     

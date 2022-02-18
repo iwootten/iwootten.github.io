@@ -6,7 +6,17 @@
     <description>Recent content on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Feb 2022 11:28:10 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Feb 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use .env files with Poetry</title>
+      <link>https://www.ianwootten.co.uk/2022/02/18/how-to-use-.env-files-with-poetry/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/02/18/how-to-use-.env-files-with-poetry/</guid>
+      <description>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
+Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default package management behaviour and @mpeteuil made one for .</description>
+    </item>
+    
     <item>
       <title>How to Query the Product Hunt API Responsibly with Python</title>
       <link>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</link>
@@ -3002,8 +3012,8 @@ I hold a PhD in Computer Science from Cardiff University. Probably the most valu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/hire-me/</guid>
-      <description>Since 2012, I’ve worked on tools for companies such as the Office for National Statistics, BBC, Aardman Features and Clothcat Animation.
-I often write software with frameworks like Django, Flask and Vue.js. I write infrastructure using tools like Serverless, Terraform and Kubernetes so I can ship fast and iterate quickly. I&amp;rsquo;ve written tools that collect survey data for 2021 Census and ensure complex studio animation pipelines run smoothly. I&amp;rsquo;m pretty lucky to have both a research and feature film background, earning me a PhD and a number of imdb credits.</description>
+      <description>Since 2012, I’ve worked on tools for companies such as the Office for National Statistics, BBC, Aardman Features and Clothcat Animation. I run a small software development company, Nifty Digits Ltd which specialises in Python.
+I often write software with frameworks like Django, Flask and Vue.js. I write infrastructure using tools like Serverless, Terraform and Kubernetes so I can ship fast and iterate quickly. I&amp;rsquo;ve written tools that collect survey data for 2021 Census and ensure complex studio animation pipelines run smoothly.</description>
     </item>
     
   </channel>
