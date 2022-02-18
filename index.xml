@@ -2991,19 +2991,19 @@ I’m having a right job trying to get the image side of MT working. I want to p
       
       <guid>https://www.ianwootten.co.uk/about/</guid>
       <description>Hi, I’m Ian.
-I’m a software engineer living in Cardiff in the UK. I run a small software development company, Nifty Digits Ltd which specialises in Python. Since 2012, I’ve worked on tools for companies such as the Office for National Statistics, BBC, Aardman Features and Clothcat Animation.
-I often write software with frameworks like Django, Flask and Vue.js. I write infrastructure using tools like Serverless, Terraform and Kubernetes so I can ship fast and iterate quickly.</description>
+I’m a software engineer living in Cardiff in the UK. I run a small software development company, Nifty Digits Ltd which specialises in Python.
+Here I publish my thoughts on anything that takes my fancy - and I have done so for the last 18 years! A lot has changed in that time for me.
+I hold a PhD in Computer Science from Cardiff University. Probably the most valuable skills I learnt whilst writing it were about myself, rather than anything in my final thesis.</description>
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>https://www.ianwootten.co.uk/contact/</link>
+      <title>Hire Me</title>
+      <link>https://www.ianwootten.co.uk/hire-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/contact/</guid>
-      <description>Want to talk? I&amp;rsquo;d love to heard from you if you found anything useful or want to discuss further.
-If you’re interested in hiring me, or just want to say hi – you can drop me an email at hi@niftydigits.com.
-If you have a need for any development work - please take a look at my company website Nifty Digits Ltd first for the sorts of things I do.</description>
+      <guid>https://www.ianwootten.co.uk/hire-me/</guid>
+      <description>Since 2012, I’ve worked on tools for companies such as the Office for National Statistics, BBC, Aardman Features and Clothcat Animation.
+I often write software with frameworks like Django, Flask and Vue.js. I write infrastructure using tools like Serverless, Terraform and Kubernetes so I can ship fast and iterate quickly. I&amp;rsquo;ve written tools that collect survey data for 2021 Census and ensure complex studio animation pipelines run smoothly. I&amp;rsquo;m pretty lucky to have both a research and feature film background, earning me a PhD and a number of imdb credits.</description>
     </item>
     
   </channel>
