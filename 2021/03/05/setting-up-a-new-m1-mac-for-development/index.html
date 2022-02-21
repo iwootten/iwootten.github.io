@@ -1,423 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-    
-
-
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.83.1" />
-
-    
-    
-    
-
-<title>Setting Up a New M1 Mac for Development - Ian Wootten</title>
-<script type="application/ld+json">
-{
-    "@context" : "http://schema.org",
-    "@type" : "BlogPosting",
-    "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "https:\/\/www.ianwootten.co.uk"
-    },
-    "articleSection" : "posts",
-    "name" : "Setting Up a New M1 Mac for Development",
-    "headline" : "Setting Up a New M1 Mac for Development",
-    "description" : "I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I\u0026rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.",
-    "inLanguage" : "en-US",
-    "author" : "",
-    "creator" : "",
-    "publisher": "",
-    "accountablePerson" : "",
-    "copyrightHolder" : "",
-    "copyrightYear" : "2021",
-    "datePublished": "2021-03-05 10:45:07.992107 \u002b0000 UTC",
-    "dateModified" : "2021-03-05 10:45:07.992107 \u002b0000 UTC",
-    "url" : "https:\/\/www.ianwootten.co.uk\/2021\/03\/05\/setting-up-a-new-m1-mac-for-development\/",
-    "wordCount" : "1454",
-    "keywords" : [ "apple silicon","tutorial","mac","Blog" ]
-}
-</script>
-<meta name="description" content="I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.">
-<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/opengraph.jpg"/>
-
-<meta name="twitter:title" content="Setting Up a New M1 Mac for Development"/>
-<meta name="twitter:description" content="I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture."/>
-
-<meta property="og:title" content="Setting Up a New M1 Mac for Development" />
-<meta property="og:description" content="I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/opengraph.jpg" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-05T10:45:07&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-05T10:45:07&#43;00:00" />
-
-
-
-    
-
-
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
-    
-
-    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
-</head>
-
-
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
-      </span>
-      
-      
-      
-      <div class="author-image">
-        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
-      </div>
-      
-      <p class="site__description">
-         Software Developer, Cardiff 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Ian Wootten</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/hire-me/">
-						<span>Hire Me</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.getrevue.co/profile/iwootten">
-						<span>Subscribe</span>
-					</a>
-				</li>
-			 
-		
-		</li>
-	</ul>
-</div>
-
-        <section class="social">
-	
-	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    <p class="copyright">
-      &copy;2003-2022 Ian Wootten
-    </p>
-  </div>
-  <div>
-  </div>
-</div>
-
-        <div class="content container">
-            
-    <article>
-  <header>
-    <h1><a href="https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/">Setting Up a New M1 Mac for Development</a></h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Mar 05, 2021
-    
-    
-    
-      
-      
-          in
-          
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
-              
-          
-      
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/apple-silicon">apple silicon</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/tutorial">tutorial</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/mac">mac</a>
-          
-      
-    
-    
-    <br/>
-    <i class="fas fa-clock"></i> 7 min read
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
-    <p>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on <a href="https://www.youtube.com/watch?v=AoQrGx2OMig">setting it up</a>. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture. There&rsquo;s a number of different things I cover so use these links to jump to the parts you&rsquo;re most interested in:</p>
-<ul>
-<li><a href="#natural-scroll">Natural Scroll</a></li>
-<li><a href="#dock-settings">Dock Settings</a></li>
-<li><a href="#displaying-your-home-folder">Displaying your home folder in Finder</a></li>
-<li><a href="#dividing-up-your-screen">Dividing Up Your Screen</a></li>
-<li><a href="#applications">Applications</a></li>
-<li><a href="#xcode-tools">xcode-tools</a></li>
-<li><a href="#homebrew">Homebrew</a></li>
-<li><a href="#oh-my-zsh">Oh My Zsh</a></li>
-<li><a href="#ssh-key">SSH Key</a></li>
-<li><a href="#gpg-key">GPG Key</a></li>
-<li><a href="#docker">Docker</a></li>
-<li><a href="#python">Python</a></li>
-<li><a href="#poetry">Poetry</a></li>
-<li><a href="#node">Node</a></li>
-</ul>
-<h1 id="mac-os-preferences">Mac OS Preferences</h1>
-<p>There&rsquo;s a number of things I dislike that are switched on by default in Mac OS. These are all personal and meant to streamline my work as a developer. Pick and choose your own preferences.</p>
-<h2 id="natural-scroll">Natural Scroll</h2>
-<p>Why Apple felt inverting the mouse was necessary for their devices, I&rsquo;ll never really understand and is just confusing when switching between Apple and PC as I&rsquo;m regularly doing. This is the first thing I always disable.</p>
-<p>To disable it, go to: <em>&ldquo;System preferences &gt; Mouse &gt; Scroll Direction: Natural&rdquo;</em> and uncheck the box.</p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.39.34.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.39.34.png"></p>
-<h2 id="dock-settings">Dock Settings</h2>
-<p>I find the dock really busy and distracting with all the default applications that are lined along it. I don&rsquo;t have a need for most of them and so remove them straight away. You always have the option of adding them back there and everything is able to be found through spotlight.</p>
-<p>You can remove each one by right clicking the icon and selecting: <em>&ldquo;Options &gt; Remove from Dock&rdquo;</em></p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.50.23.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.50.23.png"></p>
-<p>The recent icons also take a chunk of space, they can be removed by: <em>&ldquo;System Preferences &gt; Dock &amp; Menu Bar&rdquo;</em> and unchecking <em>&ldquo;Show recent applications in Dock&rdquo;</em></p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.53.27.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.53.27.png"></p>
-<p>I like to see the full desktop whilst I&rsquo;m working, so I also enable <em>&ldquo;Automatically hide and show the Dock&rdquo;</em>.</p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.00.24.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.00.24.png"></p>
-<h2 id="displaying-your-home-folder-in-finder">Displaying your home folder in Finder</h2>
-<p>I like being able to navigate to my home folder as quickly as possible. Unfortunately finder doesn&rsquo;t display it by default, but it&rsquo;s available as a favourite if you open finders preferences from the menu bar and select it. I like dragging it to the top of my finder favourites once it is showing.</p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.13.06.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.13.06.png"></p>
-<h2 id="dividing-up-your-screen">Dividing Up Your Screen</h2>
-<p>I&rsquo;m returning to MacOS from Ubuntu and I&rsquo;ve become pretty accustomed to being able to snap windows to either side of the screen, a feature that doesn&rsquo;t exist by default in Big Sur.</p>
-<p><a href="https://rectangleapp.com">Rectangle</a> is a nice free solution available to resolve this, which allows you divide up your screen into columns and rows using a collection of key combos/mouse gestures.</p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.05.13.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.05.13.png"></p>
-<h1 id="dock-applications">Dock Applications</h1>
-<p>I like to have certain apps I use more regularly always on hand in the dock. These currently all have M1 versions available, which are linked below. When they&rsquo;re open you can right-click &ldquo;Options &gt; Keep in Dock&rdquo;</p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_17.08.24.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_17.08.24.png"></p>
-<p>For each of these you&rsquo;ll need to select &ldquo;Apple Silicon&rdquo; to get the build appropriate for your M1 Mac.</p>
-<ul>
-<li><a href="https://www.google.com/intl/en_uk/chrome/">Google Chrome</a></li>
-<li><a href="https://code.visualstudio.com/insiders/">Visual Studio Code (Insiders Build)</a></li>
-<li><a href="https://www.jetbrains.com/pycharm/download/#section=mac">PyCharm CE</a></li>
-</ul>
-<h1 id="terminal-applications-installation">Terminal Applications Installation</h1>
-<p>We now move into the install for tools I&rsquo;m going to be frequently using within terminal.</p>
-<h2 id="installing-xcode-tools">Installing xcode-tools:</h2>
-<p>By default only Python 2.7.16 is installed which has been deprecated for the whole of 2020. We need to install Xcode Tools for the majority of steps that follow. In my video I execute &ldquo;python3&rdquo; which is a stub which requires the xcode-tools and installs it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xcode-select --install
-</code></pre></div><h2 id="homebrew">Homebrew</h2>
-<p>Homebrew is the de facto package manager favoured by devs for installing software on MacOS. It can be installed with the following command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL <span style="color:#f92672">[</span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#f92672">](</span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">)&#34;</span>
-</code></pre></div><p>Homebrew will end with a command you&rsquo;ll need to copy to execute to make brew available whilst working in terminal. It looks something like the following - with {username} set to your own username:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;eval $(/opt/homebrew/bin/brew shellenv)&#39;</span> &gt;&gt; /Users/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/.zprofile
-eval <span style="color:#66d9ef">$(</span>/opt/homebrew/bin/brew shellenv<span style="color:#66d9ef">)</span>
-</code></pre></div><p>Following this your should now have <code>brew</code> available and ready to use within terminal.</p>
-<h2 id="oh-my-zsh">Oh My Zsh</h2>
-<p><a href="https://github.com/ohmyzsh/ohmyzsh">Oh my zsh</a> installs a number of fancy themes for terminal and shortcuts for tools like git. It allows you to see branches when in git directories with status indicated by the cursor colour which is really useful and saves a lot of repeated commands.</p>
-<p>It can be installed with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><h2 id="ssh-key">SSH Key</h2>
-<p>Setting up ssh keys gives us the ability to authenticate with source control services like github. Github has <a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">good documentation on generating them</a>, which I followed during the tutorial. To generate the keys and add them to the ssh agent run (replacing {your_email} with your own email address):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;{your_email}&#34;</span>
-eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ssh-agent -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><p>You now need to create a ssh config:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch ~/.ssh/config
+<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.1"><title>Setting Up a New M1 Mac for Development - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"Setting Up a New M1 Mac for Development","headline":"Setting Up a New M1 Mac for Development","description":"I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I\u0026rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2021","datePublished":"2021-03-05 10:45:07.992107 \u002b0000 UTC","dateModified":"2021-03-05 10:45:07.992107 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2021\/03\/05\/setting-up-a-new-m1-mac-for-development\/","wordCount":"1454","keywords":["apple silicon","tutorial","mac","Blog"]}</script><meta name=description content="I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/opengraph.jpg"><meta name=twitter:title content="Setting Up a New M1 Mac for Development"><meta name=twitter:description content="I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture."><meta property="og:title" content="Setting Up a New M1 Mac for Development"><meta property="og:description" content="I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/"><meta property="og:image" content="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/opengraph.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-03-05T10:45:07+00:00"><meta property="article:modified_time" content="2021-03-05T10:45:07+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
+<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
+<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
+<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
+<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
+<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/>Setting Up a New M1 Mac for Development</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Mar 05, 2021
+in
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/development>DEVELOPMENT</a><br><i class="fas fa-tags"></i>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/apple-silicon>apple silicon</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/tutorial>tutorial</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/mac>mac</a><br><i class="fas fa-clock"></i> 7 min read</div></header><div class=post><p>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on <a href="https://www.youtube.com/watch?v=AoQrGx2OMig">setting it up</a>. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture. There&rsquo;s a number of different things I cover so use these links to jump to the parts you&rsquo;re most interested in:</p><ul><li><a href=#natural-scroll>Natural Scroll</a></li><li><a href=#dock-settings>Dock Settings</a></li><li><a href=#displaying-your-home-folder>Displaying your home folder in Finder</a></li><li><a href=#dividing-up-your-screen>Dividing Up Your Screen</a></li><li><a href=#applications>Applications</a></li><li><a href=#xcode-tools>xcode-tools</a></li><li><a href=#homebrew>Homebrew</a></li><li><a href=#oh-my-zsh>Oh My Zsh</a></li><li><a href=#ssh-key>SSH Key</a></li><li><a href=#gpg-key>GPG Key</a></li><li><a href=#docker>Docker</a></li><li><a href=#python>Python</a></li><li><a href=#poetry>Poetry</a></li><li><a href=#node>Node</a></li></ul><h1 id=mac-os-preferences>Mac OS Preferences</h1><p>There&rsquo;s a number of things I dislike that are switched on by default in Mac OS. These are all personal and meant to streamline my work as a developer. Pick and choose your own preferences.</p><h2 id=natural-scroll>Natural Scroll</h2><p>Why Apple felt inverting the mouse was necessary for their devices, I&rsquo;ll never really understand and is just confusing when switching between Apple and PC as I&rsquo;m regularly doing. This is the first thing I always disable.</p><p>To disable it, go to: <em>&ldquo;System preferences > Mouse > Scroll Direction: Natural&rdquo;</em> and uncheck the box.</p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.39.34.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.39.34.png></p><h2 id=dock-settings>Dock Settings</h2><p>I find the dock really busy and distracting with all the default applications that are lined along it. I don&rsquo;t have a need for most of them and so remove them straight away. You always have the option of adding them back there and everything is able to be found through spotlight.</p><p>You can remove each one by right clicking the icon and selecting: <em>&ldquo;Options > Remove from Dock&rdquo;</em></p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.50.23.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.50.23.png></p><p>The recent icons also take a chunk of space, they can be removed by: <em>&ldquo;System Preferences > Dock & Menu Bar&rdquo;</em> and unchecking <em>&ldquo;Show recent applications in Dock&rdquo;</em></p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.53.27.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_13.53.27.png></p><p>I like to see the full desktop whilst I&rsquo;m working, so I also enable <em>&ldquo;Automatically hide and show the Dock&rdquo;</em>.</p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.00.24.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.00.24.png></p><h2 id=displaying-your-home-folder-in-finder>Displaying your home folder in Finder</h2><p>I like being able to navigate to my home folder as quickly as possible. Unfortunately finder doesn&rsquo;t display it by default, but it&rsquo;s available as a favourite if you open finders preferences from the menu bar and select it. I like dragging it to the top of my finder favourites once it is showing.</p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.13.06.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.13.06.png></p><h2 id=dividing-up-your-screen>Dividing Up Your Screen</h2><p>I&rsquo;m returning to MacOS from Ubuntu and I&rsquo;ve become pretty accustomed to being able to snap windows to either side of the screen, a feature that doesn&rsquo;t exist by default in Big Sur.</p><p><a href=https://rectangleapp.com>Rectangle</a> is a nice free solution available to resolve this, which allows you divide up your screen into columns and rows using a collection of key combos/mouse gestures.</p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.05.13.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_14.05.13.png></p><h1 id=dock-applications>Dock Applications</h1><p>I like to have certain apps I use more regularly always on hand in the dock. These currently all have M1 versions available, which are linked below. When they&rsquo;re open you can right-click &ldquo;Options > Keep in Dock&rdquo;</p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_17.08.24.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_17.08.24.png></p><p>For each of these you&rsquo;ll need to select &ldquo;Apple Silicon&rdquo; to get the build appropriate for your M1 Mac.</p><ul><li><a href=https://www.google.com/intl/en_uk/chrome/>Google Chrome</a></li><li><a href=https://code.visualstudio.com/insiders/>Visual Studio Code (Insiders Build)</a></li><li><a href="https://www.jetbrains.com/pycharm/download/#section=mac">PyCharm CE</a></li></ul><h1 id=terminal-applications-installation>Terminal Applications Installation</h1><p>We now move into the install for tools I&rsquo;m going to be frequently using within terminal.</p><h2 id=installing-xcode-tools>Installing xcode-tools:</h2><p>By default only Python 2.7.16 is installed which has been deprecated for the whole of 2020. We need to install Xcode Tools for the majority of steps that follow. In my video I execute &ldquo;python3&rdquo; which is a stub which requires the xcode-tools and installs it.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>xcode-select --install
+</code></pre></div><h2 id=homebrew>Homebrew</h2><p>Homebrew is the de facto package manager favoured by devs for installing software on MacOS. It can be installed with the following command.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>/bin/bash -c <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>curl -fsSL <span style=color:#f92672>[</span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style=color:#f92672>](</span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style=color:#66d9ef>)</span><span style=color:#e6db74>)&#34;</span>
+</code></pre></div><p>Homebrew will end with a command you&rsquo;ll need to copy to execute to make brew available whilst working in terminal. It looks something like the following - with {username} set to your own username:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>echo <span style=color:#e6db74>&#39;eval $(/opt/homebrew/bin/brew shellenv)&#39;</span> &gt;&gt; /Users/<span style=color:#f92672>{</span>username<span style=color:#f92672>}</span>/.zprofile
+eval <span style=color:#66d9ef>$(</span>/opt/homebrew/bin/brew shellenv<span style=color:#66d9ef>)</span>
+</code></pre></div><p>Following this your should now have <code>brew</code> available and ready to use within terminal.</p><h2 id=oh-my-zsh>Oh My Zsh</h2><p><a href=https://github.com/ohmyzsh/ohmyzsh>Oh my zsh</a> installs a number of fancy themes for terminal and shortcuts for tools like git. It allows you to see branches when in git directories with status indicated by the cursor colour which is really useful and saves a lot of repeated commands.</p><p>It can be installed with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sh -c <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+</code></pre></div><h2 id=ssh-key>SSH Key</h2><p>Setting up ssh keys gives us the ability to authenticate with source control services like github. Github has <a href=https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>good documentation on generating them</a>, which I followed during the tutorial. To generate the keys and add them to the ssh agent run (replacing {your_email} with your own email address):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ssh-keygen -t ed25519 -C <span style=color:#e6db74>&#34;{your_email}&#34;</span>
+eval <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>ssh-agent -s<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+</code></pre></div><p>You now need to create a ssh config:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>touch ~/.ssh/config
 nano ~/.ssh/config
-</code></pre></div><p>Paste in the following to load the key:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Host *
+</code></pre></div><p>Paste in the following to load the key:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
-</code></pre></div><p>To add the key to the ssh-agent and add it to the keychain run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add -K ~/.ssh/id_ed25519
-</code></pre></div><p>Copy the key you&rsquo;ve created with the command below and visit <a href="http://github.com/settings">github.com/settings</a> and add to your github SSH keys.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pbcopy &lt; ~/.ssh/id_rsa.pub
-</code></pre></div><h2 id="gpg-key">GPG Key</h2>
-<p>GPG allows us to sign commits locally so that github is able to display that they came from a verified source. Again, the best source of information on creating these is <a href="">githubs docs</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install gpg
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --full-generate-key
-</code></pre></div><p>The only default I change throughout the key generation is that of the bitsize, which I set to 4096, as advised by githubs docs.</p>
-<p>You then need to copy the key id you&rsquo;ve generated by listing it and copying the part that falls after &lsquo;/&rsquo; on the &ldquo;sec&rdquo; line.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --list-secret-keys --keyid-format LONG
+</code></pre></div><p>To add the key to the ssh-agent and add it to the keychain run:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>ssh-add -K ~/.ssh/id_ed25519
+</code></pre></div><p>Copy the key you&rsquo;ve created with the command below and visit <a href=http://github.com/settings>github.com/settings</a> and add to your github SSH keys.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pbcopy &lt; ~/.ssh/id_rsa.pub
+</code></pre></div><h2 id=gpg-key>GPG Key</h2><p>GPG allows us to sign commits locally so that github is able to display that they came from a verified source. Again, the best source of information on creating these is <a href>githubs docs</a>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install gpg
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>gpg --full-generate-key
+</code></pre></div><p>The only default I change throughout the key generation is that of the bitsize, which I set to 4096, as advised by githubs docs.</p><p>You then need to copy the key id you&rsquo;ve generated by listing it and copying the part that falls after &lsquo;/&rsquo; on the &ldquo;sec&rdquo; line.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>gpg --list-secret-keys --keyid-format LONG
 /Users/ian/.gnupg/pubring.gpg
 ------------------------------------
-sec   rsa4096/3AA5C34371567BD2 2021-03-01 <span style="color:#f92672">[</span>SC<span style="color:#f92672">]</span>
-uid              <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span> Ian Wootten &lt;hi@niftydigits.com&gt; 
-ssb   rsa4096/42B317FD4BA89E7A 2021-03-01 <span style="color:#f92672">[</span>E<span style="color:#f92672">]</span>
-</code></pre></div><p>The key id in this example is <em>3AA5C34371567BD2</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --armor --export 3AA5C34371567BD2
-<span style="color:#75715e"># Prints the GPG key ID, in ASCII armor format</span>
-</code></pre></div><p>This prints your key out, at which point you&rsquo;ll want to copy and add it to <a href="http://github.com/settings">github.com/settings</a>.</p>
-<p>We need to tell git which gpg key to use which is done with the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.signingkey 3AA5C34371567BD2
-</code></pre></div><p>I always want to sign my commits, so I run the following to enable it for every local repo.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global commit.gpgsign true
-</code></pre></div><p>The important step I miss in the video is that as well as adding to the bash profile, I need to source this in zprofile so gpg is available within zshell.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;export GPG_TTY=$(tty)&#39;</span> &gt;&gt; ~/.profile
-echo <span style="color:#e6db74">&#34;source ~/.profile&#34;</span> &gt;&gt; .zprofile
-</code></pre></div><h2 id="docker">Docker</h2>
-<p>I use docker for wrapping up most of my webapps when I need to ensure remote environments have the same state as my local one.</p>
-<p>Docker has a M1 version <a href="https://docs.docker.com/docker-for-mac/apple-m1/">available for installation</a> complete with a nice red banner on the icon to show it&rsquo;s only currently a preview. Docker threw a warning when running the test image, so only time will tell whether there are any issues with my existing containers.</p>
-<p><img src="https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_16.10.41.png" alt="/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_16.10.41.png"></p>
-<h2 id="python">Python</h2>
-<p>To install python, you should use pyenv, this will allow for multiple local versions of python which don&rsquo;t interfere with one another. It&rsquo;s available using homebrew</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install pyenv
-</code></pre></div><p>Look for latest version install, and set as global</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pyenv install 3.9.1
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pyenv global 3.9.1
-</code></pre></div><h1 id="poetry">Poetry</h1>
-<p>As well as managing versions of python, you also will want to manage the python packages for each of your projects. For that we install Poetry, which can be done with the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-</code></pre></div><h1 id="node">Node</h1>
-<p>To install node, similarly to Python - we use the node version manager (nvm) so we&rsquo;re able to install multiple versions of it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-</code></pre></div><p>To install the latest version use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nvm install node
-</code></pre></div><p>I found that using the latest version of node in the above command (15.11.0) failed - but in the video I had success with 15.10.0 on the M1, so you might want to try installing that if you hit problems.</p>
-<p>I like using yarn, so as a final point, go ahead and install that.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install --global yarn
-</code></pre></div><h1 id="conclusion">Conclusion</h1>
-<p>If you followed the same steps as me, you should now have a full fledged Mac ready to get started coding with. I&rsquo;m just getting started with the M1 so expect updates as to what does/doesn&rsquo;t work as time goes on.</p>
-<form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
-  target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
-  <h4 style="margin-top:0">Get Regular Tips to Your Inbox</h4>
-  <p>My <a href="https://www.getrevue.co/profile/iwootten">newsletter</a> comes out every few
-    weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
-    also
-    features articles and
-    videos I've recently published so you'll never miss out.
-  <p>
-
-  <p>No spam, unsubscribe any time. Check out <a href="https://www.getrevue.co/profile/iwootten">previous issues
-      here</a>.
-  </p>
-  <div class="revue-form-group">
-    <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
-      id="member_email" style="width: 100%;font-size: 20px;">
-  </div>
-  <div class="revue-form-actions">
-    <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
-  </div>
-</form>
-
-  </div>
-  
-
-<div class="navigation navigation-single">
-    
-    <a href="https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Comparing VAT Solutions for Bootstrapped UK Businesses</span>
-    </a>
-    
-    
-    <a href="https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/" class="navigation-next">
-      <span class="navigation-tittle">YouTube Videos as Small Experiments</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
-    
-</div>
-
-
-  
-
-  
-    
-
-
-</article>
-
-
-        </div>
-        
-    
-<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
-  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-  crossorigin="anonymous">
-</script>
-
-
-    
-    
-
-
-
-
-    
-
-
-
-    </body>
-</html>
+sec   rsa4096/3AA5C34371567BD2 2021-03-01 <span style=color:#f92672>[</span>SC<span style=color:#f92672>]</span>
+uid              <span style=color:#f92672>[</span>ultimate<span style=color:#f92672>]</span> Ian Wootten &lt;hi@niftydigits.com&gt; 
+ssb   rsa4096/42B317FD4BA89E7A 2021-03-01 <span style=color:#f92672>[</span>E<span style=color:#f92672>]</span>
+</code></pre></div><p>The key id in this example is <em>3AA5C34371567BD2</em>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>gpg --armor --export 3AA5C34371567BD2
+<span style=color:#75715e># Prints the GPG key ID, in ASCII armor format</span>
+</code></pre></div><p>This prints your key out, at which point you&rsquo;ll want to copy and add it to <a href=http://github.com/settings>github.com/settings</a>.</p><p>We need to tell git which gpg key to use which is done with the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git config --global user.signingkey 3AA5C34371567BD2
+</code></pre></div><p>I always want to sign my commits, so I run the following to enable it for every local repo.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git config --global commit.gpgsign true
+</code></pre></div><p>The important step I miss in the video is that as well as adding to the bash profile, I need to source this in zprofile so gpg is available within zshell.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>echo <span style=color:#e6db74>&#39;export GPG_TTY=$(tty)&#39;</span> &gt;&gt; ~/.profile
+echo <span style=color:#e6db74>&#34;source ~/.profile&#34;</span> &gt;&gt; .zprofile
+</code></pre></div><h2 id=docker>Docker</h2><p>I use docker for wrapping up most of my webapps when I need to ensure remote environments have the same state as my local one.</p><p>Docker has a M1 version <a href=https://docs.docker.com/docker-for-mac/apple-m1/>available for installation</a> complete with a nice red banner on the icon to show it&rsquo;s only currently a preview. Docker threw a warning when running the test image, so only time will tell whether there are any issues with my existing containers.</p><p><img src=https://www.ianwootten.co.uk/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_16.10.41.png alt=/images/setting-up-a-m1-mac-for-development/Screenshot_2021-03-04_at_16.10.41.png></p><h2 id=python>Python</h2><p>To install python, you should use pyenv, this will allow for multiple local versions of python which don&rsquo;t interfere with one another. It&rsquo;s available using homebrew</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install pyenv
+</code></pre></div><p>Look for latest version install, and set as global</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pyenv install 3.9.1
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>pyenv global 3.9.1
+</code></pre></div><h1 id=poetry>Poetry</h1><p>As well as managing versions of python, you also will want to manage the python packages for each of your projects. For that we install Poetry, which can be done with the following command:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+</code></pre></div><h1 id=node>Node</h1><p>To install node, similarly to Python - we use the node version manager (nvm) so we&rsquo;re able to install multiple versions of it.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+</code></pre></div><p>To install the latest version use:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>nvm install node
+</code></pre></div><p>I found that using the latest version of node in the above command (15.11.0) failed - but in the video I had success with 15.10.0 on the M1, so you might want to try installing that if you hit problems.</p><p>I like using yarn, so as a final point, go ahead and install that.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install --global yarn
+</code></pre></div><h1 id=conclusion>Conclusion</h1><p>If you followed the same steps as me, you should now have a full fledged Mac ready to get started coding with. I&rsquo;m just getting started with the M1 so expect updates as to what does/doesn&rsquo;t work as time goes on.</p><form action=https://www.getrevue.co/profile/iwootten/add_subscriber method=post id=revue-form name=revue-form target=_blank style="background:#e7daf1;padding:1rem;margin-top:2rem;border:2px solid #300030"><h4 style=margin-top:0>Get Regular Tips to Your Inbox</h4><p>My <a href=https://www.getrevue.co/profile/iwootten>newsletter</a> comes out every few
+weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
+also
+features articles and
+videos I've recently published so you'll never miss out.<p><p>No spam, unsubscribe any time. Check out <a href=https://www.getrevue.co/profile/iwootten>previous issues
+here</a>.</p><div class=revue-form-group><input class=revue-form-field placeholder="Your email address..." type=email name=member[email] id=member_email style=width:100%;font-size:20px></div><div class=revue-form-actions><input type=submit value=Subscribe name=member[subscribe] id=member_submit></div></form></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
+<span class=navigation-tittle>Comparing VAT Solutions for Bootstrapped UK Businesses</span></a>
+<a href=https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/ class=navigation-next><span class=navigation-tittle>YouTube Videos as Small Experiments</span>
+<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>

@@ -1,41 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>wordpress on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/tags/wordpress/</link>
-    <description>Recent content in wordpress on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Porting a Wordpress blog to Jekyll: Part 2</title>
-      <link>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</link>
-      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</guid>
-      <description>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&amp;rsquo;ve replicated wordpress&amp;rsquo;s default permalink structure on my own blog.
-Creating Category and Tag Pages Jekyll doesn&amp;rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&amp;rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.</description>
-    </item>
-    
-    <item>
-      <title>Porting a Wordpress blog to Jekyll: Part 1</title>
-      <link>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</link>
-      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</guid>
-      <description>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&amp;rsquo;ve overcome them.
-Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.</description>
-    </item>
-    
-    <item>
-      <title>Bye Bye Wordpress</title>
-      <link>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</link>
-      <pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</guid>
-      <description>I&amp;rsquo;ve finally made the move to jekyll for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible on github and revision control for post entries is handled there too.
-What finally convinced me with the release of jekyll 2 was the introduction of native sass support. Originally, the prose theme I&amp;rsquo;m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wordpress on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/wordpress/</link><description>Recent content in wordpress on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>Porting a Wordpress blog to Jekyll: Part 2</title><link>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</link><pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</guid><description>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&amp;rsquo;ve replicated wordpress&amp;rsquo;s default permalink structure on my own blog.
+Creating Category and Tag Pages Jekyll doesn&amp;rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&amp;rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.</description></item><item><title>Porting a Wordpress blog to Jekyll: Part 1</title><link>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</link><pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</guid><description>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&amp;rsquo;ve overcome them.
+Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.</description></item><item><title>Bye Bye Wordpress</title><link>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</link><pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</guid><description>I&amp;rsquo;ve finally made the move to jekyll for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible on github and revision control for post entries is handled there too.
+What finally convinced me with the release of jekyll 2 was the introduction of native sass support. Originally, the prose theme I&amp;rsquo;m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it.</description></item></channel></rss>

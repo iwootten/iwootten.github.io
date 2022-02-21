@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>2004/12 on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/2004/12/</link>
-    <description>Recent content in 2004/12 on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/12/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Vineyard reclaiming the web</title>
-      <link>https://www.ianwootten.co.uk/2004/12/14/vineyard-reclaiming-the-web/</link>
-      <pubDate>Tue, 14 Dec 2004 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2004/12/14/vineyard-reclaiming-the-web/</guid>
-      <description>Cardiff Vineyard have got to be the biggest bunch of bloggers I’ve ever met, in a non-derogitory sense. Makes a change to Yeovil Community Church. Browsing around their main site and links from it, I’ve found, hmm, lets see:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2004/12 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2004/12/</link><description>Recent content in 2004/12 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/12/index.xml" rel="self" type="application/rss+xml"/><item><title>Vineyard reclaiming the web</title><link>https://www.ianwootten.co.uk/2004/12/14/vineyard-reclaiming-the-web/</link><pubDate>Tue, 14 Dec 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/12/14/vineyard-reclaiming-the-web/</guid><description>Cardiff Vineyard have got to be the biggest bunch of bloggers I’ve ever met, in a non-derogitory sense. Makes a change to Yeovil Community Church. Browsing around their main site and links from it, I’ve found, hmm, lets see:
 Cardiff Vineyard
 Jon Matthias
 Helen Carslaw
@@ -20,28 +6,6 @@ Lewis Parfitt
 Neil Morgan
 Zoë Morgan
 Sarah-Louise
-Thats crazy….! – We’ve got say 25 ppl max when I’ve gone along, so thats over a 5th turned blogging converts.</description>
-    </item>
-    
-    <item>
-      <title>Simple PHP Gallery</title>
-      <link>https://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</link>
-      <pubDate>Mon, 13 Dec 2004 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</guid>
-      <description>I’ve got rid of the old phpautogallery that I had and dumped simple php gallery up instead. I’ve also converted shedloads of photos over so that peeps can see what I’ve been up to recently and not so recently. This includes most of the weddings I’ve attended over the last few years of very close friends, plus a few random ones for good measure.
-Check them all out here http://users.cs.cf.ac.uk/I.M.Wootten/gallery</description>
-    </item>
-    
-    <item>
-      <title>Christmas feelings</title>
-      <link>https://www.ianwootten.co.uk/2004/12/09/christmas-feelings/</link>
-      <pubDate>Thu, 09 Dec 2004 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2004/12/09/christmas-feelings/</guid>
-      <description>Can it be December already? What have I been doing? Wheres the last 3 months gone? I have to say I feel more Christmas-sy this year in Cardiff than I have ever been up here.
-There seems to have been a bit of a build up so far.. Watching “Bad Santa” back in Nov (quite possibly the most amount of swearing I’ve ever seen in a film), going to Germany the other week with all the festive fun over there.</description>
-    </item>
-    
-  </channel>
-</rss>
+Thats crazy….! – We’ve got say 25 ppl max when I’ve gone along, so thats over a 5th turned blogging converts.</description></item><item><title>Simple PHP Gallery</title><link>https://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</link><pubDate>Mon, 13 Dec 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/12/13/simple-php-gallery/</guid><description>I’ve got rid of the old phpautogallery that I had and dumped simple php gallery up instead. I’ve also converted shedloads of photos over so that peeps can see what I’ve been up to recently and not so recently. This includes most of the weddings I’ve attended over the last few years of very close friends, plus a few random ones for good measure.
+Check them all out here http://users.cs.cf.ac.uk/I.M.Wootten/gallery</description></item><item><title>Christmas feelings</title><link>https://www.ianwootten.co.uk/2004/12/09/christmas-feelings/</link><pubDate>Thu, 09 Dec 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/12/09/christmas-feelings/</guid><description>Can it be December already? What have I been doing? Wheres the last 3 months gone? I have to say I feel more Christmas-sy this year in Cardiff than I have ever been up here.
+There seems to have been a bit of a build up so far.. Watching “Bad Santa” back in Nov (quite possibly the most amount of swearing I’ve ever seen in a film), going to Germany the other week with all the festive fun over there.</description></item></channel></rss>

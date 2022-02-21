@@ -1,311 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-    
+<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.1"><title>Blogging with Metalsmith - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"Blogging with Metalsmith","headline":"Blogging with Metalsmith","description":"I\u0026rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I\u0026rsquo;m not overly familiar with) has been a problem. I\u0026rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it\u0026rsquo;s never felt like home.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2015","datePublished":"2015-06-30 00:00:00 \u002b0000 UTC","dateModified":"2015-06-30 00:00:00 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2015\/06\/30\/blogging-with-metalsmith\/","wordCount":"359","keywords":["metalsmith","blogging","javascript","Blog"]}</script><meta name=description content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Blogging with Metalsmith"><meta name=twitter:description content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home."><meta property="og:title" content="Blogging with Metalsmith"><meta property="og:description" content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-06-30T00:00:00+00:00"><meta property="article:modified_time" content="2015-06-30T00:00:00+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
+<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
+<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
+<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
+<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
+<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/>Blogging with Metalsmith</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Jun 30, 2015
+in
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/javascript>JAVASCRIPT</a><br><i class="fas fa-tags"></i>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/metalsmith>metalsmith</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/blogging>blogging</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/javascript>javascript</a><br><i class="fas fa-clock"></i> 2 min read</div></header><div class=post><p>I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together <a href=https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/>scripts</a> to deal with the custom parts of my blog build, but it&rsquo;s never felt like home.</p><p>I&rsquo;ve decided to start using <a href=http://metalsmith.io>Metalsmith</a> - a static site generator written in Javascript. It&rsquo;s existed before my switch to Jekyll and now seems to have enough of a plugin ecosystem in order to provide a collection of plugins to provide behaviour I need to make use of.</p><h2 id=metalsmith>Metalsmith</h2><p>Metalsmith operates much like a task runner like gulp, where a set of functions manipulate a number of files, one after another in order to eventually build a static site to your liking. A simple build script could be as follows:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Metalsmith</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;metalsmith&#39;</span>),
+    <span style=color:#a6e22e>markdown</span>   <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;metalsmith-markdown&#39;</span>),
+    <span style=color:#a6e22e>templates</span>  <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;metalsmith-templates&#39;</span>);
 
-
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.83.1" />
-
-    
-    
-    
-
-<title>Blogging with Metalsmith - Ian Wootten</title>
-<script type="application/ld+json">
-{
-    "@context" : "http://schema.org",
-    "@type" : "BlogPosting",
-    "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "https:\/\/www.ianwootten.co.uk"
-    },
-    "articleSection" : "posts",
-    "name" : "Blogging with Metalsmith",
-    "headline" : "Blogging with Metalsmith",
-    "description" : "I\u0026rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I\u0026rsquo;m not overly familiar with) has been a problem. I\u0026rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it\u0026rsquo;s never felt like home.",
-    "inLanguage" : "en-US",
-    "author" : "",
-    "creator" : "",
-    "publisher": "",
-    "accountablePerson" : "",
-    "copyrightHolder" : "",
-    "copyrightYear" : "2015",
-    "datePublished": "2015-06-30 00:00:00 \u002b0000 UTC",
-    "dateModified" : "2015-06-30 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/www.ianwootten.co.uk\/2015\/06\/30\/blogging-with-metalsmith\/",
-    "wordCount" : "359",
-    "keywords" : [ "metalsmith","blogging","javascript","Blog" ]
-}
-</script>
-<meta name="description" content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home.">
-<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blogging with Metalsmith"/>
-<meta name="twitter:description" content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home."/>
-
-<meta property="og:title" content="Blogging with Metalsmith" />
-<meta property="og:description" content="I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together scripts to deal with the custom parts of my blog build, but it&rsquo;s never felt like home." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2015-06-30T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2015-06-30T00:00:00&#43;00:00" />
-
-
-
-    
-
-
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
-    
-
-    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
-</head>
-
-
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
-      </span>
-      
-      
-      
-      <div class="author-image">
-        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
-      </div>
-      
-      <p class="site__description">
-         Software Developer, Cardiff 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Ian Wootten</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/hire-me/">
-						<span>Hire Me</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.getrevue.co/profile/iwootten">
-						<span>Subscribe</span>
-					</a>
-				</li>
-			 
-		
-		</li>
-	</ul>
-</div>
-
-        <section class="social">
-	
-	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    <p class="copyright">
-      &copy;2003-2022 Ian Wootten
-    </p>
-  </div>
-  <div>
-  </div>
-</div>
-
-        <div class="content container">
-            
-    <article>
-  <header>
-    <h1><a href="https://www.ianwootten.co.uk/2015/06/30/blogging-with-metalsmith/">Blogging with Metalsmith</a></h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Jun 30, 2015
-    
-    
-    
-      
-      
-          in
-          
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/javascript">JAVASCRIPT</a>
-              
-          
-      
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/metalsmith">metalsmith</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/blogging">blogging</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/javascript">javascript</a>
-          
-      
-    
-    
-    <br/>
-    <i class="fas fa-clock"></i> 2 min read
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
-    <p>I&rsquo;m switching blogging platforms once more. Moving from Wordpress to Jekyll enabled me to no longer deal with the multitude of updates and protected me hacks I could be susceptible to, but Jekyll being written in Ruby (a language I&rsquo;m not overly familiar with) has been a problem. I&rsquo;ve been able to cobble together <a href="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/">scripts</a> to deal with the custom parts of my blog build, but it&rsquo;s never felt like home.</p>
-<p>I&rsquo;ve decided to start using <a href="http://metalsmith.io">Metalsmith</a> - a static site generator written in Javascript. It&rsquo;s existed before my switch to Jekyll and now seems to have enough of a plugin ecosystem in order to provide a collection of plugins to provide behaviour I need to make use of.</p>
-<h2 id="metalsmith">Metalsmith</h2>
-<p>Metalsmith operates much like a task runner like gulp, where a set of functions manipulate a number of files, one after another in order to eventually build a static site to your liking. A simple build script could be as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Metalsmith</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;metalsmith&#39;</span>),
-    <span style="color:#a6e22e">markdown</span>   <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;metalsmith-markdown&#39;</span>),
-    <span style="color:#a6e22e">templates</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;metalsmith-templates&#39;</span>);
-
-<span style="color:#a6e22e">Metalsmith</span>(<span style="color:#ae81ff">__</span><span style="color:#a6e22e">dirname</span>)
-  .<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">markdown</span>())
-  .<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">templates</span>(<span style="color:#e6db74">&#39;swig&#39;</span>))
-  .<span style="color:#a6e22e">build</span>();
-</code></pre></div><p>This is just standard node script with dependencies installed via npm. Metalsmith assumes defaults of src and build for the source of markdown and destination of html. An example of markdown containing some useful front-matter might be as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+<span style=color:#a6e22e>Metalsmith</span>(<span style=color:#ae81ff>__</span><span style=color:#a6e22e>dirname</span>)
+  .<span style=color:#a6e22e>use</span>(<span style=color:#a6e22e>markdown</span>())
+  .<span style=color:#a6e22e>use</span>(<span style=color:#a6e22e>templates</span>(<span style=color:#e6db74>&#39;swig&#39;</span>))
+  .<span style=color:#a6e22e>build</span>();
+</code></pre></div><p>This is just standard node script with dependencies installed via npm. Metalsmith assumes defaults of src and build for the source of markdown and destination of html. An example of markdown containing some useful front-matter might be as follows:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>---
 title: Blogging with Metalsmith
 author: Ian
 date: 2015-06-30
 categories:
-  <span style="color:#66d9ef">-</span> Javascript
+  <span style=color:#66d9ef>-</span> Javascript
 tags:
-  <span style="color:#66d9ef">-</span> metalsmith
-  <span style="color:#66d9ef">-</span> javascript
+  <span style=color:#66d9ef>-</span> metalsmith
+  <span style=color:#66d9ef>-</span> javascript
 ---
 I&#39;m switching blogging platforms once more...
-</code></pre></div><p>It also assumes a default template directory under templates, containing a default post template &lsquo;post.html&rsquo; - which in the example is written in a swig template as below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-twig" data-lang="twig">&lt;html&gt;
+</code></pre></div><p>It also assumes a default template directory under templates, containing a default post template &lsquo;post.html&rsquo; - which in the example is written in a swig template as below.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-twig data-lang=twig>&lt;html&gt;
   &lt;body&gt;
     &lt;div class=&#34;post&#34;&gt;
-    &lt;h1&gt;&lt;a href=&#34;/<span style="color:#75715e">{{</span> path <span style="color:#75715e">}}</span>&#34;&gt;<span style="color:#75715e">{{</span> title <span style="color:#75715e">}}</span>&lt;/a&gt;&lt;/h1&gt;
-    &lt;div class=&#34;post_date&#34;&gt;<span style="color:#75715e">{{</span> date <span style="color:#f92672">|</span> <span style="color:#a6e22e">date</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;d M Y&#39;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>&lt;/div&gt;
-    <span style="color:#75715e">{{</span> contents <span style="color:#f92672">|</span> <span style="color:#a6e22e">safe</span> <span style="color:#75715e">}}</span>
+    &lt;h1&gt;&lt;a href=&#34;/<span style=color:#75715e>{{</span> path <span style=color:#75715e>}}</span>&#34;&gt;<span style=color:#75715e>{{</span> title <span style=color:#75715e>}}</span>&lt;/a&gt;&lt;/h1&gt;
+    &lt;div class=&#34;post_date&#34;&gt;<span style=color:#75715e>{{</span> date <span style=color:#f92672>|</span> <span style=color:#a6e22e>date</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#39;d M Y&#39;</span><span style=color:#f92672>)</span> <span style=color:#75715e>}}</span>&lt;/div&gt;
+    <span style=color:#75715e>{{</span> contents <span style=color:#f92672>|</span> <span style=color:#a6e22e>safe</span> <span style=color:#75715e>}}</span>
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/div&gt;
-</code></pre></div><p>I&rsquo;ve managed to reduce my build time (though I&rsquo;m not currently compiling sass and have added a new sitemap), but am much more familiar with the toolchain in question. Hopefully that&rsquo;ll lead to further, more frequent updates not just in content, but also the design of my company site and this blog.</p>
-<p>I&rsquo;ll be adding future blogs about my metalsmith toolchain and hurdles with that I&rsquo;ve overcome.</p>
-
-  </div>
-  
-
-<div class="navigation navigation-single">
-    
-    <a href="https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Processing Camera RAWs with OpenImageIO and Python</span>
-    </a>
-    
-    
-    <a href="https://www.ianwootten.co.uk/2016/01/20/theres-no-such-thing-as-a-side-project/" class="navigation-next">
-      <span class="navigation-tittle">There&#39;s No Such Thing as a Side Project</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
-    
-</div>
-
-
-  
-
-  
-    
-
-
-</article>
-
-
-        </div>
-        
-    
-<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
-  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-  crossorigin="anonymous">
-</script>
-
-
-    
-    
-
-
-
-
-    
-
-
-
-    </body>
-</html>
+</code></pre></div><p>I&rsquo;ve managed to reduce my build time (though I&rsquo;m not currently compiling sass and have added a new sitemap), but am much more familiar with the toolchain in question. Hopefully that&rsquo;ll lead to further, more frequent updates not just in content, but also the design of my company site and this blog.</p><p>I&rsquo;ll be adding future blogs about my metalsmith toolchain and hurdles with that I&rsquo;ve overcome.</p></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
+<span class=navigation-tittle>Processing Camera RAWs with OpenImageIO and Python</span></a>
+<a href=https://www.ianwootten.co.uk/2016/01/20/theres-no-such-thing-as-a-side-project/ class=navigation-next><span class=navigation-tittle>There's No Such Thing as a Side Project</span>
+<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>

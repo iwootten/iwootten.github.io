@@ -1,42 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>lovefilm on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/tags/lovefilm/</link>
-    <description>Recent content in lovefilm on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 20 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/lovefilm/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Essential Cinema According to Lovefilm</title>
-      <link>https://www.ianwootten.co.uk/2012/11/20/essential-cinema-according-to-lovefilm/</link>
-      <pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2012/11/20/essential-cinema-according-to-lovefilm/</guid>
-      <description>Given there’s a bit of lovefilm bashing going on in Wales at the moment, I thought I’d chime in with the most frustrating thing I found with communications from lovefilm.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lovefilm on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/lovefilm/</link><description>Recent content in lovefilm on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 20 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/lovefilm/index.xml" rel="self" type="application/rss+xml"/><item><title>Essential Cinema According to Lovefilm</title><link>https://www.ianwootten.co.uk/2012/11/20/essential-cinema-according-to-lovefilm/</link><pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2012/11/20/essential-cinema-according-to-lovefilm/</guid><description>Given there’s a bit of lovefilm bashing going on in Wales at the moment, I thought I’d chime in with the most frustrating thing I found with communications from lovefilm.
 Check out the following weekly email I used to receive (I’ve since unsubscribed), along with my annotations.
-
-I really couldn’t care less about who lovefilm are sending into cinema’s to perform reviews and certainly don’t want it to be the first text I see in relation to that image.</description>
-    </item>
-    
-    <item>
-      <title>Lovefilm Filmstream Plugin v0.2</title>
-      <link>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link>
-      <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid>
-      <description>Just a quick note to say I’ve updated the plugin that generates my filmstream pages. It’s become obvious that the Lovefilm API only exposes the last 10 features that you’ve rented in their “at home” list. This isn’t that great if you’ve been renting more than a few months. This is the same as the information you’d see in your account when logged in.
-I’ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description>
-    </item>
-    
-    <item>
-      <title>Lovefilm Filmstream Plugin for WordPress</title>
-      <link>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link>
-      <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid>
-      <description>Something I’ve thought I’d like to have on my site for a while is a list of movies that I’ve recently seen and some brief opinions on them. I’m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I’ve watched, but a recent television upgrade has now meant I’ve got the opportunity to do this.</description>
-    </item>
-    
-  </channel>
-</rss>
+I really couldn’t care less about who lovefilm are sending into cinema’s to perform reviews and certainly don’t want it to be the first text I see in relation to that image.</description></item><item><title>Lovefilm Filmstream Plugin v0.2</title><link>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link><pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid><description>Just a quick note to say I’ve updated the plugin that generates my filmstream pages. It’s become obvious that the Lovefilm API only exposes the last 10 features that you’ve rented in their “at home” list. This isn’t that great if you’ve been renting more than a few months. This is the same as the information you’d see in your account when logged in.
+I’ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description></item><item><title>Lovefilm Filmstream Plugin for WordPress</title><link>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link><pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid><description>Something I’ve thought I’d like to have on my site for a while is a list of movies that I’ve recently seen and some brief opinions on them. I’m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I’ve watched, but a recent television upgrade has now meant I’ve got the opportunity to do this.</description></item></channel></rss>

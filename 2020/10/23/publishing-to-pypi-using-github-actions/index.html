@@ -1,367 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-    
+<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.1"><title>Publishing to PyPI Using Github Actions - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"Publishing to PyPI Using Github Actions","headline":"Publishing to PyPI Using Github Actions","description":"In creating my first package on PyPI, I realised that many of the tasks I\u0026rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.\nGithub actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2020","datePublished":"2020-10-23 10:00:19 \u002b0100 BST","dateModified":"2020-10-23 10:00:19 \u002b0100 BST","url":"https:\/\/www.ianwootten.co.uk\/2020\/10\/23\/publishing-to-pypi-using-github-actions\/","wordCount":"994","keywords":["python","pypi","ci","github actions","Blog"]}</script><meta name=description content="In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Publishing to PyPI Using Github Actions"><meta name=twitter:description content="In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work."><meta property="og:title" content="Publishing to PyPI Using Github Actions"><meta property="og:description" content="In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-10-23T10:00:19+01:00"><meta property="article:modified_time" content="2020-10-23T10:00:19+01:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
+<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
+<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
+<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
+<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
+<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/>Publishing to PyPI Using Github Actions</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Oct 23, 2020
+in
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/development>DEVELOPMENT</a>
+•
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/software>SOFTWARE</a><br><i class="fas fa-tags"></i>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python>python</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/pypi>pypi</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/ci>ci</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/github-actions>github actions</a><br><i class="fas fa-clock"></i> 5 min read</div></header><div class=post><p>In <a href=https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry>creating my first package on PyPI</a>, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.</p><p><a href=https://github.com/features/actions>Github actions</a> is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work. I&rsquo;ve used them a number of times for other clients so this is the first piece of work for myself I&rsquo;ve been able to use them for.</p><p>You can find all the final code for the workflows in my repository <a href=https://github.com/niftydigits/ftrack-s3-accessor>here</a>.</p><h2 id=workflows>Workflows</h2><p>The actions I want to use are defined through use of a <a href=https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions>workflow file</a> written in yaml and stored in .github/workflows directory. These workflows are triggered by particular github <a href=https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows>events</a> such as a push to a branch, merge to master or even a regular cron type event that runs on a schedule. In my case, I wanted to have tests run when a pull request was opened and when tag was created I wanted to publish to <a href=https://test.pypi.org>test.pypi.org</a>.</p><p>Only if when I inspected the publish to <a href=https://test.pypi.org>test.pypi.org</a> and was entirely happy would I want for it to be made publicly available, so I only published there on creation of a release from my tag. Doing things this way means that we publish to test on tags, but can group a collection of tags together for an official release. This means setting up three separate workflow files.</p><p>One feature I&rsquo;d like to see at a later date is yaml partial support. Many workflow files can end up with duplication between them and it would be nice from a maintenance point of view to only have to update a single partial and have that updated in multiple workflows. You could acheivev this through a local build step but that&rsquo;s not ideal.</p><p><a href=https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry>If you read my earlier post</a>, you can see I&rsquo;m using <a href=https://python-poetry.org>poetry</a> as my packaging tool for this project.</p><p>Below is my yaml file which is triggered on each PR to the repository:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>CI</span>
+<span style=color:#f92672>on</span>: <span style=color:#ae81ff>pull_request</span>
 
-
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.83.1" />
-
-    
-    
-    
-
-<title>Publishing to PyPI Using Github Actions - Ian Wootten</title>
-<script type="application/ld+json">
-{
-    "@context" : "http://schema.org",
-    "@type" : "BlogPosting",
-    "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "https:\/\/www.ianwootten.co.uk"
-    },
-    "articleSection" : "posts",
-    "name" : "Publishing to PyPI Using Github Actions",
-    "headline" : "Publishing to PyPI Using Github Actions",
-    "description" : "In creating my first package on PyPI, I realised that many of the tasks I\u0026rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.\nGithub actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.",
-    "inLanguage" : "en-US",
-    "author" : "",
-    "creator" : "",
-    "publisher": "",
-    "accountablePerson" : "",
-    "copyrightHolder" : "",
-    "copyrightYear" : "2020",
-    "datePublished": "2020-10-23 10:00:19 \u002b0100 BST",
-    "dateModified" : "2020-10-23 10:00:19 \u002b0100 BST",
-    "url" : "https:\/\/www.ianwootten.co.uk\/2020\/10\/23\/publishing-to-pypi-using-github-actions\/",
-    "wordCount" : "994",
-    "keywords" : [ "python","pypi","ci","github actions","Blog" ]
-}
-</script>
-<meta name="description" content="In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
-Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.">
-<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Publishing to PyPI Using Github Actions"/>
-<meta name="twitter:description" content="In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
-Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work."/>
-
-<meta property="og:title" content="Publishing to PyPI Using Github Actions" />
-<meta property="og:description" content="In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
-Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-23T10:00:19&#43;01:00" />
-<meta property="article:modified_time" content="2020-10-23T10:00:19&#43;01:00" />
-
-
-
-    
-
-
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
-    
-
-    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
-</head>
-
-
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
-      </span>
-      
-      
-      
-      <div class="author-image">
-        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
-      </div>
-      
-      <p class="site__description">
-         Software Developer, Cardiff 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Ian Wootten</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/hire-me/">
-						<span>Hire Me</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.getrevue.co/profile/iwootten">
-						<span>Subscribe</span>
-					</a>
-				</li>
-			 
-		
-		</li>
-	</ul>
-</div>
-
-        <section class="social">
-	
-	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    <p class="copyright">
-      &copy;2003-2022 Ian Wootten
-    </p>
-  </div>
-  <div>
-  </div>
-</div>
-
-        <div class="content container">
-            
-    <article>
-  <header>
-    <h1><a href="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/">Publishing to PyPI Using Github Actions</a></h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Oct 23, 2020
-    
-    
-    
-      
-      
-          in
-          
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
-              •
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/software">SOFTWARE</a>
-              
-          
-      
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/pypi">pypi</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/ci">ci</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/github-actions">github actions</a>
-          
-      
-    
-    
-    <br/>
-    <i class="fas fa-clock"></i> 5 min read
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
-    <p>In <a href="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry">creating my first package on PyPI</a>, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.</p>
-<p><a href="https://github.com/features/actions">Github actions</a> is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work. I&rsquo;ve used them a number of times for other clients so this is the first piece of work for myself I&rsquo;ve been able to use them for.</p>
-<p>You can find all the final code for the workflows in my repository <a href="https://github.com/niftydigits/ftrack-s3-accessor">here</a>.</p>
-<h2 id="workflows">Workflows</h2>
-<p>The actions I want to use are defined through use of a <a href="https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions">workflow file</a> written in yaml and stored in .github/workflows directory. These workflows are triggered by particular github <a href="https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows">events</a> such as a push to a branch, merge to master or even a regular cron type event that runs on a schedule. In my case, I wanted to have tests run when a pull request was opened and when tag was created I wanted to publish to <a href="https://test.pypi.org">test.pypi.org</a>.</p>
-<p>Only if when I inspected the publish to <a href="https://test.pypi.org">test.pypi.org</a> and was entirely happy would I want for it to be made publicly available, so I only published there on creation of a release from my tag. Doing things this way means that we publish to test on tags, but can group a collection of tags together for an official release. This means setting up three separate workflow files.</p>
-<p>One feature I&rsquo;d like to see at a later date is yaml partial support. Many workflow files can end up with duplication between them and it would be nice from a maintenance point of view to only have to update a single partial and have that updated in multiple workflows. You could acheivev this through a local build step but that&rsquo;s not ideal.</p>
-<p><a href="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry">If you read my earlier post</a>, you can see I&rsquo;m using <a href="https://python-poetry.org">poetry</a> as my packaging tool for this project.</p>
-<p>Below is my yaml file which is triggered on each PR to the repository:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">CI</span>
-<span style="color:#f92672">on</span>: <span style="color:#ae81ff">pull_request</span>
-
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">test</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v2</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Poetry</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Add Poetry to path</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">echo &#34;${HOME}/.poetry/bin&#34; &gt;&gt; $GITHUB_PATH</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install venv</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry install</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Test</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry run pytest</span>
-</code></pre></div><p>As you can see this workflow is triggered by the pull request event. That means it will run each time theres an update to a PR. I&rsquo;ve given this workflow the name CI.</p>
-<h3 id="actions">Actions</h3>
-<p>The <code>uses</code> steps define which actions to use for this workflow. They refer to public repositories on github so you can visit each one of them to see what code will be executed when the step runs. The @ version indicates the version of the action that will be run and can be found by looking at the repository tags.</p>
-<p>The first thing to do is use the <a href="https://github.com/actions/checkout">checkout action</a> to actually checkout the updated version of our code, ready to be used in the workflow. This isn&rsquo;t something that happens by default so if you don&rsquo;t make use of the action, you won&rsquo;t be able to work with your code within the workflow.</p>
-<p>The <a href="https://github.com/actions/setup-python">setup python action</a> installs python ready for the workflow to make use of. In my case I just use the latest version of python that is installed with this plugin, but I could specify a particular version to be used if I wanted.</p>
-<h3 id="custom-steps">Custom Steps</h3>
-<p>The subsequent steps in the workflow install poetry, add it to the path and then install the project dependencies to a virtualenv. Once all this is done, we can finally run pytest with poetry to test that our project is working as expected.</p>
-<h2 id="publishing-pre-releases">Publishing Pre-Releases</h2>
-<p>The workflow file for when tags are created is much the same as the pull request one except for a couple of differences. Firstly, the event trigger is a when a tag is created:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Publish to Test PyPI</span>
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">tags</span>:
-      - <span style="color:#e6db74">&#39;*.*.*&#39;</span>
-</code></pre></div><p>Additionally, I need to use a variable TEST_PYPI_API_KEY which is stored as a secret in the repository settings. You can see where to find this in the screenshot below:</p>
-<p><a href="https://www.ianwootten.co.uk/images/actions-secrets.png"><img src="https://www.ianwootten.co.uk/images/actions-secrets.png" alt="My repository secrets"></a></p>
-<p>Note: I could have stored these variables at an organisation level (and probably will update to do so), so they can be made available to any other projects I needed to publish to PyPI.</p>
-<p>Poetry uses this variable to configure for <a href="https://test.pypi.org">test.pypi.org</a> so that it can publish our build like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry config repositories.testpypi https://test.pypi.org/legacy/</span>
-- <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry config pypi-token.testpypi ${{ secrets.TEST_PYPI_API_KEY }}</span>
-- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Publish package</span>
-  <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry publish --build -r testpypi</span>
-</code></pre></div><h2 id="publishing-releases">Publishing Releases</h2>
-<p>In order to publish to the final build, I use all the same orignal steps as the pre release workflow, but respond to a release event from any tag that is created:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Publish to PyPI</span>
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">release</span>:
-    <span style="color:#f92672">types</span>: [<span style="color:#ae81ff">published]</span>
-</code></pre></div><p>The steps needed for configuring the official build publish are also much shorter and use the official PyPI API key rather than the test one.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry config pypi-token.pypi &#34;${{ secrets.PYPI_API_KEY }}&#34;</span>
-- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Publish package</span>
-  <span style="color:#f92672">run</span>: <span style="color:#ae81ff">poetry publish --build</span>
-</code></pre></div><p>You can see all the final workflow files <a href="https://github.com/niftydigits/ftrack-s3-accessor/tree/master/.github/workflows">within the repository</a>. Here&rsquo;s an example of a run after a release has been created:</p>
-<p><a href="https://www.ianwootten.co.uk/images/actions-workflow.png"><img src="https://www.ianwootten.co.uk/images/actions-workflow.png" alt="Github Actions Workflows on github.com"></a>
-<a href="https://www.ianwootten.co.uk/images/actions-publish.png"><img src="https://www.ianwootten.co.uk/images/actions-publish.png" alt="A Github actions publish to PyPI"></a></p>
-<p>Now, whenever I want to package my library after adding a feature, I need not worry about remembering the exact set of commands to do so and let github do the work for me.</p>
-<form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
-  target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
-  <h4 style="margin-top:0">Get Regular Tips to Your Inbox</h4>
-  <p>My <a href="https://www.getrevue.co/profile/iwootten">newsletter</a> comes out every few
-    weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
-    also
-    features articles and
-    videos I've recently published so you'll never miss out.
-  <p>
-
-  <p>No spam, unsubscribe any time. Check out <a href="https://www.getrevue.co/profile/iwootten">previous issues
-      here</a>.
-  </p>
-  <div class="revue-form-group">
-    <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
-      id="member_email" style="width: 100%;font-size: 20px;">
-  </div>
-  <div class="revue-form-actions">
-    <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
-  </div>
-</form>
-
-  </div>
-  
-
-<div class="navigation navigation-single">
-    
-    <a href="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Publishing a Package to PyPI with Poetry</span>
-    </a>
-    
-    
-    <a href="https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/" class="navigation-next">
-      <span class="navigation-tittle">How to Deploy a Django App to the DigitalOcean App Platform</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
-    
-</div>
-
-
-  
-
-  
-    
-
-
-</article>
-
-
-        </div>
-        
-    
-<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
-  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-  crossorigin="anonymous">
-</script>
-
-
-    
-    
-
-
-
-
-    
-
-
-
-    </body>
-</html>
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>test</span>:
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+    <span style=color:#f92672>steps</span>:
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-python@v2</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Install Poetry</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Add Poetry to path</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo &#34;${HOME}/.poetry/bin&#34; &gt;&gt; $GITHUB_PATH</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Install venv</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry install</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Test</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry run pytest</span>
+</code></pre></div><p>As you can see this workflow is triggered by the pull request event. That means it will run each time theres an update to a PR. I&rsquo;ve given this workflow the name CI.</p><h3 id=actions>Actions</h3><p>The <code>uses</code> steps define which actions to use for this workflow. They refer to public repositories on github so you can visit each one of them to see what code will be executed when the step runs. The @ version indicates the version of the action that will be run and can be found by looking at the repository tags.</p><p>The first thing to do is use the <a href=https://github.com/actions/checkout>checkout action</a> to actually checkout the updated version of our code, ready to be used in the workflow. This isn&rsquo;t something that happens by default so if you don&rsquo;t make use of the action, you won&rsquo;t be able to work with your code within the workflow.</p><p>The <a href=https://github.com/actions/setup-python>setup python action</a> installs python ready for the workflow to make use of. In my case I just use the latest version of python that is installed with this plugin, but I could specify a particular version to be used if I wanted.</p><h3 id=custom-steps>Custom Steps</h3><p>The subsequent steps in the workflow install poetry, add it to the path and then install the project dependencies to a virtualenv. Once all this is done, we can finally run pytest with poetry to test that our project is working as expected.</p><h2 id=publishing-pre-releases>Publishing Pre-Releases</h2><p>The workflow file for when tags are created is much the same as the pull request one except for a couple of differences. Firstly, the event trigger is a when a tag is created:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish to Test PyPI</span>
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>push</span>:
+    <span style=color:#f92672>tags</span>:
+      - <span style=color:#e6db74>&#39;*.*.*&#39;</span>
+</code></pre></div><p>Additionally, I need to use a variable TEST_PYPI_API_KEY which is stored as a secret in the repository settings. You can see where to find this in the screenshot below:</p><p><a href=https://www.ianwootten.co.uk/images/actions-secrets.png><img src=https://www.ianwootten.co.uk/images/actions-secrets.png alt="My repository secrets"></a></p><p>Note: I could have stored these variables at an organisation level (and probably will update to do so), so they can be made available to any other projects I needed to publish to PyPI.</p><p>Poetry uses this variable to configure for <a href=https://test.pypi.org>test.pypi.org</a> so that it can publish our build like so:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>- <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry config repositories.testpypi https://test.pypi.org/legacy/</span>
+- <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry config pypi-token.testpypi ${{ secrets.TEST_PYPI_API_KEY }}</span>
+- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish package</span>
+  <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry publish --build -r testpypi</span>
+</code></pre></div><h2 id=publishing-releases>Publishing Releases</h2><p>In order to publish to the final build, I use all the same orignal steps as the pre release workflow, but respond to a release event from any tag that is created:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish to PyPI</span>
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>release</span>:
+    <span style=color:#f92672>types</span>: [<span style=color:#ae81ff>published]</span>
+</code></pre></div><p>The steps needed for configuring the official build publish are also much shorter and use the official PyPI API key rather than the test one.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>- <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry config pypi-token.pypi &#34;${{ secrets.PYPI_API_KEY }}&#34;</span>
+- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish package</span>
+  <span style=color:#f92672>run</span>: <span style=color:#ae81ff>poetry publish --build</span>
+</code></pre></div><p>You can see all the final workflow files <a href=https://github.com/niftydigits/ftrack-s3-accessor/tree/master/.github/workflows>within the repository</a>. Here&rsquo;s an example of a run after a release has been created:</p><p><a href=https://www.ianwootten.co.uk/images/actions-workflow.png><img src=https://www.ianwootten.co.uk/images/actions-workflow.png alt="Github Actions Workflows on github.com"></a>
+<a href=https://www.ianwootten.co.uk/images/actions-publish.png><img src=https://www.ianwootten.co.uk/images/actions-publish.png alt="A Github actions publish to PyPI"></a></p><p>Now, whenever I want to package my library after adding a feature, I need not worry about remembering the exact set of commands to do so and let github do the work for me.</p><form action=https://www.getrevue.co/profile/iwootten/add_subscriber method=post id=revue-form name=revue-form target=_blank style="background:#e7daf1;padding:1rem;margin-top:2rem;border:2px solid #300030"><h4 style=margin-top:0>Get Regular Tips to Your Inbox</h4><p>My <a href=https://www.getrevue.co/profile/iwootten>newsletter</a> comes out every few
+weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
+also
+features articles and
+videos I've recently published so you'll never miss out.<p><p>No spam, unsubscribe any time. Check out <a href=https://www.getrevue.co/profile/iwootten>previous issues
+here</a>.</p><div class=revue-form-group><input class=revue-form-field placeholder="Your email address..." type=email name=member[email] id=member_email style=width:100%;font-size:20px></div><div class=revue-form-actions><input type=submit value=Subscribe name=member[subscribe] id=member_submit></div></form></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
+<span class=navigation-tittle>Publishing a Package to PyPI with Poetry</span></a>
+<a href=https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/ class=navigation-next><span class=navigation-tittle>How to Deploy a Django App to the DigitalOcean App Platform</span>
+<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>

@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>naconf on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/tags/naconf/</link>
-    <description>Recent content in naconf on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 23 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/naconf/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>New Adventures 2012 - Self Help for Web Designers</title>
-      <link>https://www.ianwootten.co.uk/2012/01/23/new-adventures-2012-self-help-for-web-designers/</link>
-      <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2012/01/23/new-adventures-2012-self-help-for-web-designers/</guid>
-      <description>Last week, like many others working on the web, I took the trip to Nottingham for New Adventures 2012. I’d seen the wonderful praise dished out for it last year and felt like I wanted to see what it was all about first hand.
-I’ve learnt from experience that the most important part of any conference is not the talks or speakers involved, but the community around it and therefore I headed up the night before to ensure I didn’t miss a thing.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>naconf on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/naconf/</link><description>Recent content in naconf on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 23 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/naconf/index.xml" rel="self" type="application/rss+xml"/><item><title>New Adventures 2012 - Self Help for Web Designers</title><link>https://www.ianwootten.co.uk/2012/01/23/new-adventures-2012-self-help-for-web-designers/</link><pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2012/01/23/new-adventures-2012-self-help-for-web-designers/</guid><description>Last week, like many others working on the web, I took the trip to Nottingham for New Adventures 2012. I’d seen the wonderful praise dished out for it last year and felt like I wanted to see what it was all about first hand.
+I’ve learnt from experience that the most important part of any conference is not the talks or speakers involved, but the community around it and therefore I headed up the night before to ensure I didn’t miss a thing.</description></item></channel></rss>

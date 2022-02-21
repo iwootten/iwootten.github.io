@@ -1,248 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-    
-
-
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.83.1" />
-
-    
-    
-    
-
-<title>Bootstrapping Python Projects with Cookiecutter and Makefiles - Ian Wootten</title>
-<script type="application/ld+json">
-{
-    "@context" : "http://schema.org",
-    "@type" : "BlogPosting",
-    "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "https:\/\/www.ianwootten.co.uk"
-    },
-    "articleSection" : "posts",
-    "name" : "Bootstrapping Python Projects with Cookiecutter and Makefiles",
-    "headline" : "Bootstrapping Python Projects with Cookiecutter and Makefiles",
-    "description" : "When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.",
-    "inLanguage" : "en-US",
-    "author" : "",
-    "creator" : "",
-    "publisher": "",
-    "accountablePerson" : "",
-    "copyrightHolder" : "",
-    "copyrightYear" : "2021",
-    "datePublished": "2021-01-07 15:57:34 \u002b0000 UTC",
-    "dateModified" : "2021-01-07 15:57:34 \u002b0000 UTC",
-    "url" : "https:\/\/www.ianwootten.co.uk\/2021\/01\/07\/bootstrapping-python-projects-with-cookiecutter-and-makefiles\/",
-    "wordCount" : "1099",
-    "keywords" : [ "python","jinja2","cookiecutter","github actions","ci","Blog" ]
-}
-</script>
-<meta name="description" content="When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.">
-<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/bootstrapping-python-projects/anshu-a-cookiecutter.jpg"/>
-
-<meta name="twitter:title" content="Bootstrapping Python Projects with Cookiecutter and Makefiles"/>
-<meta name="twitter:description" content="When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned."/>
-
-<meta property="og:title" content="Bootstrapping Python Projects with Cookiecutter and Makefiles" />
-<meta property="og:description" content="When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/bootstrapping-python-projects/anshu-a-cookiecutter.jpg" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-01-07T15:57:34&#43;00:00" />
-<meta property="article:modified_time" content="2021-01-07T15:57:34&#43;00:00" />
-
-
-
-    
-
-
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
-    
-
-    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
-</head>
-
-
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
-      </span>
-      
-      
-      
-      <div class="author-image">
-        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
-      </div>
-      
-      <p class="site__description">
-         Software Developer, Cardiff 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Ian Wootten</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/hire-me/">
-						<span>Hire Me</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.getrevue.co/profile/iwootten">
-						<span>Subscribe</span>
-					</a>
-				</li>
-			 
-		
-		</li>
-	</ul>
-</div>
-
-        <section class="social">
-	
-	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    <p class="copyright">
-      &copy;2003-2022 Ian Wootten
-    </p>
-  </div>
-  <div>
-  </div>
-</div>
-
-        <div class="content container">
-            
-    <article>
-  <header>
-    <h1><a href="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/">Bootstrapping Python Projects with Cookiecutter and Makefiles</a></h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Jan 07, 2021
-    
-    
-    
-      
-      
-          in
-          
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/automation">AUTOMATION</a>
-              •
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
-              
-          
-      
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/jinja2">jinja2</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/cookiecutter">cookiecutter</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/github-actions">github actions</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/ci">ci</a>
-          
-      
-    
-    
-    <br/>
-    <i class="fas fa-clock"></i> 6 min read
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
-    <p>When starting a new project, it’s easy to get caught up in the excitement of starting the <code>shiny new thing</code> and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</p>
-<p>Most of the things I want configured for a new project will always be the same. I use Python and Pipfile as the package manager for most of my projects. I’ve settled on black being my code formatter of choice for python and use pytest to run my tests. I’d want to be using git for version control and the code stored remotely with my preferred choice GitHub. It’s also likely that I’d want CI setup on a project which in my case would mean configuring GitHub actions.</p>
-<p>Many of these things are able to be automated away, though are often left forgotten until we’re deep into work. The good news is there’s a way to remove some of this pain.</p>
-<h2 id="templating-projects-with-cookiecutter">Templating Projects with Cookiecutter</h2>
-<p>Cookiecutter is a fantastic library which allows templating of project structure and content. It uses Jinja2 under the hood to allow replacement of variables within files and folder names. Here I use cookiecutter to create a template for my python project, but we could use it for any language or file type we wanted to write a template for.</p>
-<p>Cookiecutter has great documentation itself, so here I’ll lead with what my <a href="https://github.com/iwootten/python-pipenv-github">project template</a> looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python-pipenv-github
+<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.1"><title>Bootstrapping Python Projects with Cookiecutter and Makefiles - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"Bootstrapping Python Projects with Cookiecutter and Makefiles","headline":"Bootstrapping Python Projects with Cookiecutter and Makefiles","description":"When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2021","datePublished":"2021-01-07 15:57:34 \u002b0000 UTC","dateModified":"2021-01-07 15:57:34 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2021\/01\/07\/bootstrapping-python-projects-with-cookiecutter-and-makefiles\/","wordCount":"1099","keywords":["python","jinja2","cookiecutter","github actions","ci","Blog"]}</script><meta name=description content="When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.ianwootten.co.uk/images/bootstrapping-python-projects/anshu-a-cookiecutter.jpg"><meta name=twitter:title content="Bootstrapping Python Projects with Cookiecutter and Makefiles"><meta name=twitter:description content="When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned."><meta property="og:title" content="Bootstrapping Python Projects with Cookiecutter and Makefiles"><meta property="og:description" content="When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/"><meta property="og:image" content="https://www.ianwootten.co.uk/images/bootstrapping-python-projects/anshu-a-cookiecutter.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-01-07T15:57:34+00:00"><meta property="article:modified_time" content="2021-01-07T15:57:34+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
+<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
+<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
+<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
+<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
+<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/>Bootstrapping Python Projects with Cookiecutter and Makefiles</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Jan 07, 2021
+in
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/automation>AUTOMATION</a>
+•
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/development>DEVELOPMENT</a><br><i class="fas fa-tags"></i>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python>python</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/jinja2>jinja2</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/cookiecutter>cookiecutter</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/github-actions>github actions</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/ci>ci</a><br><i class="fas fa-clock"></i> 6 min read</div></header><div class=post><p>When starting a new project, it’s easy to get caught up in the excitement of starting the <code>shiny new thing</code> and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</p><p>Most of the things I want configured for a new project will always be the same. I use Python and Pipfile as the package manager for most of my projects. I’ve settled on black being my code formatter of choice for python and use pytest to run my tests. I’d want to be using git for version control and the code stored remotely with my preferred choice GitHub. It’s also likely that I’d want CI setup on a project which in my case would mean configuring GitHub actions.</p><p>Many of these things are able to be automated away, though are often left forgotten until we’re deep into work. The good news is there’s a way to remove some of this pain.</p><h2 id=templating-projects-with-cookiecutter>Templating Projects with Cookiecutter</h2><p>Cookiecutter is a fantastic library which allows templating of project structure and content. It uses Jinja2 under the hood to allow replacement of variables within files and folder names. Here I use cookiecutter to create a template for my python project, but we could use it for any language or file type we wanted to write a template for.</p><p>Cookiecutter has great documentation itself, so here I’ll lead with what my <a href=https://github.com/iwootten/python-pipenv-github>project template</a> looks like:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>python-pipenv-github
 ├── cookiecutter.json
-├── <span style="color:#f92672">{{</span>cookiecutter.project_name<span style="color:#f92672">}}</span>
+├── <span style=color:#f92672>{{</span>cookiecutter.project_name<span style=color:#f92672>}}</span>
 │   ├── app
 │   │   └── app.py
 │   ├── .github
@@ -255,149 +27,67 @@
 │   └── tests
 │       └── test_something.py
 └── .gitignore
-</code></pre></div><p>Yes, you read that right - the directory name has curly braces in it. My terminal in VSCode has a hard time understanding this if I try and navigate to it.</p>
-<p>The other key thing here is the content of <strong>cookiecutter.json</strong>, which defines the variables which are needed, along with some default values:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-        <span style="color:#f92672">&#34;project_name&#34;</span>: <span style="color:#e6db74">&#34;someproject&#34;</span>,
-        <span style="color:#f92672">&#34;python_version&#34;</span>: <span style="color:#e6db74">&#34;3.8.6&#34;</span>
+</code></pre></div><p>Yes, you read that right - the directory name has curly braces in it. My terminal in VSCode has a hard time understanding this if I try and navigate to it.</p><p>The other key thing here is the content of <strong>cookiecutter.json</strong>, which defines the variables which are needed, along with some default values:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+        <span style=color:#f92672>&#34;project_name&#34;</span>: <span style=color:#e6db74>&#34;someproject&#34;</span>,
+        <span style=color:#f92672>&#34;python_version&#34;</span>: <span style=color:#e6db74>&#34;3.8.6&#34;</span>
 }
-</code></pre></div><p>As an example, lets look at the <strong>Pipfile</strong> which uses the version variable:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">source</span>]]
-<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;pypi&#34;</span>
-<span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://pypi.org/simple&#34;</span>
-<span style="color:#a6e22e">verify_ssl</span> = <span style="color:#66d9ef">true</span>
+</code></pre></div><p>As an example, lets look at the <strong>Pipfile</strong> which uses the version variable:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[[<span style=color:#a6e22e>source</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;pypi&#34;</span>
+<span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#34;https://pypi.org/simple&#34;</span>
+<span style=color:#a6e22e>verify_ssl</span> = <span style=color:#66d9ef>true</span>
 
-[<span style="color:#a6e22e">dev</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">packages</span>]
-<span style="color:#a6e22e">pytest</span> = <span style="color:#e6db74">&#34;*&#34;</span>
-<span style="color:#a6e22e">flake8</span> = <span style="color:#e6db74">&#34;*&#34;</span>
-<span style="color:#a6e22e">black</span> = <span style="color:#e6db74">&#34;==20.8b1&#34;</span>
+[<span style=color:#a6e22e>dev</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>packages</span>]
+<span style=color:#a6e22e>pytest</span> = <span style=color:#e6db74>&#34;*&#34;</span>
+<span style=color:#a6e22e>flake8</span> = <span style=color:#e6db74>&#34;*&#34;</span>
+<span style=color:#a6e22e>black</span> = <span style=color:#e6db74>&#34;==20.8b1&#34;</span>
 
-[<span style="color:#a6e22e">packages</span>]
+[<span style=color:#a6e22e>packages</span>]
 
-[<span style="color:#a6e22e">requires</span>]
-<span style="color:#a6e22e">python_version</span> = <span style="color:#e6db74">&#34;{{cookiecutter.python_version}}&#34;</span>
-</code></pre></div><p>Cookiecutter is run on a template folder or repo like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cookiecutter ../cookiecutter/python-pipenv-github
-</code></pre></div><p>Any variables defined in the json file will be requested and replaced and used throughout its files and folders. That means our project directory name will be correctly named along with the python version which will be picked up and used in the Pipfile and github actions. You can also call cookiecutter on any repo that holds a cookiecutter template.</p>
-<p>As this is a python project template, we can tailor the <a href="https://www.toptal.com/developers/gitignore/api/python">.gitignore</a> content, so we filter out any rogue files like *.pyc or *.DS_Store.</p>
-<p>Our project doesn’t include a Pipfile.lock, so we’ll get the latest version of any of the packages specified in our Pipfile when we execute a <code>pipenv install --dev</code></p>
-<h1 id="automating-dev-tasks-with-makefiles">Automating Dev Tasks with Makefiles</h1>
-<p>On a recent piece of work, the team made use of makefiles as an easy way to simplify common takes like formatting code or testing. Having to remember the exact tool or syntax is something that can take time. If we use makefile for each project by we by default only need to remember the targets we define.</p>
-<p>Here&rsquo;s the contents of the <strong>Makefile</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#a6e22e">init</span><span style="color:#f92672">:</span>
+[<span style=color:#a6e22e>requires</span>]
+<span style=color:#a6e22e>python_version</span> = <span style=color:#e6db74>&#34;{{cookiecutter.python_version}}&#34;</span>
+</code></pre></div><p>Cookiecutter is run on a template folder or repo like so:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cookiecutter ../cookiecutter/python-pipenv-github
+</code></pre></div><p>Any variables defined in the json file will be requested and replaced and used throughout its files and folders. That means our project directory name will be correctly named along with the python version which will be picked up and used in the Pipfile and github actions. You can also call cookiecutter on any repo that holds a cookiecutter template.</p><p>As this is a python project template, we can tailor the <a href=https://www.toptal.com/developers/gitignore/api/python>.gitignore</a> content, so we filter out any rogue files like *.pyc or *.DS_Store.</p><p>Our project doesn’t include a Pipfile.lock, so we’ll get the latest version of any of the packages specified in our Pipfile when we execute a <code>pipenv install --dev</code></p><h1 id=automating-dev-tasks-with-makefiles>Automating Dev Tasks with Makefiles</h1><p>On a recent piece of work, the team made use of makefiles as an easy way to simplify common takes like formatting code or testing. Having to remember the exact tool or syntax is something that can take time. If we use makefile for each project by we by default only need to remember the targets we define.</p><p>Here&rsquo;s the contents of the <strong>Makefile</strong>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Makefile data-lang=Makefile><span style=color:#a6e22e>init</span><span style=color:#f92672>:</span>
         git init
         git add -A
-        git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+        git commit -m <span style=color:#e6db74>&#34;Initial commit&#34;</span>
         git branch -M main
         gh repo create
-        @echo <span style="color:#e6db74">&#34;push with: git push -u origin main&#34;</span>
-<span style="color:#a6e22e">install</span><span style="color:#f92672">:</span>
+        @echo <span style=color:#e6db74>&#34;push with: git push -u origin main&#34;</span>
+<span style=color:#a6e22e>install</span><span style=color:#f92672>:</span>
         pipenv install --dev
-<span style="color:#a6e22e">lint</span><span style="color:#f92672">:</span>
+<span style=color:#a6e22e>lint</span><span style=color:#f92672>:</span>
         pipenv run flake8
         pipenv run black --check .
-<span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> lint
+<span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> lint
         pipenv run py.test
-<span style="color:#a6e22e">format</span><span style="color:#f92672">:</span>
+<span style=color:#a6e22e>format</span><span style=color:#f92672>:</span>
         pipenv run black .
-</code></pre></div><p>You can see that in my case I&rsquo;m just calling the relevant pipenv commands, but I can group as many commands together for each make rule which simplifies things quite a bit if I were to have both backend and frontend code in the mix. Knowing that all the common commands are grouped in this way is pretty helpful if you are new to a repo and want to get familiar with the project too.</p>
-<p>Additionally, I&rsquo;ve included a <code>make init</code> target. This not only initialises my local repo with all my code, but uses the github cli to create it remotely ready for me to push back to.</p>
-<p>The sum total of commands I need to remember to get started with the project is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make install
-</code></pre></div><p>..and then some time later after I&rsquo;ve worked on actually creating some code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make init
-</code></pre></div><h1 id="github-action-workflows-with-cookiecutter">GitHub Action Workflows with Cookiecutter</h1>
-<p>The .github/workflows also has a bunch of content which we can template with cookiecutter. In my case, I can call my tests through make (along with their dependency lint tests). Cookiecutter is able to call the relevant actions to install and use the same version of python I&rsquo;m using locally and execute my test commands when I open a PR:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">CI</span>
-<span style="color:#f92672">on</span>: <span style="color:#ae81ff">pull_request</span>
+</code></pre></div><p>You can see that in my case I&rsquo;m just calling the relevant pipenv commands, but I can group as many commands together for each make rule which simplifies things quite a bit if I were to have both backend and frontend code in the mix. Knowing that all the common commands are grouped in this way is pretty helpful if you are new to a repo and want to get familiar with the project too.</p><p>Additionally, I&rsquo;ve included a <code>make init</code> target. This not only initialises my local repo with all my code, but uses the github cli to create it remotely ready for me to push back to.</p><p>The sum total of commands I need to remember to get started with the project is:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>make install
+</code></pre></div><p>..and then some time later after I&rsquo;ve worked on actually creating some code:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>make init
+</code></pre></div><h1 id=github-action-workflows-with-cookiecutter>GitHub Action Workflows with Cookiecutter</h1><p>The .github/workflows also has a bunch of content which we can template with cookiecutter. In my case, I can call my tests through make (along with their dependency lint tests). Cookiecutter is able to call the relevant actions to install and use the same version of python I&rsquo;m using locally and execute my test commands when I open a PR:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>CI</span>
+<span style=color:#f92672>on</span>: <span style=color:#ae81ff>pull_request</span>
 
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">test</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-python@v2</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">python-version</span>: {{<span style="color:#ae81ff">cookiecutter.python_version}}</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Pipenv</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">pip install pipenv==2020.11.15</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install venv</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">make install</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Test</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">make test</span>
-</code></pre></div><h1 id="conclusion">Conclusion</h1>
-<p>Automating away this much of my project setup is a massive win. I wish I&rsquo;d taken the time to set up a template such as this for previous team projects as it would have saved us quite a bit of time.</p>
-<p>What&rsquo;s nice about this basic python template is that it can be used as the basis for creating other templates for more complex apps with additional common dependencies or workflows - a flask/django webapp for instance running within a container with gitlab as a remote host for the repo. It&rsquo;s also really simple to switchout say Pipenv for poetry and use that instead.</p>
-<p>The entire template is up on github and you can use it yourself with cookiecutter by calling:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cookiecutter https://github.com/iwootten/python-pipenv-github
-</code></pre></div><form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
-  target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
-  <h4 style="margin-top:0">Get Regular Tips to Your Inbox</h4>
-  <p>My <a href="https://www.getrevue.co/profile/iwootten">newsletter</a> comes out every few
-    weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
-    also
-    features articles and
-    videos I've recently published so you'll never miss out.
-  <p>
-
-  <p>No spam, unsubscribe any time. Check out <a href="https://www.getrevue.co/profile/iwootten">previous issues
-      here</a>.
-  </p>
-  <div class="revue-form-group">
-    <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
-      id="member_email" style="width: 100%;font-size: 20px;">
-  </div>
-  <div class="revue-form-actions">
-    <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
-  </div>
-</form>
-
-  </div>
-  
-
-<div class="navigation navigation-single">
-    
-    <a href="https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">What is a PEP and why should I care?</span>
-    </a>
-    
-    
-    <a href="https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/" class="navigation-next">
-      <span class="navigation-tittle">Building a Cookiecutter Template for Multiple Python Package Managers</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
-    
-</div>
-
-
-  
-
-  
-    
-
-
-</article>
-
-
-        </div>
-        
-    
-<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
-  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-  crossorigin="anonymous">
-</script>
-
-
-    
-    
-
-
-
-
-    
-
-
-
-    </body>
-</html>
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>test</span>:
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+    <span style=color:#f92672>steps</span>:
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-python@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>python-version</span>: {{<span style=color:#ae81ff>cookiecutter.python_version}}</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Install Pipenv</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>pip install pipenv==2020.11.15</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Install venv</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make install</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Test</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
+</code></pre></div><h1 id=conclusion>Conclusion</h1><p>Automating away this much of my project setup is a massive win. I wish I&rsquo;d taken the time to set up a template such as this for previous team projects as it would have saved us quite a bit of time.</p><p>What&rsquo;s nice about this basic python template is that it can be used as the basis for creating other templates for more complex apps with additional common dependencies or workflows - a flask/django webapp for instance running within a container with gitlab as a remote host for the repo. It&rsquo;s also really simple to switchout say Pipenv for poetry and use that instead.</p><p>The entire template is up on github and you can use it yourself with cookiecutter by calling:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cookiecutter https://github.com/iwootten/python-pipenv-github
+</code></pre></div><form action=https://www.getrevue.co/profile/iwootten/add_subscriber method=post id=revue-form name=revue-form target=_blank style="background:#e7daf1;padding:1rem;margin-top:2rem;border:2px solid #300030"><h4 style=margin-top:0>Get Regular Tips to Your Inbox</h4><p>My <a href=https://www.getrevue.co/profile/iwootten>newsletter</a> comes out every few
+weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
+also
+features articles and
+videos I've recently published so you'll never miss out.<p><p>No spam, unsubscribe any time. Check out <a href=https://www.getrevue.co/profile/iwootten>previous issues
+here</a>.</p><div class=revue-form-group><input class=revue-form-field placeholder="Your email address..." type=email name=member[email] id=member_email style=width:100%;font-size:20px></div><div class=revue-form-actions><input type=submit value=Subscribe name=member[subscribe] id=member_submit></div></form></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
+<span class=navigation-tittle>What is a PEP and why should I care?</span></a>
+<a href=https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/ class=navigation-next><span class=navigation-tittle>Building a Cookiecutter Template for Multiple Python Package Managers</span>
+<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>

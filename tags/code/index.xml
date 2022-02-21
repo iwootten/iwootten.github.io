@@ -1,32 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>code on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/tags/code/</link>
-    <description>Recent content in code on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 13 Aug 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/code/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>You’re Nowhere Near as Good a Hacker as You Think</title>
-      <link>https://www.ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think/</link>
-      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think/</guid>
-      <description>What are you doing? Why would you go down that road? Shouldn’t you be building something else? How long have you been doing this?
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>code on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/code/</link><description>Recent content in code on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 13 Aug 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/code/index.xml" rel="self" type="application/rss+xml"/><item><title>You’re Nowhere Near as Good a Hacker as You Think</title><link>https://www.ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think/</link><pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2012/08/13/youre-nowhere-near-as-good-a-hacker-as-you-think/</guid><description>What are you doing? Why would you go down that road? Shouldn’t you be building something else? How long have you been doing this?
 Sure you can fool your clients into thinking you’re adding value to their product. I know the truth. But how did you – with all your expertise get to the point in thinking that’s what you’re really doing?
-This is your first project? Shouldn’t you be focusing on your clients problems?</description>
-    </item>
-    
-    <item>
-      <title>Installing gPhoto on Snow Leopard</title>
-      <link>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</link>
-      <pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</guid>
-      <description>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I’m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn’t really up to the job and FrameByFrame doesn’t work with such high-end cameras.
-So, I got to thinking wether there was any other route? I was aware of the gPhoto commandline interface and libgphoto pointed out by a colleague some time ago, so I thought I’d see what I might be able to do with it.</description>
-    </item>
-    
-  </channel>
-</rss>
+This is your first project? Shouldn’t you be focusing on your clients problems?</description></item><item><title>Installing gPhoto on Snow Leopard</title><link>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</link><pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2010/09/09/installing-gphoto-on-snow-leopard/</guid><description>I always seem to choose the difficult route to do things. Having become equipped with a new canon camera, I’m instantly wanting to capture stop motion shorts with it. Unfortunately canons proprietry capture software isn’t really up to the job and FrameByFrame doesn’t work with such high-end cameras.
+So, I got to thinking wether there was any other route? I was aware of the gPhoto commandline interface and libgphoto pointed out by a colleague some time ago, so I thought I’d see what I might be able to do with it.</description></item></channel></rss>

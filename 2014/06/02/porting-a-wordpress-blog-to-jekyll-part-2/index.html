@@ -1,422 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-    
+<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.1"><title>Porting a Wordpress blog to Jekyll: Part 2 - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"Porting a Wordpress blog to Jekyll: Part 2","headline":"Porting a Wordpress blog to Jekyll: Part 2","description":"In the second of my posts in porting a wordpress blog over to jekyll, I outline how I\u0026rsquo;ve replicated wordpress\u0026rsquo;s default permalink structure on my own blog.\nCreating Category and Tag Pages Jekyll doesn\u0026rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you\u0026rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category\/tag generator, with my plugins\/generate_cats_and_tags.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2014","datePublished":"2014-06-02 00:00:00 \u002b0000 UTC","dateModified":"2014-06-02 00:00:00 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2014\/06\/02\/porting-a-wordpress-blog-to-jekyll-part-2\/","wordCount":"626","keywords":["jekyll","static sites","wordpress","Blog"]}</script><meta name=description content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
+Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Porting a Wordpress blog to Jekyll: Part 2"><meta name=twitter:description content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
+Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags."><meta property="og:title" content="Porting a Wordpress blog to Jekyll: Part 2"><meta property="og:description" content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
+Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-06-02T00:00:00+00:00"><meta property="article:modified_time" content="2014-06-02T00:00:00+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
+<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
+<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
+<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
+<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
+<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/>Porting a Wordpress blog to Jekyll: Part 2</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Jun 02, 2014
+in
+<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/blog>BLOG</a><br><i class="fas fa-tags"></i>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/jekyll>jekyll</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/static-sites>static sites</a>
+<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/wordpress>wordpress</a><br><i class="fas fa-clock"></i> 3 min read</div></header><div class=post><p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.</p><h2 id=creating-category-and-tag-pages>Creating Category and Tag Pages</h2><p>Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial <a href=http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/>here</a> as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.rb source below:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>module</span> Jekyll
+    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CatsAndTags</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>Generator</span>
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate</span>(site)
+          site<span style=color:#f92672>.</span>categories<span style=color:#f92672>.</span>each <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>category<span style=color:#f92672>|</span>
+            build_subpages(site, <span style=color:#e6db74>&#34;category&#34;</span>, category)
+          <span style=color:#66d9ef>end</span>
 
+          site<span style=color:#f92672>.</span>tags<span style=color:#f92672>.</span>each <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>tag<span style=color:#f92672>|</span>
+            build_subpages(site, <span style=color:#e6db74>&#34;tag&#34;</span>, tag)
+          <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>end</span>
 
-    <head>
-    <link href="https://gmpg.org/xfn/11" rel="profile">
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Cache-Control" content="public" />
-<!-- Enable responsiveness on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.83.1" />
-
-    
-    
-    
-
-<title>Porting a Wordpress blog to Jekyll: Part 2 - Ian Wootten</title>
-<script type="application/ld+json">
-{
-    "@context" : "http://schema.org",
-    "@type" : "BlogPosting",
-    "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "https:\/\/www.ianwootten.co.uk"
-    },
-    "articleSection" : "posts",
-    "name" : "Porting a Wordpress blog to Jekyll: Part 2",
-    "headline" : "Porting a Wordpress blog to Jekyll: Part 2",
-    "description" : "In the second of my posts in porting a wordpress blog over to jekyll, I outline how I\u0026rsquo;ve replicated wordpress\u0026rsquo;s default permalink structure on my own blog.\nCreating Category and Tag Pages Jekyll doesn\u0026rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you\u0026rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category\/tag generator, with my plugins\/generate_cats_and_tags.",
-    "inLanguage" : "en-US",
-    "author" : "",
-    "creator" : "",
-    "publisher": "",
-    "accountablePerson" : "",
-    "copyrightHolder" : "",
-    "copyrightYear" : "2014",
-    "datePublished": "2014-06-02 00:00:00 \u002b0000 UTC",
-    "dateModified" : "2014-06-02 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/www.ianwootten.co.uk\/2014\/06\/02\/porting-a-wordpress-blog-to-jekyll-part-2\/",
-    "wordCount" : "626",
-    "keywords" : [ "jekyll","static sites","wordpress","Blog" ]
-}
-</script>
-<meta name="description" content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
-Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.">
-<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Porting a Wordpress blog to Jekyll: Part 2"/>
-<meta name="twitter:description" content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
-Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags."/>
-
-<meta property="og:title" content="Porting a Wordpress blog to Jekyll: Part 2" />
-<meta property="og:description" content="In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.
-Creating Category and Tag Pages Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-06-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2014-06-02T00:00:00&#43;00:00" />
-
-
-
-    
-
-
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
-<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
-    
-
-    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
-</head>
-
-
-    <body class=" ">
-    
-<div class="sidebar">
-  <div class="container ">
-    <div class="sidebar-about">
-      <span class="site__title">
-        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
-      </span>
-      
-      
-      
-      <div class="author-image">
-        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
-      </div>
-      
-      <p class="site__description">
-         Software Developer, Cardiff 
-      </p>
-    </div>
-    <div class="collapsible-menu">
-      <input type="checkbox" id="menuToggle">
-      <label for="menuToggle">Ian Wootten</label>
-      <div class="menu-content">
-        <div>
-	<ul class="sidebar-nav">
-		 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/about/">
-						<span>About</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.ianwootten.co.uk/hire-me/">
-						<span>Hire Me</span>
-					</a>
-				</li>
-			 
-		 
-			 
-				<li>
-					<a href="https://www.getrevue.co/profile/iwootten">
-						<span>Subscribe</span>
-					</a>
-				</li>
-			 
-		
-		</li>
-	</ul>
-</div>
-
-        <section class="social">
-	
-	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	
-	
-	
-</section>
-
-      </div>
-    </div>
-    <p class="copyright">
-      &copy;2003-2022 Ian Wootten
-    </p>
-  </div>
-  <div>
-  </div>
-</div>
-
-        <div class="content container">
-            
-    <article>
-  <header>
-    <h1><a href="https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/">Porting a Wordpress blog to Jekyll: Part 2</a></h1>
-    
-    
-<div class="post__meta">
-    
-    
-      <i class="fas fa-calendar-alt"></i> Jun 02, 2014
-    
-    
-    
-      
-      
-          in
-          
-          
-              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/blog">BLOG</a>
-              
-          
-      
-    
-    
-    
-      
-      
-          <br/>
-           <i class="fas fa-tags"></i>
-          
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/jekyll">jekyll</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/static-sites">static sites</a>
-           
-      
-          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/wordpress">wordpress</a>
-          
-      
-    
-    
-    <br/>
-    <i class="fas fa-clock"></i> 3 min read
-</div>
-
-
-  </header>
-  
-  
-  <div class="post">
-    <p>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&rsquo;ve replicated wordpress&rsquo;s default permalink structure on my own blog.</p>
-<h2 id="creating-category-and-tag-pages">Creating Category and Tag Pages</h2>
-<p>Jekyll doesn&rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&rsquo;ll need to use a plugin to recreate them. I used the tutorial <a href="http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/">here</a> as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.rb source below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Jekyll
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CatsAndTags</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Generator</span>
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate</span>(site)
-          site<span style="color:#f92672">.</span>categories<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>category<span style="color:#f92672">|</span>
-            build_subpages(site, <span style="color:#e6db74">&#34;category&#34;</span>, category)
-          <span style="color:#66d9ef">end</span>
-
-          site<span style="color:#f92672">.</span>tags<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>tag<span style="color:#f92672">|</span>
-            build_subpages(site, <span style="color:#e6db74">&#34;tag&#34;</span>, tag)
-          <span style="color:#66d9ef">end</span>
-        <span style="color:#66d9ef">end</span>
-
-        <span style="color:#75715e"># Do the actual generation.</span>
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build_subpages</span>(site, type, posts)
-          posts<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> posts<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">].</span>sort_by { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> <span style="color:#f92672">-</span>p<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>to_f }
+        <span style=color:#75715e># Do the actual generation.</span>
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>build_subpages</span>(site, type, posts)
+          posts<span style=color:#f92672>[</span><span style=color:#ae81ff>1</span><span style=color:#f92672>]</span> <span style=color:#f92672>=</span> posts<span style=color:#f92672>[</span><span style=color:#ae81ff>1</span><span style=color:#f92672>].</span>sort_by { <span style=color:#f92672>|</span>p<span style=color:#f92672>|</span> <span style=color:#f92672>-</span>p<span style=color:#f92672>.</span>date<span style=color:#f92672>.</span>to_f }
           atomize(site, type, posts)
           paginate(site, type, posts)
-        <span style="color:#66d9ef">end</span>
+        <span style=color:#66d9ef>end</span>
 
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">atomize</span>(site, type, posts)
-          path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/</span><span style="color:#e6db74">#{</span>type<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">#{</span>posts<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-          atom <span style="color:#f92672">=</span> <span style="color:#66d9ef">AtomPage</span><span style="color:#f92672">.</span>new(site, site<span style="color:#f92672">.</span>source, path, type, posts<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, posts<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>)
-          site<span style="color:#f92672">.</span>pages <span style="color:#f92672">&lt;&lt;</span> atom
-        <span style="color:#66d9ef">end</span>
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>atomize</span>(site, type, posts)
+          path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/</span><span style=color:#e6db74>#{</span>type<span style=color:#e6db74>}</span><span style=color:#e6db74>/</span><span style=color:#e6db74>#{</span>posts<span style=color:#f92672>[</span><span style=color:#ae81ff>0</span><span style=color:#f92672>]</span><span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+          atom <span style=color:#f92672>=</span> <span style=color:#66d9ef>AtomPage</span><span style=color:#f92672>.</span>new(site, site<span style=color:#f92672>.</span>source, path, type, posts<span style=color:#f92672>[</span><span style=color:#ae81ff>0</span><span style=color:#f92672>]</span>, posts<span style=color:#f92672>[</span><span style=color:#ae81ff>1</span><span style=color:#f92672>]</span>)
+          site<span style=color:#f92672>.</span>pages <span style=color:#f92672>&lt;&lt;</span> atom
+        <span style=color:#66d9ef>end</span>
 
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">paginate</span>(site, type, posts)
-          pages <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pager</span><span style="color:#f92672">.</span>calculate_pages(posts<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>, site<span style="color:#f92672">.</span>config<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;paginate&#39;</span><span style="color:#f92672">].</span>to_i)
-          (<span style="color:#ae81ff">1</span><span style="color:#f92672">..</span>pages)<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>num_page<span style="color:#f92672">|</span>
-            pager <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pager</span><span style="color:#f92672">.</span>new(site, num_page, posts<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>, pages)
-            slug <span style="color:#f92672">=</span> posts<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">].</span>gsub(<span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;-&#39;</span>)
-            base_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/</span><span style="color:#e6db74">#{</span>type<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">#{</span>slug<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-            path <span style="color:#f92672">=</span> base_path
-            <span style="color:#66d9ef">if</span> num_page <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>
-              path <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;/page/</span><span style="color:#e6db74">#{</span>num_page<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-            <span style="color:#66d9ef">end</span>
-            newpage <span style="color:#f92672">=</span> <span style="color:#66d9ef">GroupSubPage</span><span style="color:#f92672">.</span>new(site, site<span style="color:#f92672">.</span>source, path, base_path, type, posts<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>)
-            newpage<span style="color:#f92672">.</span>pager <span style="color:#f92672">=</span> pager
-            site<span style="color:#f92672">.</span>pages <span style="color:#f92672">&lt;&lt;</span> newpage
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>paginate</span>(site, type, posts)
+          pages <span style=color:#f92672>=</span> <span style=color:#66d9ef>Pager</span><span style=color:#f92672>.</span>calculate_pages(posts<span style=color:#f92672>[</span><span style=color:#ae81ff>1</span><span style=color:#f92672>]</span>, site<span style=color:#f92672>.</span>config<span style=color:#f92672>[</span><span style=color:#e6db74>&#39;paginate&#39;</span><span style=color:#f92672>].</span>to_i)
+          (<span style=color:#ae81ff>1</span><span style=color:#f92672>..</span>pages)<span style=color:#f92672>.</span>each <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>num_page<span style=color:#f92672>|</span>
+            pager <span style=color:#f92672>=</span> <span style=color:#66d9ef>Pager</span><span style=color:#f92672>.</span>new(site, num_page, posts<span style=color:#f92672>[</span><span style=color:#ae81ff>1</span><span style=color:#f92672>]</span>, pages)
+            slug <span style=color:#f92672>=</span> posts<span style=color:#f92672>[</span><span style=color:#ae81ff>0</span><span style=color:#f92672>].</span>gsub(<span style=color:#e6db74>&#39; &#39;</span>, <span style=color:#e6db74>&#39;-&#39;</span>)
+            base_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/</span><span style=color:#e6db74>#{</span>type<span style=color:#e6db74>}</span><span style=color:#e6db74>/</span><span style=color:#e6db74>#{</span>slug<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+            path <span style=color:#f92672>=</span> base_path
+            <span style=color:#66d9ef>if</span> num_page <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>1</span>
+              path <span style=color:#f92672>+=</span> <span style=color:#e6db74>&#34;/page/</span><span style=color:#e6db74>#{</span>num_page<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+            <span style=color:#66d9ef>end</span>
+            newpage <span style=color:#f92672>=</span> <span style=color:#66d9ef>GroupSubPage</span><span style=color:#f92672>.</span>new(site, site<span style=color:#f92672>.</span>source, path, base_path, type, posts<span style=color:#f92672>[</span><span style=color:#ae81ff>0</span><span style=color:#f92672>]</span>)
+            newpage<span style=color:#f92672>.</span>pager <span style=color:#f92672>=</span> pager
+            site<span style=color:#f92672>.</span>pages <span style=color:#f92672>&lt;&lt;</span> newpage
 
-          <span style="color:#66d9ef">end</span>
-        <span style="color:#66d9ef">end</span>
-    <span style="color:#66d9ef">end</span>
+          <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
 
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GroupSubPage</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Page</span>
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(site, base, dir, base_path, type, val)
-          @site <span style="color:#f92672">=</span> site
-          @base <span style="color:#f92672">=</span> base
-          @dir <span style="color:#f92672">=</span> dir
-          @name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.html&#39;</span>
+    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GroupSubPage</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>Page</span>
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(site, base, dir, base_path, type, val)
+          @site <span style=color:#f92672>=</span> site
+          @base <span style=color:#f92672>=</span> base
+          @dir <span style=color:#f92672>=</span> dir
+          @name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;index.html&#39;</span>
 
-          self<span style="color:#f92672">.</span>process(@name)
-          self<span style="color:#f92672">.</span>read_yaml(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(base, <span style="color:#e6db74">&#39;_layouts&#39;</span>), <span style="color:#e6db74">&#34;group_index.html&#34;</span>)
-          self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span>type<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> val
-          self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;base&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> base_path
-        <span style="color:#66d9ef">end</span>
-    <span style="color:#66d9ef">end</span>
+          self<span style=color:#f92672>.</span>process(@name)
+          self<span style=color:#f92672>.</span>read_yaml(<span style=color:#66d9ef>File</span><span style=color:#f92672>.</span>join(base, <span style=color:#e6db74>&#39;_layouts&#39;</span>), <span style=color:#e6db74>&#34;group_index.html&#34;</span>)
+          self<span style=color:#f92672>.</span>data<span style=color:#f92672>[</span>type<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> val
+          self<span style=color:#f92672>.</span>data<span style=color:#f92672>[</span><span style=color:#e6db74>&#39;base&#39;</span><span style=color:#f92672>]</span> <span style=color:#f92672>=</span> base_path
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
 
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AtomPage</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Page</span>
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(site, base, dir, type, val, posts)
-            @site <span style="color:#f92672">=</span> site
-            @base <span style="color:#f92672">=</span> base
-            @dir <span style="color:#f92672">=</span> dir
-            @name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;atom.xml&#39;</span>
+    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AtomPage</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>Page</span>
+        <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(site, base, dir, type, val, posts)
+            @site <span style=color:#f92672>=</span> site
+            @base <span style=color:#f92672>=</span> base
+            @dir <span style=color:#f92672>=</span> dir
+            @name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;atom.xml&#39;</span>
 
-            self<span style="color:#f92672">.</span>process(@name)
-            self<span style="color:#f92672">.</span>read_yaml(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(base, <span style="color:#e6db74">&#39;_layouts&#39;</span>), <span style="color:#e6db74">&#34;group_atom.xml&#34;</span>)
-            self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span>type<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> val
-            self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;grouptype&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> type
-            self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;posts&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> posts<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">..</span><span style="color:#ae81ff">9</span><span style="color:#f92672">]</span>
-        <span style="color:#66d9ef">end</span>
-    <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>I chose to pass in an extra parameter to the Pager, defining the &ldquo;base_path&rdquo; for which an index page has been generated. This enables absolute links to pages and prevents situations like /category/javascript/category/javascript/page/1, which occur when relative pagination is generated when on a category page.</p>
-<p>A view making use of it would look like the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
+            self<span style=color:#f92672>.</span>process(@name)
+            self<span style=color:#f92672>.</span>read_yaml(<span style=color:#66d9ef>File</span><span style=color:#f92672>.</span>join(base, <span style=color:#e6db74>&#39;_layouts&#39;</span>), <span style=color:#e6db74>&#34;group_atom.xml&#34;</span>)
+            self<span style=color:#f92672>.</span>data<span style=color:#f92672>[</span>type<span style=color:#f92672>]</span> <span style=color:#f92672>=</span> val
+            self<span style=color:#f92672>.</span>data<span style=color:#f92672>[</span><span style=color:#e6db74>&#34;grouptype&#34;</span><span style=color:#f92672>]</span> <span style=color:#f92672>=</span> type
+            self<span style=color:#f92672>.</span>data<span style=color:#f92672>[</span><span style=color:#e6db74>&#34;posts&#34;</span><span style=color:#f92672>]</span> <span style=color:#f92672>=</span> posts<span style=color:#f92672>[</span><span style=color:#ae81ff>0</span><span style=color:#f92672>..</span><span style=color:#ae81ff>9</span><span style=color:#f92672>]</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+<span style=color:#66d9ef>end</span>
+</code></pre></div><p>I chose to pass in an extra parameter to the Pager, defining the &ldquo;base_path&rdquo; for which an index page has been generated. This enables absolute links to pages and prevents situations like /category/javascript/category/javascript/page/1, which occur when relative pagination is generated when on a category page.</p><p>A view making use of it would look like the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;pagination&#34;</span>&gt;
         {% if paginator.previous_page %}
-          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.base }}/page/{{ paginator.previous_page }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;previous&#34;</span>&gt;Previous&lt;/<span style="color:#f92672">a</span>&gt;
+          &lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{{ page.base }}/page/{{ paginator.previous_page }}&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;previous&#34;</span>&gt;Previous&lt;/<span style=color:#f92672>a</span>&gt;
         {% else %}
-          &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;previous&#34;</span>&gt;Previous&lt;/<span style="color:#f92672">span</span>&gt;
+          &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;previous&#34;</span>&gt;Previous&lt;/<span style=color:#f92672>span</span>&gt;
         {% endif %}
-        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page_number &#34;</span>&gt;Page: {{ paginator.page }} of {{ paginator.total_pages }}&lt;/<span style="color:#f92672">span</span>&gt;
+        &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;page_number &#34;</span>&gt;Page: {{ paginator.page }} of {{ paginator.total_pages }}&lt;/<span style=color:#f92672>span</span>&gt;
         {% if paginator.next_page %}
-          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.base }}/page/{{ paginator.next_page }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;next&#34;</span>&gt;Next&lt;/<span style="color:#f92672">a</span>&gt;
+          &lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{{ page.base }}/page/{{ paginator.next_page }}&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;next&#34;</span>&gt;Next&lt;/<span style=color:#f92672>a</span>&gt;
         {% else %}
-          &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;next &#34;</span>&gt;Next&lt;/<span style="color:#f92672">span</span>&gt;
+          &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;next &#34;</span>&gt;Next&lt;/<span style=color:#f92672>span</span>&gt;
         {% endif %}
-&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><h2 id="creating-archive-pages">Creating Archive Pages</h2>
-<p>In a similar fashion, Jekyll doesn&rsquo;t create pages or pagination for previous years or months. Even if they are not oft used by others, I find it useful myself to hit up my archives for <a href="https://www.ianwootten.co.uk/2004">previous years</a> on occasion and <a href="https://www.ianwootten.co.uk/2004/05/06/chicken-breasts/">laugh at the random work I did for my undergraduate</a>.</p>
-<p>I created the following plugin to generate indexes at /{year} /{year}/{month} and /{year}/page/{pageNo} and /{year}/{month}/page/{pageNo} if necessary.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Jekyll
+&lt;/<span style=color:#f92672>div</span>&gt;
+</code></pre></div><h2 id=creating-archive-pages>Creating Archive Pages</h2><p>In a similar fashion, Jekyll doesn&rsquo;t create pages or pagination for previous years or months. Even if they are not oft used by others, I find it useful myself to hit up my archives for <a href=https://www.ianwootten.co.uk/2004>previous years</a> on occasion and <a href=https://www.ianwootten.co.uk/2004/05/06/chicken-breasts/>laugh at the random work I did for my undergraduate</a>.</p><p>I created the following plugin to generate indexes at /{year} /{year}/{month} and /{year}/page/{pageNo} and /{year}/{month}/page/{pageNo} if necessary.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>module</span> Jekyll
 
-  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArchiveGenerator</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Generator</span>
-    safe <span style="color:#66d9ef">true</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate</span>(site)
-      <span style="color:#66d9ef">if</span> site<span style="color:#f92672">.</span>layouts<span style="color:#f92672">.</span>key? <span style="color:#e6db74">&#39;archive_index&#39;</span>
-        site<span style="color:#f92672">.</span>posts<span style="color:#f92672">.</span>group_by{ <span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> {<span style="color:#e6db74">&#34;month&#34;</span> <span style="color:#f92672">=&gt;</span> c<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>month, <span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#f92672">=&gt;</span> c<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>year} }<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>period, posts<span style="color:#f92672">|</span>
-          posts <span style="color:#f92672">=</span> posts<span style="color:#f92672">.</span>sort_by { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> <span style="color:#f92672">-</span>p<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>to_f }
-          archive_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(period<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">].</span>to_s(), <span style="color:#e6db74">&#34;%02d&#34;</span> <span style="color:#f92672">%</span> period<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">].</span>to_s())
+  <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ArchiveGenerator</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>Generator</span>
+    safe <span style=color:#66d9ef>true</span>
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate</span>(site)
+      <span style=color:#66d9ef>if</span> site<span style=color:#f92672>.</span>layouts<span style=color:#f92672>.</span>key? <span style=color:#e6db74>&#39;archive_index&#39;</span>
+        site<span style=color:#f92672>.</span>posts<span style=color:#f92672>.</span>group_by{ <span style=color:#f92672>|</span>c<span style=color:#f92672>|</span> {<span style=color:#e6db74>&#34;month&#34;</span> <span style=color:#f92672>=&gt;</span> c<span style=color:#f92672>.</span>date<span style=color:#f92672>.</span>month, <span style=color:#e6db74>&#34;year&#34;</span> <span style=color:#f92672>=&gt;</span> c<span style=color:#f92672>.</span>date<span style=color:#f92672>.</span>year} }<span style=color:#f92672>.</span>each <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>period, posts<span style=color:#f92672>|</span>
+          posts <span style=color:#f92672>=</span> posts<span style=color:#f92672>.</span>sort_by { <span style=color:#f92672>|</span>p<span style=color:#f92672>|</span> <span style=color:#f92672>-</span>p<span style=color:#f92672>.</span>date<span style=color:#f92672>.</span>to_f }
+          archive_dir <span style=color:#f92672>=</span> <span style=color:#66d9ef>File</span><span style=color:#f92672>.</span>join(period<span style=color:#f92672>[</span><span style=color:#e6db74>&#34;year&#34;</span><span style=color:#f92672>].</span>to_s(), <span style=color:#e6db74>&#34;%02d&#34;</span> <span style=color:#f92672>%</span> period<span style=color:#f92672>[</span><span style=color:#e6db74>&#34;month&#34;</span><span style=color:#f92672>].</span>to_s())
           paginate(site, archive_dir, posts)
-        <span style="color:#66d9ef">end</span>
-        site<span style="color:#f92672">.</span>posts<span style="color:#f92672">.</span>group_by{ <span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> {<span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#f92672">=&gt;</span> c<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>year} }<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>period, posts<span style="color:#f92672">|</span>
-          posts <span style="color:#f92672">=</span> posts<span style="color:#f92672">.</span>sort_by { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> <span style="color:#f92672">-</span>p<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>to_f }
-          archive_dir <span style="color:#f92672">=</span> period<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">].</span>to_s()
+        <span style=color:#66d9ef>end</span>
+        site<span style=color:#f92672>.</span>posts<span style=color:#f92672>.</span>group_by{ <span style=color:#f92672>|</span>c<span style=color:#f92672>|</span> {<span style=color:#e6db74>&#34;year&#34;</span> <span style=color:#f92672>=&gt;</span> c<span style=color:#f92672>.</span>date<span style=color:#f92672>.</span>year} }<span style=color:#f92672>.</span>each <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>period, posts<span style=color:#f92672>|</span>
+          posts <span style=color:#f92672>=</span> posts<span style=color:#f92672>.</span>sort_by { <span style=color:#f92672>|</span>p<span style=color:#f92672>|</span> <span style=color:#f92672>-</span>p<span style=color:#f92672>.</span>date<span style=color:#f92672>.</span>to_f }
+          archive_dir <span style=color:#f92672>=</span> period<span style=color:#f92672>[</span><span style=color:#e6db74>&#34;year&#34;</span><span style=color:#f92672>].</span>to_s()
           paginate(site, archive_dir, posts)
-        <span style="color:#66d9ef">end</span>
-      <span style="color:#66d9ef">end</span>
-    <span style="color:#66d9ef">end</span>
+        <span style=color:#66d9ef>end</span>
+      <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">paginate</span>(site, dir, posts)
-      pages <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pager</span><span style="color:#f92672">.</span>calculate_pages(posts, site<span style="color:#f92672">.</span>config<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;paginate&#39;</span><span style="color:#f92672">].</span>to_i)
-      (<span style="color:#ae81ff">1</span><span style="color:#f92672">..</span>pages)<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>num_page<span style="color:#f92672">|</span>
-        pager <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pager</span><span style="color:#f92672">.</span>new(site, num_page, posts, pages)
-        archive_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> dir
-        path <span style="color:#f92672">=</span> archive_path
-        <span style="color:#66d9ef">if</span> num_page <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>
-          path <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;/page/</span><span style="color:#e6db74">#{</span>num_page<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-        <span style="color:#66d9ef">end</span>
-        newpage <span style="color:#f92672">=</span> <span style="color:#66d9ef">ArchiveIndex</span><span style="color:#f92672">.</span>new(site, site<span style="color:#f92672">.</span>source, path, archive_path, posts)
-        newpage<span style="color:#f92672">.</span>pager <span style="color:#f92672">=</span> pager
-        site<span style="color:#f92672">.</span>pages <span style="color:#f92672">&lt;&lt;</span> newpage
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>paginate</span>(site, dir, posts)
+      pages <span style=color:#f92672>=</span> <span style=color:#66d9ef>Pager</span><span style=color:#f92672>.</span>calculate_pages(posts, site<span style=color:#f92672>.</span>config<span style=color:#f92672>[</span><span style=color:#e6db74>&#39;paginate&#39;</span><span style=color:#f92672>].</span>to_i)
+      (<span style=color:#ae81ff>1</span><span style=color:#f92672>..</span>pages)<span style=color:#f92672>.</span>each <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>num_page<span style=color:#f92672>|</span>
+        pager <span style=color:#f92672>=</span> <span style=color:#66d9ef>Pager</span><span style=color:#f92672>.</span>new(site, num_page, posts, pages)
+        archive_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/&#34;</span> <span style=color:#f92672>+</span> dir
+        path <span style=color:#f92672>=</span> archive_path
+        <span style=color:#66d9ef>if</span> num_page <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>1</span>
+          path <span style=color:#f92672>+=</span> <span style=color:#e6db74>&#34;/page/</span><span style=color:#e6db74>#{</span>num_page<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+        <span style=color:#66d9ef>end</span>
+        newpage <span style=color:#f92672>=</span> <span style=color:#66d9ef>ArchiveIndex</span><span style=color:#f92672>.</span>new(site, site<span style=color:#f92672>.</span>source, path, archive_path, posts)
+        newpage<span style=color:#f92672>.</span>pager <span style=color:#f92672>=</span> pager
+        site<span style=color:#f92672>.</span>pages <span style=color:#f92672>&lt;&lt;</span> newpage
 
-      <span style="color:#66d9ef">end</span>
-    <span style="color:#66d9ef">end</span>
-  <span style="color:#66d9ef">end</span>
+      <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+  <span style=color:#66d9ef>end</span>
 
-  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArchiveIndex</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Page</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(site, base, dir, base_path, posts)
-      @site <span style="color:#f92672">=</span> site
-      @base <span style="color:#f92672">=</span> base
-      @dir <span style="color:#f92672">=</span> dir
-      @name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.html&#39;</span>
+  <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ArchiveIndex</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>Page</span>
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(site, base, dir, base_path, posts)
+      @site <span style=color:#f92672>=</span> site
+      @base <span style=color:#f92672>=</span> base
+      @dir <span style=color:#f92672>=</span> dir
+      @name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;index.html&#39;</span>
 
-      self<span style="color:#f92672">.</span>process(@name)
-      self<span style="color:#f92672">.</span>read_yaml(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(base, <span style="color:#e6db74">&#39;_layouts&#39;</span>), <span style="color:#e6db74">&#39;archive_index.html&#39;</span>)
-      self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;base&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> base_path
-    <span style="color:#66d9ef">end</span>
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>The layout of the paginator for the archives is the same as that for categories and tags.</p>
-<p>That&rsquo;s it for my jekyll roundup, I other long time wordpress users find this information useful.</p>
-
-  </div>
-  
-
-<div class="navigation navigation-single">
-    
-    <a href="https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Porting a Wordpress blog to Jekyll: Part 1</span>
-    </a>
-    
-    
-    <a href="https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/" class="navigation-next">
-      <span class="navigation-tittle">Tips for being a more Productive Freelancer</span>
-      <i aria-hidden="true" class="fa fa-chevron-right"></i>
-    </a>
-    
-</div>
-
-
-  
-
-  
-    
-
-
-</article>
-
-
-        </div>
-        
-    
-<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
-  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-  crossorigin="anonymous">
-</script>
-
-
-    
-    
-
-
-
-
-    
-
-
-
-    </body>
-</html>
+      self<span style=color:#f92672>.</span>process(@name)
+      self<span style=color:#f92672>.</span>read_yaml(<span style=color:#66d9ef>File</span><span style=color:#f92672>.</span>join(base, <span style=color:#e6db74>&#39;_layouts&#39;</span>), <span style=color:#e6db74>&#39;archive_index.html&#39;</span>)
+      self<span style=color:#f92672>.</span>data<span style=color:#f92672>[</span><span style=color:#e6db74>&#39;base&#39;</span><span style=color:#f92672>]</span> <span style=color:#f92672>=</span> base_path
+    <span style=color:#66d9ef>end</span>
+  <span style=color:#66d9ef>end</span>
+<span style=color:#66d9ef>end</span>
+</code></pre></div><p>The layout of the paginator for the archives is the same as that for categories and tags.</p><p>That&rsquo;s it for my jekyll roundup, I other long time wordpress users find this information useful.</p></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
+<span class=navigation-tittle>Porting a Wordpress blog to Jekyll: Part 1</span></a>
+<a href=https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/ class=navigation-next><span class=navigation-tittle>Tips for being a more Productive Freelancer</span>
+<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>

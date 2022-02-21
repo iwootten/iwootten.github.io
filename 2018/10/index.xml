@@ -1,31 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>2018/10 on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/2018/10/</link>
-    <description>Recent content in 2018/10 on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2018/10/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What’s in a name?</title>
-      <link>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</link>
-      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</guid>
-      <description>I usually get one of two looks when I announce the name of my company as &amp;ldquo;Nifty Digits&amp;rdquo;. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
-When I picked the name, I was still a PhD student at University and wanted something that “sounded technical (digits), but also sort of British (nifty)”. I also was heavily influenced number of web design bloggers at the time, particularly Dan Cedarholm’s blog “Simple Bits”.</description>
-    </item>
-    
-    <item>
-      <title>Blogging with Hugo</title>
-      <link>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</link>
-      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</guid>
-      <description>All my most recent blog posts seem to be about updating my blog tooling (much as Rick commented earlier today). By recent, I obviously mean within the last 5 years.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2018/10 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2018/10/</link><description>Recent content in 2018/10 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2018/10/index.xml" rel="self" type="application/rss+xml"/><item><title>What’s in a name?</title><link>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</link><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</guid><description>I usually get one of two looks when I announce the name of my company as &amp;ldquo;Nifty Digits&amp;rdquo;. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
+When I picked the name, I was still a PhD student at University and wanted something that “sounded technical (digits), but also sort of British (nifty)”. I also was heavily influenced number of web design bloggers at the time, particularly Dan Cedarholm’s blog “Simple Bits”.</description></item><item><title>Blogging with Hugo</title><link>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</link><pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/</guid><description>All my most recent blog posts seem to be about updating my blog tooling (much as Rick commented earlier today). By recent, I obviously mean within the last 5 years.
 I back tracked through my blog updates and discovered I&amp;rsquo;ve used 5 different tools over my 15 year history on the web.
- Moveable Type (2003) b2/Cafelog (2003) WordPress (2003) Jekyll (2014) Metalsmith (2015) Hugo (2018)  Something got lost in the process of migrating through all these blogging platforms, using increasingly complex plugins to generate what is simple static html.</description>
-    </item>
-    
-  </channel>
-</rss>
+Moveable Type (2003) b2/Cafelog (2003) WordPress (2003) Jekyll (2014) Metalsmith (2015) Hugo (2018) Something got lost in the process of migrating through all these blogging platforms, using increasingly complex plugins to generate what is simple static html.</description></item></channel></rss>

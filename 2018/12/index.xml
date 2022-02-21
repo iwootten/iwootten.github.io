@@ -1,20 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>2018/12 on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/2018/12/</link>
-    <description>Recent content in 2018/12 on Ian Wootten</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2018/12/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Purpose</title>
-      <link>https://www.ianwootten.co.uk/2018/12/06/purpose/</link>
-      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2018/12/06/purpose/</guid>
-      <description>I’ve been thinking recently about purpose for Nifty Digits and myself, reviewing the clients I’ve done work for in the past and that work which I’ve felt most fulfilled by.
-I’ve straddled a path between web/pipeline developer thus far - so it’s fairly difficult to pin down what I do in a single mission statement. A more enterprising developer may well have done that as part of a business plan when they first started.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2018/12 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2018/12/</link><description>Recent content in 2018/12 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2018/12/index.xml" rel="self" type="application/rss+xml"/><item><title>Purpose</title><link>https://www.ianwootten.co.uk/2018/12/06/purpose/</link><pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2018/12/06/purpose/</guid><description>I’ve been thinking recently about purpose for Nifty Digits and myself, reviewing the clients I’ve done work for in the past and that work which I’ve felt most fulfilled by.
+I’ve straddled a path between web/pipeline developer thus far - so it’s fairly difficult to pin down what I do in a single mission statement. A more enterprising developer may well have done that as part of a business plan when they first started.</description></item></channel></rss>
