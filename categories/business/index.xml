@@ -1,9 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Business on Ian Wootten</title><link>https://www.ianwootten.co.uk/categories/business/</link><description>Recent content in Business on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Feb 2022 10:34:05 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/business/index.xml" rel="self" type="application/rss+xml"/><item><title>Investment Principles for Blogging</title><link>https://www.ianwootten.co.uk/2022/02/23/investment-principles-for-blogging/</link><pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/02/23/investment-principles-for-blogging/</guid><description>Your blog is a financial investment and you should treat it as such. I know, that might be stretch to some - but I have 15 years worth of analytics for this very blog that shows what happens when you don&amp;rsquo;t.
-I&amp;rsquo;ve always found it strange that those who are deeply involved in building the web don&amp;rsquo;t have any form of online presence. Most of that time I&amp;rsquo;ve thought of a website as a great advertisement that gives clients and employers a way of finding more out about you.</description></item><item><title>Comparing VAT Solutions for Bootstrapped UK Businesses</title><link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</guid><description>Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!</description></item><item><title>The Years I've Spent on Side Projects Have Not Been Wasted</title><link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link><pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</guid><description>In my 18 years online, I&amp;rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&amp;rsquo;ve gone years building out software I&amp;rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.</description></item><item><title>Purpose</title><link>https://www.ianwootten.co.uk/2018/12/06/purpose/</link><pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2018/12/06/purpose/</guid><description>I’ve been thinking recently about purpose for Nifty Digits and myself, reviewing the clients I’ve done work for in the past and that work which I’ve felt most fulfilled by.
-I’ve straddled a path between web/pipeline developer thus far - so it’s fairly difficult to pin down what I do in a single mission statement. A more enterprising developer may well have done that as part of a business plan when they first started.</description></item><item><title>What’s in a name?</title><link>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</link><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</guid><description>I usually get one of two looks when I announce the name of my company as &amp;ldquo;Nifty Digits&amp;rdquo;. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
-When I picked the name, I was still a PhD student at University and wanted something that “sounded technical (digits), but also sort of British (nifty)”. I also was heavily influenced number of web design bloggers at the time, particularly Dan Cedarholm’s blog “Simple Bits”.</description></item><item><title>Tips for being a more Productive Freelancer</title><link>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</link><pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</guid><description>Having heard the question raised on @workingoutshow, I thought I&amp;rsquo;d take some time to share the things that I&amp;rsquo;ve found have really helped me be productive in my work. These may not work for everyone, but hopefully some points will help for others.
-Find a Good Environment The single biggest change I&amp;rsquo;ve found which has had a major impact on my work is changing my environment. We&amp;rsquo;re lucky enough to have a small garden at our house and with the arrival of my daughter back in October, I was quick to realise that working in the open plan lounge in our house just wasn&amp;rsquo;t a viable option any more.</description></item><item><title>Shipping in March</title><link>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</link><pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</guid><description>This month, I’ve decided to take some time out to ship projects.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Business on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/categories/business/</link>
+    <description>Recent content in Business on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Feb 2022 10:34:05 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/business/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Investment Principles for Blogging</title>
+      <link>https://www.ianwootten.co.uk/2022/02/23/investment-principles-for-blogging/</link>
+      <pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/02/23/investment-principles-for-blogging/</guid>
+      <description>Your blog is a financial investment and you should treat it as such. I know, that might be stretch to some - but I have 15 years worth of analytics for this very blog that shows what happens when you don&amp;rsquo;t.
+I&amp;rsquo;ve always found it strange that those who are deeply involved in building the web don&amp;rsquo;t have any form of online presence. Most of that time I&amp;rsquo;ve thought of a website as a great advertisement that gives clients and employers a way of finding more out about you.</description>
+    </item>
+    
+    <item>
+      <title>Comparing VAT Solutions for Bootstrapped UK Businesses</title>
+      <link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</guid>
+      <description>Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!</description>
+    </item>
+    
+    <item>
+      <title>The Years I&#39;ve Spent on Side Projects Have Not Been Wasted</title>
+      <link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link>
+      <pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</guid>
+      <description>In my 18 years online, I&amp;rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&amp;rsquo;ve gone years building out software I&amp;rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.</description>
+    </item>
+    
+    <item>
+      <title>Purpose</title>
+      <link>https://www.ianwootten.co.uk/2018/12/06/purpose/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/12/06/purpose/</guid>
+      <description>I’ve been thinking recently about purpose for Nifty Digits and myself, reviewing the clients I’ve done work for in the past and that work which I’ve felt most fulfilled by.
+I’ve straddled a path between web/pipeline developer thus far - so it’s fairly difficult to pin down what I do in a single mission statement. A more enterprising developer may well have done that as part of a business plan when they first started.</description>
+    </item>
+    
+    <item>
+      <title>What’s in a name?</title>
+      <link>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/</guid>
+      <description>I usually get one of two looks when I announce the name of my company as &amp;ldquo;Nifty Digits&amp;rdquo;. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
+When I picked the name, I was still a PhD student at University and wanted something that “sounded technical (digits), but also sort of British (nifty)”. I also was heavily influenced number of web design bloggers at the time, particularly Dan Cedarholm’s blog “Simple Bits”.</description>
+    </item>
+    
+    <item>
+      <title>Tips for being a more Productive Freelancer</title>
+      <link>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</link>
+      <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</guid>
+      <description>Having heard the question raised on @workingoutshow, I thought I&amp;rsquo;d take some time to share the things that I&amp;rsquo;ve found have really helped me be productive in my work. These may not work for everyone, but hopefully some points will help for others.
+Find a Good Environment The single biggest change I&amp;rsquo;ve found which has had a major impact on my work is changing my environment. We&amp;rsquo;re lucky enough to have a small garden at our house and with the arrival of my daughter back in October, I was quick to realise that working in the open plan lounge in our house just wasn&amp;rsquo;t a viable option any more.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March</title>
+      <link>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</guid>
+      <description>This month, I’ve decided to take some time out to ship projects.
 I have a huge list of projects accumulating I’d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.
-Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released.</description></item><item><title>Second Rate Britizens</title><link>https://www.ianwootten.co.uk/2013/07/06/second-rate-britizens/</link><pubDate>Sat, 06 Jul 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2013/07/06/second-rate-britizens/</guid><description>I decided to attempt a simple app this week, first using GoCardless, then later the beta of Stripe. It requires the payment of funds between two individuals, neither of which might be a business. GoCardless suggests signing up to use their partner programme, which involves registering a user as a merchant. This isn’t entirely suitable given the individual will be asked many queries on the nature of their business (which they don’t have).</description></item><item><title>So You Want to Run a Fairtrade Business?</title><link>https://www.ianwootten.co.uk/2013/03/28/so-you-want-to-run-a-fairtrade-business/</link><pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2013/03/28/so-you-want-to-run-a-fairtrade-business/</guid><description>This is a brief retrospective of what I’ve learned in the 6 years I’ve been running Fair � Bare, a Fairtrade t-shirt company along with my wife.
-If you’re a new follower of mine, you heard right – I run a Fairtrade t-shirt company. I’ve not actively been marketing it more recently for a number of reasons, but I still have a strong belief in our original vision. That vision was that Fairtrade shirts at the time weren’t being well received by the world, despite being available.</description></item><item><title>Fair Bare - January £10 Sale!</title><link>https://www.ianwootten.co.uk/2010/01/07/fair-bare-january-10-sale/</link><pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2010/01/07/fair-bare-january-10-sale/</guid><description/></item><item><title>Fairy Tale Design Challenge</title><link>https://www.ianwootten.co.uk/2009/01/13/fairy-tale-design-challenge/</link><pubDate>Tue, 13 Jan 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2009/01/13/fairy-tale-design-challenge/</guid><description>It seems that all I do these days is talk about what’s going on over at Fair � Bare and if you’re here because you prefer the more geeky side to me I apologise I’ve not been indulging you recently. However, that said, these posts do represent a significant part of me right now and what’s going on in my life so I think it fair I shout about it.</description></item><item><title>Fair &amp; Bare Snowdodgers Challenge</title><link>https://www.ianwootten.co.uk/2008/11/03/fair-bare-snowdodgers-challenge/</link><pubDate>Mon, 03 Nov 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/11/03/fair-bare-snowdodgers-challenge/</guid><description>Yesterday I announced that we’re running our first design challenge in conjunction with team Snowdodgers at Fair � Bare. These are some really amazing fellas who are trying to raise £48,000 for charity by rallying a £200 banger round 4000 miles involving the Arctic circle. We’re asking designers to get in designs relating to the chilly weather and the guys crazy antics!
-If you’re interested, you’ve got just a month to get an entry in.</description></item><item><title>Fair and Bare's first shirt!</title><link>https://www.ianwootten.co.uk/2008/07/22/fair-and-bares-first-shirt/</link><pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/07/22/fair-and-bares-first-shirt/</guid><description/></item><item><title>Fair and Bare - Bringing Design to Fairtrade</title><link>https://www.ianwootten.co.uk/2008/05/06/fair-and-bare-bringing-design-to-fairtrade/</link><pubDate>Tue, 06 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/05/06/fair-and-bare-bringing-design-to-fairtrade/</guid><description>Some of the visitors to this site might be aware that I like my t shirts, each with their bold and awesome illustrations. I’m also quite an avid supporter of fairtrade, being involved with fairdos and purchasing fairtrade options such as tea and chocolate where possible. One of the big bugbears my friends and I have always had in the support of the fairtrade movement is that many of the designs put across upon fairtrade cotton products don’t appeal to us at all.</description></item></channel></rss>
+Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released.</description>
+    </item>
+    
+    <item>
+      <title>Second Rate Britizens</title>
+      <link>https://www.ianwootten.co.uk/2013/07/06/second-rate-britizens/</link>
+      <pubDate>Sat, 06 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2013/07/06/second-rate-britizens/</guid>
+      <description>I decided to attempt a simple app this week, first using GoCardless, then later the beta of Stripe. It requires the payment of funds between two individuals, neither of which might be a business. GoCardless suggests signing up to use their partner programme, which involves registering a user as a merchant. This isn’t entirely suitable given the individual will be asked many queries on the nature of their business (which they don’t have).</description>
+    </item>
+    
+    <item>
+      <title>So You Want to Run a Fairtrade Business?</title>
+      <link>https://www.ianwootten.co.uk/2013/03/28/so-you-want-to-run-a-fairtrade-business/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2013/03/28/so-you-want-to-run-a-fairtrade-business/</guid>
+      <description>This is a brief retrospective of what I’ve learned in the 6 years I’ve been running Fair � Bare, a Fairtrade t-shirt company along with my wife.
+If you’re a new follower of mine, you heard right – I run a Fairtrade t-shirt company. I’ve not actively been marketing it more recently for a number of reasons, but I still have a strong belief in our original vision. That vision was that Fairtrade shirts at the time weren’t being well received by the world, despite being available.</description>
+    </item>
+    
+    <item>
+      <title>Fair  Bare - January £10 Sale!</title>
+      <link>https://www.ianwootten.co.uk/2010/01/07/fair-bare-january-10-sale/</link>
+      <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2010/01/07/fair-bare-january-10-sale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fairy Tale Design Challenge</title>
+      <link>https://www.ianwootten.co.uk/2009/01/13/fairy-tale-design-challenge/</link>
+      <pubDate>Tue, 13 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2009/01/13/fairy-tale-design-challenge/</guid>
+      <description>It seems that all I do these days is talk about what’s going on over at Fair � Bare and if you’re here because you prefer the more geeky side to me I apologise I’ve not been indulging you recently. However, that said, these posts do represent a significant part of me right now and what’s going on in my life so I think it fair I shout about it.</description>
+    </item>
+    
+    <item>
+      <title>Fair &amp; Bare Snowdodgers Challenge</title>
+      <link>https://www.ianwootten.co.uk/2008/11/03/fair-bare-snowdodgers-challenge/</link>
+      <pubDate>Mon, 03 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/11/03/fair-bare-snowdodgers-challenge/</guid>
+      <description>Yesterday I announced that we’re running our first design challenge in conjunction with team Snowdodgers at Fair � Bare. These are some really amazing fellas who are trying to raise £48,000 for charity by rallying a £200 banger round 4000 miles involving the Arctic circle. We’re asking designers to get in designs relating to the chilly weather and the guys crazy antics!
+If you’re interested, you’ve got just a month to get an entry in.</description>
+    </item>
+    
+    <item>
+      <title>Fair and Bare&#39;s first shirt!</title>
+      <link>https://www.ianwootten.co.uk/2008/07/22/fair-and-bares-first-shirt/</link>
+      <pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/07/22/fair-and-bares-first-shirt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fair and Bare - Bringing Design to Fairtrade</title>
+      <link>https://www.ianwootten.co.uk/2008/05/06/fair-and-bare-bringing-design-to-fairtrade/</link>
+      <pubDate>Tue, 06 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/05/06/fair-and-bare-bringing-design-to-fairtrade/</guid>
+      <description>Some of the visitors to this site might be aware that I like my t shirts, each with their bold and awesome illustrations. I’m also quite an avid supporter of fairtrade, being involved with fairdos and purchasing fairtrade options such as tea and chocolate where possible. One of the big bugbears my friends and I have always had in the support of the fairtrade movement is that many of the designs put across upon fairtrade cotton products don’t appeal to us at all.</description>
+    </item>
+    
+  </channel>
+</rss>

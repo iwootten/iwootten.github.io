@@ -1,2 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>learning on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/learning/</link><description>Recent content in learning on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 Feb 2021 10:04:41 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/learning/index.xml" rel="self" type="application/rss+xml"/><item><title>The Years I've Spent on Side Projects Have Not Been Wasted</title><link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link><pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</guid><description>In my 18 years online, I&amp;rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&amp;rsquo;ve gone years building out software I&amp;rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.</description></item><item><title>2012</title><link>https://www.ianwootten.co.uk/2013/01/02/2012/</link><pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2013/01/02/2012/</guid><description>So here we are in a brand new year. 2012 came and went without even the slightest apocalypse. Reflecting on what has been achieved this past year has found favour with others in the web profession so I thought I might try it. More importantly to me, it also seems like a good way to perhaps spur me on to achieve some firm targets this year.
-My circumstances have dramatically changed since January last year.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/learning/</link>
+    <description>Recent content in learning on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Feb 2021 10:04:41 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Years I&#39;ve Spent on Side Projects Have Not Been Wasted</title>
+      <link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link>
+      <pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</guid>
+      <description>In my 18 years online, I&amp;rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&amp;rsquo;ve gone years building out software I&amp;rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.</description>
+    </item>
+    
+    <item>
+      <title>2012</title>
+      <link>https://www.ianwootten.co.uk/2013/01/02/2012/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2013/01/02/2012/</guid>
+      <description>So here we are in a brand new year. 2012 came and went without even the slightest apocalypse. Reflecting on what has been achieved this past year has found favour with others in the web profession so I thought I might try it. More importantly to me, it also seems like a good way to perhaps spur me on to achieve some firm targets this year.
+My circumstances have dramatically changed since January last year.</description>
+    </item>
+    
+  </channel>
+</rss>

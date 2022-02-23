@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>code igniter on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/code-igniter/</link><description>Recent content in code igniter on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 31 Jan 2008 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/code-igniter/index.xml" rel="self" type="application/rss+xml"/><item><title>Book Review: Code Igniter for Rapid PHP Application Development</title><link>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</link><pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code igniter on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/code-igniter/</link>
+    <description>Recent content in code igniter on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Jan 2008 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/code-igniter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book Review: Code Igniter for Rapid PHP Application Development</title>
+      <link>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

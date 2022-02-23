@@ -1,3 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2020/10 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2020/10/</link><description>Recent content in 2020/10 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2020/10/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Deploy a Django App to the DigitalOcean App Platform</title><link>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</link><pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</guid><description>Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&amp;rsquo;d go through some of the points that tripped me up here.
-I&amp;rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.</description></item><item><title>Publishing to PyPI Using Github Actions</title><link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link><pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate><guid>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</guid><description>In creating my first package on PyPI, I realised that many of the tasks I&amp;rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
-Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.</description></item><item><title>Publishing a Package to PyPI with Poetry</title><link>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</link><pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate><guid>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</guid><description>I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020/10 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2020/10/</link>
+    <description>Recent content in 2020/10 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2020/10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Deploy a Django App to the DigitalOcean App Platform</title>
+      <link>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</guid>
+      <description>Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&amp;rsquo;d go through some of the points that tripped me up here.
+I&amp;rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.</description>
+    </item>
+    
+    <item>
+      <title>Publishing to PyPI Using Github Actions</title>
+      <link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link>
+      <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</guid>
+      <description>In creating my first package on PyPI, I realised that many of the tasks I&amp;rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.</description>
+    </item>
+    
+    <item>
+      <title>Publishing a Package to PyPI with Poetry</title>
+      <link>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</link>
+      <pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</guid>
+      <description>I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</description>
+    </item>
+    
+  </channel>
+</rss>

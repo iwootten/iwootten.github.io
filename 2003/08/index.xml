@@ -1,7 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2003/08 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2003/08/</link><description>Recent content in 2003/08 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2003/08/index.xml" rel="self" type="application/rss+xml"/><item><title>Upgrade Joys</title><link>https://www.ianwootten.co.uk/2003/08/31/upgrade-joys/</link><pubDate>Sun, 31 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/31/upgrade-joys/</guid><description>In a bid to pummel my friends workmates at a bit of LAN gaming yesterday, I took the initiative and upgraded my computer this week. Placed an order on Monday, ordering just the CPU fan from a different store – which proved to be a bad idea, it still hasn’t turned up yet! – preventing me from installing the CPU on my new motherboard…..Tut Tut ebuyer..
-All well, its nice to have shedloads of space on my machine now, even if I don’t have any real need for it.</description></item><item><title>Random Rummaging</title><link>https://www.ianwootten.co.uk/2003/08/19/random-rummaging/</link><pubDate>Tue, 19 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/19/random-rummaging/</guid><description>Allow me to breathe a sigh of relief…I’ve just spent most of the last hour sorting out what’s rubbish from most of the paper lying about my room, whilst searching for my student support details. I did find them, could of been a messy first few weeks back at Uni if I hadn’t!
-I also found a mates wedding invitation and list, reminding me that I actually have to reply to say that I’m attending, and buy them a present.</description></item><item><title>All change</title><link>https://www.ianwootten.co.uk/2003/08/17/all-change/</link><pubDate>Sun, 17 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/17/all-change/</guid><description>Due to MT being incompatible with my Uni server from an imaging point of view, and the fact that its all coded in Perl – which I haven’t bothered looking at for a hell of a long time, I’ve ditched it and shifted my blog over to b2. Now I can actually post images! Woohoo! b2 is nice and tiny also, a mere 527Kb compared to MT’s 3Mb.
-I’m actually toying with the idea of developing a blogging tool as a final year project, I think that might be very rewarding.</description></item><item><title>Family Fun</title><link>https://www.ianwootten.co.uk/2003/08/17/family-fun/</link><pubDate>Sun, 17 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/17/family-fun/</guid><description>I’ve just got back from my Churches “family fun” event. They have been doing a whole bunch of different events this week as an opportunity to witness to those who might not normally come to YCC otherwise. Today was the big finale of the week and was basically all the families who had been a part of the week meeting up with the members of the Church.
-What that amounts to is lots of barbeques and little kiddies events galore.</description></item><item><title>Blog Install</title><link>https://www.ianwootten.co.uk/2003/08/14/blog-install/</link><pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/14/blog-install/</guid><description>So, I’ve installed Movable Type on my website. I figured it was about time that I get up to speed on this whole “Blogging” thing, but I could of even missed the bus already.
-I’ve spent half of the evening just looking at what can be done with MT, and it seems to integrate well with Invision Board as the MT crew have an example of a forum set up with it on their site.</description></item><item><title>netpbm woes</title><link>https://www.ianwootten.co.uk/2003/08/14/netpbm-woes/</link><pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/14/netpbm-woes/</guid><description>Right, Sonic Flux didn’t happen. Went to Martins instead to sort out a new monitor to replace his dying old one.
-I’m having a right job trying to get the image side of MT working. I want to post images from my t610 on here, but it seems somethings afoot as when trying to submit thumbnails I get a lovely page of hex! Ah well…Maybe MT wasn’t such a good move…</description></item><item><title>Sonic Flux</title><link>https://www.ianwootten.co.uk/2003/08/14/sonic-flux/</link><pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2003/08/14/sonic-flux/</guid><description>I’m pondering whether or not it might be a good idea to upgrade Ben’s Sonicflux site to use MT. I don’t think that over the last year much has been done to update his site, (well I know it hasn’t – I’ve been maintaining it, bad idea) and I’m sure he’d make use of it. He sends out regular updates via email to let everyone know whats going on, I’m sure I could get MT to send regular email updates.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2003/08 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2003/08/</link>
+    <description>Recent content in 2003/08 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2003/08/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrade Joys</title>
+      <link>https://www.ianwootten.co.uk/2003/08/31/upgrade-joys/</link>
+      <pubDate>Sun, 31 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/31/upgrade-joys/</guid>
+      <description>In a bid to pummel my friends workmates at a bit of LAN gaming yesterday, I took the initiative and upgraded my computer this week. Placed an order on Monday, ordering just the CPU fan from a different store – which proved to be a bad idea, it still hasn’t turned up yet! – preventing me from installing the CPU on my new motherboard…..Tut Tut ebuyer..
+All well, its nice to have shedloads of space on my machine now, even if I don’t have any real need for it.</description>
+    </item>
+    
+    <item>
+      <title>Random Rummaging</title>
+      <link>https://www.ianwootten.co.uk/2003/08/19/random-rummaging/</link>
+      <pubDate>Tue, 19 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/19/random-rummaging/</guid>
+      <description>Allow me to breathe a sigh of relief…I’ve just spent most of the last hour sorting out what’s rubbish from most of the paper lying about my room, whilst searching for my student support details. I did find them, could of been a messy first few weeks back at Uni if I hadn’t!
+I also found a mates wedding invitation and list, reminding me that I actually have to reply to say that I’m attending, and buy them a present.</description>
+    </item>
+    
+    <item>
+      <title>All change</title>
+      <link>https://www.ianwootten.co.uk/2003/08/17/all-change/</link>
+      <pubDate>Sun, 17 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/17/all-change/</guid>
+      <description>Due to MT being incompatible with my Uni server from an imaging point of view, and the fact that its all coded in Perl – which I haven’t bothered looking at for a hell of a long time, I’ve ditched it and shifted my blog over to b2. Now I can actually post images! Woohoo! b2 is nice and tiny also, a mere 527Kb compared to MT’s 3Mb.
+I’m actually toying with the idea of developing a blogging tool as a final year project, I think that might be very rewarding.</description>
+    </item>
+    
+    <item>
+      <title>Family Fun</title>
+      <link>https://www.ianwootten.co.uk/2003/08/17/family-fun/</link>
+      <pubDate>Sun, 17 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/17/family-fun/</guid>
+      <description>I’ve just got back from my Churches “family fun” event. They have been doing a whole bunch of different events this week as an opportunity to witness to those who might not normally come to YCC otherwise. Today was the big finale of the week and was basically all the families who had been a part of the week meeting up with the members of the Church.
+What that amounts to is lots of barbeques and little kiddies events galore.</description>
+    </item>
+    
+    <item>
+      <title>Blog Install</title>
+      <link>https://www.ianwootten.co.uk/2003/08/14/blog-install/</link>
+      <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/14/blog-install/</guid>
+      <description>So, I’ve installed Movable Type on my website. I figured it was about time that I get up to speed on this whole “Blogging” thing, but I could of even missed the bus already.
+I’ve spent half of the evening just looking at what can be done with MT, and it seems to integrate well with Invision Board as the MT crew have an example of a forum set up with it on their site.</description>
+    </item>
+    
+    <item>
+      <title>netpbm woes</title>
+      <link>https://www.ianwootten.co.uk/2003/08/14/netpbm-woes/</link>
+      <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/14/netpbm-woes/</guid>
+      <description>Right, Sonic Flux didn’t happen. Went to Martins instead to sort out a new monitor to replace his dying old one.
+I’m having a right job trying to get the image side of MT working. I want to post images from my t610 on here, but it seems somethings afoot as when trying to submit thumbnails I get a lovely page of hex! Ah well…Maybe MT wasn’t such a good move…</description>
+    </item>
+    
+    <item>
+      <title>Sonic Flux</title>
+      <link>https://www.ianwootten.co.uk/2003/08/14/sonic-flux/</link>
+      <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2003/08/14/sonic-flux/</guid>
+      <description>I’m pondering whether or not it might be a good idea to upgrade Ben’s Sonicflux site to use MT. I don’t think that over the last year much has been done to update his site, (well I know it hasn’t – I’ve been maintaining it, bad idea) and I’m sure he’d make use of it. He sends out regular updates via email to let everyone know whats going on, I’m sure I could get MT to send regular email updates.</description>
+    </item>
+    
+  </channel>
+</rss>

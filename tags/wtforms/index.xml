@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wtforms on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/wtforms/</link><description>Recent content in wtforms on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/wtforms/index.xml" rel="self" type="application/rss+xml"/><item><title>User Generated Forms with WTForms</title><link>https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/</link><pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/</guid><description>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wtforms on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/wtforms/</link>
+    <description>Recent content in wtforms on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/wtforms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>User Generated Forms with WTForms</title>
+      <link>https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/</guid>
+      <description>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer.</description>
+    </item>
+    
+  </channel>
+</rss>

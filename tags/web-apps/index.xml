@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web Apps on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/web-apps/</link><description>Recent content in Web Apps on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 31 Mar 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/web-apps/index.xml" rel="self" type="application/rss+xml"/><item><title>A Survey of Hype in Web Development Podcasts</title><link>https://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</link><pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</guid><description>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they’re allowed to, it is their own podcast after all, often from their own businesses etc. I’m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless.
-One of these things is the title of the show itself.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Apps on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/web-apps/</link>
+    <description>Recent content in Web Apps on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Mar 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/web-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Survey of Hype in Web Development Podcasts</title>
+      <link>https://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</link>
+      <pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2011/03/31/a-survey-of-hype-in-web-development-podcasts/</guid>
+      <description>I listen to quite a few web dev podcasts. Something that irks me about a lot of them, is how much they tend to hype their own shows, products or the like. Sure, they’re allowed to, it is their own podcast after all, often from their own businesses etc. I’m fully aware this all possibly contributes toward the success of shows, but it annoys me nonetheless.
+One of these things is the title of the show itself.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,5 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2014/03 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2014/03/</link><description>Recent content in 2014/03 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2014/03/index.xml" rel="self" type="application/rss+xml"/><item><title>Shipping in March: Weeks 2 &amp; 3</title><link>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</link><pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</guid><description>So, anybody paying close attention may have noticed I’ve skipped a week on updating my progress on shipping in March. There wasn’t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn’t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description></item><item><title>Shipping in March: Week 1</title><link>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</guid><description>I promised a progress update on how my attempt to get 4 projects shipped this month was going. On my first week, I decided to focus on my time tracking tool, hourglass. I’ve had this in the works for sometime and unfortunately, it’s fallen by the wayside to client work.
-I’ve failed on my first week in getting this released to the world, but I’m far happier with how it’s working now and the value it might give to any potential user than previously.</description></item><item><title>Scaling a Linear Domain to an Ordinal Range with d3</title><link>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</link><pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</guid><description>I’ve had the opportunity of using d3 quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.
-Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</description></item><item><title>Shipping in March</title><link>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</link><pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</guid><description>This month, I’ve decided to take some time out to ship projects.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014/03 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2014/03/</link>
+    <description>Recent content in 2014/03 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2014/03/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shipping in March: Weeks 2 &amp; 3</title>
+      <link>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</guid>
+      <description>So, anybody paying close attention may have noticed I’ve skipped a week on updating my progress on shipping in March. There wasn’t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn’t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March: Week 1</title>
+      <link>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</guid>
+      <description>I promised a progress update on how my attempt to get 4 projects shipped this month was going. On my first week, I decided to focus on my time tracking tool, hourglass. I’ve had this in the works for sometime and unfortunately, it’s fallen by the wayside to client work.
+I’ve failed on my first week in getting this released to the world, but I’m far happier with how it’s working now and the value it might give to any potential user than previously.</description>
+    </item>
+    
+    <item>
+      <title>Scaling a Linear Domain to an Ordinal Range with d3</title>
+      <link>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</link>
+      <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</guid>
+      <description>I’ve had the opportunity of using d3 quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.
+Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March</title>
+      <link>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</guid>
+      <description>This month, I’ve decided to take some time out to ship projects.
 I have a huge list of projects accumulating I’d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.
-Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released.</description></item></channel></rss>
+Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released.</description>
+    </item>
+    
+  </channel>
+</rss>

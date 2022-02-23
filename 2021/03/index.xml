@@ -1,2 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2021/03 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2021/03/</link><description>Recent content in 2021/03 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2021/03/index.xml" rel="self" type="application/rss+xml"/><item><title>YouTube Videos as Small Experiments</title><link>https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/</link><pubDate>Tue, 30 Mar 2021 13:07:26 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/</guid><description>The popularity of working on small experiments (or &amp;lsquo;bets&amp;rsquo;) as business ideas before investing a significant amount of time upon one of them is a model of work rapidly gaining traction with indie hackers.
-It makes so much sense - when you&amp;rsquo;re small and in need of money to fund your work, you don&amp;rsquo;t waste time on ideas which are unproven. Instead you choose to work on a portfolio of many ideas over a short period of time to see which ones resonate with customers.</description></item><item><title>Setting Up a New M1 Mac for Development</title><link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link><pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</guid><description>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&amp;rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2021/03 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2021/03/</link>
+    <description>Recent content in 2021/03 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2021/03/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>YouTube Videos as Small Experiments</title>
+      <link>https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/</link>
+      <pubDate>Tue, 30 Mar 2021 13:07:26 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/</guid>
+      <description>The popularity of working on small experiments (or &amp;lsquo;bets&amp;rsquo;) as business ideas before investing a significant amount of time upon one of them is a model of work rapidly gaining traction with indie hackers.
+It makes so much sense - when you&amp;rsquo;re small and in need of money to fund your work, you don&amp;rsquo;t waste time on ideas which are unproven. Instead you choose to work on a portfolio of many ideas over a short period of time to see which ones resonate with customers.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up a New M1 Mac for Development</title>
+      <link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</guid>
+      <description>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&amp;rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,3 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Music on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/music/</link><description>Recent content in Music on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Jun 2021 09:54:37 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/music/index.xml" rel="self" type="application/rss+xml"/><item><title>Build Your Own Pico Powered Midi Controller for $35</title><link>https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/</link><pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/</guid><description>Find the video of this article on youtube
-The Launchpad is a midi controller used for audio production with digital audio workstations (or DAWs) like Ableton. In comes in mini and standard forms and features 64 pads, along with 16 additional buttons ready to map to your application of choice. The mini version starts at £75, the standard is £145 and there&amp;rsquo;s an older &amp;ldquo;Pro&amp;rdquo; which is currently available for £179.</description></item><item><title>Copyright Law Finally Aligns with Me</title><link>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</link><pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</guid><description>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.
-Finally, we’ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I’ve long made copies of my cd’s to listen to whilst coding (iTunes allows me to do so simply) – but it is not currently legal to move these files to another storage medium, such as an mp3 player.</description></item><item><title>Mixbooth</title><link>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</link><pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid><description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn’t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you’d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description></item><item><title>Are Music Blogs getting a Raw Deal?</title><link>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</link><pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</guid><description>I can’t help but feel a little sorry for music blogs as of late. I’m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I’ve found it really interesting to browse around and discover new artists.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/music/</link>
+    <description>Recent content in Music on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jun 2021 09:54:37 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build Your Own Pico Powered Midi Controller for $35</title>
+      <link>https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/</link>
+      <pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/</guid>
+      <description>Find the video of this article on youtube
+The Launchpad is a midi controller used for audio production with digital audio workstations (or DAWs) like Ableton. In comes in mini and standard forms and features 64 pads, along with 16 additional buttons ready to map to your application of choice. The mini version starts at £75, the standard is £145 and there&amp;rsquo;s an older &amp;ldquo;Pro&amp;rdquo; which is currently available for £179.</description>
+    </item>
+    
+    <item>
+      <title>Copyright Law Finally Aligns with Me</title>
+      <link>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</guid>
+      <description>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.
+Finally, we’ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I’ve long made copies of my cd’s to listen to whilst coding (iTunes allows me to do so simply) – but it is not currently legal to move these files to another storage medium, such as an mp3 player.</description>
+    </item>
+    
+    <item>
+      <title>Mixbooth</title>
+      <link>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</link>
+      <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2010/03/21/mixbooth/</guid>
+      <description>Mixbooth is a dj mix hosting service I created several years ago. At the time there wasn’t a lot around in terms of options for allowing anyone to share them. You either had to exchange it upon a site filled with advertisements, or host it on your own space which might mean you’d breach your server bandwidth for any given month. I decided to use some space I had available at next to nothing to build something that might be of use to myself and any other dj whom saw fit to use it.</description>
+    </item>
+    
+    <item>
+      <title>Are Music Blogs getting a Raw Deal?</title>
+      <link>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</link>
+      <pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2009/01/31/are-music-blogs-getting-a-raw-deal/</guid>
+      <description>I can’t help but feel a little sorry for music blogs as of late. I’m sure you may be familiar with The Hype Machine and may use it on a daily basis. For the uninitiated, it is essentially a music blog aggregator, which takes details of tracks and ranks them based on how often they appear and how popular they are. I’ve found it really interesting to browse around and discover new artists.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2021/02 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2021/02/</link><description>Recent content in 2021/02 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2021/02/index.xml" rel="self" type="application/rss+xml"/><item><title>Comparing VAT Solutions for Bootstrapped UK Businesses</title><link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</guid><description>Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!</description></item><item><title>Creating Social Images with Puppeteer</title><link>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</link><pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</guid><description>In this post I&amp;rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.</description></item><item><title>The Years I've Spent on Side Projects Have Not Been Wasted</title><link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link><pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</guid><description>In my 18 years online, I&amp;rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&amp;rsquo;ve gone years building out software I&amp;rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2021/02 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2021/02/</link>
+    <description>Recent content in 2021/02 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2021/02/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing VAT Solutions for Bootstrapped UK Businesses</title>
+      <link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</guid>
+      <description>Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!</description>
+    </item>
+    
+    <item>
+      <title>Creating Social Images with Puppeteer</title>
+      <link>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</link>
+      <pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</guid>
+      <description>In this post I&amp;rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.</description>
+    </item>
+    
+    <item>
+      <title>The Years I&#39;ve Spent on Side Projects Have Not Been Wasted</title>
+      <link>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</link>
+      <pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/</guid>
+      <description>In my 18 years online, I&amp;rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&amp;rsquo;ve gone years building out software I&amp;rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.</description>
+    </item>
+    
+  </channel>
+</rss>

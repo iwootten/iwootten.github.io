@@ -1,18 +1,244 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Development on Ian Wootten</title><link>https://www.ianwootten.co.uk/categories/development/</link><description>Recent content in Development on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Feb 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/development/index.xml" rel="self" type="application/rss+xml"/><item><title>How to use .env files with Poetry</title><link>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</link><pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</guid><description>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
-Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default package management behaviour and @mpeteuil made one for .</description></item><item><title>How to Query the Product Hunt API Responsibly with Python</title><link>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</link><pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</guid><description>I recently wrote an article that got to the #1 spot on Hacker News for the folks at ScrapingBee. It focused on retrieving details for the 90,000+ featured products from the Product Hunt API and digging into interesting facets of the data. I was excited to see it sat at the #1 for a few hours and the frontpage for longer whilst I repeatedly took screenshots to regale my children with in later life.</description></item><item><title>How to Create AWS Lambda Layers for Python Dependencies</title><link>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</link><pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</guid><description>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</description></item><item><title>Rendering a Christmas Tree that Never Comes Down with p5.js</title><link>https://www.ianwootten.co.uk/2022/01/10/rendering-a-christmas-tree-that-never-comes-down-with-p5.js/</link><pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/01/10/rendering-a-christmas-tree-that-never-comes-down-with-p5.js/</guid><description>The animation below is a 3D render of the actual positions of the lights from my Christmas tree in 2021 using p5.js. Unlike my actual Christmas tree, this one won&amp;rsquo;t be taken down and will run all year round (save for the few occasions Github might go down).
-Calculating the LEDs coordinates is taken from an idea by mathematician Matt Parker where they are lit individually one at a time and the brightest area is logged in each of the x, y and z axes.</description></item><item><title>How to Code Christmas Tree LEDs (and find their 3D Coordinates)</title><link>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</link><pubDate>Wed, 29 Dec 2021 12:15:49 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</guid><description>This Christmas, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That&amp;rsquo;s tongue and cheek, but also ended up being very true.
-I&amp;rsquo;d been inspired by mathematician Matt Parker in 2020 where he did this. In this post I&amp;rsquo;ll describe all the hardware I used and how it was connected and I&amp;rsquo;ll share the code I needed to write to capture the LED&amp;rsquo;s coordinates.</description></item><item><title>Deleting Disqus Made My Blog Run 3x Faster</title><link>https://www.ianwootten.co.uk/2021/09/17/deleting-disqus-made-my-blog-run-3x-faster/</link><pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/09/17/deleting-disqus-made-my-blog-run-3x-faster/</guid><description>I got fed up recently of the insane number of requests that were given over to my use of disqus here on my blog. I&amp;rsquo;ve had it enabled since moving from Wordpress to various other blogging engines, wanting to take my comments with me to a static blogging engine, but enough is enough. I remember disqus being a darling in the startup scene when it first launched in 2007 but it&amp;rsquo;s changed hands several times since and the idea that randoms ads may turn up on my blog at some point is a massive turn off.</description></item><item><title>Automatic Static Site Creation with Astro, Supabase and Netlify</title><link>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid><description>This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
-I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description></item><item><title>Comparing Low-Code Tools as a Developer</title><link>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</link><pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</guid><description>When first hearing of the concept of &amp;ldquo;no-code&amp;rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&amp;rsquo;t lead to anything genuinely valuable.
-I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation.</description></item><item><title>Why Python devs love Requests</title><link>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</link><pubDate>Thu, 08 Jul 2021 15:03:34 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</guid><description>Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
-At the time of Requests original release in 2011 urllib3 was the high level HTTP library of choice and Requests actually uses it as a dependency.</description></item><item><title>Installing Module Extras with Pipenv and Poetry</title><link>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</link><pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</guid><description>I thought it worth documenting how to install &amp;ldquo;extra&amp;rdquo; dependencies in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with uvicorn where the websockets module hadn&amp;rsquo;t been installed as a result of not including the &amp;ldquo;standard&amp;rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.
-As an example, take the following pip command:</description></item><item><title>Setting Up a New M1 Mac for Development</title><link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link><pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</guid><description>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&amp;rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.</description></item><item><title>Creating Social Images with Puppeteer</title><link>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</link><pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</guid><description>In this post I&amp;rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.</description></item><item><title>Building a Cookiecutter Template for Multiple Python Package Managers</title><link>https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/</link><pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/</guid><description>In my previous post, I described how you can use Python and Makefiles to quickly get new projects started. In this post I explore how you can use cookiecutters more advanced Jinja templating techniques to make a cookiecutter that can be used for multiple package managers. Specifically, we&amp;rsquo;ll be extending the existing template to build another that can be used with either Poetry or Pipenv.
-Our New Cookiecutter Template As a reminder, Cookiecutter allows us to template project and directory content and structure using Jinja2 logic.</description></item><item><title>Bootstrapping Python Projects with Cookiecutter and Makefiles</title><link>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</link><pubDate>Thu, 07 Jan 2021 15:57:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</guid><description>When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</description></item><item><title>What is a PEP and why should I care?</title><link>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</link><pubDate>Mon, 16 Nov 2020 15:15:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</guid><description>No doubt if you&amp;rsquo;ve been developing in Python for any length of time, you will have heard the acronym &amp;ldquo;PEP&amp;rdquo; mentioned quite frequently. More often than not you hear it when talking about Python code style, usually followed by the number &amp;ldquo;8&amp;rdquo;. So what is a PEP and why should you care?
-What is a PEP? PEP stands for &amp;ldquo;Python Enhancement Proposal&amp;rdquo;. They are used to describe and summarise the technical design and reasons for enhancements to Python and surrounding processes.</description></item><item><title>Interesting Features in Python 3.9</title><link>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</link><pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</guid><description>Here&amp;rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/categories/development/</link>
+    <description>Recent content in Development on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Feb 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use .env files with Poetry</title>
+      <link>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</guid>
+      <description>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
+Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default package management behaviour and @mpeteuil made one for .</description>
+    </item>
+    
+    <item>
+      <title>How to Query the Product Hunt API Responsibly with Python</title>
+      <link>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</link>
+      <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/</guid>
+      <description>I recently wrote an article that got to the #1 spot on Hacker News for the folks at ScrapingBee. It focused on retrieving details for the 90,000+ featured products from the Product Hunt API and digging into interesting facets of the data. I was excited to see it sat at the #1 for a few hours and the frontpage for longer whilst I repeatedly took screenshots to regale my children with in later life.</description>
+    </item>
+    
+    <item>
+      <title>How to Create AWS Lambda Layers for Python Dependencies</title>
+      <link>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</link>
+      <pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</guid>
+      <description>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</description>
+    </item>
+    
+    <item>
+      <title>Rendering a Christmas Tree that Never Comes Down with p5.js</title>
+      <link>https://www.ianwootten.co.uk/2022/01/10/rendering-a-christmas-tree-that-never-comes-down-with-p5.js/</link>
+      <pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/01/10/rendering-a-christmas-tree-that-never-comes-down-with-p5.js/</guid>
+      <description>The animation below is a 3D render of the actual positions of the lights from my Christmas tree in 2021 using p5.js. Unlike my actual Christmas tree, this one won&amp;rsquo;t be taken down and will run all year round (save for the few occasions Github might go down).
+Calculating the LEDs coordinates is taken from an idea by mathematician Matt Parker where they are lit individually one at a time and the brightest area is logged in each of the x, y and z axes.</description>
+    </item>
+    
+    <item>
+      <title>How to Code Christmas Tree LEDs (and find their 3D Coordinates)</title>
+      <link>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</link>
+      <pubDate>Wed, 29 Dec 2021 12:15:49 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/</guid>
+      <description>This Christmas, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That&amp;rsquo;s tongue and cheek, but also ended up being very true.
+I&amp;rsquo;d been inspired by mathematician Matt Parker in 2020 where he did this. In this post I&amp;rsquo;ll describe all the hardware I used and how it was connected and I&amp;rsquo;ll share the code I needed to write to capture the LED&amp;rsquo;s coordinates.</description>
+    </item>
+    
+    <item>
+      <title>Deleting Disqus Made My Blog Run 3x Faster</title>
+      <link>https://www.ianwootten.co.uk/2021/09/17/deleting-disqus-made-my-blog-run-3x-faster/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/09/17/deleting-disqus-made-my-blog-run-3x-faster/</guid>
+      <description>I got fed up recently of the insane number of requests that were given over to my use of disqus here on my blog. I&amp;rsquo;ve had it enabled since moving from Wordpress to various other blogging engines, wanting to take my comments with me to a static blogging engine, but enough is enough. I remember disqus being a darling in the startup scene when it first launched in 2007 but it&amp;rsquo;s changed hands several times since and the idea that randoms ads may turn up on my blog at some point is a massive turn off.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Static Site Creation with Astro, Supabase and Netlify</title>
+      <link>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid>
+      <description>This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
+I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description>
+    </item>
+    
+    <item>
+      <title>Comparing Low-Code Tools as a Developer</title>
+      <link>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</link>
+      <pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</guid>
+      <description>When first hearing of the concept of &amp;ldquo;no-code&amp;rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&amp;rsquo;t lead to anything genuinely valuable.
+I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation.</description>
+    </item>
+    
+    <item>
+      <title>Why Python devs love Requests</title>
+      <link>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</link>
+      <pubDate>Thu, 08 Jul 2021 15:03:34 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</guid>
+      <description>Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
+At the time of Requests original release in 2011 urllib3 was the high level HTTP library of choice and Requests actually uses it as a dependency.</description>
+    </item>
+    
+    <item>
+      <title>Installing Module Extras with Pipenv and Poetry</title>
+      <link>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/</guid>
+      <description>I thought it worth documenting how to install &amp;ldquo;extra&amp;rdquo; dependencies in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with uvicorn where the websockets module hadn&amp;rsquo;t been installed as a result of not including the &amp;ldquo;standard&amp;rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.
+As an example, take the following pip command:</description>
+    </item>
+    
+    <item>
+      <title>Setting Up a New M1 Mac for Development</title>
+      <link>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/</guid>
+      <description>I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&amp;rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.</description>
+    </item>
+    
+    <item>
+      <title>Creating Social Images with Puppeteer</title>
+      <link>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</link>
+      <pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/</guid>
+      <description>In this post I&amp;rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.</description>
+    </item>
+    
+    <item>
+      <title>Building a Cookiecutter Template for Multiple Python Package Managers</title>
+      <link>https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/</link>
+      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/</guid>
+      <description>In my previous post, I described how you can use Python and Makefiles to quickly get new projects started. In this post I explore how you can use cookiecutters more advanced Jinja templating techniques to make a cookiecutter that can be used for multiple package managers. Specifically, we&amp;rsquo;ll be extending the existing template to build another that can be used with either Poetry or Pipenv.
+Our New Cookiecutter Template As a reminder, Cookiecutter allows us to template project and directory content and structure using Jinja2 logic.</description>
+    </item>
+    
+    <item>
+      <title>Bootstrapping Python Projects with Cookiecutter and Makefiles</title>
+      <link>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</link>
+      <pubDate>Thu, 07 Jan 2021 15:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/</guid>
+      <description>When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.</description>
+    </item>
+    
+    <item>
+      <title>What is a PEP and why should I care?</title>
+      <link>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</link>
+      <pubDate>Mon, 16 Nov 2020 15:15:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/</guid>
+      <description>No doubt if you&amp;rsquo;ve been developing in Python for any length of time, you will have heard the acronym &amp;ldquo;PEP&amp;rdquo; mentioned quite frequently. More often than not you hear it when talking about Python code style, usually followed by the number &amp;ldquo;8&amp;rdquo;. So what is a PEP and why should you care?
+What is a PEP? PEP stands for &amp;ldquo;Python Enhancement Proposal&amp;rdquo;. They are used to describe and summarise the technical design and reasons for enhancements to Python and surrounding processes.</description>
+    </item>
+    
+    <item>
+      <title>Interesting Features in Python 3.9</title>
+      <link>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</link>
+      <pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/</guid>
+      <description>Here&amp;rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
 Full Release Notes
 Merging and Updating Dictionaries PEP 584 - Dictionaries now have new union operators to work with them.
 Python 3.8:
-x = {&amp;#39;key&amp;#39;: &amp;#39;original_value&amp;#39;} y = {&amp;#39;key&amp;#39;: &amp;#39;updated_value&amp;#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:</description></item><item><title>Use Black to Format Python and get on with Your Life</title><link>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</link><pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</guid><description>When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&amp;rsquo;t meet formatting rules that were felt best for that piece of work. It didn&amp;rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was wrong on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again.</description></item><item><title>How to Deploy a Django App to the DigitalOcean App Platform</title><link>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</link><pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</guid><description>Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&amp;rsquo;d go through some of the points that tripped me up here.
-I&amp;rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.</description></item><item><title>Publishing to PyPI Using Github Actions</title><link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link><pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate><guid>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</guid><description>In creating my first package on PyPI, I realised that many of the tasks I&amp;rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
-Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.</description></item><item><title>Publishing a Package to PyPI with Poetry</title><link>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</link><pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate><guid>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</guid><description>I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</description></item><item><title>My Web Development Stack in 2018</title><link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link><pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</guid><description>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
-I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.</description></item><item><title>Shipping in March: Weeks 2 &amp; 3</title><link>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</link><pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</guid><description>So, anybody paying close attention may have noticed I’ve skipped a week on updating my progress on shipping in March. There wasn’t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn’t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description></item><item><title>Decrypting Filezilla Passwords with PHP</title><link>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</link><pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</guid><description>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description></item><item><title>Bash bash</title><link>https://www.ianwootten.co.uk/2006/10/16/bash-bash/</link><pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2006/10/16/bash-bash/</guid><description>I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
-I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that.</description></item></channel></rss>
+x = {&amp;#39;key&amp;#39;: &amp;#39;original_value&amp;#39;} y = {&amp;#39;key&amp;#39;: &amp;#39;updated_value&amp;#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:</description>
+    </item>
+    
+    <item>
+      <title>Use Black to Format Python and get on with Your Life</title>
+      <link>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</link>
+      <pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/</guid>
+      <description>When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&amp;rsquo;t meet formatting rules that were felt best for that piece of work. It didn&amp;rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was wrong on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again.</description>
+    </item>
+    
+    <item>
+      <title>How to Deploy a Django App to the DigitalOcean App Platform</title>
+      <link>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/</guid>
+      <description>Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&amp;rsquo;d go through some of the points that tripped me up here.
+I&amp;rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.</description>
+    </item>
+    
+    <item>
+      <title>Publishing to PyPI Using Github Actions</title>
+      <link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link>
+      <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</guid>
+      <description>In creating my first package on PyPI, I realised that many of the tasks I&amp;rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.</description>
+    </item>
+    
+    <item>
+      <title>Publishing a Package to PyPI with Poetry</title>
+      <link>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</link>
+      <pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/</guid>
+      <description>I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</description>
+    </item>
+    
+    <item>
+      <title>My Web Development Stack in 2018</title>
+      <link>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/</guid>
+      <description>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
+I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March: Weeks 2 &amp; 3</title>
+      <link>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</guid>
+      <description>So, anybody paying close attention may have noticed I’ve skipped a week on updating my progress on shipping in March. There wasn’t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn’t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description>
+    </item>
+    
+    <item>
+      <title>Decrypting Filezilla Passwords with PHP</title>
+      <link>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</link>
+      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</guid>
+      <description>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description>
+    </item>
+    
+    <item>
+      <title>Bash bash</title>
+      <link>https://www.ianwootten.co.uk/2006/10/16/bash-bash/</link>
+      <pubDate>Mon, 16 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2006/10/16/bash-bash/</guid>
+      <description>I was quite impressed with myself the other day that I’d actually managed to write a bash script within ubuntu which served a purpose. I wanted to be able to monitor the size of files within a particular directory, and report back their size when a change was observed.
+I found a program called fileschanged, which fulfilled half the problem, namely reporting back a file had changed, but I needed a greater level of detail than that.</description>
+    </item>
+    
+  </channel>
+</rss>

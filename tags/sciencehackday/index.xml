@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sciencehackday on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/sciencehackday/</link><description>Recent content in sciencehackday on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 24 Jul 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/sciencehackday/index.xml" rel="self" type="application/rss+xml"/><item><title>How not to: Do A Hack Day</title><link>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</link><pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</guid><description>It’s been well over a month since I attended science hack day and I’d thought I’d put out some notes on my time there. Rather than do a run down of the event, for which I’m sure there’s far more comprehensive blog posts available already, I thought I’d share my experiences based on attendance of a number of different hack events I’ve been to over the years. I went with the full intention of doing some hardcore hacking, but didn’t entirely meet my own expectations.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sciencehackday on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/sciencehackday/</link>
+    <description>Recent content in sciencehackday on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Jul 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/sciencehackday/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How not to: Do A Hack Day</title>
+      <link>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</link>
+      <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2010/07/24/how-not-to-do-a-hack-day/</guid>
+      <description>It’s been well over a month since I attended science hack day and I’d thought I’d put out some notes on my time there. Rather than do a run down of the event, for which I’m sure there’s far more comprehensive blog posts available already, I thought I’d share my experiences based on attendance of a number of different hack events I’ve been to over the years. I went with the full intention of doing some hardcore hacking, but didn’t entirely meet my own expectations.</description>
+    </item>
+    
+  </channel>
+</rss>

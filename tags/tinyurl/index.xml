@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tinyurl on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/tinyurl/</link><description>Recent content in tinyurl on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 May 2009 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/tinyurl/index.xml" rel="self" type="application/rss+xml"/><item><title>Create Your Own TinyURL Service for WordPress</title><link>https://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</link><pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</guid><description>I don’t particularly like using URL shortening services. I think I first noticed them getting used rather prolificly in the Guardians technology section to include lots of random links to bizarre web content. TinyURL’s own web site wouldn’t particularly inspire me to go ahead and make use of it either. But, because of my own use of services such as twitter, I’m forced to shrink down links to get within those 144 characters.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tinyurl on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/tinyurl/</link>
+    <description>Recent content in tinyurl on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 May 2009 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/tinyurl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Your Own TinyURL Service for WordPress</title>
+      <link>https://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</link>
+      <pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2009/05/16/create-your-own-tinyurl-service-for-wordpress/</guid>
+      <description>I don’t particularly like using URL shortening services. I think I first noticed them getting used rather prolificly in the Guardians technology section to include lots of random links to bizarre web content. TinyURL’s own web site wouldn’t particularly inspire me to go ahead and make use of it either. But, because of my own use of services such as twitter, I’m forced to shrink down links to get within those 144 characters.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>plugins on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/plugins/</link><description>Recent content in plugins on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 20 Jul 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/plugins/index.xml" rel="self" type="application/rss+xml"/><item><title>Lovefilm Filmstream Plugin v0.2</title><link>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link><pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid><description>Just a quick note to say I’ve updated the plugin that generates my filmstream pages. It’s become obvious that the Lovefilm API only exposes the last 10 features that you’ve rented in their “at home” list. This isn’t that great if you’ve been renting more than a few months. This is the same as the information you’d see in your account when logged in.
-I’ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plugins on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/plugins/</link>
+    <description>Recent content in plugins on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Jul 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/plugins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lovefilm Filmstream Plugin v0.2</title>
+      <link>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</link>
+      <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2011/07/20/lovefilm-filmstream-plugin-v0.2/</guid>
+      <description>Just a quick note to say I’ve updated the plugin that generates my filmstream pages. It’s become obvious that the Lovefilm API only exposes the last 10 features that you’ve rented in their “at home” list. This isn’t that great if you’ve been renting more than a few months. This is the same as the information you’d see in your account when logged in.
+I’ve made a simple modification to use the actual ids that Lovefilm issue for films, rather than a autoincrement value.</description>
+    </item>
+    
+  </channel>
+</rss>

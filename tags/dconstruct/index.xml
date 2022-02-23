@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dConstruct on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/dconstruct/</link><description>Recent content in dConstruct on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 14 Jul 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/dconstruct/index.xml" rel="self" type="application/rss+xml"/><item><title>Participate, Don’t Preach</title><link>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</link><pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</guid><description>Last week, tickets went on sale for dConstruct 2011 and sold out within an impressive 7 hours. Having attended in 2010 and 2008 and judging it to be filled with the highest calibre web celebs from across the globe, I coughed up the entrance fee as part of the excited gold-rush. The cost of £150 includes access to the pre and after parties and the conference itself.
-These type of events are stuffed to the brim with amazing, intelligent web professionals, many of whom I would consider to be colleagues.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dConstruct on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/dconstruct/</link>
+    <description>Recent content in dConstruct on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Jul 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/dconstruct/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Participate, Don’t Preach</title>
+      <link>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</link>
+      <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2011/07/14/participate-dont-preach/</guid>
+      <description>Last week, tickets went on sale for dConstruct 2011 and sold out within an impressive 7 hours. Having attended in 2010 and 2008 and judging it to be filled with the highest calibre web celebs from across the globe, I coughed up the entrance fee as part of the excited gold-rush. The cost of £150 includes access to the pre and after parties and the conference itself.
+These type of events are stuffed to the brim with amazing, intelligent web professionals, many of whom I would consider to be colleagues.</description>
+    </item>
+    
+  </channel>
+</rss>

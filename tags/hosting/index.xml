@@ -1,2 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hosting on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/hosting/</link><description>Recent content in hosting on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 27 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/hosting/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting Up an .is Domain with ISNIC</title><link>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</link><pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</guid><description>I’ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn’t great, given their somewhat confusing management interface. That’s summed up in a recent tweet below. Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.
-&amp;mdash; Craig Lockwood (@craiginwales) October 26, 2013 Given the potential savings compared to a ‘normal’ registrar, it’s likely you’ll want to make use of ISNIC themselves – who are much like an Icelandic version of Nominet.</description></item><item><title>Stick to your guns - You'll be rewarded</title><link>https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns-youll-be-rewarded/</link><pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns-youll-be-rewarded/</guid><description>I’m a firm believer that by upholding my own principles, I’ll be rewarded. It’s a tag line I adopted for the small hosting company that I’ve been running for a while now. It also has been reflected this year in a nasty situation I was left in with my landlords, the council and a previous housemate (who doesn’t really deserve that title, more just a person whom shared the house). In all these situations things have turned out better for me in the long run, due to myself re-enforcing what I believe should be done – even if it does mean a longer struggle through.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hosting on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/hosting/</link>
+    <description>Recent content in hosting on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/hosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up an .is Domain with ISNIC</title>
+      <link>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2013/10/27/setting-up-an-.is-domain-with-isnic/</guid>
+      <description>I’ve purchased a couple of .is straight from the Icelandic Domain Registry (ISNIC) in the past year with a view to using them with my own vps. The process of setting up nameservers isn’t great, given their somewhat confusing management interface. That’s summed up in a recent tweet below. Looks like I just spent 39 euros on a domain I can’t use. Fucksticks.
+&amp;mdash; Craig Lockwood (@craiginwales) October 26, 2013  Given the potential savings compared to a ‘normal’ registrar, it’s likely you’ll want to make use of ISNIC themselves – who are much like an Icelandic version of Nominet.</description>
+    </item>
+    
+    <item>
+      <title>Stick to your guns - You&#39;ll be rewarded</title>
+      <link>https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns-youll-be-rewarded/</link>
+      <pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2007/12/20/stick-to-your-guns-youll-be-rewarded/</guid>
+      <description>I’m a firm believer that by upholding my own principles, I’ll be rewarded. It’s a tag line I adopted for the small hosting company that I’ve been running for a while now. It also has been reflected this year in a nasty situation I was left in with my landlords, the council and a previous housemate (who doesn’t really deserve that title, more just a person whom shared the house). In all these situations things have turned out better for me in the long run, due to myself re-enforcing what I believe should be done – even if it does mean a longer struggle through.</description>
+    </item>
+    
+  </channel>
+</rss>

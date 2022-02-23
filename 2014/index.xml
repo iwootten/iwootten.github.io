@@ -1,13 +1,131 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2014 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2014/</link><description>Recent content in 2014 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 15 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2014/index.xml" rel="self" type="application/rss+xml"/><item><title>Processing Camera RAWs with OpenImageIO and Python</title><link>https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</link><pubDate>Mon, 15 Sep 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</guid><description>I recently discovered the library OpenImageIO, an awesome tool for reading and writing image files. What makes this of particular interest is the sheer variety of image files supported (BMP, Cineon, JPG, JPG-2000, GIF, DPX, OpenEXR, Targa, TIFF) (as well as variety of camera raw formats) and the fact it can perform image transformations upon them very easily. Given it&amp;rsquo;s designed for use in media and VFX environments it sounds like it will be useful for the type of work I&amp;rsquo;ve previously been involved with in stop motion.</description></item><item><title>Extracting Shot Thumbnails from a video using FFMPEG</title><link>https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/</link><pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/</guid><description>Recently, Andy Davies asked the following question on twitter: Any ideas on how I can easily convert a video to a filmstrip?
-&amp;mdash; Andy Davies (@AndyDavies) July 23, 2014 I found this pretty interesting, especially given I&amp;rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
-After a bit of digging last night, I discovered it&amp;rsquo;s actually possible to extract images based on changes in the video.</description></item><item><title>Splitting a date range in Python</title><link>https://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</link><pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</guid><description>Dates are one of those annoying things that shouldn&amp;rsquo;t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I&amp;rsquo;m currently working on. Hopefully someone else will find them helpful.
-import datetime, calendar # Find the delta between two dates based on a desired number of ranges def datedelta(startdate, enddate, no_of_ranges): start_epoch = calendar.</description></item><item><title>Tips for being a more Productive Freelancer</title><link>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</link><pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</guid><description>Having heard the question raised on @workingoutshow, I thought I&amp;rsquo;d take some time to share the things that I&amp;rsquo;ve found have really helped me be productive in my work. These may not work for everyone, but hopefully some points will help for others.
-Find a Good Environment The single biggest change I&amp;rsquo;ve found which has had a major impact on my work is changing my environment. We&amp;rsquo;re lucky enough to have a small garden at our house and with the arrival of my daughter back in October, I was quick to realise that working in the open plan lounge in our house just wasn&amp;rsquo;t a viable option any more.</description></item><item><title>Porting a Wordpress blog to Jekyll: Part 2</title><link>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</link><pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</guid><description>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&amp;rsquo;ve replicated wordpress&amp;rsquo;s default permalink structure on my own blog.
-Creating Category and Tag Pages Jekyll doesn&amp;rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&amp;rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.</description></item><item><title>Porting a Wordpress blog to Jekyll: Part 1</title><link>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</link><pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</guid><description>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&amp;rsquo;ve overcome them.
-Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.</description></item><item><title>Bye Bye Wordpress</title><link>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</link><pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</guid><description>I&amp;rsquo;ve finally made the move to jekyll for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible on github and revision control for post entries is handled there too.
-What finally convinced me with the release of jekyll 2 was the introduction of native sass support. Originally, the prose theme I&amp;rsquo;m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it.</description></item><item><title>Copyright Law Finally Aligns with Me</title><link>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</link><pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</guid><description>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.
-Finally, we’ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I’ve long made copies of my cd’s to listen to whilst coding (iTunes allows me to do so simply) – but it is not currently legal to move these files to another storage medium, such as an mp3 player.</description></item><item><title>Shipping in March: Weeks 2 &amp; 3</title><link>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</link><pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</guid><description>So, anybody paying close attention may have noticed I’ve skipped a week on updating my progress on shipping in March. There wasn’t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn’t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description></item><item><title>Shipping in March: Week 1</title><link>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</guid><description>I promised a progress update on how my attempt to get 4 projects shipped this month was going. On my first week, I decided to focus on my time tracking tool, hourglass. I’ve had this in the works for sometime and unfortunately, it’s fallen by the wayside to client work.
-I’ve failed on my first week in getting this released to the world, but I’m far happier with how it’s working now and the value it might give to any potential user than previously.</description></item><item><title>Scaling a Linear Domain to an Ordinal Range with d3</title><link>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</link><pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</guid><description>I’ve had the opportunity of using d3 quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.
-Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</description></item><item><title>Shipping in March</title><link>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</link><pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</guid><description>This month, I’ve decided to take some time out to ship projects.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2014/</link>
+    <description>Recent content in 2014 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2014/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Processing Camera RAWs with OpenImageIO and Python</title>
+      <link>https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</link>
+      <pubDate>Mon, 15 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/09/15/processing-camera-raws-with-openimageio-and-python/</guid>
+      <description>I recently discovered the library OpenImageIO, an awesome tool for reading and writing image files. What makes this of particular interest is the sheer variety of image files supported (BMP, Cineon, JPG, JPG-2000, GIF, DPX, OpenEXR, Targa, TIFF) (as well as variety of camera raw formats) and the fact it can perform image transformations upon them very easily. Given it&amp;rsquo;s designed for use in media and VFX environments it sounds like it will be useful for the type of work I&amp;rsquo;ve previously been involved with in stop motion.</description>
+    </item>
+    
+    <item>
+      <title>Extracting Shot Thumbnails from a video using FFMPEG</title>
+      <link>https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/</guid>
+      <description>Recently, Andy Davies asked the following question on twitter: Any ideas on how I can easily convert a video to a filmstrip?
+&amp;mdash; Andy Davies (@AndyDavies) July 23, 2014  I found this pretty interesting, especially given I&amp;rsquo;d used various open source tools for assembling storyboards in the past. I knew it was possible to extract images at desired intervals and left it as that.
+After a bit of digging last night, I discovered it&amp;rsquo;s actually possible to extract images based on changes in the video.</description>
+    </item>
+    
+    <item>
+      <title>Splitting a date range in Python</title>
+      <link>https://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/07/01/splitting-a-date-range-in-python/</guid>
+      <description>Dates are one of those annoying things that shouldn&amp;rsquo;t be, but are regularly difficult in web apps. I used the following two methods in a recent page to neatly break a date range into distinct segments as part of a analytics app I&amp;rsquo;m currently working on. Hopefully someone else will find them helpful.
+import datetime, calendar # Find the delta between two dates based on a desired number of ranges def datedelta(startdate, enddate, no_of_ranges): start_epoch = calendar.</description>
+    </item>
+    
+    <item>
+      <title>Tips for being a more Productive Freelancer</title>
+      <link>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</link>
+      <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/06/16/tips-for-being-a-more-productive-freelancer/</guid>
+      <description>Having heard the question raised on @workingoutshow, I thought I&amp;rsquo;d take some time to share the things that I&amp;rsquo;ve found have really helped me be productive in my work. These may not work for everyone, but hopefully some points will help for others.
+Find a Good Environment The single biggest change I&amp;rsquo;ve found which has had a major impact on my work is changing my environment. We&amp;rsquo;re lucky enough to have a small garden at our house and with the arrival of my daughter back in October, I was quick to realise that working in the open plan lounge in our house just wasn&amp;rsquo;t a viable option any more.</description>
+    </item>
+    
+    <item>
+      <title>Porting a Wordpress blog to Jekyll: Part 2</title>
+      <link>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</link>
+      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/06/02/porting-a-wordpress-blog-to-jekyll-part-2/</guid>
+      <description>In the second of my posts in porting a wordpress blog over to jekyll, I outline how I&amp;rsquo;ve replicated wordpress&amp;rsquo;s default permalink structure on my own blog.
+Creating Category and Tag Pages Jekyll doesn&amp;rsquo;t create category or tag index pages for those categories listed in your _posts source. Instead, you&amp;rsquo;ll need to use a plugin to recreate them. I used the tutorial here as the basis for my category/tag generator, with my plugins/generate_cats_and_tags.</description>
+    </item>
+    
+    <item>
+      <title>Porting a Wordpress blog to Jekyll: Part 1</title>
+      <link>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/05/20/porting-a-wordpress-blog-to-jekyll-part-1/</guid>
+      <description>As my last post indicated, I recently made the decision to leave wordpress for jekyll for my blogging software of choice. There were a number of hurdles I had to overcome in order to get to a state I was happy with, emulating my previous blog structure. This first post details a few of the setup problems and how I&amp;rsquo;ve overcome them.
+Using Compass for a Jekyll theme The first problem I hit was my use of compass to create parts of the theme I intended to use for my blog.</description>
+    </item>
+    
+    <item>
+      <title>Bye Bye Wordpress</title>
+      <link>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</link>
+      <pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/05/18/bye-bye-wordpress/</guid>
+      <description>I&amp;rsquo;ve finally made the move to jekyll for building this site. It is now hosted on github pages, comments are handled by disqus and my post source is written in markdown. My entire site is visible on github and revision control for post entries is handled there too.
+What finally convinced me with the release of jekyll 2 was the introduction of native sass support. Originally, the prose theme I&amp;rsquo;m using for my site was using scss, which I later ported to a wordpress theme in order to blog with it.</description>
+    </item>
+    
+    <item>
+      <title>Copyright Law Finally Aligns with Me</title>
+      <link>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/04/07/copyright-law-finally-aligns-with-me/</guid>
+      <description>On June 1st 2014, some much needed changes are being made to exceptions to copyright law which amongst other things, will allow conversion of personal media between file formats.
+Finally, we’ll able to make personal conversions of digital media (at least they will be now counted as legal copies). I’ve long made copies of my cd’s to listen to whilst coding (iTunes allows me to do so simply) – but it is not currently legal to move these files to another storage medium, such as an mp3 player.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March: Weeks 2 &amp; 3</title>
+      <link>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/23/shipping-in-march-weeks-2-3/</guid>
+      <description>So, anybody paying close attention may have noticed I’ve skipped a week on updating my progress on shipping in March. There wasn’t much to report in week 2 aside from I was busily updating my Nifty Digits site. This hasn’t yet gone live, mainly due to some restrictions on current client projects and publishing about my previous work. I hope to be able to publish it before the end of the month.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March: Week 1</title>
+      <link>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/10/shipping-in-march-week-1/</guid>
+      <description>I promised a progress update on how my attempt to get 4 projects shipped this month was going. On my first week, I decided to focus on my time tracking tool, hourglass. I’ve had this in the works for sometime and unfortunately, it’s fallen by the wayside to client work.
+I’ve failed on my first week in getting this released to the world, but I’m far happier with how it’s working now and the value it might give to any potential user than previously.</description>
+    </item>
+    
+    <item>
+      <title>Scaling a Linear Domain to an Ordinal Range with d3</title>
+      <link>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</link>
+      <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/07/scaling-a-linear-domain-to-an-ordinal-range-with-d3/</guid>
+      <description>I’ve had the opportunity of using d3 quite a lot over the past few months for a number of clients. It offers some amazing flexibility for chart generation and much more.
+Anyway, I thought I’d share a quick tip I developed for mapping a linear set of values onto an ordinal scale. For those who’re seasoned pros at d3, this probably seems trivial, but had me stumped for some time today.</description>
+    </item>
+    
+    <item>
+      <title>Shipping in March</title>
+      <link>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2014/03/03/shipping-in-march/</guid>
+      <description>This month, I’ve decided to take some time out to ship projects.
 I have a huge list of projects accumulating I’d like to push out of the door, but as a father and freelancer I have lack of a certain commodity in able to achieve them. That would be time.
-Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released.</description></item></channel></rss>
+Currently I don’t have any work booked in for a while, so along with Viv, we’ve decided I should try and get some of these projects released.</description>
+    </item>
+    
+  </channel>
+</rss>

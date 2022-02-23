@@ -1,46 +1,686 @@
-<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.0"><title>Ian Wootten - Software Developer, CardiffIan Wootten - Software Developer, CardiffIan Wootten - Software Developer, Cardiff</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"","name":"Ian Wootten","headline":"Ian Wootten","description":"","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-02-23 10:34:05 \u002b0000 UTC","dateModified":"2022-02-23 10:34:05 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/","wordCount":"0","keywords":["Blog"]}</script><meta name=description content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Ian Wootten"><meta name=twitter:description content="Software Developer, Cardiff"><meta property="og:title" content="Ian Wootten"><meta property="og:description" content="Software Developer, Cardiff"><meta property="og:type" content="website"><meta property="og:url" content="https://www.ianwootten.co.uk/"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><link href=https://www.ianwootten.co.uk/index.xml rel=alternate type=application/rss+xml title="Ian Wootten"><link href=https://www.ianwootten.co.uk/index.xml rel=feed type=application/rss+xml title="Ian Wootten"><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><div class=post-list><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/>What is a PEP and why should I care?</a></span>
-<span class=item__date>Nov 16, 2020</span>
-No doubt if you&rsquo;ve been developing in Python for any length of time, you will have heard the acronym &ldquo;PEP&rdquo; mentioned quite frequently. More often than not you hear it when talking about Python code style, usually followed by the number &ldquo;8&rdquo;. So what is a PEP and why should you care?
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
+
+    
+    
+    
+
+<title>Ian Wootten - Software Developer, CardiffIan Wootten - Software Developer, CardiffIan Wootten - Software Developer, Cardiff</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "",
+    "name" : "Ian Wootten",
+    "headline" : "Ian Wootten",
+    "description" : "",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2022",
+    "datePublished": "2022-02-23 10:34:05 \u002b0000 UTC",
+    "dateModified" : "2022-02-23 10:34:05 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/",
+    "wordCount" : "0",
+    "keywords" : [ "Blog" ]
+}
+</script>
+<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ian Wootten"/>
+<meta name="twitter:description" content="Software Developer, Cardiff"/>
+
+<meta property="og:title" content="Ian Wootten" />
+<meta property="og:description" content="Software Developer, Cardiff" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+<link href="https://www.ianwootten.co.uk/index.xml" rel="alternate" type="application/rss+xml" title="Ian Wootten" />
+<link href="https://www.ianwootten.co.uk/index.xml" rel="feed" type="application/rss+xml" title="Ian Wootten" />
+
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+  <div class="post-list">
+    
+    
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/">What is a PEP and why should I care?</a>
+          
+        </span>
+        <span class="item__date">
+          Nov 16, 2020
+        </span>
+        
+        No doubt if you&rsquo;ve been developing in Python for any length of time, you will have heard the acronym &ldquo;PEP&rdquo; mentioned quite frequently. More often than not you hear it when talking about Python code style, usually followed by the number &ldquo;8&rdquo;. So what is a PEP and why should you care?
 What is a PEP? PEP stands for &ldquo;Python Enhancement Proposal&rdquo;. They are used to describe and summarise the technical design and reasons for enhancements to Python and surrounding processes.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/>Interesting Features in Python 3.9</a></span>
-<span class=item__date>Nov 05, 2020</span>
-Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2020/11/16/what-is-a-pep-and-why-should-i-care/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/">Interesting Features in Python 3.9</a>
+          
+        </span>
+        <span class="item__date">
+          Nov 05, 2020
+        </span>
+        
+        Here&rsquo;s some features I found interesting in the release of Python 3.9 last month. You can see me talk about each of these in my latest video on youtube.
 Full Release Notes
 Merging and Updating Dictionaries PEP 584 - Dictionaries now have new union operators to work with them.
 Python 3.8:
-x = {'key': 'original_value'} y = {'key': 'updated_value'} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/>Use Black to Format Python and get on with Your Life</a></span>
-<span class=item__date>Nov 03, 2020</span>
-When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&rsquo;t meet formatting rules that were felt best for that piece of work. It didn&rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was wrong on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/>How to Deploy a Django App to the DigitalOcean App Platform</a></span>
-<span class=item__date>Oct 28, 2020</span>
-Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&rsquo;d go through some of the points that tripped me up here.
+x = {&#39;key&#39;: &#39;original_value&#39;} y = {&#39;key&#39;: &#39;updated_value&#39;} print({**x, **y}) # Python 3.8 unpacking, kind of confusing Python 3.9:
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2020/11/05/interesting-features-in-python-3.9/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/">Use Black to Format Python and get on with Your Life</a>
+          
+        </span>
+        <span class="item__date">
+          Nov 03, 2020
+        </span>
+        
+        When I first started working in software development teams, I can remember heated discussions on pull requests on a few occasions. Typically these were when I or other developers reviewed code that didn&rsquo;t meet formatting rules that were felt best for that piece of work. It didn&rsquo;t matter whether the rules in question were in code, documented in a README or just held in a developers head, the simple fact that something was wrong on the project meant the author needed to make changes, be severely reprimanded and never make the mistake again.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2020/11/03/use-black-to-format-python-and-get-on-with-your-life/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/">How to Deploy a Django App to the DigitalOcean App Platform</a>
+          
+        </span>
+        <span class="item__date">
+          Oct 28, 2020
+        </span>
+        
+        Digitalocean recently launched their App platform, a platform as a service (PaaS) which can be seen as a competitor to the likes of Heroku. As a Python developer, I wanted to see how easy it was to deploy a django app to App platform. It took me a little while to configure everything correctly so I thought I&rsquo;d go through some of the points that tripped me up here.
 I&rsquo;ve been looking for some time for a relatively simple method for deploying my projects, but I also want to use a pattern where my repo is the primary source of truth for my app.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/>Publishing to PyPI Using Github Actions</a></span>
-<span class=item__date>Oct 23, 2020</span>
-In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2020/10/28/how-to-deploy-a-django-app-to-the-digitalocean-app-platform/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/">Publishing to PyPI Using Github Actions</a>
+          
+        </span>
+        <span class="item__date">
+          Oct 23, 2020
+        </span>
+        
+        In creating my first package on PyPI, I realised that many of the tasks I&rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
 Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/>Publishing a Package to PyPI with Poetry</a></span>
-<span class=item__date>Oct 20, 2020</span>
-I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2018/12/06/purpose/>Purpose</a></span>
-<span class=item__date>Dec 06, 2018</span>
-I’ve been thinking recently about purpose for Nifty Digits and myself, reviewing the clients I’ve done work for in the past and that work which I’ve felt most fulfilled by.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/">Publishing a Package to PyPI with Poetry</a>
+          
+        </span>
+        <span class="item__date">
+          Oct 20, 2020
+        </span>
+        
+        I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2018/12/06/purpose/">Purpose</a>
+          
+        </span>
+        <span class="item__date">
+          Dec 06, 2018
+        </span>
+        
+        I’ve been thinking recently about purpose for Nifty Digits and myself, reviewing the clients I’ve done work for in the past and that work which I’ve felt most fulfilled by.
 I’ve straddled a path between web/pipeline developer thus far - so it’s fairly difficult to pin down what I do in a single mission statement. A more enterprising developer may well have done that as part of a business plan when they first started.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2018/12/06/purpose/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/>Unhealthy Comparisons</a></span>
-<span class=item__date>Nov 21, 2018</span>
-As we nearing Christmas, we’re met with the familiar annual trickle of uplifting, heartwarming adverts that show just how wonderful your world will be if only you would buy your gifts from a particular retailer. After several weeks of this I’m already feeling bad for thinking our simple, paired down family Christmas experience might just not compare and wondering how anyone can’t help but feel any different after two months of constant commercial brainwashing.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/>My Web Development Stack in 2018</a></span>
-<span class=item__date>Nov 07, 2018</span>
-Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2018/12/06/purpose/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/">Unhealthy Comparisons</a>
+          
+        </span>
+        <span class="item__date">
+          Nov 21, 2018
+        </span>
+        
+        As we nearing Christmas, we’re met with the familiar annual trickle of uplifting, heartwarming adverts that show just how wonderful your world will be if only you would buy your gifts from a particular retailer. After several weeks of this I’m already feeling bad for thinking our simple, paired down family Christmas experience might just not compare and wondering how anyone can’t help but feel any different after two months of constant commercial brainwashing.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/">My Web Development Stack in 2018</a>
+          
+        </span>
+        <span class="item__date">
+          Nov 07, 2018
+        </span>
+        
+        Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
 I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/>What’s in a name?</a></span>
-<span class=item__date>Oct 16, 2018</span>
-I usually get one of two looks when I announce the name of my company as &ldquo;Nifty Digits&rdquo;. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/">What’s in a name?</a>
+          
+        </span>
+        <span class="item__date">
+          Oct 16, 2018
+        </span>
+        
+        I usually get one of two looks when I announce the name of my company as &ldquo;Nifty Digits&rdquo;. Either a “Ah, I like that” or a raised eyebrow. Generally, it’s the person latter in years who might raise an eyebrow.
 When I picked the name, I was still a PhD student at University and wanted something that “sounded technical (digits), but also sort of British (nifty)”. I also was heavily influenced number of web design bloggers at the time, particularly Dan Cedarholm’s blog “Simple Bits”.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/>➦</a></div></div><ul class=pagination><li class=page-item><a href=https://www.ianwootten.co.uk/ class=page-link aria-label=First><span aria-hidden=true>&#171;&#171;</span></a></li><li class=page-item><a href=https://www.ianwootten.co.uk/page/2/ class=page-link aria-label=Previous><span aria-hidden=true>&#171;</span></a></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/>1</a></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/page/2/>2</a></li><li class="page-item active"><a class=page-link href=https://www.ianwootten.co.uk/page/3/>3</a></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/page/4/>4</a></li><li class="page-item disabled"><span aria-hidden=true>&nbsp;&mldr;&nbsp;</span></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/page/32/>32</a></li><li class=page-item><a href=https://www.ianwootten.co.uk/page/4/ class=page-link aria-label=Next><span aria-hidden=true>&#187;</span></a></li><li class=page-item><a href=https://www.ianwootten.co.uk/page/32/ class=page-link aria-label=Last><span aria-hidden=true>&#187;&#187;</span></a></li></ul></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/">➦</a>
+        
+        </div>
+     
+  </div>
+  
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="https://www.ianwootten.co.uk/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    
+    <li class="page-item">
+    <a href="https://www.ianwootten.co.uk/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="https://www.ianwootten.co.uk/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/page/4/">4</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/page/32/">32</a></li>
+    
+    
+    <li class="page-item">
+    <a href="https://www.ianwootten.co.uk/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="https://www.ianwootten.co.uk/page/32/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+
+        </div>
+        
+  
+  <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    </body>
+</html>

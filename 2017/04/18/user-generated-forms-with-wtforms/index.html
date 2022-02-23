@@ -1,111 +1,386 @@
-<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.0"><title>User Generated Forms with WTForms - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"User Generated Forms with WTForms","headline":"User Generated Forms with WTForms","description":"As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2017","datePublished":"2017-04-18 00:00:00 \u002b0000 UTC","dateModified":"2017-04-18 00:00:00 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2017\/04\/18\/user-generated-forms-with-wtforms\/","wordCount":"1081","keywords":["python","wtforms","Blog"]}</script><meta name=description content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="User Generated Forms with WTForms"><meta name=twitter:description content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer."><meta property="og:title" content="User Generated Forms with WTForms"><meta property="og:description" content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-04-18T00:00:00+00:00"><meta property="article:modified_time" content="2017-04-18T00:00:00+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/>User Generated Forms with WTForms</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Apr 18, 2017
-in
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/software>SOFTWARE</a><br><i class="fas fa-tags"></i>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python>python</a>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/wtforms>wtforms</a><br><i class="fas fa-clock"></i> 6 min read</div></header><div class=post><p>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer. This was identified early on as a feature that shared a lot in common with existing form libraries, but our current renderer wasn&rsquo;t able to be easily isolated from the rest of the system and was therefore pushed onto a debt backlog after a possible approach had been prototyped.</p><p>Due to the hard work of the entire team, we&rsquo;d made some strategic changes to the system that meant this was possible in my later months. <a href=https://github.com/wtforms/wtforms>WTForms</a> was the library we wanted to use, but we needed a number of features which weren&rsquo;t documented or supported out of the box. Chief among these was the ability to create forms dynamically, informed by a JSON description.</p><h2 id=dynamic-form-definition>Dynamic form definition</h2><p>WTForms generally expects metaclasses that describe form definitions, as per the following example from their docs:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MyForm</span>(Form):
-  first_name <span style=color:#f92672>=</span> StringField(<span style=color:#e6db74>u</span><span style=color:#e6db74>&#39;First Name&#39;</span>, validators<span style=color:#f92672>=</span>[validators<span style=color:#f92672>.</span>input_required()])
-  last_name  <span style=color:#f92672>=</span> StringField(<span style=color:#e6db74>u</span><span style=color:#e6db74>&#39;Last Name&#39;</span>, validators<span style=color:#f92672>=</span>[validators<span style=color:#f92672>.</span>optional()])
-</code></pre></div><p>I found it easier to think as these definitions as &lsquo;schemas&rsquo; for form classes. Typically you&rsquo;d use them to describe a class which doesn&rsquo;t change, so WTForms use of them for describing our dynamic forms led to some problems.</p><p>When the instantiated form is passed to jinja and rendered as part of a template helper call, appropriate inputs will be rendered for each field definition, with names corresponding to the attribute names (first_name, last_name). We can then take the post request form and pass as an argument to our form class to validate during a submission.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>register</span>(request):
-  form <span style=color:#f92672>=</span> MyForm(request<span style=color:#f92672>.</span>POST)
-  <span style=color:#66d9ef>if</span> request<span style=color:#f92672>.</span>method <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;POST&#39;</span> <span style=color:#f92672>and</span> form<span style=color:#f92672>.</span>validate():
-      user <span style=color:#f92672>=</span> MyForm()
-      user<span style=color:#f92672>.</span>first_name <span style=color:#f92672>=</span> form<span style=color:#f92672>.</span>first_name<span style=color:#f92672>.</span>data
-      user<span style=color:#f92672>.</span>last_name <span style=color:#f92672>=</span> form<span style=color:#f92672>.</span>last_name<span style=color:#f92672>.</span>data
-      user<span style=color:#f92672>.</span>save()
-      redirect(<span style=color:#e6db74>&#39;register&#39;</span>)
-  <span style=color:#66d9ef>return</span> render_response(<span style=color:#e6db74>&#39;register.html&#39;</span>, form<span style=color:#f92672>=</span>form)
-</code></pre></div><p>The approach taken for the ONS was to read in a json description from file and set field attributes dynamically within a method upon what was essentially an empty form class. I&rsquo;ve simplified the actual project code below to remove detail outside the example.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_answer_fields</span>(question, data):
-    answer_fields <span style=color:#f92672>=</span> {}
-    <span style=color:#66d9ef>for</span> answer <span style=color:#f92672>in</span> question[<span style=color:#e6db74>&#39;answers&#39;</span>]:
-        name <span style=color:#f92672>=</span> answer<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;label&#39;</span>) <span style=color:#f92672>or</span> question<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;title&#39;</span>)
-        answer_fields[answer[<span style=color:#e6db74>&#39;id&#39;</span>]] <span style=color:#f92672>=</span> get_field(answer, name)
-    <span style=color:#66d9ef>return</span> answer_fields
+<!DOCTYPE html>
+<html lang="en">
+    
+    
 
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate_form</span>(json_for_page, data):
 
-    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>QuestionnaireForm</span>(Form):
-        answer_fields <span style=color:#f92672>=</span> {}
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
 
-        <span style=color:#66d9ef>for</span> question <span style=color:#f92672>in</span> SchemaHelper<span style=color:#f92672>.</span>get_questions(json_for_page):
+    
+    
+    
 
-            answer_fields<span style=color:#f92672>.</span>update(get_answer_fields(question, data))
+<title>User Generated Forms with WTForms - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "User Generated Forms with WTForms",
+    "headline" : "User Generated Forms with WTForms",
+    "description" : "As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-04-18 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2017-04-18 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2017\/04\/18\/user-generated-forms-with-wtforms\/",
+    "wordCount" : "1081",
+    "keywords" : [ "python","wtforms","Blog" ]
+}
+</script>
+<meta name="description" content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="User Generated Forms with WTForms"/>
+<meta name="twitter:description" content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer."/>
 
-            <span style=color:#66d9ef>for</span> answer_id, field <span style=color:#f92672>in</span> answer_fields<span style=color:#f92672>.</span>items():
+<meta property="og:title" content="User Generated Forms with WTForms" />
+<meta property="og:description" content="As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-04-18T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2017-04-18T00:00:00&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2017/04/18/user-generated-forms-with-wtforms/">User Generated Forms with WTForms</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Apr 18, 2017
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/software">SOFTWARE</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/wtforms">wtforms</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>As part of my past work with the Office for National Statistics (ONS), I worked with the survey runner team to add additional features to their Electronic Questionnaire which enabled the business to take regular surveys electronically via the web. During my final months there, I took it upon myself to tackle what was seen to be one of the projects major pieces of technical debt, its use of a custom form renderer. This was identified early on as a feature that shared a lot in common with existing form libraries, but our current renderer wasn&rsquo;t able to be easily isolated from the rest of the system and was therefore pushed onto a debt backlog after a possible approach had been prototyped.</p>
+<p>Due to the hard work of the entire team, we&rsquo;d made some strategic changes to the system that meant this was possible in my later months. <a href="https://github.com/wtforms/wtforms">WTForms</a> was the library we wanted to use, but we needed a number of features which weren&rsquo;t documented or supported out of the box. Chief among these was the ability to create forms dynamically, informed by a JSON description.</p>
+<h2 id="dynamic-form-definition">Dynamic form definition</h2>
+<p>WTForms generally expects metaclasses that describe form definitions, as per the following example from their docs:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyForm</span>(Form):
+  first_name <span style="color:#f92672">=</span> StringField(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;First Name&#39;</span>, validators<span style="color:#f92672">=</span>[validators<span style="color:#f92672">.</span>input_required()])
+  last_name  <span style="color:#f92672">=</span> StringField(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#39;Last Name&#39;</span>, validators<span style="color:#f92672">=</span>[validators<span style="color:#f92672">.</span>optional()])
+</code></pre></div><p>I found it easier to think as these definitions as &lsquo;schemas&rsquo; for form classes. Typically you&rsquo;d use them to describe a class which doesn&rsquo;t change, so WTForms use of them for describing our dynamic forms led to some problems.</p>
+<p>When the instantiated form is passed to jinja and rendered as part of a template helper call, appropriate inputs will be rendered for each field definition, with names corresponding to the attribute names (first_name, last_name). We can then take the post request form and pass as an argument to our form class to validate during a submission.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">register</span>(request):
+  form <span style="color:#f92672">=</span> MyForm(request<span style="color:#f92672">.</span>POST)
+  <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span> <span style="color:#f92672">and</span> form<span style="color:#f92672">.</span>validate():
+      user <span style="color:#f92672">=</span> MyForm()
+      user<span style="color:#f92672">.</span>first_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>first_name<span style="color:#f92672">.</span>data
+      user<span style="color:#f92672">.</span>last_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>last_name<span style="color:#f92672">.</span>data
+      user<span style="color:#f92672">.</span>save()
+      redirect(<span style="color:#e6db74">&#39;register&#39;</span>)
+  <span style="color:#66d9ef">return</span> render_response(<span style="color:#e6db74">&#39;register.html&#39;</span>, form<span style="color:#f92672">=</span>form)
+</code></pre></div><p>The approach taken for the ONS was to read in a json description from file and set field attributes dynamically within a method upon what was essentially an empty form class. I&rsquo;ve simplified the actual project code below to remove detail outside the example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_answer_fields</span>(question, data):
+    answer_fields <span style="color:#f92672">=</span> {}
+    <span style="color:#66d9ef">for</span> answer <span style="color:#f92672">in</span> question[<span style="color:#e6db74">&#39;answers&#39;</span>]:
+        name <span style="color:#f92672">=</span> answer<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;label&#39;</span>) <span style="color:#f92672">or</span> question<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;title&#39;</span>)
+        answer_fields[answer[<span style="color:#e6db74">&#39;id&#39;</span>]] <span style="color:#f92672">=</span> get_field(answer, name)
+    <span style="color:#66d9ef">return</span> answer_fields
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_form</span>(json_for_page, data):
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuestionnaireForm</span>(Form):
+        answer_fields <span style="color:#f92672">=</span> {}
+
+        <span style="color:#66d9ef">for</span> question <span style="color:#f92672">in</span> SchemaHelper<span style="color:#f92672">.</span>get_questions(json_for_page):
+
+            answer_fields<span style="color:#f92672">.</span>update(get_answer_fields(question, data))
+
+            <span style="color:#66d9ef">for</span> answer_id, field <span style="color:#f92672">in</span> answer_fields<span style="color:#f92672">.</span>items():
                 setattr(QuestionnaireForm, answer_id, field)
 
-        <span style=color:#66d9ef>if</span> data:
-            form <span style=color:#f92672>=</span> QuestionnaireForm(MultiDict(data))
-        <span style=color:#66d9ef>else</span>:
-            form <span style=color:#f92672>=</span> QuestionnaireForm()
+        <span style="color:#66d9ef">if</span> data:
+            form <span style="color:#f92672">=</span> QuestionnaireForm(MultiDict(data))
+        <span style="color:#66d9ef">else</span>:
+            form <span style="color:#f92672">=</span> QuestionnaireForm()
 
-        <span style=color:#66d9ef>return</span> form
-</code></pre></div><p>Here you see that we retrieve details of the json structure for a survey page, and maintain a map of answer fields to be set on the class. The answer ids within the page structure will always be unique and is used as the key for the mapping to each field type. In this way, the resultant form is a collection of fields able to be driven dynamically from our json description.</p><h2 id=validating-dynamic-forms>Validating Dynamic Forms</h2><p>As well as the fields on our forms being customisable, the validators used upon them were too. This meant for instance, that some fields were optional or required and the messages used for validation needed to be informed by the survey&rsquo;s json description.</p><p>Below you can see an example of the message for a DateRequired validator being updated based on the message from the schema. You can also see an example of modifying the behaviour of the validator, based on whether or not the date validator includes a day attribute as part of the data sent. This allows for the same validator to be used for different form representations of dates.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DateRequired</span>(object):
-     <span style=color:#66d9ef>def</span> __init__(self, message<span style=color:#f92672>=</span>None):
-         <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> message:
-             message <span style=color:#f92672>=</span> error_messages[<span style=color:#e6db74>&#39;MANDATORY&#39;</span>]
-         self<span style=color:#f92672>.</span>message <span style=color:#f92672>=</span> message
+        <span style="color:#66d9ef">return</span> form
+</code></pre></div><p>Here you see that we retrieve details of the json structure for a survey page, and maintain a map of answer fields to be set on the class. The answer ids within the page structure will always be unique and is used as the key for the mapping to each field type. In this way, the resultant form is a collection of fields able to be driven dynamically from our json description.</p>
+<h2 id="validating-dynamic-forms">Validating Dynamic Forms</h2>
+<p>As well as the fields on our forms being customisable, the validators used upon them were too. This meant for instance, that some fields were optional or required and the messages used for validation needed to be informed by the survey&rsquo;s json description.</p>
+<p>Below you can see an example of the message for a DateRequired validator being updated based on the message from the schema. You can also see an example of modifying the behaviour of the validator, based on whether or not the date validator includes a day attribute as part of the data sent. This allows for the same validator to be used for different form representations of dates.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DateRequired</span>(object):
+     <span style="color:#66d9ef">def</span> __init__(self, message<span style="color:#f92672">=</span>None):
+         <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> message:
+             message <span style="color:#f92672">=</span> error_messages[<span style="color:#e6db74">&#39;MANDATORY&#39;</span>]
+         self<span style="color:#f92672">.</span>message <span style="color:#f92672">=</span> message
 
-     <span style=color:#66d9ef>def</span> __call__(self, form, field):
-         <span style=color:#66d9ef>if</span> hasattr(form, <span style=color:#e6db74>&#39;day&#39;</span>):
-             <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> form<span style=color:#f92672>.</span>day<span style=color:#f92672>.</span>data <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> form<span style=color:#f92672>.</span>month<span style=color:#f92672>.</span>data <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> form<span style=color:#f92672>.</span>year<span style=color:#f92672>.</span>data:
-                 <span style=color:#66d9ef>raise</span> validators<span style=color:#f92672>.</span>StopValidation(self<span style=color:#f92672>.</span>message)
-         <span style=color:#66d9ef>else</span>:
-             <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> form<span style=color:#f92672>.</span>month<span style=color:#f92672>.</span>data <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> form<span style=color:#f92672>.</span>year<span style=color:#f92672>.</span>data:
-                 <span style=color:#66d9ef>raise</span> validators<span style=color:#f92672>.</span>StopValidation(self<span style=color:#f92672>.</span>message)
-</code></pre></div><p>In more complex situations, it was necessary to pass custom data to our validators to later check against. You can see below, when validating custom date ranges, we pass the &lsquo;to&rsquo; date and initialise the validator with it, before the call to the validator is made with the form (in this case a subform for just a date).</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DateRangeCheck</span>(object):
-    <span style=color:#66d9ef>def</span> __init__(self, to_field_data<span style=color:#f92672>=</span>None, messages<span style=color:#f92672>=</span>None):
-        self<span style=color:#f92672>.</span>to_field_data <span style=color:#f92672>=</span> to_field_data
-        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> messages:
-            messages <span style=color:#f92672>=</span> error_messages
-        self<span style=color:#f92672>.</span>messages <span style=color:#f92672>=</span> messages
+     <span style="color:#66d9ef">def</span> __call__(self, form, field):
+         <span style="color:#66d9ef">if</span> hasattr(form, <span style="color:#e6db74">&#39;day&#39;</span>):
+             <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>day<span style="color:#f92672">.</span>data <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>month<span style="color:#f92672">.</span>data <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>year<span style="color:#f92672">.</span>data:
+                 <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation(self<span style="color:#f92672">.</span>message)
+         <span style="color:#66d9ef">else</span>:
+             <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>month<span style="color:#f92672">.</span>data <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> form<span style="color:#f92672">.</span>year<span style="color:#f92672">.</span>data:
+                 <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation(self<span style="color:#f92672">.</span>message)
+</code></pre></div><p>In more complex situations, it was necessary to pass custom data to our validators to later check against. You can see below, when validating custom date ranges, we pass the &lsquo;to&rsquo; date and initialise the validator with it, before the call to the validator is made with the form (in this case a subform for just a date).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DateRangeCheck</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, to_field_data<span style="color:#f92672">=</span>None, messages<span style="color:#f92672">=</span>None):
+        self<span style="color:#f92672">.</span>to_field_data <span style="color:#f92672">=</span> to_field_data
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> messages:
+            messages <span style="color:#f92672">=</span> error_messages
+        self<span style="color:#f92672">.</span>messages <span style="color:#f92672">=</span> messages
 
-    <span style=color:#66d9ef>def</span> __call__(self, form, from_field):
+    <span style="color:#66d9ef">def</span> __call__(self, form, from_field):
 
-        <span style=color:#66d9ef>if</span> form<span style=color:#f92672>.</span>day <span style=color:#f92672>and</span> form<span style=color:#f92672>.</span>month <span style=color:#f92672>and</span> form<span style=color:#f92672>.</span>year <span style=color:#f92672>and</span> self<span style=color:#f92672>.</span>to_field_data:
-            to_date_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;{:02d}/{:02d}/{}&#34;</span><span style=color:#f92672>.</span>format(int(self<span style=color:#f92672>.</span>to_field_data[<span style=color:#e6db74>&#39;day&#39;</span>] <span style=color:#f92672>or</span> <span style=color:#ae81ff>0</span>), int(self<span style=color:#f92672>.</span>to_field_data[<span style=color:#e6db74>&#39;month&#39;</span>] <span style=color:#f92672>or</span> <span style=color:#ae81ff>0</span>),
-                                                    self<span style=color:#f92672>.</span>to_field_data[<span style=color:#e6db74>&#39;year&#39;</span>] <span style=color:#f92672>or</span> <span style=color:#e6db74>&#39;&#39;</span>)
-            from_date_str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;{:02d}/{:02d}/{}&#34;</span><span style=color:#f92672>.</span>format(int(form<span style=color:#f92672>.</span>day<span style=color:#f92672>.</span>data <span style=color:#f92672>or</span> <span style=color:#ae81ff>0</span>), int(form<span style=color:#f92672>.</span>month<span style=color:#f92672>.</span>data <span style=color:#f92672>or</span> <span style=color:#ae81ff>0</span>),
-                                                      form<span style=color:#f92672>.</span>year<span style=color:#f92672>.</span>data <span style=color:#f92672>or</span> <span style=color:#e6db74>&#39;&#39;</span>)
+        <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>day <span style="color:#f92672">and</span> form<span style="color:#f92672">.</span>month <span style="color:#f92672">and</span> form<span style="color:#f92672">.</span>year <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>to_field_data:
+            to_date_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{:02d}/{:02d}/{}&#34;</span><span style="color:#f92672">.</span>format(int(self<span style="color:#f92672">.</span>to_field_data[<span style="color:#e6db74">&#39;day&#39;</span>] <span style="color:#f92672">or</span> <span style="color:#ae81ff">0</span>), int(self<span style="color:#f92672">.</span>to_field_data[<span style="color:#e6db74">&#39;month&#39;</span>] <span style="color:#f92672">or</span> <span style="color:#ae81ff">0</span>),
+                                                    self<span style="color:#f92672">.</span>to_field_data[<span style="color:#e6db74">&#39;year&#39;</span>] <span style="color:#f92672">or</span> <span style="color:#e6db74">&#39;&#39;</span>)
+            from_date_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{:02d}/{:02d}/{}&#34;</span><span style="color:#f92672">.</span>format(int(form<span style="color:#f92672">.</span>day<span style="color:#f92672">.</span>data <span style="color:#f92672">or</span> <span style="color:#ae81ff">0</span>), int(form<span style="color:#f92672">.</span>month<span style="color:#f92672">.</span>data <span style="color:#f92672">or</span> <span style="color:#ae81ff">0</span>),
+                                                      form<span style="color:#f92672">.</span>year<span style="color:#f92672">.</span>data <span style="color:#f92672">or</span> <span style="color:#e6db74">&#39;&#39;</span>)
 
-            from_date <span style=color:#f92672>=</span> datetime<span style=color:#f92672>.</span>strptime(from_date_str, <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>/%m/%Y&#34;</span>)
-            to_date <span style=color:#f92672>=</span> datetime<span style=color:#f92672>.</span>strptime(to_date_str, <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>/%m/%Y&#34;</span>)
+            from_date <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(from_date_str, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">/%m/%Y&#34;</span>)
+            to_date <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(to_date_str, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">/%m/%Y&#34;</span>)
 
-            date_diff <span style=color:#f92672>=</span> to_date <span style=color:#f92672>-</span> from_date
+            date_diff <span style="color:#f92672">=</span> to_date <span style="color:#f92672">-</span> from_date
 
-            <span style=color:#66d9ef>if</span> date_diff<span style=color:#f92672>.</span>total_seconds() <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
-                <span style=color:#66d9ef>raise</span> validators<span style=color:#f92672>.</span>ValidationError(self<span style=color:#f92672>.</span>messages[<span style=color:#e6db74>&#39;INVALID_DATE_RANGE_TO_FROM_SAME&#39;</span>])
-            <span style=color:#66d9ef>elif</span> date_diff<span style=color:#f92672>.</span>total_seconds() <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0</span>:
-                <span style=color:#66d9ef>raise</span> validators<span style=color:#f92672>.</span>ValidationError(self<span style=color:#f92672>.</span>messages[<span style=color:#e6db74>&#39;INVALID_DATE_RANGE_TO_BEFORE_FROM&#39;</span>])
-</code></pre></div><p>We actually found it necessary to go one step further in that we needed to halt validation for forms in surveys which were considered optional. The solution was an OptionalForm, allowing empty forms to be considered valid if they had no content.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>OptionalForm</span>(object):
-     <span style=color:#e6db74>&#34;&#34;&#34;
-</span><span style=color:#e6db74>     Allows completely empty form and stops the validation chain from continuing.
-</span><span style=color:#e6db74>     Will not stop the validation chain if any one of the fields is populated.
-</span><span style=color:#e6db74>     &#34;&#34;&#34;</span>
-     field_flags <span style=color:#f92672>=</span> (<span style=color:#e6db74>&#39;optional&#39;</span>,)
+            <span style="color:#66d9ef">if</span> date_diff<span style="color:#f92672">.</span>total_seconds() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>ValidationError(self<span style="color:#f92672">.</span>messages[<span style="color:#e6db74">&#39;INVALID_DATE_RANGE_TO_FROM_SAME&#39;</span>])
+            <span style="color:#66d9ef">elif</span> date_diff<span style="color:#f92672">.</span>total_seconds() <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>ValidationError(self<span style="color:#f92672">.</span>messages[<span style="color:#e6db74">&#39;INVALID_DATE_RANGE_TO_BEFORE_FROM&#39;</span>])
+</code></pre></div><p>We actually found it necessary to go one step further in that we needed to halt validation for forms in surveys which were considered optional. The solution was an OptionalForm, allowing empty forms to be considered valid if they had no content.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OptionalForm</span>(object):
+     <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">     Allows completely empty form and stops the validation chain from continuing.
+</span><span style="color:#e6db74">     Will not stop the validation chain if any one of the fields is populated.
+</span><span style="color:#e6db74">     &#34;&#34;&#34;</span>
+     field_flags <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;optional&#39;</span>,)
 
-     <span style=color:#66d9ef>def</span> __call__(self, form, field):
-         empty_form <span style=color:#f92672>=</span> True
+     <span style="color:#66d9ef">def</span> __call__(self, form, field):
+         empty_form <span style="color:#f92672">=</span> True
 
-         <span style=color:#66d9ef>for</span> formfield <span style=color:#f92672>in</span> form:
-             has_raw_data <span style=color:#f92672>=</span> hasattr(formfield, <span style=color:#e6db74>&#39;raw_data&#39;</span>)
+         <span style="color:#66d9ef">for</span> formfield <span style="color:#f92672">in</span> form:
+             has_raw_data <span style="color:#f92672">=</span> hasattr(formfield, <span style="color:#e6db74">&#39;raw_data&#39;</span>)
 
-             is_empty <span style=color:#f92672>=</span> has_raw_data <span style=color:#f92672>and</span> len(formfield<span style=color:#f92672>.</span>raw_data) <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>
-             is_blank <span style=color:#f92672>=</span> has_raw_data <span style=color:#f92672>and</span> len(formfield<span style=color:#f92672>.</span>raw_data) <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>1</span> \
-                 <span style=color:#f92672>and</span> isinstance(formfield<span style=color:#f92672>.</span>raw_data[<span style=color:#ae81ff>0</span>], string_types) <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> formfield<span style=color:#f92672>.</span>raw_data[<span style=color:#ae81ff>0</span>]
+             is_empty <span style="color:#f92672">=</span> has_raw_data <span style="color:#f92672">and</span> len(formfield<span style="color:#f92672">.</span>raw_data) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
+             is_blank <span style="color:#f92672">=</span> has_raw_data <span style="color:#f92672">and</span> len(formfield<span style="color:#f92672">.</span>raw_data) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span> \
+                 <span style="color:#f92672">and</span> isinstance(formfield<span style="color:#f92672">.</span>raw_data[<span style="color:#ae81ff">0</span>], string_types) <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> formfield<span style="color:#f92672">.</span>raw_data[<span style="color:#ae81ff">0</span>]
 
-             <span style=color:#75715e># By default we&#39;ll receive empty arrays for values not posted, so need to allow empty lists</span>
-             empty_field <span style=color:#f92672>=</span> True <span style=color:#66d9ef>if</span> is_empty <span style=color:#66d9ef>else</span> is_blank
+             <span style="color:#75715e"># By default we&#39;ll receive empty arrays for values not posted, so need to allow empty lists</span>
+             empty_field <span style="color:#f92672">=</span> True <span style="color:#66d9ef">if</span> is_empty <span style="color:#66d9ef">else</span> is_blank
 
-             empty_form <span style=color:#f92672>&amp;=</span> empty_field
+             empty_form <span style="color:#f92672">&amp;=</span> empty_field
 
-         <span style=color:#66d9ef>if</span> empty_form:
-             <span style=color:#66d9ef>raise</span> validators<span style=color:#f92672>.</span>StopValidation()
-</code></pre></div><h2 id=final-thoughts>Final Thoughts</h2><p>One of the main pain points with WTForms adoption was the lack of form-level validation supported out of the box. We had for instance a number of custom forms, which fell outside the generic examples above, where it was necessary to override the validate method on the form itself. This added complexity to the form that I felt belonged in a validator, similar to the field level ones WTForms supports defined in separate classes. Adding to option of form validators would be great and cover most of the bases and seems like an <a href=https://github.com/wtforms/wtforms/issues/55>oft-requested feature</a>.</p><p>I felt that the use of WTForms really helped create a far more structured approach to form design, creation and validation within our project. Getting to the point where we could isolate and shift it over to a common library was a real achievement.</p></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2016/01/20/theres-no-such-thing-as-a-side-project/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
-<span class=navigation-tittle>There's No Such Thing as a Side Project</span></a>
-<a href=https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/ class=navigation-next><span class=navigation-tittle>Blogging with Hugo</span>
-<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>
+         <span style="color:#66d9ef">if</span> empty_form:
+             <span style="color:#66d9ef">raise</span> validators<span style="color:#f92672">.</span>StopValidation()
+</code></pre></div><h2 id="final-thoughts">Final Thoughts</h2>
+<p>One of the main pain points with WTForms adoption was the lack of form-level validation supported out of the box. We had for instance a number of custom forms, which fell outside the generic examples above, where it was necessary to override the validate method on the form itself. This added complexity to the form that I felt belonged in a validator, similar to the field level ones WTForms supports defined in separate classes. Adding to option of form validators would be great and cover most of the bases and seems like an <a href="https://github.com/wtforms/wtforms/issues/55">oft-requested feature</a>.</p>
+<p>I felt that the use of WTForms really helped create a far more structured approach to form design, creation and validation within our project. Getting to the point where we could isolate and shift it over to a common library was a real achievement.</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2016/01/20/theres-no-such-thing-as-a-side-project/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">There&#39;s No Such Thing as a Side Project</span>
+    </a>
+    
+    
+    <a href="https://www.ianwootten.co.uk/2018/10/04/blogging-with-hugo/" class="navigation-next">
+      <span class="navigation-tittle">Blogging with Hugo</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

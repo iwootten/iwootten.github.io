@@ -1,41 +1,679 @@
-<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.0"><title>Ian Wootten - Software Developer, CardiffIan Wootten - Software Developer, Cardiff</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"","name":"Ian Wootten","headline":"Ian Wootten","description":"","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-02-23 10:34:05 \u002b0000 UTC","dateModified":"2022-02-23 10:34:05 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/","wordCount":"0","keywords":["Blog"]}</script><meta name=description content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Ian Wootten"><meta name=twitter:description content="Software Developer, Cardiff"><meta property="og:title" content="Ian Wootten"><meta property="og:description" content="Software Developer, Cardiff"><meta property="og:type" content="website"><meta property="og:url" content="https://www.ianwootten.co.uk/"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><link href=https://www.ianwootten.co.uk/index.xml rel=alternate type=application/rss+xml title="Ian Wootten"><link href=https://www.ianwootten.co.uk/index.xml rel=feed type=application/rss+xml title="Ian Wootten"><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><div class=post-list><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/>Why Python devs love Requests</a></span>
-<span class=item__date>Jul 08, 2021</span>
-Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
+
+    
+    
+    
+
+<title>Ian Wootten - Software Developer, CardiffIan Wootten - Software Developer, Cardiff</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "",
+    "name" : "Ian Wootten",
+    "headline" : "Ian Wootten",
+    "description" : "",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2022",
+    "datePublished": "2022-02-23 10:34:05 \u002b0000 UTC",
+    "dateModified" : "2022-02-23 10:34:05 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/",
+    "wordCount" : "0",
+    "keywords" : [ "Blog" ]
+}
+</script>
+<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ian Wootten"/>
+<meta name="twitter:description" content="Software Developer, Cardiff"/>
+
+<meta property="og:title" content="Ian Wootten" />
+<meta property="og:description" content="Software Developer, Cardiff" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+<link href="https://www.ianwootten.co.uk/index.xml" rel="alternate" type="application/rss+xml" title="Ian Wootten" />
+<link href="https://www.ianwootten.co.uk/index.xml" rel="feed" type="application/rss+xml" title="Ian Wootten" />
+
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+  <div class="post-list">
+    
+    
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/">Why Python devs love Requests</a>
+          
+        </span>
+        <span class="item__date">
+          Jul 08, 2021
+        </span>
+        
+        Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
 At the time of Requests original release in 2011 urllib3 was the high level HTTP library of choice and Requests actually uses it as a dependency.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/>Build Your Own Pico Powered Midi Controller for $35</a></span>
-<span class=item__date>Jun 08, 2021</span>
-Find the video of this article on youtube
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/">Build Your Own Pico Powered Midi Controller for $35</a>
+          
+        </span>
+        <span class="item__date">
+          Jun 08, 2021
+        </span>
+        
+        Find the video of this article on youtube
 The Launchpad is a midi controller used for audio production with digital audio workstations (or DAWs) like Ableton. In comes in mini and standard forms and features 64 pads, along with 16 additional buttons ready to map to your application of choice. The mini version starts at £75, the standard is £145 and there&rsquo;s an older &ldquo;Pro&rdquo; which is currently available for £179.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/>Installing Module Extras with Pipenv and Poetry</a></span>
-<span class=item__date>Apr 07, 2021</span>
-I thought it worth documenting how to install &ldquo;extra&rdquo; dependencies in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with uvicorn where the websockets module hadn&rsquo;t been installed as a result of not including the &ldquo;standard&rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/">Installing Module Extras with Pipenv and Poetry</a>
+          
+        </span>
+        <span class="item__date">
+          Apr 07, 2021
+        </span>
+        
+        I thought it worth documenting how to install &ldquo;extra&rdquo; dependencies in Pipenv and Poetry after struggling to find the answer myself. Context: I hit a problem with uvicorn where the websockets module hadn&rsquo;t been installed as a result of not including the &ldquo;standard&rdquo; extras. Rather than return an error, it just failed to connect the websocket which made me think something was wrong with my network configuration.
 As an example, take the following pip command:
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/>YouTube Videos as Small Experiments</a></span>
-<span class=item__date>Mar 30, 2021</span>
-The popularity of working on small experiments (or &lsquo;bets&rsquo;) as business ideas before investing a significant amount of time upon one of them is a model of work rapidly gaining traction with indie hackers.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/04/07/installing-module-extras-with-pipenv-and-poetry/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/">YouTube Videos as Small Experiments</a>
+          
+        </span>
+        <span class="item__date">
+          Mar 30, 2021
+        </span>
+        
+        The popularity of working on small experiments (or &lsquo;bets&rsquo;) as business ideas before investing a significant amount of time upon one of them is a model of work rapidly gaining traction with indie hackers.
 It makes so much sense - when you&rsquo;re small and in need of money to fund your work, you don&rsquo;t waste time on ideas which are unproven. Instead you choose to work on a portfolio of many ideas over a short period of time to see which ones resonate with customers.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/>Setting Up a New M1 Mac for Development</a></span>
-<span class=item__date>Mar 05, 2021</span>
-I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/>Comparing VAT Solutions for Bootstrapped UK Businesses</a></span>
-<span class=item__date>Feb 23, 2021</span>
-Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/>Creating Social Images with Puppeteer</a></span>
-<span class=item__date>Feb 16, 2021</span>
-In this post I&rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/>The Years I've Spent on Side Projects Have Not Been Wasted</a></span>
-<span class=item__date>Feb 04, 2021</span>
-In my 18 years online, I&rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&rsquo;ve gone years building out software I&rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/>Building a Cookiecutter Template for Multiple Python Package Managers</a></span>
-<span class=item__date>Jan 25, 2021</span>
-In my previous post, I described how you can use Python and Makefiles to quickly get new projects started. In this post I explore how you can use cookiecutters more advanced Jinja templating techniques to make a cookiecutter that can be used for multiple package managers. Specifically, we&rsquo;ll be extending the existing template to build another that can be used with either Poetry or Pipenv.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/">Setting Up a New M1 Mac for Development</a>
+          
+        </span>
+        <span class="item__date">
+          Mar 05, 2021
+        </span>
+        
+        I recently updated my 2012 Mac Mini with a 2021 M1 Mac Mini and decided to document the first time setup process. You can also check out a youtube video I&rsquo;ve made on setting it up. What follows is all the steps in written form as a handy reference for you to copy and paste from - or future me. Surprisingly, the installation process was fairly simple now there are versions of software written for Apples new architecture.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/03/05/setting-up-a-new-m1-mac-for-development/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/">Comparing VAT Solutions for Bootstrapped UK Businesses</a>
+          
+        </span>
+        <span class="item__date">
+          Feb 23, 2021
+        </span>
+        
+        Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/">Creating Social Images with Puppeteer</a>
+          
+        </span>
+        <span class="item__date">
+          Feb 16, 2021
+        </span>
+        
+        In this post I&rsquo;m going to show how to generate images for sharing content on social networks like twitter and facebook using Puppeteer. This could be for any content - a post on our blog or something more complex like a dynamic storefront. So long as we correctly include open graph meta tags within the markup appropriate for the sites in question, our nicely designed image will be included as part of the apps feeds, rather than a blank preview.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/02/16/creating-social-images-with-puppeteer/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/">The Years I&#39;ve Spent on Side Projects Have Not Been Wasted</a>
+          
+        </span>
+        <span class="item__date">
+          Feb 04, 2021
+        </span>
+        
+        In my 18 years online, I&rsquo;ve spent large chunks of time exploring ideas that never came into fruition. I&rsquo;ve gone years building out software I&rsquo;ve never made into saleable products for a multitude of reasons. The standard indie hacker journey would have you believe that this is time wasted, pointless where iterating quickly and shipping products that sell would get you to that magic monthly recurring revenue you so desperately desire.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/02/04/the-years-ive-spent-on-side-projects-have-not-been-wasted/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/">Building a Cookiecutter Template for Multiple Python Package Managers</a>
+          
+        </span>
+        <span class="item__date">
+          Jan 25, 2021
+        </span>
+        
+        In my previous post, I described how you can use Python and Makefiles to quickly get new projects started. In this post I explore how you can use cookiecutters more advanced Jinja templating techniques to make a cookiecutter that can be used for multiple package managers. Specifically, we&rsquo;ll be extending the existing template to build another that can be used with either Poetry or Pipenv.
 Our New Cookiecutter Template As a reminder, Cookiecutter allows us to template project and directory content and structure using Jinja2 logic.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/>➦</a></div><div class=post-list__item><span class=item__title--big><a href=https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/>Bootstrapping Python Projects with Cookiecutter and Makefiles</a></span>
-<span class=item__date>Jan 07, 2021</span>
-When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.
-... <a class=read-more-symbol href=https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/>➦</a></div></div><ul class=pagination><li class=page-item><a href=https://www.ianwootten.co.uk/ class=page-link aria-label=First><span aria-hidden=true>&#171;&#171;</span></a></li><li class=page-item><a href=https://www.ianwootten.co.uk/ class=page-link aria-label=Previous><span aria-hidden=true>&#171;</span></a></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/>1</a></li><li class="page-item active"><a class=page-link href=https://www.ianwootten.co.uk/page/2/>2</a></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/page/3/>3</a></li><li class="page-item disabled"><span aria-hidden=true>&nbsp;&mldr;&nbsp;</span></li><li class=page-item><a class=page-link href=https://www.ianwootten.co.uk/page/32/>32</a></li><li class=page-item><a href=https://www.ianwootten.co.uk/page/3/ class=page-link aria-label=Next><span aria-hidden=true>&#187;</span></a></li><li class=page-item><a href=https://www.ianwootten.co.uk/page/32/ class=page-link aria-label=Last><span aria-hidden=true>&#187;&#187;</span></a></li></ul></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/01/25/building-a-cookiecutter-template-for-multiple-python-package-managers/">➦</a>
+        
+        </div>
+     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/">Bootstrapping Python Projects with Cookiecutter and Makefiles</a>
+          
+        </span>
+        <span class="item__date">
+          Jan 07, 2021
+        </span>
+        
+        When starting a new project, it’s easy to get caught up in the excitement of starting the shiny new thing and forget about some basics. What starts out as a script slowly evolves into an application and before long you’ll find yourself repeating common steps for every project to get it to match personal preferences. If you happen to be working within on a team, you may have many repositories that should have the same setup and inconsistencies between them can quickly lead to large amounts of lost time to get them aligned.
+        
+        
+          ... <a class="read-more-symbol" href="https://www.ianwootten.co.uk/2021/01/07/bootstrapping-python-projects-with-cookiecutter-and-makefiles/">➦</a>
+        
+        </div>
+     
+  </div>
+  
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="https://www.ianwootten.co.uk/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    
+    <li class="page-item">
+    <a href="https://www.ianwootten.co.uk/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="https://www.ianwootten.co.uk/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="https://www.ianwootten.co.uk/page/32/">32</a></li>
+    
+    
+    <li class="page-item">
+    <a href="https://www.ianwootten.co.uk/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="https://www.ianwootten.co.uk/page/32/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+
+        </div>
+        
+  
+  <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    </body>
+</html>

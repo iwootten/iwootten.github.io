@@ -1,61 +1,363 @@
-<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.0"><title>Publishing a Package to PyPI with Poetry - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"Publishing a Package to PyPI with Poetry","headline":"Publishing a Package to PyPI with Poetry","description":"I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2020","datePublished":"2020-10-20 10:04:11 \u002b0100 \u002b0100","dateModified":"2020-10-20 10:04:11 \u002b0100 \u002b0100","url":"https:\/\/www.ianwootten.co.uk\/2020\/10\/20\/publishing-a-package-to-pypi-with-poetry\/","wordCount":"1130","keywords":["python","python-poetry","pypi","Blog"]}</script><meta name=description content="I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Publishing a Package to PyPI with Poetry"><meta name=twitter:description content="I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services."><meta property="og:title" content="Publishing a Package to PyPI with Poetry"><meta property="og:description" content="I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-10-20T10:04:11+01:00"><meta property="article:modified_time" content="2020-10-20T10:04:11+01:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/>Publishing a Package to PyPI with Poetry</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Oct 20, 2020
-in
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/development>DEVELOPMENT</a>
-•
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/software>SOFTWARE</a><br><i class="fas fa-tags"></i>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python>python</a>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python-poetry>python-poetry</a>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/pypi>pypi</a><br><i class="fas fa-clock"></i> 6 min read</div></header><div class=post><p>I recently published my first ever package to the <a href=https://www.pypi.org>Python Package Index</a> (PyPI). The process was particularly novel for me as it meant my first ever use of the <a href=https://python-poetry.org/>Poetry</a> package management tool. If you happen to work in a production studio that uses <a href=https://www.ftrack.com>ftrack</a> and is now working remotely, you might even want to <a href=https://pypi.org/project/ftrack-s3-accessor/>take a look at it</a> as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</p><h2 id=why-not-use-setuptools>Why not use setuptools?</h2><p>Typically, if you wanted to distribute a library you&rsquo;d written you&rsquo;d likely be pointed in the direction of setuptools/distutils in order to build your module for distribution. It&rsquo;s part of Pythons standard library and has been since 1998 and was my first choice. The problem I quickly found was a single setup.py would generally be tailored to a particular version of Python and I wanted to publish to both Python 2 (!) / 3 due to ftracks desktop application which drove my package still running on Python 2. This is fairly common within desktop vfx software though there&rsquo;s efforts underway to standardise to using Python 3.7. This meant potentially maintaining two separate versions of this file and two separate Pipfiles for my virtualenvs. Additionally, I&rsquo;d need to write a number of utility functions to read in details of the version of the library and README.md to show in the descriptions on PyPI. I&rsquo;d also need to install a number of other tools in order to publish.</p><p>Each of these problems in themselves aren&rsquo;t that much of an issue, but I decided to investigate using Poetry after being recommended it in the past.</p><h2 id=poetry>Poetry</h2><p>Poetry is a somewhat new contender in the world of package management. When first getting started with Python, I used pip for all my package installations. Over the last few years, I&rsquo;ve settled on using <a href=https://pipenv.pypa.io/en/latest/>Pipenv</a> in combination with <a href=https://github.com/pyenv/pyenv>pyenv</a> in order to manage the installs of Python and the virtual environments I use with them. Pipenv is typically recommended as a way of installing packages but it doesn&rsquo;t however offer any way of publishing your project to PyPI.</p><p>Poetry uses a pyproject.toml file in order to describe your project and its dependencies. If you haven&rsquo;t yet heard of it, there&rsquo;s a great description <a href=https://snarky.ca/what-the-heck-is-pyproject-toml/>here</a> on what pyproject.toml is and why it exists. It also defaults to working with the activated python version if it is compatible with your project. In contrast to setuptools, it doesn&rsquo;t require utility code to load in markdown or version numbers. It also is able to manage dependencies for both versions of Python alongside one another, without multiple files in play. It also is only a single library, meaning I only have to remember a single tool. This seemed like a pretty good choice to me for my project.</p><p>To generate a new pyproject.toml you use:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry new my-new-project
-</code></pre></div><p>My project only has a couple of dependencies, boto3 and the core ftrack python library. Specifying them is a simple add call:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry add boto3
-</code></pre></div><p>This will install the boto3 library to a virtualenv and and generate a poetry.lock detailing the exact versions of the boto3 library that has been installed.</p><p>The full pyproject.toml with all dependencies looks as follows:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>tool</span>.<span style=color:#a6e22e>poetry</span>]
-<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;ftrack-s3-accessor&#34;</span>
-<span style=color:#a6e22e>version</span> = <span style=color:#e6db74>&#34;0.1.7.post1&#34;</span>
-<span style=color:#a6e22e>description</span> = <span style=color:#e6db74>&#34;A ftrack s3 accessor updated to work with ftrack-python-api and boto3.&#34;</span>
-<span style=color:#a6e22e>authors</span> = [<span style=color:#e6db74>&#34;Ian Wootten &lt;hi@niftydigits.com&gt;&#34;</span>]
-<span style=color:#a6e22e>license</span> = <span style=color:#e6db74>&#34;Apache 2&#34;</span>
-<span style=color:#a6e22e>readme</span> = <span style=color:#e6db74>&#34;README.md&#34;</span>
-<span style=color:#a6e22e>homepage</span> = <span style=color:#e6db74>&#34;https://github.com/niftydigits/ftrack-s3-accessor&#34;</span>
-<span style=color:#a6e22e>repository</span> = <span style=color:#e6db74>&#34;https://github.com/niftydigits/ftrack-s3-accessor&#34;</span>
+<!DOCTYPE html>
+<html lang="en">
+    
+    
 
-<span style=color:#a6e22e>include</span> = [
-    <span style=color:#e6db74>&#34;LICENSE.md&#34;</span>,
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
+
+    
+    
+    
+
+<title>Publishing a Package to PyPI with Poetry - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "Publishing a Package to PyPI with Poetry",
+    "headline" : "Publishing a Package to PyPI with Poetry",
+    "description" : "I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-10-20 10:04:11 \u002b0100 \u002b0100",
+    "dateModified" : "2020-10-20 10:04:11 \u002b0100 \u002b0100",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2020\/10\/20\/publishing-a-package-to-pypi-with-poetry\/",
+    "wordCount" : "1130",
+    "keywords" : [ "python","python-poetry","pypi","Blog" ]
+}
+</script>
+<meta name="description" content="I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Publishing a Package to PyPI with Poetry"/>
+<meta name="twitter:description" content="I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services."/>
+
+<meta property="og:title" content="Publishing a Package to PyPI with Poetry" />
+<meta property="og:description" content="I recently published my first ever package to the Python Package Index (PyPI). The process was particularly novel for me as it meant my first ever use of the Poetry package management tool. If you happen to work in a production studio that uses ftrack and is now working remotely, you might even want to take a look at it as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-10-20T10:04:11&#43;01:00" />
+<meta property="article:modified_time" content="2020-10-20T10:04:11&#43;01:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/">Publishing a Package to PyPI with Poetry</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Oct 20, 2020
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
+              •
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/software">SOFTWARE</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python-poetry">python-poetry</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/pypi">pypi</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>I recently published my first ever package to the <a href="https://www.pypi.org">Python Package Index</a> (PyPI). The process was particularly novel for me as it meant my first ever use of the <a href="https://python-poetry.org/">Poetry</a> package management tool. If you happen to work in a production studio that uses <a href="https://www.ftrack.com">ftrack</a> and is now working remotely, you might even want to <a href="https://pypi.org/project/ftrack-s3-accessor/">take a look at it</a> as it enables sharing of assets using the Simple Storage Service (S3) from Amazon Web Services.</p>
+<h2 id="why-not-use-setuptools">Why not use setuptools?</h2>
+<p>Typically, if you wanted to distribute a library you&rsquo;d written you&rsquo;d likely be pointed in the direction of setuptools/distutils in order to build your module for distribution. It&rsquo;s part of Pythons standard library and has been since 1998 and was my first choice. The problem I quickly found was a single setup.py would generally be tailored to a particular version of Python and I wanted to publish to both Python 2 (!) / 3 due to ftracks desktop application which drove my package still running on Python 2. This is fairly common within desktop vfx software though there&rsquo;s efforts underway to standardise to using Python 3.7. This meant potentially maintaining two separate versions of this file and two separate Pipfiles for my virtualenvs. Additionally, I&rsquo;d need to write a number of utility functions to read in details of the version of the library and README.md to show in the descriptions on PyPI. I&rsquo;d also need to install a number of other tools in order to publish.</p>
+<p>Each of these problems in themselves aren&rsquo;t that much of an issue, but I decided to investigate using Poetry after being recommended it in the past.</p>
+<h2 id="poetry">Poetry</h2>
+<p>Poetry is a somewhat new contender in the world of package management. When first getting started with Python, I used pip for all my package installations. Over the last few years, I&rsquo;ve settled on using <a href="https://pipenv.pypa.io/en/latest/">Pipenv</a> in combination with <a href="https://github.com/pyenv/pyenv">pyenv</a> in order to manage the installs of Python and the virtual environments I use with them. Pipenv is typically recommended as a way of installing packages but it doesn&rsquo;t however offer any way of publishing your project to PyPI.</p>
+<p>Poetry uses a pyproject.toml file in order to describe your project and its dependencies. If you haven&rsquo;t yet heard of it, there&rsquo;s a great description <a href="https://snarky.ca/what-the-heck-is-pyproject-toml/">here</a> on what pyproject.toml is and why it exists. It also defaults to working with the activated python version if it is compatible with your project. In contrast to setuptools, it doesn&rsquo;t require utility code to load in markdown or version numbers. It also is able to manage dependencies for both versions of Python alongside one another, without multiple files in play. It also is only a single library, meaning I only have to remember a single tool. This seemed like a pretty good choice to me for my project.</p>
+<p>To generate a new pyproject.toml you use:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry new my-new-project
+</code></pre></div><p>My project only has a couple of dependencies, boto3 and the core ftrack python library. Specifying them is a simple add call:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry add boto3
+</code></pre></div><p>This will install the boto3 library to a virtualenv and and generate a poetry.lock detailing the exact versions of the boto3 library that has been installed.</p>
+<p>The full pyproject.toml with all dependencies looks as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">tool</span>.<span style="color:#a6e22e">poetry</span>]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;ftrack-s3-accessor&#34;</span>
+<span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;0.1.7.post1&#34;</span>
+<span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;A ftrack s3 accessor updated to work with ftrack-python-api and boto3.&#34;</span>
+<span style="color:#a6e22e">authors</span> = [<span style="color:#e6db74">&#34;Ian Wootten &lt;hi@niftydigits.com&gt;&#34;</span>]
+<span style="color:#a6e22e">license</span> = <span style="color:#e6db74">&#34;Apache 2&#34;</span>
+<span style="color:#a6e22e">readme</span> = <span style="color:#e6db74">&#34;README.md&#34;</span>
+<span style="color:#a6e22e">homepage</span> = <span style="color:#e6db74">&#34;https://github.com/niftydigits/ftrack-s3-accessor&#34;</span>
+<span style="color:#a6e22e">repository</span> = <span style="color:#e6db74">&#34;https://github.com/niftydigits/ftrack-s3-accessor&#34;</span>
+
+<span style="color:#a6e22e">include</span> = [
+    <span style="color:#e6db74">&#34;LICENSE.md&#34;</span>,
 ]
 
-[<span style=color:#a6e22e>tool</span>.<span style=color:#a6e22e>poetry</span>.<span style=color:#a6e22e>dependencies</span>]
-<span style=color:#a6e22e>python</span> = <span style=color:#e6db74>&#34;&gt;=2.7.9,&lt;2.8 || &gt;=3.7,&lt;4.0&#34;</span>
-<span style=color:#a6e22e>boto3</span> = <span style=color:#e6db74>&#34;^1.15.10&#34;</span>
-<span style=color:#a6e22e>ftrack</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>python</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>api</span> = <span style=color:#e6db74>&#34;^2.0.0&#34;</span>
-<span style=color:#a6e22e>ftrack</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>action</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>handler</span> = {<span style=color:#a6e22e>version</span> = <span style=color:#e6db74>&#34;^0.2.1&#34;</span>, <span style=color:#a6e22e>optional</span> = <span style=color:#66d9ef>true</span>}
+[<span style="color:#a6e22e">tool</span>.<span style="color:#a6e22e">poetry</span>.<span style="color:#a6e22e">dependencies</span>]
+<span style="color:#a6e22e">python</span> = <span style="color:#e6db74">&#34;&gt;=2.7.9,&lt;2.8 || &gt;=3.7,&lt;4.0&#34;</span>
+<span style="color:#a6e22e">boto3</span> = <span style="color:#e6db74">&#34;^1.15.10&#34;</span>
+<span style="color:#a6e22e">ftrack</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">python</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">api</span> = <span style="color:#e6db74">&#34;^2.0.0&#34;</span>
+<span style="color:#a6e22e">ftrack</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">action</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">handler</span> = {<span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;^0.2.1&#34;</span>, <span style="color:#a6e22e">optional</span> = <span style="color:#66d9ef">true</span>}
 
-[<span style=color:#a6e22e>tool</span>.<span style=color:#a6e22e>poetry</span>.<span style=color:#a6e22e>dev</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>dependencies</span>]
-<span style=color:#a6e22e>pytest</span> = {<span style=color:#a6e22e>version</span>=<span style=color:#e6db74>&#34;^5.2&#34;</span>, <span style=color:#a6e22e>python</span> = <span style=color:#e6db74>&#34;&gt;=3.7,&lt;4.0&#34;</span>}
+[<span style="color:#a6e22e">tool</span>.<span style="color:#a6e22e">poetry</span>.<span style="color:#a6e22e">dev</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">dependencies</span>]
+<span style="color:#a6e22e">pytest</span> = {<span style="color:#a6e22e">version</span>=<span style="color:#e6db74">&#34;^5.2&#34;</span>, <span style="color:#a6e22e">python</span> = <span style="color:#e6db74">&#34;&gt;=3.7,&lt;4.0&#34;</span>}
 
-[<span style=color:#a6e22e>build</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>system</span>]
-<span style=color:#a6e22e>requires</span> = [<span style=color:#e6db74>&#34;poetry-core&gt;=1.0.0&#34;</span>]
-<span style=color:#a6e22e>build</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>backend</span> = <span style=color:#e6db74>&#34;poetry.core.masonry.api&#34;</span>
+[<span style="color:#a6e22e">build</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">system</span>]
+<span style="color:#a6e22e">requires</span> = [<span style="color:#e6db74">&#34;poetry-core&gt;=1.0.0&#34;</span>]
+<span style="color:#a6e22e">build</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">backend</span> = <span style="color:#e6db74">&#34;poetry.core.masonry.api&#34;</span>
 
-[<span style=color:#a6e22e>tool</span>.<span style=color:#a6e22e>poetry</span>.<span style=color:#a6e22e>extras</span>]
-<span style=color:#a6e22e>action</span> = [<span style=color:#e6db74>&#34;ftrack-action-handler&#34;</span>]
-</code></pre></div><p>You can see here the versions of Python can be edited to those I want to target. Poetry is pretty clever about the way dependencies are tracked and is able to alert you to whether there may be any complications for particular combinations of Python and dependencies when you try to build your project.</p><h2 id=publishing-to-pypi>Publishing to PyPI</h2><p>The Python Package Index has both a <a href=https://test.pypi.org>test site</a> and the <a href=https://pypi.org>official site</a>, both of which anyone is able to publish to. You&rsquo;ll need an account with at least the public site, but it&rsquo;s strongly recommended you go ahead and create an account on <a href=https://test.pypi.org>test.pypi.org</a> too for testing purposes. I&rsquo;ve made several mistakes as I was experiementing, so I&rsquo;d definitely recommend this.</p><p>You can configure Poetry to remember the test index as a separate repositority in its configuration:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry config repositories.testpypi https://test.pypi.org/legacy/
-</code></pre></div><p>Poetry has a simple way of building the project for PyPI:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry build
-</code></pre></div><p>You should see output something similar to the following if everything is in order. Note for my project, a universal wheel has been built for both Python 2 and 3:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>Building ftrack-s3-accessor <span style=color:#f92672>(</span>0.1.7.post1<span style=color:#f92672>)</span>
+[<span style="color:#a6e22e">tool</span>.<span style="color:#a6e22e">poetry</span>.<span style="color:#a6e22e">extras</span>]
+<span style="color:#a6e22e">action</span> = [<span style="color:#e6db74">&#34;ftrack-action-handler&#34;</span>]
+</code></pre></div><p>You can see here the versions of Python can be edited to those I want to target. Poetry is pretty clever about the way dependencies are tracked and is able to alert you to whether there may be any complications for particular combinations of Python and dependencies when you try to build your project.</p>
+<h2 id="publishing-to-pypi">Publishing to PyPI</h2>
+<p>The Python Package Index has both a <a href="https://test.pypi.org">test site</a> and the <a href="https://pypi.org">official site</a>, both of which anyone is able to publish to. You&rsquo;ll need an account with at least the public site, but it&rsquo;s strongly recommended you go ahead and create an account on <a href="https://test.pypi.org">test.pypi.org</a> too for testing purposes. I&rsquo;ve made several mistakes as I was experiementing, so I&rsquo;d definitely recommend this.</p>
+<p>You can configure Poetry to remember the test index as a separate repositority in its configuration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry config repositories.testpypi https://test.pypi.org/legacy/
+</code></pre></div><p>Poetry has a simple way of building the project for PyPI:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry build
+</code></pre></div><p>You should see output something similar to the following if everything is in order. Note for my project, a universal wheel has been built for both Python 2 and 3:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Building ftrack-s3-accessor <span style="color:#f92672">(</span>0.1.7.post1<span style="color:#f92672">)</span>
   - Building sdist
   - Built ftrack-s3-accessor-0.1.7.post1.tar.gz
   - Building wheel
   - Built ftrack_s3_accessor-0.1.7.post1-py2.py3-none-any.whl
-</code></pre></div><p>You won&rsquo;t be able to publish the same version number of a file to either repository more than once, so you need to be very certain you&rsquo;re happy with the configuration you&rsquo;ve specified before going ahead and publishing.</p><p>Once you&rsquo;re happy, the package is then be able to test and publish to test.pypi.org:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry publish -r testpypi
-</code></pre></div><p>You&rsquo;ll be asked for your credentials but you can configure an api key in poetry to be used for publishes for each repository if you don&rsquo;t want to have to remember these each time you publish a new version.</p><p>Congratulations, your package should now be available on test.pypi.org! You should inspect how looks there and make any neccessary changes to your pyproject.toml if there are mistakes. Originally, I&rsquo;d left out the README definition and so it didn&rsquo;t appear in PyPI. Once you&rsquo;re happy with it, you can publish your package to the official PyPI site:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry publish
-</code></pre></div><h2 id=final-thoughts>Final Thoughts</h2><p>I definitely appreciated having a single simple tool to create my first publishes to PyPI. Managing the complexity that comes with wanting to publish for multiple versions of Python is not something I would want to have to do myself. If you&rsquo;re looking into simplifying your package publication, I definitely recommend taking a look. PyPI publication always seemed a bit of a dark art to me, given now I know how simple it can be I hope I&rsquo;ll be able to make more of my work available.</p><p>In the next post I take things a step further and <a href=https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions>use github actions to automate publishing to PyPI</a>.</p><form action=https://www.getrevue.co/profile/iwootten/add_subscriber method=post id=revue-form name=revue-form target=_blank style="background:#e7daf1;padding:1rem;margin-top:2rem;border:2px solid #300030"><h4 style=margin-top:0>Get Regular Tips to Your Inbox</h4><p>My <a href=https://www.getrevue.co/profile/iwootten>newsletter</a> comes out every few
-weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
-also
-features articles and
-videos I've recently published so you'll never miss out.<p><p>No spam, unsubscribe any time. Check out <a href=https://www.getrevue.co/profile/iwootten>previous issues
-here</a>.</p><div class=revue-form-group><input class=revue-form-field placeholder="Your email address..." type=email name=member[email] id=member_email style=width:100%;font-size:20px></div><div class=revue-form-actions><input type=submit value=Subscribe name=member[subscribe] id=member_submit></div></form></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2018/12/06/purpose/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
-<span class=navigation-tittle>Purpose</span></a>
-<a href=https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/ class=navigation-next><span class=navigation-tittle>Publishing to PyPI Using Github Actions</span>
-<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>
+</code></pre></div><p>You won&rsquo;t be able to publish the same version number of a file to either repository more than once, so you need to be very certain you&rsquo;re happy with the configuration you&rsquo;ve specified before going ahead and publishing.</p>
+<p>Once you&rsquo;re happy, the package is then be able to test and publish to test.pypi.org:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry publish -r testpypi
+</code></pre></div><p>You&rsquo;ll be asked for your credentials but you can configure an api key in poetry to be used for publishes for each repository if you don&rsquo;t want to have to remember these each time you publish a new version.</p>
+<p>Congratulations, your package should now be available on test.pypi.org! You should inspect how looks there and make any neccessary changes to your pyproject.toml if there are mistakes. Originally, I&rsquo;d left out the README definition and so it didn&rsquo;t appear in PyPI. Once you&rsquo;re happy with it, you can publish your package to the official PyPI site:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry publish
+</code></pre></div><h2 id="final-thoughts">Final Thoughts</h2>
+<p>I definitely appreciated having a single simple tool to create my first publishes to PyPI. Managing the complexity that comes with wanting to publish for multiple versions of Python is not something I would want to have to do myself. If you&rsquo;re looking into simplifying your package publication, I definitely recommend taking a look. PyPI publication always seemed a bit of a dark art to me, given now I know how simple it can be I hope I&rsquo;ll be able to make more of my work available.</p>
+<p>In the next post I take things a step further and <a href="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions">use github actions to automate publishing to PyPI</a>.</p>
+<form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
+  target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
+  <h4 style="margin-top:0">Get Regular Tips to Your Inbox</h4>
+  <p>My <a href="https://www.getrevue.co/profile/iwootten">newsletter</a> comes out every few
+    weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
+    also
+    features articles and
+    videos I've recently published so you'll never miss out.
+  <p>
+
+  <p>No spam, unsubscribe any time. Check out <a href="https://www.getrevue.co/profile/iwootten">previous issues
+      here</a>.
+  </p>
+  <div class="revue-form-group">
+    <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
+      id="member_email" style="width: 100%;font-size: 20px;">
+  </div>
+  <div class="revue-form-actions">
+    <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+  </div>
+</form>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2018/12/06/purpose/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Purpose</span>
+    </a>
+    
+    
+    <a href="https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/" class="navigation-next">
+      <span class="navigation-tittle">Publishing to PyPI Using Github Actions</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

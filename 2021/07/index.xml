@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2021/07 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2021/07/</link><description>Recent content in 2021/07 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2021/07/index.xml" rel="self" type="application/rss+xml"/><item><title>Why Python devs love Requests</title><link>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</link><pubDate>Thu, 08 Jul 2021 15:03:34 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</guid><description>Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
-At the time of Requests original release in 2011 urllib3 was the high level HTTP library of choice and Requests actually uses it as a dependency.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2021/07 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2021/07/</link>
+    <description>Recent content in 2021/07 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2021/07/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Python devs love Requests</title>
+      <link>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</link>
+      <pubDate>Thu, 08 Jul 2021 15:03:34 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/07/08/why-python-devs-love-requests/</guid>
+      <description>Requests is the HTTP client I and every Python developer I know always reach for when we need to pull data from remote sources. It got 121M downloads in June 2021 alone according to PePy and has 45.5k github stars at the time of writing. Developers love making requests with Requests!
+At the time of Requests original release in 2011 urllib3 was the high level HTTP library of choice and Requests actually uses it as a dependency.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2004/02 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2004/02/</link><description>Recent content in 2004/02 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/02/index.xml" rel="self" type="application/rss+xml"/><item><title>Arggh</title><link>https://www.ianwootten.co.uk/2004/02/26/arggh/</link><pubDate>Thu, 26 Feb 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/02/26/arggh/</guid><description>I’m realling struggling at the moment to get a visual interface all sorted and loverly so people can literally “point-and-click”. I made the decision to do this after talks with both my supervisor and moderator and have been trying like crazy to get it sorted, its taken over a week so far! Not good.
-My moderator also suggested that trying to find example XML schemas for CMS’s which were already out on the market at the moment for would make for good reading also.</description></item><item><title>Mid-Year with Moderator</title><link>https://www.ianwootten.co.uk/2004/02/16/mid-year-with-moderator/</link><pubDate>Mon, 16 Feb 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/02/16/mid-year-with-moderator/</guid><description>Just had my mid-year meeting follow-up with my moderator. It seems he would like to see a focus on XML standards for this system, rather than just a botch of XML which I decided on. Don’t really know how I decide on that.
-On searching for them though I found a CMS XML framework (uh-oh) which basically just outputs everything as XML. Find it here.</description></item><item><title>IE</title><link>https://www.ianwootten.co.uk/2004/02/11/ie/</link><pubDate>Wed, 11 Feb 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/02/11/ie/</guid><description>Just realised that my cms doesn’t display properly in IE6. Might explain why it looked so dodgy at my mid-year meeting with my supervisor.
-Got a few extra things in my project, permission system is fully functional, priorities for roles, workflow management – all of which still have bugs. Going to get down to the actual “management” part of the CMS tomorrow.</description></item><item><title>What a waste</title><link>https://www.ianwootten.co.uk/2004/02/01/what-a-waste/</link><pubDate>Sun, 01 Feb 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/02/01/what-a-waste/</guid><description>What a waste of a day that was…I hate programming.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2004/02 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2004/02/</link>
+    <description>Recent content in 2004/02 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/02/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arggh</title>
+      <link>https://www.ianwootten.co.uk/2004/02/26/arggh/</link>
+      <pubDate>Thu, 26 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2004/02/26/arggh/</guid>
+      <description>I’m realling struggling at the moment to get a visual interface all sorted and loverly so people can literally “point-and-click”. I made the decision to do this after talks with both my supervisor and moderator and have been trying like crazy to get it sorted, its taken over a week so far! Not good.
+My moderator also suggested that trying to find example XML schemas for CMS’s which were already out on the market at the moment for would make for good reading also.</description>
+    </item>
+    
+    <item>
+      <title>Mid-Year with Moderator</title>
+      <link>https://www.ianwootten.co.uk/2004/02/16/mid-year-with-moderator/</link>
+      <pubDate>Mon, 16 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2004/02/16/mid-year-with-moderator/</guid>
+      <description>Just had my mid-year meeting follow-up with my moderator. It seems he would like to see a focus on XML standards for this system, rather than just a botch of XML which I decided on. Don’t really know how I decide on that.
+On searching for them though I found a CMS XML framework (uh-oh) which basically just outputs everything as XML. Find it here.</description>
+    </item>
+    
+    <item>
+      <title>IE</title>
+      <link>https://www.ianwootten.co.uk/2004/02/11/ie/</link>
+      <pubDate>Wed, 11 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2004/02/11/ie/</guid>
+      <description>Just realised that my cms doesn’t display properly in IE6. Might explain why it looked so dodgy at my mid-year meeting with my supervisor.
+Got a few extra things in my project, permission system is fully functional, priorities for roles, workflow management – all of which still have bugs. Going to get down to the actual “management” part of the CMS tomorrow.</description>
+    </item>
+    
+    <item>
+      <title>What a waste</title>
+      <link>https://www.ianwootten.co.uk/2004/02/01/what-a-waste/</link>
+      <pubDate>Sun, 01 Feb 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2004/02/01/what-a-waste/</guid>
+      <description>What a waste of a day that was…I hate programming.
 I’ve spent most of the day stuck on trivial little tasks like trying to pass back multi-dimensional arrays through scripts, and interpret the results.
-On an upside, I’ve managed to get XSL producing XHTML output and generated a working grid for the actions in the system. I also found a bug in XSL which means that it will condense textarea tags to their smallest form, and resulting in incorrect display in most web browsers.</description></item></channel></rss>
+On an upside, I’ve managed to get XSL producing XHTML output and generated a working grid for the actions in the system. I also found a bug in XSL which means that it will condense textarea tags to their smallest form, and resulting in incorrect display in most web browsers.</description>
+    </item>
+    
+  </channel>
+</rss>

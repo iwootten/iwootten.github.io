@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>customer service on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/customer-service/</link><description>Recent content in customer service on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 12 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/customer-service/index.xml" rel="self" type="application/rss+xml"/><item><title>Goodbye 1 &amp; 1</title><link>https://www.ianwootten.co.uk/2012/01/12/goodbye-1-1/</link><pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2012/01/12/goodbye-1-1/</guid><description>I just sent the following email to 1 � 1′s billing department. I’ve been with them for coming up to 7 years now and they were, when I first used them, the only registraar I knew about and I was really happy.
-As the number of domains I own has grown, their account admin has become really totally useless to manage them all. I recieved a payment request out of the blue today and it tipped me over the edge.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>customer service on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/customer-service/</link>
+    <description>Recent content in customer service on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/customer-service/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goodbye 1 &amp; 1</title>
+      <link>https://www.ianwootten.co.uk/2012/01/12/goodbye-1-1/</link>
+      <pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2012/01/12/goodbye-1-1/</guid>
+      <description>I just sent the following email to 1 � 1′s billing department. I’ve been with them for coming up to 7 years now and they were, when I first used them, the only registraar I knew about and I was really happy.
+As the number of domains I own has grown, their account admin has become really totally useless to manage them all. I recieved a payment request out of the blue today and it tipped me over the edge.</description>
+    </item>
+    
+  </channel>
+</rss>

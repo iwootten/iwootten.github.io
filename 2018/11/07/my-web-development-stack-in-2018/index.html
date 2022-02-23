@@ -1,19 +1,310 @@
-<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.0"><title>My Web Development Stack in 2018 - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"My Web Development Stack in 2018","headline":"My Web Development Stack in 2018","description":"Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.\nI really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2018","datePublished":"2018-11-07 00:00:00 \u002b0000 UTC","dateModified":"2018-11-07 00:00:00 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2018\/11\/07\/my-web-development-stack-in-2018\/","wordCount":"961","keywords":["js","docker","python","Blog"]}</script><meta name=description content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
-I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary"><meta name=twitter:title content="My Web Development Stack in 2018"><meta name=twitter:description content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
-I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated."><meta property="og:title" content="My Web Development Stack in 2018"><meta property="og:description" content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
-I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2018-11-07T00:00:00+00:00"><meta property="article:modified_time" content="2018-11-07T00:00:00+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/>My Web Development Stack in 2018</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Nov 07, 2018
-in
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/development>DEVELOPMENT</a>
-•
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/software>SOFTWARE</a><br><i class="fas fa-tags"></i>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/js>js</a>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/docker>docker</a>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python>python</a><br><i class="fas fa-clock"></i> 5 min read</div></header><div class=post><p>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.</p><p>I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated. (As always happens with technical example based books). Other languages (such as Java) I’ve used regularly at my workplace and then promptly moved on from as I didn’t like the language.</p><p>Over the last few years, things have settled down somewhat. I’ve got less time to spare and so I tend to be a little more selective over the tools I use. I seem to always pick up libraries that are familiar to me, where in the past I may have been a bit more adventurous. I thought I’d write down my web stack I have now in 2018 and explain why I use each tool. This is based on my now self identifying as a Python/JavaScript web developer.</p><h2 id=direnv>Direnv</h2><p><a href=https://github.com/direnv/direnv>Direnv</a> is a really useful tool for activating shell based .envrc files based on the directory you’re within. I find them a useful way to store project specific settings which I don’t want to commit and can easily ignore from source control.</p><h2 id=docker>Docker</h2><p><a href=https://www.docker.com>Docker</a> is the way I isolate my host machine from the app I’m developing. This is done through use of containers (which broadly are similar to virtual machines but use less host resource and are more performant).</p><p>Docker is available on multiple platforms which makes taking something I’ve written on my Mac dev machine and getting it working in a cloud based linux environment much simpler than manually installing a host of libraries. As docker is driven by Dockerfiles, it means that much of that configuration is now captured as code and stored in source control.</p><p>Where a project has requirements more complex than a single machine, docker has a command docker-compose which allows me to run a more complex setup. I can specify links between each of a projects required containers and keep the entire thing shielded from my machine.</p><h2 id=pipenv>Pipenv</h2><p><a href=https://pypi.org/project/pipenv/>Pipenv</a> is a Python environment management library which builds on top of other libraries such as pip and virtualenv. It allows for easy installation of libraries for a project and is easier to use and more secure by default than pip. It is written by <a href=https://www.kennethreitz.org/>Kenneth Reitz</a> who is also the creator of the popular Requests library.</p><p>It took me some time to move over to pipenv due to the different workflow involved and being used to pip, but now saves me a lot of time with hunting for the location of virtual environments or remembering the location of my Python 3 install.</p><h2 id=django>Django</h2><p><a href=https://www.djangoproject.com/>Django</a> is my go to framework for most of my larger web based projects. It gives me everything I need to get a project off of the ground quickly, without having to immediately worry about building common core elements. Out of the box it includes authentication, models, database storage, migrations and somewhat uniquely from other frameworks - a dynamic admin interface.</p><p>It also has a thriving open source community who develop a wide number of extension apps. If you’re looking to do something custom, it’s likely it’s already been built.</p><h2 id=flask>Flask</h2><p><a href=http://flask.pocoo.org/>Flask</a> is a micro framework I typically use for web projects with a small list of requirements.</p><p>There are a long list of extensions available for it which can be easily installed, such as those for database storage or authentication. By only installing extensions you need, this results in a much smaller overall app which can be deployed and started more easily.</p><p>Typically I might use flask as a simple api endpoint that doesn’t require any auth.</p><h2 id=vuejs>Vue.js</h2><p><a href=https://vuejs.org/>Vue.js</a> is the JavaScript framework I use to create single page applications. It allows me to easily break a complex set of behaviours into a more structured and well thought out application.</p><p>I originally opted for Vue.js over react simply because I found it easier to understand. It also is simpler to migrate a existing js app over to Vue, or enhance a existing static page with Vue based components.</p><p>I particularly like Vue’s cli. It makes it very easy to quickly scaffold an entire application and write end to end tests for it.</p><h2 id=semantic-ui>Semantic UI</h2><p><a href=https://semantic-ui.com/>Semantic UI</a> is a UI library I use when working on my own projects. This saves me a bunch of time when rapidly prototyping an application. I can build responsive pages and need not worry too much about browser differences for every element.</p><p>Although I’ve used twitter’s bootstrap a lot in the past, I find the components in Semantic easier on the eye and their semantic naming makes more sense. It also helps that Semantic isn’t the most oft used library in my circles so in some small way contributes to it seeming different.</p><p>Semantic also has an <a href=https://react.semantic-ui.com/>official ui react integration</a>, meaning if I ever did choose to make the move to react it would hopefully be simpler than manually creating them myself.</p><h2 id=summary>Summary</h2><p>So, that’s my current web stack in 2018. I could have gone in to far more detail on the extensions I use in each framework, but I may well save that for a future post. No doubt it will change over time, but hopefully more slowly than it has done previously. If you&rsquo;re interested in hiring me to use any of the above give me a shout at <a href=mailto:hi@niftydigits.com>hi@niftydigits.com</a></p></div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
-<span class=navigation-tittle>What’s in a name?</span></a>
-<a href=https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/ class=navigation-next><span class=navigation-tittle>Unhealthy Comparisons</span>
-<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
+
+    
+    
+    
+
+<title>My Web Development Stack in 2018 - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "My Web Development Stack in 2018",
+    "headline" : "My Web Development Stack in 2018",
+    "description" : "Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.\nI really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-11-07 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2018-11-07 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2018\/11\/07\/my-web-development-stack-in-2018\/",
+    "wordCount" : "961",
+    "keywords" : [ "js","docker","python","Blog" ]
+}
+</script>
+<meta name="description" content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
+I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My Web Development Stack in 2018"/>
+<meta name="twitter:description" content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
+I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated."/>
+
+<meta property="og:title" content="My Web Development Stack in 2018" />
+<meta property="og:description" content="Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.
+I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-11-07T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-11-07T00:00:00&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2018/11/07/my-web-development-stack-in-2018/">My Web Development Stack in 2018</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Nov 07, 2018
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
+              •
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/software">SOFTWARE</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/js">js</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/docker">docker</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 5 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>Over my time as a web developer, I’ve jumped between many frameworks and languages, attempting to find ones that work well for me. This seems to be pretty typical for developers who always have a take on the latest trend, either to quickly adopt or criticise it.</p>
+<p>I really wanted to be a member of the Ruby crew for a time and ended up buying multiple copies of “Agile Web Development with Rails”, before having the opportunity to really apply it to a project and disposing of them because the material was outdated.  (As always happens with technical example based books). Other languages (such as Java) I’ve used regularly at my workplace and then promptly moved on from as I didn’t like the language.</p>
+<p>Over the last few years, things have settled down somewhat. I’ve got less time to spare and so I tend to be a little more selective over the tools I use. I seem to always pick up libraries that are familiar to me, where in the past I may have been a bit more adventurous. I thought I’d write down my web stack I have now in 2018 and explain why I use each tool. This is based on my now self identifying as a Python/JavaScript web developer.</p>
+<h2 id="direnv">Direnv</h2>
+<p><a href="https://github.com/direnv/direnv">Direnv</a> is a really useful tool for activating shell based .envrc files based on the directory you’re within. I find them a useful way to store project specific settings which I don’t want to commit and can easily ignore from source control.</p>
+<h2 id="docker">Docker</h2>
+<p><a href="https://www.docker.com">Docker</a> is the way I isolate my host machine from the app I’m developing. This is done through use of containers (which broadly are similar to virtual machines but use less host resource and are more performant).</p>
+<p>Docker is available on multiple platforms which makes taking something I’ve written on my Mac dev machine and getting it working in a cloud based linux environment much simpler than manually installing a host of libraries. As docker is driven by Dockerfiles, it means that much of that configuration is now captured as code and stored in source control.</p>
+<p>Where a project has requirements more complex than a single machine, docker has a command docker-compose which allows me to run a more complex setup. I can specify links between each of a projects required containers and keep the entire thing shielded from my machine.</p>
+<h2 id="pipenv">Pipenv</h2>
+<p><a href="https://pypi.org/project/pipenv/">Pipenv</a> is a Python environment management library which builds on top of other libraries such as pip and virtualenv. It allows for easy installation of libraries for a project and is easier to use and more secure by default than pip. It is written by <a href="https://www.kennethreitz.org/">Kenneth Reitz</a> who is also the creator of the popular Requests library.</p>
+<p>It took me some time to move over to pipenv due to the different workflow involved and being used to pip, but now saves me a lot of time with hunting for the location of virtual environments or remembering the location of my Python 3 install.</p>
+<h2 id="django">Django</h2>
+<p><a href="https://www.djangoproject.com/">Django</a> is my go to framework for most of my larger web based projects. It gives me everything I need to get a project off of the ground quickly, without having to immediately worry about building common core elements. Out of the box it includes authentication, models, database storage, migrations and somewhat uniquely from other frameworks - a dynamic admin interface.</p>
+<p>It also has a thriving open source community who develop a wide number of extension apps. If you’re looking to do something custom, it’s likely it’s already been built.</p>
+<h2 id="flask">Flask</h2>
+<p><a href="http://flask.pocoo.org/">Flask</a> is a micro framework I typically use for web projects with a small list of requirements.</p>
+<p>There are a long list of extensions available for it which can be easily installed, such as those for database storage or authentication. By only installing extensions you need, this results in a much smaller overall app which can be deployed and started more easily.</p>
+<p>Typically I might use flask as a simple api endpoint that doesn’t require any auth.</p>
+<h2 id="vuejs">Vue.js</h2>
+<p><a href="https://vuejs.org/">Vue.js</a> is the JavaScript framework I use to create single page applications. It allows me to easily break a complex set of behaviours into a more structured and well thought out application.</p>
+<p>I originally opted for Vue.js over react simply because I found it easier to understand. It also is simpler to migrate a existing js app over to Vue, or enhance a existing static page with Vue based components.</p>
+<p>I particularly like Vue’s cli. It makes it very easy to quickly scaffold an entire application and write end to end tests for it.</p>
+<h2 id="semantic-ui">Semantic UI</h2>
+<p><a href="https://semantic-ui.com/">Semantic UI</a> is a UI library I use when working on my own projects. This saves me a bunch of time when rapidly prototyping an application. I can build responsive pages and need not worry too much about browser differences for every element.</p>
+<p>Although I’ve used twitter’s bootstrap a lot in the past, I find the components in Semantic easier on the eye and their semantic naming makes more sense. It also helps that Semantic isn’t the most oft used library in my circles so in some small way contributes to it seeming different.</p>
+<p>Semantic also has an <a href="https://react.semantic-ui.com/">official ui react integration</a>, meaning if I ever did choose to make the move to react it would hopefully be simpler than manually creating them myself.</p>
+<h2 id="summary">Summary</h2>
+<p>So, that’s my current web stack in 2018. I could have gone in to far more detail on the extensions I use in each framework, but I may well save that for a future post. No doubt it will change over time, but hopefully more slowly than it has done previously. If you&rsquo;re interested in hiring me to use any of the above give me a shout at <a href="mailto:hi@niftydigits.com">hi@niftydigits.com</a></p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2018/10/16/whats-in-a-name/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">What’s in a name?</span>
+    </a>
+    
+    
+    <a href="https://www.ianwootten.co.uk/2018/11/21/unhealthy-comparisons/" class="navigation-next">
+      <span class="navigation-tittle">Unhealthy Comparisons</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

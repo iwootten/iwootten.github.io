@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2011/11 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2011/11/</link><description>Recent content in 2011/11 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2011/11/index.xml" rel="self" type="application/rss+xml"/><item><title>Pagination in CouchDB Apps</title><link>https://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</link><pubDate>Wed, 02 Nov 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</guid><description>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.
-I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I’ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out I’ve always been doing it the “bad” way.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2011/11 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2011/11/</link>
+    <description>Recent content in 2011/11 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2011/11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pagination in CouchDB Apps</title>
+      <link>https://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</link>
+      <pubDate>Wed, 02 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2011/11/02/pagination-in-couchdb-apps/</guid>
+      <description>I’ve been working on some fun little node.js / couchdb projects of late. Given the fact I don’t use either as part of my work, I’ve spent some downtime experimenting and slowly iterating my approaches as I learn best practice.
+I hit what I consider to be a fairly frustrating hurdle that couchdb threw up that I’ve been blissfully unaware of through all my couchdb dev. When it came to doing pagination it turns out I’ve always been doing it the “bad” way.</description>
+    </item>
+    
+  </channel>
+</rss>

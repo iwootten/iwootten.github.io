@@ -1,2 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>life on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/life/</link><description>Recent content in life on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 02 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/life/index.xml" rel="self" type="application/rss+xml"/><item><title>2012</title><link>https://www.ianwootten.co.uk/2013/01/02/2012/</link><pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2013/01/02/2012/</guid><description>So here we are in a brand new year. 2012 came and went without even the slightest apocalypse. Reflecting on what has been achieved this past year has found favour with others in the web profession so I thought I might try it. More importantly to me, it also seems like a good way to perhaps spur me on to achieve some firm targets this year.
-My circumstances have dramatically changed since January last year.</description></item><item><title>How has web use changed your life?</title><link>https://www.ianwootten.co.uk/2009/02/15/how-has-web-use-changed-your-life/</link><pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2009/02/15/how-has-web-use-changed-your-life/</guid><description>I’ve been pondering this morning how the use of the internet has (or may have) changed my life. As a child/teen during the web’s infancy, I was blissfully unaware that so many lifes/careers/relationships would be enabled or changed as a result of the interactions it might facilitate. I hadn’t even heard of google prior to arriving at university and two years prior to that had never had internet access anywhere locally.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/life/</link>
+    <description>Recent content in life on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2012</title>
+      <link>https://www.ianwootten.co.uk/2013/01/02/2012/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2013/01/02/2012/</guid>
+      <description>So here we are in a brand new year. 2012 came and went without even the slightest apocalypse. Reflecting on what has been achieved this past year has found favour with others in the web profession so I thought I might try it. More importantly to me, it also seems like a good way to perhaps spur me on to achieve some firm targets this year.
+My circumstances have dramatically changed since January last year.</description>
+    </item>
+    
+    <item>
+      <title>How has web use changed your life?</title>
+      <link>https://www.ianwootten.co.uk/2009/02/15/how-has-web-use-changed-your-life/</link>
+      <pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2009/02/15/how-has-web-use-changed-your-life/</guid>
+      <description>I’ve been pondering this morning how the use of the internet has (or may have) changed my life. As a child/teen during the web’s infancy, I was blissfully unaware that so many lifes/careers/relationships would be enabled or changed as a result of the interactions it might facilitate. I hadn’t even heard of google prior to arriving at university and two years prior to that had never had internet access anywhere locally.</description>
+    </item>
+    
+  </channel>
+</rss>

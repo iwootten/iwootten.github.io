@@ -1,3 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2013/08 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2013/08/</link><description>Recent content in 2013/08 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2013/08/index.xml" rel="self" type="application/rss+xml"/><item><title>A Decade on the World Wide Web</title><link>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</link><pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</guid><description>10 years ago today, I started this blog. That’s just under a 3rd of my life. In other words, that’s quite a long time ago.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2013/08 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2013/08/</link>
+    <description>Recent content in 2013/08 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2013/08/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Decade on the World Wide Web</title>
+      <link>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</link>
+      <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2013/08/14/a-decade-on-the-world-wide-web/</guid>
+      <description>10 years ago today, I started this blog. That’s just under a 3rd of my life. In other words, that’s quite a long time ago.
 I started out using Movable type and very quickly (3 days later) ditched it in favour of the b2 “weblog tool”, which WordPress was later spawned from.
-Back then, I blogged frequently about what was going on in my life, which tended to centre around University coursework rather than technical posts.</description></item></channel></rss>
+Back then, I blogged frequently about what was going on in my life, which tended to centre around University coursework rather than technical posts.</description>
+    </item>
+    
+  </channel>
+</rss>

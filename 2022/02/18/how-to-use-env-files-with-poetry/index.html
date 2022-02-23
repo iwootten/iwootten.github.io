@@ -1,21 +1,290 @@
-<!doctype html><html lang=en><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="public"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=generator content="Hugo 0.83.0"><title>How to use .env files with Poetry - Ian Wootten</title><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.ianwootten.co.uk"},"articleSection":"posts","name":"How to use .env files with Poetry","headline":"How to use .env files with Poetry","description":"I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.\nPoetry 1.2 will add plugin support to tweak or add to it\u0026rsquo;s default package management behaviour and @mpeteuil made one for .","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-02-18 09:35:00 \u002b0000 UTC","dateModified":"2022-02-18 09:35:00 \u002b0000 UTC","url":"https:\/\/www.ianwootten.co.uk\/2022\/02\/18\/how-to-use-env-files-with-poetry\/","wordCount":"132","keywords":["python","poetry","Blog"]}</script><meta name=description content="I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
-Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and @mpeteuil made one for ."><meta name=keywords content="Developer,Programming,Python,Terraform,Serverless,VueJS,Cardiff"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.ianwootten.co.uk/images/how-to-use-env-files-with-poetry/opengraph.jpg"><meta name=twitter:title content="How to use .env files with Poetry"><meta name=twitter:description content="I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
-Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and @mpeteuil made one for ."><meta property="og:title" content="How to use .env files with Poetry"><meta property="og:description" content="I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
-Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and @mpeteuil made one for ."><meta property="og:type" content="article"><meta property="og:url" content="https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/"><meta property="og:image" content="https://www.ianwootten.co.uk/images/how-to-use-env-files-with-poetry/opengraph.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-02-18T09:35:00+00:00"><meta property="article:modified_time" content="2022-02-18T09:35:00+00:00"><link rel=stylesheet href=https://www.ianwootten.co.uk/css/hyde-hyde.css><link rel=stylesheet href=https://www.ianwootten.co.uk/css/print.css media=print><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=apple-touch-icon-precomposed sizes=144x144 href=https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=https://www.ianwootten.co.uk/favicon.png><script async defer data-domain=ianwootten.co.uk src=https://analytics.niftydigits.com/js/plausible.js></script></head><body><div class=sidebar><div class=container><div class=sidebar-about><span class=site__title><a href=https://www.ianwootten.co.uk>Ian Wootten</a></span><div class=author-image><a href=https://www.ianwootten.co.uk><img src=https://www.ianwootten.co.uk/images/headshot.jpg alt="Author Image" class="img--circle img--headshot element--center" width=115px height=115px></a></div><p class=site__description>Software Developer, Cardiff</p></div><div class=collapsible-menu><input type=checkbox id=menuToggle>
-<label for=menuToggle>Ian Wootten</label><div class=menu-content><div><ul class=sidebar-nav><li><a href=https://www.ianwootten.co.uk/about/><span>About</span></a></li><li><a href=https://www.ianwootten.co.uk/hire-me/><span>Hire Me</span></a></li><li><a href=https://www.getrevue.co/profile/iwootten><span>Subscribe</span></a></li></li></ul></div><section class=social><a href=https://twitter.com/iwootten rel=me><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden=true></i></a>
-<a href=https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA rel=me><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden=true></i></a>
-<a href=https://github.com/iwootten rel=me><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden=true></i></a>
-<a href=https://linkedin.com/in/iwootten rel=me><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden=true></i></a>
-<a href=https://stackoverflow.com/users/1405701 rel=me><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden=true></i></a></section></div></div><p class=copyright>&copy;2003-2022 Ian Wootten</p></div><div></div></div><div class="content container"><article><header><h1><a href=https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/>How to use .env files with Poetry</a></h1><div class=post__meta><i class="fas fa-calendar-alt"></i> Feb 18, 2022
-in
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/development>DEVELOPMENT</a>
-•
-<a class="badge badge-category" href=https://www.ianwootten.co.uk/categories/tips>TIPS</a><br><i class="fas fa-tags"></i>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/python>python</a>
-<a class="badge badge-tag" href=https://www.ianwootten.co.uk/tags/poetry>poetry</a><br><i class="fas fa-clock"></i> 1 min read</div></header><div class=post><p>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.</p><p>Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and <a href=http://github.com/mpeteuil>@mpeteuil</a> <a href=https://github.com/mpeteuil/poetry-dotenv-plugin>made one for .env files</a>!</p><p>You can install 1.2.0a2 and get it the plugin right now like this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>poetry self update --preview
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
+
+    
+    
+    
+
+<title>How to use .env files with Poetry - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "How to use .env files with Poetry",
+    "headline" : "How to use .env files with Poetry",
+    "description" : "I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.\nPoetry 1.2 will add plugin support to tweak or add to it\u0026rsquo;s default package management behaviour and @mpeteuil made one for .",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2022",
+    "datePublished": "2022-02-18 09:35:00 \u002b0000 UTC",
+    "dateModified" : "2022-02-18 09:35:00 \u002b0000 UTC",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2022\/02\/18\/how-to-use-env-files-with-poetry\/",
+    "wordCount" : "132",
+    "keywords" : [ "python","poetry","Blog" ]
+}
+</script>
+<meta name="description" content="I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
+Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and @mpeteuil made one for .">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/how-to-use-env-files-with-poetry/opengraph.jpg"/>
+
+<meta name="twitter:title" content="How to use .env files with Poetry"/>
+<meta name="twitter:description" content="I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
+Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and @mpeteuil made one for ."/>
+
+<meta property="og:title" content="How to use .env files with Poetry" />
+<meta property="og:description" content="I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
+Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and @mpeteuil made one for ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/how-to-use-env-files-with-poetry/opengraph.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-18T09:35:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-02-18T09:35:00&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/">How to use .env files with Poetry</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Feb 18, 2022
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/development">DEVELOPMENT</a>
+              •
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/tips">TIPS</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/python">python</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/poetry">poetry</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 1 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.</p>
+<p>Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and <a href="http://github.com/mpeteuil">@mpeteuil</a> <a href="https://github.com/mpeteuil/poetry-dotenv-plugin">made one for .env files</a>!</p>
+<p>You can install 1.2.0a2 and get it the plugin right now like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry self update --preview
 poetry plugin add poetry-dotenv-plugin
-</code></pre></div><p>Then you should find anything you’ve added to your .env file is accessible to use in your project as an environment variable.</p><hr>If you found this helpful you should subscribe to <a href=https://www.getrevue.co/profile/iwootten>my newsletter</a>
-for other tips and tricks.</div><div class="navigation navigation-single"><a href=https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/ class=navigation-prev><i aria-hidden=true class="fa fa-chevron-left"></i>
-<span class=navigation-tittle>How to Query the Product Hunt API Responsibly with Python</span></a>
-<a href=https://www.ianwootten.co.uk/2022/02/23/investment-principles-for-blogging/ class=navigation-next><span class=navigation-tittle>Investment Principles for Blogging</span>
-<i aria-hidden=true class="fa fa-chevron-right"></i></a></div></article></div><script defer src=https://use.fontawesome.com/releases/v5.2.0/js/all.js integrity=sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy crossorigin=anonymous></script></body></html>
+</code></pre></div><p>Then you should find anything you’ve added to your .env file is accessible to use in your project as an environment variable.</p>
+<hr />
+
+If you found this helpful you should subscribe to <a href="https://www.getrevue.co/profile/iwootten">my newsletter</a>
+for other tips and tricks.
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">How to Query the Product Hunt API Responsibly with Python</span>
+    </a>
+    
+    
+    <a href="https://www.ianwootten.co.uk/2022/02/23/investment-principles-for-blogging/" class="navigation-next">
+      <span class="navigation-tittle">Investment Principles for Blogging</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

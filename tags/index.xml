@@ -1,1 +1,2036 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/</link><description>Recent content in Tags on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Feb 2022 10:34:05 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>blogging</title><link>https://www.ianwootten.co.uk/tags/blogging/</link><pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/blogging/</guid><description/></item><item><title>finance</title><link>https://www.ianwootten.co.uk/tags/finance/</link><pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/finance/</guid><description/></item><item><title>money</title><link>https://www.ianwootten.co.uk/tags/money/</link><pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/money/</guid><description/></item><item><title>poetry</title><link>https://www.ianwootten.co.uk/tags/poetry/</link><pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/poetry/</guid><description/></item><item><title>python</title><link>https://www.ianwootten.co.uk/tags/python/</link><pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/python/</guid><description/></item><item><title>client work</title><link>https://www.ianwootten.co.uk/tags/client-work/</link><pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/client-work/</guid><description/></item><item><title>data analysis</title><link>https://www.ianwootten.co.uk/tags/data-analysis/</link><pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/data-analysis/</guid><description/></item><item><title>product hunt</title><link>https://www.ianwootten.co.uk/tags/product-hunt/</link><pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/product-hunt/</guid><description/></item><item><title>aws</title><link>https://www.ianwootten.co.uk/tags/aws/</link><pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/aws/</guid><description/></item><item><title>docker</title><link>https://www.ianwootten.co.uk/tags/docker/</link><pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/docker/</guid><description/></item><item><title>serverless</title><link>https://www.ianwootten.co.uk/tags/serverless/</link><pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/serverless/</guid><description/></item><item><title>leds</title><link>https://www.ianwootten.co.uk/tags/leds/</link><pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/leds/</guid><description/></item><item><title>maths</title><link>https://www.ianwootten.co.uk/tags/maths/</link><pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/maths/</guid><description/></item><item><title>neopixel</title><link>https://www.ianwootten.co.uk/tags/neopixel/</link><pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/neopixel/</guid><description/></item><item><title>p5js</title><link>https://www.ianwootten.co.uk/tags/p5js/</link><pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/p5js/</guid><description/></item><item><title>raspberry pi</title><link>https://www.ianwootten.co.uk/tags/raspberry-pi/</link><pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/raspberry-pi/</guid><description/></item><item><title>pipenv</title><link>https://www.ianwootten.co.uk/tags/pipenv/</link><pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/pipenv/</guid><description/></item><item><title>pipx</title><link>https://www.ianwootten.co.uk/tags/pipx/</link><pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/pipx/</guid><description/></item><item><title>pyenv</title><link>https://www.ianwootten.co.uk/tags/pyenv/</link><pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/pyenv/</guid><description/></item><item><title>blog</title><link>https://www.ianwootten.co.uk/tags/blog/</link><pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/blog/</guid><description/></item><item><title>disqus</title><link>https://www.ianwootten.co.uk/tags/disqus/</link><pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/disqus/</guid><description/></item><item><title>performance</title><link>https://www.ianwootten.co.uk/tags/performance/</link><pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/performance/</guid><description/></item><item><title>astro</title><link>https://www.ianwootten.co.uk/tags/astro/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/astro/</guid><description/></item><item><title>js</title><link>https://www.ianwootten.co.uk/tags/js/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/js/</guid><description/></item><item><title>spotify</title><link>https://www.ianwootten.co.uk/tags/spotify/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/spotify/</guid><description/></item><item><title>supabase</title><link>https://www.ianwootten.co.uk/tags/supabase/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/supabase/</guid><description/></item><item><title>web scraping</title><link>https://www.ianwootten.co.uk/tags/web-scraping/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/web-scraping/</guid><description/></item><item><title>low-code</title><link>https://www.ianwootten.co.uk/tags/low-code/</link><pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/low-code/</guid><description/></item><item><title>no-code</title><link>https://www.ianwootten.co.uk/tags/no-code/</link><pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/no-code/</guid><description/></item><item><title>circuitpython</title><link>https://www.ianwootten.co.uk/tags/circuitpython/</link><pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/circuitpython/</guid><description/></item><item><title>djing</title><link>https://www.ianwootten.co.uk/tags/djing/</link><pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/djing/</guid><description/></item><item><title>Music</title><link>https://www.ianwootten.co.uk/tags/music/</link><pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/music/</guid><description/></item><item><title>til</title><link>https://www.ianwootten.co.uk/tags/til/</link><pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/til/</guid><description/></item><item><title>business</title><link>https://www.ianwootten.co.uk/tags/business/</link><pubDate>Tue, 30 Mar 2021 13:07:26 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/business/</guid><description/></item><item><title>youtube</title><link>https://www.ianwootten.co.uk/tags/youtube/</link><pubDate>Tue, 30 Mar 2021 13:07:26 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/youtube/</guid><description/></item><item><title>apple silicon</title><link>https://www.ianwootten.co.uk/tags/apple-silicon/</link><pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/apple-silicon/</guid><description/></item><item><title>mac</title><link>https://www.ianwootten.co.uk/tags/mac/</link><pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/mac/</guid><description/></item><item><title>tutorial</title><link>https://www.ianwootten.co.uk/tags/tutorial/</link><pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/tutorial/</guid><description/></item><item><title>eu</title><link>https://www.ianwootten.co.uk/tags/eu/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/eu/</guid><description/></item><item><title>gov</title><link>https://www.ianwootten.co.uk/tags/gov/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/gov/</guid><description/></item><item><title>payments</title><link>https://www.ianwootten.co.uk/tags/payments/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/payments/</guid><description/></item><item><title>vat</title><link>https://www.ianwootten.co.uk/tags/vat/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/vat/</guid><description/></item><item><title>hugo</title><link>https://www.ianwootten.co.uk/tags/hugo/</link><pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/hugo/</guid><description/></item><item><title>open graph</title><link>https://www.ianwootten.co.uk/tags/open-graph/</link><pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/open-graph/</guid><description/></item><item><title>puppeteer</title><link>https://www.ianwootten.co.uk/tags/puppeteer/</link><pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/puppeteer/</guid><description/></item><item><title>goals</title><link>https://www.ianwootten.co.uk/tags/goals/</link><pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/goals/</guid><description/></item><item><title>learning</title><link>https://www.ianwootten.co.uk/tags/learning/</link><pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/learning/</guid><description/></item><item><title>products</title><link>https://www.ianwootten.co.uk/tags/products/</link><pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/products/</guid><description/></item><item><title>ci</title><link>https://www.ianwootten.co.uk/tags/ci/</link><pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/ci/</guid><description/></item><item><title>cookiecutter</title><link>https://www.ianwootten.co.uk/tags/cookiecutter/</link><pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/cookiecutter/</guid><description/></item><item><title>github actions</title><link>https://www.ianwootten.co.uk/tags/github-actions/</link><pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/github-actions/</guid><description/></item><item><title>jinja2</title><link>https://www.ianwootten.co.uk/tags/jinja2/</link><pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/jinja2/</guid><description/></item><item><title>pep</title><link>https://www.ianwootten.co.uk/tags/pep/</link><pubDate>Mon, 16 Nov 2020 15:15:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/pep/</guid><description/></item><item><title>tips</title><link>https://www.ianwootten.co.uk/tags/tips/</link><pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/tips/</guid><description/></item><item><title>teams</title><link>https://www.ianwootten.co.uk/tags/teams/</link><pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/teams/</guid><description/></item><item><title>digitalocean</title><link>https://www.ianwootten.co.uk/tags/digitalocean/</link><pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/digitalocean/</guid><description/></item><item><title>django</title><link>https://www.ianwootten.co.uk/tags/django/</link><pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/django/</guid><description/></item><item><title>pypi</title><link>https://www.ianwootten.co.uk/tags/pypi/</link><pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/pypi/</guid><description/></item><item><title>python-poetry</title><link>https://www.ianwootten.co.uk/tags/python-poetry/</link><pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate><guid>https://www.ianwootten.co.uk/tags/python-poetry/</guid><description/></item><item><title>mindfulness</title><link>https://www.ianwootten.co.uk/tags/mindfulness/</link><pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/mindfulness/</guid><description/></item><item><title>wtforms</title><link>https://www.ianwootten.co.uk/tags/wtforms/</link><pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/wtforms/</guid><description/></item><item><title>projects</title><link>https://www.ianwootten.co.uk/tags/projects/</link><pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/projects/</guid><description/></item><item><title>javascript</title><link>https://www.ianwootten.co.uk/tags/javascript/</link><pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/javascript/</guid><description/></item><item><title>metalsmith</title><link>https://www.ianwootten.co.uk/tags/metalsmith/</link><pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/metalsmith/</guid><description/></item><item><title>openimageio</title><link>https://www.ianwootten.co.uk/tags/openimageio/</link><pubDate>Mon, 15 Sep 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/openimageio/</guid><description/></item><item><title>ffmpeg</title><link>https://www.ianwootten.co.uk/tags/ffmpeg/</link><pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/ffmpeg/</guid><description/></item><item><title>imagemajick</title><link>https://www.ianwootten.co.uk/tags/imagemajick/</link><pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/imagemajick/</guid><description/></item><item><title>coding</title><link>https://www.ianwootten.co.uk/tags/coding/</link><pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/coding/</guid><description/></item><item><title>productivity</title><link>https://www.ianwootten.co.uk/tags/productivity/</link><pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/productivity/</guid><description/></item><item><title>jekyll</title><link>https://www.ianwootten.co.uk/tags/jekyll/</link><pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/jekyll/</guid><description/></item><item><title>static sites</title><link>https://www.ianwootten.co.uk/tags/static-sites/</link><pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/static-sites/</guid><description/></item><item><title>wordpress</title><link>https://www.ianwootten.co.uk/tags/wordpress/</link><pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/wordpress/</guid><description/></item><item><title>pygments</title><link>https://www.ianwootten.co.uk/tags/pygments/</link><pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/pygments/</guid><description/></item><item><title>copyright</title><link>https://www.ianwootten.co.uk/tags/copyright/</link><pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/copyright/</guid><description/></item><item><title>law</title><link>https://www.ianwootten.co.uk/tags/law/</link><pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/law/</guid><description/></item><item><title>ecommerce</title><link>https://www.ianwootten.co.uk/tags/ecommerce/</link><pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/ecommerce/</guid><description/></item><item><title>shopping</title><link>https://www.ianwootten.co.uk/tags/shopping/</link><pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/shopping/</guid><description/></item><item><title>time tracking</title><link>https://www.ianwootten.co.uk/tags/time-tracking/</link><pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/time-tracking/</guid><description/></item><item><title>charting</title><link>https://www.ianwootten.co.uk/tags/charting/</link><pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/charting/</guid><description/></item><item><title>d3</title><link>https://www.ianwootten.co.uk/tags/d3/</link><pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/d3/</guid><description/></item><item><title>dns</title><link>https://www.ianwootten.co.uk/tags/dns/</link><pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/dns/</guid><description/></item><item><title>hosting</title><link>https://www.ianwootten.co.uk/tags/hosting/</link><pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/hosting/</guid><description/></item><item><title>iceland</title><link>https://www.ianwootten.co.uk/tags/iceland/</link><pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/iceland/</guid><description/></item><item><title>nameservers</title><link>https://www.ianwootten.co.uk/tags/nameservers/</link><pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/nameservers/</guid><description/></item><item><title>Web</title><link>https://www.ianwootten.co.uk/tags/web/</link><pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/web/</guid><description/></item><item><title>rant business</title><link>https://www.ianwootten.co.uk/tags/rant-business/</link><pubDate>Sat, 06 Jul 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/rant-business/</guid><description/></item><item><title>hacking</title><link>https://www.ianwootten.co.uk/tags/hacking/</link><pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/hacking/</guid><description/></item><item><title>ideas</title><link>https://www.ianwootten.co.uk/tags/ideas/</link><pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/ideas/</guid><description/></item><item><title>webdev</title><link>https://www.ianwootten.co.uk/tags/webdev/</link><pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/webdev/</guid><description/></item><item><title>web development</title><link>https://www.ianwootten.co.uk/tags/web-development/</link><pubDate>Wed, 03 Apr 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/web-development/</guid><description/></item><item><title>fairtrade</title><link>https://www.ianwootten.co.uk/tags/fairtrade/</link><pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/fairtrade/</guid><description/></item><item><title>tshirts</title><link>https://www.ianwootten.co.uk/tags/tshirts/</link><pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/tshirts/</guid><description/></item><item><title>backbone</title><link>https://www.ianwootten.co.uk/tags/backbone/</link><pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/backbone/</guid><description/></item><item><title>couchdb</title><link>https://www.ianwootten.co.uk/tags/couchdb/</link><pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/couchdb/</guid><description/></item><item><title>databases</title><link>https://www.ianwootten.co.uk/tags/databases/</link><pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/databases/</guid><description/></item><item><title>nosql</title><link>https://www.ianwootten.co.uk/tags/nosql/</link><pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/nosql/</guid><description/></item><item><title>films</title><link>https://www.ianwootten.co.uk/tags/films/</link><pubDate>Wed, 20 Feb 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/films/</guid><description/></item><item><title>events</title><link>https://www.ianwootten.co.uk/tags/events/</link><pubDate>Thu, 07 Feb 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/events/</guid><description/></item><item><title>blogs</title><link>https://www.ianwootten.co.uk/tags/blogs/</link><pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/blogs/</guid><description/></item><item><title>popularity</title><link>https://www.ianwootten.co.uk/tags/popularity/</link><pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/popularity/</guid><description/></item><item><title>life</title><link>https://www.ianwootten.co.uk/tags/life/</link><pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/life/</guid><description/></item><item><title>retrospective</title><link>https://www.ianwootten.co.uk/tags/retrospective/</link><pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/retrospective/</guid><description/></item><item><title>nodejs</title><link>https://www.ianwootten.co.uk/tags/nodejs/</link><pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/nodejs/</guid><description/></item><item><title>design</title><link>https://www.ianwootten.co.uk/tags/design/</link><pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/design/</guid><description/></item><item><title>lovefilm</title><link>https://www.ianwootten.co.uk/tags/lovefilm/</link><pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/lovefilm/</guid><description/></item><item><title>linux</title><link>https://www.ianwootten.co.uk/tags/linux/</link><pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/linux/</guid><description/></item><item><title>photorec</title><link>https://www.ianwootten.co.uk/tags/photorec/</link><pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/photorec/</guid><description/></item><item><title>stop motion</title><link>https://www.ianwootten.co.uk/tags/stop-motion/</link><pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/stop-motion/</guid><description/></item><item><title>advice</title><link>https://www.ianwootten.co.uk/tags/advice/</link><pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/advice/</guid><description/></item><item><title>code</title><link>https://www.ianwootten.co.uk/tags/code/</link><pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/code/</guid><description/></item><item><title>freelance</title><link>https://www.ianwootten.co.uk/tags/freelance/</link><pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/freelance/</guid><description/></item><item><title>gamer</title><link>https://www.ianwootten.co.uk/tags/gamer/</link><pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/gamer/</guid><description/></item><item><title>games</title><link>https://www.ianwootten.co.uk/tags/games/</link><pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/games/</guid><description/></item><item><title>indie</title><link>https://www.ianwootten.co.uk/tags/indie/</link><pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/indie/</guid><description/></item><item><title>movie</title><link>https://www.ianwootten.co.uk/tags/movie/</link><pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/movie/</guid><description/></item><item><title>kickstarter</title><link>https://www.ianwootten.co.uk/tags/kickstarter/</link><pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/kickstarter/</guid><description/></item><item><title>phantomjs</title><link>https://www.ianwootten.co.uk/tags/phantomjs/</link><pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/phantomjs/</guid><description/></item><item><title>raphaeljs</title><link>https://www.ianwootten.co.uk/tags/raphaeljs/</link><pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/raphaeljs/</guid><description/></item><item><title>gmail</title><link>https://www.ianwootten.co.uk/tags/gmail/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/gmail/</guid><description/></item><item><title>linode</title><link>https://www.ianwootten.co.uk/tags/linode/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/linode/</guid><description/></item><item><title>msmtp</title><link>https://www.ianwootten.co.uk/tags/msmtp/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/msmtp/</guid><description/></item><item><title>server</title><link>https://www.ianwootten.co.uk/tags/server/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/server/</guid><description/></item><item><title>slicehost</title><link>https://www.ianwootten.co.uk/tags/slicehost/</link><pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/slicehost/</guid><description/></item><item><title>go cardless</title><link>https://www.ianwootten.co.uk/tags/go-cardless/</link><pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/go-cardless/</guid><description/></item><item><title>stripe</title><link>https://www.ianwootten.co.uk/tags/stripe/</link><pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/stripe/</guid><description/></item><item><title>the little guy</title><link>https://www.ianwootten.co.uk/tags/the-little-guy/</link><pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/the-little-guy/</guid><description/></item><item><title>naconf</title><link>https://www.ianwootten.co.uk/tags/naconf/</link><pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/naconf/</guid><description/></item><item><title>web design</title><link>https://www.ianwootten.co.uk/tags/web-design/</link><pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/web-design/</guid><description/></item><item><title>customer service</title><link>https://www.ianwootten.co.uk/tags/customer-service/</link><pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/customer-service/</guid><description/></item><item><title>domains</title><link>https://www.ianwootten.co.uk/tags/domains/</link><pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/domains/</guid><description/></item><item><title>articles</title><link>https://www.ianwootten.co.uk/tags/articles/</link><pubDate>Wed, 02 Nov 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/articles/</guid><description/></item><item><title>amazon</title><link>https://www.ianwootten.co.uk/tags/amazon/</link><pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/amazon/</guid><description/></item><item><title>godaddy</title><link>https://www.ianwootten.co.uk/tags/godaddy/</link><pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/godaddy/</guid><description/></item><item><title>octopress</title><link>https://www.ianwootten.co.uk/tags/octopress/</link><pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/octopress/</guid><description/></item><item><title>s3</title><link>https://www.ianwootten.co.uk/tags/s3/</link><pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/s3/</guid><description/></item><item><title>plugins</title><link>https://www.ianwootten.co.uk/tags/plugins/</link><pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/plugins/</guid><description/></item><item><title>dConstruct</title><link>https://www.ianwootten.co.uk/tags/dconstruct/</link><pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/dconstruct/</guid><description/></item><item><title>express</title><link>https://www.ianwootten.co.uk/tags/express/</link><pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/express/</guid><description/></item><item><title>expressjs</title><link>https://www.ianwootten.co.uk/tags/expressjs/</link><pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/expressjs/</guid><description/></item><item><title>node</title><link>https://www.ianwootten.co.uk/tags/node/</link><pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/node/</guid><description/></item><item><title>socket.io</title><link>https://www.ianwootten.co.uk/tags/socket.io/</link><pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/socket.io/</guid><description/></item><item><title>sftp</title><link>https://www.ianwootten.co.uk/tags/sftp/</link><pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/sftp/</guid><description/></item><item><title>update</title><link>https://www.ianwootten.co.uk/tags/update/</link><pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/update/</guid><description/></item><item><title>Web Apps</title><link>https://www.ianwootten.co.uk/tags/web-apps/</link><pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/web-apps/</guid><description/></item><item><title>mongdb</title><link>https://www.ianwootten.co.uk/tags/mongdb/</link><pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/mongdb/</guid><description/></item><item><title>camera</title><link>https://www.ianwootten.co.uk/tags/camera/</link><pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/camera/</guid><description/></item><item><title>sciencehackday</title><link>https://www.ianwootten.co.uk/tags/sciencehackday/</link><pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/sciencehackday/</guid><description/></item><item><title>freetype</title><link>https://www.ianwootten.co.uk/tags/freetype/</link><pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/freetype/</guid><description/></item><item><title>mplayer</title><link>https://www.ianwootten.co.uk/tags/mplayer/</link><pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/mplayer/</guid><description/></item><item><title>snow leopard</title><link>https://www.ianwootten.co.uk/tags/snow-leopard/</link><pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/snow-leopard/</guid><description/></item><item><title>movies</title><link>https://www.ianwootten.co.uk/tags/movies/</link><pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/movies/</guid><description/></item><item><title>PHP</title><link>https://www.ianwootten.co.uk/tags/php/</link><pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/php/</guid><description/></item><item><title>plugin</title><link>https://www.ianwootten.co.uk/tags/plugin/</link><pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/plugin/</guid><description/></item><item><title>dj</title><link>https://www.ianwootten.co.uk/tags/dj/</link><pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/dj/</guid><description/></item><item><title>mixes</title><link>https://www.ianwootten.co.uk/tags/mixes/</link><pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/mixes/</guid><description/></item><item><title>fashion</title><link>https://www.ianwootten.co.uk/tags/fashion/</link><pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/fashion/</guid><description/></item><item><title>internet</title><link>https://www.ianwootten.co.uk/tags/internet/</link><pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/internet/</guid><description/></item><item><title>tees</title><link>https://www.ianwootten.co.uk/tags/tees/</link><pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/tees/</guid><description/></item><item><title>acorn computers</title><link>https://www.ianwootten.co.uk/tags/acorn-computers/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/acorn-computers/</guid><description/></item><item><title>associates</title><link>https://www.ianwootten.co.uk/tags/associates/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/associates/</guid><description/></item><item><title>biography</title><link>https://www.ianwootten.co.uk/tags/biography/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/biography/</guid><description/></item><item><title>history</title><link>https://www.ianwootten.co.uk/tags/history/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/history/</guid><description/></item><item><title>nostalgia</title><link>https://www.ianwootten.co.uk/tags/nostalgia/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/nostalgia/</guid><description/></item><item><title>web services</title><link>https://www.ianwootten.co.uk/tags/web-services/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/web-services/</guid><description/></item><item><title>wishlist</title><link>https://www.ianwootten.co.uk/tags/wishlist/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/wishlist/</guid><description/></item><item><title>aardman</title><link>https://www.ianwootten.co.uk/tags/aardman/</link><pubDate>Sat, 26 Sep 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/aardman/</guid><description/></item><item><title>animation</title><link>https://www.ianwootten.co.uk/tags/animation/</link><pubDate>Sat, 26 Sep 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/animation/</guid><description/></item><item><title>canonical</title><link>https://www.ianwootten.co.uk/tags/canonical/</link><pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/canonical/</guid><description/></item><item><title>tinyurl</title><link>https://www.ianwootten.co.uk/tags/tinyurl/</link><pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/tinyurl/</guid><description/></item><item><title>content</title><link>https://www.ianwootten.co.uk/tags/content/</link><pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/content/</guid><description/></item><item><title>copy</title><link>https://www.ianwootten.co.uk/tags/copy/</link><pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/copy/</guid><description/></item><item><title>quality</title><link>https://www.ianwootten.co.uk/tags/quality/</link><pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/quality/</guid><description/></item><item><title>Geek</title><link>https://www.ianwootten.co.uk/tags/geek/</link><pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/geek/</guid><description/></item><item><title>microblogging</title><link>https://www.ianwootten.co.uk/tags/microblogging/</link><pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/microblogging/</guid><description/></item><item><title>statistics</title><link>https://www.ianwootten.co.uk/tags/statistics/</link><pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/statistics/</guid><description/></item><item><title>stephenfry</title><link>https://www.ianwootten.co.uk/tags/stephenfry/</link><pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/stephenfry/</guid><description/></item><item><title>twitter</title><link>https://www.ianwootten.co.uk/tags/twitter/</link><pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/twitter/</guid><description/></item><item><title>hype machine</title><link>https://www.ianwootten.co.uk/tags/hype-machine/</link><pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/hype-machine/</guid><description/></item><item><title>research</title><link>https://www.ianwootten.co.uk/tags/research/</link><pubDate>Thu, 29 Jan 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/research/</guid><description/></item><item><title>clothing</title><link>https://www.ianwootten.co.uk/tags/clothing/</link><pubDate>Tue, 13 Jan 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/clothing/</guid><description/></item><item><title>ethical</title><link>https://www.ianwootten.co.uk/tags/ethical/</link><pubDate>Tue, 13 Jan 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/ethical/</guid><description/></item><item><title>bikes</title><link>https://www.ianwootten.co.uk/tags/bikes/</link><pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/bikes/</guid><description/></item><item><title>fair trade</title><link>https://www.ianwootten.co.uk/tags/fair-trade/</link><pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/fair-trade/</guid><description/></item><item><title>force</title><link>https://www.ianwootten.co.uk/tags/force/</link><pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/force/</guid><description/></item><item><title>t shirts</title><link>https://www.ianwootten.co.uk/tags/t-shirts/</link><pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/t-shirts/</guid><description/></item><item><title>waterbased inks</title><link>https://www.ianwootten.co.uk/tags/waterbased-inks/</link><pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/waterbased-inks/</guid><description/></item><item><title>codeiginiter</title><link>https://www.ianwootten.co.uk/tags/codeiginiter/</link><pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/codeiginiter/</guid><description/></item><item><title>ellislabs</title><link>https://www.ianwootten.co.uk/tags/ellislabs/</link><pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/ellislabs/</guid><description/></item><item><title>lifestream</title><link>https://www.ianwootten.co.uk/tags/lifestream/</link><pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/lifestream/</guid><description/></item><item><title>opensource</title><link>https://www.ianwootten.co.uk/tags/opensource/</link><pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/opensource/</guid><description/></item><item><title>competition</title><link>https://www.ianwootten.co.uk/tags/competition/</link><pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/competition/</guid><description/></item><item><title>cotton</title><link>https://www.ianwootten.co.uk/tags/cotton/</link><pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/cotton/</guid><description/></item><item><title>bbc</title><link>https://www.ianwootten.co.uk/tags/bbc/</link><pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/bbc/</guid><description/></item><item><title>cardiff geeks</title><link>https://www.ianwootten.co.uk/tags/cardiff-geeks/</link><pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/cardiff-geeks/</guid><description/></item><item><title>journalism</title><link>https://www.ianwootten.co.uk/tags/journalism/</link><pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/journalism/</guid><description/></item><item><title>steadycam</title><link>https://www.ianwootten.co.uk/tags/steadycam/</link><pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/steadycam/</guid><description/></item><item><title>whiteboard</title><link>https://www.ianwootten.co.uk/tags/whiteboard/</link><pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/whiteboard/</guid><description/></item><item><title>wii</title><link>https://www.ianwootten.co.uk/tags/wii/</link><pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/wii/</guid><description/></item><item><title>book review</title><link>https://www.ianwootten.co.uk/tags/book-review/</link><pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/book-review/</guid><description/></item><item><title>code igniter</title><link>https://www.ianwootten.co.uk/tags/code-igniter/</link><pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/code-igniter/</guid><description/></item><item><title>boards</title><link>https://www.ianwootten.co.uk/tags/boards/</link><pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/boards/</guid><description/></item><item><title>jobs</title><link>https://www.ianwootten.co.uk/tags/jobs/</link><pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/jobs/</guid><description/></item><item><title>natbat</title><link>https://www.ianwootten.co.uk/tags/natbat/</link><pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/natbat/</guid><description/></item><item><title>simon willison</title><link>https://www.ianwootten.co.uk/tags/simon-willison/</link><pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/simon-willison/</guid><description/></item><item><title>jQuery</title><link>https://www.ianwootten.co.uk/tags/jquery/</link><pubDate>Wed, 09 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/jquery/</guid><description/></item><item><title>decryption</title><link>https://www.ianwootten.co.uk/tags/decryption/</link><pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/decryption/</guid><description/></item><item><title>filezilla</title><link>https://www.ianwootten.co.uk/tags/filezilla/</link><pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/filezilla/</guid><description/></item><item><title>marine parade</title><link>https://www.ianwootten.co.uk/tags/marine-parade/</link><pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/marine-parade/</guid><description/></item><item><title>principles</title><link>https://www.ianwootten.co.uk/tags/principles/</link><pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/principles/</guid><description/></item><item><title>standards</title><link>https://www.ianwootten.co.uk/tags/standards/</link><pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/standards/</guid><description/></item><item><title>humour</title><link>https://www.ianwootten.co.uk/tags/humour/</link><pubDate>Thu, 20 Sep 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/humour/</guid><description/></item><item><title>community</title><link>https://www.ianwootten.co.uk/tags/community/</link><pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/community/</guid><description/></item><item><title>facebook</title><link>https://www.ianwootten.co.uk/tags/facebook/</link><pubDate>Fri, 31 Aug 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/facebook/</guid><description/></item><item><title>holidays</title><link>https://www.ianwootten.co.uk/tags/holidays/</link><pubDate>Fri, 20 Jul 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/holidays/</guid><description/></item><item><title>microsoft</title><link>https://www.ianwootten.co.uk/tags/microsoft/</link><pubDate>Fri, 04 May 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/microsoft/</guid><description/></item><item><title>news</title><link>https://www.ianwootten.co.uk/tags/news/</link><pubDate>Mon, 19 Mar 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/news/</guid><description/></item><item><title>identity</title><link>https://www.ianwootten.co.uk/tags/identity/</link><pubDate>Thu, 08 Mar 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/identity/</guid><description/></item><item><title>hotdealsuk</title><link>https://www.ianwootten.co.uk/tags/hotdealsuk/</link><pubDate>Wed, 24 Jan 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/hotdealsuk/</guid><description/></item><item><title>consumer</title><link>https://www.ianwootten.co.uk/tags/consumer/</link><pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/consumer/</guid><description/></item><item><title>software</title><link>https://www.ianwootten.co.uk/tags/software/</link><pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/software/</guid><description/></item><item><title>phd</title><link>https://www.ianwootten.co.uk/tags/phd/</link><pubDate>Thu, 02 Feb 2006 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/phd/</guid><description/></item><item><title>for sale</title><link>https://www.ianwootten.co.uk/tags/for-sale/</link><pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/for-sale/</guid><description/></item><item><title>faith</title><link>https://www.ianwootten.co.uk/tags/faith/</link><pubDate>Mon, 05 Dec 2005 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/faith/</guid><description/></item><item><title>unicycling</title><link>https://www.ianwootten.co.uk/tags/unicycling/</link><pubDate>Fri, 19 Aug 2005 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/unicycling/</guid><description/></item><item><title>movable type</title><link>https://www.ianwootten.co.uk/tags/movable-type/</link><pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/tags/movable-type/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/</link>
+    <description>Recent content in Tags on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Feb 2022 10:34:05 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blogging</title>
+      <link>https://www.ianwootten.co.uk/tags/blogging/</link>
+      <pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>finance</title>
+      <link>https://www.ianwootten.co.uk/tags/finance/</link>
+      <pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>money</title>
+      <link>https://www.ianwootten.co.uk/tags/money/</link>
+      <pubDate>Wed, 23 Feb 2022 10:34:05 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/money/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poetry</title>
+      <link>https://www.ianwootten.co.uk/tags/poetry/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/poetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.ianwootten.co.uk/tags/python/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>client work</title>
+      <link>https://www.ianwootten.co.uk/tags/client-work/</link>
+      <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/client-work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data analysis</title>
+      <link>https://www.ianwootten.co.uk/tags/data-analysis/</link>
+      <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>product hunt</title>
+      <link>https://www.ianwootten.co.uk/tags/product-hunt/</link>
+      <pubDate>Tue, 15 Feb 2022 11:28:10 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/product-hunt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://www.ianwootten.co.uk/tags/aws/</link>
+      <pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.ianwootten.co.uk/tags/docker/</link>
+      <pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://www.ianwootten.co.uk/tags/serverless/</link>
+      <pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leds</title>
+      <link>https://www.ianwootten.co.uk/tags/leds/</link>
+      <pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/leds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maths</title>
+      <link>https://www.ianwootten.co.uk/tags/maths/</link>
+      <pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/maths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neopixel</title>
+      <link>https://www.ianwootten.co.uk/tags/neopixel/</link>
+      <pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/neopixel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>p5js</title>
+      <link>https://www.ianwootten.co.uk/tags/p5js/</link>
+      <pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/p5js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry pi</title>
+      <link>https://www.ianwootten.co.uk/tags/raspberry-pi/</link>
+      <pubDate>Mon, 10 Jan 2022 12:46:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipenv</title>
+      <link>https://www.ianwootten.co.uk/tags/pipenv/</link>
+      <pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pipenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipx</title>
+      <link>https://www.ianwootten.co.uk/tags/pipx/</link>
+      <pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pipx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyenv</title>
+      <link>https://www.ianwootten.co.uk/tags/pyenv/</link>
+      <pubDate>Mon, 29 Nov 2021 17:29:55 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pyenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://www.ianwootten.co.uk/tags/blog/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disqus</title>
+      <link>https://www.ianwootten.co.uk/tags/disqus/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/disqus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>https://www.ianwootten.co.uk/tags/performance/</link>
+      <pubDate>Fri, 17 Sep 2021 12:52:29 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>astro</title>
+      <link>https://www.ianwootten.co.uk/tags/astro/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/astro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://www.ianwootten.co.uk/tags/js/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spotify</title>
+      <link>https://www.ianwootten.co.uk/tags/spotify/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/spotify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supabase</title>
+      <link>https://www.ianwootten.co.uk/tags/supabase/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/supabase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web scraping</title>
+      <link>https://www.ianwootten.co.uk/tags/web-scraping/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/web-scraping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>low-code</title>
+      <link>https://www.ianwootten.co.uk/tags/low-code/</link>
+      <pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/low-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>no-code</title>
+      <link>https://www.ianwootten.co.uk/tags/no-code/</link>
+      <pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/no-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>circuitpython</title>
+      <link>https://www.ianwootten.co.uk/tags/circuitpython/</link>
+      <pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/circuitpython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>djing</title>
+      <link>https://www.ianwootten.co.uk/tags/djing/</link>
+      <pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/djing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>https://www.ianwootten.co.uk/tags/music/</link>
+      <pubDate>Tue, 08 Jun 2021 09:54:37 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>til</title>
+      <link>https://www.ianwootten.co.uk/tags/til/</link>
+      <pubDate>Wed, 07 Apr 2021 17:13:00 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/til/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business</title>
+      <link>https://www.ianwootten.co.uk/tags/business/</link>
+      <pubDate>Tue, 30 Mar 2021 13:07:26 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube</title>
+      <link>https://www.ianwootten.co.uk/tags/youtube/</link>
+      <pubDate>Tue, 30 Mar 2021 13:07:26 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple silicon</title>
+      <link>https://www.ianwootten.co.uk/tags/apple-silicon/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/apple-silicon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://www.ianwootten.co.uk/tags/mac/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://www.ianwootten.co.uk/tags/tutorial/</link>
+      <pubDate>Fri, 05 Mar 2021 10:45:07 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eu</title>
+      <link>https://www.ianwootten.co.uk/tags/eu/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/eu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gov</title>
+      <link>https://www.ianwootten.co.uk/tags/gov/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/gov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>payments</title>
+      <link>https://www.ianwootten.co.uk/tags/payments/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/payments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vat</title>
+      <link>https://www.ianwootten.co.uk/tags/vat/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/vat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://www.ianwootten.co.uk/tags/hugo/</link>
+      <pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open graph</title>
+      <link>https://www.ianwootten.co.uk/tags/open-graph/</link>
+      <pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/open-graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puppeteer</title>
+      <link>https://www.ianwootten.co.uk/tags/puppeteer/</link>
+      <pubDate>Tue, 16 Feb 2021 10:07:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/puppeteer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goals</title>
+      <link>https://www.ianwootten.co.uk/tags/goals/</link>
+      <pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/goals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning</title>
+      <link>https://www.ianwootten.co.uk/tags/learning/</link>
+      <pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>products</title>
+      <link>https://www.ianwootten.co.uk/tags/products/</link>
+      <pubDate>Thu, 04 Feb 2021 10:04:41 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/products/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci</title>
+      <link>https://www.ianwootten.co.uk/tags/ci/</link>
+      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cookiecutter</title>
+      <link>https://www.ianwootten.co.uk/tags/cookiecutter/</link>
+      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/cookiecutter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github actions</title>
+      <link>https://www.ianwootten.co.uk/tags/github-actions/</link>
+      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jinja2</title>
+      <link>https://www.ianwootten.co.uk/tags/jinja2/</link>
+      <pubDate>Mon, 25 Jan 2021 14:21:21 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/jinja2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pep</title>
+      <link>https://www.ianwootten.co.uk/tags/pep/</link>
+      <pubDate>Mon, 16 Nov 2020 15:15:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>https://www.ianwootten.co.uk/tags/tips/</link>
+      <pubDate>Thu, 05 Nov 2020 13:57:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teams</title>
+      <link>https://www.ianwootten.co.uk/tags/teams/</link>
+      <pubDate>Tue, 03 Nov 2020 15:35:34 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/teams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>digitalocean</title>
+      <link>https://www.ianwootten.co.uk/tags/digitalocean/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/digitalocean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://www.ianwootten.co.uk/tags/django/</link>
+      <pubDate>Wed, 28 Oct 2020 10:13:59 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pypi</title>
+      <link>https://www.ianwootten.co.uk/tags/pypi/</link>
+      <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python-poetry</title>
+      <link>https://www.ianwootten.co.uk/tags/python-poetry/</link>
+      <pubDate>Tue, 20 Oct 2020 10:04:11 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/python-poetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mindfulness</title>
+      <link>https://www.ianwootten.co.uk/tags/mindfulness/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wtforms</title>
+      <link>https://www.ianwootten.co.uk/tags/wtforms/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/wtforms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>https://www.ianwootten.co.uk/tags/projects/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://www.ianwootten.co.uk/tags/javascript/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metalsmith</title>
+      <link>https://www.ianwootten.co.uk/tags/metalsmith/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/metalsmith/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openimageio</title>
+      <link>https://www.ianwootten.co.uk/tags/openimageio/</link>
+      <pubDate>Mon, 15 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/openimageio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ffmpeg</title>
+      <link>https://www.ianwootten.co.uk/tags/ffmpeg/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/ffmpeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imagemajick</title>
+      <link>https://www.ianwootten.co.uk/tags/imagemajick/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/imagemajick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://www.ianwootten.co.uk/tags/coding/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>productivity</title>
+      <link>https://www.ianwootten.co.uk/tags/productivity/</link>
+      <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>https://www.ianwootten.co.uk/tags/jekyll/</link>
+      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static sites</title>
+      <link>https://www.ianwootten.co.uk/tags/static-sites/</link>
+      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/static-sites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://www.ianwootten.co.uk/tags/wordpress/</link>
+      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pygments</title>
+      <link>https://www.ianwootten.co.uk/tags/pygments/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/pygments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>copyright</title>
+      <link>https://www.ianwootten.co.uk/tags/copyright/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/copyright/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>law</title>
+      <link>https://www.ianwootten.co.uk/tags/law/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/law/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecommerce</title>
+      <link>https://www.ianwootten.co.uk/tags/ecommerce/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shopping</title>
+      <link>https://www.ianwootten.co.uk/tags/shopping/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/shopping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time tracking</title>
+      <link>https://www.ianwootten.co.uk/tags/time-tracking/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/time-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>charting</title>
+      <link>https://www.ianwootten.co.uk/tags/charting/</link>
+      <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/charting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>d3</title>
+      <link>https://www.ianwootten.co.uk/tags/d3/</link>
+      <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/d3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>https://www.ianwootten.co.uk/tags/dns/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hosting</title>
+      <link>https://www.ianwootten.co.uk/tags/hosting/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/hosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iceland</title>
+      <link>https://www.ianwootten.co.uk/tags/iceland/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/iceland/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nameservers</title>
+      <link>https://www.ianwootten.co.uk/tags/nameservers/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/nameservers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://www.ianwootten.co.uk/tags/web/</link>
+      <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rant business</title>
+      <link>https://www.ianwootten.co.uk/tags/rant-business/</link>
+      <pubDate>Sat, 06 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/rant-business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hacking</title>
+      <link>https://www.ianwootten.co.uk/tags/hacking/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/hacking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ideas</title>
+      <link>https://www.ianwootten.co.uk/tags/ideas/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/ideas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webdev</title>
+      <link>https://www.ianwootten.co.uk/tags/webdev/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/webdev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://www.ianwootten.co.uk/tags/web-development/</link>
+      <pubDate>Wed, 03 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fairtrade</title>
+      <link>https://www.ianwootten.co.uk/tags/fairtrade/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/fairtrade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tshirts</title>
+      <link>https://www.ianwootten.co.uk/tags/tshirts/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tshirts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backbone</title>
+      <link>https://www.ianwootten.co.uk/tags/backbone/</link>
+      <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/backbone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>couchdb</title>
+      <link>https://www.ianwootten.co.uk/tags/couchdb/</link>
+      <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/couchdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>databases</title>
+      <link>https://www.ianwootten.co.uk/tags/databases/</link>
+      <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nosql</title>
+      <link>https://www.ianwootten.co.uk/tags/nosql/</link>
+      <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>films</title>
+      <link>https://www.ianwootten.co.uk/tags/films/</link>
+      <pubDate>Wed, 20 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/films/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>events</title>
+      <link>https://www.ianwootten.co.uk/tags/events/</link>
+      <pubDate>Thu, 07 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogs</title>
+      <link>https://www.ianwootten.co.uk/tags/blogs/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/blogs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>popularity</title>
+      <link>https://www.ianwootten.co.uk/tags/popularity/</link>
+      <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/popularity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://www.ianwootten.co.uk/tags/life/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>retrospective</title>
+      <link>https://www.ianwootten.co.uk/tags/retrospective/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/retrospective/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://www.ianwootten.co.uk/tags/nodejs/</link>
+      <pubDate>Fri, 23 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://www.ianwootten.co.uk/tags/design/</link>
+      <pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lovefilm</title>
+      <link>https://www.ianwootten.co.uk/tags/lovefilm/</link>
+      <pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/lovefilm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.ianwootten.co.uk/tags/linux/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photorec</title>
+      <link>https://www.ianwootten.co.uk/tags/photorec/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/photorec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stop motion</title>
+      <link>https://www.ianwootten.co.uk/tags/stop-motion/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/stop-motion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>advice</title>
+      <link>https://www.ianwootten.co.uk/tags/advice/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/advice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://www.ianwootten.co.uk/tags/code/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freelance</title>
+      <link>https://www.ianwootten.co.uk/tags/freelance/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/freelance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gamer</title>
+      <link>https://www.ianwootten.co.uk/tags/gamer/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/gamer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>games</title>
+      <link>https://www.ianwootten.co.uk/tags/games/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/games/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>indie</title>
+      <link>https://www.ianwootten.co.uk/tags/indie/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/indie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movie</title>
+      <link>https://www.ianwootten.co.uk/tags/movie/</link>
+      <pubDate>Tue, 12 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kickstarter</title>
+      <link>https://www.ianwootten.co.uk/tags/kickstarter/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/kickstarter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phantomjs</title>
+      <link>https://www.ianwootten.co.uk/tags/phantomjs/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/phantomjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raphaeljs</title>
+      <link>https://www.ianwootten.co.uk/tags/raphaeljs/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/raphaeljs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gmail</title>
+      <link>https://www.ianwootten.co.uk/tags/gmail/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/gmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linode</title>
+      <link>https://www.ianwootten.co.uk/tags/linode/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/linode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>msmtp</title>
+      <link>https://www.ianwootten.co.uk/tags/msmtp/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/msmtp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://www.ianwootten.co.uk/tags/server/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slicehost</title>
+      <link>https://www.ianwootten.co.uk/tags/slicehost/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/slicehost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go cardless</title>
+      <link>https://www.ianwootten.co.uk/tags/go-cardless/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/go-cardless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stripe</title>
+      <link>https://www.ianwootten.co.uk/tags/stripe/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/stripe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>the little guy</title>
+      <link>https://www.ianwootten.co.uk/tags/the-little-guy/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/the-little-guy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>naconf</title>
+      <link>https://www.ianwootten.co.uk/tags/naconf/</link>
+      <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/naconf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web design</title>
+      <link>https://www.ianwootten.co.uk/tags/web-design/</link>
+      <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/web-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>customer service</title>
+      <link>https://www.ianwootten.co.uk/tags/customer-service/</link>
+      <pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/customer-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domains</title>
+      <link>https://www.ianwootten.co.uk/tags/domains/</link>
+      <pubDate>Thu, 12 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/domains/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>articles</title>
+      <link>https://www.ianwootten.co.uk/tags/articles/</link>
+      <pubDate>Wed, 02 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/articles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>amazon</title>
+      <link>https://www.ianwootten.co.uk/tags/amazon/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/amazon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>godaddy</title>
+      <link>https://www.ianwootten.co.uk/tags/godaddy/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/godaddy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>octopress</title>
+      <link>https://www.ianwootten.co.uk/tags/octopress/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/octopress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>s3</title>
+      <link>https://www.ianwootten.co.uk/tags/s3/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugins</title>
+      <link>https://www.ianwootten.co.uk/tags/plugins/</link>
+      <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dConstruct</title>
+      <link>https://www.ianwootten.co.uk/tags/dconstruct/</link>
+      <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/dconstruct/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>express</title>
+      <link>https://www.ianwootten.co.uk/tags/express/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>expressjs</title>
+      <link>https://www.ianwootten.co.uk/tags/expressjs/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/expressjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>node</title>
+      <link>https://www.ianwootten.co.uk/tags/node/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socket.io</title>
+      <link>https://www.ianwootten.co.uk/tags/socket.io/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/socket.io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sftp</title>
+      <link>https://www.ianwootten.co.uk/tags/sftp/</link>
+      <pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/sftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>update</title>
+      <link>https://www.ianwootten.co.uk/tags/update/</link>
+      <pubDate>Sat, 07 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Apps</title>
+      <link>https://www.ianwootten.co.uk/tags/web-apps/</link>
+      <pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/web-apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongdb</title>
+      <link>https://www.ianwootten.co.uk/tags/mongdb/</link>
+      <pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/mongdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>camera</title>
+      <link>https://www.ianwootten.co.uk/tags/camera/</link>
+      <pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/camera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sciencehackday</title>
+      <link>https://www.ianwootten.co.uk/tags/sciencehackday/</link>
+      <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/sciencehackday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freetype</title>
+      <link>https://www.ianwootten.co.uk/tags/freetype/</link>
+      <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/freetype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mplayer</title>
+      <link>https://www.ianwootten.co.uk/tags/mplayer/</link>
+      <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/mplayer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snow leopard</title>
+      <link>https://www.ianwootten.co.uk/tags/snow-leopard/</link>
+      <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/snow-leopard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movies</title>
+      <link>https://www.ianwootten.co.uk/tags/movies/</link>
+      <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://www.ianwootten.co.uk/tags/php/</link>
+      <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>https://www.ianwootten.co.uk/tags/plugin/</link>
+      <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dj</title>
+      <link>https://www.ianwootten.co.uk/tags/dj/</link>
+      <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/dj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mixes</title>
+      <link>https://www.ianwootten.co.uk/tags/mixes/</link>
+      <pubDate>Sun, 21 Mar 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/mixes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fashion</title>
+      <link>https://www.ianwootten.co.uk/tags/fashion/</link>
+      <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/fashion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>internet</title>
+      <link>https://www.ianwootten.co.uk/tags/internet/</link>
+      <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/internet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tees</title>
+      <link>https://www.ianwootten.co.uk/tags/tees/</link>
+      <pubDate>Thu, 07 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tees/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>acorn computers</title>
+      <link>https://www.ianwootten.co.uk/tags/acorn-computers/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/acorn-computers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>associates</title>
+      <link>https://www.ianwootten.co.uk/tags/associates/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/associates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>biography</title>
+      <link>https://www.ianwootten.co.uk/tags/biography/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/biography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>history</title>
+      <link>https://www.ianwootten.co.uk/tags/history/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nostalgia</title>
+      <link>https://www.ianwootten.co.uk/tags/nostalgia/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/nostalgia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web services</title>
+      <link>https://www.ianwootten.co.uk/tags/web-services/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/web-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wishlist</title>
+      <link>https://www.ianwootten.co.uk/tags/wishlist/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/wishlist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aardman</title>
+      <link>https://www.ianwootten.co.uk/tags/aardman/</link>
+      <pubDate>Sat, 26 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/aardman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>animation</title>
+      <link>https://www.ianwootten.co.uk/tags/animation/</link>
+      <pubDate>Sat, 26 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/animation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canonical</title>
+      <link>https://www.ianwootten.co.uk/tags/canonical/</link>
+      <pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/canonical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tinyurl</title>
+      <link>https://www.ianwootten.co.uk/tags/tinyurl/</link>
+      <pubDate>Sat, 16 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/tinyurl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>content</title>
+      <link>https://www.ianwootten.co.uk/tags/content/</link>
+      <pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>copy</title>
+      <link>https://www.ianwootten.co.uk/tags/copy/</link>
+      <pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quality</title>
+      <link>https://www.ianwootten.co.uk/tags/quality/</link>
+      <pubDate>Fri, 15 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/quality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geek</title>
+      <link>https://www.ianwootten.co.uk/tags/geek/</link>
+      <pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/geek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microblogging</title>
+      <link>https://www.ianwootten.co.uk/tags/microblogging/</link>
+      <pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/microblogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://www.ianwootten.co.uk/tags/statistics/</link>
+      <pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stephenfry</title>
+      <link>https://www.ianwootten.co.uk/tags/stephenfry/</link>
+      <pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/stephenfry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
+      <link>https://www.ianwootten.co.uk/tags/twitter/</link>
+      <pubDate>Fri, 06 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hype machine</title>
+      <link>https://www.ianwootten.co.uk/tags/hype-machine/</link>
+      <pubDate>Sat, 31 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/hype-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>https://www.ianwootten.co.uk/tags/research/</link>
+      <pubDate>Thu, 29 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clothing</title>
+      <link>https://www.ianwootten.co.uk/tags/clothing/</link>
+      <pubDate>Tue, 13 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/clothing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ethical</title>
+      <link>https://www.ianwootten.co.uk/tags/ethical/</link>
+      <pubDate>Tue, 13 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/ethical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bikes</title>
+      <link>https://www.ianwootten.co.uk/tags/bikes/</link>
+      <pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/bikes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fair trade</title>
+      <link>https://www.ianwootten.co.uk/tags/fair-trade/</link>
+      <pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/fair-trade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>force</title>
+      <link>https://www.ianwootten.co.uk/tags/force/</link>
+      <pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/force/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t shirts</title>
+      <link>https://www.ianwootten.co.uk/tags/t-shirts/</link>
+      <pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/t-shirts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>waterbased inks</title>
+      <link>https://www.ianwootten.co.uk/tags/waterbased-inks/</link>
+      <pubDate>Thu, 20 Nov 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/waterbased-inks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codeiginiter</title>
+      <link>https://www.ianwootten.co.uk/tags/codeiginiter/</link>
+      <pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/codeiginiter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ellislabs</title>
+      <link>https://www.ianwootten.co.uk/tags/ellislabs/</link>
+      <pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/ellislabs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lifestream</title>
+      <link>https://www.ianwootten.co.uk/tags/lifestream/</link>
+      <pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/lifestream/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://www.ianwootten.co.uk/tags/opensource/</link>
+      <pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>competition</title>
+      <link>https://www.ianwootten.co.uk/tags/competition/</link>
+      <pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/competition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cotton</title>
+      <link>https://www.ianwootten.co.uk/tags/cotton/</link>
+      <pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/cotton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bbc</title>
+      <link>https://www.ianwootten.co.uk/tags/bbc/</link>
+      <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/bbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cardiff geeks</title>
+      <link>https://www.ianwootten.co.uk/tags/cardiff-geeks/</link>
+      <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/cardiff-geeks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>journalism</title>
+      <link>https://www.ianwootten.co.uk/tags/journalism/</link>
+      <pubDate>Sat, 31 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/journalism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>steadycam</title>
+      <link>https://www.ianwootten.co.uk/tags/steadycam/</link>
+      <pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/steadycam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>whiteboard</title>
+      <link>https://www.ianwootten.co.uk/tags/whiteboard/</link>
+      <pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/whiteboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wii</title>
+      <link>https://www.ianwootten.co.uk/tags/wii/</link>
+      <pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/wii/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book review</title>
+      <link>https://www.ianwootten.co.uk/tags/book-review/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/book-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code igniter</title>
+      <link>https://www.ianwootten.co.uk/tags/code-igniter/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/code-igniter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boards</title>
+      <link>https://www.ianwootten.co.uk/tags/boards/</link>
+      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/boards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jobs</title>
+      <link>https://www.ianwootten.co.uk/tags/jobs/</link>
+      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/jobs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>natbat</title>
+      <link>https://www.ianwootten.co.uk/tags/natbat/</link>
+      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/natbat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simon willison</title>
+      <link>https://www.ianwootten.co.uk/tags/simon-willison/</link>
+      <pubDate>Wed, 30 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/simon-willison/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jQuery</title>
+      <link>https://www.ianwootten.co.uk/tags/jquery/</link>
+      <pubDate>Wed, 09 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decryption</title>
+      <link>https://www.ianwootten.co.uk/tags/decryption/</link>
+      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/decryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filezilla</title>
+      <link>https://www.ianwootten.co.uk/tags/filezilla/</link>
+      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/filezilla/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>marine parade</title>
+      <link>https://www.ianwootten.co.uk/tags/marine-parade/</link>
+      <pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/marine-parade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>principles</title>
+      <link>https://www.ianwootten.co.uk/tags/principles/</link>
+      <pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/principles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>standards</title>
+      <link>https://www.ianwootten.co.uk/tags/standards/</link>
+      <pubDate>Thu, 20 Dec 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/standards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>humour</title>
+      <link>https://www.ianwootten.co.uk/tags/humour/</link>
+      <pubDate>Thu, 20 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/humour/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>community</title>
+      <link>https://www.ianwootten.co.uk/tags/community/</link>
+      <pubDate>Fri, 07 Sep 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>facebook</title>
+      <link>https://www.ianwootten.co.uk/tags/facebook/</link>
+      <pubDate>Fri, 31 Aug 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/facebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>holidays</title>
+      <link>https://www.ianwootten.co.uk/tags/holidays/</link>
+      <pubDate>Fri, 20 Jul 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/holidays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microsoft</title>
+      <link>https://www.ianwootten.co.uk/tags/microsoft/</link>
+      <pubDate>Fri, 04 May 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>news</title>
+      <link>https://www.ianwootten.co.uk/tags/news/</link>
+      <pubDate>Mon, 19 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>identity</title>
+      <link>https://www.ianwootten.co.uk/tags/identity/</link>
+      <pubDate>Thu, 08 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hotdealsuk</title>
+      <link>https://www.ianwootten.co.uk/tags/hotdealsuk/</link>
+      <pubDate>Wed, 24 Jan 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/hotdealsuk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>consumer</title>
+      <link>https://www.ianwootten.co.uk/tags/consumer/</link>
+      <pubDate>Fri, 01 Dec 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/consumer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://www.ianwootten.co.uk/tags/software/</link>
+      <pubDate>Mon, 23 Oct 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phd</title>
+      <link>https://www.ianwootten.co.uk/tags/phd/</link>
+      <pubDate>Thu, 02 Feb 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/phd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>for sale</title>
+      <link>https://www.ianwootten.co.uk/tags/for-sale/</link>
+      <pubDate>Fri, 16 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/for-sale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>faith</title>
+      <link>https://www.ianwootten.co.uk/tags/faith/</link>
+      <pubDate>Mon, 05 Dec 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/faith/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unicycling</title>
+      <link>https://www.ianwootten.co.uk/tags/unicycling/</link>
+      <pubDate>Fri, 19 Aug 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/unicycling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movable type</title>
+      <link>https://www.ianwootten.co.uk/tags/movable-type/</link>
+      <pubDate>Thu, 14 Aug 2003 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/movable-type/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

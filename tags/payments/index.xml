@@ -1,2 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>payments on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/payments/</link><description>Recent content in payments on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Feb 2021 11:32:30 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/payments/index.xml" rel="self" type="application/rss+xml"/><item><title>Comparing VAT Solutions for Bootstrapped UK Businesses</title><link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link><pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate><guid>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</guid><description>Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!</description></item><item><title>Where's my Full Stack Payment Service?</title><link>https://www.ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service/</link><pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service/</guid><description>Unless you’ve been living under a rock, you’ll realise that there’s an uprising against paypal amongst developers. Most of this stems from the multitude of crazy requirements they put upon sellers and the locks they can put upon your account without notice.
-This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>payments on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/payments/</link>
+    <description>Recent content in payments on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Feb 2021 11:32:30 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/payments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing VAT Solutions for Bootstrapped UK Businesses</title>
+      <link>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</link>
+      <pubDate>Tue, 23 Feb 2021 11:32:30 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/</guid>
+      <description>Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location, introducing a VATMOSS system for its collection. Since leaving the EU things have become even more complicated if you happen to be based in the UK. You now are no longer able to make use of the VATMOSS system, meaning you potentially need to register for VAT in every EU country you sell products to (!</description>
+    </item>
+    
+    <item>
+      <title>Where&#39;s my Full Stack Payment Service?</title>
+      <link>https://www.ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2012/02/16/wheres-my-full-stack-payment-service/</guid>
+      <description>Unless you’ve been living under a rock, you’ll realise that there’s an uprising against paypal amongst developers. Most of this stems from the multitude of crazy requirements they put upon sellers and the locks they can put upon your account without notice.
+This in part has led to a number of payment alternatives cropping up. Here in the UK for instance, you have Google checkout and checkout by Amazon pitching up against paypal.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>steadycam on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/steadycam/</link><description>Recent content in steadycam on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 30 May 2008 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/steadycam/index.xml" rel="self" type="application/rss+xml"/><item><title>Johnny Lee's Innovative Uses of Common Technology</title><link>https://www.ianwootten.co.uk/2008/05/30/johnny-lees-innovative-uses-of-common-technology/</link><pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/05/30/johnny-lees-innovative-uses-of-common-technology/</guid><description>I’m not sure how many visitors have caught this ted talk before, but I’d thought I’d post it anyway. Johnny Chung Lee is amazing, turning a $40 wii remote into use an interactive whiteboard or a new way to interact with video games via head tracking. He’s been at this sort of thing for ages previously putting out a $14 steadycam.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>steadycam on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/steadycam/</link>
+    <description>Recent content in steadycam on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 30 May 2008 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/steadycam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Johnny Lee&#39;s Innovative Uses of Common Technology</title>
+      <link>https://www.ianwootten.co.uk/2008/05/30/johnny-lees-innovative-uses-of-common-technology/</link>
+      <pubDate>Fri, 30 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/05/30/johnny-lees-innovative-uses-of-common-technology/</guid>
+      <description>I’m not sure how many visitors have caught this ted talk before, but I’d thought I’d post it anyway. Johnny Chung Lee is amazing, turning a $40 wii remote into use an interactive whiteboard or a new way to interact with video games via head tracking. He’s been at this sort of thing for ages previously putting out a $14 steadycam.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,3 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>serverless on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/serverless/</link><description>Recent content in serverless on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 27 Jan 2022 11:58:06 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/serverless/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Create AWS Lambda Layers for Python Dependencies</title><link>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</link><pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</guid><description>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</description></item><item><title>Automatic Static Site Creation with Astro, Supabase and Netlify</title><link>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</link><pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid><description>This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
-I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description></item><item><title>Comparing Low-Code Tools as a Developer</title><link>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</link><pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate><guid>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</guid><description>When first hearing of the concept of &amp;ldquo;no-code&amp;rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&amp;rsquo;t lead to anything genuinely valuable.
-I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serverless on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/serverless/</link>
+    <description>Recent content in serverless on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Jan 2022 11:58:06 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Create AWS Lambda Layers for Python Dependencies</title>
+      <link>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</link>
+      <pubDate>Thu, 27 Jan 2022 11:58:06 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/01/27/how-to-create-aws-lambda-layers-for-python-dependencies/</guid>
+      <description>Using AWS Lambda for your serverless Python app can give significant cost and management benefits. However, unless your needs are simple you will quickly need to bundle your dependencies along with your functions. Doing so with an AWS Lambda Layer works much like installing dependencies within a local environment. You are able to reduce each functions size, maintain your core code separately and simply tell the function to use the layer when setting it up.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Static Site Creation with Astro, Supabase and Netlify</title>
+      <link>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</link>
+      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/09/10/automatic-static-site-creation-with-astro-supabase-and-netlify/</guid>
+      <description>This week, I revealed mixes.it - a very simple site I&amp;rsquo;ve created for indexing DJ mixes scraped from the web. I wanted a no-frills site that I could get Spotify playlists of DJ&amp;rsquo;s I like to see what new music they were playing and that I didn&amp;rsquo;t have to spend much time supporting.
+I used Astro and Supabase to create the site itself and the whole thing is currently built using Netlify.</description>
+    </item>
+    
+    <item>
+      <title>Comparing Low-Code Tools as a Developer</title>
+      <link>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</link>
+      <pubDate>Tue, 10 Aug 2021 09:02:47 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2021/08/10/comparing-low-code-tools-as-a-developer/</guid>
+      <description>When first hearing of the concept of &amp;ldquo;no-code&amp;rdquo; I have to admit I cringed a bit. The implication that a mere mortal client could combine services without ever getting a dev involved seemed cute and definitely wouldn&amp;rsquo;t lead to anything genuinely valuable.
+I come from the age of Hackathons, where a devs would quickly put together really interesting combinations of services in the blink of an eye. They would do all this for nothing more than the joy of building, rather than the offer of expensive prizes from some well funded business as a form of motivation.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tips on Ian Wootten</title><link>https://www.ianwootten.co.uk/categories/tips/</link><description>Recent content in tips on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Feb 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/tips/index.xml" rel="self" type="application/rss+xml"/><item><title>How to use .env files with Poetry</title><link>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</link><pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</guid><description>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
-Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default package management behaviour and @mpeteuil made one for .</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/categories/tips/</link>
+    <description>Recent content in tips on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Feb 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use .env files with Poetry</title>
+      <link>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</link>
+      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</guid>
+      <description>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
+Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default package management behaviour and @mpeteuil made one for .</description>
+    </item>
+    
+  </channel>
+</rss>

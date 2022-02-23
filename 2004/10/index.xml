@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2004/10 on Ian Wootten</title><link>https://www.ianwootten.co.uk/2004/10/</link><description>Recent content in 2004/10 on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/10/index.xml" rel="self" type="application/rss+xml"/><item><title>Weddings Galore</title><link>https://www.ianwootten.co.uk/2004/10/11/weddings-galore/</link><pubDate>Mon, 11 Oct 2004 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2004/10/11/weddings-galore/</guid><description>I’ve been to so many of my close mates wedding over the last couple of years… In fact I don’t actually think any of the old school crew are still single! Anyway in celebration of this, and Pauls recent marriage to Lisa, I’ve shoved up a gallery to show off some of the pics I have for them.
-The gallery is located here, and for the blog here’s Paul in his new found role:</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2004/10 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2004/10/</link>
+    <description>Recent content in 2004/10 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2004/10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weddings Galore</title>
+      <link>https://www.ianwootten.co.uk/2004/10/11/weddings-galore/</link>
+      <pubDate>Mon, 11 Oct 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2004/10/11/weddings-galore/</guid>
+      <description>I’ve been to so many of my close mates wedding over the last couple of years… In fact I don’t actually think any of the old school crew are still single! Anyway in celebration of this, and Pauls recent marriage to Lisa, I’ve shoved up a gallery to show off some of the pics I have for them.
+The gallery is located here, and for the blog here’s Paul in his new found role:</description>
+    </item>
+    
+  </channel>
+</rss>

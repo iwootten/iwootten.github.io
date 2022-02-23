@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>identity on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/identity/</link><description>Recent content in identity on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Mar 2007 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/identity/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenID - The end of multiple passwords?</title><link>https://www.ianwootten.co.uk/2007/03/08/openid-the-end-of-multiple-passwords/</link><pubDate>Thu, 08 Mar 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2007/03/08/openid-the-end-of-multiple-passwords/</guid><description>I’ve been hearing some really good stuff about openID recently. For those who don’t know, this is a online identity standard which promises to be the end of having multiple passwords at just about every single website you visit. It’s recently risen to light with the adoption by WordPress.com as a provider and digg as an adopter.Complaints against wordpress.com’s non-allowance of logins with openID’s created anywhere else than wordpress.com seem quite well founded.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>identity on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/identity/</link>
+    <description>Recent content in identity on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Mar 2007 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/identity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenID - The end of multiple passwords?</title>
+      <link>https://www.ianwootten.co.uk/2007/03/08/openid-the-end-of-multiple-passwords/</link>
+      <pubDate>Thu, 08 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2007/03/08/openid-the-end-of-multiple-passwords/</guid>
+      <description>I’ve been hearing some really good stuff about openID recently. For those who don’t know, this is a online identity standard which promises to be the end of having multiple passwords at just about every single website you visit. It’s recently risen to light with the adoption by WordPress.com as a provider and digg as an adopter.Complaints against wordpress.com’s non-allowance of logins with openID’s created anywhere else than wordpress.com seem quite well founded.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PHP on Ian Wootten</title><link>https://www.ianwootten.co.uk/tags/php/</link><description>Recent content in PHP on Ian Wootten</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Apr 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/php/index.xml" rel="self" type="application/rss+xml"/><item><title>Lovefilm Filmstream Plugin for WordPress</title><link>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link><pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid><description>Something I’ve thought I’d like to have on my site for a while is a list of movies that I’ve recently seen and some brief opinions on them. I’m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I’ve watched, but a recent television upgrade has now meant I’ve got the opportunity to do this.</description></item><item><title>Amazon Associates WordPress Plugin v0.2</title><link>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</link><pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</guid><description>I’ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/php/</link>
+    <description>Recent content in PHP on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Apr 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lovefilm Filmstream Plugin for WordPress</title>
+      <link>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</link>
+      <pubDate>Sun, 18 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2010/04/18/lovefilm-filmstream-plugin-for-wordpress/</guid>
+      <description>Something I’ve thought I’d like to have on my site for a while is a list of movies that I’ve recently seen and some brief opinions on them. I’m not entirely sure how I would go about this for films I see at the cinema, or whether I could muster the stamina to review every single film I’ve watched, but a recent television upgrade has now meant I’ve got the opportunity to do this.</description>
+    </item>
+    
+    <item>
+      <title>Amazon Associates WordPress Plugin v0.2</title>
+      <link>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</link>
+      <pubDate>Sun, 25 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2009/10/25/amazon-associates-wordpress-plugin-v0.2/</guid>
+      <description>I’ve just updated my amazon associates plugin to take into account the recent signiture changes which amazon have introduced for their webservices api.
 This now also means you’ll have to enter your amazon secret access key in the plugin configuration page.
 You can download the updated version over here.
-It also means my wishlist has finally been brought back to life. Just in time for Christmas…</description></item><item><title>Sweetcron is pretty sweet at Lifestreaming</title><link>https://www.ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/</link><pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/</guid><description>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to Sweetcron. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web.</description></item><item><title>Amazon Associates WordPress Wishlist Plugin</title><link>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</link><pubDate>Wed, 02 Apr 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</guid><description>One of the things that’s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they’re unable to find my wishlist. This is mainly because they’re simple folk who might not think to check amazon for my name. I’m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage.</description></item><item><title>Book Review: Code Igniter for Rapid PHP Application Development</title><link>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</link><pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</guid><description/></item><item><title>Decrypting Filezilla Passwords with PHP</title><link>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</link><pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</guid><description>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description></item><item><title>UK Jobs in Web 2.0</title><link>https://www.ianwootten.co.uk/2007/03/12/uk-jobs-in-web-2.0/</link><pubDate>Mon, 12 Mar 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2007/03/12/uk-jobs-in-web-2.0/</guid><description>If anyone else like me is considering working in the uk “web 2.0″ market, and finds the posts on common job boards clogged up with all the jobs from america, the small job board I have created and posted online might be a help. You’ll find it over at: http://webtyrant.com/jobs. It aggregates some common job boards together like 37Signals and ThinkVitamin, but removes anything but those located in the UK.</description></item><item><title>pMachine changes its name</title><link>https://www.ianwootten.co.uk/2007/03/09/pmachine-changes-its-name/</link><pubDate>Fri, 09 Mar 2007 00:00:00 +0000</pubDate><guid>https://www.ianwootten.co.uk/2007/03/09/pmachine-changes-its-name/</guid><description>pMachine has changed its name to Ellislab, and are sporting a shiny new website for all to see. The reason for the change is the expansion over the last 6 years to encompass products which don’t fall under the same banner now. I’m glad to see that the CodeIgniter website has got a facelift. 31three did the hard graft on the design and they all look awesome.</description></item></channel></rss>
+It also means my wishlist has finally been brought back to life. Just in time for Christmas…</description>
+    </item>
+    
+    <item>
+      <title>Sweetcron is pretty sweet at Lifestreaming</title>
+      <link>https://www.ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/</link>
+      <pubDate>Sun, 31 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/08/31/sweetcron-is-pretty-sweet-at-lifestreaming/</guid>
+      <description>For people like myself who are fairly erratic at posting regular updates to their blogs, you might do well to pass your eyes over to Sweetcron. Sweetcron does very well at pulling your content from other places on the web you may frequent and gathering it altogether in a neat little summary page automatically. This is otherwise known as a lifestream and has gained popularity as people tend toward exposing more of their activities on the web.</description>
+    </item>
+    
+    <item>
+      <title>Amazon Associates WordPress Wishlist Plugin</title>
+      <link>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</link>
+      <pubDate>Wed, 02 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/04/02/amazon-associates-wordpress-wishlist-plugin/</guid>
+      <description>One of the things that’s bugged me for a while whilst having a website is that at certain times of the year when people might actually like to buy me a gift they’re unable to find my wishlist. This is mainly because they’re simple folk who might not think to check amazon for my name. I’m also signed up with amazon associates, so I decided it could do me well to post my wishlist items along with my referral tag in the links in order to earn a bob or two on my own homepage.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Code Igniter for Rapid PHP Application Development</title>
+      <link>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</link>
+      <pubDate>Thu, 31 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/01/31/book-review-code-igniter-for-rapid-php-application-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decrypting Filezilla Passwords with PHP</title>
+      <link>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</link>
+      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2008/01/05/decrypting-filezilla-passwords-with-php/</guid>
+      <description>One of the most frustrating things I find in managing a number of websites is that I’m always forgetting passwords. The version of Filezilla I’m running however makes it easy to remember them again through its use of weak XOR encryption and a the key being hard coded into the software. I’ve used a program previously called the Filezilla Password Recover, but it turns out that this is also extremely easy to extract them using a simple PHP script.</description>
+    </item>
+    
+    <item>
+      <title>UK Jobs in Web 2.0</title>
+      <link>https://www.ianwootten.co.uk/2007/03/12/uk-jobs-in-web-2.0/</link>
+      <pubDate>Mon, 12 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2007/03/12/uk-jobs-in-web-2.0/</guid>
+      <description>If anyone else like me is considering working in the uk “web 2.0″ market, and finds the posts on common job boards clogged up with all the jobs from america, the small job board I have created and posted online might be a help. You’ll find it over at: http://webtyrant.com/jobs. It aggregates some common job boards together like 37Signals and ThinkVitamin, but removes anything but those located in the UK.</description>
+    </item>
+    
+    <item>
+      <title>pMachine changes its name</title>
+      <link>https://www.ianwootten.co.uk/2007/03/09/pmachine-changes-its-name/</link>
+      <pubDate>Fri, 09 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2007/03/09/pmachine-changes-its-name/</guid>
+      <description>pMachine has changed its name to Ellislab, and are sporting a shiny new website for all to see. The reason for the change is the expansion over the last 6 years to encompass products which don’t fall under the same banner now. I’m glad to see that the CodeIgniter website has got a facelift. 31three did the hard graft on the design and they all look awesome.</description>
+    </item>
+    
+  </channel>
+</rss>
