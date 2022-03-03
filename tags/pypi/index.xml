@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Fri, 23 Oct 2020 10:00:19 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/pypi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Publishing to PyPI Using Github Actions</title>
+      <title>Automating PyPI Releases Using Poetry and Github Actions</title>
       <link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link>
       <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
       

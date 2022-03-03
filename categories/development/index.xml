@@ -184,7 +184,7 @@ I&amp;rsquo;ve been looking for some time for a relatively simple method for dep
     </item>
     
     <item>
-      <title>Publishing to PyPI Using Github Actions</title>
+      <title>Automating PyPI Releases Using Poetry and Github Actions</title>
       <link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link>
       <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
       

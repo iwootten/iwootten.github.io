@@ -36,5 +36,15 @@ Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default pac
 As an example, take the following pip command:</description>
     </item>
     
+    <item>
+      <title>Automating PyPI Releases Using Poetry and Github Actions</title>
+      <link>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</link>
+      <pubDate>Fri, 23 Oct 2020 10:00:19 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2020/10/23/publishing-to-pypi-using-github-actions/</guid>
+      <description>In creating my first package on PyPI, I realised that many of the tasks I&amp;rsquo;d want to do on a subsequent publish would be repetitive. If I wanted to push out a simple fix, I wanted to automate away those tasks so I could focus on my code rather than a sequence of repetitive steps.
+Github actions is a simple way to do this and has given me the ability to quickly push out changes without lots of manual work.</description>
+    </item>
+    
   </channel>
 </rss>
