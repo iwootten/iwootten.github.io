@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tips on Ian Wootten</title>
-    <link>https://www.ianwootten.co.uk/categories/tips/</link>
-    <description>Recent content in tips on Ian Wootten</description>
+    <title>vue on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/vue/</link>
+    <description>Recent content in vue on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jun 2022 14:15:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 14:15:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Pass Vue Route Params as Component Props</title>
       <link>https://www.ianwootten.co.uk/2022/06/09/how-to-pass-vue-route-params-as-component-props/</link>
@@ -15,16 +15,6 @@
       <guid>https://www.ianwootten.co.uk/2022/06/09/how-to-pass-vue-route-params-as-component-props/</guid>
       <description>If you’re using vues router to link to dynamic URLs you may get stuck wondering why your props on router-links aren’t being sent to your components. Vue’s router doesn’t support sending props directly. So you can’t do something like this:
 &amp;lt;router-link class=&amp;#34;...&amp;#34; :to=&amp;#34;{ path: `/user/edit/`, id=id }&amp;#34; &amp;gt;Edit &amp;lt;/router-link&amp;gt; Here the id prop will never get passed in routers default configuration. Instead you need to configure each of your routes to pass the route params as props like so:</description>
-    </item>
-    
-    <item>
-      <title>How to use .env files with Poetry</title>
-      <link>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</link>
-      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</guid>
-      <description>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.
-Poetry 1.2 will add plugin support to tweak or add to it&amp;rsquo;s default package management behaviour and @mpeteuil made one for .</description>
     </item>
     
   </channel>

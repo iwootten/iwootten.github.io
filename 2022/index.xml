@@ -6,7 +6,17 @@
     <description>Recent content in 2022 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Apr 2022 15:20:45 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 14:15:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Pass Vue Route Params as Component Props</title>
+      <link>https://www.ianwootten.co.uk/2022/06/09/how-to-pass-vue-route-params-as-component-props/</link>
+      <pubDate>Thu, 09 Jun 2022 14:15:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/06/09/how-to-pass-vue-route-params-as-component-props/</guid>
+      <description>If you’re using vues router to link to dynamic URLs you may get stuck wondering why your props on router-links aren’t being sent to your components. Vue’s router doesn’t support sending props directly. So you can’t do something like this:
+&amp;lt;router-link class=&amp;#34;...&amp;#34; :to=&amp;#34;{ path: `/user/edit/`, id=id }&amp;#34; &amp;gt;Edit &amp;lt;/router-link&amp;gt; Here the id prop will never get passed in routers default configuration. Instead you need to configure each of your routes to pass the route params as props like so:</description>
+    </item>
+    
     <item>
       <title>Buying Refurbished Just isn&#39;t the Same for the M1 Pro</title>
       <link>https://www.ianwootten.co.uk/2022/04/10/buying-refurbished-just-isnt-the-same-for-the-m1-pro/</link>

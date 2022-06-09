@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Apr 2022 15:20:45 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 14:15:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Development</title>
+      <link>https://www.ianwootten.co.uk/categories/development/</link>
+      <pubDate>Thu, 09 Jun 2022 14:15:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>https://www.ianwootten.co.uk/categories/tips/</link>
+      <pubDate>Thu, 09 Jun 2022 14:15:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/categories/tips/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hardware</title>
       <link>https://www.ianwootten.co.uk/categories/hardware/</link>
@@ -22,24 +40,6 @@
       <pubDate>Mon, 21 Mar 2022 10:37:57 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/categories/business/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>https://www.ianwootten.co.uk/categories/development/</link>
-      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tips</title>
-      <link>https://www.ianwootten.co.uk/categories/tips/</link>
-      <pubDate>Fri, 18 Feb 2022 09:35:00 +0000</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/categories/tips/</guid>
       <description></description>
     </item>
     

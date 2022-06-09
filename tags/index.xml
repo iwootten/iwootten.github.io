@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Apr 2022 15:20:45 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 14:15:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js</title>
+      <link>https://www.ianwootten.co.uk/tags/js/</link>
+      <pubDate>Thu, 09 Jun 2022 14:15:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://www.ianwootten.co.uk/tags/vue/</link>
+      <pubDate>Thu, 09 Jun 2022 14:15:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/tags/vue/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>apple</title>
       <link>https://www.ianwootten.co.uk/tags/apple/</link>
@@ -283,15 +301,6 @@
       <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
       
       <guid>https://www.ianwootten.co.uk/tags/astro/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>js</title>
-      <link>https://www.ianwootten.co.uk/tags/js/</link>
-      <pubDate>Fri, 10 Sep 2021 10:27:51 +0100</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/tags/js/</guid>
       <description></description>
     </item>
     
