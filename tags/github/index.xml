@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/tags/github/</link>
+    <description>Recent content in github on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Jun 2022 09:35:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should You Pay for Github Copilot?</title>
+      <link>https://www.ianwootten.co.uk/2022/06/23/should-you-pay-for-github-copilot/</link>
+      <pubDate>Thu, 23 Jun 2022 09:35:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/06/23/should-you-pay-for-github-copilot/</guid>
+      <description>Unless you’ve been hidden under a rock, you’re likely aware of Copilot - Github’s (or Microsofts) AI pair programmer. It allows you to get help on the code you’re writing by bringing up suggestions through an autocomplete snippets when you begin typing code in your editor.
+ Since it started its free beta back in the summer of last year, it’s been the subject of many developers videos and it’s even played a part in a few of mine.</description>
+    </item>
+    
+  </channel>
+</rss>
