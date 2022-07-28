@@ -8,11 +8,11 @@
     <language>en</language>
     <lastBuildDate>Tue, 26 Jul 2022 10:24:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Set the Locale for Cypress Tests</title>
-      <link>https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-for-cypress-tests/</link>
+      <title>How to Set the Locale Used in Cypress Tests</title>
+      <link>https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-used-in-cypress-tests/</link>
       <pubDate>Tue, 26 Jul 2022 10:24:00 +0000</pubDate>
       
-      <guid>https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-for-cypress-tests/</guid>
+      <guid>https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-used-in-cypress-tests/</guid>
       <description>When running some Cypress tests in Github Actions that were inspecting dates recently, I wanted to be able to set the locale of the browser - specifically for Chrome which I was using with Cypress.
 Originally, I’d thought this require a step within setting up the github action environment itself, but this doesn’t change anything - presumably because the cypress github action runs in a separate step.
 Turns out it is possible, but by using the chrome devtools protocol.</description>
