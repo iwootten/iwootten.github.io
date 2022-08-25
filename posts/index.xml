@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Jul 2022 10:24:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Aug 2022 15:19:36 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Developing on the Framework Laptop</title>
+      <link>https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/</link>
+      <pubDate>Thu, 25 Aug 2022 15:19:36 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/</guid>
+      <description>Earlier this year I bought the 11th gen Framework Laptop to develop on. Here, I&amp;rsquo;ll share what I liked and disliked and how I got on with it.
+I’m sure you’re aware if you’re reading this Frameworks first laptop is billed as one that is completely upgradeable. So every part within can be replaced if you ever want to upgrade or need to replace broken parts. In fact, Framework actively encourages you to do so by including a nifty little screwdriver and spudger tool that can completely disassemble the entire machine.</description>
+    </item>
+    
     <item>
       <title>How to Set the Locale Used in Cypress Tests</title>
       <link>https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-used-in-cypress-tests/</link>

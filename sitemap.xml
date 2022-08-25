@@ -3,10 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.ianwootten.co.uk/2022/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/framework/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/hardware/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/laptop/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/right-to-repair/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/cypress/</loc>
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
@@ -20,22 +47,10 @@
     <loc>https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-used-in-cypress-tests/</loc>
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/js/</loc>
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/categories/tips/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/ai/</loc>
@@ -60,9 +75,6 @@
     <lastmod>2022-04-10T15:20:45+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/04/10/buying-refurbished-just-isnt-the-same-for-the-m1-pro/</loc>
-    <lastmod>2022-04-10T15:20:45+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/hardware/</loc>
     <lastmod>2022-04-10T15:20:45+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/m1/</loc>
@@ -2051,6 +2063,8 @@
     <loc>https://www.ianwootten.co.uk/2022/06/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/07/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/08/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/about/</loc>
   </url><url>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.83.0" />
+
+    
+    
+    
+
+<title>Developing on the Framework Laptop - Ian Wootten</title>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/www.ianwootten.co.uk"
+    },
+    "articleSection" : "posts",
+    "name" : "Developing on the Framework Laptop",
+    "headline" : "Developing on the Framework Laptop",
+    "description" : "Earlier this year I bought the 11th gen Framework Laptop to develop on. Here, I\u0026rsquo;ll share what I liked and disliked and how I got on with it.\nI’m sure you’re aware if you’re reading this Frameworks first laptop is billed as one that is completely upgradeable. So every part within can be replaced if you ever want to upgrade or need to replace broken parts. In fact, Framework actively encourages you to do so by including a nifty little screwdriver and spudger tool that can completely disassemble the entire machine.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2022",
+    "datePublished": "2022-08-25 15:19:36 \u002b0100 \u002b0100",
+    "dateModified" : "2022-08-25 15:19:36 \u002b0100 \u002b0100",
+    "url" : "https:\/\/www.ianwootten.co.uk\/2022\/08\/25\/developing-on-the-framework-laptop\/",
+    "wordCount" : "2261",
+    "keywords" : [ "right to repair","laptop","framework","Blog" ]
+}
+</script>
+<meta name="description" content="Earlier this year I bought the 11th gen Framework Laptop to develop on. Here, I&rsquo;ll share what I liked and disliked and how I got on with it.
+I’m sure you’re aware if you’re reading this Frameworks first laptop is billed as one that is completely upgradeable. So every part within can be replaced if you ever want to upgrade or need to replace broken parts. In fact, Framework actively encourages you to do so by including a nifty little screwdriver and spudger tool that can completely disassemble the entire machine.">
+<meta name="keywords" content="Developer, Programming, Python, Terraform, Serverless, VueJS, Cardiff">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.ianwootten.co.uk/images/framework-review/opengraph.jpg"/>
+
+<meta name="twitter:title" content="Developing on the Framework Laptop"/>
+<meta name="twitter:description" content="Earlier this year I bought the 11th gen Framework Laptop to develop on. Here, I&rsquo;ll share what I liked and disliked and how I got on with it.
+I’m sure you’re aware if you’re reading this Frameworks first laptop is billed as one that is completely upgradeable. So every part within can be replaced if you ever want to upgrade or need to replace broken parts. In fact, Framework actively encourages you to do so by including a nifty little screwdriver and spudger tool that can completely disassemble the entire machine."/>
+
+<meta property="og:title" content="Developing on the Framework Laptop" />
+<meta property="og:description" content="Earlier this year I bought the 11th gen Framework Laptop to develop on. Here, I&rsquo;ll share what I liked and disliked and how I got on with it.
+I’m sure you’re aware if you’re reading this Frameworks first laptop is billed as one that is completely upgradeable. So every part within can be replaced if you ever want to upgrade or need to replace broken parts. In fact, Framework actively encourages you to do so by including a nifty little screwdriver and spudger tool that can completely disassemble the entire machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/" /><meta property="og:image" content="https://www.ianwootten.co.uk/images/framework-review/opengraph.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-25T15:19:36&#43;01:00" />
+<meta property="article:modified_time" content="2022-08-25T15:19:36&#43;01:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/hyde-hyde.css">
+<link rel="stylesheet" href="https://www.ianwootten.co.uk/css/print.css" media="print">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ianwootten.co.uk/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://www.ianwootten.co.uk/favicon.png">
+    
+
+    <script async defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.ianwootten.co.uk">Ian Wootten</a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <a href="https://www.ianwootten.co.uk"><img src="https://www.ianwootten.co.uk/images/headshot.jpg" alt="Author Image" class="img--circle img--headshot element--center" width="115px" height="115px"></a>
+      </div>
+      
+      <p class="site__description">
+         Software Developer, Cardiff 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Ian Wootten</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.ianwootten.co.uk/hire-me/">
+						<span>Hire Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://niftydigits.gumroad.com">
+						<span>Products</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://www.getrevue.co/profile/iwootten">
+						<span>Subscribe</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/iwootten" rel="me"><i alt="My Twitter profile" class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://youtube.com/channel/UCIrmOddTgfsohRAHrJ5ltrA" rel="me"><i alt="My youtube channel" class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/iwootten" rel="me"><i alt="My Github profile" class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/iwootten" rel="me"><i alt="My linkedin profile" class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://stackoverflow.com/users/1405701" rel="me"><i alt="My stackoverflow profile" class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    <p class="copyright">
+      &copy;2003-2022 Ian Wootten
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1><a href="https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/">Developing on the Framework Laptop</a></h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Aug 25, 2022
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="https://www.ianwootten.co.uk/categories/hardware">HARDWARE</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/right-to-repair">right to repair</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/laptop">laptop</a>
+           
+      
+          <a class="badge badge-tag" href="https://www.ianwootten.co.uk/tags/framework">framework</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 11 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>Earlier this year I bought the 11th gen <a href="https://frame.work">Framework</a> Laptop to develop on. Here, I&rsquo;ll share what I liked and disliked and how I got on with it.</p>
+<p>I’m sure you’re aware if you’re reading this Frameworks first laptop is billed as one that is completely upgradeable. So every part within can be replaced if you ever want to upgrade or need to replace broken parts. In fact, Framework actively encourages you to do so by including a nifty little screwdriver and spudger tool that can completely disassemble the entire machine.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/spudger_hu95898aae0f9bd0cba81ec0b9cfa04bcd_2058046_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/spudger_hu95898aae0f9bd0cba81ec0b9cfa04bcd_2058046_700x0_resize_box_2.png' />
+    </a>
+
+<h2 id="spec">Spec</h2>
+<p>I picked up the i5-1135G7-DIY version which was the cheapest of all their mainboard offerings and at the time cost me £882 in total. This being the DIY kit, I provided my own 16GB RAM and 1TB hard disk from components that I already had available - something you can&rsquo;t do with other manufacturers. You can see a full video of me setting it up from scratch complete with OS install <a href="https://www.youtube.com/watch?v=UzTVMhZk0vU">on my YouTube channel</a>.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/ram-install_hu6bff8184bf7c863b892720f864a30d99_2881069_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/ram-install_hu6bff8184bf7c863b892720f864a30d99_2881069_700x0_resize_box_2.png' />
+    </a>
+
+<p>As Framework is upgradeable my thinking behind this this was that it allows me check out the laptop and see if I like it and potentially to upgrade to something more powerful at some point in the future should I ever need or want to or if framework releases newer versions. Framework was then and is now, a new company having only been around a year or so and is still fairly young in the grand scheme of things.</p>
+<h2 id="design">Design</h2>
+<p>The machine itself is an all aluminium design, with Frameworks minimal logo on the top cover. On the underside theres a number of vents and rubber strips to raise it up and allow air movement. In a world of black plastic pc laptops I kind of like this design and it makes it feel far more premium than other pc laptop offerings. It obviously looks very similar to macbooks and I think this is the type of customer framework is aiming it for, someone who would pay a premium for their hardware.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/top-cover_hu4495e8290a687a23e57a8f409893d461_2476137_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/top-cover_hu4495e8290a687a23e57a8f409893d461_2476137_700x0_resize_box_2.png' />
+    </a>
+
+<h2 id="screen">Screen</h2>
+<p>The screen size is 13.5 inches with a brightness of 400 nits at a somewhat unusual aspect ratio of 3:2 - This gives a resolution of 2256x1504 pixels in a taller, slightly thinner screen than you might be used to. You’ll get more vertical space for lines of code and is billed as a unique feature of the laptop.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/overhead_hua3b8f239f94597b4cccf375ec557d289_2888086_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/overhead_hua3b8f239f94597b4cccf375ec557d289_2888086_700x0_resize_box_2.png' />
+    </a>
+
+<p>However this does itself lead to a couple of interesting problems. Firstly, it also means that any screen recordings you do will need to be cropped or transformed to show without borders at a 16:9 aspect. So if you happen to be a someone who records their desktop for any reason it’s worth considering that’s a step you will have to go through before publishing them.</p>
+<p>I also found that it’s quite a bit taller than the external Dell monitor I’m using it with will reach above, where other machines that aren’t quite as tall would fit quite neatly beneath it.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/beneath-monitor_hu1ea2e8fa435a6467514a796abc1a84f6_2967301_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/beneath-monitor_hu1ea2e8fa435a6467514a796abc1a84f6_2967301_700x0_resize_box_2.png' />
+    </a>
+
+<p>It makes me wonder if the aspect ratio of 3:2 is likely a necessary decision that’s had to be made to accommodate the way the battery and mainboard are arranged in the chassis rather than it being a principal design choice.</p>
+<p>Packed into the screen is also the 1080p webcam, which comes complete with privacy switches for when you’re not using it.</p>
+<p>The screen is pretty reflective, meaning that in a lot of my videos you can clearly see my reflection.</p>
+<p>The screen and top cover does also have quite a bit of flex to it and it’s something that’s been often mentioned in other reviews. The hinge that also holds it up also isn’t as rigid as I would like, it will wobble a bit if you happen to have a wobbly desk, though Framework have released a stronger 4.0kg version you can purchase/replace to remedy this. It’s great that updates can be made and Framework actually trust customers enough to be able to replace them in their own machines.</p>
+<h2 id="modular-ports">Modular Ports</h2>
+<p>One of the other features of this laptop of course is it’s modular ports - which allows you to swap the default arrangement of 4 usb-c ports to any other expansion card that Framework offer. There’s options for HDMI 2.0, Displayport, USB-A/C, Micro SD, and even offerings to increase expansion. Coming soon there’s a 2.5Gbit/s ethernet expansion card too. These are all fairly reasonably priced, compared to say apple, but you could equally grab yourself a dongle featuring many of these.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/modular_hu4524c75323e748d30e3a13f29702269d_2105580_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/modular_hu4524c75323e748d30e3a13f29702269d_2105580_700x0_resize_box_2.png' />
+    </a>
+
+<p>The ability to switch the arrangement is useful, meaning you only have the ports you want where you need them - but it’s unlikely you’ll be switching them too often once you’ve chosen where they go. You also could opt not to buy any of the ports, given there’s 4 usb-c tucked away inside the spaces for each module (though it’ll look a bit strange if you did).</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/modular-install_hub46a9bf65c9ef21ae8dbb41427ec38bc_2284443_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/modular-install_hub46a9bf65c9ef21ae8dbb41427ec38bc_2284443_700x0_resize_box_2.png' />
+    </a>
+
+<p>I’ve noticed here that the modules are not entirely flush with the side of the laptop if you run your finger along it, which is a small niggle.</p>
+<h2 id="battery">Battery</h2>
+<p>The laptop is powered over usb-c using any of the usb-c ports, you can use either the official 60w gan charger at an additional cost to the laptop or an equivalent usb-c charger you already have. It’s a 55w battery which I’ve found charges in a little over 2 hours during use.</p>
+<p>The battery life unfortunately hasn’t been very good for me as I’m using Ubuntu, giving me about 4.5 hours worth of usage but I fully expect this to be better under an operating system better optimised for battery management.</p>
+<h2 id="mouse">Mouse</h2>
+<p>The trackpad is glass and works well when I’ve been using it. I tend to mostly use an external mouse so I’ve not been using it all day.</p>
+<p>It does have a very pronounced physical click. I’ve also noticed a couple of times it’s not picked up a clicks under Ubuntu and I think this is more of a hardware issue than the OS.</p>
+<p>The angled “slant” in front of the trackpad where the top cover meets the bottom also feels pretty sharp, like it isn’t sitting perfectly flush.</p>
+<h2 id="keyboard">Keyboard</h2>
+<p>The keyboard has 1.5mm of travel and complete with an adjustable backlight. The keys have a good feel to them but don’t feel completely solid, which is to be expected as the chassis isn’t a solid piece of aluminium - it results a more hollow feel to the machine when you’re tapping with it on your lap.</p>
+
+    <a href='https://www.ianwootten.co.uk/framework-review/keyboard_hu4ce93892038a3fbd367a3e17623a3e98_2732215_1000x0_resize_box_2.png'>
+        <img src='https://www.ianwootten.co.uk/framework-review/keyboard_hu4ce93892038a3fbd367a3e17623a3e98_2732215_700x0_resize_box_2.png' />
+    </a>
+
+<p>The keyboard layout is made in such a way to allow for each language to be catered for. This means the enter and backslash keys are merged to a single cutout, with a lowered button. This is particularly noticeable when comparing to the layout of keys on a mac.</p>
+<p>Backlight brightness adjustment is triggered through use of the function key and spacebar and there isn’t a button to lower the brightness, you have to cycle through each step to get them to the brightness you need.</p>
+<p>The function keys seem like they’re in a strange order, it’s particularly weird to have the media keys as the first ones on that top row. This is different to most keyboards I own which mainly comprise of logitech or Mac variants where they tend to be on the right and does mean I find myself hunting around for them.</p>
+<p>The fingerprint reader works, but has been problematic under Ubuntu and has required me to be pretty careful about using it. It only lets me in about 30% of the time and often it’s quicker for me type my password than stab repeatedly at the reader. I hope with time that the linux drivers might be improved to resolve this.</p>
+<h2 id="performancefan">Performance/Fan</h2>
+<p>I’ve found that the framework is more than capable with most of my dev tasks I’ve used it for, coping comfortably with web development work and running multiple docker containers side by side. Where it does show problems is with any type of video work, where the fan will kick in and its particularly loud. There’s no dedicated GPU so this is really geared at run of the mill office work than say editing media or gaming. I ran the python performance benchmark test and well, you can here how loud the fan gets here.</p>
+<p>Noise is a particular bugbear of mine and I’d struggle to think straight with the fan going at full blast. Notice that I say fan and not fans - there’s only a single fan here on the mainboard so it needs to run particularly fast to shift air.</p>
+<h2 id="speakers">Speakers</h2>
+<p>The speakers are downward facing and to put it politely, pretty awful. I tend to use bluetooth headphones most of the time so it’s not a big issue - though it would be nice to have something that doesn’t sound worse than my existing 7 year old macbook.</p>
+<h2 id="upgradeability">Upgradeability</h2>
+<p>One of the main features obviously is the laptops upgradeability, it’s really nice to see such great documentation on components and how to service them, accessible by the many qr codes throughout the machine. It’s also nice to see continous improvements by the Framework team, like the launch of the <a href="https://frame.work/gb/en/marketplace">marketplace</a> to purchase replacement components. This means we don’t have go through a service centre or talk to a blue shirt employee to fix broken hardware, we simply buy it ourselves on their website directly from them. I would note that shipping is quite expensive however, at £24 for me here in the UK so you’ll probably use it for combined orders only.</p>
+<p>In fact I looked at buying every component from the laptop to see how much the total cost came to, which is possible but as you might expect ends up being quite a bit more expensive than the laptop itself.</p>
+<h2 id="updates">Updates</h2>
+<p>As I mentioned, I preordered my Framework when batches were eventually released for countries in Europe on 14th April this year. This is a lot later than customers in the US, who were able to pre order straight away in Summer 21 and started receiving them later that year.</p>
+<p>Within just over a month of my order, Framework announced the updated 12th Gen Intel version of their laptop on the 19th of May. Most of the laptop remains the same in this version, except for the mainboard and the top cover which is replaced with CNC’d version to improve its rigidity. It’s slightly more expensive ($20/£) than the 11th gen and it also comes as an upgrade kit for existing users so they don’t need to replace their entire system, only supplying the components that are different. These kits are themselves pretty expensive however at a little over half of the cost of the machine itself, but at least we have he option of being able to replace only the components we need to as opposed to the entire machine.</p>
+<p>What’s nice about this is it can be seen as Framework actually delivering on their promise of a fully upgradeable machine with these updates. Many other manufacturers have tried in the past and failed to do so.</p>
+<p>However, I can imagine that quite a few of us in Europe who had been eagerly waiting for Framework to launch may feel a little bitter it was replaced so quickly since it resolves a number of the issues I talk about here and would potentially give them that much requested 12th gen CPU.</p>
+<p>Since the update announcements, the 11th gen version is available at a $100 discount though some versions are no longer available. So this means you can pick up the 11th gen intel at $769 for the DIY version, meaning it ends up being $140 (£120) cheaper than the 12th Gen which is not a bad saving. However, the 12th gen is reported to be a significant upgrade with 8 more CPU cores for even the lower end i5 model so hopefully will perform much better than the current mainboard - most recent reviews I&rsquo;ve seen support this too.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You’ll hear in my framework linux video that I struggled switching between my mac mini and linux whilst testing things out for these reviews as I’ve been using macos as my primary os now for mostly a decade. I’m ultimately faster on a machine using MacOS, but I do wish I could use it on other hardware without jumping through hoops on something like say a hackintosh. Sadly, that’s never going to happen. At this point I’ve actually sent back my framework so I could get the 12th Gen and I’m hoping to review it, but I’m still on the fence as to whether it could work as a primary machine for me.</p>
+<p>I&rsquo;m still going to be doing more with the 11th gen version though as I was recently lucky enough to be gifted the mainboard as part of Frameworks developer programme and I’m looking forward to building into a future project. You can see a <a href="https://www.youtube.com/watch?v=YCsa-glL5Ew">video of me getting to grips with using it</a> for the first time.</p>
+<p>I’m definitely a big Framework fan and looking forward to see how the 12th gen performs.</p>
+<p><em>Find the video of this article on <a href="https://www.youtube.com/watch?v=vzALQsiQAGw">youtube</a></em></p>
+<form action="https://www.getrevue.co/profile/iwootten/add_subscriber" method="post" id="revue-form" name="revue-form"
+  target="_blank" style="background: #e7daf1; padding: 1rem; margin-top: 2rem; border: 2px solid #300030;">
+  <h4 style="margin-top:0">Get Regular Tips to Your Inbox</h4>
+  <p>My <a href="https://www.getrevue.co/profile/iwootten">newsletter</a> comes out every few
+    weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It
+    also
+    features articles and
+    videos I've recently published so you'll never miss out.
+  <p>
+
+  <p>No spam, unsubscribe any time. Check out <a href="https://www.getrevue.co/profile/iwootten">previous issues
+      here</a>.
+  </p>
+  <div class="revue-form-group">
+    <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]"
+      id="member_email" style="width: 100%;font-size: 20px;">
+  </div>
+  <div class="revue-form-actions">
+    <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+  </div>
+</form>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="https://www.ianwootten.co.uk/2022/07/26/how-to-set-the-locale-used-in-cypress-tests/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">How to Set the Locale Used in Cypress Tests</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>
