@@ -3,10 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.ianwootten.co.uk/2022/</loc>
-    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/09/05/getting-poetry-to-use-the-active-pyenv-to-create-a-virtual-environment/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/poetry/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/tips/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/</loc>
     <lastmod>2022-08-25T15:19:36+01:00</lastmod>
@@ -17,28 +44,13 @@
     <loc>https://www.ianwootten.co.uk/categories/hardware/</loc>
     <lastmod>2022-08-25T15:19:36+01:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/laptop/</loc>
-    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
     <lastmod>2022-08-25T15:19:36+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/right-to-repair/</loc>
     <lastmod>2022-08-25T15:19:36+01:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
-    <lastmod>2022-08-25T15:19:36+01:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/cypress/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/development/</loc>
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/github-actions/</loc>
@@ -48,9 +60,6 @@
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/js/</loc>
-    <lastmod>2022-07-26T10:24:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/tips/</loc>
     <lastmod>2022-07-26T10:24:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/ai/</loc>
@@ -117,12 +126,6 @@
     <lastmod>2022-02-23T10:34:05+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/02/18/how-to-use-env-files-with-poetry/</loc>
-    <lastmod>2022-02-18T09:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/poetry/</loc>
-    <lastmod>2022-02-18T09:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
     <lastmod>2022-02-18T09:35:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/client-work/</loc>
@@ -2065,6 +2068,8 @@
     <loc>https://www.ianwootten.co.uk/2022/07/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/08/</loc>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/09/</loc>
   </url><url>
     <loc>https://www.ianwootten.co.uk/about/</loc>
   </url><url>

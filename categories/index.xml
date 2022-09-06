@@ -6,20 +6,11 @@
     <description>Recent content in Categories on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Aug 2022 15:19:36 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hardware</title>
-      <link>https://www.ianwootten.co.uk/categories/hardware/</link>
-      <pubDate>Thu, 25 Aug 2022 15:19:36 +0100</pubDate>
-      
-      <guid>https://www.ianwootten.co.uk/categories/hardware/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 05 Sep 2022 09:25:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
       <link>https://www.ianwootten.co.uk/categories/development/</link>
-      <pubDate>Tue, 26 Jul 2022 10:24:00 +0000</pubDate>
+      <pubDate>Mon, 05 Sep 2022 09:25:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/categories/development/</guid>
       <description></description>
@@ -28,9 +19,18 @@
     <item>
       <title>tips</title>
       <link>https://www.ianwootten.co.uk/categories/tips/</link>
-      <pubDate>Tue, 26 Jul 2022 10:24:00 +0000</pubDate>
+      <pubDate>Mon, 05 Sep 2022 09:25:00 +0000</pubDate>
       
       <guid>https://www.ianwootten.co.uk/categories/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>https://www.ianwootten.co.uk/categories/hardware/</link>
+      <pubDate>Thu, 25 Aug 2022 15:19:36 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/categories/hardware/</guid>
       <description></description>
     </item>
     

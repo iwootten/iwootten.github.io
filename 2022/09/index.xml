@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2022/09 on Ian Wootten</title>
+    <link>https://www.ianwootten.co.uk/2022/09/</link>
+    <description>Recent content in 2022/09 on Ian Wootten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.ianwootten.co.uk/2022/09/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Poetry to use the active Pyenv to Create a Virtual Environment</title>
+      <link>https://www.ianwootten.co.uk/2022/09/05/getting-poetry-to-use-the-active-pyenv-to-create-a-virtual-environment/</link>
+      <pubDate>Mon, 05 Sep 2022 09:25:00 +0000</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/09/05/getting-poetry-to-use-the-active-pyenv-to-create-a-virtual-environment/</guid>
+      <description>I found with a new poetry install that it refused to use the pyenv version of Python.
+I needed to explicitly tell Poetry where to find the active pyenv:
+poetry env use -- $(which python) After this, it works as expected.
+Source: https://github.com/python-poetry/poetry/issues/651#issuecomment-861421651
+Get Regular Tips to Your Inbox My newsletter comes out every few weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently.</description>
+    </item>
+    
+  </channel>
+</rss>
