@@ -3,10 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.ianwootten.co.uk/2022/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/categories/events/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/posts/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/2022/09/20/pycon-uk-2022/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/pyconuk/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/tags/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
+  </url><url>
+    <loc>https://www.ianwootten.co.uk/year/</loc>
+    <lastmod>2022-09-20T09:40:54+01:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/categories/development/</loc>
     <lastmod>2022-09-05T09:25:00+00:00</lastmod>
@@ -14,25 +38,10 @@
     <loc>https://www.ianwootten.co.uk/2022/09/05/getting-poetry-to-use-the-active-pyenv-to-create-a-virtual-environment/</loc>
     <lastmod>2022-09-05T09:25:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/tags/poetry/</loc>
     <lastmod>2022-09-05T09:25:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.ianwootten.co.uk/posts/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/python/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/tags/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.ianwootten.co.uk/categories/tips/</loc>
-    <lastmod>2022-09-05T09:25:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/year/</loc>
     <lastmod>2022-09-05T09:25:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2022/08/25/developing-on-the-framework-laptop/</loc>
@@ -675,9 +684,6 @@
     <lastmod>2012-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/2012/08/29/a-scientist-in-an-adventure-with-pirates/</loc>
-    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.ianwootten.co.uk/categories/events/</loc>
     <lastmod>2012-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.ianwootten.co.uk/tags/stop-motion/</loc>

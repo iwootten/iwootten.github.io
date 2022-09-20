@@ -6,7 +6,17 @@
     <description>Recent content in 2022 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Sep 2022 09:25:00 +0000</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 09:40:54 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyCon UK 2022</title>
+      <link>https://www.ianwootten.co.uk/2022/09/20/pycon-uk-2022/</link>
+      <pubDate>Tue, 20 Sep 2022 09:40:54 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/09/20/pycon-uk-2022/</guid>
+      <description>This past weekend I&amp;rsquo;ve been attending PyCon UK. I&amp;rsquo;m particularly lucky in that I live a 10 min train ride from where it is located in Cardiff meaning its incredibly convenient and economic for me. As a Python dev located here, there&amp;rsquo;s literally no excuse not to attend.
+What makes it even more special this time round is that this is the first event since the pandemic started - the last being held in 2019.</description>
+    </item>
+    
     <item>
       <title>Getting Poetry to use the active Pyenv to Create a Virtual Environment</title>
       <link>https://www.ianwootten.co.uk/2022/09/05/getting-poetry-to-use-the-active-pyenv-to-create-a-virtual-environment/</link>
