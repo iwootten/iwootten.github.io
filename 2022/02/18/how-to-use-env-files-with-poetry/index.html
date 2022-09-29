@@ -40,7 +40,7 @@
     "datePublished": "2022-02-18 09:35:00 \u002b0000 UTC",
     "dateModified" : "2022-02-18 09:35:00 \u002b0000 UTC",
     "url" : "https:\/\/www.ianwootten.co.uk\/2022\/02\/18\/how-to-use-env-files-with-poetry\/",
-    "wordCount" : "132",
+    "wordCount" : "163",
     "keywords" : [ "python","poetry","Blog" ]
 }
 </script>
@@ -238,14 +238,19 @@ Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package
   <div class="post">
     <p>I love Poetry, but one thing I always find frustrating is having to add an additional package to my environments to read from .env files and access them as environment variables. I quite often default to Pipenv for simple projects to get round this. Turns out there’s now another way.</p>
 <p>Poetry 1.2 will add plugin support to tweak or add to it&rsquo;s default package management behaviour and <a href="http://github.com/mpeteuil">@mpeteuil</a> <a href="https://github.com/mpeteuil/poetry-dotenv-plugin">made one for .env files</a>!</p>
+<h1 id="poetry-11">Poetry 1.1</h1>
 <p>You can install 1.2.0a2 and get it the plugin right now like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry self update --preview
 poetry plugin add poetry-dotenv-plugin
 </code></pre></div><p>Then you should find anything you’ve added to your .env file is accessible to use in your project as an environment variable.</p>
+<h1 id="poetry-12">Poetry 1.2+</h1>
+<p>If you&rsquo;re using Poetry 1.2+ the plugin command is now slightly different:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry self add poetry-dotenv-plugin
+</code></pre></div><p><em>Updated 29th September 2022 to include differences on final 1.2 release.</em>
 <hr />
 
 If you found this helpful you should subscribe to <a href="https://www.getrevue.co/profile/iwootten">my newsletter</a>
-for other tips and tricks.
+for other tips and tricks.</p>
 
   </div>
   
