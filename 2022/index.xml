@@ -6,7 +6,17 @@
     <description>Recent content in 2022 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Sep 2022 09:40:54 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Oct 2022 14:37:13 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python isn’t Used in Prod</title>
+      <link>https://www.ianwootten.co.uk/2022/10/19/python-isnt-used-in-prod/</link>
+      <pubDate>Wed, 19 Oct 2022 14:37:13 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/10/19/python-isnt-used-in-prod/</guid>
+      <description>I watched a video earlier this week by comedian and mathematician Matt Parker. It’s an entertaining walkthrough of some impressive optimisation of his own Python code by his community but there&amp;rsquo;s a comment about Python that I thought warranted some pushback.
+That comment was that ‘Python will very rarely make it into production’. The implication being that it’s a language used only really for prototyping at which point you’ll bring out the raw grunt of another language - such as C++ or C to do some real work.</description>
+    </item>
+    
     <item>
       <title>PyCon UK 2022</title>
       <link>https://www.ianwootten.co.uk/2022/09/20/pycon-uk-2022/</link>
@@ -27,7 +37,7 @@ What makes it even more special this time round is that this is the first event 
 I needed to explicitly tell Poetry where to find the active pyenv:
 poetry env use -- $(which python) After this, it works as expected.
 Source: https://github.com/python-poetry/poetry/issues/651#issuecomment-861421651
-Get Regular Tips to Your Inbox My newsletter comes out every few weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently.</description>
+Get Updates to Your Inbox My newsletter comes out every month and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It also features articles and videos I&#39;ve recently published so you&#39;ll never miss out.</description>
     </item>
     
     <item>

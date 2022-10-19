@@ -17,7 +17,7 @@
 I needed to explicitly tell Poetry where to find the active pyenv:
 poetry env use -- $(which python) After this, it works as expected.
 Source: https://github.com/python-poetry/poetry/issues/651#issuecomment-861421651
-Get Regular Tips to Your Inbox My newsletter comes out every few weeks and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently.</description>
+Get Updates to Your Inbox My newsletter comes out every month and is stuffed with helpful stories, tools and code showing how developers like yourself ship efficiently. It also features articles and videos I&#39;ve recently published so you&#39;ll never miss out.</description>
     </item>
     
     <item>

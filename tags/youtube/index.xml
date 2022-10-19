@@ -6,7 +6,17 @@
     <description>Recent content in youtube on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Mar 2021 13:07:26 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Oct 2022 14:37:13 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python isn’t Used in Prod</title>
+      <link>https://www.ianwootten.co.uk/2022/10/19/python-isnt-used-in-prod/</link>
+      <pubDate>Wed, 19 Oct 2022 14:37:13 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/10/19/python-isnt-used-in-prod/</guid>
+      <description>I watched a video earlier this week by comedian and mathematician Matt Parker. It’s an entertaining walkthrough of some impressive optimisation of his own Python code by his community but there&amp;rsquo;s a comment about Python that I thought warranted some pushback.
+That comment was that ‘Python will very rarely make it into production’. The implication being that it’s a language used only really for prototyping at which point you’ll bring out the raw grunt of another language - such as C++ or C to do some real work.</description>
+    </item>
+    
     <item>
       <title>YouTube Videos as Small Experiments</title>
       <link>https://www.ianwootten.co.uk/2021/03/30/youtube-videos-as-small-experiments/</link>
