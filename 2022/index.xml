@@ -6,7 +6,17 @@
     <description>Recent content in 2022 on Ian Wootten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Oct 2022 14:37:13 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Oct 2022 09:59:39 +0100</lastBuildDate><atom:link href="https://www.ianwootten.co.uk/2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding on the Steam Deck</title>
+      <link>https://www.ianwootten.co.uk/2022/10/24/coding-on-the-steam-deck/</link>
+      <pubDate>Mon, 24 Oct 2022 09:59:39 +0100</pubDate>
+      
+      <guid>https://www.ianwootten.co.uk/2022/10/24/coding-on-the-steam-deck/</guid>
+      <description>I got the Valve Steam Deck last month and have instantly become obsessed with it. I wanted to know if I could use it as a linux dev machine, knowing that it was essentially a full blown PC under the hood. You&amp;rsquo;re able to be use a keyboard and mouse with SteamOS in desktop mode with everything setup over the sole USB-C port via a dongle.
+User Setup SteamOS is built upon arch linux, which gives you a familiar environment if you&amp;rsquo;ve used a linux distro before.</description>
+    </item>
+    
     <item>
       <title>Python isn’t Used in Prod</title>
       <link>https://www.ianwootten.co.uk/2022/10/19/python-isnt-used-in-prod/</link>
