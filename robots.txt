@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://ianwootten.co.uk/sitemap-index.xml
