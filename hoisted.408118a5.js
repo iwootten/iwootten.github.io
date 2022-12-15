@@ -1,0 +1,1 @@
+import"./chunks/CallToAction.astro_astro_type_script_index_0_lang.348a8e1e.js";function e(){document.getElementById(this.dataset.target).classList.toggle("hidden")}var n=document.getElementsByTagName("button");Array.from(n).forEach(function(t){t.addEventListener("click",e)});
