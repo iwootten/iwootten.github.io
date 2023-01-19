@@ -150,56 +150,59 @@
 <h2 id="pyenv">Pyenv</h2>
 <p>Pyenv is a tool which allows us to install multiple versions of Python on the same machine.</p>
 <p>In order to install Pyenv on Bullseye, we need to install the <a href="https://github.com/pyenv/pyenv/wiki#suggested-build-environment">Python build dependencies</a> for Debian.</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">sudo apt-get update</span><span style="color: #FF7B72">;</span><span style="color: #C9D1D9"> sudo apt-get install make build-essential libssl-dev zlib1g-dev \</span></span>
-<span class="line"><span style="color: #C9D1D9">libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \</span></span>
-<span class="line"><span style="color: #C9D1D9">libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sudo apt-get update</span><span style="color:#FF7B72">;</span><span style="color:#C9D1D9"> sudo apt-get install make build-essential libssl-dev zlib1g-dev \</span></span>
+<span class="line"><span style="color:#C9D1D9">libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \</span></span>
+<span class="line"><span style="color:#C9D1D9">libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev</span></span></code></pre>
 <p>Once that’s done, you can follow the instructions to clone the pyenv repo to your users home directory.</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9"> git clone https://github.com/pyenv/pyenv.git </span><span style="color: #FF7B72">~</span><span style="color: #C9D1D9">/.pyenv</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9"> git clone https://github.com/pyenv/pyenv.git </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.pyenv</span></span></code></pre>
 <p>I also went ahead and compiled the bash extension:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">cd</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">~</span><span style="color: #C9D1D9">/.pyenv </span><span style="color: #FF7B72">&#x26;&#x26;</span><span style="color: #C9D1D9"> src/configure </span><span style="color: #FF7B72">&#x26;&#x26;</span><span style="color: #C9D1D9"> make -C src</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">cd</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.pyenv </span><span style="color:#FF7B72">&amp;&amp;</span><span style="color:#C9D1D9"> src/configure </span><span style="color:#FF7B72">&amp;&amp;</span><span style="color:#C9D1D9"> make -C src</span></span></code></pre>
 <p>Once cloned, you’ll need to configure your shell to work with Python. There’s a few different options available here, we can use the Debian version. <em>NB. In the video the one that I used was for the Suse install.</em></p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E"># the sed invocation inserts the lines at the start of the file</span></span>
-<span class="line"><span style="color: #8B949E"># after any initial comment lines</span></span>
-<span class="line"><span style="color: #C9D1D9">sed -Ei -e </span><span style="color: #A5D6FF">'/^([^#]|$)/ {a \</span></span>
-<span class="line"><span style="color: #A5D6FF">export PYENV_ROOT="$HOME/.pyenv"</span></span>
-<span class="line"><span style="color: #A5D6FF">a \</span></span>
-<span class="line"><span style="color: #A5D6FF">export PATH="$PYENV_ROOT/bin:$PATH"</span></span>
-<span class="line"><span style="color: #A5D6FF">a \</span></span>
-<span class="line"><span style="color: #A5D6FF">'</span><span style="color: #C9D1D9"> -e </span><span style="color: #A5D6FF">':a'</span><span style="color: #C9D1D9"> -e </span><span style="color: #A5D6FF">'$!{n;ba};}'</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">~</span><span style="color: #C9D1D9">/.profile</span></span>
-<span class="line"><span style="color: #79C0FF">echo</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">'eval "$(pyenv init --path)"'</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">>></span><span style="color: #C9D1D9">~/.profile</span></span>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#8B949E"># the sed invocation inserts the lines at the start of the file</span></span>
+<span class="line"><span style="color:#8B949E"># after any initial comment lines</span></span>
+<span class="line"><span style="color:#C9D1D9">sed -Ei -e </span><span style="color:#A5D6FF">&#39;/^([^#]|$)/ {a \</span></span>
+<span class="line"><span style="color:#A5D6FF">export PYENV_ROOT=&quot;$HOME/.pyenv&quot;</span></span>
+<span class="line"><span style="color:#A5D6FF">a \</span></span>
+<span class="line"><span style="color:#A5D6FF">export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;</span></span>
+<span class="line"><span style="color:#A5D6FF">a \</span></span>
+<span class="line"><span style="color:#A5D6FF">&#39;</span><span style="color:#C9D1D9"> -e </span><span style="color:#A5D6FF">&#39;:a&#39;</span><span style="color:#C9D1D9"> -e </span><span style="color:#A5D6FF">&#39;$!{n;ba};}&#39;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.profile</span></span>
+<span class="line"><span style="color:#79C0FF">echo</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;eval &quot;$(pyenv init --path)&quot;&#39;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">&gt;&gt;</span><span style="color:#C9D1D9">~/.profile</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #79C0FF">echo</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">'eval "$(pyenv init -)"'</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">>></span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">~</span><span style="color: #C9D1D9">/.bashrc</span></span></code></pre>
+<span class="line"><span style="color:#79C0FF">echo</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;eval &quot;$(pyenv init -)&quot;&#39;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">&gt;&gt;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.bashrc</span></span></code></pre>
 <p>You’ll need to logout and login again in order for the .profile file that was just created by this command to be sourced. You can also do:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #79C0FF">source</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">~</span><span style="color: #C9D1D9">/.profile</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#79C0FF">source</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.profile</span></span></code></pre>
 <p>At this point you should be able to call <code>pyenv versions</code> and see the cli return some helpful information about which versions of Python are installed. There should currently be a system version and nothing else listed. It should also be highlighted with a start to indicate it is the global version of Python.</p>
 <p>If you want to install a new version of python, call:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">pyenv install 3.10.0</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">pyenv install 3.10.0</span></span></code></pre>
 <p>If you check <code>pyenv versions</code> after install you should see both versions listed.</p>
 <h2 id="pipx">pipx</h2>
 <p>After spending much time with failed installations on Pi OS, I found the simplest way of getting Python virtualenv tooling installed is using <a href="https://pypi.org/project/pipx/">pipx</a>. You should make sure you’re still using the system version of Python before install and call:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">python3 -m pip install --user pipx</span></span>
-<span class="line"><span style="color: #C9D1D9">python3 -m pipx ensurepath</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">python3 -m pip install --user pipx</span></span>
+<span class="line"><span style="color:#C9D1D9">python3 -m pipx ensurepath</span></span></code></pre>
 <h2 id="pipenv">pipenv</h2>
 <p><a href="https://pypi.org/project/pipenv/">Pipenv</a> is a great tool for managing Python virtual environments and specifying dependencies. It wraps up many of the common management actions into one tool and automatically maintains dependencies in a Pipfile and Pipfile.lock as you install them.</p>
 <p>Now we have pipx installed, we can easily install pipenv by calling:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">pipx install pipenv</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">pipx install pipenv</span></span></code></pre>
 <h2 id="poetry">Poetry</h2>
 <p><a href="https://python-poetry.org/">Poetry</a> is another tool for managing Python virtual environments. It takes things a step further than Pipenv by simplifying both managing an environment and publishing to the <a href="pypi.org">Python Package Index</a>.</p>
 <p>Similar to pipenv, we can easily install Poetry using pipx by calling:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">pipx install poetry</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">pipx install poetry</span></span></code></pre>
 <h2 id="zsh">zsh</h2>
 <p>ZShell is my shell of choice. It’s the default option on mac and gives me access to the wonderful ohmyzsh plugins. We can easily set this up on the Pi using apt.</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">sudo apt install zsh -y</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sudo apt install zsh -y</span></span></code></pre>
 <p>At this point, you’ll need to logout and back in again for the changes to occur to the terminal app.</p>
 <h2 id="oh-my-zsh">Oh My Zsh</h2>
 <p><a href="https://github.com/ohmyzsh/ohmyzsh">Oh my zsh</a> installs a number of fancy themes for terminal and shortcuts for tools like git. It allows you to see branches when in git directories with status indicated by the cursor colour which is really useful and saves a lot of repeated commands.</p>
 <p>It can be installed with:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">sh -c </span><span style="color: #A5D6FF">"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sh -c </span><span style="color:#A5D6FF">&quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span></span></code></pre>
 <h2 id="visual-studio-code">Visual Studio Code</h2>
 <p>Although we already have a couple of ide’s installed already, they aren’t ones I generally use day to day. Although Pycharm is available for linux, it’s quite a cumbersome beast requiring a full JDK and will likely be pretty slow on our Pi, so I’d recommend against trying to install it. VSCode is a full featured text editor that can be configured for many languages through the use of plugins and is a familiar tool to me.</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">sudo apt install code -y</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sudo apt install code -y</span></span></code></pre>
 <p>You should then see it appear within the programming menu.</p>
-<p><img src="/images/setting-up-bullseye-python/vscode-menu.png" alt="/images/setting-up-bullseye-python/vscode-menu.png">.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/vscode-menu.174e311f_2pfdwV.avif 400w,/assets/vscode-menu.174e311f_ZF849k.avif 900w"><source type="image/webp" srcset="/assets/vscode-menu.174e311f_Z1VB6je.webp 400w,/assets/vscode-menu.174e311f_3cJNr.webp 900w"><source type="image/png" srcset="/assets/vscode-menu.174e311f_23NpdV.png 400w,/assets/vscode-menu.174e311f_Z1Nphiz.png 900w">
+			<img width="900" height="335" src="/assets/vscode-menu.174e311f_Z1oMubi.png" loading="lazy" decoding="async" alt="VSCode shown in menu" class="">
+		</picture>
 <p>Once you’ve got it up and running, be sure to install the Python plugin to get syntax highlighting and hinting. You can also install any of the other plugins that take your fancy.</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>If you followed the same steps as me, your Raspberry Pi should now be ready to get started doing some serious Python coding on Bullseye. You can save money on microsd cards by keeping all your projects separate on the same machine.</p>
