@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>How to Add a Ghost Signup Form to A Non-Ghost Site — Ian Wootten</title>
+<title>How to Add a Ghost Signup Form to Another Site — Ian Wootten</title>
 <meta name="robots" content="index,follow" />
 <meta name="description" content="After migrating my newsletter from Revue to Ghost, I needed to modify my static Astro blog here to allow people to subscribe. It involved a couple of steps, here's how you can do it too." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="How to Add a Ghost Signup Form to A Non-Ghost Site" />
+<meta property="og:title" content="How to Add a Ghost Signup Form to Another Site" />
 <meta property="og:description" content="After migrating my newsletter from Revue to Ghost, I needed to modify my static Astro blog here to allow people to subscribe. It involved a couple of steps, here's how you can do it too." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2023/01/25/how-to-add-a-ghost-signup-form-to-a-non-ghost-site/" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/01/25/how-to-add-a-ghost-signup-form-to-another-site/" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.9a9a4dbd.jpg" />
-<meta property="og:image:alt" content="How to Add a Ghost Signup Form to A Non-Ghost Site" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2023/01/25/how-to-add-a-ghost-signup-form-to-a-non-ghost-site/" />
+<meta property="og:image:alt" content="How to Add a Ghost Signup Form to Another Site" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/01/25/how-to-add-a-ghost-signup-form-to-another-site/" />
 
 
 <!-- Or Google Fonts -->
@@ -101,7 +101,7 @@
 				<time datetime="2023-01-25T09:56:39.000Z">Jan 25, 2023</time> ~ 2 min read
 			</p>
 			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				How to Add a Ghost Signup Form to A Non-Ghost Site
+				How to Add a Ghost Signup Form to Another Site
 			</h1>
 			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
 				<ul class="text-sm">
@@ -115,11 +115,12 @@
 			
 		</header>
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>After migrating my newsletter from Revue to Ghost, I needed to modify my Astro blog here to allow people to subscribe. You can embed the default portal form with some js which gives you the default floating button or create your own custom signup form which uses portal behind the scenes which is what I’ll show you here.</p>
+			<p>After migrating my newsletter from Revue to Ghost, I needed to modify my Astro blog here to allow people to subscribe. You can embed the default floating portal form easily with some js, but I wanted a custom signup form. Here’ I’ll show you how to do both.</p>
 <h2 id="get-an-integration-key">Get an Integration Key</h2>
 <p>First of all you’ll need to go ahead and add a new custom integration under settings to your Ghost site that will give you a “Content API Key”.</p>
 <p>Then, when you include the portal script for ghost you add data-key attribute that includes it like so:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">&#x3C;script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="{YOUR_CONTENT_API_KEY}">&#x3C;/script></span></span></code></pre>
+<p>This will add the default button and you should see it appearing on pages you include the script on.</p>
 <h2 id="create-a-custom-form">Create a Custom Form</h2>
 <p>You can then create a custom signup form using the <code>data-members-form</code> and <code>data-members-email</code> attributes like so:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&#x3C;</span><span style="color: #7EE787">form</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">data-members-form</span><span style="color: #C9D1D9">></span></span>
