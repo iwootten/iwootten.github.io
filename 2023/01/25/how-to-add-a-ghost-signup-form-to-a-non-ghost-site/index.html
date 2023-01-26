@@ -6,10 +6,10 @@
 
 <title>How to Add a Ghost Signup Form to A Non-Ghost Site — Ian Wootten</title>
 <meta name="robots" content="index,follow" />
-<meta name="description" content="After migrating my newsletter from Revue to Ghost, I needed to modify my Astro blog here to allow people to subscribe. Here's how I solved it." />
+<meta name="description" content="After migrating my newsletter from Revue to Ghost, I needed to modify my static Astro blog here to allow people to subscribe. It involved a couple of steps, here's how you can do it too." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:title" content="How to Add a Ghost Signup Form to A Non-Ghost Site" />
-<meta property="og:description" content="After migrating my newsletter from Revue to Ghost, I needed to modify my Astro blog here to allow people to subscribe. Here's how I solved it." />
+<meta property="og:description" content="After migrating my newsletter from Revue to Ghost, I needed to modify my static Astro blog here to allow people to subscribe. It involved a couple of steps, here's how you can do it too." />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2023/01/25/how-to-add-a-ghost-signup-form-to-a-non-ghost-site/" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.9a9a4dbd.jpg" />
@@ -115,13 +115,13 @@
 			
 		</header>
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>After migrating my newsletter from Revue to Ghost, I needed to modify my Astro blog here to allow people to subscribe. Ghost doesn’t have a form you can just copy and paste, but you can embed a JS “Portal” form which allows you to use the default ghost flow or create your own custom signup form.</p>
+			<p>After migrating my newsletter from Revue to Ghost, I needed to modify my Astro blog here to allow people to subscribe. You can embed the default portal form with some js which gives you the default floating button or create your own custom signup form which uses portal behind the scenes which is what I’ll show you here.</p>
 <h2 id="get-an-integration-key">Get an Integration Key</h2>
 <p>First of all you’ll need to go ahead and add a new custom integration under settings to your Ghost site that will give you a “Content API Key”.</p>
 <p>Then, when you include the portal script for ghost you add data-key attribute that includes it like so:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">&#x3C;script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="{YOUR_CONTENT_API_KEY}">&#x3C;/script></span></span></code></pre>
 <h2 id="create-a-custom-form">Create a Custom Form</h2>
-<p>You can create a custom signup form using the <code>data-members-form</code> and <code>data-members-email</code> attributes like so:</p>
+<p>You can then create a custom signup form using the <code>data-members-form</code> and <code>data-members-email</code> attributes like so:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&#x3C;</span><span style="color: #7EE787">form</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">data-members-form</span><span style="color: #C9D1D9">></span></span>
 <span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">input</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">data-members-email</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">type</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"email"</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">required</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"true"</span><span style="color: #C9D1D9">/></span></span>
 <span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">type</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"submit"</span><span style="color: #C9D1D9">>Continue&#x3C;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">></span></span>
@@ -131,7 +131,8 @@
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #79C0FF">#ghost-portal-root</span><span style="color: #C9D1D9"> {</span></span>
 <span class="line"><span style="color: #C9D1D9">	</span><span style="color: #79C0FF">display</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">none</span><span style="color: #C9D1D9">;</span></span>
 <span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
-<p>You’ll also need to add custom css to display a message once the email has been sent. In my case, this sits neatly in my astro subscribe component which is shown below. Subscribe below to test it out for yourself 😉</p>
+<p>You’ll also need to add custom css to display a message once the email has been sent. Portal will add some extra classes to your form once the email is sent which you can use for this.</p>
+<p>In my case, this sits neatly in my astro subscribe component which is shown below. Subscribe below to test it out for yourself 😉</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&#x3C;</span><span style="color: #7EE787">section</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"relative"</span><span style="color: #C9D1D9">></span></span>
 <span class="line"><span style="color: #C9D1D9">	&#x3C;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"max-w-6xl mx-auto px-4 sm:px-6"</span><span style="color: #C9D1D9">></span></span>
 <span class="line"><span style="color: #C9D1D9">		&#x3C;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"py-12 md:py-20"</span><span style="color: #C9D1D9">></span></span>
