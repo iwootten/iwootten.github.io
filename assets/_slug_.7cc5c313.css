@@ -1,0 +1,1 @@
+form:where(.astro-WD4BLOGM) .feedback:where(.astro-WD4BLOGM){display:none}form:where(.astro-WD4BLOGM).success input:where(.astro-WD4BLOGM),form:where(.astro-WD4BLOGM).success button:where(.astro-WD4BLOGM){display:none!important}form:where(.astro-WD4BLOGM).success .feedback:where(.astro-WD4BLOGM){display:unset}
