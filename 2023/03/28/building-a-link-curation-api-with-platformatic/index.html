@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Building a Link Curation API with Platformatic — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="Building a Link Curation API with Platformatic" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/03/28/building-a-link-curation-api-with-platformatic/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.e17bf204.jpg" />
+<meta property="og:image:alt" content="Building a Link Curation API with Platformatic" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/03/28/building-a-link-curation-api-with-platformatic/" />
+
+
+<!-- Or Google Fonts -->
+
+<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
+
+
+
+<script defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
+
+
+	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.7cc5c313.css" />
+<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
+</script>
+<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+	💻&nbsp;&nbsp;Ian Wootten</span>
+			</a>
+			<div class="flex items-center md:hidden">
+				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
+</button>
+			</div>
+		</div>
+		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
+					</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header><main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
+		<header>
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-03-28T09:56:39.000Z">Mar 28, 2023</time> ~ 8 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Building a Link Curation API with Platformatic
+			</h1>
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/js/">js</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/fastify/">fastify</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/platformatic/">platformatic</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/newletters/">newletters</a>
+				</li>
+		</ul>
+			</div>
+			
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>I run a <a href="https://newsletter.ianwootten.co.uk">monthly newsletter</a> of articles and code I’ve found interesting. Be sure to check it out if you haven’t already. The main tool I’ve used was revue, later ghost and both are powered by links I favourite either on twitter or github. This process isn’t flawless, but with the recent announcements of twitter shutting down literally everything good they’ve ever made, I’m keen to find a better solution. So when <a href="https://platformatic.dev">Platformatic</a> invited me to check out their platform, I decided it would be a great opportunity to create my own link curation API. Here I’ll walk you though the process of how you can do this too.</p>
+<p>First, to kick off everything Platformatic has a really helpful installer that will walk you through setting things up.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">npm create platformatic@latest</span></span></code></pre>
+<p>I’m going to create a Platformatic DB application and accept most of the defaults - but I”m not going to apply migrations yet and ask it to create a github workflow so I can later deploy to the platformatic cloud:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">- Which kind of project do you want to create?  =&gt; DB</span></span>
+<span class="line"><span style="color:#c9d1d9">- Where would you like to create your project?  =&gt; curator</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to create default migrations?     =&gt; yes</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to create a plugin?               =&gt; yes</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to use TypeScript?                =&gt; no</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to to run npm install?            =&gt; yes (this can take a while)</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to apply the migrations?          =&gt; no</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to generate types?                =&gt; yes</span></span>
+<span class="line"><span style="color:#c9d1d9">- Do you want to create the GitHub action to deploy this application to Platformatic Cloud? =&gt; yes</span></span></code></pre>
+<p>Once this is all done, you’ll see a whole new project has been scaffolded complete with README and .env files.</p>
+<h2 id="creating-the-api">Creating the API</h2>
+<p>I need to modify the default migration to represent my data. In the /migrations directory I edited the 001.do.sql file to create a table for link attributes.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">CREATE</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">TABLE</span><span style="color:#C9D1D9"> links (</span></span>
+<span class="line"><span style="color:#C9D1D9">  id </span><span style="color:#FF7B72">INTEGER</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">PRIMARY</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">KEY</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  link </span><span style="color:#FF7B72">VARCHAR</span><span style="color:#C9D1D9">(</span><span style="color:#79C0FF">1024</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">NOT</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NULL</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  title </span><span style="color:#FF7B72">VARCHAR</span><span style="color:#C9D1D9">(</span><span style="color:#79C0FF">255</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">NOT</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NULL</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  created_at </span><span style="color:#FF7B72">DATETIME</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">DEFAULT</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">CURRENT_TIMESTAMP</span></span>
+<span class="line"><span style="color:#C9D1D9">);</span></span></code></pre>
+<p>Similarly, the reverse migration 001.undo.sql also needs to be updated like so:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">DROP</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">TABLE</span><span style="color:#C9D1D9"> links;</span></span></code></pre>
+<p>To create the db apply the first migration by calling:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">npx platformatic db migrations apply</span></span></code></pre>
+<p>It’s also possible to have this run <a href="https://oss.platformatic.dev/docs/reference/db/migrations#automatically-on-server-start">automatically when your server starts</a> if you’d like. I’m going to leave that for now.</p>
+<p>NB: If you ever need to reverse a migration you can do so with:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">platformatic db migrations apply -r </span></span></code></pre>
+<p>You’ll see that our database file db.sqlite has been created for us. We can then go ahead and start our server with:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">npm run start</span></span></code></pre>
+<p>You should be able to open the url shown in your terminal and see a helpful “Welcome to Platformatic DB” message. What’s even more impressive is that we have a full API using our model we can play with already. All without writing any backend code!</p>
+<p>If you look at <a href="http://localhost:3042/documentation">http://localhost:3042/documentation</a>, you should also see a full set of swagger docs ready for you to explore and try it out.</p>
+<p>Lets go ahead and test our new API by adding a link:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">curl -X POST -H </span><span style="color:#A5D6FF">&quot;Content-Type: application/json&quot;</span><span style="color:#C9D1D9"> -d </span><span style="color:#A5D6FF">&quot;{ </span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">title</span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">: </span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">Microsoft announces new Bing and Edge browser powered by upgraded ChatGPT AI</span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">, </span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">link</span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">: </span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF">https://www.theverge.com/2023/2/7/23587454/microsoft-bing-edge-chatgpt-ai</span><span style="color:#79C0FF">\&quot;</span><span style="color:#A5D6FF"> }&quot;</span><span style="color:#C9D1D9"> http://localhost:3042/links</span></span></code></pre>
+<p>You should get something like the following as a response:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">{</span><span style="color:#A5D6FF">&quot;id&quot;</span><span style="color:#C9D1D9">:1,</span><span style="color:#A5D6FF">&quot;link&quot;</span><span style="color:#C9D1D9">:</span><span style="color:#A5D6FF">&quot;https://www.theverge.com/2023/2/7/23587454/microsoft-bing-edge-chatgpt-ai&quot;</span><span style="color:#C9D1D9">,</span><span style="color:#A5D6FF">&quot;title&quot;</span><span style="color:#C9D1D9">:</span><span style="color:#A5D6FF">&quot;Microsoft announces new Bing and Edge browser powered by upgraded ChatGPT AI&quot;</span><span style="color:#C9D1D9">, </span><span style="color:#A5D6FF">&quot;createdAt&quot;</span><span style="color:#C9D1D9">:</span><span style="color:#A5D6FF">&quot;1675860230686&quot;</span><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>You can find all links that have been saved by making a GET request:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">curl http://localhost:3042/links</span></span></code></pre>
+<h2 id="adding-migrations">Adding Migrations</h2>
+<p>It also would be good to organise each link I save with a number of tags. To do so I need to add another migration. Lets add a 002.do.sql file to our migrations directory to make these changes. Since this is a many to many relationship this is going to include two tables, one for the tags and another for the tags each link has.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">CREATE</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">TABLE</span><span style="color:#C9D1D9"> tags (</span></span>
+<span class="line"><span style="color:#C9D1D9">  id </span><span style="color:#FF7B72">INTEGER</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">PRIMARY</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">KEY</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">name</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">VARCHAR</span><span style="color:#C9D1D9">(</span><span style="color:#79C0FF">255</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">NOT</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NULL</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">UNIQUE</span></span>
+<span class="line"><span style="color:#C9D1D9">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">CREATE</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">TABLE</span><span style="color:#C9D1D9"> link_tags (</span></span>
+<span class="line"><span style="color:#C9D1D9">  tag_id </span><span style="color:#FF7B72">INTEGER</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NOT</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NULL</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  link_id </span><span style="color:#FF7B72">INTEGER</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NOT</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">NULL</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">CONSTRAINT</span><span style="color:#C9D1D9"> fk_tag_id </span><span style="color:#FF7B72">FOREIGN KEY</span><span style="color:#C9D1D9"> (tag_id)  </span><span style="color:#FF7B72">REFERENCES</span><span style="color:#C9D1D9"> tags(id),</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">CONSTRAINT</span><span style="color:#C9D1D9"> fk_link_id </span><span style="color:#FF7B72">FOREIGN KEY</span><span style="color:#C9D1D9"> (link_id)  </span><span style="color:#FF7B72">REFERENCES</span><span style="color:#C9D1D9"> links(id),</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">PRIMARY</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">KEY</span><span style="color:#C9D1D9"> (tag_id, link_id)</span></span>
+<span class="line"><span style="color:#C9D1D9">);</span></span></code></pre>
+<p>Again we also add corresponding reverse migration as 002.undo.sql.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">DROP</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">TABLE</span><span style="color:#C9D1D9"> tags;</span></span>
+<span class="line"><span style="color:#FF7B72">DROP</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">TABLE</span><span style="color:#C9D1D9"> link_tags;</span></span></code></pre>
+<p>Then to apply the new migration we call apply again:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">npx platformatic db migrations apply</span></span></code></pre>
+<p>If we visit our <a href="http://localhost:3042/documentation">documentation</a> again, we can see that we now have REST urls for our new tags and link tags model. Lets add a tag for the link I just saved:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">curl -X POST -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;name\&quot;: \&quot;ai\&quot; }&quot; http://localhost:3042/tags</span></span>
+<span class="line"><span style="color:#c9d1d9">...</span></span>
+<span class="line"><span style="color:#c9d1d9">{&quot;id&quot;:1,&quot;name&quot;:&quot;ai&quot;}</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">curl -X POST -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;linkId\&quot;: 1, \&quot;tagId\&quot;: 1 }&quot; http://localhost:3042/linkTags</span></span>
+<span class="line"><span style="color:#c9d1d9">...</span></span>
+<span class="line"><span style="color:#c9d1d9">{&quot;id&quot;:1, &quot;linkId&quot;:1, &quot;tagId&quot;: 1}</span></span></code></pre>
+<h2 id="querying-with-graphql">Querying with GraphQL</h2>
+<p>Platformatic has also given us a full graphql API, which you’ll find an interface for at <a href="http://127.0.0.1:3042/graphiql">http://127.0.0.1:3042/graphiql</a>.</p>
+<p>So if I wanted to pull back the links having a particular tag, I could use a query like so:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">query</span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FFA657">linkTags</span><span style="color:#C9D1D9"> (</span><span style="color:#FFA657">where</span><span style="color:#C9D1D9">: {</span><span style="color:#A5D6FF">tagId</span><span style="color:#C9D1D9">: {</span><span style="color:#A5D6FF">eq</span><span style="color:#C9D1D9">: </span><span style="color:#79C0FF">1</span><span style="color:#C9D1D9">}}) {</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FFA657">link</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FFA657">title</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FFA657">link</span></span>
+<span class="line"><span style="color:#C9D1D9">    }</span></span>
+<span class="line"><span style="color:#C9D1D9">  }</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>We can see I’m going to want to lookup the ids of tags prior to saving them, so a useful query would give me every tag in a list of arguments. Let’s try a query for that:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">query</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FFA657">tags</span><span style="color:#C9D1D9"> (</span><span style="color:#FFA657">where</span><span style="color:#C9D1D9">: {</span><span style="color:#A5D6FF">name</span><span style="color:#C9D1D9">: {</span><span style="color:#A5D6FF">in</span><span style="color:#C9D1D9">: [</span><span style="color:#8B949E">&quot;ai&quot;</span><span style="color:#C9D1D9">, </span><span style="color:#A5D6FF">&quot;microsoft&quot;</span><span style="color:#C9D1D9">]}}){</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FFA657">id</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FFA657">name</span></span>
+<span class="line"><span style="color:#C9D1D9">  }</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<h2 id="extending-the-rest-api">Extending the REST API</h2>
+<p>I want to extend our current API with some custom behaviour. Within this route, I’d like to save the link, along with it’s tags and create appropriate relationships for them. Fortunately, Platformatic makes adding custom behaviour like this easy for us.</p>
+<p>Within plugin.js, lets define a route <code>/save-with-tags</code> that will lookup tags we already have saved and create any new ones in a single request:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#79C0FF">module</span><span style="color:#C9D1D9">.</span><span style="color:#79C0FF">exports</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">app</span><span style="color:#C9D1D9">, </span><span style="color:#FFA657">opts</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">    app.</span><span style="color:#D2A8FF">post</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;/save-with-tags&#39;</span><span style="color:#C9D1D9">, </span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">req</span><span style="color:#C9D1D9">, </span><span style="color:#FFA657">reply</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> { </span><span style="color:#79C0FF">tags</span><span style="color:#C9D1D9">, </span><span style="color:#79C0FF">url</span><span style="color:#C9D1D9">, </span><span style="color:#79C0FF">title</span><span style="color:#C9D1D9"> } </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> req.body</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">res</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> app.platformatic.entities.tag.</span><span style="color:#D2A8FF">find</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">        where: {</span></span>
+<span class="line"><span style="color:#C9D1D9">          name: {</span></span>
+<span class="line"><span style="color:#C9D1D9">            in: tags</span></span>
+<span class="line"><span style="color:#C9D1D9">          }</span></span>
+<span class="line"><span style="color:#C9D1D9">        }</span></span>
+<span class="line"><span style="color:#C9D1D9">      });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (res) {</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> res</span></span>
+<span class="line"><span style="color:#C9D1D9">      }</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">null</span></span>
+<span class="line"><span style="color:#C9D1D9">    })</span></span>
+<span class="line"><span style="color:#C9D1D9">};</span></span></code></pre>
+<p>This uses the entity API to find all the tags we’ve already saved in the database when they are supplied as part of a POST request. I want to create new tags as well, so let’s update the route to add them before we return:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">...</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">existing</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> res.</span><span style="color:#D2A8FF">map</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">value</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> value.name});</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">toAdd</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> tags.</span><span style="color:#D2A8FF">filter</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">value</span><span style="color:#FF7B72">=&gt;!</span><span style="color:#C9D1D9">existing.</span><span style="color:#D2A8FF">includes</span><span style="color:#C9D1D9">(value));</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">let</span><span style="color:#C9D1D9"> finalTags </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> res;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (toAdd.</span><span style="color:#79C0FF">length</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">&gt;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">0</span><span style="color:#C9D1D9">) {</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">inserted</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> app.platformatic.entities.tag.</span><span style="color:#D2A8FF">insert</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">            fields: [</span><span style="color:#A5D6FF">&quot;id&quot;</span><span style="color:#C9D1D9">],</span></span>
+<span class="line"><span style="color:#C9D1D9">            inputs: toAdd.</span><span style="color:#D2A8FF">map</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">value</span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> {name: value}})</span></span>
+<span class="line"><span style="color:#C9D1D9">        });</span></span>
+<span class="line"><span style="color:#C9D1D9">        finalTags </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> finalTags.</span><span style="color:#D2A8FF">concat</span><span style="color:#C9D1D9">(inserted);</span></span>
+<span class="line"><span style="color:#C9D1D9">      }</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">...</span></span></code></pre>
+<p>Now all tags have been added, I want to create the link itself. Lets again use the entity API for this:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">...</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">savedLink</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> app.platformatic.entities.link.</span><span style="color:#D2A8FF">save</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">        input: {</span></span>
+<span class="line"><span style="color:#C9D1D9">            title: title,</span></span>
+<span class="line"><span style="color:#C9D1D9">            link: url,</span></span>
+<span class="line"><span style="color:#C9D1D9">        }</span></span>
+<span class="line"><span style="color:#C9D1D9">      });</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">...</span></span></code></pre>
+<p>Finally, I can create all the link tag relationships for every one of the tags. I’ll update the return with the link we created:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> app.platformatic.entities.linkTag.</span><span style="color:#D2A8FF">insert</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">        inputs: finalTags.</span><span style="color:#D2A8FF">map</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">value</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">            </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> {tagId: value.id, linkId: savedLink.id} </span></span>
+<span class="line"><span style="color:#C9D1D9">        })</span></span>
+<span class="line"><span style="color:#C9D1D9">      });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (savedLink) {</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> savedLink</span></span>
+<span class="line"><span style="color:#C9D1D9">      }</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">null</span></span></code></pre>
+<h2 id="creating-a-bookmarklet">Creating a Bookmarklet</h2>
+<p>It’s going to be a pain for me manually submitting URL’s of interest over an API every time I want to save a webpage. Lets create a bookmarklet to do it instead. A bookmarklet is basically some javascript that runs as if it were a <a href="https://www.freecodecamp.org/news/what-are-bookmarklets/">bookmark in a browser</a>.</p>
+<p>In our case this will just POST to my extended API and show the title when it responds. If you’re following along, the bookmarklet itself will need all the space and newlines removed when saved. Tags are delimited by commas.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FFA657">javascript</span><span style="color:#C9D1D9">: (</span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9"> () </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">tags</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">prompt</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;tags&#39;</span><span style="color:#C9D1D9">).</span><span style="color:#D2A8FF">split</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&quot;,&quot;</span><span style="color:#C9D1D9">).</span><span style="color:#D2A8FF">map</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">name</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> name.</span><span style="color:#D2A8FF">toLowerCase</span><span style="color:#C9D1D9">().</span><span style="color:#D2A8FF">trim</span><span style="color:#C9D1D9">());</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">rawResponse</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">fetch</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;http://localhost:3042/save-with-tags&#39;</span><span style="color:#C9D1D9">, {</span></span>
+<span class="line"><span style="color:#C9D1D9">    method: </span><span style="color:#A5D6FF">&#39;POST&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">    headers: {</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#A5D6FF">&#39;Accept&#39;</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">&#39;application/json&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#A5D6FF">&#39;Content-Type&#39;</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">&#39;application/json&#39;</span></span>
+<span class="line"><span style="color:#C9D1D9">    },</span></span>
+<span class="line"><span style="color:#C9D1D9">    body: </span><span style="color:#79C0FF">JSON</span><span style="color:#C9D1D9">.</span><span style="color:#D2A8FF">stringify</span><span style="color:#C9D1D9">({title: document.title, url: document.</span><span style="color:#79C0FF">URL</span><span style="color:#C9D1D9">, tags: tags})</span></span>
+<span class="line"><span style="color:#C9D1D9">  });</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">content</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> rawResponse.</span><span style="color:#D2A8FF">json</span><span style="color:#C9D1D9">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#D2A8FF">alert</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&quot;Saved &#39;&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">+</span><span style="color:#C9D1D9"> content.title </span><span style="color:#FF7B72">+</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;&#39;&quot;</span><span style="color:#C9D1D9">);</span></span>
+<span class="line"><span style="color:#C9D1D9">})();</span></span></code></pre>
+<p>This requires disabling CORS (Cross Origin Resource Sharing) on our local server, which prevents unauthorised requests from a browser with a different origin. This is a bad idea for production (you should instead build a full frontend application) but fine for my little prototype here. To do that set the “origin” value of cors in platformatic.db.json to * (wildcard).</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">  &quot;server&quot;: {</span></span>
+<span class="line"><span style="color:#c9d1d9">      ...</span></span>
+<span class="line"><span style="color:#c9d1d9">    &quot;cors&quot;: {</span></span>
+<span class="line"><span style="color:#c9d1d9">      &quot;origin&quot;: &quot;*&quot;</span></span>
+<span class="line"><span style="color:#c9d1d9">    },</span></span>
+<span class="line"><span style="color:#c9d1d9">  }</span></span></code></pre>
+<h2 id="deploying-to-platformatic-cloud">Deploying to Platformatic Cloud</h2>
+<p>Earlier during setup we created the github workflow we needed to deploy to the <a href="https://platformatic.cloud">platformatic.cloud</a> which you can sign up to for free. If you head to github and create a repo, you can then initialise it with what you have created already and push it to a branch on github.</p>
+<p>Follow the <a href="https://docs.platformatic.cloud/">official docs</a> for setting things up. Once that’s done, when you open pull requests for your repo on github the changes will be instantly deployed on a subdomain of platformatic.cloud. You’ll also be presented with a useful dashboard for tracking things like the response time and requests for your app.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/platformatic-cloud.c251c4a6_Z1UqEkp.avif 400w,/assets/platformatic-cloud.c251c4a6_Z1QPU7c.avif 900w"><source type="image/webp" srcset="/assets/platformatic-cloud.c251c4a6_Z1c5PmD.webp 400w,/assets/platformatic-cloud.c251c4a6_Z18v69q.webp 900w"><source type="image/png" srcset="/assets/platformatic-cloud.c251c4a6_1Kgbon.png 400w,/assets/platformatic-cloud.c251c4a6_Z2G42K.png 900w">
+			<img width="900" height="548" src="/assets/platformatic-cloud.c251c4a6_Z26AzWh.png" loading="lazy" decoding="async" alt="Platformatics dashboard" class="">
+		</picture>
+<h2 id="conclusion">Conclusion</h2>
+<p>Platformatic is a really interesting approach to putting together an API for your application. I love that I can get a full API without writing a lot of the necessary cookie cutter code that isn’t specific to a use case. It’s very quick to add just the code I need and it’s going to be very simple to build upon should I ever want to take this further and build this into a full application. Right now, you even get a continuous integration environment configured out of the box.</p>
+<p>All the code I’ve shown here for the API is available in <a href="https://github.com/iwootten/curator">this repo</a> on github, so check it out if you’re interested.</p>
+		</div>
+	</article>
+	<section class="relative astro-WD4BLOGM">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-WD4BLOGM">
+		<div class="py-12 md:py-20 astro-WD4BLOGM">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-WD4BLOGM">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-WD4BLOGM">
+					Subscribe for more
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-WD4BLOGM">
+					My monthly newsletter is stuffed with helpful articles, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-WD4BLOGM">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-WD4BLOGM" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-WD4BLOGM" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-WD4BLOGM" type="submit">Subscribe</button>
+						<strong class="feedback astro-WD4BLOGM">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+	</main><footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				&copy; 2003-2023 Ian Wootten
+			</div>
+		</div>
+	</div>
+</footer>
+		<script>
+	// Set "light" theme as default
+	// if (!localStorage.theme) {
+	//   localStorage.theme = "light";
+	// }
+
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches && matches.length) {
+			matches.forEach((elem) => {
+				elem.addEventListener(event, () => fn(elem), false);
+			});
+		}
+	}
+
+	window.onload = function () {
+		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+			elem.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+
+		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+			document.documentElement.classList.toggle('dark');
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		});
+	};
+	window.onpageshow = function () {
+		const elem = document.querySelector('[data-aw-toggle-menu]');
+		if (elem) {
+			elem.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+
+		
+	</body>
+</html>
