@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog — Page 29 — Ian Wootten</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
+<title>How to Create a Python Virtual Environment By Hand — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Learn how much your favourite venv manager automates away when it creates virtual environments by creating your own by hand." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Blog — Page 29 — Ian Wootten" />
-<meta property="og:description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/page-29/" />
-<meta property="og:type" content="blog" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/default.d89fbbc5_1WbbAJ.jpg" />
-<meta property="og:image:alt" content="Blog — Page 29 — Ian Wootten" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/page-29/" />
+<meta property="og:title" content="How to Create a Python Virtual Environment By Hand" />
+<meta property="og:description" content="Learn how much your favourite venv manager automates away when it creates virtual environments by creating your own by hand." />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/04/06/how-to-create-a-python-virtual-environment-by-hand/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.db6137fc.jpg" />
+<meta property="og:image:alt" content="How to Create a Python Virtual Environment By Hand" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/04/06/how-to-create-a-python-virtual-environment-by-hand/" />
 
 
 <!-- Or Google Fonts -->
@@ -31,6 +31,7 @@
 
 
 	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.7cc5c313.css" />
 <link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
 </script>
 <script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
@@ -100,308 +101,100 @@
 		</nav>
 	</div>
 </header><main>
-		<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
-</script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
 		<header>
-			<h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
-				
-		Blog
-	
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-04-06T09:56:39.000Z">Apr 6, 2023</time> ~ 4 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				How to Create a Python Virtual Environment By Hand
 			</h1>
-		</header>
-		<ul>
-	<li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/06/03/blackalicious-make-you-feel-that-way/">
-					Blackalicious - Make You Feel That Way
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/pip/">pip</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/venv/">venv</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/python/">python</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/virtual-environments/">virtual environments</a>
+				</li>
+		</ul>
+			</div>
 			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-06-03T00:00:00.000Z">Jun 3, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/06/03/happy-places/">
-					Happy Places
-				</a>
-			</h2>
 		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-06-03T00:00:00.000Z">Jun 3, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/06/03/how-rank/">
-					How Rank
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-06-03T00:00:00.000Z">Jun 3, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/06/02/highs-and-lows-peaks-and-troughs/">
-					Highs and Lows, Peaks and Troughs
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-06-02T00:00:00.000Z">Jun 2, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/05/30/same-old-same-old/">
-					Same Old, Same Old
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-05-30T00:00:00.000Z">May 30, 2005</time> ~
-					5 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/05/13/put-on-a-brave-face/">
-					Put on a brave face
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-05-13T00:00:00.000Z">May 13, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/05/11/academia/">
-					Academia
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-05-11T00:00:00.000Z">May 11, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/05/07/matthias-week/">
-					Matthias Week
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-05-07T00:00:00.000Z">May 7, 2005</time> ~
-					3 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/04/30/what-a-palava/">
-					What a palava
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-04-30T00:00:00.000Z">Apr 30, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/04/27/hitch-hikers-guide-to-the-skittle-alley/">
-					Hitch Hikers Guide to the Skittle Alley
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-04-27T00:00:00.000Z">Apr 27, 2005</time> ~
-					3 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li>
-</ul><div class="container flex">
-			<div class="flex flex-row mx-auto container justify-between">
-				<a href="/page/28" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none mr-2
-      ">
-					<div class="flex flex-row align-middle">
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-left"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M5 12l6 6M5 12l6-6"/></g></svg>
-						<p class="ml-2">Newer posts</p>
-					</div>
-				</a>
-				<a href="/page/30" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none ">
-					<div class="flex flex-row align-middle">
-						<span class="mr-2">Older posts</span>
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-right"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M13 18l6-6M13 6l6 6"/></g></svg>
-					</div>
-				</a>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>A virtual environment is a simple thing. No, really - since <a href="https://peps.python.org/pep-0405/">PEP405</a> made them much simpler, it’s possible to create a lightweight environment by hand without any python tooling involved.</p>
+<p>All that’s needed is a symlink to a python binary, a pyvenv.cfg file and a site-packages directory. Everything else is icing on the cake.</p>
+<p>I thought this would be a fun exercise for those who are interested and it serves as a great way of understanding what’s going on under the hood of your favourite Python virtual environment manager.</p>
+<h2 id="creating-our-environment">Creating Our Environment</h2>
+<p>First we need to know where our current version of Python exists. For most, it’s likely <code>which python</code> will be enough to return this. I’m using pyenv which will mean a shim is returned. Pyenv stores binaries under ~/.pyenv/versions so I can find a version there (there’s also <code>pyenv which python</code> but this would break my Python tooling rule).</p>
+<p>Having done this I know my default Python version is at <code>/Users/ian/.pyenv/versions/3.11.2/bin/python</code>.</p>
+<p>Next, let’s create some directories.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">mkdir -p venv/bin</span></span>
+<span class="line"><span style="color: #C9D1D9">mkdir -p venv/lib/python3.11/site-packages </span></span></code></pre>
+<p>In the bin directory, we need to symlink to our system python like so:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ln -s /Users/ian/.pyenv/versions/3.11.2/bin/python venv/bin/python</span></span></code></pre>
+<p>We also need a pyvenv.cfg file, which we’ll put in ./venv. It’s contents should look something like below, updated with your own Python version.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">home = /Users/ian/.pyenv/versions/3.11.2/bin</span></span>
+<span class="line"><span style="color: #c9d1d9">include-system-site-packages = false</span></span>
+<span class="line"><span style="color: #c9d1d9">version = 3.11.2</span></span></code></pre>
+<p>Strictly the only necessary key here is <code>home</code>, which indicates where we’re going to load our Pythons standard library from. By default Python assumes you want to use the global system site packages too, unless you specify otherwise as I have done here.</p>
+<p>The folder structure we’ve created mimics a standard Python installation. When Python 3.3+ encounters the pyvenv.cfg file in a directory above either a python binary or a symlink to one it knows what it’s working with is a virtual environment. It then knows that the site-packages folder created should be where installed packages go.</p>
+<h2 id="how-do-i-install-packages">How Do I Install Packages?</h2>
+<p>Congrats, we’ve created a virtual environment as defined by the spec. But, we probably also want something to enable us to install packages. We can do that by taking a copy of our system <code>pip</code> and putting it directly into ./venv/bin. We’ll also need to copy it’s package folder to our environments site-packages for it to work.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">cp /Users/ian/.pyenv/versions/3.11.2/bin/pip3.11 ./venv/bin/pip</span></span>
+<span class="line"><span style="color: #C9D1D9">cp -R /Users/ian/.pyenv/versions/3.11.2/lib/python3.11/site-packages/pip ./venv/lib/python3.11/site-packages</span></span></code></pre>
+<p>The first line of our pip file in ./venv/bin also needs to be updated to point to our symlinked Python. So in my case:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">#!/Users/ian/dev/tutorials/venv/bin/python</span></span>
+<span class="line"><span style="color: #8B949E"># -*- coding: utf-8 -*-</span></span>
+<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> re</span></span>
+<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> sys</span></span>
+<span class="line"><span style="color: #79C0FF">...</span></span></code></pre>
+<p>We also need to tell our shell to default to using our env versions of Python and pip. We can do that by making sure our bin directory is the first thing on our PATH environment variable.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">PATH=/Users/ian/dev/tutorials/venv/bin:$PATH</span></span></code></pre>
+<p>Having done that my python executable and site-packages should now point to my virtualenv. Let’s check to be sure.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">python -c </span><span style="color: #A5D6FF">'import sys; print(sys.executable)'</span></span>
+<span class="line"><span style="color: #C9D1D9">...</span></span>
+<span class="line"><span style="color: #C9D1D9">/Users/ian/dev/tutorials/venv/bin/python</span></span></code></pre>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">python -c </span><span style="color: #A5D6FF">'import site; print(site.getsitepackages())'</span></span>
+<span class="line"><span style="color: #C9D1D9">...</span></span>
+<span class="line"><span style="color: #C9D1D9">[</span><span style="color: #A5D6FF">'/Users/ian/dev/tutorials/venv/lib/python3.11/site-packages'</span><span style="color: #C9D1D9">]</span></span></code></pre>
+<p>So having executed all of the above when calling pip we’ll now install into our local site packages directory. Let’s try that out.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">pip install requests</span></span></code></pre>
+<p>If you’ve followed all the above commands correctly, you should find that requests ends up in our virtual environments site-packages folder instead of your global python.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This definitely isn’t a replacement for any existing environment creation tools. We don’t have any shell scripts for instance that will modify paths and update with the environment name when we move between each environment. We also didn’t copy any build or setuptools so we won’t be able to publish our own packages to the Python Package Index (PyPI). The fact is that all of the above can be achieved with a simple call to the <a href="https://docs.python.org/3/library/venv.html">venv module</a>.</p>
+<p>I always thought there was a lot of complexity to how virtual environments worked and maybe that was true when you needed to use external packages to create them but it’s not any more. Hopefully this article demystified how they work a little for you too.</p>
+<p><em>NB. I’m in the process of writing an ebook on virtual environments, subscribe to my newsletter if you’re interested in hearing about it when it launches</em></p>
+		</div>
+	</article>
+	<section class="relative astro-WD4BLOGM">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-WD4BLOGM">
+		<div class="py-12 md:py-20 astro-WD4BLOGM">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-WD4BLOGM">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-WD4BLOGM">
+					Subscribe for more
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-WD4BLOGM">
+					My monthly newsletter is stuffed with helpful articles, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-WD4BLOGM">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-WD4BLOGM" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-WD4BLOGM" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-WD4BLOGM" type="submit">Subscribe</button>
+						<strong class="feedback astro-WD4BLOGM">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+</section>
 	</main><footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
