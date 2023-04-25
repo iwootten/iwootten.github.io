@@ -105,7 +105,7 @@
 	<article>
 		<header>
 			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2023-04-25T09:56:39.000Z">Apr 25, 2023</time> ~ 14 min read
+				<time datetime="2023-04-25T09:56:39.000Z">Apr 25, 2023</time> ~ 13 min read
 			</p>
 			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
 				Self Hosting Generative Open Graph Art on the Edge with Supabase
@@ -262,9 +262,9 @@
 <p>I decided I’d like to be able to change the seed value on demand (rather than being bound to the title), so made that a parameter. This gives me the option of changing the whole image just by supplying a new value.</p>
 <p>It’s also recommended by Supabase that you update your docker image to the latest version of the Supabase runtime. You can find a list of <a href="https://github.com/supabase/edge-runtime/releases">releases here</a>.</p>
 <p>You’ll need both the CLIs for Supabase and <a href="https://fly.io/docs/flyctl/">fly.io</a> installed to run supabases and my code. With Supabase running, you can test functions locally prior to deployment using <code>supabase functions serve</code>.</p>
-<p>Once I’d confirmed everything was working ok, I was ready to deploy. I ran <code>fly launch</code> which asks you a few questions about how you’d like it deployed on fly.io and will build the Dockerfile and deploy it to your choice of region. This allows you to quickly choose regions closest to your users.</p>
+<p>Once I’d confirmed everything was working ok, I was ready to deploy. I ran <code>fly launch</code> which asks you a few questions about how you’d like it deployed on fly.io and will build the Dockerfile and deploy it to a region of your choice closest to your users.</p>
 <p>Once deployed, requests to my new service and it’s respective images now looked like:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">https://{your-app-name}.fly.dev/og?title=Self%20Hosting%20Generative%20Open%20Graph%20Art%20on%20the%20Edge&amp;subtitle=ianwootten.co.uk&amp;seed=111</span></span></code></pre>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">https://{your-app-name}.fly.dev/og?title=Self%20Hosting%20Generative%20Open%20Graph%20Art%20on%20the%20Edge%20with%20Supabase&amp;subtitle=ianwootten.co.uk&amp;seed=111</span></span></code></pre>
 <picture>
 			<source type="image/avif" srcset="/assets/opengraph.96473a7e_Z1cjoiV.avif 400w,/assets/opengraph.96473a7e_u67Sj.avif 900w"><source type="image/webp" srcset="/assets/opengraph.96473a7e_ZsXzla.webp 400w,/assets/opengraph.96473a7e_1dqVQ5.webp 900w"><source type="image/png" srcset="/assets/opengraph.96473a7e_2gHaMV.png 400w,/assets/opengraph.96473a7e_1v0HR5.png 900w">
 			<img width="900" height="506" src="/assets/opengraph.96473a7e_Z1phNQt.png" loading="lazy" decoding="async" alt="Final Open Graph Image for this post" class="">
