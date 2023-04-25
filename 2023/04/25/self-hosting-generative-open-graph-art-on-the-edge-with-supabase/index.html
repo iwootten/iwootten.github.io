@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Self Hosting Generative Open Graph Art on the Edge with Supabase — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="I show you how you can make unique, randomised open graph images using generative art and then self-host them using Supabase and Fly.io" />
+<meta property="og:title" content="Self Hosting Generative Open Graph Art on the Edge with Supabase" />
+<meta property="og:description" content="I show you how you can make unique, randomised open graph images using generative art and then self-host them using Supabase and Fly.io" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/04/25/self-hosting-generative-open-graph-art-on-the-edge-with-supabase/" />
+<meta property="og:type" content="article" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/04/25/self-hosting-generative-open-graph-art-on-the-edge-with-supabase/" />
+
+
+<!-- Or Google Fonts -->
+
+<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
+
+
+
+<script defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
+
+
+	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.7cc5c313.css" />
+<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
+</script>
+<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+	💻&nbsp;&nbsp;Ian Wootten</span>
+			</a>
+			<div class="flex items-center md:hidden">
+				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
+</button>
+			</div>
+		</div>
+		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
+					</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header><main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
+		<header>
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-04-25T09:56:39.000Z">Apr 25, 2023</time> ~ 14 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Self Hosting Generative Open Graph Art on the Edge with Supabase
+			</h1>
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/js/">js</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/typescript/">typescript</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/art/">art</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/open-graph/">open graph</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/flow-fields/">flow fields</a>
+				</li>
+		</ul>
+			</div>
+			
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>Having great Open Graph images with which to share your articles on social media allows them to stand out from the crowd and hopefully get more eyeballs reading them. For the last couple of years I’ve been using a fairly simple SVG background, but I’ve wanted something that could take them a step further. Back in October 2022, I saw this great write up of how Matthew Ström is <a href="https://matthewstrom.com/writing/generative-art-og-images/#in-the-end">using flow fields to produce art</a> for his own site and it’s stuck in my mind since. It uses the concept of flow fields to draw beautiful, randomised art for every article on his site. In this post I’ll show you how I’ve used this to generate my own version you can see below which I self-hosted with <a href="https://supabase.com/docs/guides/functions">Supabase Edge Functions</a> on <a href="https://fly.io">fly.io</a>. Feel free to jump around using the links below.</p>
+<ul>
+<li><a href="#flow-fields">Flow Fields</a></li>
+<li><a href="#converting-to-svg">Converting to SVG</a></li>
+<li><a href="#generating-opengraph-images">Generating OpenGraph Images</a></li>
+<li><a href="#self-hosting-as-a-supabase-edge-function">Self Hosting as a Supabase Edge Function</a></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+</ul>
+<p><em>This post was written as part of Supabase’s launch week - go check it out for all the other exciting work people have done.</em></p>
+<picture>
+			<source type="image/avif" srcset="/assets/og-example-3.04c7066b_LtI3T.avif 400w,/assets/og-example-3.04c7066b_2sTfg9.avif 900w"><source type="image/webp" srcset="/assets/og-example-3.04c7066b_1uOx1F.webp 400w,/assets/og-example-3.04c7066b_Z1RW4A1.webp 900w"><source type="image/png" srcset="/assets/og-example-3.04c7066b_ZLvxHT.png 400w,/assets/og-example-3.04c7066b_Z1xd0DK.png 900w">
+			<img width="900" height="506" src="/assets/og-example-3.04c7066b_ZzoheK.png" loading="lazy" decoding="async" alt="Open Graph Flow field Example" class="">
+		</picture>
+<div style="display:flex;"><img alt="Open Graph Flow field Example" style="padding-right:2px;" width="450" height="253" src="/assets/og-example.3b933164_Z1P3j0F.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
+
+<img alt="Open Graph Flow field Example" style="padding-left:5px;" width="450" height="253" src="/assets/og-example-56.6954f0c7_Z1fke04.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
+
+</div>
+<h2 id="flow-fields">Flow Fields</h2>
+<p>A Flow field is a concept used in subjects such as fluid dynamics and crowd simulation which typically guides the movement of something through a space. It can be represented as a grid or array where each element contains a vector representing direction and magnitude (or flow). Crucially for this work, it can be used to determine how to draw a number of pretty paths based on a random number.</p>
+<div style="background:white;"><img alt="Flow Field Example" background="white" width="900" height="503" src="/assets/flowfield2.0274234d_xXzOF.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
+
+</div>
+<p>Matthew has shared his work on Open Graph images in the <a href="https://github.com/ilikescience/mhs-og">following repo</a>, it uses a canvas on which different size “flow lines” are drawn with JavaScript. He spent a heap of time researching the maths behind figuring out how to place these paths correctly so they are aesthetically pleasing - so I’d point you to that if you’re interested in digging deeper. It’s originally based on the work of <a href="https://tylerxhobbs.com/essays/2020/flow-fields">Tyler Hobbs</a> which who written a bunch of interesting articles on how to produce generative art. Be sure to check them out if you’re interested in how you can get started creating your own or any of the maths involved behind what I talk about here.</p>
+<p>Once the flow lines are rendered, they’re added to a template which includes a title and subheading used as the basis for the open graph image for an article. In Matthews work, he takes a screenshot of the browsers viewport using puppeteer and returns the image - the repo parcels this all up as a <a href="https://vercel.com/docs/concepts/functions/serverless-functions">Serverless Vercel function</a> which can be taken and deployed there.</p>
+<p>In looking at this I noted a number of things:</p>
+<ul>
+<li>Rendering flat 2D lines and text is also possible with SVG</li>
+<li>Using SVG drops the dependency on Puppeteer, since we no longer need to take a screenshot</li>
+<li>It should be simple to make such a function work with Supabase Edge functions</li>
+<li>Supabase Edge Functions can now be self hosted!</li>
+</ul>
+<p>I therefore decided it might be fun to convert Matthews work so that it used SVG instead and try hosting it myself.</p>
+<h2 id="converting-to-svg">Converting to SVG</h2>
+<p>I started out by trying to get things working within next.js. This would be simpler to start out there and get an API tested prior to working in any particular service providers complexity.</p>
+<p>I converted the main file src/index.js to TypeScript and made sure that the functions responsible for the bulk of the work now all worked with a new FlowLine type. I was careful not to change too much since it involves some recursive functions I didn’t fancy debugging. Each FlowLine has a path, colour and width which was calculated randomly from a seed value based on the title of the article. I hardcoded all these since I just wanted to see if I could render an image that resembled what I was expecting.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">type</span><span style="color:#C9D1D9"> </span><span style="color:#FFA657">FlowLine</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FFA657">path</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">string</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FFA657">color</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">string</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FFA657">width</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">number</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>The SVG paths are drawn from two commands “move to” and “line to”. In our function we take the first point from a Flow Line and move to it’s x and y coordinates, before drawing lines to each one of the following points x and y coordinates. These commands a represented very simply by a long string of M x y (move to) and L x y (line to) commands. Read more about SVG path command types <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">on the Mozilla site</a>.</p>
+<p>The function therefore for drawing a SVG flow line ends up as follows:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">let</span><span style="color:#C9D1D9"> flowline</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#FFA657">FlowLine</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">    width: lineSize,</span></span>
+<span class="line"><span style="color:#C9D1D9">    color: colorFromVector,</span></span>
+<span class="line"><span style="color:#C9D1D9">    path: </span><span style="color:#A5D6FF">`M${</span><span style="color:#C9D1D9">Math</span><span style="color:#A5D6FF">.</span><span style="color:#D2A8FF">round</span><span style="color:#A5D6FF">(</span><span style="color:#C9D1D9">line</span><span style="color:#A5D6FF">[</span><span style="color:#79C0FF">0</span><span style="color:#A5D6FF">][</span><span style="color:#79C0FF">0</span><span style="color:#A5D6FF">])</span><span style="color:#A5D6FF">} ${</span><span style="color:#C9D1D9">Math</span><span style="color:#A5D6FF">.</span><span style="color:#D2A8FF">round</span><span style="color:#A5D6FF">(</span><span style="color:#C9D1D9">line</span><span style="color:#A5D6FF">[</span><span style="color:#79C0FF">0</span><span style="color:#A5D6FF">][</span><span style="color:#79C0FF">1</span><span style="color:#A5D6FF">])</span><span style="color:#A5D6FF">}`</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">for</span><span style="color:#C9D1D9"> (</span><span style="color:#FF7B72">let</span><span style="color:#C9D1D9"> i </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">1</span><span style="color:#C9D1D9">; i </span><span style="color:#FF7B72">&lt;</span><span style="color:#C9D1D9"> line.</span><span style="color:#79C0FF">length</span><span style="color:#C9D1D9">; i</span><span style="color:#FF7B72">++</span><span style="color:#C9D1D9">) {</span></span>
+<span class="line"><span style="color:#C9D1D9">    flowline.path </span><span style="color:#FF7B72">+=</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">` L${</span><span style="color:#C9D1D9">Math</span><span style="color:#A5D6FF">.</span><span style="color:#D2A8FF">round</span><span style="color:#A5D6FF">(</span><span style="color:#C9D1D9">line</span><span style="color:#A5D6FF">[</span><span style="color:#C9D1D9">i</span><span style="color:#A5D6FF">][</span><span style="color:#79C0FF">0</span><span style="color:#A5D6FF">])</span><span style="color:#A5D6FF">} ${</span><span style="color:#C9D1D9">Math</span><span style="color:#A5D6FF">.</span><span style="color:#D2A8FF">round</span><span style="color:#A5D6FF">(</span><span style="color:#C9D1D9">line</span><span style="color:#A5D6FF">[</span><span style="color:#C9D1D9">i</span><span style="color:#A5D6FF">][</span><span style="color:#79C0FF">1</span><span style="color:#A5D6FF">])</span><span style="color:#A5D6FF">}`</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>To render the entire background, we simply need to first ensure an appropriate background colour is used (also selected from the seed value) and then iterate every FlowLine created and draw all the SVG paths created.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">export</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">default</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">function</span><span style="color:#FFA657"> </span><span style="color:#D2A8FF">Page</span><span style="color:#FFA657">() </span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> (</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;</span><span style="color:#7EE787">svg</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">width</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;1200&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">height</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;675&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">xmlns</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;http://www.w3.org/2000/svg&quot;</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">            &lt;</span><span style="color:#7EE787">rect</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">width</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;100%&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">height</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;100%&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">fill</span><span style="color:#FF7B72">={</span><span style="color:#79C0FF">BACKGROUND</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> /&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">            </span><span style="color:#FF7B72">{</span><span style="color:#C9D1D9">lines.</span><span style="color:#D2A8FF">map</span><span style="color:#C9D1D9">((</span><span style="color:#FFA657">line</span><span style="color:#C9D1D9">, </span><span style="color:#FFA657">i</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> </span></span>
+<span class="line"><span style="color:#C9D1D9">                &lt;</span><span style="color:#7EE787">path</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">key</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">i</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">d</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">line.path</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">stroke</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">line.color</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">strokeWidth</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">line.width</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">fill</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;none&quot;</span><span style="color:#C9D1D9"> /&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">            )</span><span style="color:#FF7B72">}</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;/</span><span style="color:#7EE787">svg</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">    )</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>To my surprise, this actually worked! It took me aback a bit at how quickly I’d managed it. I was now able to generate a whole bunch of interesting backgrounds by messing with my hardcoded seed value.</p>
+<img src="/assets/svg-example.6d477700.svg" alt="First SVG Flow field Example"/>
+<img src="/assets/svg-example-2.bf7c9e6a.svg" alt="Second SVG Flow field Example"/>
+<h2 id="generating-opengraph-images">Generating OpenGraph Images</h2>
+<p>I also needed to overlay the text for the title, subtitle and author. Frustratingly this wasn’t possible with pure SVG solution since SVG text doesn’t support background colours. To do so, I would need to layer a rectangle of with the background colour the same length as the text, which I don’t know until after it’s been rendered.</p>
+<p>Instead, I opted to use <a href="https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation">@vercel/og</a> - a handy library that will take HTML, CSS (and crucially SVG) and generate OpenGraph images from them.</p>
+<p>I had to make a few changes here and decided to remove things like custom fonts that were in the original function. The text also renders the background differently when spanning over multiple lines. My actual ImageResponse involves some quite lengthy HTML but here’s an example of using @vercel/og to render a single SVG Flow line with some text styled with CSS attributes.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { ImageResponse } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;@vercel/og&#39;</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#C9D1D9"> </span></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">config</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">  runtime: </span><span style="color:#A5D6FF">&quot;edge&quot;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">default</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">async</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">function</span><span style="color:#FFA657"> </span><span style="color:#D2A8FF">handler</span><span style="color:#FFA657">() </span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">new</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">ImageResponse</span><span style="color:#C9D1D9">(</span></span>
+<span class="line"><span style="color:#C9D1D9">    (</span></span>
+<span class="line"><span style="color:#C9D1D9">      &lt;</span><span style="color:#7EE787">div</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#79C0FF">style</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">          display: </span><span style="color:#A5D6FF">&#39;flex&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          fontSize: </span><span style="color:#79C0FF">40</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          width: </span><span style="color:#A5D6FF">&#39;100%&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          height: </span><span style="color:#A5D6FF">&#39;100%&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          background: </span><span style="color:#A5D6FF">&#39;#233147&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          textAlign: </span><span style="color:#A5D6FF">&#39;center&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          justifyContent: </span><span style="color:#A5D6FF">&#39;center&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          alignItems: </span><span style="color:#A5D6FF">&#39;center&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">        }</span><span style="color:#FF7B72">}</span></span>
+<span class="line"><span style="color:#C9D1D9">      &gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">style</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">          color: </span><span style="color:#A5D6FF">&#39;#fff&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          position: </span><span style="color:#A5D6FF">&#39;absolute&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          backgroundColor: </span><span style="color:#A5D6FF">&#39;#000&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">          padding: </span><span style="color:#A5D6FF">&#39;10px&#39;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">        }</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9">&gt;Here is some Text&lt;/</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;</span><span style="color:#7EE787">svg</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">width</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;1200&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">height</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;675&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">xmlns</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;http://www.w3.org/2000/svg&quot;</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">          &lt;</span><span style="color:#7EE787">path</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">d</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;M938 38 L939 41 L940 44 L941 47 L942 49 L943 52 L944 55 L945 58 L946 61 L947 63 L948 66 L949 69 L950 72 L951 75 L952 78 L953 81 L953 83 L954 86 L955 89 L956 92 L957 95 L957 98 L958 101 L959 104 L960 107 L960 110 L961 113 L962 115 L962 118 L963 121 L963 124 L964 127 L964 130 L965 133 L965 136 L966 139 L966 142 L967 145 L967 148 L968 151 L968 154 L968 157 L969 160 L969 163 L969 166 L970 169 L970 172 L970 175 L970 178 L970 181 L971 184 L971 187 L971 190 L971 193 L971 196 L971 199 L971 202 L971 205 L971 208 L971 211 L971 214 L971 217 L971 220 L971 223 L971 226 L971 229 L971 232 L970 235 L970 238 L970 241 L970 244 L969 247 L969 250 L969 253 L968 256 L968 259 L968 262 L967 265 L967 268 L966 271 L966 273 L966 276 L965 279 L964 282 L964 285 L963 288 L963 291 L962 294 L962 297 L961 300 L960 303 L959 306 L959 309 L958 312 L957 315 L956 317 L956 320 L955 323 L954 326 L953 329 L952 332 L951 335 L950 338 L949 340 L948 343 L947 346 L946 349 L945 352 L944 354 L943 357 L942 360 L941 363 L940 366 L939 368 L937 371 L936 374 L935 377 L934 379 L932 382 L931 385 L930 387 L928 390 L927 393 L926 395 L924 398 L923 401 L921 403 L920 406 L918 409 L917 411 L915 414 L914 416 L912 419 L911 421 L909 424 L908 427 L906 429 L904 432 L903 434 L901 436 L899 439 L897 441 L896 444 L894 446 L892 449 L890 451 L888 453 L887 456 L885 458 L883 460 L881 463 L879 465 L877 467 L875 470 L873 472 L871 474 L869 476 L867 478 L865 481 L863 483 L861 485 L859 487 L856 489 L854 491 L852 493 L850 495 L848 497 L846 499 L843 501 L841 503 L839 505 L836 507 L834 509 L832 511 L830 513 L827 515 L825 517 L822 519 L820 520 L818 522 L815 524 L813 526 L810 528 L808 529 L805 531 L803 533 L800 534 L798 536 L795 538 L793 539 L790 541 L788 542 L785 544 L783 545 L780 547 L777 548 L775 550 L772 551 L769 552 L767 554 L764 555 L761 556 L759 558 L756 559 L753 560 L750 562 L748 563 L745 564 L742 565 L739 566 L737 567 L734 569 L731 570 L728 571 L725 572 L723 573 L720 574 L717 575 L714 576 L711 576 L708 577 L706 578 L703 579 L700 580 L697 581 L694 582 L691 582 L688 583 L685 584 L682 584 L679 585 L676 586 L674 586 L671 587 L668 587 L665 588 L662 589 L659 589 L656 590 L653 590 L650 591 L647 591 L644 591 L641 592 L638 592 L635 592 L632 593 L629 593 L626 593 L623 594 L620 594 L617 594 L614 594 L611 594 L608 594 L605 594 L602 595 L599 595 L596 595 L593 595 L590 595 L587 595 L584 595 L581 595 L578 594 L575 594 L572 594 L569 594 L566 594 L563 594 L560 593 L557 593 L554 593 L551 593 L548 592 L545 592 L542 592 L539 591 L536 591 L533 591 L530 590 L527 590 L524 589 L521 589 L518 588 L516 588 L513 587 L510 587 L507 586 L504 585 L501 585 L498 584 L495 583 L492 583 L489 582 L486 581 L483 581 L480 580 L477 579 L475 578 L472 578 L469 577 L466 576 L463 575 L460 574 L457 573 L454 572 L452 572 L449 571 L446 570 L443 569 L440 568 L437 567 L435 566 L432 565 L429 564 L426 563 L423 562 L421 560 L418 559 L415 558 L412 557 L409 556 L407 555 L404 554 L401 553 L398 551 L396 550 L393 549 L390 548 L387 546 L385 545 L382 544 L379 543 L377 541 L374 540 L371 539 L368 537 L366 536 L363 535 L360 533 L358 532 L355 530 L352 529 L350 528 L347 526 L345 525 L342 523 L339 522 L337 520 L334 519 L331 517 L329 516 L326 514 L324 513 L321 511 L319 510 L316 508 L313 507 L311 505 L308 504 L306 502 L303 500 L301 499 L298 497 L296 495 L293 494 L291 492 L288 491 L286 489 L283 487 L281 486 L278 484 L276 482 L273 481 L271 479 L268 477 L266 475 L263 474 L261 472 L258 470 L256 468 L254 467 L251 465 L249 463 L246 461 L244 460 L241 458 L239 456 L237 454 L234 452 L232 451 L230 449 L227 447 L225 445 L222 443 L220 441 L218 440 L215 438 L213 436 L211 434 L208 432 L206 430 L204 428 L201 426 L199 425 L197 423 L194 421 L192 419 L190 417 L187 415 L185 413 L183 411 L180 409 L178 407 L176 405 L174 404 L171 402 L169 400 L167 398 L164 396 L162 394 L160 392 L158 390 L155 388 L153 386 L151 384 L149 382 L146 380 L144 378 L142 376 L140 374 L137 372 L135 370 L133 368 L131 366 L128 364 L126 362 L124 360 L122 358 L120 356 L117 354 L115 352 L113 350 L111 348 L109 346 L106 344 L104 342 L102 340 L100 338 L98 335 L95 333 L93 331 L91 329 L89 327 L87 325 L84 323 L82 321 L80 319 L78 317 L76 315 L74 313 L71 311 L69 309 L67 307 L65 304 L63 302 L61 300 L58 298 L56 296 L54 294 L52 292&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">stroke</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;#319BBC&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">stroke-width</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;43.33813086152077&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">fill</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;none&quot;</span><span style="color:#C9D1D9">&gt;&lt;/</span><span style="color:#7EE787">path</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;/</span><span style="color:#7EE787">svg</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">      &lt;/</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">    ),</span></span>
+<span class="line"><span style="color:#C9D1D9">    {</span></span>
+<span class="line"><span style="color:#C9D1D9">      width: </span><span style="color:#79C0FF">1200</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">      height: </span><span style="color:#79C0FF">675</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">    },</span></span>
+<span class="line"><span style="color:#C9D1D9">  );</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>This is how that image looks once rendered. You can see we’re able to render the background without any additional logic and importantly without having to resort to using Puppeteer to take a screenshot. This means it’s pretty portable to other services. There’s a whole bunch of other examples on how it can be used in <a href="https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation/og-image-examples">Vercels docs</a>.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/single-flow.69dbde1d_Z1POIFy.avif 400w,/assets/single-flow.69dbde1d_Z9pctj.avif 900w"><source type="image/webp" srcset="/assets/single-flow.69dbde1d_Z17tTHM.webp 400w,/assets/single-flow.69dbde1d_yUBts.webp 900w"><source type="image/png" srcset="/assets/single-flow.69dbde1d_Z11Gp3G.png 400w,/assets/single-flow.69dbde1d_Z1MnQYx.png 900w">
+			<img width="900" height="506" src="/assets/single-flow.69dbde1d_19Mx3X.png" loading="lazy" decoding="async" alt="Using og-image to render svg with text" class="">
+		</picture>
+<h2 id="self-hosting-as-a-supabase-edge-function">Self-Hosting as a Supabase Edge Function</h2>
+<p>Supabase recently released their <a href="https://supabase.com/blog/edge-runtime-self-hosted-deno-functions">Edge Runtime</a> for functions which is able to be self hosted. It’s a wrapper around <a href="https://deno.com">Deno</a> and makes deployment to your preferred provider dead simple. Since it’s already configured, I decided to use their <a href="https://github.com/supabase/self-hosted-edge-functions-demo">example repo</a> as the basis for deploying my new image OpenGraph API to <a href="https://fly.io">fly.io</a>.</p>
+<p>I’ve created a new ‘og’ folder in the functions folder for my service and added a handler file containing all the work done so far. I also added an index file to serve this handler and set it to a  port unused by any other function:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { serve } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;https://deno.land/std@0.177.0/http/server.ts&#39;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> handler </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;./handler.tsx&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">console.</span><span style="color:#D2A8FF">log</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;Hello from og-image Function!&#39;</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D2A8FF">serve</span><span style="color:#C9D1D9">(handler, { port: </span><span style="color:#79C0FF">9010</span><span style="color:#C9D1D9">})</span></span></code></pre>
+<p>Any imports you use within your function need to be from remote CDN’s that the runtime will pull from when built so I updated all of mine in my handler accordingly.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { createNoise3D } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;https://esm.sh/simplex-noise&quot;</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> Alea </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;https://esm.sh/alea&quot;</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { ImageResponse } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;https://deno.land/x/og_edge/mod.ts&#39;</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> React </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;https://esm.sh/react@18.2.0&quot;</span><span style="color:#C9D1D9">;</span></span></code></pre>
+<p>I decided I’d like to be able to change the seed value on demand (rather than being bound to the title), so made that a parameter. This gives me the option of changing the whole image just by supplying a new value.</p>
+<p>It’s also recommended by Supabase that you update your docker image to the latest version of the Supabase runtime. You can find a list of <a href="https://github.com/supabase/edge-runtime/releases">releases here</a>.</p>
+<p>You’ll need both the CLIs for Supabase and <a href="https://fly.io/docs/flyctl/">fly.io</a> installed to run supabases and my code. With Supabase running, you can test functions locally prior to deployment using <code>supabase functions serve</code>.</p>
+<p>Once I’d confirmed everything was working ok, I was ready to deploy. I ran <code>fly launch</code> which asks you a few questions about how you’d like it deployed on fly.io and will build the Dockerfile and deploy it to your choice of region. This allows you to quickly choose regions closest to your users.</p>
+<p>Once deployed, requests to my new service and it’s respective images now looked like:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">https://{your-app-name}.fly.dev/og?title=Self%20Hosting%20Generative%20Open%20Graph%20Art%20on%20the%20Edge&amp;subtitle=ianwootten.co.uk&amp;seed=111</span></span></code></pre>
+<picture>
+			<source type="image/avif" srcset="/assets/opengraph.96473a7e_Z1cjoiV.avif 400w,/assets/opengraph.96473a7e_u67Sj.avif 900w"><source type="image/webp" srcset="/assets/opengraph.96473a7e_ZsXzla.webp 400w,/assets/opengraph.96473a7e_1dqVQ5.webp 900w"><source type="image/png" srcset="/assets/opengraph.96473a7e_2gHaMV.png 400w,/assets/opengraph.96473a7e_1v0HR5.png 900w">
+			<img width="900" height="506" src="/assets/opengraph.96473a7e_Z1phNQt.png" loading="lazy" decoding="async" alt="Final Open Graph Image for this post" class="">
+		</picture>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Now I have a remote service that I can host anywhere to generate beautiful Open Graph images. I could put the URL for this within the metadata for each of my articles - but instead I chose to generate the image, download it and commit it back to my blogs repo with every new post I write. This way the bandwidth for these functions are managed by Github pages (my host), rather than unwittingly racking up a costly bill with fly.io should a post ever go viral (a man can dream!). It also allows me to use one-off custom images on every post should I want to.</p>
+<p>I’m hoping to make more generative art soon - but hopefully understanding the concepts behind it a little more deeply. It’s highly likely I’m going to be playing with other 2D geometric images with SVG using this approach and maybe experiment with Supabase storage to cache the images created. If you’re interested in generating some yourself, be sure to check out all the code for this article which I’ve made available in <a href="https://github.com/iwootten/supabase-og">my functions repo</a>.</p>
+		</div>
+	</article>
+	<section class="relative astro-WD4BLOGM">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-WD4BLOGM">
+		<div class="py-12 md:py-20 astro-WD4BLOGM">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-WD4BLOGM">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-WD4BLOGM">
+					Subscribe for more
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-WD4BLOGM">
+					My monthly newsletter is stuffed with helpful articles, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-WD4BLOGM">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-WD4BLOGM" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-WD4BLOGM" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-WD4BLOGM" type="submit">Subscribe</button>
+						<strong class="feedback astro-WD4BLOGM">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+	</main><footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				&copy; 2003-2023 Ian Wootten
+			</div>
+		</div>
+	</div>
+</footer>
+		<script>
+	// Set "light" theme as default
+	// if (!localStorage.theme) {
+	//   localStorage.theme = "light";
+	// }
+
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches && matches.length) {
+			matches.forEach((elem) => {
+				elem.addEventListener(event, () => fn(elem), false);
+			});
+		}
+	}
+
+	window.onload = function () {
+		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+			elem.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+
+		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+			document.documentElement.classList.toggle('dark');
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		});
+	};
+	window.onpageshow = function () {
+		const elem = document.querySelector('[data-aw-toggle-menu]');
+		if (elem) {
+			elem.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+
+		
+	</body>
+</html>
