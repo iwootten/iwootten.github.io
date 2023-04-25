@@ -105,7 +105,7 @@
 	<article>
 		<header>
 			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2023-04-25T09:56:39.000Z">Apr 25, 2023</time> ~ 13 min read
+				<time datetime="2023-04-25T09:56:39.000Z">Apr 25, 2023</time> ~ 14 min read
 			</p>
 			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
 				Self Hosting Generative Open Graph Art on the Edge with Supabase
@@ -129,23 +129,22 @@
 				</li>
 		</ul>
 			</div>
-			
+			<picture>
+			<source type="image/avif" srcset="/assets/main.abf9a62f_3m9Er.avif 400w,/assets/main.abf9a62f_1JLFQG.avif 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/webp" srcset="/assets/main.abf9a62f_LGXCd.webp 400w,/assets/main.abf9a62f_2t7uOs.webp 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/png" srcset="/assets/main.abf9a62f_107UPJ.png 400w,/assets/main.abf9a62f_eqsTS.png 900w" sizes="(max-width: 900px) 400px, 900px">
+			<img width="900" height="506" src="/assets/main.abf9a62f_Z14aFR8.png" loading="lazy" decoding="async" alt="I show you how you can make unique, randomised open graph images using generative art and then self-host them using Supabase and Fly.io" class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
+		</picture>
 		</header>
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
 			<p>Having great Open Graph images with which to share your articles on social media allows them to stand out from the crowd and hopefully get more eyeballs reading them. For the last couple of years I’ve been using a fairly simple SVG background, but I’ve wanted something that could take them a step further. Back in October 2022, I saw this great write up of how Matthew Ström is <a href="https://matthewstrom.com/writing/generative-art-og-images/#in-the-end">using flow fields to produce art</a> for his own site and it’s stuck in my mind since. It uses the concept of flow fields to draw beautiful, randomised art for every article on his site. In this post I’ll show you how I’ve used this to generate my own version you can see below which I self-hosted with <a href="https://supabase.com/docs/guides/functions">Supabase Edge Functions</a> on <a href="https://fly.io">fly.io</a>. Feel free to jump around using the links below.</p>
 <ul>
 <li><a href="#flow-fields">Flow Fields</a></li>
-<li><a href="#converting-to-svg">Converting to SVG</a></li>
+<li><a href="#drawing-field-paths-with-svg">Drawing Field Paths with SVG</a></li>
 <li><a href="#generating-opengraph-images">Generating OpenGraph Images</a></li>
 <li><a href="#self-hosting-as-a-supabase-edge-function">Self Hosting as a Supabase Edge Function</a></li>
 <li><a href="#final-thoughts">Final Thoughts</a></li>
 </ul>
 <p><em>This post was written as part of Supabase’s launch week - go check it out for all the other exciting work people have done.</em></p>
-<picture>
-			<source type="image/avif" srcset="/assets/og-example-3.04c7066b_LtI3T.avif 400w,/assets/og-example-3.04c7066b_2sTfg9.avif 900w"><source type="image/webp" srcset="/assets/og-example-3.04c7066b_1uOx1F.webp 400w,/assets/og-example-3.04c7066b_Z1RW4A1.webp 900w"><source type="image/png" srcset="/assets/og-example-3.04c7066b_ZLvxHT.png 400w,/assets/og-example-3.04c7066b_Z1xd0DK.png 900w">
-			<img width="900" height="506" src="/assets/og-example-3.04c7066b_ZzoheK.png" loading="lazy" decoding="async" alt="Open Graph Flow field Example" class="">
-		</picture>
-<div style="display:flex;"><img alt="Open Graph Flow field Example" style="padding-right:2px;" width="450" height="253" src="/assets/og-example.3b933164_Z1P3j0F.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
+<div style="display:flex;flex-wrap:wrap;"><img alt="Open Graph Flow field Example" style="padding-right:2px;" width="450" height="253" src="/assets/og-example.3b933164_Z1P3j0F.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
 
 <img alt="Open Graph Flow field Example" style="padding-left:5px;" width="450" height="253" src="/assets/og-example-56.6954f0c7_Z1fke04.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
 
@@ -155,7 +154,7 @@
 <div style="background:white;"><img alt="Flow Field Example" background="white" width="900" height="503" src="/assets/flowfield2.0274234d_xXzOF.png" class="astro-PNUOSBTA" loading="lazy" decoding="async">
 
 </div>
-<p>Matthew has shared his work on Open Graph images in the <a href="https://github.com/ilikescience/mhs-og">following repo</a>, it uses a canvas on which different size “flow lines” are drawn with JavaScript. He spent a heap of time researching the maths behind figuring out how to place these paths correctly so they are aesthetically pleasing - so I’d point you to that if you’re interested in digging deeper. It’s originally based on the work of <a href="https://tylerxhobbs.com/essays/2020/flow-fields">Tyler Hobbs</a> which who written a bunch of interesting articles on how to produce generative art. Be sure to check them out if you’re interested in how you can get started creating your own or any of the maths involved behind what I talk about here.</p>
+<p>Matthew has shared his work on Open Graph images in the <a href="https://github.com/ilikescience/mhs-og">following repo</a>, it uses a canvas on which different size “flow lines” are drawn with JavaScript. He spent a heap of time researching the maths behind figuring out how to place these paths correctly so they are aesthetically pleasing - so I’d point you to that if you’re interested in digging deeper. It’s originally based on the work of <a href="https://tylerxhobbs.com/essays/2020/flow-fields">Tyler Hobbs</a> who has written a bunch of interesting articles on how to produce generative art. Be sure to check them out if you’re interested in how you can get started creating your own or any of the maths involved behind what I talk about here.</p>
 <p>Once the flow lines are rendered, they’re added to a template which includes a title and subheading used as the basis for the open graph image for an article. In Matthews work, he takes a screenshot of the browsers viewport using puppeteer and returns the image - the repo parcels this all up as a <a href="https://vercel.com/docs/concepts/functions/serverless-functions">Serverless Vercel function</a> which can be taken and deployed there.</p>
 <p>In looking at this I noted a number of things:</p>
 <ul>
@@ -165,7 +164,7 @@
 <li>Supabase Edge Functions can now be self hosted!</li>
 </ul>
 <p>I therefore decided it might be fun to convert Matthews work so that it used SVG instead and try hosting it myself.</p>
-<h2 id="converting-to-svg">Converting to SVG</h2>
+<h2 id="drawing-field-paths-with-svg">Drawing Field Paths with SVG</h2>
 <p>I started out by trying to get things working within next.js. This would be simpler to start out there and get an API tested prior to working in any particular service providers complexity.</p>
 <p>I converted the main file src/index.js to TypeScript and made sure that the functions responsible for the bulk of the work now all worked with a new FlowLine type. I was careful not to change too much since it involves some recursive functions I didn’t fancy debugging. Each FlowLine has a path, colour and width which was calculated randomly from a seed value based on the title of the article. I hardcoded all these since I just wanted to see if I could render an image that resembled what I was expecting.</p>
 <pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">type</span><span style="color:#C9D1D9"> </span><span style="color:#FFA657">FlowLine</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> {</span></span>
