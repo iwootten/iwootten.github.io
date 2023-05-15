@@ -128,7 +128,7 @@
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
 			<p>Virtual environments, they’re what we use in Python to allow us to install project dependencies into neat isolated folders instead of directly into our global system Python. Once activated, dependencies go into our virtual environment folder instead of our system Python and we can use them without interfering with our global system. This makes them really lightweight environments that we can dispose of and recreate very easily.</p>
 <p>So how do they work? We’ve got a lot of options to create them, venv module, pipenv and poetry to name a few, but whatever you use, the venv that’s created has a structure that’s mostly the same and mimics what we see in our system Python.</p>
-<p>In this article I’m going to show you their structure and show how most of the complexity is defined by a single PEP. If you’d prefer, you can watch me go through it as a video on YouTube.</p>
+<p>In this article I’m going to explore their structure and how the core of their behaviour is defined by a single PEP. If you’d prefer, you can watch the following video I created for YouTube.</p>
 <lite-youtube videoid="dy3svq9CbNo" class="mx-auto" style="background-image: url('https://i.ytimg.com/vi/dy3svq9CbNo/hqdefault.jpg');"></lite-youtube>
 
 
@@ -192,6 +192,7 @@ I’m in.</p>
 <p>We’ve can see the pyvenv.cfg file but we don’t have the include folder and now we’ve got this wheel because poetry also makes it very easy to create wheels to publish. Then we’ve got the site packages and our requests installed in that.</p>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>As you can see, most of the features that make virtual environments work are controlled with the pyvenv.cfg file I’ve shown. Many of the available package managers add features over and above the PEP405 specfication with the structures and PATH’s we’ve discussed underpinning them. I hope this article helped demystify how they work for you.</p>
+<p><em>NB. I’m in the process of writing an ebook on virtual environments, subscribe to my newsletter if you’re interested in hearing about it when it launches</em></p>
 		</div>
 	</article>
 	<section class="relative astro-WD4BLOGM">
