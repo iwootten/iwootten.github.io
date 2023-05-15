@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog — Page 23 — Ian Wootten</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
+<title>How a Python Virtual Environment Works — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Virtual environments are what we use in Python to allow us to install project dependencies. But how do they work?" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Blog — Page 23 — Ian Wootten" />
-<meta property="og:description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/page-23/" />
-<meta property="og:type" content="blog" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/default.d89fbbc5_1WbbAJ.jpg" />
-<meta property="og:image:alt" content="Blog — Page 23 — Ian Wootten" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/page-23/" />
+<meta property="og:title" content="How a Python Virtual Environment Works" />
+<meta property="og:description" content="Virtual environments are what we use in Python to allow us to install project dependencies. But how do they work?" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/05/15/how-a-python-virtual-environment-works/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.bef0feb9.png" />
+<meta property="og:image:alt" content="How a Python Virtual Environment Works" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/05/15/how-a-python-virtual-environment-works/" />
 
 
 <!-- Or Google Fonts -->
@@ -31,6 +31,7 @@
 
 
 	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.7cc5c313.css" />
 <link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
 </script>
 <script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
@@ -100,308 +101,123 @@
 		</nav>
 	</div>
 </header><main>
-		<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
-</script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
 		<header>
-			<h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
-				
-		Blog
-	
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-05-15T09:56:39.000Z">May 15, 2023</time> ~ 6 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				How a Python Virtual Environment Works
 			</h1>
-		</header>
-		<ul>
-	<li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/15/off-to-singapore/">
-					Off to Singapore!
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/python/">python</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/pip/">pip</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/poetry/">poetry</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/venv/">venv</a>
+				</li>
+		</ul>
+			</div>
 			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-15T00:00:00.000Z">May 15, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/06/chicago-day-five-threadless-and-whitesox/">
-					Chicago Day Five - Threadless and Whitesox
-				</a>
-			</h2>
 		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-06T00:00:00.000Z">May 6, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/06/chicago-day-six-last-day-in-hard-rock/">
-					Chicago Day Six - Last Day in Hard Rock
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-06T00:00:00.000Z">May 6, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/05/chicago-day-four-workshop/">
-					Chicago Day Four - Workshop
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-05T00:00:00.000Z">May 5, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/04/chicago-day-three-workshop-start/">
-					Chicago Day Three - Workshop Start
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-04T00:00:00.000Z">May 4, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/03/chicago-day-two-sears-tower-hancock-observatory/">
-					Chicago Day Two - Sears Tower, Hancock Observatory
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-03T00:00:00.000Z">May 3, 2006</time> ~
-					3 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/02/chicago-day-one/">
-					Chicago Day One
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-02T00:00:00.000Z">May 2, 2006</time> ~
-					4 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/05/02/travelling-to-chicago/">
-					Travelling to Chicago
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-05-02T00:00:00.000Z">May 2, 2006</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/04/05/all-go/">
-					All Go!
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-04-05T00:00:00.000Z">Apr 5, 2006</time> ~
-					4 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/04/04/the-ebay-experiment/">
-					The Ebay Experiment
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-04-04T00:00:00.000Z">Apr 4, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li>
-</ul><div class="container flex">
-			<div class="flex flex-row mx-auto container justify-between">
-				<a href="/page/22" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none mr-2
-      ">
-					<div class="flex flex-row align-middle">
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-left"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M5 12l6 6M5 12l6-6"/></g></svg>
-						<p class="ml-2">Newer posts</p>
-					</div>
-				</a>
-				<a href="/page/24" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none ">
-					<div class="flex flex-row align-middle">
-						<span class="mr-2">Older posts</span>
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-right"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M13 18l6-6M13 6l6 6"/></g></svg>
-					</div>
-				</a>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>Virtual environments, they’re what we use in Python to allow us to install project dependencies into neat isolated folders instead of directly into our global system Python. Once activated, dependencies go into our virtual environment folder instead of our system Python and we can use them without interfering with our global system. This makes them really lightweight environments that we can dispose of and recreate very easily.</p>
+<p>So how do they work? We’ve got a lot of options to create them, venv module, pipenv and poetry to name a few, but whatever you use, the venv that’s created has a structure that’s mostly the same and mimics what we see in our system Python.</p>
+<p>In this article I’m going to show you their structure and show how most of the complexity is defined by a single PEP. If you’d prefer, you can watch me go through it as a video on YouTube.</p>
+<lite-youtube videoid="dy3svq9CbNo" class="mx-auto" style="background-image: url('https://i.ytimg.com/vi/dy3svq9CbNo/hqdefault.jpg');"></lite-youtube>
+
+
+<h2 id="structure-of-a-virtual-environment">Structure of a Virtual Environment</h2>
+<p>Let’s create a virtual environment now with the venv module and explore what’s created. We’re calling the venv module and passing the name argument ‘venv’.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">python </span><span style="color:#FF7B72">-</span><span style="color:#C9D1D9">m venv venv</span></span></code></pre>
+<p>Within the folder that is created we have a bin folder containing symlinked versions of Python, a site packages directory and we also have a pyvenv.cfg file.</p>
+<p><img src="/images/how-a-venv-works/venv-structure.png" alt="Structure of the environment created with venv module"/></p>
+<p><a href="https://peps.python.org/pep-0405/">PEP 405</a> specifies how these files work, which introduced the concept of this pyvenv.cfg file. Python is going to look for this when deciding on its path configuration and if that file exists, it looks for key value pairs within it. Here’s what pyvenv.cfg looks like.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">home = /Users/ian/pyenv/versions/3.11.2/bin</span></span>
+<span class="line"><span style="color:#c9d1d9">include-system-site-packages = false</span></span>
+<span class="line"><span style="color:#c9d1d9">version = 3.11.2</span></span>
+<span class="line"><span style="color:#c9d1d9">executable = /Users/ian/pyenv/versions/3.11.2/bin/python3.11</span></span>
+<span class="line"><span style="color:#c9d1d9">command = /Users/ian/pyenv/versions/3.11.2/bin/python -m venv /Users/ian/dev/python/tutorials/how-venvs-work/venv</span></span></code></pre>
+<p>If it finds a “home” value, as seen here - it’s going to use the version of Python specified there as the basis for the virtual environment’s Python. So Python knows that we’re now talking about a virtual environment due to pyvenv.cfg and it’s going to be including site packages from this relative directory to this bin folder.</p>
+<p>We’ve also created a whole bunch of activate shell scripts, within which we have the setup for virtual environment variables and also modifying our system path to include Python from our bin folder. We have a deactivate method that will become available in our shell once we execute this activate script and then we can deactivate all these environment variables with it.</p>
+<p>There are many versions of this script for whatever shell you happen to use eg. bash, fish, PowerShell.</p>
+<h2 id="python-paths-for-a-virtual-environment">Python Paths for a Virtual Environment</h2>
+<p>Let’s take a look at how the PATH environment variable is configured prior to running activation for the environment.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">echo $PATH</span></span></code></pre>
+<p>Theres a whole load of paths delimited by colons which are all things that we’re going to be able to call from the command line and Python will exist in one of these directories. Here’s mine for reference.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openss1@1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/shims:/Users/ian/-pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/op t/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us/local/go/bin:/Users/ian/dev/google-clo ud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openssla1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/ian/.local/bin:/Users/ian/local/bin:/Users/1an/.local/bin</span></span></code></pre>
+<p>Let’s find out where Python is currently being called from too:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">&gt;</span><span style="color:#C9D1D9"> which python</span></span>
+<span class="line"><span style="color:#C9D1D9">/Users/ian/.pyenv/shims/python</span></span></code></pre>
+<p>You can see on my system that I’m using pyenv to manage my version of Python and that it appears a few paths into my $PATH env var.</p>
+<p>Importantly, things that are earlier on in this PATH string are going to get executed earlier. If you put another folder with another python in it as the first in that string, that’s going to get precedence any other Python that appears later.</p>
+<p>We can also see with the python that we’re using which site packages directory it thinks it’s going to be using by running a short script in the command line.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; python -c &#39;import site; print(site.getsitepackages()[0])&#39;</span></span>
+<span class="line"><span style="color:#c9d1d9">/Users/ian/.pyenv/versions/3.11.2/lib/python3.11/site-packages</span></span></code></pre>
+<p>I can see that I’m using site-packages within pyenv from the PATH. You may be using a global Python version on your system, so that’s where our packages will go if we use something like pip to
+install somethingt.</p>
+<p>Lets call the activate script which activates it and shows its name (venv) as part of my prompt. This way I know I’m working within the venv.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; . ./venv/bin/activate</span></span>
+<span class="line"><span style="color:#c9d1d9">(venv) &gt;</span></span></code></pre>
+<p>If we echo out the PATH again, we can see it’s now changed and the venvs bin folder at the beginning.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">/Users/ian/dev/python/tutorials/how-venvs-work/venv/bin:/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openss1@1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/shims:/Users/ian/-pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us/local/go/bin:/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openssla1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/ian/.local/bin:/Users/ian/local/bin:/Users/1an/.local/bin</span></span></code></pre>
+<p>If we also check what our site packages directory is, we can see that it’s now the one within our venv. So it’s correctly configured this so that we are using the standard library from our symlinked python but we are using site packages from the venv. This is all down to the pyvenv.cfg file.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; python -c &#39;import site; print(site.getsitepackages()[0])&#39;</span></span>
+<span class="line"><span style="color:#c9d1d9">/Users/ian/dev/python/tutorials/how-venvs-work/ven/lib/python3.11/site-packages</span></span></code></pre>
+<h2 id="installing-packages-with-pip">Installing Packages with pip</h2>
+<p>Having a venv limited to a folder makes them easily disposable so that we can just delete it if we wanted to and we’re not going to mess with our global version of python.</p>
+<p>Lets actually go ahead and install requests:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; (venv) pip install requests</span></span></code></pre>
+<p>We can see when we go into this that requests now appears in this folder and if we uninstall it, it’ll get removed from there as well.</p>
+<p><img src="/images/how-a-venv-works/requests-in-subfolder.png" alt="Requests in site-packages"/></p>
+<p>We can also deactivate this because we now have that deactivate command and we come back out of our environment.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; (venv) deactivate</span></span>
+<span class="line"><span style="color:#c9d1d9">&gt;</span></span></code></pre>
+<p>Our path and location for site packages will once again be set back to how they were originally as well. Notice that the prompt has updated too.</p>
+<h2 id="installing-packages-with-poetry">Installing Packages with Poetry</h2>
+<p>This structure is the same for any package manager - if you were to go ahead and say install with Poetry you get the same results.</p>
+<p>First of all I’m going to set Poetry my in project variable so that we venvs installed within a directory within the folder
+I’m in.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">poetry config virtualenvs.in-project true</span></span></code></pre>
+<p>If we init a project accepting defaults and install requests:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">poetry init</span></span>
+<span class="line"><span style="color:#c9d1d9">poetry add requests</span></span></code></pre>
+<p>Poetry automatically creates a venv for me that looks very similar to what I created with the venv module.</p>
+<p><img src="/images/how-a-venv-works/poetry-structure.png" alt="Structure of Poetry created environment"/></p>
+<p>We’ve can see the pyvenv.cfg file but we don’t have the include folder and now we’ve got this wheel because poetry also makes it very easy to create wheels to publish. Then we’ve got the site packages and our requests installed in that.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>As you can see, most of the features that make virtual environments work are controlled with the pyvenv.cfg file I’ve shown. Many of the available package managers add features over and above the PEP405 specfication with the structures and PATH’s we’ve discussed underpinning them. I hope this article helped demystify how they work for you.</p>
+		</div>
+	</article>
+	<section class="relative astro-WD4BLOGM">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-WD4BLOGM">
+		<div class="py-12 md:py-20 astro-WD4BLOGM">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-WD4BLOGM">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-WD4BLOGM">
+					Subscribe for more
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-WD4BLOGM">
+					My monthly newsletter is stuffed with helpful articles, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-WD4BLOGM">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-WD4BLOGM" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-WD4BLOGM" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-WD4BLOGM" type="submit">Subscribe</button>
+						<strong class="feedback astro-WD4BLOGM">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+</section>
 	</main><footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
