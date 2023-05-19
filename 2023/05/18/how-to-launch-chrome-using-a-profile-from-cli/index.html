@@ -4,17 +4,15 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog — Page 24 — Ian Wootten</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
+<title>How to Launch Chrome Using a Profile from CLI — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Blog — Page 24 — Ian Wootten" />
-<meta property="og:description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/page-24/" />
-<meta property="og:type" content="blog" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/default.d89fbbc5_1WbbAJ.jpg" />
-<meta property="og:image:alt" content="Blog — Page 24 — Ian Wootten" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/page-24/" />
+<meta property="og:title" content="How to Launch Chrome Using a Profile from CLI" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/05/18/how-to-launch-chrome-using-a-profile-from-cli/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.b887cb05.jpg" />
+<meta property="og:image:alt" content="How to Launch Chrome Using a Profile from CLI" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/05/18/how-to-launch-chrome-using-a-profile-from-cli/" />
 
 
 <!-- Or Google Fonts -->
@@ -31,6 +29,7 @@
 
 
 	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.7cc5c313.css" />
 <link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
 </script>
 <script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
@@ -100,316 +99,66 @@
 		</nav>
 	</div>
 </header><main>
-		<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
-</script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
 		<header>
-			<h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
-				
-		Blog
-	
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-05-18T10:49:00.000Z">May 18, 2023</time> ~ 1 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				How to Launch Chrome Using a Profile from CLI
 			</h1>
-		</header>
-		<ul>
-	<li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/04/04/the-ebay-experiment/">
-					The Ebay Experiment
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-04-04T00:00:00.000Z">Apr 4, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/03/17/worpdress/">
-					worpdress
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-03-17T00:00:00.000Z">Mar 17, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/03/08/nth-fest/">
-					Nth Fest
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-03-08T00:00:00.000Z">Mar 8, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/03/06/digg-it/">
-					Digg It
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-03-06T00:00:00.000Z">Mar 6, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/03/02/flipping-pancakes/">
-					Flipping Pancakes!
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-03-02T00:00:00.000Z">Mar 2, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/02/09/msi-rs480m2-il-motherboard/">
-					MSI RS480M2-IL Motherboard
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-02-09T00:00:00.000Z">Feb 9, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/02/09/the-geeks-gone-out/">
-					The geeks gone out
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-02-09T00:00:00.000Z">Feb 9, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/02/02/papers/">
-					Papers
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-02-02T00:00:00.000Z">Feb 2, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
 				<ul class="text-sm">
 			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/phd/">phd</a>
+					<a href="/tags/chrome/">chrome</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/stream-deck/">stream deck</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/productivity/">productivity</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/til/">til</a>
 				</li>
 		</ul>
 			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/02/02/whats-the-difference-between/">
-					What&#39;s the difference between?
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
 			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-02-02T00:00:00.000Z">Feb 2, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2006/02/01/cutting-edge/">
-					Cutting Edge
-				</a>
-			</h2>
 		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2006-02-01T00:00:00.000Z">Feb 1, 2006</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/phd/">phd</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li>
-</ul><div class="container flex">
-			<div class="flex flex-row mx-auto container justify-between">
-				<a href="/page/23" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none mr-2
-      ">
-					<div class="flex flex-row align-middle">
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-left"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M5 12l6 6M5 12l6-6"/></g></svg>
-						<p class="ml-2">Newer posts</p>
-					</div>
-				</a>
-				<a href="/page/25" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none ">
-					<div class="flex flex-row align-middle">
-						<span class="mr-2">Older posts</span>
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-right"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M13 18l6-6M13 6l6 6"/></g></svg>
-					</div>
-				</a>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>I keep my work and user profiles separate on my Mac. I wanted an easy way of opening a notion page to make a note using a macro on my Stream Deck. I often am in my user profile when I want to make a note, so I needed to open Chrome from the commandline using a particular one. Here’s how you do that.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">open -a </span><span style="color: #A5D6FF">"Google Chrome"</span><span style="color: #C9D1D9"> https://duckduckgo.com --args --profile-directory=Profile 2</span></span></code></pre>
+<p>The names Chrome uses for the <code>--profile-directory</code> argument are not what you might think. They’re not as listed in the Profile dropdown menubar. Finding out what they’re named is a bit convoluted using Chrome alone.</p>
+<p>However, you <em>can</em> find out the name of the profiles on your Mac using jq:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">cat </span><span style="color: #FF7B72">~</span><span style="color: #C9D1D9">/Library/Application</span><span style="color: #79C0FF">\ </span><span style="color: #C9D1D9">Support/Google/Chrome/Local</span><span style="color: #79C0FF">\ </span><span style="color: #C9D1D9">State </span><span style="color: #FF7B72">|</span><span style="color: #C9D1D9"> jq -r </span><span style="color: #A5D6FF">'.profile.info_cache|to_entries|map(.key + ": " + .value.name)|.[]'</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">|</span><span style="color: #C9D1D9"> sort -k2,2n</span></span></code></pre>
+<p>Here’s what that might look like locally:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">Default: Person 1</span></span>
+<span class="line"><span style="color: #C9D1D9">Profile 2: [niftydigits.com](http://niftydigits.com/)</span></span></code></pre>
+<p>Source: <a href="https://superuser.com/questions/377186/how-do-i-start-chrome-using-a-specified-user-profile#377195">https://superuser.com/questions/377186/how-do-i-start-chrome-using-a-specified-user-profile#377195</a></p>
+		</div>
+	</article>
+	<section class="relative astro-WD4BLOGM">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-WD4BLOGM">
+		<div class="py-12 md:py-20 astro-WD4BLOGM">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-WD4BLOGM">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-WD4BLOGM">
+					Subscribe for more
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-WD4BLOGM">
+					My monthly newsletter is stuffed with helpful articles, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-WD4BLOGM">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-WD4BLOGM" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-WD4BLOGM" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-WD4BLOGM" type="submit">Subscribe</button>
+						<strong class="feedback astro-WD4BLOGM">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+</section>
 	</main><footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
