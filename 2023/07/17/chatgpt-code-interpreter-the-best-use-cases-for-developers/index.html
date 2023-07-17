@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ChatGPT Code Interpreter: The Best Use Cases for Developers — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="ChatGPT’s code interpreter plugin has just become available for all ChatGPT plus subscribers. I checked out what's possible and here I'll show you the best ways developers can use it." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="ChatGPT Code Interpreter: The Best Use Cases for Developers" />
+<meta property="og:description" content="ChatGPT’s code interpreter plugin has just become available for all ChatGPT plus subscribers. I checked out what's possible and here I'll show you the best ways developers can use it." />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/07/17/chatgpt-code-interpreter-the-best-use-cases-for-developers/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.48f89d27.png" />
+<meta property="og:image:alt" content="ChatGPT Code Interpreter: The Best Use Cases for Developers" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/07/17/chatgpt-code-interpreter-the-best-use-cases-for-developers/" />
+
+
+<!-- Or Google Fonts -->
+
+<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
+
+
+
+<script defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
+
+
+	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.7cc5c313.css" />
+<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
+</script>
+<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+	💻&nbsp;&nbsp;Ian Wootten</span>
+			</a>
+			<div class="flex items-center md:hidden">
+				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
+</button>
+			</div>
+		</div>
+		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
+					</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header><main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
+		<header>
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-07-17T10:09:00.000Z">Jul 17, 2023</time> ~ 7 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				ChatGPT Code Interpreter: The Best Use Cases for Developers
+			</h1>
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/ai/">ai</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/gpt/">gpt</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/openai/">openai</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/chatgpt/">chatgpt</a>
+				</li>
+		</ul>
+			</div>
+			
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<lite-youtube videoid="Zfxt5wRa6Zg" class="mx-auto" style="background-image: url('https://i.ytimg.com/vi/Zfxt5wRa6Zg/hqdefault.jpg');"></lite-youtube>
+
+
+<p>ChatGPT’s code interpreter plugin has just become available for all ChatGPT plus subscribers. That means if you’re a paid up subscriber, you’re going to be able to run Python code written by ChatGPT and see immediate results in your browser.</p>
+<p>I went through a huge number of use cases and here I’ll highlight the best ways developers can use it.</p>
+<h2 id="setup">Setup</h2>
+<p>To enable it you need to head into settings and flip the toggle for it in beta features. Once you do that, you’ll get a code interpreter option as part of the gpt-4 model dropdown.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/dropdown.5b298986_2bVe1i.avif 400w"><source type="image/webp" srcset="/assets/dropdown.5b298986_Z29U5OR.webp 400w"><source type="image/png" srcset="/assets/dropdown.5b298986_Z1HKMck.png 400w">
+			<img width="400" height="393" src="/assets/dropdown.5b298986_Z95Krl.png" loading="lazy" decoding="async" alt="Code Interpreter Regex Example" class="">
+		</picture>
+<h2 id="testing-code">Testing Code</h2>
+<p>I wanted to see how code interpreter would cope with writing some new code for something most developers find difficult, regular expressions.</p>
+<p>I set it the task of matching uk mobile numbers from a string, including a variety of country code formats preceding each number.</p>
+<p>ChatGPT happily responded with an regex, but like any lazy developer, only realised that its suggestion didn’t work when I asked it to test against my original examples.</p>
+<p>Here’s where code interpreter shines. As it has the ability to execute code rather than just conjure it up, it can see where things fail. When it actually ran the suggested regex through code interpreter it identified it needed to mock some data. It immediately did so and proceeded to test the mock data and iterate on the regex until every one of the examples passed.</p>
+<p>After every change it makes, it outlines the steps it used through a dropdown, giving you access to the exact python code. This means that you can download it and use it offline if you like.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/regex.57b53fc3_Z1TpsMK.avif 400w,/assets/regex.57b53fc3_U0r8P.avif 900w"><source type="image/webp" srcset="/assets/regex.57b53fc3_Z1b4DOY.webp 400w,/assets/regex.57b53fc3_1Dlg6B.webp 900w"><source type="image/png" srcset="/assets/regex.57b53fc3_2fjmsi.png 400w,/assets/regex.57b53fc3_Z1gfWID.png 900w">
+			<img width="900" height="1023" src="/assets/regex.57b53fc3_1Lw5Pu.png" loading="lazy" decoding="async" alt="Code Interpreter Regex Example" class="">
+		</picture>
+<p>It even was able to adjust the regex further since I identified it hadn’t factored in optional leading zeroes which I’d originally requested.</p>
+<p>Being able to farm these sort of mundane tasks out to something that is able to iterate this quickly is, I think, a massive win for developers. The fact we can now test it without having to download it first, insert it into a new file or fire up a new environment. We have an accessible sandbox isolated away that we can work with.</p>
+<h2 id="code-review">Code Review</h2>
+<p>Code Interpreter gives the option of being able to upload files for it work with. You can have it look through pdfs, work with images and even video.</p>
+<p>At the time of publishing, the upload size is limited to 100MB and you can only upload a single file each time, but a sneaky way round this is to zip your files since code interpreter can extract the data within.</p>
+<p>I uploaded some old code from an Advent of Code challenge for it to review since I was interested to see if it could understand it.</p>
+<p>My code reads some data about monkeys from a file and performs a number of operations to values for each monkey it describes. It isn’t trivial, but code interpreter was able to understand what it did giving me a couple of options for refactoring it.</p>
+<p>It even generated some mock data that the code would parse and adjusted it once it realised that some of it’s assumptions about the data could send it into an infinite loop.</p>
+<h2 id="data-analysis">Data Analysis</h2>
+<p>Data analysis was one of the first things I did when I got access to code interpreter. I asked it simply what was in a csv of Unemployment data I got from the ONS and could it show me any graphs to highlight interesting aspects of it.</p>
+<p>I was really impressed to see the first thing code interpreter said was the data was formatted in a non-standard way needed some cleanup.</p>
+<p>It correctly identified that the header had a number of rows that would need to be removed before it be read could start working with it.</p>
+<p>If you’ve ever had to do any form of data analysis yourself, you know factoring in various edge cases in order to clean it up is another laborious task that it’s worth getting AI to do.</p>
+<p>From this it continued on stating a whole bunch of facts about the data and it proceeded to then draw two charts to visualise the data.</p>
+<ul>
+<li>A line plot to visualise the overall trend over time.</li>
+<li>A box plot to show the annual distribution of the unemployment rate</li>
+</ul>
+<p>I was blown away that it did all this from a single initial prompt, with multiple steps with no interaction from me. This is going to make it incredibly easy for those with little to no experience working with data like this quickly find insights.</p>
+<h2 id="data-visualisation">Data Visualisation</h2>
+<p>I uploaded a dataset of movies that I got from kaggle. The dataset is zipped, which ChatGPT is able to handle and unzip with Python. It correctly extracted and identified the data within, showing me a preview of the rows and columns within.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/table.373840cd_Z1MlhqF.avif 400w,/assets/table.373840cd_Z1GURt3.avif 900w"><source type="image/webp" srcset="/assets/table.373840cd_Z140ssT.webp 400w,/assets/table.373840cd_ZXA3vh.webp 900w"><source type="image/png" srcset="/assets/table.373840cd_16uwDn.png 400w,/assets/table.373840cd_1KGKo6.png 900w">
+			<img width="900" height="917" src="/assets/table.373840cd_Z1hHz09.png" loading="lazy" decoding="async" alt="Code Interpreter Regex Example" class="">
+		</picture>
+<p>I then asked ChatGPT to draw some “non-obvious insights” on the data I uploaded. It chose the following:</p>
+<ul>
+<li>Correlation between budget and success of a movie</li>
+<li>Impact of a directors experience on the success of a movie</li>
+<li>Trend of movie genres over time</li>
+</ul>
+<p>I asked it to graph these insights using it’s own choice of graphs - in order to do so, it needed to add a number of columns. It was able to extract and rework the data with new columns for things like year, all the while informing me of the pretty major steps it had taken to do so. It came back with some great scatter plots and a line chart for movie genre trends. I was able to write this out to a pdf.</p>
+<p>I was able to identify that the data it had graphed has some errors in it, since one director appeared to have directed over 300 movies. After asking ChatGPT who that was, it transpired that had included directors whose name was missing as a single dataset.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/director-300-movies.cc3106e5_1NmzL9.avif 400w,/assets/director-300-movies.cc3106e5_ZXgN3w.avif 900w"><source type="image/webp" srcset="/assets/director-300-movies.cc3106e5_2wHoIU.webp 400w,/assets/director-300-movies.cc3106e5_ZeUY5K.webp 900w"><source type="image/png" srcset="/assets/director-300-movies.cc3106e5_1HB3IC.png 400w,/assets/director-300-movies.cc3106e5_2racfC.png 900w">
+			<img width="900" height="620" src="/assets/director-300-movies.cc3106e5_Z1tV2Vw.png" loading="lazy" decoding="async" alt="Director 300 Movies" class="">
+		</picture>
+<p>Finally it was able to list some key takeaways “while factors like budget and director’s experience may have some influence on a movie’s financial success and ratings, they’re not the sole determinants.”</p>
+<picture>
+			<source type="image/avif" srcset="/assets/directors-ex-vs-revenue.97574dd1_Ze793.avif 400w,/assets/directors-ex-vs-revenue.97574dd1_ZRyvwI.avif 900w"><source type="image/webp" srcset="/assets/directors-ex-vs-revenue.97574dd1_I6GNI.webp 400w,/assets/directors-ex-vs-revenue.97574dd1_Z9dGyW.webp 900w"><source type="image/png" srcset="/assets/directors-ex-vs-revenue.97574dd1_Zt2EH4.png 400w,/assets/directors-ex-vs-revenue.97574dd1_1iiGj9.png 900w">
+			<img width="900" height="631" src="/assets/directors-ex-vs-revenue.97574dd1_1x12hJ.png" loading="lazy" decoding="async" alt="Visualisation for Directors Experience" class="">
+		</picture>
+<p>It’s pretty amazing to me it’s possible to have most of this legwork done very quickly with relatively little input from me. We’ve simply uploaded some data. It’s so accessible to anyone to interpret data in next to no time with just a web browser.</p>
+<h2 id="image-analysis">Image Analysis</h2>
+<p>I successfully was able to get ChatGPT to highlight the outline of a screenshot of me. However, it failed fairly poorly when asked to zoom in and make me centre of the frame. It didn’t have the necessary libraries installed to do anything complex and couldn’t download them. Instead it suggested I do that myself and gave me the code to try it out. I created a gist of every Python library code interpreter has installed which you can find <a href="https://gist.github.com/iwootten/81e7dc835d173efbd46f6230bea68bd5">here</a>.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/kmeans-colours.b6273614_Z19t0HM.avif 400w,/assets/kmeans-colours.b6273614_Z16mM99.avif 900w"><source type="image/webp" srcset="/assets/kmeans-colours.b6273614_Zq8bK1.webp 400w,/assets/kmeans-colours.b6273614_Zn1Xbn.webp 900w"><source type="image/png" srcset="/assets/kmeans-colours.b6273614_CIQ0x.png 400w,/assets/kmeans-colours.b6273614_1hQvVi.png 900w">
+			<img width="900" height="1069" src="/assets/kmeans-colours.b6273614_l14Df.png" loading="lazy" decoding="async" alt="Image Edge Detection" class="">
+		</picture>
+<p>I was also able to get it to extract dominant colours from images using k-means clustering and output a list of hex codes. This could come in handy if you want to create web designs themed around particular images for instance.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/kmeans-colours.b6273614_Z19t0HM.avif 400w,/assets/kmeans-colours.b6273614_Z16mM99.avif 900w"><source type="image/webp" srcset="/assets/kmeans-colours.b6273614_Zq8bK1.webp 400w,/assets/kmeans-colours.b6273614_Zn1Xbn.webp 900w"><source type="image/png" srcset="/assets/kmeans-colours.b6273614_CIQ0x.png 400w,/assets/kmeans-colours.b6273614_1hQvVi.png 900w">
+			<img width="900" height="1069" src="/assets/kmeans-colours.b6273614_l14Df.png" loading="lazy" decoding="async" alt="K-Means Clustering Image Colour Extraction" class="">
+		</picture>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>It’s important to note that the data your uploading is being shared with OpenAI, who is confusingly a private company. I’d be hesitant at this point to be uploading anything sensitive and definitely wouldn’t be sharing anything private like bank statements for it to look at (something I’ve seen suggested by some YouTubers).</p>
+<p>It’s pretty crazy that a year ago this product didn’t even exist and it’s rapidly becoming a go to assistant for development.</p>
+		</div>
+	</article>
+	<section class="relative astro-WD4BLOGM">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-WD4BLOGM">
+		<div class="py-12 md:py-20 astro-WD4BLOGM">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-WD4BLOGM">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-WD4BLOGM">
+					Subscribe for more
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-WD4BLOGM">
+					My monthly newsletter is stuffed with helpful articles, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-WD4BLOGM">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-WD4BLOGM" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-WD4BLOGM" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-WD4BLOGM" type="submit">Subscribe</button>
+						<strong class="feedback astro-WD4BLOGM">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+	</main><footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				&copy; 2003-2023 Ian Wootten
+			</div>
+		</div>
+	</div>
+</footer>
+		<script>
+	// Set "light" theme as default
+	// if (!localStorage.theme) {
+	//   localStorage.theme = "light";
+	// }
+
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches && matches.length) {
+			matches.forEach((elem) => {
+				elem.addEventListener(event, () => fn(elem), false);
+			});
+		}
+	}
+
+	window.onload = function () {
+		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+			elem.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+
+		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+			document.documentElement.classList.toggle('dark');
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		});
+	};
+	window.onpageshow = function () {
+		const elem = document.querySelector('[data-aw-toggle-menu]');
+		if (elem) {
+			elem.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+
+		
+	</body>
+</html>
