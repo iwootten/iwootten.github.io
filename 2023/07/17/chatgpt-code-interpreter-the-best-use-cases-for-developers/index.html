@@ -154,11 +154,19 @@
 <p>At the time of publishing, the upload size is limited to 100MB and you can only upload a single file each time, but a sneaky way round this is to zip your files since code interpreter can extract the data within.</p>
 <p>I uploaded some old code from an Advent of Code challenge for it to review since I was interested to see if it could understand it.</p>
 <p>My code reads some data about monkeys from a file and performs a number of operations to values for each monkey it describes. It isn’t trivial, but code interpreter was able to understand what it did giving me a couple of options for refactoring it.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/code-review.b0e8bbed_25XXQh.avif 400w,/assets/code-review.b0e8bbed_Z1hMCKp.avif 900w"><source type="image/webp" srcset="/assets/code-review.b0e8bbed_Z2fRkYS.webp 400w,/assets/code-review.b0e8bbed_ZyrNMD.webp 900w"><source type="image/png" srcset="/assets/code-review.b0e8bbed_Z2mY4yP.png 400w,/assets/code-review.b0e8bbed_1VvBjf.png 900w">
+			<img width="900" height="505" src="/assets/code-review.b0e8bbed_fCBF6.png" loading="lazy" decoding="async" alt="Code Interpreter Regex Example" class="">
+		</picture>
 <p>It even generated some mock data that the code would parse and adjusted it once it realised that some of it’s assumptions about the data could send it into an infinite loop.</p>
 <h2 id="data-analysis">Data Analysis</h2>
 <p>Data analysis was one of the first things I did when I got access to code interpreter. I asked it simply what was in a csv of Unemployment data I got from the ONS and could it show me any graphs to highlight interesting aspects of it.</p>
 <p>I was really impressed to see the first thing code interpreter said was the data was formatted in a non-standard way needed some cleanup.</p>
 <p>It correctly identified that the header had a number of rows that would need to be removed before it be read could start working with it.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/dirty-data.28dd1422_1HpUjT.avif 400w,/assets/dirty-data.28dd1422_2lXQAS.avif 900w"><source type="image/webp" srcset="/assets/dirty-data.28dd1422_2qKJhF.webp 400w,/assets/dirty-data.28dd1422_Z1YRsfh.webp 900w"><source type="image/png" srcset="/assets/dirty-data.28dd1422_In0HU.png 400w,/assets/dirty-data.28dd1422_Z2msAhC.png 900w">
+			<img width="900" height="1013" src="/assets/dirty-data.28dd1422_2mMpBy.png" loading="lazy" decoding="async" alt="Code Interpreter correctly asserts it needs to clean dirty data" class="">
+		</picture>
 <p>If you’ve ever had to do any form of data analysis yourself, you know factoring in various edge cases in order to clean it up is another laborious task that it’s worth getting AI to do.</p>
 <p>From this it continued on stating a whole bunch of facts about the data and it proceeded to then draw two charts to visualise the data.</p>
 <ul>
@@ -203,7 +211,7 @@
 		</picture>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>It’s important to note that the data your uploading is being shared with OpenAI, who is confusingly a private company. I’d be hesitant at this point to be uploading anything sensitive and definitely wouldn’t be sharing anything private like bank statements for it to look at (something I’ve seen suggested by some YouTubers).</p>
-<p>It’s pretty crazy that a year ago this product didn’t even exist and it’s rapidly becoming a go to assistant for development. I’m excited to see what I can do with future plugins that get released next!</p>
+<p>It’s pretty crazy that a year ago this product didn’t even exist and it’s rapidly becoming a go to assistant for development. I’m pretty excited to see what I can do with future plugins that get released.</p>
 		</div>
 	</article>
 	<section class="relative astro-WD4BLOGM">
