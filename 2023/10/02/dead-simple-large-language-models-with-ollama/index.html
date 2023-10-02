@@ -126,12 +126,14 @@
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
 			<p>For the last couple of months I’ve been really enjoying using <a href="https://ollama.ai/">Ollama</a> to experiment with large language models on my Apple Silicon macs. It allows you to pull and run models under a really simple docker-ish interface. The fact it’s made by Jeffrey Morgan who used to work at docker goes some way to explain why it feels that way. Recently they announced a new linux version making it even more accessible.</p>
 <p>There’s a huge collection of open source models available for you to choose from and the team are incredibly fast at adding new ones. It took about 2 hours(!) for the latest Mistral model to appear within Ollama’s <a href="https://ollama.ai/library">library of models</a> following its announcement. Being able to run them locally or on your own server means that you don’t have any privacy concerns that might come with using a hosted model provider.</p>
-<p>Getting setup on my Mac is but just a app install away and their recent linux release means it’s now able to be installed on any cloud server you like using either CPU or GPU with a shell script. You can also install on Windows under WSL.</p>
-<p>Once installed, running a model is as simple as:</p>
+<p>Getting setup on my Mac is but just a app install away and their <a href="https://github.com/jmorganca/ollama/releases/tag/v0.1.0">recent linux release</a> means it’s now able to be installed on any cloud server you like using either CPU or GPU with a shell script. You can also install on Windows under WSL.</p>
+<h2 id="running-an-existing-model">Running an Existing Model</h2>
+<p>Once Ollama is installed, running a model is as simple as:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run mistral</span></span></code></pre>
 <p>This will pull down and run the Mistral 7B parameter model for you to interact with. If you want to pull 13b or 70b models you can do so using a tag following the model name.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run llama2:70b</span></span></code></pre>
 <p>If you use llama2 you also have uncensored models you can play with.</p>
+<h2 id="creating-custom-models">Creating Custom Models</h2>
 <p>You can also create custom models using model files. In this example lifted from the github repo, the system prompt has been changed:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">FROM llama2</span></span>
 <span class="line"></span>
