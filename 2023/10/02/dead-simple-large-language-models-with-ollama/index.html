@@ -129,8 +129,8 @@
 <p>Getting setup on my Mac is but just a app install away and their <a href="https://github.com/jmorganca/ollama/releases/tag/v0.1.0">recent linux release</a> means it’s now able to be installed on any cloud server you like using either CPU or GPU with a shell script. You can also install on Windows under WSL.</p>
 <h2 id="running-an-existing-model">Running an Existing Model</h2>
 <p>Once Ollama is installed, running a model is as simple as:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run mistral</span></span></code></pre>
-<p>This will pull down and run the Mistral 7B parameter model for you to interact with. If you want to pull 13b or 70b models you can do so using a tag following the model name.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run llama2</span></span></code></pre>
+<p>This will pull down and run the Llama 2 7b parameter model for you to interact with. If you want to pull 13b or 70b models you can do so using a tag following the model name. The 70b model is whopper at 39GB though so probably best to stick with small ones whilst experimenting.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run llama2:70b</span></span></code></pre>
 <p>Once started, you’ll then jump right into a prompt with which you can interact with a model using natural language. There are also text completion models which can be used using the “text” tag. If you use llama2 you also have uncensored models you can play with using the model name llama2-uncensored. I needed to use this for simple programming questions which were deemed something the default model couldn’t help with, like writing a regex for email addresses.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run llama2-uncensored</span></span>
