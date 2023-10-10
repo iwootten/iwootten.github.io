@@ -129,10 +129,10 @@
 			<p><a href="https://supabase.com">Supabase</a> have been adding a huge number of features to support machine learning use cases over the last few months. In particular I’ve been keen to try out vecs, their Python library for managing postgres databases that have the pgvector extension enabled. It’s completely open source, available on <a href="https://pypi.org/project/vecs/">PyPI</a> and works with any pgvector database, not just Supabase.</p>
 <p>Recently they also announced that they’ve integrated Huggingface models, so here I’ll show you how you can use them too in the context of searching documents for movie reviews.</p>
 <p><em>This post was written as part of Supabase’s AI content storm - go check it out for all the other exciting work people have done.</em></p>
-<h1 id="vector-databases">Vector Databases?</h1>
+<h2 id="vector-databases">Vector Databases?</h2>
 <p>If you’re new to machine learning and everything that goes with it, you might wonder what vector databases are in the first place. Vector databases allow us to store embeddings. An embedding measures how similar pieces of text are and is stored as a vector.</p>
 <p>This means if we calculate the embeddings for different pieces of text and the vectors measure them as far from one another, they are not very similar. If they are closer, they are more similar. This makes them really useful for things like search.</p>
-<h1 id="using-vecs-with-supabase">Using Vecs with Supabase</h1>
+<h2 id="using-vecs-with-supabase">Using Vecs with Supabase</h2>
 <p>Supabase has a vector extension that needs to be enabled on your database before you can start using pgvector. Once enabled, you can then use vecs to manage it.</p>
 <p>Install vecs along with the optional dependencies for text embeddings into a virtual environment using your favourite dependency manager. Here’s how to do that using pip:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">python -m venv .venv</span></span>
@@ -146,7 +146,7 @@
 <span class="line"></span>
 <span class="line"><span style="color: #8B949E"># create vector store client</span></span>
 <span class="line"><span style="color: #C9D1D9">vx </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> vecs.create_client(</span><span style="color: #79C0FF">DB_CONNECTION</span><span style="color: #C9D1D9">)</span></span></code></pre>
-<h1 id="creating-embeddings-with-ollama">Creating Embeddings with Ollama</h1>
+<h2 id="creating-embeddings-with-ollama">Creating Embeddings with Ollama</h2>
 <p>I wanted to create a number of entries for recent movies that typically fall outside of the context window for large language models. I’m going to store a large text description for each movie taken from wikipedia and search our documents.</p>
 <p>First I need to take my text description and calculate the embeddings for it. I could pass embeddings to vecs but I’d need something else to create those embeddings first.</p>
 <p>Here’s an example of how that might be done with Ollama running locally using mistral:</p>
@@ -180,7 +180,7 @@
 <span class="line"><span style="color: #C9D1D9">    ]</span></span>
 <span class="line"><span style="color: #C9D1D9">)</span></span></code></pre>
 <p>What makes this process even more difficult is that text will typically need to be broken up (or chunked) since each article will be longer in length than the mistral model can cope with.</p>
-<h1 id="using-huggingface-embeddings">Using Huggingface Embeddings</h1>
+<h2 id="using-huggingface-embeddings">Using Huggingface Embeddings</h2>
 <p>Luckily vecs has some neat ways of making this much easier through text embeddings provided by Huggingface. Additionally, instead of having to chunk my text myself or include another library to do so, I can also hand this off to vecs.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">docs </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> vx.get_or_create_collection(</span></span>
 <span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">name</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"docs"</span><span style="color: #C9D1D9">,</span></span>
@@ -217,7 +217,7 @@
 <span class="line"><span style="color: #C9D1D9">        ),</span></span>
 <span class="line"><span style="color: #C9D1D9">    ]</span></span>
 <span class="line"><span style="color: #C9D1D9">)</span></span></code></pre>
-<h1 id="querying-our-data">Querying Our Data</h1>
+<h2 id="querying-our-data">Querying Our Data</h2>
 <p>Querying our records is really simple once we’ve stored them with embeddings. We’ve stored some metadata along with out docs which we specify to include as part of the response setting <code>include_metadata=True</code>. When we send a text query, we’re asking how similar our stored text is to the query we make.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">results </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> docs.query(</span></span>
 <span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">data</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"movies directed by the wachowskis"</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">limit</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">3</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">include_metadata</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">True</span></span>
@@ -240,7 +240,7 @@
 <span class="line"><span style="color: #C9D1D9">Result film1_para_027: The Creator (2023)</span></span>
 <span class="line"><span style="color: #C9D1D9">Result film1_para_042: The Creator (2023)</span></span>
 <span class="line"><span style="color: #C9D1D9">Result film1_para_046: The Creator (2023)</span></span></code></pre>
-<h1 id="further-work">Further Work</h1>
+<h2 id="further-work">Further Work</h2>
 <p>It’s great to see the improvements Supabase are making to vecs with time. There’s so many things I want to make with it. I’m keen to explore how I can integrate langchain to allow me to combine Ollama with Supabase and query my collections using natural language.</p>
 		</div>
 	</article>
