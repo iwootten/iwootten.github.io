@@ -149,7 +149,7 @@
 <h2 id="creating-embeddings-with-ollama">Creating Embeddings with Ollama</h2>
 <p>I wanted to create a number of entries for recent movies that typically fall outside of the context window for large language models. I’m going to store a large text description for each movie taken from wikipedia and search our documents.</p>
 <p>First I need to take my text description and calculate the embeddings for it. I could pass embeddings to vecs but I’d need something else to create those embeddings first.</p>
-<p>Here’s an example of how that might be done with Ollama running locally using mistral:</p>
+<p>Here’s an example of how that might be done with <a href="https://ollama.ai">Ollama</a> running locally using mistral:</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> requests</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #C9D1D9">url </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">"http://localhost:11434/api/embeddings"</span></span>
