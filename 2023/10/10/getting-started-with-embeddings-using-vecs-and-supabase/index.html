@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Getting Started with Embeddings Using vecs and Supabase — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="I've been wanting to try out the vecs library from Supabase for some time." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="Getting Started with Embeddings Using vecs and Supabase" />
+<meta property="og:description" content="I've been wanting to try out the vecs library from Supabase for some time." />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/10/10/getting-started-with-embeddings-using-vecs-and-supabase/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.d0621e32.png" />
+<meta property="og:image:alt" content="Getting Started with Embeddings Using vecs and Supabase" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/10/10/getting-started-with-embeddings-using-vecs-and-supabase/" />
+
+
+<!-- Or Google Fonts -->
+
+<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
+
+
+
+<script defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
+
+
+	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.9a3e7945.css" />
+<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
+</script>
+<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+	💻&nbsp;&nbsp;Ian Wootten</span>
+			</a>
+			<div class="flex items-center md:hidden">
+				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
+</button>
+			</div>
+		</div>
+		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
+					</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header><main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
+		<header>
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-10-10T10:09:00.000Z">Oct 10, 2023</time> ~ 5 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Getting Started with Embeddings Using vecs and Supabase
+			</h1>
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/ai/">ai</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/supabase/">supabase</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/embeddings/">embeddings</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/databases/">databases</a>
+				</li>
+		</ul>
+			</div>
+			
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p><a href="https://supabase.com">Supabase</a> have been adding a huge number of features to support machine learning use cases over the last few months. In particular I’ve been keen to try out vecs, their Python library for managing postgres databases that have the pgvector extension enabled. It’s completely open source, available on <a href="https://pypi.org/project/vecs/">PyPI</a> and works with any pgvector database, not just Supabase.</p>
+<p>Recently they also announced that they’ve integrated Huggingface models, so here I’ll show you how you can use them too in the context of searching documents for movie reviews.</p>
+<p><em>This post was written as part of Supabase’s AI content storm - go check it out for all the other exciting work people have done.</em></p>
+<h1 id="vector-databases">Vector Databases?</h1>
+<p>If you’re new to machine learning and everything that goes with it, you might wonder what vector databases are in the first place. Vector databases allow us to store embeddings. An embedding measures how similar pieces of text are and is stored as a vector.</p>
+<p>This means if we calculate the embeddings for different pieces of text and the vectors measure them as far from one another, they are not very similar. If they are closer, they are more similar. This makes them really useful for things like search.</p>
+<h1 id="using-vecs-with-supabase">Using Vecs with Supabase</h1>
+<p>Supabase has a vector extension that needs to be enabled on your database before you can start using pgvector. Once enabled, you can then use vecs to manage it.</p>
+<p>Install vecs along with the optional dependencies for text embeddings into a virtual environment using your favourite dependency manager. Here’s how to do that using pip:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">python -m venv .venv</span></span>
+<span class="line"><span style="color: #79C0FF">source</span><span style="color: #C9D1D9"> ./.venv/bin/activate</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">pip install </span><span style="color: #A5D6FF">"vecs[text_embedding]"</span></span></code></pre>
+<p>Create a new vecs client using the credentials for your database. Use the postgres details found on your API settings page for your db if you’re using Supabase.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> vecs</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79C0FF">DB_CONNECTION</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">"postgresql://&#x3C;user>:&#x3C;password>@&#x3C;host>:&#x3C;port>/&#x3C;db_name>"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #8B949E"># create vector store client</span></span>
+<span class="line"><span style="color: #C9D1D9">vx </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> vecs.create_client(</span><span style="color: #79C0FF">DB_CONNECTION</span><span style="color: #C9D1D9">)</span></span></code></pre>
+<h1 id="creating-embeddings-with-ollama">Creating Embeddings with Ollama</h1>
+<p>I wanted to create a number of entries for recent movies that typically fall outside of the context window for large language models. I’m going to store a large text description for each movie taken from wikipedia and search our documents.</p>
+<p>First I need to take my text description and calculate the embeddings for it. I could pass embeddings to vecs but I’d need something else to create those embeddings first.</p>
+<p>Here’s an example of how that might be done with Ollama running locally using mistral:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> requests</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">url </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">"http://localhost:11434/api/embeddings"</span></span>
+<span class="line"><span style="color: #C9D1D9">headers </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span><span style="color: #A5D6FF">"Content-Type"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"application/json"</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">data </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #A5D6FF">"model"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"mistral"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #A5D6FF">"prompt"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"Here is an article about my movie..."</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">response </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> requests.post(url, </span><span style="color: #FFA657">headers</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">headers, </span><span style="color: #FFA657">data</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">json.dumps(data))</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">embedding </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> response.json()[</span><span style="color: #A5D6FF">"embedding"</span><span style="color: #C9D1D9">]</span></span></code></pre>
+<p>In the case of an embdding created by mistral, the number of dimensions is 4096. When we create a vector collection, we’d need to create it with the same amount of dimensions. Here’s how to do that before upserting two documents as created above.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">docs </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> vx.get_or_create_collection(</span><span style="color: #FFA657">name</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"docs"</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">dimension</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">4096</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">docs.upsert(</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">records</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">[</span></span>
+<span class="line"><span style="color: #C9D1D9">        (</span></span>
+<span class="line"><span style="color: #C9D1D9">         </span><span style="color: #A5D6FF">"film0"</span><span style="color: #C9D1D9">,           </span></span>
+<span class="line"><span style="color: #C9D1D9">         embedding_1,</span></span>
+<span class="line"><span style="color: #C9D1D9">         {</span><span style="color: #A5D6FF">"year"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">2021</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">        ),</span></span>
+<span class="line"><span style="color: #C9D1D9">        (</span></span>
+<span class="line"><span style="color: #C9D1D9">         </span><span style="color: #A5D6FF">"film1"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">         embedding_2,</span></span>
+<span class="line"><span style="color: #C9D1D9">         {</span><span style="color: #A5D6FF">"year"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">2023</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">        )</span></span>
+<span class="line"><span style="color: #C9D1D9">    ]</span></span>
+<span class="line"><span style="color: #C9D1D9">)</span></span></code></pre>
+<p>What makes this process even more difficult is that text will typically need to be broken up (or chunked) since each article will be longer in length than the mistral model can cope with.</p>
+<h1 id="using-huggingface-embeddings">Using Huggingface Embeddings</h1>
+<p>Luckily vecs has some neat ways of making this much easier through text embeddings provided by Huggingface. Additionally, instead of having to chunk my text myself or include another library to do so, I can also hand this off to vecs.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">docs </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> vx.get_or_create_collection(</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">name</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"docs"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">adapter</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">Adapter(</span></span>
+<span class="line"><span style="color: #C9D1D9">        [</span></span>
+<span class="line"><span style="color: #C9D1D9">            ParagraphChunker(</span><span style="color: #FFA657">skip_during_query</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">True</span><span style="color: #C9D1D9">),</span></span>
+<span class="line"><span style="color: #C9D1D9">            TextEmbedding(</span><span style="color: #FFA657">model</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"all-MiniLM-L6-v2"</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">batch_size</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">8</span><span style="color: #C9D1D9">),</span></span>
+<span class="line"><span style="color: #C9D1D9">        ]</span></span>
+<span class="line"><span style="color: #C9D1D9">    ),</span></span>
+<span class="line"><span style="color: #C9D1D9">)</span></span></code></pre>
+<p>Here, we define a paragraph chunker as an adapter to break a document into manageable chunks, followed by creating text embedding adapter for each chunk using the <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2">all-MiniLM-L6-v2</a> sentence transformer model.</p>
+<p>To upsert using that approach we now can just pass the text we want to use, skipping creating the embeddings manually with Ollama.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">docs.upsert(</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">records</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">[</span></span>
+<span class="line"><span style="color: #C9D1D9">        (</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #A5D6FF">"film0"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #A5D6FF">"The Matrix Resurrections is a 2021 American science fiction action film produced, co-written, and directed by Lana Wachowski, and the first in the Matrix franchise to be directed solely.."</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">            {</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"title"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"The Matrix Resurrections"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"year"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">2021</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"director"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"Lana Wachowski"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"text"</span><span style="color: #C9D1D9">: film_data[</span><span style="color: #A5D6FF">"film0"</span><span style="color: #C9D1D9">]</span></span>
+<span class="line"><span style="color: #C9D1D9">            },</span></span>
+<span class="line"><span style="color: #C9D1D9">        ),</span></span>
+<span class="line"><span style="color: #C9D1D9">        (</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #A5D6FF">"film1"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #A5D6FF">"The Creator is a 2023 American science fiction film produced and directed by Gareth Edwards, who co-wrote the screenplay with Chris Weitz. After a nuclear detonation in Los Angeles and a war against artificial intelligence.."</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">            {</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"title"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"The Creator"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"year"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">2023</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"director"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"Gareth Edwards"</span><span style="color: #C9D1D9">,</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"text"</span><span style="color: #C9D1D9">: film_data[</span><span style="color: #A5D6FF">"film1"</span><span style="color: #C9D1D9">],</span></span>
+<span class="line"><span style="color: #C9D1D9">            },</span></span>
+<span class="line"><span style="color: #C9D1D9">        ),</span></span>
+<span class="line"><span style="color: #C9D1D9">    ]</span></span>
+<span class="line"><span style="color: #C9D1D9">)</span></span></code></pre>
+<h1 id="querying-our-data">Querying Our Data</h1>
+<p>Querying our records is really simple once we’ve stored them with embeddings. We’ve stored some metadata along with out docs which we specify to include as part of the response setting <code>include_metadata=True</code>. When we send a text query, we’re asking how similar our stored text is to the query we make.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">results </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> docs.query(</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">data</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"movies directed by the wachowskis"</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">limit</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">3</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">include_metadata</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">True</span></span>
+<span class="line"><span style="color: #C9D1D9">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #FF7B72">for</span><span style="color: #C9D1D9"> doc_id, metadata </span><span style="color: #FF7B72">in</span><span style="color: #C9D1D9"> results:</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #79C0FF">print</span><span style="color: #C9D1D9">(</span><span style="color: #FF7B72">f</span><span style="color: #A5D6FF">"Result </span><span style="color: #79C0FF">{</span><span style="color: #C9D1D9">doc_id</span><span style="color: #79C0FF">}</span><span style="color: #A5D6FF">: </span><span style="color: #79C0FF">{</span><span style="color: #C9D1D9">metadata[</span><span style="color: #A5D6FF">'title'</span><span style="color: #C9D1D9">]</span><span style="color: #79C0FF">}</span><span style="color: #A5D6FF"> (</span><span style="color: #79C0FF">{</span><span style="color: #C9D1D9">metadata[</span><span style="color: #A5D6FF">'year'</span><span style="color: #C9D1D9">]</span><span style="color: #79C0FF">}</span><span style="color: #A5D6FF">)"</span><span style="color: #C9D1D9">)</span></span></code></pre>
+<p>We can see the first 3 results returned are paragraphs from the first article.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">Result film0_para_001: The Matrix Resurrections (2021)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film0_para_027: The Matrix Resurrections (2021)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film0_para_013: The Matrix Resurrections (2021)</span></span></code></pre>
+<p>The eagle eyed might be thinking, that we could have stored this in a relational db by using an article along with attributes for each of the metadata values.</p>
+<p>Another example might be querying using text that is particularly difficult using a non-vector database. Here I query with “Good sci-fi movie with robots”. Even when doubling my limit to 6 results, there’s only occurrences of “The Creator” in this list indicating it’s a strong match from our collection.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">results </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> films.query(</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">data</span><span style="color: #FF7B72">=</span><span style="color: #A5D6FF">"Good sci-fi movie with robots"</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">limit</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">5</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">include_metadata</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">True</span></span>
+<span class="line"><span style="color: #C9D1D9">)</span></span></code></pre>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">Result film1_para_041: The Creator (2023)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film1_para_036: The Creator (2023)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film1_para_043: The Creator (2023)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film1_para_027: The Creator (2023)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film1_para_042: The Creator (2023)</span></span>
+<span class="line"><span style="color: #C9D1D9">Result film1_para_046: The Creator (2023)</span></span></code></pre>
+<h1 id="further-work">Further Work</h1>
+<p>It’s great to see the improvements Supabase are making to vecs with time. There’s so many things I want to make with it. I’m keen to explore how I can integrate langchain to allow me to combine Ollama with Supabase and query my collections using natural language.</p>
+		</div>
+	</article>
+	<section class="relative astro-LWWYAVEQ">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-LWWYAVEQ">
+		<div class="py-12 md:py-20 astro-LWWYAVEQ">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-LWWYAVEQ">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-LWWYAVEQ">
+					Subscribe for Exclusives
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-LWWYAVEQ">
+					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-LWWYAVEQ">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-LWWYAVEQ" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-LWWYAVEQ" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-LWWYAVEQ" type="submit">Subscribe</button>
+						<strong class="feedback astro-LWWYAVEQ">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+	</main><footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				&copy; 2003-2023 Ian Wootten
+			</div>
+		</div>
+	</div>
+</footer>
+		<script>
+	// Set "light" theme as default
+	// if (!localStorage.theme) {
+	//   localStorage.theme = "light";
+	// }
+
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches && matches.length) {
+			matches.forEach((elem) => {
+				elem.addEventListener(event, () => fn(elem), false);
+			});
+		}
+	}
+
+	window.onload = function () {
+		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+			elem.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+
+		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+			document.documentElement.classList.toggle('dark');
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		});
+	};
+	window.onpageshow = function () {
+		const elem = document.querySelector('[data-aw-toggle-menu]');
+		if (elem) {
+			elem.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+
+		
+	</body>
+</html>
