@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
+	<head>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Publishing Dev Tips with Next.js, Supabase Auth and Notion — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Let's build a webapp for publishing coding tips stored in Notion to a static blog." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="Publishing Dev Tips with Next.js, Supabase Auth and Notion" />
+<meta property="og:description" content="Let's build a webapp for publishing coding tips stored in Notion to a static blog." />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2023/12/22/publishing-dev-tips-with-next-js-supabase-auth-and-notion/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.22e15004.png" />
+<meta property="og:image:alt" content="Publishing Dev Tips with Next.js, Supabase Auth and Notion" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2023/12/22/publishing-dev-tips-with-next-js-supabase-auth-and-notion/" />
+
+
+<!-- Or Google Fonts -->
+
+<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
+
+
+
+<script defer data-domain="ianwootten.co.uk" src="https://analytics.niftydigits.com/js/plausible.js"></script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
+
+
+	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.9a3e7945.css" />
+<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
+</script>
+<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
+		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
+	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+		<div class="flex justify-between">
+			<a class="flex items-center" href="/">
+				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+	💻&nbsp;&nbsp;Ian Wootten</span>
+			</a>
+			<div class="flex items-center md:hidden">
+				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
+</button>
+			</div>
+		</div>
+		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
+					</a>
+				</li>
+				<li>
+					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
+</button>
+					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header><main>
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
+		<header>
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2023-12-22T08:09:00.000Z">Dec 22, 2023</time> ~ 6 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Publishing Dev Tips with Next.js, Supabase Auth and Notion
+			</h1>
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
+				<ul class="text-sm">
+			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/auth/">auth</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/openid/">openid</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/supabase/">supabase</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/notion/">notion</a>
+				</li>
+		</ul>
+			</div>
+			
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>I store a list of interesting coding tips that are new to me throughout my working day within Notion. The idea is that if any of them are helpful enough I can go ahead and turn them into actual blog posts when I’m not deep in the midst of some problem.</p>
+<p>Putting them in Notion mean’s it’s easy to access from any of my machines when noting them down, but not that accessible when I come to use them. I’ve previously written scripts that pluck the posts and write them out to my local disk in markdown based on if tags I’ve used as metadata.</p>
+<p>I decided what might be nicer though is a complete Next.js app to pick the posts I want to publish, preview them in the browser and download in a markdown format for me to use in my Astro blog here. It sounds pretty convoluted, but Supabase Auth makes it super simple to do this.</p>
+<h2 id="defining-the-integration">Defining the Integration</h2>
+<p>First in notion we need to define our integration along with it’s capabilities. Supabase has some <a href="https://supabase.com/docs/guides/auth/social-login/auth-notion">good docs</a> on how to set this up so I won’t repeat them here. The only notable difference is I want to read content as well, so I need to make sure I also add that as a capability when defining things in Notion.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/notion-integration.e0798262_Z28UorH.avif 600w,/assets/notion-integration.e0798262_ZBt5cT.avif 900w"><source type="image/webp" srcset="/assets/notion-integration.e0798262_Z1pzztV.webp 600w,/assets/notion-integration.e0798262_6QIJR.webp 900w"><source type="image/png" srcset="/assets/notion-integration.e0798262_Z1Gizns.png 600w,/assets/notion-integration.e0798262_Z1thiIY.png 900w">
+			<img width="900" height="750" src="/assets/notion-integration.e0798262_Z1MXrur.png" loading="lazy" decoding="async" alt="Setting Up the Integration" class="">
+		</picture>
+<h2 id="handling-sign-in-in-nextjs">Handling Sign-In in Next.js</h2>
+<p>Supabase makes the actual log in very simple with Next.js by providing <a href="https://github.com/supabase/auth-helpers">auth helpers</a> we can drop straight in.</p>
+<p>You can see in my Login Form code below that I’m using a fairly generic method that’s able to cope with calls to multiple providers and that I also give the option for signing in with Google. I’m using shadcn/ui to style components in my form.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { createClientComponentClient } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;@supabase/auth-helpers-nextjs&#39;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { Button } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;@/components/ui/button&quot;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { Input } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;@/components/ui/input&quot;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { Label } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;@/components/ui/label&quot;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { toast } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;@/components/ui/use-toast&quot;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { Icons } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;@/components/icons&quot;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">type</span><span style="color:#C9D1D9"> { Database } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;@/lib/database.types&#39;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">type</span><span style="color:#C9D1D9"> { Session } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;@supabase/auth-helpers-nextjs&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">default</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">function</span><span style="color:#FFA657"> </span><span style="color:#D2A8FF">LoginForm</span><span style="color:#FFA657">({ session }</span><span style="color:#FF7B72">:</span><span style="color:#FFA657"> { session</span><span style="color:#FF7B72">:</span><span style="color:#FFA657"> Session </span><span style="color:#FF7B72">|</span><span style="color:#FFA657"> </span><span style="color:#79C0FF">null</span><span style="color:#FFA657"> }) </span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> [</span><span style="color:#79C0FF">isLoading</span><span style="color:#C9D1D9">, </span><span style="color:#79C0FF">setIsLoading</span><span style="color:#C9D1D9">] </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">useState</span><span style="color:#C9D1D9">&lt;</span><span style="color:#79C0FF">boolean</span><span style="color:#C9D1D9">&gt;(</span><span style="color:#79C0FF">false</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">supabase</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">createClientComponentClient</span><span style="color:#C9D1D9">&lt;</span><span style="color:#FFA657">Database</span><span style="color:#C9D1D9">&gt;()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">handleSignInWithSocial</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">provider</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">any</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#D2A8FF">setIsLoading</span><span style="color:#C9D1D9">(</span><span style="color:#79C0FF">true</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> {</span><span style="color:#79C0FF">data</span><span style="color:#C9D1D9">, </span><span style="color:#79C0FF">error</span><span style="color:#C9D1D9">} </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> supabase.auth.</span><span style="color:#D2A8FF">signInWithOAuth</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">        provider: provider,</span></span>
+<span class="line"><span style="color:#C9D1D9">        options: {</span></span>
+<span class="line"><span style="color:#C9D1D9">          redirectTo: </span><span style="color:#A5D6FF">`${</span><span style="color:#C9D1D9">location</span><span style="color:#A5D6FF">.</span><span style="color:#C9D1D9">origin</span><span style="color:#A5D6FF">}/auth/callback`</span></span>
+<span class="line"><span style="color:#C9D1D9">        }</span></span>
+<span class="line"><span style="color:#C9D1D9">    })</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#D2A8FF">setIsLoading</span><span style="color:#C9D1D9">(</span><span style="color:#79C0FF">false</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (error) {</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">toast</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">        title: </span><span style="color:#A5D6FF">&quot;Something went wrong.&quot;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">        description: </span><span style="color:#A5D6FF">&quot;Your sign in request failed. Please try again.&quot;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">        variant: </span><span style="color:#A5D6FF">&quot;destructive&quot;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">      })</span></span>
+<span class="line"><span style="color:#C9D1D9">    }</span></span>
+<span class="line"><span style="color:#C9D1D9">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> (</span></span>
+<span class="line"><span style="color:#C9D1D9">    &lt;</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">className</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;grid gap-6&quot;</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">      ...</span></span>
+<span class="line"><span style="color:#C9D1D9">      &lt;</span><span style="color:#7EE787">Button</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">variant</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;outline&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">type</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;button&quot;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">disabled</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">isLoading</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">onClick</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">() </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">handleSignInWithSocial</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;notion&#39;</span><span style="color:#C9D1D9">)</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#FF7B72">{</span><span style="color:#C9D1D9">isLoading </span><span style="color:#FF7B72">?</span><span style="color:#C9D1D9"> (</span></span>
+<span class="line"><span style="color:#C9D1D9">          &lt;</span><span style="color:#7EE787">Icons.spinner</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">className</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;mr-2 h-4 w-4 animate-spin&quot;</span><span style="color:#C9D1D9"> /&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        ) </span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> (</span></span>
+<span class="line"><span style="color:#C9D1D9">          &lt;</span><span style="color:#7EE787">Icons.google</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">className</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;mr-2 h-4 w-4&quot;</span><span style="color:#C9D1D9"> /&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        )</span><span style="color:#FF7B72">}{</span><span style="color:#A5D6FF">&quot; &quot;</span><span style="color:#FF7B72">}</span></span>
+<span class="line"><span style="color:#C9D1D9">        Notion</span></span>
+<span class="line"><span style="color:#C9D1D9">      &lt;/</span><span style="color:#7EE787">Button</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">    &lt;/</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">  )</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>When added to a page under app/(auth)/login this is what that ends up looking like. You should ignore the alternative sign in methods shown in this image, they’re redundant since they won’t provide access to the notion data I want to access.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/login-form.db9639a0_1SvEBj.avif 750w"><source type="image/webp" srcset="/assets/login-form.db9639a0_Z2skEeQ.webp 750w"><source type="image/png" srcset="/assets/login-form.db9639a0_ZpiSTl.png 750w">
+			<img width="750" height="516" src="/assets/login-form.db9639a0_22ktKt.png" loading="lazy" decoding="async" alt="The Login form" class="">
+		</picture>
+<h2 id="saving-the-provider-token">Saving the Provider Token</h2>
+<p>I also need a way of talking with notion within my app. By default Supabase kindly hides away the complexity of auth but I want to be able to refer back to the open id token notion provides to Supabase. To do that I need to intercept the callback coming from notion and store it in a table.</p>
+<p>I’ve defined a profiles table that stores the provider tokens against the supabase user id. In my Next.js auth/callback/route.ts I define a route handler like so:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { createRouteHandlerClient } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;@supabase/auth-helpers-nextjs&#39;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { cookies } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;next/headers&#39;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { NextResponse } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;next/server&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">type</span><span style="color:#C9D1D9"> { NextRequest } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;next/server&#39;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">type</span><span style="color:#C9D1D9"> { Database } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;@/lib/database.types&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">function</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">GET</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">request</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#FFA657">NextRequest</span><span style="color:#C9D1D9">) {</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">requestUrl</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">new</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">URL</span><span style="color:#C9D1D9">(request.url)</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">code</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> requestUrl.searchParams.</span><span style="color:#D2A8FF">get</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;code&#39;</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (code) {</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">supabase</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">createRouteHandlerClient</span><span style="color:#C9D1D9">&lt;</span><span style="color:#FFA657">Database</span><span style="color:#C9D1D9">&gt;({ cookies })</span></span>
+<span class="line"><span style="color:#C9D1D9">    supabase.auth.</span><span style="color:#D2A8FF">onAuthStateChange</span><span style="color:#C9D1D9">(</span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9"> (</span><span style="color:#FFA657">event</span><span style="color:#C9D1D9">, </span><span style="color:#FFA657">session</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">=&gt;</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">      </span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9">(session?.provider_token) {</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> supabase.</span><span style="color:#D2A8FF">from</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&#39;profiles&#39;</span><span style="color:#C9D1D9">).</span><span style="color:#D2A8FF">upsert</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">          user_id: session.user.id,</span></span>
+<span class="line"><span style="color:#C9D1D9">          provider_token: session.provider_token</span></span>
+<span class="line"><span style="color:#C9D1D9">        })</span></span>
+<span class="line"><span style="color:#C9D1D9">      }</span></span>
+<span class="line"><span style="color:#C9D1D9">    })</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> supabase.auth.</span><span style="color:#D2A8FF">exchangeCodeForSession</span><span style="color:#C9D1D9">(code)</span></span>
+<span class="line"><span style="color:#C9D1D9">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#8B949E">// URL to redirect to after sign in process completes</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> NextResponse.</span><span style="color:#D2A8FF">redirect</span><span style="color:#C9D1D9">(requestUrl.origin)</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>You can see that I’m looking to see if the session provider_token exists when state changes and store it along with the user id to the profiles table. We use upsert to always update the token to be the latest value from notion. Now we have access to this from any of our app pages.</p>
+<h2 id="turning-notion-pages-into-markdown">Turning Notion Pages into Markdown</h2>
+<p>The final piece of the puzzle is taking the tips stored in notion and turning them into something able to be previewed and later downloaded. For that I use the official notion client and <a href="https://github.com/souvikinator/notion-to-md">notion-to-md</a> to take a notion page id and turn it into a string. Notions underlying block structure is really quite confusing to work with if you just want to grab a full page - I’d definitely recommend a library for this. I have a server action  “getNotionPage” defined in my actions.tsx which handles this.</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> { </span><span style="color:#79C0FF">Client</span><span style="color:#C9D1D9"> } </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">require</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&quot;@notionhq/client&quot;</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">async</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">function</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">getNotionPage</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">target_page_id</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">string</span><span style="color:#C9D1D9">) {</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> {</span><span style="color:#79C0FF">supabase</span><span style="color:#C9D1D9">, </span><span style="color:#79C0FF">session</span><span style="color:#C9D1D9">} </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">getSupabase</span><span style="color:#C9D1D9">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> { </span><span style="color:#FFA657">data</span><span style="color:#C9D1D9">: </span><span style="color:#79C0FF">profile</span><span style="color:#C9D1D9"> } </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> supabase</span></span>
+<span class="line"><span style="color:#C9D1D9">    .</span><span style="color:#D2A8FF">from</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&quot;profiles&quot;</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"><span style="color:#C9D1D9">    .</span><span style="color:#D2A8FF">select</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&quot;provider_token&quot;</span><span style="color:#C9D1D9">)</span></span>
+<span class="line"><span style="color:#C9D1D9">    .</span><span style="color:#D2A8FF">eq</span><span style="color:#C9D1D9">(</span><span style="color:#A5D6FF">&quot;user_id&quot;</span><span style="color:#C9D1D9">, session?.user?.id)</span></span>
+<span class="line"><span style="color:#C9D1D9">    .</span><span style="color:#D2A8FF">single</span><span style="color:#C9D1D9">()</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">notion</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">new</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">Client</span><span style="color:#C9D1D9">({</span></span>
+<span class="line"><span style="color:#C9D1D9">    auth: profile?.provider_token </span><span style="color:#FF7B72">as</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">string</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">  })</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">n2m</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">new</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">NotionToMarkdown</span><span style="color:#C9D1D9">({ </span></span>
+<span class="line"><span style="color:#C9D1D9">    notionClient: notion</span></span>
+<span class="line"><span style="color:#C9D1D9">  })</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">mdblocks</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> n2m.</span><span style="color:#D2A8FF">pageToMarkdown</span><span style="color:#C9D1D9">(target_page_id);</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">mdString</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> n2m.</span><span style="color:#D2A8FF">toMarkdownString</span><span style="color:#C9D1D9">(mdblocks);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> {</span></span>
+<span class="line"><span style="color:#C9D1D9">    title: </span><span style="color:#A5D6FF">&quot;Import Preview&quot;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">    markdown: mdString.parent</span></span>
+<span class="line"><span style="color:#C9D1D9">  }</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>To render a preview the data, I’m using next-mdx-remote. Under an import/[id]/page.tsx I define a PreviewPage that displays the page preview using the string returned by getNotionPage:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">...</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { getNotionPage } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&quot;@/app/actions&quot;</span></span>
+<span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> { MDXRemote } </span><span style="color:#FF7B72">from</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;next-mdx-remote/rsc&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">default</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">async</span><span style="color:#FFA657"> </span><span style="color:#FF7B72">function</span><span style="color:#FFA657"> </span><span style="color:#D2A8FF">PreviewPage</span><span style="color:#FFA657">({</span></span>
+<span class="line"><span style="color:#FFA657">  params: { id },</span></span>
+<span class="line"><span style="color:#FFA657">}</span><span style="color:#FF7B72">:</span><span style="color:#FFA657"> {</span></span>
+<span class="line"><span style="color:#FFA657">  params</span><span style="color:#FF7B72">:</span><span style="color:#FFA657"> { id</span><span style="color:#FF7B72">:</span><span style="color:#FFA657"> </span><span style="color:#79C0FF">string</span><span style="color:#FFA657"> };</span></span>
+<span class="line"><span style="color:#FFA657">}) </span><span style="color:#C9D1D9">{</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">const</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">notImported</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">await</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">getNotionPage</span><span style="color:#C9D1D9">(id)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> (</span></span>
+<span class="line"><span style="color:#C9D1D9">    &lt;</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">className</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;hidden flex-col md:flex&quot;</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">className</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;flex-1&quot;</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">          &lt;</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">className</span><span style="color:#FF7B72">=</span><span style="color:#A5D6FF">&quot;prose&quot;</span><span style="color:#C9D1D9"> &gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">            &lt;</span><span style="color:#7EE787">h1</span><span style="color:#C9D1D9">&gt;</span><span style="color:#FF7B72">{</span><span style="color:#C9D1D9">notImported.title</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9">&lt;/</span><span style="color:#7EE787">h1</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">            &lt;</span><span style="color:#7EE787">MDXRemote</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">source</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9"> notImported.markdown </span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">options</span><span style="color:#FF7B72">={</span><span style="color:#C9D1D9">options</span><span style="color:#FF7B72">}</span><span style="color:#C9D1D9"> /&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">          &lt;/</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">        &lt;/</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">    &lt;/</span><span style="color:#7EE787">div</span><span style="color:#C9D1D9">&gt;</span></span>
+<span class="line"><span style="color:#C9D1D9">  );</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>Here’s how all that looks when rendered in the app frontend. The rest of the app is navigating through the notion db structure that stores these pages to find them prior to preview.</p>
+<picture>
+			<source type="image/avif" srcset="/assets/page-preview.a0cd988e_Tvrle.avif 750w"><source type="image/webp" srcset="/assets/page-preview.a0cd988e_1CQgj0.webp 750w"><source type="image/png" srcset="/assets/page-preview.a0cd988e_ZreXgv.png 750w">
+			<img width="750" height="952" src="/assets/page-preview.a0cd988e_Z1NWkuq.png" loading="lazy" decoding="async" alt="Page Preview" class="">
+		</picture>
+<h2 id="conclusion">Conclusion</h2>
+<p>Being able to take advantage of Supabase Auth without necessarily making extensive use of the database is really useful. We have a tiny profiles table that only requires a couple of fields to navigate and download the markdown I need.</p>
+<p>To take this one step further I could have my app automatically open a commit to the chosen page to my blogs Astro repo, which gets automatically rebuilt and published. That way I’d write my content in notion, select the tip I wanted, mark it as published and it need never touch my machine.</p>
+		</div>
+	</article>
+	<section class="relative astro-LWWYAVEQ">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-LWWYAVEQ">
+		<div class="py-12 md:py-20 astro-LWWYAVEQ">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-LWWYAVEQ">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-LWWYAVEQ">
+					Subscribe for Exclusives
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-LWWYAVEQ">
+					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-LWWYAVEQ">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-LWWYAVEQ" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-LWWYAVEQ" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-LWWYAVEQ" type="submit">Subscribe</button>
+						<strong class="feedback astro-LWWYAVEQ">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+	</main><footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
+					</a>
+				</li>
+				<li>
+					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
+						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
+					</a>
+				</li>
+			</ul>
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				&copy; 2003-2023 Ian Wootten
+			</div>
+		</div>
+	</div>
+</footer>
+		<script>
+	// Set "light" theme as default
+	// if (!localStorage.theme) {
+	//   localStorage.theme = "light";
+	// }
+
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+
+	function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches && matches.length) {
+			matches.forEach((elem) => {
+				elem.addEventListener(event, () => fn(elem), false);
+			});
+		}
+	}
+
+	window.onload = function () {
+		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
+			elem.classList.toggle('expanded');
+			document.body.classList.toggle('overflow-hidden');
+			document.getElementById('menu')?.classList.toggle('hidden');
+		});
+
+		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+			document.documentElement.classList.toggle('dark');
+			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		});
+	};
+	window.onpageshow = function () {
+		const elem = document.querySelector('[data-aw-toggle-menu]');
+		if (elem) {
+			elem.classList.remove('expanded');
+		}
+		document.body.classList.remove('overflow-hidden');
+		document.getElementById('menu')?.classList.add('hidden');
+	};
+</script>
+
+		
+	</body>
+</html>
