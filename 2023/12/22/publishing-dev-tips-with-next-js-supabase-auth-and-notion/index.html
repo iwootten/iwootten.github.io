@@ -129,6 +129,7 @@
 			<p>I store a list of interesting coding tips that are new to me throughout my working day within Notion. The idea is that if any of them are helpful enough I can go ahead and turn them into actual blog posts when I’m not deep in the midst of some problem.</p>
 <p>Putting them in Notion mean’s it’s easy to access from any of my machines when noting them down, but not that accessible when I come to use them. I’ve previously written scripts that pluck the posts and write them out to my local disk in markdown based on if tags I’ve used as metadata.</p>
 <p>I decided what might be nicer though is a complete Next.js app to pick the posts I want to publish, preview them in the browser and download in a markdown format for me to use in my Astro blog here. It sounds pretty convoluted, but Supabase Auth makes it super simple to do this.</p>
+<p><em>This post was written as part of Supabase’s content storm - go check it out for all the other exciting work people have done.</em></p>
 <h2 id="defining-the-integration">Defining the Integration</h2>
 <p>First in notion we need to define our integration along with it’s capabilities. Supabase has some <a href="https://supabase.com/docs/guides/auth/social-login/auth-notion">good docs</a> on how to set this up so I won’t repeat them here. The only notable difference is I want to read content as well, so I need to make sure I also add that as a capability when defining things in Notion.</p>
 <picture>
