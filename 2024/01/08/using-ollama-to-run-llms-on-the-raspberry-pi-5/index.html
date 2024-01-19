@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog — Page 28 — Ian Wootten</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
+<title>Using Ollama to Run LLMs on the Raspberry Pi 5 — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Yes, you can run large language models on the Raspberry Pi." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Blog — Page 28 — Ian Wootten" />
-<meta property="og:description" content="Ian Wootten is a Software Developer in Cardiff, UK. He helps companies solve complex problems with simple software. He uses tools like Python, Terraform and Serverless to deliver solutions and iterate quickly." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/page-28/" />
-<meta property="og:type" content="blog" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/default.d89fbbc5_1WbbAJ.jpg" />
-<meta property="og:image:alt" content="Blog — Page 28 — Ian Wootten" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/page-28/" />
+<meta property="og:title" content="Using Ollama to Run LLMs on the Raspberry Pi 5" />
+<meta property="og:description" content="Yes, you can run large language models on the Raspberry Pi." />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2024/01/08/using-ollama-to-run-llms-on-the-raspberry-pi-5/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.86f28296.png" />
+<meta property="og:image:alt" content="Using Ollama to Run LLMs on the Raspberry Pi 5" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2024/01/08/using-ollama-to-run-llms-on-the-raspberry-pi-5/" />
 
 
 <!-- Or Google Fonts -->
@@ -31,6 +31,7 @@
 
 
 	<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
+<link rel="stylesheet" href="/assets/_slug_.9a3e7945.css" />
 <link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
 </script>
 <script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
@@ -100,316 +101,75 @@
 		</nav>
 	</div>
 </header><main>
-		<link rel="stylesheet" href="/assets/_...page_.0987525b.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module">class c extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute("videoid");let e=this.querySelector(".lty-playbtn");if(this.playLabel=e&&e.textContent.trim()||this.getAttribute("playlabel")||"Play",this.style.backgroundImage||(this.posterUrl=`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,c.addPrefetch("preload",this.posterUrl,"image"),this.style.backgroundImage=`url("${this.posterUrl}")`),e||(e=document.createElement("button"),e.type="button",e.classList.add("lty-playbtn"),this.append(e)),!e.textContent){const t=document.createElement("span");t.className="lyt-visually-hidden",t.textContent=this.playLabel,e.append(t)}this.addEventListener("pointerover",c.warmConnections,{once:!0}),this.addEventListener("click",t=>this.addIframe())}static addPrefetch(e,t,o){const n=document.createElement("link");n.rel=e,n.href=t,o&&(n.as=o),document.head.append(n)}static warmConnections(){c.preconnected||(c.addPrefetch("preconnect","https://www.youtube-nocookie.com"),c.addPrefetch("preconnect","https://www.google.com"),c.addPrefetch("preconnect","https://googleads.g.doubleclick.net"),c.addPrefetch("preconnect","https://static.doubleclick.net"),c.preconnected=!0)}addIframe(){const e=new URLSearchParams(this.getAttribute("params")||[]);e.append("autoplay","1");const t=document.createElement("iframe");t.width=560,t.height=315,t.title=this.playLabel,t.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",t.allowFullscreen=!0,t.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${e.toString()}`,this.append(t),this.classList.add("lyt-activated"),this.querySelector("iframe").focus()}}customElements.define("lite-youtube",c);class a extends HTMLElement{videoId;static preconnected=!1;connectedCallback(){this.videoId=encodeURIComponent(this.dataset.id),this.addEventListener("pointerover",a.warmConnections,{once:!0}),this.addEventListener("click",e=>this.addIframe(e))}static addPrefetch(e,t){const o=document.createElement("link");o.rel=e,o.href=t,document.head.append(o)}static warmConnections(){a.preconnected||(a.addPrefetch("preconnect","https://player.vimeo.com"),a.addPrefetch("preconnect","https://i.vimeocdn.com"),a.addPrefetch("preconnect","https://f.vimeocdn.com"),a.addPrefetch("preconnect","https://fresnel.vimeocdn.com"),a.preconnected=!0)}addIframe(e){if(this.classList.contains("ltv-activated"))return;e.preventDefault(),this.classList.add("ltv-activated");const t=encodeURIComponent(this.dataset.t||"0m"),o=new URLSearchParams(this.dataset.params||[]),n=document.createElement("iframe");n.width="640",n.height="360",n.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",n.allowFullscreen=!0,n.src=`https://player.vimeo.com/video/${this.videoId}?${o.toString()}#t=${t}`,this.append(n)}}customElements.define("lite-vimeo",a);
-</script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
 		<header>
-			<h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
-				
-		Blog
-	
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2024-01-08T12:56:39.000Z">Jan 8, 2024</time> ~ 2 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Using Ollama to Run LLMs on the Raspberry Pi 5
 			</h1>
-		</header>
-		<ul>
-	<li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/09/13/a-new-home/">
-					A New Home
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-09-13T00:00:00.000Z">Sep 13, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/09/09/its-not-quite-the-iflea-but/">
-					It&#39;s not quite the iflea, but...
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-09-09T00:00:00.000Z">Sep 9, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/31/musical-interludes/">
-					Musical Interludes
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-31T00:00:00.000Z">Aug 31, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/25/bizarre-dreams/">
-					Bizarre Dreams
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-25T00:00:00.000Z">Aug 25, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/19/trials-unicycling/">
-					Trials Unicycling
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-19T00:00:00.000Z">Aug 19, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
 				<ul class="text-sm">
 			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/unicycling/">unicycling</a>
+					<a href="/tags/youtube/">youtube</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/llms/">llms</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/ai/">ai</a>
 				</li>
 		</ul>
 			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/17/sunny-somerset/">
-					Sunny Somerset
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
 			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-17T00:00:00.000Z">Aug 17, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/11/small-mercies/">
-					Small Mercies
-				</a>
-			</h2>
 		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-11T00:00:00.000Z">Aug 11, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/10/unwanted-affection/">
-					Unwanted Affection?
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-10T00:00:00.000Z">Aug 10, 2005</time> ~
-					1 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/03/ideal-images/">
-					Ideal Images
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-03T00:00:00.000Z">Aug 3, 2005</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2005/08/01/millions-of-wrongs-dont-make-it-right/">
-					Millions of Wrongs don&#39;t Make it Right
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2005-08-01T00:00:00.000Z">Aug 1, 2005</time> ~
-					3 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/faith/">faith</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li>
-</ul><div class="container flex">
-			<div class="flex flex-row mx-auto container justify-between">
-				<a href="/page/27" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none mr-2
-      ">
-					<div class="flex flex-row align-middle">
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-left"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M5 12l6 6M5 12l6-6"/></g></svg>
-						<p class="ml-2">Newer posts</p>
-					</div>
-				</a>
-				<a href="/page/29" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none ">
-					<div class="flex flex-row align-middle">
-						<span class="mr-2">Older posts</span>
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-right"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M13 18l6-6M13 6l6 6"/></g></svg>
-					</div>
-				</a>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>I recently got my hands on a Raspberry Pi 5. It’s made right here in Wales at the Sony factory in Pencoed. I have every previous iteration of it because I’m a massive fanboy manchild.</p>
+<p>With the 5th version, I’ve got the larger 8GB model from Pimoroni for just under £80. I wanted to see if it was possible to run large language models on it and how they performed. Turns out it is and Ollama makes it incredibly easy to do so.</p>
+<h2 id="install">Install</h2>
+<p>I’ve recorded myself going through the motions here in <a href="https://www.youtube.com/watch?v=ewXANEIC8pY">this video</a> and half expected it to fail on a fresh install of Raspbian. It only requires copying the given curl command to install and you can get to straight to downloading and running models. You should of course inspect the script to make sure you’re happy with it’s contents first.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">curl https://ollama.ai/install.sh </span><span style="color: #FF7B72">|</span><span style="color: #C9D1D9"> sh</span></span></code></pre>
+<h2 id="performance">Performance</h2>
+<p>I ran both llama 2 (uncensored) and tinyllama, along with llava to do some image analysis. Initially I was very impressed with tinyllama, which gave responses of about 15 tokens/s. But this was using a model with only 1B parameters. Default models typically start at 7B parameters.</p>
+<p>llama 2 and llava with their default 7B parameter models are as one might expect, much slower. I was getting under 2 token/s for relatively simple prompts for each which meant a response time of several minutes per prompt. For comparison, my 16GB M1 Pro is able to get about 30 tokens/s and my M1 about half that in a couple of seconds.</p>
+<p>If you want to see how each model performs on your own machine, you can supply the —verbose flag before a run:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">ollama run llama2-uncensored --verbose</span></span></code></pre>
+<p>Then go ahead and enter your prompt, in this case I asked for a regex for matching emails. This returns some stats after the model response like the following, explaining how fast the model is running:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">total duration:       3m33.368881798S</span></span>
+<span class="line"><span style="color: #C9D1D9">load duration:        543.462us</span></span>
+<span class="line"><span style="color: #C9D1D9">prompt </span><span style="color: #79C0FF">eval</span><span style="color: #C9D1D9"> count:    33 token(s)</span></span>
+<span class="line"><span style="color: #C9D1D9">prompt </span><span style="color: #79C0FF">eval</span><span style="color: #C9D1D9"> duration: 15.3866445ms</span></span>
+<span class="line"><span style="color: #C9D1D9">prompt </span><span style="color: #79C0FF">eval</span><span style="color: #C9D1D9"> rate:     2.14 tokens/s</span></span>
+<span class="line"><span style="color: #79C0FF">eval</span><span style="color: #C9D1D9"> count:           352 token(s)</span></span>
+<span class="line"><span style="color: #79C0FF">eval</span><span style="color: #C9D1D9"> duration:        3m17.976257s</span></span>
+<span class="line"><span style="color: #79C0FF">eval</span><span style="color: #C9D1D9"> rate:            1.78 tokens/s</span></span></code></pre>
+<p>You can see this isn’t going to win any performance awards on my Pi, but what’s really impressive is this is fully local on a £80 computer! I’ll take that if I have to wait a bit of time for a response. You can imagine in an educational environment using the smaller models like tinyllama would acceptable.</p>
+		</div>
+	</article>
+	<section class="relative astro-LWWYAVEQ">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-LWWYAVEQ">
+		<div class="py-12 md:py-20 astro-LWWYAVEQ">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-LWWYAVEQ">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-LWWYAVEQ">
+					Subscribe for Exclusives
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-LWWYAVEQ">
+					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-LWWYAVEQ">
+					<script defer src="https://unpkg.com/@tryghost/portal@latest/umd/portal.min.js" data-ghost="https://newsletter.ianwootten.co.uk" data-api="https://newsletter.ianwootten.co.uk/ghost/api/content/" data-key="e8ef5be0fe96aacc76c64de1ed"></script>
+					<form class="text-right astro-LWWYAVEQ" data-members-form>
+						<input class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm dark:placeholder-slate-700 dark:text-slate-900 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 astro-LWWYAVEQ" placeholder="Your email address..." type="email" name="email" required="true" data-members-email>
+						<button class="mt-3 btn text-white bg-primary-600 hover:bg-primary-800 mb-4 sm:mb-0 astro-LWWYAVEQ" type="submit">Subscribe</button>
+						<strong class="feedback astro-LWWYAVEQ">Thanks so much! Check your inbox for an activation link.</strong>
+					</form>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+</section>
 	</main><footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
