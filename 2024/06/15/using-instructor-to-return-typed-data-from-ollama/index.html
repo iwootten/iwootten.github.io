@@ -10,11 +10,11 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:title" content="Using Instructor to Return Typed Data from Ollama" />
 <meta property="og:description" content="How to return data from a local llm structured how you want." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2024/01/15/using-instructor-to-return-typed-data-from-ollama/" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2024/06/15/using-instructor-to-return-typed-data-from-ollama/" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.e01c74e8.png" />
 <meta property="og:image:alt" content="Using Instructor to Return Typed Data from Ollama" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2024/01/15/using-instructor-to-return-typed-data-from-ollama/" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2024/06/15/using-instructor-to-return-typed-data-from-ollama/" />
 
 
 <!-- Or Google Fonts -->
@@ -105,7 +105,7 @@
 	<article>
 		<header>
 			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2024-01-15T15:37:39.000Z">Jan 15, 2024</time> ~ 4 min read
+				<time datetime="2024-06-15T15:37:39.000Z">Jun 15, 2024</time> ~ 4 min read
 			</p>
 			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
 				Using Instructor to Return Typed Data from Ollama
@@ -176,7 +176,7 @@
 <span class="line"><span style="color: #C9D1D9">    </span><span style="color: #7EE787">"@type"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"ListItem"</span><span style="color: #C9D1D9">, </span><span style="color: #7EE787">"position"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">, </span><span style="color: #7EE787">"name"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"Tokyo"</span><span style="color: #C9D1D9">, </span><span style="color: #7EE787">"itemType"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"City"</span><span style="color: #C9D1D9">, </span><span style="color: #7EE787">"description"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"Capital city of Japan, known for its vibrant culture, cutting-edge technology, and historic landmarks"</span></span>
 <span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
 <p>In the first, we have a list of Cities minus the description and the second only includes a single city with a description.</p>
-<h1 id="instructor">Instructor</h1>
+<h2 id="instructor">Instructor</h2>
 <p>Instructor from Jason Liu is a library to make it easier to get structured data like this in a language of your choice. Even better is that it has wide support for many providers like OpenAI and Claude and now local models through Ollama. I’ll be using the python version to demonstrate how to get data as Pydantic models.</p>
 <p>Firstly let’s consider the same simple request to Ollama to find detail on cities from around the world, this time using the OpenAI client library. This doesn’t do anything particularly clever and isn’t even returning it as json.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> openai </span><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> OpenAI</span></span>
