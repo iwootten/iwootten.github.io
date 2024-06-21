@@ -177,7 +177,7 @@
 <span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
 <p>In the first, we have a list of Cities minus the description and the second only includes a single city with a description.</p>
 <h2 id="instructor">Instructor</h2>
-<p>Instructor from Jason Liu is a library to make it easier to get structured data like this in a language of your choice. Even better is that it has wide support for many providers like OpenAI and Claude and now local models through Ollama. I’ll be using the python version to demonstrate how to get data as Pydantic models.</p>
+<p><a href="https://useinstructor.com">Instructor</a> from Jason Liu is a library to make it easier to get structured data like this in a language of your choice. Even better is that it has wide support for many providers like OpenAI and Claude and now local models through Ollama. I’ll be using the python version to demonstrate how to get data as Pydantic models.</p>
 <p>Firstly let’s consider the same simple request to Ollama to find detail on cities from around the world, this time using the OpenAI client library. This doesn’t do anything particularly clever and isn’t even returning it as json.</p>
 <pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> openai </span><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> OpenAI</span></span>
 <span class="line"></span>
