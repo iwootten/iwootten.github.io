@@ -126,9 +126,9 @@
 			
 		</header>
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>If you interact with a large language model in your software for more than just a few requests, you’re probably going to end up writing a lot of boilerplate to deal with making requests, parsing responses etc. Maybe you’ve looked into langchain but felt it was a bit overkill, or found the docs hard to follow?</p>
+			<p>If you interact with a large language model in your software, you’re probably going to end up writing a some degree of boilerplate to deal with making requests, parsing responses etc. Stuff that someone, somewhere has already figured out a better solution for. Maybe you’ve looked into langchain but felt it was a bit overkill, or found the docs hard to follow?</p>
 <h2 id="introducing-ell">Introducing ell</h2>
-<p>ell is another recent solution from <a href="https://twitter.com/wgussml">William Guss</a> (prev of OpenAI) which provides a rich set of developer tooling around making requests to your choice of large language model. This includes both making simple requests complete with a ui for monitoring and visualising them and their responses.</p>
+<p>ell is recent solution from <a href="https://twitter.com/wgussml">William Guss</a> (prev of OpenAI) which provides a rich set of developer tooling around making requests to your choice of large language model. This includes both making simple requests complete with a ui for monitoring and visualising them and their responses.</p>
 <p>Here’s what a request written to gpt-4o-mini with Ell looks like. If you’ve got your openai key set as an environment variable (OPENAI_API_KEY), this will just work out of the box.</p>
 <pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">import</span><span style="color:#C9D1D9"> ell</span></span>
 <span class="line"></span>
