@@ -1,0 +1,1 @@
+import"./chunks/MetaTags.astro_astro_type_script_index_0_lang.265dfe2f.js";function e(){document.getElementById(this.dataset.target).classList.toggle("hidden")}var n=document.getElementsByClassName("button");Array.from(n).forEach(function(t){t.addEventListener("click",e)});
