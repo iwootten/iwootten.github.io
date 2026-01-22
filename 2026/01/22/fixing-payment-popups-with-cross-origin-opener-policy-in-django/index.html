@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Posts by tag 'payments' — Ian Wootten</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="description" content="Solving complex problems with simple solutions. Specialising in Python software and web applications." />
+<title>Fixing Payment Popups with Cross Origin Opener Policy in Django — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="A site I'm working on which uses Paddle/Paypal stopped working when I migrated it to Django. Here's how I resolved it." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Posts by tag 'payments' — Ian Wootten" />
-<meta property="og:description" content="Solving complex problems with simple solutions. Specialising in Python software and web applications." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/tags/payments/" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/default.d89fbbc5_1WbbAJ.jpg" />
-<meta property="og:image:alt" content="Posts by tag 'payments' — Ian Wootten" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/tags/payments/" />
+<meta property="og:title" content="Fixing Payment Popups with Cross Origin Opener Policy in Django" />
+<meta property="og:description" content="A site I'm working on which uses Paddle/Paypal stopped working when I migrated it to Django. Here's how I resolved it." />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2026/01/22/fixing-payment-popups-with-cross-origin-opener-policy-in-django/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.c7662867.jpg" />
+<meta property="og:image:alt" content="Fixing Payment Popups with Cross Origin Opener Policy in Django" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2026/01/22/fixing-payment-popups-with-cross-origin-opener-policy-in-django/" />
 
 
 <!-- Or Google Fonts -->
@@ -33,6 +33,7 @@
 
 
 	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
+<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
 <link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
 <script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
 !function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
@@ -101,39 +102,16 @@
 		</nav>
 	</div>
 </header><main>
-		<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
 		<header>
-			<h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
-				
-		Tagged: payments
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2026-01-22T09:56:39.000Z">Jan 22, 2026</time> ~ 3 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Fixing Payment Popups with Cross Origin Opener Policy in Django
 			</h1>
-		</header>
-		<ul>
-	<li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2026/01/22/fixing-payment-popups-with-cross-origin-opener-policy-in-django/">
-					Fixing Payment Popups with Cross Origin Opener Policy in Django
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			A site I&#39;m working on which uses Paddle/Paypal stopped working when I migrated it to Django. Here&#39;s how I resolved it.
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2026-01-22T09:56:39.000Z">Jan 22, 2026</time> ~
-					3 min read
-				</span>
-			</div>
-			<div class="mt-4">
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
 				<ul class="text-sm">
 			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
 					<a href="/tags/paddle/">paddle</a>
@@ -152,123 +130,48 @@
 				</li>
 		</ul>
 			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2022/12/21/why-you-probably-shouldnt-develop-your-own-digital-product-store/">
-					Why You Probably Shouldn&#39;t Develop Your Own Digital Product Store
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			At first glance, building a store for your own digital products seems simple to a developer. Hook up a Stripe payment link for orders and get it a to ping a webhook. Capture order details, email, deliver product. Job done. But it can be a whole more complex than that....
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2022-12-21T12:56:39.000Z">Dec 21, 2022</time> ~
-					4 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/bootstrapping/">bootstrapping</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/vat/">vat</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/payments/">payments</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2021/02/23/comparing-vat-solutions-for-bootstrapped-uk-businesses/">
-					Comparing VAT Solutions for Bootstrapped UK Businesses
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			Laws on when to apply VAT have always been a complex beast - in 2015 the EU made changes that meant that VAT was to be calculated based on a customer location. Since leaving the EU things have become even more complicated if you happen to be based in the UK.
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2021-02-23T11:32:30.000Z">Feb 23, 2021</time> ~
-					9 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/til/">til</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/vat/">vat</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/eu/">eu</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/gov/">gov</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/payments/">payments</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2012/02/16/wheres-my-full-stack-payment-service/">
-					Where&#39;s my Full Stack Payment Service?
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
 			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2012-02-16T00:00:00.000Z">Feb 16, 2012</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/go-cardless/">go cardless</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/payments/">payments</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/stripe/">stripe</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/the-little-guy/">the little guy</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li>
+		</header>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>I recently migrated one of my sites to Django that uses Paddle for payments. Although I tested the checkout workflow with a credit card, I hadn’t gone through it using Paypal.</p>
+<p>A few months later I started noticing that users who were checking out with paypal would pay, but not finish creating their account. This meant I’d have to manually email them with a link, rather than it being automatically triggered.</p>
+<p>On looking into it, the paddle overlay modal uses a typical paypal popup to complete and is affected by the HTTP response header Cross Origin Opener Policy (COOP) set by Django. This controls whether a new top level document is opened in a new browsing context group when using <code>Window.open()</code>.</p>
+<p>Since it was added in 2022 in Django 4.0, this value has been set by default to ‘same-origin’. Due to the way paddle interacts with the Paypal API this means it can’t close the window used by Paypal and sits hanging like a dummy on completion with your customer wondering what’s happened. My guess is this happens for any form of payment that Paddle opens a popup for, not just Paypal. <a href="https://runebook.dev/en/docs/http/headers/cross-origin-opener-policy">Apparently there are far better solutions than a window.open now</a>, but the Paddle overlay doesn’t appear to be using them. I’m honestly surprised I’ve never hit this issue before, but imagine it’s because I’ve been using Stripe and Polar for payments and they don’t open other providers. It’s also a bit of a surprise Paddle hasn’t documented the issue anywhere.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>I couldn’t change my provider easily, so I was left with two options:</p>
+<ul>
+<li>Disable all forms of payment other than credit cards (not ideal, since people do use it)</li>
+<li>Adjust the setting in Django</li>
 </ul>
-	</section>
+<p>I used the latter, allowing popups adjusting the following in my django settings. This is controlled by <code>SECURE_CROSS_ORIGIN_OPENER_POLICY</code> and can be set to one of 3 values: <code>unsafe-none</code>, <code>same-origin</code> (default, most strict) or <code>same-origin-allow-popups</code> (middle ground).</p>
+<p>I opted for the middle ground which resolved my Paddle issue and customers could complete again.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"</span></span></code></pre>
+<p>MDN explicitly states that set to this value:</p>
+<blockquote>
+<p>The directive is used to relax the same-origin restriction for integrations where a document needs the benefits of cross-origin isolation but also needs to open and retain a reference to trusted cross-origin documents. <em>For example, when using a cross-origin service for OAuth or payments</em>.</p>
+</blockquote>
+<p>Hope this helps if you’re seeing similar payment issues with Django. For more on “Cross-Origin-Opener-Policy”, read the docs in <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy">MDN</a> and for the specifics with Django <a href="https://adamj.eu/tech/2021/05/01/how-to-set-coep-coop-corp-security-headers-in-django/">Adam Johnsons post</a> on why this was added and the implications of changing it.</p>
+		</div>
+	</article>
+	<section class="relative astro-HVBEBTVO">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
+		<div class="py-12 md:py-20 astro-HVBEBTVO">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
+					Subscribe for Exclusives
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
+					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-HVBEBTVO">
+					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
 	</main><footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
