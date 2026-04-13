@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog — Page 8 — Ian Wootten</title>
-<meta name="robots" content="noindex,follow" />
-<meta name="description" content="Solving complex problems with simple solutions. Specialising in Python software and web applications." />
+<title>Choose your Pi-hole Hardware Carefully — Ian Wootten</title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content="A cursory tale about running DNS services from a Pi Zero" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Blog — Page 8 — Ian Wootten" />
-<meta property="og:description" content="Solving complex problems with simple solutions. Specialising in Python software and web applications." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/page-8/" />
-<meta property="og:type" content="blog" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/default.d89fbbc5_1WbbAJ.jpg" />
-<meta property="og:image:alt" content="Blog — Page 8 — Ian Wootten" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/page-8/" />
+<meta property="og:title" content="Choose your Pi-hole Hardware Carefully" />
+<meta property="og:description" content="A cursory tale about running DNS services from a Pi Zero" />
+<meta property="og:url" content="https://www.ianwootten.co.uk/2026/04/13/choose-your-pi-hole-hardware-carefully/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.89c13600.jpg" />
+<meta property="og:image:alt" content="Choose your Pi-hole Hardware Carefully" />
+<link rel="canonical" href="https://www.ianwootten.co.uk/2026/04/13/choose-your-pi-hole-hardware-carefully/" />
 
 
 <!-- Or Google Fonts -->
@@ -33,6 +33,7 @@
 
 
 	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
+<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
 <link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
 <script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
 !function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
@@ -101,357 +102,57 @@
 		</nav>
 	</div>
 </header><main>
-		<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-3xl">
+		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+	<article>
 		<header>
-			<h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 md:mb-16 font-heading">
-				
-		Blog
-	
+			<p class="max-w-3xl mx-auto text-center">
+				<time datetime="2026-04-13T09:56:39.000Z">Apr 13, 2026</time> ~ 2 min read
+			</p>
+			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
+				Choose your Pi-hole Hardware Carefully
 			</h1>
-		</header>
-		<ul>
-	<li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2018/11/07/my-web-development-stack-in-2018/">
-					My Web Development Stack in 2018
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2018-11-07T00:00:00.000Z">Nov 7, 2018</time> ~
-					5 min read
-				</span>
-			</div>
-			<div class="mt-4">
+			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
 				<ul class="text-sm">
 			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/js/">js</a>
+					<a href="/tags/raspberry-pi/">raspberry pi</a>
 				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/docker/">docker</a>
+					<a href="/tags/pi-zero-w/">pi zero w</a>
 				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
+					<a href="/tags/pi-hole/">pi hole</a>
+				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
+					<a href="/tags/dns/">dns</a>
 				</li>
 		</ul>
 			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2018/10/16/whats-in-a-name/">
-					What’s in a name?
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
 			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2018-10-16T00:00:00.000Z">Oct 16, 2018</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2018/10/04/blogging-with-hugo/">
-					Blogging with Hugo
-				</a>
-			</h2>
 		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2018-10-04T00:00:00.000Z">Oct 4, 2018</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2017/04/18/user-generated-forms-with-wtforms/">
-					User Generated Forms with WTForms
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2017-04-18T00:00:00.000Z">Apr 18, 2017</time> ~
-					6 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/wtforms/">wtforms</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2016/01/20/theres-no-such-thing-as-a-side-project/">
-					There&#39;s No Such Thing as a Side Project
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2016-01-20T00:00:00.000Z">Jan 20, 2016</time> ~
-					6 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/projects/">projects</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/business/">business</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2015/06/30/blogging-with-metalsmith/">
-					Blogging with Metalsmith
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2015-06-30T00:00:00.000Z">Jun 30, 2015</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/metalsmith/">metalsmith</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/blogging/">blogging</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/javascript/">javascript</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2014/09/15/processing-camera-raws-with-openimageio-and-python/">
-					Processing Camera RAWs with OpenImageIO and Python
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2014-09-15T00:00:00.000Z">Sep 15, 2014</time> ~
-					4 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/openimageio/">openimageio</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2014/07/31/extracting-shot-thumbnails-from-a-video-using-ffmpeg/">
-					Extracting Shot Thumbnails from a video using FFMPEG
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2014-07-31T00:00:00.000Z">Jul 31, 2014</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/imagemajick/">imagemajick</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/ffmpeg/">ffmpeg</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2014/07/01/splitting-a-date-range-in-python/">
-					Splitting a date range in Python
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2014-07-01T00:00:00.000Z">Jul 1, 2014</time> ~
-					2 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/coding/">coding</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li><li class="mb-10 md:mb-16">
-				<article class="max-w-md mx-auto md:max-w-none grid  gap-6 md:gap-8">
-	
-	<div>
-		<header>
-			<h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 font-heading">
-				<a class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200" href="/2014/06/16/tips-for-being-a-more-productive-freelancer/">
-					Tips for being a more Productive Freelancer
-				</a>
-			</h2>
-		</header>
-		<p class="text-md sm:text-lg flex-grow">
-			
-		</p>
-		<footer class="mt-4">
-			<div>
-				<span class="text-gray-500 dark:text-slate-400">
-					<time datetime="2014-06-16T00:00:00.000Z">Jun 16, 2014</time> ~
-					4 min read
-				</span>
-			</div>
-			<div class="mt-4">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/productivity/">productivity</a>
-				</li>
-		</ul>
-			</div>
-		</footer>
-	</div>
-</article>
-			</li>
-</ul><div class="container flex">
-			<div class="flex flex-row mx-auto container justify-between">
-				<a href="/page/7" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none mr-2
-      ">
-					<div class="flex flex-row align-middle">
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-left"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M5 12l6 6M5 12l6-6"/></g></svg>
-						<p class="ml-2">Newer posts</p>
-					</div>
-				</a>
-				<a href="/page/9" class="btn px-2 font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white shadow-none ">
-					<div class="flex flex-row align-middle">
-						<span class="mr-2">Older posts</span>
-						<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:arrow-right"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><path d="M5 12h14M13 18l6-6M13 6l6 6"/></g></svg>
-					</div>
-				</a>
+		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+			<p>I’ve happily been running <a href="https://pi-hole.net/">Pi-hole</a> on a Raspberry Pi Zero W for years without issue. I don’t think it’s recommended since the Zero is pretty slow (1Ghz, 512MB RAM), but it’s worked for my purposes and can be powered from a standard USB brick I have nearby. Pi-hole is an adblocker that works across your network by providing a DNS server which blocks known ad networks via your router. This is great because it means all devices connecting to the network in our house get ads blocked every time we browse the web by default.</p>
+<p>Over the weekend on Saturday evening, a the SD card on the Zero corrupted which took out our entire internet. Sadly it took me longer than I’d like to admit this was the issue and not our router whilst missing out on a family game of Cluedo.</p>
+<p>I’ve been running the Zero for years with no issue like this. A simple fix, I thought, just reinstall Pi-hole. After reflashing the card, I couldn’t then get it connected to the wireless. Gahh! We use a mesh gateway connected to a router to serve the house and thinking about it now this was likely getting in the way.</p>
+<p>What makes the Zero a problem for debugging issues like this is it has no useful ports - it uses micro usb for power and connectivity and Micro HDMI for display. You’ll therefore need to pull out a range of a adapters to determine what’s going on. After finding my Micro HDMI cable I realised it wasn’t appearing on the network at all. I was about to start going further down this yakshaking nightmare, before dawning on me I had a Pi 4 hardwired with a static ip serving only plex for music on my network I could install Pi-hole on. So that’s what I did. Easy when you know how.</p>
+<p>The Pi Zero W is great at being a small low cost computer, maybe not the best option as a DNS server though. Hopefully this tale of woe saves someone else a future headache and gains them a couple more hours playing Cluedo.</p>
+		</div>
+	</article>
+	<section class="relative astro-HVBEBTVO">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
+		<div class="py-12 md:py-20 astro-HVBEBTVO">
+			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
+				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
+					Subscribe for Exclusives
+				</h2>
+				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
+					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
+				</p>
+
+				<div class="mt-6 astro-HVBEBTVO">
+					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+</section>
 	</main><footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
