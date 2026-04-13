@@ -4,16 +4,16 @@
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Choose your Pi-hole Hardware Carefully — Ian Wootten</title>
+<title>Choose Your Pi-hole Hardware Carefully — Ian Wootten</title>
 <meta name="robots" content="index,follow" />
 <meta name="description" content="A cursory tale about running DNS services from a Pi Zero" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Choose your Pi-hole Hardware Carefully" />
+<meta property="og:title" content="Choose Your Pi-hole Hardware Carefully" />
 <meta property="og:description" content="A cursory tale about running DNS services from a Pi Zero" />
 <meta property="og:url" content="https://www.ianwootten.co.uk/2026/04/13/choose-your-pi-hole-hardware-carefully/" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.89c13600.jpg" />
-<meta property="og:image:alt" content="Choose your Pi-hole Hardware Carefully" />
+<meta property="og:image:alt" content="Choose Your Pi-hole Hardware Carefully" />
 <link rel="canonical" href="https://www.ianwootten.co.uk/2026/04/13/choose-your-pi-hole-hardware-carefully/" />
 
 
@@ -109,7 +109,7 @@
 				<time datetime="2026-04-13T09:56:39.000Z">Apr 13, 2026</time> ~ 2 min read
 			</p>
 			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				Choose your Pi-hole Hardware Carefully
+				Choose Your Pi-hole Hardware Carefully
 			</h1>
 			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
 				<ul class="text-sm">
@@ -128,7 +128,7 @@
 		</header>
 		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
 			<p>I’ve happily been running <a href="https://pi-hole.net/">Pi-hole</a> on a Raspberry Pi Zero W for years without issue. I don’t think it’s recommended since the Zero is pretty slow (1Ghz, 512MB RAM), but it’s worked for my purposes and can be powered from a standard USB brick I have nearby. Pi-hole is an adblocker that works across your network by providing a DNS server which blocks known ad networks via your router. This is great because it means all devices connecting to the network in our house get ads blocked every time we browse the web by default.</p>
-<p>Over the weekend on Saturday evening, a the SD card on the Zero corrupted which took out our entire internet. Sadly it took me longer than I’d like to admit this was the issue and not our router whilst missing out on a family game of Cluedo.</p>
+<p>Over the weekend on Saturday evening, the SD card on the Zero corrupted which took out our entire internet. Sadly it took me longer than I’d like to admit this was the issue and not our router whilst missing out on a family game of Cluedo.</p>
 <p>I’ve been running the Zero for years with no issue like this. A simple fix, I thought, just reinstall Pi-hole. After reflashing the card, I couldn’t then get it connected to the wireless. Gahh! We use a mesh gateway connected to a router to serve the house and thinking about it now this was likely getting in the way.</p>
 <p>What makes the Zero a problem for debugging issues like this is it has no useful ports - it uses micro usb for power and connectivity and Micro HDMI for display. You’ll therefore need to pull out a range of a adapters to determine what’s going on. After finding my Micro HDMI cable I realised it wasn’t appearing on the network at all. I was about to start going further down this yakshaking nightmare, before dawning on me I had a Pi 4 hardwired with a static ip serving only plex for music on my network I could install Pi-hole on. So that’s what I did. Easy when you know how.</p>
 <p>The Pi Zero W is great at being a small low cost computer, maybe not the best option as a DNS server though. Hopefully this tale of woe saves someone else a future headache and gains them a couple more hours playing Cluedo.</p>
