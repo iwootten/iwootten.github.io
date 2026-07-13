@@ -1,207 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Breaking up Relationships with CouchDB — Ian Wootten</title>
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="Breaking up Relationships with CouchDB" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/" />
-<meta property="og:type" content="article" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/" />
-
-
-<!-- Or Google Fonts -->
-
-<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
-
-
-
-<script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script>
-
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
-
-
-	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
-
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center" href="/">
-				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
-	💻&nbsp;&nbsp;Ian Wootten</span>
-			</a>
-			<div class="flex items-center md:hidden">
-				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
-</button>
-			</div>
-		</div>
-		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
-					</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
-					</a>
-				</li>
-			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
-				<div class="hidden items-center md:flex">
-					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header><main>
-		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-	<article>
-		<header>
-			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2013-03-01T00:00:00.000Z">Mar 1, 2013</time> ~ 6 min read
-			</p>
-			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				Breaking up Relationships with CouchDB
-			</h1>
-			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/backbone/">backbone</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/couchdb/">couchdb</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/databases/">databases</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/nosql/">nosql</a>
-				</li>
-		</ul>
-			</div>
-			
-		</header>
-		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p><em>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat ‘belated’]</em></p>
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Breaking up Relationships with CouchDB — Ian Wootten</title><meta name="description" content><link rel="canonical" href="https://www.ianwootten.co.uk/2013/03/01/breaking-up-relationships-with-couchdb/"><meta property="og:title" content="Breaking up Relationships with CouchDB"><meta property="og:description" content><meta property="og:type" content="article"><meta name="twitter:card" content="summary"><meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"><script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#8D46E7"><link rel="stylesheet" href="/_astro/permalinks.3Ph0TD5z.css"><style>form[data-astro-cid-cey2t5nt] .feedback[data-astro-cid-cey2t5nt]{display:none}form[data-astro-cid-cey2t5nt].success input[data-astro-cid-cey2t5nt],form[data-astro-cid-cey2t5nt].success button[data-astro-cid-cey2t5nt]{display:none!important}form[data-astro-cid-cey2t5nt].success .feedback[data-astro-cid-cey2t5nt]{display:unset}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.13.2 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.13.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head><body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"><header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b border-gray-200 dark:border-b-0"><div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"><div class="flex justify-between"><a class="flex items-center" href="/"><span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">💻&nbsp;&nbsp;Ian Wootten</span></a><div class="flex items-center md:hidden"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" class="w-6 h-6" data-icon="tabler:sun"><symbol id="ai:tabler:sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use href="#ai:tabler:sun"></use></svg></button><button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu><svg width="1em" height="1em" class="w-6 h-6" optimize="false" data-icon="tabler:menu"><symbol id="ai:tabler:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></symbol><use href="#ai:tabler:menu"></use></svg></button></div></div><nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu"><ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github</a></li></ul><div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"><div class="hidden items-center md:flex"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:sun"><use href="#ai:tabler:sun"></use></svg></button><a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-youtube"><symbol id="ai:tabler:brand-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></symbol><use href="#ai:tabler:brand-youtube"></use></svg></a><a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-github"><symbol id="ai:tabler:brand-github" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></symbol><use href="#ai:tabler:brand-github"></use></svg></a><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:rss"><symbol id="ai:tabler:rss" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></symbol><use href="#ai:tabler:rss"></use></svg></a></div></div></nav></div></header><main><section class="py-8 sm:py-16 lg:py-20 mx-auto"><article><header><p class="max-w-3xl mx-auto text-center"><time datetime="Fri Mar 01 2013 00:00:00 GMT+0000 (Coordinated Universal Time)">Mar 1, 2013</time> ~  min read</p><h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">Breaking up Relationships with CouchDB</h1><div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8"><ul class="text-sm"><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/backbone/">backbone</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/couchdb/">couchdb</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/databases/">databases</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/nosql/">nosql</a></li></ul></div></header><div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"><p><em>[NB: This is an unpublished post I wrote in 2010 on getting started with CouchDB. Therefore, despite all the code and examples being relevant, it may be considered somewhat ‘belated’]</em></p>
 <p>Beware – there’s a bunch of home wreckers out there intent on removing the love of your life and replacing it with a wicked mistress.</p>
 <p>For me, my first experiments working with databases were performed with Oracle, the staple of our computer science course at the time. We were taught how to identify common structures in what we wanted to store (or had already been stored) and how to represent the relationships which existed between them. There was an entire series of lectures dedicated to this fine art, much of which I now can’t remember.</p>
 <p>There has been an uptake in the number of developers working with NoSQL, or document oriented databases. These alternatives do not require decisions on subdividing documents into multiple record structures to be made at all, instead allowing the entire document to be recorded as a series of simple variable types. The contents of each document can vary from one document to the next. For the majority of developers who work with relational databases, this might come as a bit of a shock.</p>
 <p>There are a number of varieties of NoSQL flavours currently available: CouchDB, Cassandra and MongoDB are a few of the hot ones right now. I’m not going to discuss the pros and cons of each right here (for that I’d refer you to The Changelog’s NoSQL smackdown podcasts), but rather give you a whistle stop tour of CouchDB, which I’ve been working with for a few years now.</p>
 <p>If you want to follow along, you’ll need to head to the CouchDB site and read up on <a href="http://wiki.apache.org/couchdb/Installation">installation</a> for your platform. I’m using the <a href="http://couchdb.apache.org/">CouchDB server app</a>, which is nice and self contained.</p>
 <p>Document oriented storage gives me the ability not to have to worry about the structure of my documents prior to storage. From my own point of view this is a huge timesaver as my apps often tend to focus on a single type of document. Think of a blog post stored in a mysql database, we have a table for the post along with all its metadata, a table for the comments and maybe another for recording pingbacks. The same blog post in couch could be represented like so:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">{</span></span>
-<span class="line"><span style="color: #C9D1D9">   </span><span style="color: #7EE787">"_id"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"83ab09b88836ab714f592293d4e02845"</span><span style="color: #C9D1D9">,</span></span>
-<span class="line"><span style="color: #C9D1D9">   </span><span style="color: #7EE787">"title"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"My Blog Post"</span><span style="color: #C9D1D9">,</span></span>
-<span class="line"><span style="color: #C9D1D9">   </span><span style="color: #7EE787">"content"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span><span style="color: #C9D1D9">,</span></span>
-<span class="line"><span style="color: #C9D1D9">   </span><span style="color: #7EE787">"comments"</span><span style="color: #C9D1D9">: [{</span><span style="color: #7EE787">"ian"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"You're a wally"</span><span style="color: #C9D1D9">},{</span><span style="color: #7EE787">"Some user"</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">"This post sucks"</span><span style="color: #C9D1D9">}]</span></span>
-<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">   "_id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"83ab09b88836ab714f592293d4e02845"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">   "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"My Blog Post"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">   "content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">   "comments"</span><span style="color:#E1E4E8">: [{</span><span style="color:#79B8FF">"ian"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"You're a wally"</span><span style="color:#E1E4E8">},{</span><span style="color:#79B8FF">"Some user"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"This post sucks"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <p>A document based db may well not be suitable for the nature of your application. However, I’ve found in lots of cases, it is.</p>
 <h2 id="rest-style-interface">Rest Style Interface</h2>
 <p>CouchDB works across a REST style interface. To write documents back to couch, you call a HTTP PUT or POST with your JSON structure. To read documents, you call a GET and to delete them you call DELETE. For example, to add a document with “_id=someid” to the database “blog”, you would call the following:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">curl http://127.0.0.1:5984/blog/someid -X PUT -d </span><span style="color: #A5D6FF">'{"Title":"Another Blog Post", "Content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}'</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#9ECBFF"> http://127.0.0.1:5984/blog/someid</span><span style="color:#79B8FF"> -X</span><span style="color:#9ECBFF"> PUT</span><span style="color:#79B8FF"> -d</span><span style="color:#9ECBFF"> '{"Title":"Another Blog Post", "Content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}'</span></span></code></pre>
 <p>Similarly you can HTTP GET this uri to return the document just added. Saving the document to a couch store will add another field, “_rev” which represents the particular revision of the document you’re storing. Every time you update this document, it will be stored as a new document, along with a new revision number. You have access to all these revisions within couch, or you can choose to cleanup the database by compacting and removing all but the most recent revision of documents. Another blog entry document without any comments would be perfectly valid stored in the same database, as well as a document featuring just an array of pingback items.</p>
-<p>You’ll notice that the structures are JSON objects. This is how all objects are exchanged between couch and other languages and over couch’s REST interface. Heading to where we stored the above blog document “<a href="http://127.0.0.1:5984/blog&#x26;#8221">http://127.0.0.1:5984/blog&#x26;#8221</a>; in your browser yields a collection of metadata expressed in a JSON structure about that particular database. Appending “/83ab09b88836ab714f592293d4e02845″ (the id of the document) gives us the original blog document.</p>
+<p>You’ll notice that the structures are JSON objects. This is how all objects are exchanged between couch and other languages and over couch’s REST interface. Heading to where we stored the above blog document “<a href="http://127.0.0.1:5984/blog&amp;#8221">http://127.0.0.1:5984/blog&amp;#8221</a>; in your browser yields a collection of metadata expressed in a JSON structure about that particular database. Appending “/83ab09b88836ab714f592293d4e02845″ (the id of the document) gives us the original blog document.</p>
 <p>This, in turn works wonderfully well with certain frontend frameworks – such as <a href="http://backbonejs.org">Backbone</a>. If you configure your backbone models to construct URLs the way CouchDB expects them, you can effectively have a frontend app driven by just a CouchDB store. As CouchDB returns JSON objects, it’s able to correctly parse and load them into your backbone app.</p>
 <h2 id="mapreduce">Map/Reduce</h2>
 <p>To support the extraction of substructures and sorting within these documents, couch has the concept of map/reduce built straight into its core. Futon, couch’s built in administration application, makes creation of these a very simple process. Maps and Reductions are described in Javascript, which is great given most of us are making more and more use of it these days. Head over to <a href="http://127.0.0.1:5984/_utils">http://127.0.0.1:5984/_utils</a> and you’ll see your collection of databases right away. Navigate to the blog database and under the view dropdown, select temporary view. Couch automatically populates this with a default temporary view:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9">(</span><span style="color: #FFA657">doc</span><span style="color: #C9D1D9">) {</span></span>
-<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #D2A8FF">emit</span><span style="color: #C9D1D9">(</span><span style="color: #79C0FF">null</span><span style="color: #C9D1D9">, doc);</span></span>
-<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">doc</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">  emit</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">, doc);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <p>This basically reads as: for each document emit an object with a null key and the document as the value which is what you’ll see if you go ahead and run it. Not particularly exciting really, but by changing the null key to doc.title, we can emit all those blog posts sorted by title. To do something a little more complicated, such as determining the number of comments for each blog post we can make use of the reduce function too.</p>
 <p>Map:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9">(</span><span style="color: #FFA657">doc</span><span style="color: #C9D1D9">) {</span></span>
-<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #FF7B72">for</span><span style="color: #C9D1D9">(</span><span style="color: #FF7B72">var</span><span style="color: #C9D1D9"> i</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">0</span><span style="color: #C9D1D9">; i </span><span style="color: #FF7B72">&#x26;</span><span style="color: #C9D1D9">lt; doc.comments.</span><span style="color: #79C0FF">length</span><span style="color: #C9D1D9">; i</span><span style="color: #FF7B72">++</span><span style="color: #C9D1D9">){</span></span>
-<span class="line"><span style="color: #C9D1D9">   </span><span style="color: #D2A8FF">emit</span><span style="color: #C9D1D9">(doc.title, </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">);</span></span>
-<span class="line"><span style="color: #C9D1D9">  }</span></span>
-<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">doc</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">var</span><span style="color:#E1E4E8"> i</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8">lt; doc.comments.</span><span style="color:#79B8FF">length</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">){</span></span>
+<span class="line"><span style="color:#B392F0">   emit</span><span style="color:#E1E4E8">(doc.title, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <p>Reduce:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">function</span><span style="color: #C9D1D9"> (</span><span style="color: #FFA657">keys</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">values</span><span style="color: #C9D1D9">){</span></span>
-<span class="line"><span style="color: #C9D1D9">   </span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">sum</span><span style="color: #C9D1D9">(values);</span></span>
-<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">function</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">keys</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">values</span><span style="color:#E1E4E8">){</span></span>
+<span class="line"><span style="color:#F97583">   return</span><span style="color:#B392F0"> sum</span><span style="color:#E1E4E8">(values);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <p>Here, we cycle each of the comments for every blog post and emit a single value 1 for every comment. Our reduce function takes both the entire key and value set which are emitted from the map function for each document and calculates the sum of values sent to it. With these two very basic functions we can support all the queries we might want to make of the database. You can permanently store this entire map/reduce query as a view within couch to be called later. When a document is inserted which effects the result of the query, the map/reduce will be re-evaluated on the next call. It turns out that storing and querying documents in this way can be extremely performant.</p>
 <p>I very much enjoy having the ability to write my queries in a language I’m familiar with to retrieve results, rather than having to dip into MySQL voodoo.</p>
 <p><em>So, there you have it, CouchDB – I may well follow this up at a later date with a comparison with Mongo, given I’m now a certified developer.</em></p>
-		</div>
-	</article>
-	
-</section>
-	</main><footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</li>
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; 2003-2026 Ian Wootten
-			</div>
-		</div>
-	</div>
-</footer>
-		<script>
+</div></article></section></main><footer class="border-t border-gray-200 dark:border-slate-800"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="md:flex md:items-center md:justify-between py-6 md:py-8"><ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-twitter"><symbol id="ai:tabler:brand-twitter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99c-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.8 13.8 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></symbol><use href="#ai:tabler:brand-twitter"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-youtube"><use href="#ai:tabler:brand-youtube"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-github"><use href="#ai:tabler:brand-github"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-linkedin"><symbol id="ai:tabler:brand-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 11v5m0-8v.01M12 16v-5m4 5v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></g></symbol><use href="#ai:tabler:brand-linkedin"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:rss"><use href="#ai:tabler:rss"></use></svg></a></li></ul><div class="text-sm text-gray-700 mr-4 dark:text-slate-400">&copy; 2003-2026 Ian Wootten</div></div></div></footer><script>
 	// Set "light" theme as default
 	// if (!localStorage.theme) {
 	//   localStorage.theme = "light";
@@ -245,8 +83,4 @@
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
 	};
-</script>
-
-		
-	</body>
-</html>
+</script></body></html>

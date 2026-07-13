@@ -1,250 +1,33 @@
-<!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Build Your Own Pico Powered Midi Controller for $35 — Ian Wootten</title>
-<meta name="robots" content="index,follow" />
-<meta name="description" content="The Pico RGB keypad base from pimoroni is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using MicroPython or CircuitPython." />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="Build Your Own Pico Powered Midi Controller for $35" />
-<meta property="og:description" content="The Pico RGB keypad base from pimoroni is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using MicroPython or CircuitPython." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/" />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.ff8a7a9f.jpg" />
-<meta property="og:image:alt" content="Build Your Own Pico Powered Midi Controller for $35" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/" />
-
-
-<!-- Or Google Fonts -->
-
-<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
-
-
-
-<script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script>
-
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
-
-
-	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
-
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center" href="/">
-				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
-	💻&nbsp;&nbsp;Ian Wootten</span>
-			</a>
-			<div class="flex items-center md:hidden">
-				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
-</button>
-			</div>
-		</div>
-		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
-					</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
-					</a>
-				</li>
-			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
-				<div class="hidden items-center md:flex">
-					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header><main>
-		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-	<article>
-		<header>
-			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2021-06-08T08:54:37.000Z">Jun 8, 2021</time> ~ 5 min read
-			</p>
-			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				Build Your Own Pico Powered Midi Controller for $35
-			</h1>
-			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/circuitpython/">circuitpython</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/raspberry-pi/">raspberry pi</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/music/">music</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/djing/">djing</a>
-				</li>
-		</ul>
-			</div>
-			<picture>
-			<source type="image/avif" srcset="/assets/animation.fee8df7d_Z8DCSV.avif 400w,/assets/animation.fee8df7d_1xKSij.avif 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/webp" srcset="/assets/animation.fee8df7d_zGb3P.webp 400w,/assets/animation.fee8df7d_2h6Hg5.webp 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/png" srcset="/assets/animation.fee8df7d_ZNk0Xz.png 400w,/assets/animation.fee8df7d_Z1z1sTq.png 900w" sizes="(max-width: 900px) 400px, 900px">
-			<img width="900" height="506" src="/assets/animation.fee8df7d_6YP7K.png" loading="lazy" decoding="async" alt="The Pico RGB keypad base from pimoroni is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using MicroPython or CircuitPython." class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
-		</picture>
-		</header>
-		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p><em>Find the video of this article on <a href="https://www.youtube.com/watch?v=8mVKYTVKefU">youtube</a></em></p>
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Build Your Own Pico Powered Midi Controller for $35 — Ian Wootten</title><meta name="description" content="The Pico RGB keypad base from pimoroni is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using MicroPython or CircuitPython."><link rel="canonical" href="https://www.ianwootten.co.uk/2021/06/08/build-your-own-pico-powered-midi-controller-for-35/"><meta property="og:title" content="Build Your Own Pico Powered Midi Controller for $35"><meta property="og:description" content="The Pico RGB keypad base from pimoroni is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using MicroPython or CircuitPython."><meta property="og:type" content="article"><meta property="og:image" content="https://www.ianwootten.co.uk/_astro/opengraph.BseIk7pg_2eyL08.webp"><meta name="twitter:card" content="summary_large_image"><meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"><script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#8D46E7"><link rel="stylesheet" href="/_astro/permalinks.3Ph0TD5z.css"><style>form[data-astro-cid-cey2t5nt] .feedback[data-astro-cid-cey2t5nt]{display:none}form[data-astro-cid-cey2t5nt].success input[data-astro-cid-cey2t5nt],form[data-astro-cid-cey2t5nt].success button[data-astro-cid-cey2t5nt]{display:none!important}form[data-astro-cid-cey2t5nt].success .feedback[data-astro-cid-cey2t5nt]{display:unset}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.13.2 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.13.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head><body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"><header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b border-gray-200 dark:border-b-0"><div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"><div class="flex justify-between"><a class="flex items-center" href="/"><span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">💻&nbsp;&nbsp;Ian Wootten</span></a><div class="flex items-center md:hidden"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" class="w-6 h-6" data-icon="tabler:sun"><symbol id="ai:tabler:sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use href="#ai:tabler:sun"></use></svg></button><button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu><svg width="1em" height="1em" class="w-6 h-6" optimize="false" data-icon="tabler:menu"><symbol id="ai:tabler:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></symbol><use href="#ai:tabler:menu"></use></svg></button></div></div><nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu"><ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github</a></li></ul><div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"><div class="hidden items-center md:flex"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:sun"><use href="#ai:tabler:sun"></use></svg></button><a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-youtube"><symbol id="ai:tabler:brand-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></symbol><use href="#ai:tabler:brand-youtube"></use></svg></a><a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-github"><symbol id="ai:tabler:brand-github" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></symbol><use href="#ai:tabler:brand-github"></use></svg></a><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:rss"><symbol id="ai:tabler:rss" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></symbol><use href="#ai:tabler:rss"></use></svg></a></div></div></nav></div></header><main><section class="py-8 sm:py-16 lg:py-20 mx-auto"><article><header><p class="max-w-3xl mx-auto text-center"><time datetime="Tue Jun 08 2021 08:54:37 GMT+0000 (Coordinated Universal Time)">Jun 8, 2021</time> ~  min read</p><h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">Build Your Own Pico Powered Midi Controller for $35</h1><div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8"><ul class="text-sm"><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/python/">python</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/circuitpython/">circuitpython</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/raspberry-pi/">raspberry pi</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/music/">music</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/djing/">djing</a></li></ul></div><picture><img src="/_astro/animation.3XtmhxbD_2oXK3c.webp" loading="lazy" decoding="async" alt="The Pico RGB keypad base from pimoroni is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using MicroPython or CircuitPython." class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"></picture></header><div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"><p><em>Find the video of this article on <a href="https://www.youtube.com/watch?v=8mVKYTVKefU">youtube</a></em></p>
 <p>The Launchpad is a midi controller used for audio production with digital audio workstations (or DAWs) like Ableton. In comes in mini and standard forms and features 64 pads, along with 16 additional buttons ready to map to your application of choice. The <a href="https://amzn.to/2T8OIil">mini version starts at £75</a>, the <a href="https://amzn.to/3v7gJnO">standard is £145</a> and there’s an older “Pro” which is <a href="https://store.focusrite.com/en-gb/categories/novation/launch/product/launchpad-pro/NOVLPD03~NOVLPD03">currently available for £179</a>.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/launchpad.1d1a9cf0_Z29utHA.avif 400w,/assets/launchpad.1d1a9cf0_HUME4.avif 900w"><source type="image/webp" srcset="/assets/launchpad.1d1a9cf0_Z1q9EJO.webp 400w,/assets/launchpad.1d1a9cf0_1rgBBP.webp 900w"><source type="image/png" srcset="/assets/launchpad.1d1a9cf0_Z3fMrx.png 400w,/assets/launchpad.1d1a9cf0_Z2pGsxg.png 900w">
-			<img width="900" height="504" src="/assets/launchpad.1d1a9cf0_AdXKK.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/launchpad.BBBjl8Bc_16n0wx.webp" loading="lazy" decoding="async" class></picture>
 <p>The <a href="https://shop.pimoroni.com/products/pico-rgb-keypad-base">Pico RGB keypad base from pimoroni</a> is a DIY kit that takes the Raspberry Pi Pico and gives you an a 16 button matrix of rgb LEDs, ready to program however you like using <a href="https://micropython.org/">MicroPython</a> or <a href="https://circuitpython.org">CircuitPython</a>. When combined with the versatile Pico, the recently released microcontroller available from the Raspberry Pi Foundation, it costs just over £25, or $35 excluding delivery.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/keypad.b0d0823d_Z24WBxK.avif 400w,/assets/keypad.b0d0823d_Znx5lv.avif 900w"><source type="image/webp" srcset="/assets/keypad.b0d0823d_Z1lBMzY.webp 400w,/assets/keypad.b0d0823d_kMIBg.webp 900w"><source type="image/png" srcset="/assets/keypad.b0d0823d_Z1wanHG.png 400w,/assets/keypad.b0d0823d_Z2hQPDx.png 900w">
-			<img width="900" height="506" src="/assets/keypad.b0d0823d_1xVvrR.png" loading="lazy" decoding="async" class="">
-		</picture>
-<p>I’ve been a big fan of these types of pad kits, wanting to put something similar together myself ever since I first started seeing artists like Daedelus using <a href="">monomes</a> over a decade ago. The music he produced was so impressive and inventive for myself to watch and as a DJ, triggering samples in this way was something else. I even went to the trouble of group ordering the PCB’s for a monome before realising it was way beyond my skills to put the thing together. Being an open source design, the monome was freely available for anyone to construct.</p>
+<picture widths="400,900"><img src="/_astro/keypad.DlqlEyct_u73zb.webp" loading="lazy" decoding="async" class></picture>
+<p>I’ve been a big fan of these types of pad kits, wanting to put something similar together myself ever since I first started seeing artists like Daedelus using <a href>monomes</a> over a decade ago. The music he produced was so impressive and inventive for myself to watch and as a DJ, triggering samples in this way was something else. I even went to the trouble of group ordering the PCB’s for a monome before realising it was way beyond my skills to put the thing together. Being an open source design, the monome was freely available for anyone to construct.</p>
 <p>The Launchpad is also a grid style controller and was kind of Novation’s commercial version of the Monome. It has been incredibly popular since it was first launched back in 2014. I have two of them myself (a original mini and standard mk2 one) which I’ve purchased when they’ve been on sale. You can find ton’s of launchpad videos on youtube with amazing lightshows going along with them.</p>
 <p>You’ll understand why when I saw that Pimoroni had a Pico kit able to be programmed as a midi controller and it was only £25 why I had to pick one up!</p>
 <h1 id="build">Build</h1>
 <p>Assembly for the pad is dead simple - the kit has easy to use instructions and I had it built in less than 20 minutes. The only slightly complex part is the soldering of the header pins to the Pico itself, which you’ll need to do with most Pico based projects anyway. You can watch previous videos of mine which cover both the <a href="https://www.youtube.com/watch?v=-cBSYj45SDE">assembly</a> and <a href="https://www.youtube.com/watch?v=CeE2ivgo3zM">soldering</a> in more detail.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/assembly.b85627c6_ZpaCm0.avif 400w,/assets/assembly.b85627c6_1heSPf.avif 900w"><source type="image/webp" srcset="/assets/assembly.b85627c6_jabAL.webp 400w,/assets/assembly.b85627c6_20zHN1.webp 900w"><source type="image/png" srcset="/assets/assembly.b85627c6_1jdydA.png 400w,/assets/assembly.b85627c6_xw6hJ.png 900w">
-			<img width="900" height="505" src="/assets/assembly.b85627c6_2wrLO.png" loading="lazy" decoding="async" class="">
-		</picture>
-<p>You’ll end up with a tiny controller with nice little rubber feet and there’s even a few case’s available for it to be printed on <a href="https://www.thingiverse.com/search?q=Pimoroni+Pico+RGB&#38;type=things&#38;sort=relevant">thingiverse.com</a>.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/thingiverse.dbea03e7_21Ecfy.avif 400w,/assets/thingiverse.dbea03e7_pLNmr.avif 900w"><source type="image/webp" srcset="/assets/thingiverse.dbea03e7_Z2kc7AB.webp 400w,/assets/thingiverse.dbea03e7_197Ckd.webp 900w"><source type="image/png" srcset="/assets/thingiverse.dbea03e7_ZJ3EDA.png 400w,/assets/thingiverse.dbea03e7_1NGDw.png 900w">
-			<img width="900" height="1016" src="/assets/thingiverse.dbea03e7_Z197Map.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/assembly.C7YVO3sP_J2BqE.webp" loading="lazy" decoding="async" class></picture>
+<p>You’ll end up with a tiny controller with nice little rubber feet and there’s even a few case’s available for it to be printed on <a href="https://www.thingiverse.com/search?q=Pimoroni+Pico+RGB&amp;type=things&amp;sort=relevant">thingiverse.com</a>.</p>
+<picture widths="400,900"><img src="/_astro/thingiverse.wcvn62me_1Cr0Tk.webp" loading="lazy" decoding="async" class></picture>
 <h2 id="software">Software</h2>
 <p>The next part is the software - what you start with is essentially a blank piece of hardware able to behave in any way you want. I’ve programmed a couple of animations so far, but you could also set it up as a macro pad to launch applications or trigger actions you use regularly in software.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/animation.fee8df7d_12m7gt.avif 400w,/assets/animation.fee8df7d_Z2lpuld.avif 900w"><source type="image/webp" srcset="/assets/animation.fee8df7d_1KGVef.webp 400w,/assets/animation.fee8df7d_Z1C4Fnr.webp 900w"><source type="image/png" srcset="/assets/animation.fee8df7d_Z2p4e8r.png 400w,/assets/animation.fee8df7d_1TqrJD.png 900w">
-			<img width="900" height="505" src="/assets/animation.fee8df7d_Suena.png" loading="lazy" decoding="async" class="">
-		</picture>
-<picture>
-			<source type="image/avif" srcset="/assets/animation2.d907aa59_Zp4wzB.avif 400w,/assets/animation2.d907aa59_2slJM3.avif 900w"><source type="image/webp" srcset="/assets/animation2.d907aa59_jghna.webp 400w,/assets/animation2.d907aa59_Z1Suz47.webp 900w"><source type="image/png" srcset="/assets/animation2.d907aa59_2ig6AA.png 400w,/assets/animation2.d907aa59_Z4ayu8.png 900w">
-			<img width="900" height="505" src="/assets/animation2.d907aa59_Z15CwNf.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/animation.3XtmhxbD_FmJ3B.webp" loading="lazy" decoding="async" class></picture>
+<picture widths="400,900"><img src="/_astro/animation2.CxLfmOez_Z1w4KVh.webp" loading="lazy" decoding="async" class></picture>
 <p>The Pico will appear as a RP-RP2 drive when plugged into a computer with the “BOOTSEL” button depressed. In order to configure it as a midi controller, we need to install <a href="https://circuitpython.org/">CircuitPython</a>, which involves dragging and dropping a .uf2 to the device. It will then reboot and appear as a “CIRCUITPY” drive. We can then install the other required libraries (<a href="https://github.com/adafruit/Adafruit_CircuitPython_MIDI">adafruit_midi</a>, <a href="https://github.com/adafruit/Adafruit_CircuitPython_BusDevice">adafruit_bus_device</a> and <a href="https://github.com/adafruit/Adafruit_CircuitPython_DotStar">adafruit_dotstar</a>) under the /lib folder and the midi controller code we’re going to use by <a href="https://gist.github.com/sandyjmacdonald/804dc737e7cb798d1b4fa34adc87e2d4">SandyJMacdonald</a>.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/circuitpython.aa812c6a_1Hyb00.avif 400w,/assets/circuitpython.aa812c6a_2dWW1P.avif 900w"><source type="image/webp" srcset="/assets/circuitpython.aa812c6a_2qSYWL.webp 400w,/assets/circuitpython.aa812c6a_Z27SmOk.webp 900w"><source type="image/png" srcset="/assets/circuitpython.aa812c6a_1Rq1fc.png 400w,/assets/circuitpython.aa812c6a_Z2mImkI.png 900w">
-			<img width="900" height="507" src="/assets/circuitpython.aa812c6a_1NPpA9.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/circuitpython.DNnwjuTU_ZcsStr.webp" loading="lazy" decoding="async" class></picture>
 <p>I had a couple of of problems here in that the “stable” version of CircuitPython didn’t actually work, causing my Pico to disappear and requiring a nuke file to get it to respond again. I eventually was able to get everything installed using the absolute newest version of CircuitPython.</p>
 <p>If that’s gone well, then congratulations our midi controller is now able to be used!</p>
 <h2 id="performance">Performance</h2>
 <p>I had no trouble connecting the KeyPad to Ableton and getting it recognised. In fact, I did nothing at all - everything just worked. You’ll then spent a huge amount of time navigating the various drumkits in Ableton and playing with them all, though you’ll really need to put in the hours to get proficient at finger drumming. You’ll probably notice from my videos even though I own two launchpads already I’m not quite there yet!</p>
-<picture>
-			<source type="image/avif" srcset="/assets/ableton.f155bcb2_Z2hWBy0.avif 400w,/assets/ableton.f155bcb2_Z2o0A3A.avif 900w"><source type="image/webp" srcset="/assets/ableton.f155bcb2_Z1yBMAe.webp 400w,/assets/ableton.f155bcb2_Z1EEL5O.webp 900w"><source type="image/png" srcset="/assets/ableton.f155bcb2_ZnxdQ6.png 400w,/assets/ableton.f155bcb2_Z1mLthu.png 900w">
-			<img width="900" height="470" src="/assets/ableton.f155bcb2_Z245Low.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/ableton.DwSB3Pew_1d3ogA.webp" loading="lazy" decoding="async" class></picture>
 <p>It is obviously a lot smaller than a launchpad and only features 16 pads over the launchpads 64, but I see this more as a creative limitation. You may also find that the keypad skates around the desk due to the tiny rubber pads included so may want to print one of the above cases and add a rubber base to it to prevent that.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/keypad_launchpad.d9325e8c_1PS6UQ.avif 400w,/assets/keypad_launchpad.d9325e8c_Z1wSuFP.avif 900w"><source type="image/webp" srcset="/assets/keypad_launchpad.d9325e8c_Z2uXcUj.webp 400w,/assets/keypad_launchpad.d9325e8c_ZNxFI4.webp 900w"><source type="image/png" srcset="/assets/keypad_launchpad.d9325e8c_Z14pDpJ.png 400w,/assets/keypad_launchpad.d9325e8c_Z1P76lA.png 900w">
-			<img width="900" height="505" src="/assets/keypad_launchpad.d9325e8c_Z1AqUlY.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/keypad_launchpad.DgTE0tXP_Z1wCM91.webp" loading="lazy" decoding="async" class></picture>
 <h2 id="future-work">Future Work</h2>
-<p>I already have ideas for other midi controllers I’d like to put together, I’d really like something with sliders and knobs to control levels and effects - similar to a midi twister. Let me know in the comments your ideas for any Pico style projects you’d like to see.</p>
-		</div>
-	</article>
-	<section class="relative astro-HVBEBTVO">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
-		<div class="py-12 md:py-20 astro-HVBEBTVO">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
-					Subscribe for Exclusives
-				</h2>
-				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
-					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
-				</p>
-
-				<div class="mt-6 astro-HVBEBTVO">
-					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-	</main><footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</li>
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; 2003-2026 Ian Wootten
-			</div>
-		</div>
-	</div>
-</footer>
-		<script>
+<p>I already have ideas for other midi controllers I’d like to put together, I’d really like something with sliders and knobs to control levels and effects - similar to a midi twister. Let me know in the comments your ideas for any Pico style projects you’d like to see.</p></div></article><section class="relative" data-astro-cid-cey2t5nt><div class="max-w-6xl mx-auto px-4 sm:px-6" data-astro-cid-cey2t5nt><div class="py-12 md:py-20" data-astro-cid-cey2t5nt><div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none" data-astro-cid-cey2t5nt><h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" data-astro-cid-cey2t5nt>Subscribe for Exclusives</h2><p class="text-xl text-gray-600 dark:text-slate-400" data-astro-cid-cey2t5nt>My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time.</p><div class="mt-6" data-astro-cid-cey2t5nt><div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" data-astro-cid-cey2t5nt><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div></div></div></div></div></section></section></main><footer class="border-t border-gray-200 dark:border-slate-800"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="md:flex md:items-center md:justify-between py-6 md:py-8"><ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-twitter"><symbol id="ai:tabler:brand-twitter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99c-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.8 13.8 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></symbol><use href="#ai:tabler:brand-twitter"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-youtube"><use href="#ai:tabler:brand-youtube"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-github"><use href="#ai:tabler:brand-github"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-linkedin"><symbol id="ai:tabler:brand-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 11v5m0-8v.01M12 16v-5m4 5v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></g></symbol><use href="#ai:tabler:brand-linkedin"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:rss"><use href="#ai:tabler:rss"></use></svg></a></li></ul><div class="text-sm text-gray-700 mr-4 dark:text-slate-400">&copy; 2003-2026 Ian Wootten</div></div></div></footer><script>
 	// Set "light" theme as default
 	// if (!localStorage.theme) {
 	//   localStorage.theme = "light";
@@ -288,8 +71,4 @@
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
 	};
-</script>
-
-		
-	</body>
-</html>
+</script></body></html>

@@ -1,210 +1,85 @@
-<!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>How to Query the Product Hunt API Responsibly with Python — Ian Wootten</title>
-<meta name="robots" content="index,follow" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="How to Query the Product Hunt API Responsibly with Python" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/" />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.b1124ab6.jpg" />
-<meta property="og:image:alt" content="How to Query the Product Hunt API Responsibly with Python" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/" />
-
-
-<!-- Or Google Fonts -->
-
-<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
-
-
-
-<script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script>
-
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
-
-
-	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
-
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center" href="/">
-				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
-	💻&nbsp;&nbsp;Ian Wootten</span>
-			</a>
-			<div class="flex items-center md:hidden">
-				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
-</button>
-			</div>
-		</div>
-		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
-					</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
-					</a>
-				</li>
-			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
-				<div class="hidden items-center md:flex">
-					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header><main>
-		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-	<article>
-		<header>
-			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2022-02-15T11:28:10.000Z">Feb 15, 2022</time> ~ 6 min read
-			</p>
-			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				How to Query the Product Hunt API Responsibly with Python
-			</h1>
-			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/product-hunt/">product hunt</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/data-analysis/">data analysis</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/client-work/">client work</a>
-				</li>
-		</ul>
-			</div>
-			
-		</header>
-		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>I recently <a href="https://www.scrapingbee.com/blog/best-python-http-clients/">wrote an article</a> that got to the #1 spot on Hacker News for the folks at ScrapingBee. It focused on retrieving details for the 90,000+ featured products from the Product Hunt API and digging into interesting facets of the data.  I was excited to see it sat at the #1 for a few hours and the frontpage for longer whilst I repeatedly took screenshots to regale my children with in later life. I’ve even discovered that some students are considering pursuing a masters into topic around the dataset after seeing the article.</p>
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Query the Product Hunt API Responsibly with Python — Ian Wootten</title><meta name="description" content><link rel="canonical" href="https://www.ianwootten.co.uk/2022/02/15/how-to-query-the-product-hunt-api-responsibly-with-python/"><meta property="og:title" content="How to Query the Product Hunt API Responsibly with Python"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:image" content="https://www.ianwootten.co.uk/_astro/opengraph.C1gCcIIk_ZuJ5dk.webp"><meta name="twitter:card" content="summary_large_image"><meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"><script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#8D46E7"><link rel="stylesheet" href="/_astro/permalinks.3Ph0TD5z.css"><style>form[data-astro-cid-cey2t5nt] .feedback[data-astro-cid-cey2t5nt]{display:none}form[data-astro-cid-cey2t5nt].success input[data-astro-cid-cey2t5nt],form[data-astro-cid-cey2t5nt].success button[data-astro-cid-cey2t5nt]{display:none!important}form[data-astro-cid-cey2t5nt].success .feedback[data-astro-cid-cey2t5nt]{display:unset}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.13.2 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.13.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head><body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"><header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b border-gray-200 dark:border-b-0"><div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"><div class="flex justify-between"><a class="flex items-center" href="/"><span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">💻&nbsp;&nbsp;Ian Wootten</span></a><div class="flex items-center md:hidden"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" class="w-6 h-6" data-icon="tabler:sun"><symbol id="ai:tabler:sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use href="#ai:tabler:sun"></use></svg></button><button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu><svg width="1em" height="1em" class="w-6 h-6" optimize="false" data-icon="tabler:menu"><symbol id="ai:tabler:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></symbol><use href="#ai:tabler:menu"></use></svg></button></div></div><nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu"><ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github</a></li></ul><div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"><div class="hidden items-center md:flex"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:sun"><use href="#ai:tabler:sun"></use></svg></button><a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-youtube"><symbol id="ai:tabler:brand-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></symbol><use href="#ai:tabler:brand-youtube"></use></svg></a><a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-github"><symbol id="ai:tabler:brand-github" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></symbol><use href="#ai:tabler:brand-github"></use></svg></a><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:rss"><symbol id="ai:tabler:rss" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></symbol><use href="#ai:tabler:rss"></use></svg></a></div></div></nav></div></header><main><section class="py-8 sm:py-16 lg:py-20 mx-auto"><article><header><p class="max-w-3xl mx-auto text-center"><time datetime="Tue Feb 15 2022 11:28:10 GMT+0000 (Coordinated Universal Time)">Feb 15, 2022</time> ~  min read</p><h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">How to Query the Product Hunt API Responsibly with Python</h1><div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8"><ul class="text-sm"><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/python/">python</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/product-hunt/">product hunt</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/data-analysis/">data analysis</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/client-work/">client work</a></li></ul></div></header><div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"><p>I recently <a href="https://www.scrapingbee.com/blog/best-python-http-clients/">wrote an article</a> that got to the #1 spot on Hacker News for the folks at ScrapingBee. It focused on retrieving details for the 90,000+ featured products from the Product Hunt API and digging into interesting facets of the data.  I was excited to see it sat at the #1 for a few hours and the frontpage for longer whilst I repeatedly took screenshots to regale my children with in later life. I’ve even discovered that some students are considering pursuing a masters into topic around the dataset after seeing the article.</p>
 <p>Here, I’m going to go into detail on how to retrieve information responsibly from the Product Hunt API for your own data experiments. To do so, I used the <code>x-rate-limit-remaining</code> and <code>x-rate-limit-reset</code> header values that are returned each time a query is made. These values have been given so as to not overwhelm the Product Hunt API servers when querying a large collection of data and you won’t get a response if you exceed them. It’s therefore important to factor them into any script you write to query data and be a responsible API citizen.</p>
 <h2 id="making-a-single-query">Making a Single Query</h2>
 <p>To get set up, you’ll need an API key - which you’ll get when making a request for your first application from the <a href="https://www.producthunt.com/v2/oauth/applications">API dashboard</a>.</p>
 <p>Product Hunt has two versions of their API, one uses REST (deprecated) and one uses GraphQL. The GraphQL one, whilst much more versatile (eg. will allow complex filtering), will return far less data on each call (up to 20 products vs 50) and you’ll hit your limits much quicker. You’ll also be able to make less requests based on how much data you want to return. I calculated that getting all 90,000 products with all the additional data we wanted would take several days (!) using the GraphQL API and I’d prefer not to be waiting that long.</p>
 <p>For the original article, I used V1 of the API and I’ll be doing the same thing here. Additionally, I’m using <a href="https://www.python-httpx.org/">HTTPX</a> as the library to make my queries, but you can use any library you like.</p>
 <p>Firstly, let’s kick off with a simple query to get the most recent posts and header information we’re interested in. We need to ensure we pass an Authorization token to authenticate and I extract some of the header details to use later.</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> httpx</span></span>
-<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> os</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> httpx</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> os</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #79C0FF">PRODUCTHUNT_API_TOKEN</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> os.environ.get(</span><span style="color: #A5D6FF">"PRODUCTHUNT_API_TOKEN"</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color:#79B8FF">PRODUCTHUNT_API_TOKEN</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> os.environ.get(</span><span style="color:#9ECBFF">"PRODUCTHUNT_API_TOKEN"</span><span style="color:#E1E4E8">)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #FF7B72">def</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">get_posts</span><span style="color: #C9D1D9">():</span></span>
-<span class="line"><span style="color: #C9D1D9">    headers </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span><span style="color: #A5D6FF">"Authorization"</span><span style="color: #C9D1D9">: </span><span style="color: #FF7B72">f</span><span style="color: #A5D6FF">"Bearer </span><span style="color: #79C0FF">{PRODUCTHUNT_API_TOKEN}</span><span style="color: #A5D6FF">"</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> get_posts</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#E1E4E8">    headers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"Authorization"</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"Bearer </span><span style="color:#79B8FF">{PRODUCTHUNT_API_TOKEN}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">with</span><span style="color: #C9D1D9"> httpx.Client(</span><span style="color: #FFA657">headers</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">headers) </span><span style="color: #FF7B72">as</span><span style="color: #C9D1D9"> client:</span></span>
-<span class="line"><span style="color: #C9D1D9">        r </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> client.get(</span></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #A5D6FF">"https://api.producthunt.com/v1/posts/all"</span><span style="color: #C9D1D9">,</span></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FFA657">params</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">{</span><span style="color: #A5D6FF">"per_page"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">50</span><span style="color: #C9D1D9">},</span></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FFA657">timeout</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">20</span><span style="color: #C9D1D9">,</span></span>
-<span class="line"><span style="color: #C9D1D9">        )</span></span>
-<span class="line"><span style="color: #C9D1D9">        limits </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {h: v </span><span style="color: #FF7B72">for</span><span style="color: #C9D1D9"> h, v </span><span style="color: #FF7B72">in</span><span style="color: #C9D1D9"> r.headers.items() </span><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> h.startswith(</span><span style="color: #A5D6FF">"x-rate-limit"</span><span style="color: #C9D1D9">)}</span></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> httpx.Client(</span><span style="color:#FFAB70">headers</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">headers) </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> client:</span></span>
+<span class="line"><span style="color:#E1E4E8">        r </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.get(</span></span>
+<span class="line"><span style="color:#9ECBFF">            "https://api.producthunt.com/v1/posts/all"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">            params</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#9ECBFF">"per_page"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#FFAB70">            timeout</span><span style="color:#F97583">=</span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        limits </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {h: v </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> h, v </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> r.headers.items() </span><span style="color:#F97583">if</span><span style="color:#E1E4E8"> h.startswith(</span><span style="color:#9ECBFF">"x-rate-limit"</span><span style="color:#E1E4E8">)}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> r.json()[</span><span style="color: #A5D6FF">"posts"</span><span style="color: #C9D1D9">], limits</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> r.json()[</span><span style="color:#9ECBFF">"posts"</span><span style="color:#E1E4E8">], limits</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">__name__</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">==</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">"__main__"</span><span style="color: #C9D1D9">:</span></span>
-<span class="line"><span style="color: #C9D1D9">    posts, limits </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> get_posts()</span></span>
-<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #79C0FF">print</span><span style="color: #C9D1D9">(limits)</span></span></code></pre>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#79B8FF"> __name__</span><span style="color:#F97583"> ==</span><span style="color:#9ECBFF"> "__main__"</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    posts, limits </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> get_posts()</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(limits)</span></span></code></pre>
 <p>If this is the first request you’ve made, the header values that are printed out to the command line should be as follows:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">{</span><span style="color: #A5D6FF">'x-rate-limit-limit'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'250'</span><span style="color: #C9D1D9">, </span><span style="color: #A5D6FF">'x-rate-limit-remaining'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'250'</span><span style="color: #C9D1D9">, </span><span style="color: #A5D6FF">'x-rate-limit-reset'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'900'</span><span style="color: #C9D1D9">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#E1E4E8">{</span><span style="color:#B392F0">'x-rate-limit-limit'</span><span style="color:#79B8FF">:</span><span style="color:#9ECBFF"> '250',</span><span style="color:#9ECBFF"> 'x-rate-limit-remaining':</span><span style="color:#9ECBFF"> '250',</span><span style="color:#9ECBFF"> 'x-rate-limit-reset':</span><span style="color:#9ECBFF"> '900'}</span></span></code></pre>
 <p>We can see our limits are currently at their maximum value as we might expect. The <code>x-rate-limit-remaining</code> value is the remaining time in seconds before the rate limit resets. A subsequent should look like the following:</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">{</span><span style="color: #A5D6FF">'x-rate-limit-limit'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'250'</span><span style="color: #C9D1D9">, </span><span style="color: #A5D6FF">'x-rate-limit-remaining'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'249'</span><span style="color: #C9D1D9">, </span><span style="color: #A5D6FF">'x-rate-limit-reset'</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">'273'</span><span style="color: #C9D1D9">}</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#E1E4E8">{</span><span style="color:#B392F0">'x-rate-limit-limit'</span><span style="color:#79B8FF">:</span><span style="color:#9ECBFF"> '250',</span><span style="color:#9ECBFF"> 'x-rate-limit-remaining':</span><span style="color:#9ECBFF"> '249',</span><span style="color:#9ECBFF"> 'x-rate-limit-reset':</span><span style="color:#9ECBFF"> '273'}</span></span></code></pre>
 <p>You can see some of our values have now reduced - we’ve decremented our remaining limit by 1 and can see we have 4 and a half minutes to wait before that rate resets. The reset time is a fixed point in time based on when our first request was made, which resets every 15 minutes. Therefore if we made a single request, disappeared for 5 mins, returned and made another the value would be the same as if we’d made a whole number of requests in succession. You can see in my own two examples, it took me a full 10 minutes before executing the second one. The limits on the V2 API are higher, but will reduce much more quickly too and even more so if you request a more complex payload.</p>
 <h2 id="making-multiple-queries">Making Multiple Queries</h2>
 <p>If we were just to start pulling posts from the API as quickly as possible in a loop, we’d very quickly hit our limit and start returning empty data. There isn’t much use in making requests that return nothing, especially if we desire to leave our machine unattended whilst making them.</p>
 <p>Instead, lets code a loop that takes the limit values we’re returned into consideration.</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> httpx</span></span>
-<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> os</span></span>
-<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> time</span></span>
-<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> json</span></span>
-<span class="line"><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> datetime </span><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> datetime</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> httpx</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> os</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> time</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> json</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> datetime </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> datetime</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #79C0FF">PRODUCTHUNT_API_TOKEN</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> os.environ.get(</span><span style="color: #A5D6FF">"PRODUCTHUNT_API_TOKEN"</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color:#79B8FF">PRODUCTHUNT_API_TOKEN</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> os.environ.get(</span><span style="color:#9ECBFF">"PRODUCTHUNT_API_TOKEN"</span><span style="color:#E1E4E8">)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #FF7B72">def</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">get_posts_loop</span><span style="color: #C9D1D9">():</span></span>
-<span class="line"><span style="color: #C9D1D9">    more_data </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">True</span></span>
-<span class="line"><span style="color: #C9D1D9">    params </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span><span style="color: #A5D6FF">"per_page"</span><span style="color: #C9D1D9">: </span><span style="color: #79C0FF">50</span><span style="color: #C9D1D9">}</span></span>
-<span class="line"><span style="color: #C9D1D9">    page_limit </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">100</span></span>
-<span class="line"><span style="color: #C9D1D9">    headers </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span><span style="color: #A5D6FF">"Authorization"</span><span style="color: #C9D1D9">: </span><span style="color: #FF7B72">f</span><span style="color: #A5D6FF">"Bearer </span><span style="color: #79C0FF">{PRODUCTHUNT_API_TOKEN}</span><span style="color: #A5D6FF">"</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> get_posts_loop</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#E1E4E8">    more_data </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> True</span></span>
+<span class="line"><span style="color:#E1E4E8">    params </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"per_page"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    page_limit </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 100</span></span>
+<span class="line"><span style="color:#E1E4E8">    headers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"Authorization"</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"Bearer </span><span style="color:#79B8FF">{PRODUCTHUNT_API_TOKEN}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">with</span><span style="color: #C9D1D9"> httpx.Client(</span><span style="color: #FFA657">headers</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">headers) </span><span style="color: #FF7B72">as</span><span style="color: #C9D1D9"> client:</span></span>
-<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">while</span><span style="color: #C9D1D9"> more_data:</span></span>
-<span class="line"><span style="color: #C9D1D9">            r </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> client.get(</span></span>
-<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"https://api.producthunt.com/v1/posts/all"</span><span style="color: #C9D1D9">, </span><span style="color: #FFA657">params</span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9">params, </span><span style="color: #FFA657">timeout</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">20</span></span>
-<span class="line"><span style="color: #C9D1D9">            )</span></span>
-<span class="line"><span style="color: #C9D1D9">            data </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> r.json()</span></span>
-<span class="line"><span style="color: #C9D1D9">            limits </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> {</span></span>
-<span class="line"><span style="color: #C9D1D9">                h: v </span><span style="color: #FF7B72">for</span><span style="color: #C9D1D9"> h, v </span><span style="color: #FF7B72">in</span><span style="color: #C9D1D9"> r.headers.items() </span><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> h.startswith(</span><span style="color: #A5D6FF">"x-rate-limit"</span><span style="color: #C9D1D9">)</span></span>
-<span class="line"><span style="color: #C9D1D9">            }</span></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> httpx.Client(</span><span style="color:#FFAB70">headers</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">headers) </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> client:</span></span>
+<span class="line"><span style="color:#F97583">        while</span><span style="color:#E1E4E8"> more_data:</span></span>
+<span class="line"><span style="color:#E1E4E8">            r </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.get(</span></span>
+<span class="line"><span style="color:#9ECBFF">                "https://api.producthunt.com/v1/posts/all"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">params</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">params, </span><span style="color:#FFAB70">timeout</span><span style="color:#F97583">=</span><span style="color:#79B8FF">20</span></span>
+<span class="line"><span style="color:#E1E4E8">            )</span></span>
+<span class="line"><span style="color:#E1E4E8">            data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> r.json()</span></span>
+<span class="line"><span style="color:#E1E4E8">            limits </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">                h: v </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> h, v </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> r.headers.items() </span><span style="color:#F97583">if</span><span style="color:#E1E4E8"> h.startswith(</span><span style="color:#9ECBFF">"x-rate-limit"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #8B949E"># Do something exciting with the data (more so than write it to a file)</span></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">with</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">open</span><span style="color: #C9D1D9">(</span><span style="color: #FF7B72">f</span><span style="color: #A5D6FF">"</span><span style="color: #79C0FF">{</span><span style="color: #C9D1D9">datetime.now()</span><span style="color: #79C0FF">}</span><span style="color: #A5D6FF">.json"</span><span style="color: #C9D1D9">, </span><span style="color: #A5D6FF">"w"</span><span style="color: #C9D1D9">) </span><span style="color: #FF7B72">as</span><span style="color: #C9D1D9"> f:</span></span>
-<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #79C0FF">print</span><span style="color: #C9D1D9">(limits)</span></span>
-<span class="line"><span style="color: #C9D1D9">                json.dump(data, f, </span><span style="color: #FFA657">indent</span><span style="color: #FF7B72">=</span><span style="color: #79C0FF">4</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color:#6A737D">            # Do something exciting with the data (more so than write it to a file)</span></span>
+<span class="line"><span style="color:#F97583">            with</span><span style="color:#79B8FF"> open</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">datetime.now()</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">.json"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"w"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> f:</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(limits)</span></span>
+<span class="line"><span style="color:#E1E4E8">                json.dump(data, f, </span><span style="color:#FFAB70">indent</span><span style="color:#F97583">=</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">int</span><span style="color: #C9D1D9">(r.headers[</span><span style="color: #A5D6FF">"x-rate-limit-remaining"</span><span style="color: #C9D1D9">]) </span><span style="color: #FF7B72">==</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">0</span><span style="color: #C9D1D9">:</span></span>
-<span class="line"><span style="color: #C9D1D9">                time_to_sleep </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">int</span><span style="color: #C9D1D9">(r.headers[</span><span style="color: #A5D6FF">"x-rate-limit-reset"</span><span style="color: #C9D1D9">]) </span><span style="color: #FF7B72">+</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">30</span></span>
-<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #79C0FF">print</span><span style="color: #C9D1D9">(</span><span style="color: #FF7B72">f</span><span style="color: #A5D6FF">"Rate limit exceeded, waiting </span><span style="color: #79C0FF">{</span><span style="color: #C9D1D9">time_to_sleep</span><span style="color: #79C0FF">}</span><span style="color: #A5D6FF">s..."</span><span style="color: #C9D1D9">)</span></span>
-<span class="line"><span style="color: #C9D1D9">                time.sleep(time_to_sleep)</span></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">else</span><span style="color: #C9D1D9">:</span></span>
-<span class="line"><span style="color: #C9D1D9">                time.sleep(</span><span style="color: #79C0FF">2</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#79B8FF"> int</span><span style="color:#E1E4E8">(r.headers[</span><span style="color:#9ECBFF">"x-rate-limit-remaining"</span><span style="color:#E1E4E8">]) </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                time_to_sleep </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> int</span><span style="color:#E1E4E8">(r.headers[</span><span style="color:#9ECBFF">"x-rate-limit-reset"</span><span style="color:#E1E4E8">]) </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 30</span></span>
+<span class="line"><span style="color:#79B8FF">                print</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"Rate limit exceeded, waiting </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">time_to_sleep</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">s..."</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">                time.sleep(time_to_sleep)</span></span>
+<span class="line"><span style="color:#F97583">            else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">                time.sleep(</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">            more_data </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> (</span></span>
-<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #A5D6FF">"posts"</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">in</span><span style="color: #C9D1D9"> data</span></span>
-<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #FF7B72">and</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">len</span><span style="color: #C9D1D9">(data[</span><span style="color: #A5D6FF">"posts"</span><span style="color: #C9D1D9">])</span></span>
-<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #FF7B72">and</span><span style="color: #C9D1D9"> params.get(</span><span style="color: #A5D6FF">"page"</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">) </span><span style="color: #FF7B72">&#x3C;</span><span style="color: #C9D1D9"> page_limit</span></span>
-<span class="line"><span style="color: #C9D1D9">            )</span></span>
+<span class="line"><span style="color:#E1E4E8">            more_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#9ECBFF">                "posts"</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> data</span></span>
+<span class="line"><span style="color:#F97583">                and</span><span style="color:#79B8FF"> len</span><span style="color:#E1E4E8">(data[</span><span style="color:#9ECBFF">"posts"</span><span style="color:#E1E4E8">])</span></span>
+<span class="line"><span style="color:#F97583">                and</span><span style="color:#E1E4E8"> params.get(</span><span style="color:#9ECBFF">"page"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> page_limit</span></span>
+<span class="line"><span style="color:#E1E4E8">            )</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> more_data:</span></span>
-<span class="line"><span style="color: #C9D1D9">                params[</span><span style="color: #A5D6FF">"page"</span><span style="color: #C9D1D9">] </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> params.get(</span><span style="color: #A5D6FF">"page"</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">1</span><span style="color: #C9D1D9">) </span><span style="color: #FF7B72">+</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">1</span></span></code></pre>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> more_data:</span></span>
+<span class="line"><span style="color:#E1E4E8">                params[</span><span style="color:#9ECBFF">"page"</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> params.get(</span><span style="color:#9ECBFF">"page"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span></span></code></pre>
 <p>In the above example you can see we make the request as part of a loop, incrementing and passing the ‘page’ key to step back through the next page of 50 items for each subsequent request. If our <code>x-rate-limit-remaining</code> value gets to zero, we sleep for the remaining <code>x-rate-limit-reset</code> value (plus a slight pause of 30 seconds) before requesting the next 50 items. By this time our remaining and reset values will have reset allowing us to continue.</p>
 <p>If we left the above script running, it will return 100 pages of products from the Product Hunt featured product catalog, writing them to disk before terminating. This gives us details of the most recent 5000 products and we can obviously change our page limit to go back even further.</p>
 <p>Even within the default loop behaviour, I’ve added a sleep of 2 seconds between each request. It is unnecessary make all our requests at as soon as possible, as we’re limited anyway so we might as well keep a slow and steady pace throughout. The code would also work the same for V2 of the API, though we would need to change the remaining comparison with zero to a higher value.</p>
@@ -212,64 +87,7 @@
 <p>The Product Hunt API provides access to a really interesting dataset which can be interpreted in a multitude of ways. When querying it and any API for large amounts of data however we need to be mindful of adhering to the limits that have been put in place by the API owners and behaving responsibly when making queries.</p>
 <p>I had a lot of fun interpreting this data and thoroughly enjoyed working with it. I’ve been given a whole bunch of ideas for other ways the Product Hunt data could be interpreted since the article being posted and will likely do so as part of a future article here.</p>
 <p>I will also say I’d love to do more paid ‘data analysis’ technical writing like this. If you have an interesting dataset and like my work, please get in touch and lets make it happen.</p>
-		</div>
-	</article>
-	<section class="relative astro-HVBEBTVO">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
-		<div class="py-12 md:py-20 astro-HVBEBTVO">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
-					Subscribe for Exclusives
-				</h2>
-				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
-					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
-				</p>
-
-				<div class="mt-6 astro-HVBEBTVO">
-					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-	</main><footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</li>
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; 2003-2026 Ian Wootten
-			</div>
-		</div>
-	</div>
-</footer>
-		<script>
+</div></article><section class="relative" data-astro-cid-cey2t5nt><div class="max-w-6xl mx-auto px-4 sm:px-6" data-astro-cid-cey2t5nt><div class="py-12 md:py-20" data-astro-cid-cey2t5nt><div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none" data-astro-cid-cey2t5nt><h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" data-astro-cid-cey2t5nt>Subscribe for Exclusives</h2><p class="text-xl text-gray-600 dark:text-slate-400" data-astro-cid-cey2t5nt>My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time.</p><div class="mt-6" data-astro-cid-cey2t5nt><div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" data-astro-cid-cey2t5nt><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div></div></div></div></div></section></section></main><footer class="border-t border-gray-200 dark:border-slate-800"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="md:flex md:items-center md:justify-between py-6 md:py-8"><ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-twitter"><symbol id="ai:tabler:brand-twitter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99c-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.8 13.8 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></symbol><use href="#ai:tabler:brand-twitter"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-youtube"><use href="#ai:tabler:brand-youtube"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-github"><use href="#ai:tabler:brand-github"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-linkedin"><symbol id="ai:tabler:brand-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 11v5m0-8v.01M12 16v-5m4 5v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></g></symbol><use href="#ai:tabler:brand-linkedin"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:rss"><use href="#ai:tabler:rss"></use></svg></a></li></ul><div class="text-sm text-gray-700 mr-4 dark:text-slate-400">&copy; 2003-2026 Ian Wootten</div></div></div></footer><script>
 	// Set "light" theme as default
 	// if (!localStorage.theme) {
 	//   localStorage.theme = "light";
@@ -313,8 +131,4 @@
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
 	};
-</script>
-
-		
-	</body>
-</html>
+</script></body></html>

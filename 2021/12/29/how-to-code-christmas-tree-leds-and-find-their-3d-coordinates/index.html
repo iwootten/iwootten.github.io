@@ -1,140 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>How to Code Christmas Tree LEDs (and find their 3D Coordinates) — Ian Wootten</title>
-<meta name="robots" content="index,follow" />
-<meta name="description" content="For Christmas 2021, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That's tongue and cheek, but also ended up being very true." />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="How to Code Christmas Tree LEDs (and find their 3D Coordinates)" />
-<meta property="og:description" content="For Christmas 2021, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That's tongue and cheek, but also ended up being very true." />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/" />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.cc7ec3ef.jpg" />
-<meta property="og:image:alt" content="How to Code Christmas Tree LEDs (and find their 3D Coordinates)" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/" />
-
-
-<!-- Or Google Fonts -->
-
-<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
-
-
-
-<script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script>
-
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
-
-
-	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
-
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center" href="/">
-				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
-	💻&nbsp;&nbsp;Ian Wootten</span>
-			</a>
-			<div class="flex items-center md:hidden">
-				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
-</button>
-			</div>
-		</div>
-		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
-					</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
-					</a>
-				</li>
-			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
-				<div class="hidden items-center md:flex">
-					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header><main>
-		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-	<article>
-		<header>
-			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2021-12-29T12:15:49.000Z">Dec 29, 2021</time> ~ 8 min read
-			</p>
-			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				How to Code Christmas Tree LEDs (and find their 3D Coordinates)
-			</h1>
-			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/p5js/">p5js</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/leds/">leds</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/raspberry-pi/">raspberry pi</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/neopixel/">neopixel</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/maths/">maths</a>
-				</li>
-		</ul>
-			</div>
-			<picture>
-			<source type="image/avif" srcset="/assets/ws2811-leds.ede964ea_Z1Yy1xY.avif 400w,/assets/ws2811-leds.ede964ea_Zi8ulJ.avif 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/webp" srcset="/assets/ws2811-leds.ede964ea_Z1gdcAd.webp 400w,/assets/ws2811-leds.ede964ea_qcjB2.webp 900w" sizes="(max-width: 900px) 400px, 900px"><source type="image/png" srcset="/assets/ws2811-leds.ede964ea_ZmW0S4.png 400w,/assets/ws2811-leds.ede964ea_Z18DsNU.png 900w" sizes="(max-width: 900px) 400px, 900px">
-			<img width="900" height="506" src="/assets/ws2811-leds.ede964ea_1k7laS.png" loading="lazy" decoding="async" alt="For Christmas 2021, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That's tongue and cheek, but also ended up being very true." class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700">
-		</picture>
-		</header>
-		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>This Christmas, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That’s tongue and cheek, but also ended up being very true.</p>
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Code Christmas Tree LEDs (and find their 3D Coordinates) — Ian Wootten</title><meta name="description" content="For Christmas 2021, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That's tongue and cheek, but also ended up being very true."><link rel="canonical" href="https://www.ianwootten.co.uk/2021/12/29/how-to-code-christmas-tree-leds-and-find-their-3d-coordinates/"><meta property="og:title" content="How to Code Christmas Tree LEDs (and find their 3D Coordinates)"><meta property="og:description" content="For Christmas 2021, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That's tongue and cheek, but also ended up being very true."><meta property="og:type" content="article"><meta property="og:image" content="https://www.ianwootten.co.uk/_astro/opengraph.DG7AWgdp_ZrAbu8.webp"><meta name="twitter:card" content="summary_large_image"><meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"><script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#8D46E7"><link rel="stylesheet" href="/_astro/permalinks.3Ph0TD5z.css"><style>form[data-astro-cid-cey2t5nt] .feedback[data-astro-cid-cey2t5nt]{display:none}form[data-astro-cid-cey2t5nt].success input[data-astro-cid-cey2t5nt],form[data-astro-cid-cey2t5nt].success button[data-astro-cid-cey2t5nt]{display:none!important}form[data-astro-cid-cey2t5nt].success .feedback[data-astro-cid-cey2t5nt]{display:unset}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.13.2 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.13.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head><body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"><header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b border-gray-200 dark:border-b-0"><div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"><div class="flex justify-between"><a class="flex items-center" href="/"><span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">💻&nbsp;&nbsp;Ian Wootten</span></a><div class="flex items-center md:hidden"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" class="w-6 h-6" data-icon="tabler:sun"><symbol id="ai:tabler:sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use href="#ai:tabler:sun"></use></svg></button><button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu><svg width="1em" height="1em" class="w-6 h-6" optimize="false" data-icon="tabler:menu"><symbol id="ai:tabler:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></symbol><use href="#ai:tabler:menu"></use></svg></button></div></div><nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu"><ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github</a></li></ul><div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"><div class="hidden items-center md:flex"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:sun"><use href="#ai:tabler:sun"></use></svg></button><a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-youtube"><symbol id="ai:tabler:brand-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></symbol><use href="#ai:tabler:brand-youtube"></use></svg></a><a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-github"><symbol id="ai:tabler:brand-github" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></symbol><use href="#ai:tabler:brand-github"></use></svg></a><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:rss"><symbol id="ai:tabler:rss" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></symbol><use href="#ai:tabler:rss"></use></svg></a></div></div></nav></div></header><main><section class="py-8 sm:py-16 lg:py-20 mx-auto"><article><header><p class="max-w-3xl mx-auto text-center"><time datetime="Wed Dec 29 2021 12:15:49 GMT+0000 (Coordinated Universal Time)">Dec 29, 2021</time> ~  min read</p><h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">How to Code Christmas Tree LEDs (and find their 3D Coordinates)</h1><div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8"><ul class="text-sm"><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/python/">python</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/p5js/">p5js</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/leds/">leds</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/raspberry-pi/">raspberry pi</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/neopixel/">neopixel</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/maths/">maths</a></li></ul></div><picture><img src="/_astro/ws2811-leds.DBOZNgBa_26aTiR.webp" loading="lazy" decoding="async" alt="For Christmas 2021, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That's tongue and cheek, but also ended up being very true." class="max-w-full lg:max-w-6xl mx-auto mt-4 mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"></picture></header><div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"><p>This Christmas, I decided to make our tree lights incredibly complex so that I could marvel at my own animations running on them. That’s tongue and cheek, but also ended up being very true.</p>
 <p>I’d been inspired by mathematician <a href="https://www.youtube.com/watch?v=TvlpIojusBE">Matt Parker in 2020</a> where he did this. In this post I’ll describe all the hardware I used and how it was connected and I’ll share the code I needed to write to capture the LED’s coordinates. Feel free to jump to the bits you’re interested in:</p>
 <ul>
 <li><a href="#equipment">Equipment</a></li>
@@ -148,31 +14,19 @@ barrel connectors (typically used for security cameras), USB to barrel cables to
 <h3 id="ws2811-leds">WS2811 LEDs</h3>
 <p>We have a fairly small tree, so I purchased 2 strings of 50 WS2811 LEDs. They’re only available in sets of 50 and you can chain each string together using connectors between them, so in my case I have ended up with a single string with 100 LEDs on it. These are commonly referred to as ‘NeoPixels’ but this is the name of the <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels">brand owned by Adafruit</a>.</p>
 <p>Each of my LEDs is individually addressable and has a WS2811 chip inside it (which is most common in these types of string lights). As they are individually addressable, it’s possible to change the colour and brightness of each individual LED without affecting any of the others on the string. So you could light up any one or many of the LEDs anywhere along the string length.</p>
-<p>Unfortunately for me, I neglected to do much else until December when my wife expectantly unpacked our tree from the loft ready for decoration…</p>
+<p>Unfortunately for me, I neglected to do much else until December when my wife expectantly unpacked our tree from the loft ready for decoration….</p>
 <h3 id="power">Power</h3>
 <p>When I purchased the lights, I had no clue how they could be powered. I spent a lot of time digging around on YouTube to find out.</p>
 <p>As well as a male and female connector to connect each string together, each set also has two bare cables for DC power. Different manufacturers colour these wires differently, in my case ground is white and red/white striped one is +5V but if you buy some yourself you may have different colours.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/ws2811-wires.46bab8a7_VebSv.avif 400w,/assets/ws2811-wires.46bab8a7_Z2rxpIb.avif 900w"><source type="image/webp" srcset="/assets/ws2811-wires.46bab8a7_1Ez0Qh.webp 400w,/assets/ws2811-wires.46bab8a7_Z1IcAKp.webp 900w"><source type="image/png" srcset="/assets/ws2811-wires.46bab8a7_1lRHHB.png 400w,/assets/ws2811-wires.46bab8a7_AbfLK.png 900w">
-			<img width="900" height="506" src="/assets/ws2811-wires.46bab8a7_Z2giMLs.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/ws2811-wires.xfpboCuj_1CG4k3.webp" loading="lazy" decoding="async" class></picture>
 <p>I connected a barrel connector to these, which allowed the lights to be powered by a typical 5V power adaptor. Annoyingly, after having done this I then realised I had no power adaptors of this voltage or size! Instead I modified a USB charging cable to have the correct size male side of the barrel connector. You can pick up USB to barrel connectors from <a href="https://thepihut.com/products/usb-to-5-5mm-power-cable-type-m-barrel-0-9m">thepihut</a> or <a href="https://shop.pimoroni.com/products/barrel-jack-adapter-usb-to-5-5mm">pimoroni</a>.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/barrel-connector-mod.56c515d5_2s3H7p.avif 400w,/assets/barrel-connector-mod.56c515d5_ZUHTuh.avif 900w"><source type="image/webp" srcset="/assets/barrel-connector-mod.56c515d5_Z1SMBIK.webp 400w,/assets/barrel-connector-mod.56c515d5_Zcn5wv.webp 900w"><source type="image/png" srcset="/assets/barrel-connector-mod.56c515d5_Z22fPKP.png 400w,/assets/barrel-connector-mod.56c515d5_2heP7f.png 900w">
-			<img width="900" height="506" src="/assets/barrel-connector-mod.56c515d5_17GW5F.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/barrel-connector-mod.CI7etBcO_1bRGPb.webp" loading="lazy" decoding="async" class></picture>
 <p>My lights are rated 5 volts, which is the same as USB chargers so I opted to use an Anker 5 port USB power adaptor, which provides multiple 5V USB outs. I decided to confirm this and that I’d wired things correctly using a multimeter. Nothing blew up or melted!</p>
 <p>You could use one of these barrel cables to inject power to each set of lights as the power will tend to fade as it goes along the combined length. I decided not do this as it was unlikely running them all at full power.</p>
 <h3 id="controller">Controller</h3>
-<picture>
-			<source type="image/avif" srcset="/assets/pi-400.b5cc8298_1cQ6W8.avif 400w,/assets/pi-400.b5cc8298_Z2aUuEy.avif 900w"><source type="image/webp" srcset="/assets/pi-400.b5cc8298_1VbUTT.webp 400w,/assets/pi-400.b5cc8298_Z1rzFGM.webp 900w"><source type="image/png" srcset="/assets/pi-400.b5cc8298_12oD37.png 400w,/assets/pi-400.b5cc8298_gHb7g.png 900w">
-			<img width="900" height="506" src="/assets/pi-400.b5cc8298_ZVbMs9.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/pi-400.BsdgSjqF_Z2mgLP8.webp" loading="lazy" decoding="async" class></picture>
 <p>To control the LEDs I first used a Raspberry Pi Zero, later followed by a 400 to tell each LED when to light up. I chose the 400 over the Zero so that I could easily use VSCode over SSH. The 40 GPIO pins that are readily accessible on the Pis make either perfect for this kind of project and I wanted network connectivity too. I hooked the lights ground wire (white) to physical pin 39 on the Pi and the data wire (green) on the lights to physical pin 12 (GPIO pin 18). I used some <a href="https://amzn.to/3r51Lyl">Elgoo multicoloured dupont wires</a> for this. Conveniently using a Raspberry Pi also meant I could power everything from the same Anker adaptor too.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/connected-wires.890d62e7_Z24KI2G.avif 400w,/assets/connected-wires.890d62e7_ZnlbPr.avif 900w"><source type="image/webp" srcset="/assets/connected-wires.890d62e7_Z1lpT4U.webp 400w,/assets/connected-wires.890d62e7_kYC7k.webp 900w"><source type="image/png" srcset="/assets/connected-wires.890d62e7_Z2bbyT2.png 400w,/assets/connected-wires.890d62e7_28j6Y3.png 900w">
-			<img width="900" height="506" src="/assets/connected-wires.890d62e7_ZFt32D.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/connected-wires.SgPnlV6D_Z21ufKK.webp" loading="lazy" decoding="async" class></picture>
 <h2 id="animations">Animations</h2>
 <p>Visual Studio code working over SSH has been great for experimenting with live coding. It’s enabled me to sit on the other side of the room working on animations as if I was working on the 400 itself and has sped up my development loop massively for this project.</p>
 <p>Coming up with the light animations has been interesting. I started with simple animations by switching 1 to 100 of the LED, on and then off again. Then I turned them all on and off giving a flashing effect. Well, flashing and turning lights on in succession isn’t particularly hard, but doesn’t make for the nicest complement to our living room lights during Christmas. If you look at your own lights, you might notice they make subtle brightness changes as well to make them more aesthetically pleasing.</p>
@@ -182,99 +36,23 @@ barrel connectors (typically used for security cameras), USB to barrel cables to
 <li><a href="https://github.com/FreesphereTom/neopixelscripts">https://github.com/FreesphereTom/neopixelscripts</a></li>
 <li><a href="https://github.com/dmlond/raspberry_pi_neopixel">https://github.com/dmlond/raspberry_pi_neopixel</a></li>
 </ul>
-<picture>
-			<source type="image/avif" srcset="/assets/other-animations.5375fe7a_2pslJX.avif 400w,/assets/other-animations.5375fe7a_ZXjfQI.avif 900w"><source type="image/webp" srcset="/assets/other-animations.5375fe7a_Z1VnX6c.webp 400w,/assets/other-animations.5375fe7a_ZeXqSW.webp 900w"><source type="image/png" srcset="/assets/other-animations.5375fe7a_Z2mlJ9s.png 400w,/assets/other-animations.5375fe7a_1W8VIC.png 900w">
-			<img width="900" height="506" src="/assets/other-animations.5375fe7a_1wEcoR.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/other-animations.w1SRgxcr_1CQRc7.webp" loading="lazy" decoding="async" class></picture>
 <p>We’re all using the excellent adafruit python neopixel libraries to allow this. The libraries demo rainbow animation is actually one of the favourites in our house, so maybe coding them myself wasn’t necessary at all.</p>
 <p>I also set the tree to flash to notify me of events. It will cycle the animations until it is notified of an event and flashes blue when I get a twitter follower and red when get a YouTube subscriber. This may seem a little vain - but honestly every time it happens it makes me smile a little.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/flash-leds-red.be48a51e_y64DA.avif 400w,/assets/flash-leds-red.be48a51e_2fvAPP.avif 900w"><source type="image/webp" srcset="/assets/flash-leds-red.be48a51e_1hqSBm.webp 400w,/assets/flash-leds-red.be48a51e_Z26kI0k.webp 900w"><source type="image/png" srcset="/assets/flash-leds-red.be48a51e_Z16WFsg.png 400w,/assets/flash-leds-red.be48a51e_Z1RE8o7.png 900w">
-			<img width="900" height="506" src="/assets/flash-leds-red.be48a51e_4ujPl.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/flash-leds-red.f3oxiM-J_Zczi83.webp" loading="lazy" decoding="async" class></picture>
 <h2 id="calculating-3d-coordinates">Calculating 3D Coordinates</h2>
 <p>Lighting each LED based on its position on the string is great, but the animations tend to jump around depending on how the string has been arranged on the tree branches. This makes sense, given the string goes up and down as much asTo make more interesting animations, we need to know the LEDs 3D coordinates and to do that I’ve borrowed an idea from mathematician Matt Parker, lighting each individual LED one at a time in a dark room. I wrote some Python to trigger each of the 100 LEDs and capture a photograph of its position, which I planned to use to determine their X and Y coordinates. Then I rotated the tree 90 degrees, to repeat that entire photography process again to get the LEDs Z coordinate too.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/photographing-leds.1df26f12_Zcf8GD.avif 400w,/assets/photographing-leds.1df26f12_1uanuB.avif 900w"><source type="image/webp" srcset="/assets/photographing-leds.1df26f12_w5Fg8.webp 400w,/assets/photographing-leds.1df26f12_2dvcsn.webp 900w"><source type="image/png" srcset="/assets/photographing-leds.1df26f12_Z18rRGI.png 400w,/assets/photographing-leds.1df26f12_Z1T9kCz.png 900w">
-			<img width="900" height="506" src="/assets/photographing-leds.1df26f12_1Y9Gmo.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/photographing-leds.B7YU-2Cp_1CWEYl.webp" loading="lazy" decoding="async" class></picture>
 <p>Our tree wasn’t in the best situation for this, it was covered in decorations and butted right up against the wall, so light is badly obscured in the photos I took. But I couldn’t tell my kids once the tree appears from the loft that they can’t decorate it - “Sorry kids, daddy just needs to calculate all the coordinates of lights on the tree”.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/photographing-leds-2.ad43b0ff_Z6JHhc.avif 400w,/assets/photographing-leds-2.ad43b0ff_1zENU3.avif 900w"><source type="image/webp" srcset="/assets/photographing-leds-2.ad43b0ff_BA6Fz.webp 400w,/assets/photographing-leds-2.ad43b0ff_2j0CRO.webp 900w"><source type="image/png" srcset="/assets/photographing-leds-2.ad43b0ff_KFCf.png 400w,/assets/photographing-leds-2.ad43b0ff_ZJULiB.png 900w">
-			<img width="900" height="506" src="/assets/photographing-leds-2.ad43b0ff_1aLVrp.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/photographing-leds-2.CCbfuwET_2rEytz.webp" loading="lazy" decoding="async" class></picture>
 <p>After looking at the ropey images I’d taken and realising all my basic mistakes, I didn’t want to spend much time trying to remember how to do image processing as I thought my results would be unreliable at best. I’m a software engineer and have had experience of things quickly getting out of scope. I spent a bit of time trying to do this in Python with OpenCV, before deciding it probably wasn’t the right route.</p>
 <h3 id="lets-do-it-by-hand">Let’s Do it By Hand</h3>
 <p>I coded basic web app using p5.js which lined up the image I’d taken from each camera angle side by side and allowed me to pick where I thought the LED was with the mouse - mechanical turk style if you like. Once these were submitted I moved on to the next two images. For each of the 100 LEDs, pointing and clicking over and over each time. All the results were written out to a text file, with each row in the file representing a different LED in the order they were in the strip. Coding the app and capturing it this way was probably all of a few hours work and I’ve <a href="https://github.com/iwootten/xmastree-coordinates">published it to github</a>.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/manual-pixel-calc.04fa020e_Z10H2D7.avif 400w,/assets/manual-pixel-calc.04fa020e_Z243JD2.avif 900w"><source type="image/webp" srcset="/assets/manual-pixel-calc.04fa020e_ZhmdFl.webp 400w,/assets/manual-pixel-calc.04fa020e_Z1kHUFg.webp 900w"><source type="image/png" srcset="/assets/manual-pixel-calc.04fa020e_N1uzK.png 400w,/assets/manual-pixel-calc.04fa020e_gUG7j.png 900w">
-			<img width="900" height="616" src="/assets/manual-pixel-calc.04fa020e_Z2pU5tv.png" loading="lazy" decoding="async" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/manual-pixel-calc.B7mIJw9G_Z1sTIYw.webp" loading="lazy" decoding="async" class></picture>
 <p>I’m glad to say that this did appear to work, it allowed me to run Matts code on the tree along with a few of the other examples <a href="https://github.com/standupmaths/xmastree2020">in his github</a>. If you watch the video you can see it spinning in 3D in all it’s glory. I’d really would have liked to have a few more LEDs to experiment with here to increase the trees ‘resolution’.</p>
 <h2 id="future-work">Future Work</h2>
 <p>I had a blast putting this project together and experimenting with all the different animations. Next year I definitely will begin earlier though, armed with the code I now have. If you’re interested in hearing how I’ve taken the coordinates and rendered them on a canvas in 3D I’ll be going through it in a future post. Matt has also continued his tree adventures this year, <a href="https://www.youtube.com/watch?v=WuMRJf6B5Q4">creating his own format for rendering LED animations</a>!</p>
-<picture>
-			<source type="image/avif" srcset="/assets/rainbow-animations.0df4ac84_Z2kvCrP.avif 400w,/assets/rainbow-animations.0df4ac84_ZD66fA.avif 900w"><source type="image/webp" srcset="/assets/rainbow-animations.0df4ac84_Z1BaNu4.webp 400w,/assets/rainbow-animations.0df4ac84_5eHHb.webp 900w"><source type="image/png" srcset="/assets/rainbow-animations.0df4ac84_ZxCDJD.png 400w,/assets/rainbow-animations.0df4ac84_Z1jk6Fu.png 900w">
-			<img width="900" height="506" src="/assets/rainbow-animations.0df4ac84_PKLc3.png" loading="lazy" decoding="async" class="">
-		</picture>
-		</div>
-	</article>
-	<section class="relative astro-HVBEBTVO">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
-		<div class="py-12 md:py-20 astro-HVBEBTVO">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
-					Subscribe for Exclusives
-				</h2>
-				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
-					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
-				</p>
-
-				<div class="mt-6 astro-HVBEBTVO">
-					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-	</main><footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</li>
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; 2003-2026 Ian Wootten
-			</div>
-		</div>
-	</div>
-</footer>
-		<script>
+<picture widths="400,900"><img src="/_astro/rainbow-animations.CePHqCxy_Z1vRuwA.webp" loading="lazy" decoding="async" class></picture></div></article><section class="relative" data-astro-cid-cey2t5nt><div class="max-w-6xl mx-auto px-4 sm:px-6" data-astro-cid-cey2t5nt><div class="py-12 md:py-20" data-astro-cid-cey2t5nt><div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none" data-astro-cid-cey2t5nt><h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" data-astro-cid-cey2t5nt>Subscribe for Exclusives</h2><p class="text-xl text-gray-600 dark:text-slate-400" data-astro-cid-cey2t5nt>My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time.</p><div class="mt-6" data-astro-cid-cey2t5nt><div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" data-astro-cid-cey2t5nt><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div></div></div></div></div></section></section></main><footer class="border-t border-gray-200 dark:border-slate-800"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="md:flex md:items-center md:justify-between py-6 md:py-8"><ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-twitter"><symbol id="ai:tabler:brand-twitter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99c-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.8 13.8 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></symbol><use href="#ai:tabler:brand-twitter"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-youtube"><use href="#ai:tabler:brand-youtube"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-github"><use href="#ai:tabler:brand-github"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-linkedin"><symbol id="ai:tabler:brand-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 11v5m0-8v.01M12 16v-5m4 5v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></g></symbol><use href="#ai:tabler:brand-linkedin"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:rss"><use href="#ai:tabler:rss"></use></svg></a></li></ul><div class="text-sm text-gray-700 mr-4 dark:text-slate-400">&copy; 2003-2026 Ian Wootten</div></div></div></footer><script>
 	// Set "light" theme as default
 	// if (!localStorage.theme) {
 	//   localStorage.theme = "light";
@@ -318,8 +96,4 @@ barrel connectors (typically used for security cameras), USB to barrel cables to
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
 	};
-</script>
-
-		
-	</body>
-</html>
+</script></body></html>

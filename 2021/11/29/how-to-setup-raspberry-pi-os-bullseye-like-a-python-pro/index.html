@@ -1,135 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>How to Setup Raspberry Pi OS: Bullseye like a Python Pro — Ian Wootten</title>
-<meta name="robots" content="index,follow" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="How to Setup Raspberry Pi OS: Bullseye like a Python Pro" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2021/11/29/how-to-setup-raspberry-pi-os-bullseye-like-a-python-pro/" />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.97da2872.jpg" />
-<meta property="og:image:alt" content="How to Setup Raspberry Pi OS: Bullseye like a Python Pro" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2021/11/29/how-to-setup-raspberry-pi-os-bullseye-like-a-python-pro/" />
-
-
-<!-- Or Google Fonts -->
-
-<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
-
-
-
-<script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script>
-
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
-
-
-	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
-
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center" href="/">
-				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
-	💻&nbsp;&nbsp;Ian Wootten</span>
-			</a>
-			<div class="flex items-center md:hidden">
-				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
-</button>
-			</div>
-		</div>
-		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
-					</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
-					</a>
-				</li>
-			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
-				<div class="hidden items-center md:flex">
-					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header><main>
-		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-	<article>
-		<header>
-			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2021-11-29T17:29:55.000Z">Nov 29, 2021</time> ~ 6 min read
-			</p>
-			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				How to Setup Raspberry Pi OS: Bullseye like a Python Pro
-			</h1>
-			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/raspberry-pi/">raspberry pi</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/pipenv/">pipenv</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/pyenv/">pyenv</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/poetry/">poetry</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/pipx/">pipx</a>
-				</li>
-		</ul>
-			</div>
-			
-		</header>
-		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>I setup my Raspberry Pi using Bullseye and installed many of the same developer tools I use on my main dev machine for Python upon it. You can also check out a youtube video I’ve made on <a href="https://www.youtube.com/watch?v=yiIvV2Oyfak">setting it up here</a>. I did this from scratch with a brand new install, with all available updates installed at the time. Bullseye is the most recent release of Raspberry Pi OS which came out earlier this month, based on Debian Bullseye.</p>
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How to Setup Raspberry Pi OS: Bullseye like a Python Pro — Ian Wootten</title><meta name="description" content><link rel="canonical" href="https://www.ianwootten.co.uk/2021/11/29/how-to-setup-raspberry-pi-os-bullseye-like-a-python-pro/"><meta property="og:title" content="How to Setup Raspberry Pi OS: Bullseye like a Python Pro"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:image" content="https://www.ianwootten.co.uk/_astro/opengraph.Bp1W6bNG_Z13wB1m.webp"><meta name="twitter:card" content="summary_large_image"><meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"><script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#8D46E7"><link rel="stylesheet" href="/_astro/permalinks.3Ph0TD5z.css"><style>form[data-astro-cid-cey2t5nt] .feedback[data-astro-cid-cey2t5nt]{display:none}form[data-astro-cid-cey2t5nt].success input[data-astro-cid-cey2t5nt],form[data-astro-cid-cey2t5nt].success button[data-astro-cid-cey2t5nt]{display:none!important}form[data-astro-cid-cey2t5nt].success .feedback[data-astro-cid-cey2t5nt]{display:unset}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.13.2 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.13.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head><body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"><header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b border-gray-200 dark:border-b-0"><div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"><div class="flex justify-between"><a class="flex items-center" href="/"><span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">💻&nbsp;&nbsp;Ian Wootten</span></a><div class="flex items-center md:hidden"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" class="w-6 h-6" data-icon="tabler:sun"><symbol id="ai:tabler:sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use href="#ai:tabler:sun"></use></svg></button><button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu><svg width="1em" height="1em" class="w-6 h-6" optimize="false" data-icon="tabler:menu"><symbol id="ai:tabler:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></symbol><use href="#ai:tabler:menu"></use></svg></button></div></div><nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu"><ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github</a></li></ul><div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"><div class="hidden items-center md:flex"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:sun"><use href="#ai:tabler:sun"></use></svg></button><a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-youtube"><symbol id="ai:tabler:brand-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></symbol><use href="#ai:tabler:brand-youtube"></use></svg></a><a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-github"><symbol id="ai:tabler:brand-github" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></symbol><use href="#ai:tabler:brand-github"></use></svg></a><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:rss"><symbol id="ai:tabler:rss" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></symbol><use href="#ai:tabler:rss"></use></svg></a></div></div></nav></div></header><main><section class="py-8 sm:py-16 lg:py-20 mx-auto"><article><header><p class="max-w-3xl mx-auto text-center"><time datetime="Mon Nov 29 2021 17:29:55 GMT+0000 (Coordinated Universal Time)">Nov 29, 2021</time> ~  min read</p><h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">How to Setup Raspberry Pi OS: Bullseye like a Python Pro</h1><div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8"><ul class="text-sm"><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/python/">python</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/raspberry-pi/">raspberry pi</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/pipenv/">pipenv</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/pyenv/">pyenv</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/poetry/">poetry</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/pipx/">pipx</a></li></ul></div></header><div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"><p>I setup my Raspberry Pi using Bullseye and installed many of the same developer tools I use on my main dev machine for Python upon it. You can also check out a youtube video I’ve made on <a href="https://www.youtube.com/watch?v=yiIvV2Oyfak">setting it up here</a>. I did this from scratch with a brand new install, with all available updates installed at the time. Bullseye is the most recent release of Raspberry Pi OS which came out earlier this month, based on Debian Bullseye.</p>
 <p>Specifically, I did this on my Pi 400 which is feeling very lonely having not got much use since I bought it last year. The instructions here however should work for any Raspberry Pi running Bullseye. Out of the box, Bullseye is fully configured to get started programming Python and we have a couple of IDEs installed already. So you might be wondering why we need to do anything at all?</p>
 <p>Well, as a Python developer, I have a few preferences for tools I use for writing code, I’m already familiar with them so want to continue to use them. Additionally, I want to be able to manage multiple versions of Python and the library versions within environments simply and easily and update them when I need too, again with familiar tools. This isn’t how a Pi or Bullseye is initially setup it’s mostly used for education rather than professional(!) devs. Pi OS is shipped with everything we might need for Python straight away preinstalled globally. In a educational scenario, if we wanted to change the setup we could just swap out our main disk in the form of a microsd card for another very simply.</p>
 <p>In practice it’s important to separate dependencies in any development project so I want to do the do the same on Bullseye too. Practically, switching SD cards all the time doesn’t make sense if I can just switch an environment via a command line.</p>
@@ -160,120 +31,59 @@
 <h2 id="pyenv">Pyenv</h2>
 <p>Pyenv is a tool which allows us to install multiple versions of Python on the same machine.</p>
 <p>In order to install Pyenv on Bullseye, we need to install the <a href="https://github.com/pyenv/pyenv/wiki#suggested-build-environment">Python build dependencies</a> for Debian.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sudo apt-get update</span><span style="color:#FF7B72">;</span><span style="color:#C9D1D9"> sudo apt-get install make build-essential libssl-dev zlib1g-dev \</span></span>
-<span class="line"><span style="color:#C9D1D9">libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \</span></span>
-<span class="line"><span style="color:#C9D1D9">libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> apt-get</span><span style="color:#9ECBFF"> update</span><span style="color:#E1E4E8">; </span><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> apt-get</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> make</span><span style="color:#9ECBFF"> build-essential</span><span style="color:#9ECBFF"> libssl-dev</span><span style="color:#9ECBFF"> zlib1g-dev</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">libbz2-dev </span><span style="color:#9ECBFF">libreadline-dev</span><span style="color:#9ECBFF"> libsqlite3-dev</span><span style="color:#9ECBFF"> wget</span><span style="color:#9ECBFF"> curl</span><span style="color:#9ECBFF"> llvm</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#E1E4E8">libncursesw5-dev </span><span style="color:#9ECBFF">xz-utils</span><span style="color:#9ECBFF"> tk-dev</span><span style="color:#9ECBFF"> libxml2-dev</span><span style="color:#9ECBFF"> libxmlsec1-dev</span><span style="color:#9ECBFF"> libffi-dev</span><span style="color:#9ECBFF"> liblzma-dev</span></span></code></pre>
 <p>Once that’s done, you can follow the instructions to clone the pyenv repo to your users home directory.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9"> git clone https://github.com/pyenv/pyenv.git </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.pyenv</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0"> git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/pyenv/pyenv.git</span><span style="color:#9ECBFF"> ~/.pyenv</span></span></code></pre>
 <p>I also went ahead and compiled the bash extension:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">cd</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.pyenv </span><span style="color:#FF7B72">&amp;&amp;</span><span style="color:#C9D1D9"> src/configure </span><span style="color:#FF7B72">&amp;&amp;</span><span style="color:#C9D1D9"> make -C src</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF"> cd</span><span style="color:#9ECBFF"> ~/.pyenv</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">src/configure</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#79B8FF"> -C</span><span style="color:#9ECBFF"> src</span></span></code></pre>
 <p>Once cloned, you’ll need to configure your shell to work with Python. There’s a few different options available here, we can use the Debian version. <em>NB. In the video the one that I used was for the Suse install.</em></p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#8B949E"># the sed invocation inserts the lines at the start of the file</span></span>
-<span class="line"><span style="color:#8B949E"># after any initial comment lines</span></span>
-<span class="line"><span style="color:#C9D1D9">sed -Ei -e </span><span style="color:#A5D6FF">&#39;/^([^#]|$)/ {a \</span></span>
-<span class="line"><span style="color:#A5D6FF">export PYENV_ROOT=&quot;$HOME/.pyenv&quot;</span></span>
-<span class="line"><span style="color:#A5D6FF">a \</span></span>
-<span class="line"><span style="color:#A5D6FF">export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;</span></span>
-<span class="line"><span style="color:#A5D6FF">a \</span></span>
-<span class="line"><span style="color:#A5D6FF">&#39;</span><span style="color:#C9D1D9"> -e </span><span style="color:#A5D6FF">&#39;:a&#39;</span><span style="color:#C9D1D9"> -e </span><span style="color:#A5D6FF">&#39;$!{n;ba};}&#39;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.profile</span></span>
-<span class="line"><span style="color:#79C0FF">echo</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;eval &quot;$(pyenv init --path)&quot;&#39;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">&gt;&gt;</span><span style="color:#C9D1D9">~/.profile</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># the sed invocation inserts the lines at the start of the file</span></span>
+<span class="line"><span style="color:#6A737D"># after any initial comment lines</span></span>
+<span class="line"><span style="color:#B392F0">sed</span><span style="color:#79B8FF"> -Ei</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> '/^([^#]|$)/ {a \</span></span>
+<span class="line"><span style="color:#9ECBFF">export PYENV_ROOT="$HOME/.pyenv"</span></span>
+<span class="line"><span style="color:#9ECBFF">a \</span></span>
+<span class="line"><span style="color:#9ECBFF">export PATH="$PYENV_ROOT/bin:$PATH"</span></span>
+<span class="line"><span style="color:#9ECBFF">a \</span></span>
+<span class="line"><span style="color:#9ECBFF">'</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> ':a'</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> '$!{n;ba};}'</span><span style="color:#9ECBFF"> ~/.profile</span></span>
+<span class="line"><span style="color:#79B8FF">echo</span><span style="color:#9ECBFF"> 'eval "$(pyenv init --path)"'</span><span style="color:#F97583"> >></span><span style="color:#9ECBFF">~/.profile</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#79C0FF">echo</span><span style="color:#C9D1D9"> </span><span style="color:#A5D6FF">&#39;eval &quot;$(pyenv init -)&quot;&#39;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">&gt;&gt;</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.bashrc</span></span></code></pre>
+<span class="line"><span style="color:#79B8FF">echo</span><span style="color:#9ECBFF"> 'eval "$(pyenv init -)"'</span><span style="color:#F97583"> >></span><span style="color:#9ECBFF"> ~/.bashrc</span></span></code></pre>
 <p>You’ll need to logout and login again in order for the .profile file that was just created by this command to be sourced. You can also do:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#79C0FF">source</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">~</span><span style="color:#C9D1D9">/.profile</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> ~/.profile</span></span></code></pre>
 <p>At this point you should be able to call <code>pyenv versions</code> and see the cli return some helpful information about which versions of Python are installed. There should currently be a system version and nothing else listed. It should also be highlighted with a start to indicate it is the global version of Python.</p>
 <p>If you want to install a new version of python, call:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">pyenv install 3.10.0</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pyenv</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> 3.10.0</span></span></code></pre>
 <p>If you check <code>pyenv versions</code> after install you should see both versions listed.</p>
 <h2 id="pipx">pipx</h2>
 <p>After spending much time with failed installations on Pi OS, I found the simplest way of getting Python virtualenv tooling installed is using <a href="https://pypi.org/project/pipx/">pipx</a>. You should make sure you’re still using the system version of Python before install and call:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">python3 -m pip install --user pipx</span></span>
-<span class="line"><span style="color:#C9D1D9">python3 -m pipx ensurepath</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python3</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --user</span><span style="color:#9ECBFF"> pipx</span></span>
+<span class="line"><span style="color:#B392F0">python3</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> pipx</span><span style="color:#9ECBFF"> ensurepath</span></span></code></pre>
 <h2 id="pipenv">pipenv</h2>
 <p><a href="https://pypi.org/project/pipenv/">Pipenv</a> is a great tool for managing Python virtual environments and specifying dependencies. It wraps up many of the common management actions into one tool and automatically maintains dependencies in a Pipfile and Pipfile.lock as you install them.</p>
 <p>Now we have pipx installed, we can easily install pipenv by calling:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">pipx install pipenv</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pipx</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> pipenv</span></span></code></pre>
 <h2 id="poetry">Poetry</h2>
 <p><a href="https://python-poetry.org/">Poetry</a> is another tool for managing Python virtual environments. It takes things a step further than Pipenv by simplifying both managing an environment and publishing to the <a href="https://pypi.org">Python Package Index</a>.</p>
 <p>Similar to pipenv, we can easily install Poetry using pipx by calling:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">pipx install poetry</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pipx</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> poetry</span></span></code></pre>
 <h2 id="zsh">zsh</h2>
 <p>ZShell is my shell of choice. It’s the default option on mac and gives me access to the wonderful ohmyzsh plugins. We can easily set this up on the Pi using apt.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sudo apt install zsh -y</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> apt</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> zsh</span><span style="color:#79B8FF"> -y</span></span></code></pre>
 <p>At this point, you’ll need to logout and back in again for the changes to occur to the terminal app.</p>
 <h2 id="oh-my-zsh">Oh My Zsh</h2>
 <p><a href="https://github.com/ohmyzsh/ohmyzsh">Oh my zsh</a> installs a number of fancy themes for terminal and shortcuts for tools like git. It allows you to see branches when in git directories with status indicated by the cursor colour which is really useful and saves a lot of repeated commands.</p>
 <p>It can be installed with:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sh -c </span><span style="color:#A5D6FF">&quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">sh</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> "$(</span><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -fsSL</span><span style="color:#9ECBFF"> https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</span></span></code></pre>
 <h2 id="visual-studio-code">Visual Studio Code</h2>
 <p>Although we already have a couple of ide’s installed already, they aren’t ones I generally use day to day. Although Pycharm is available for linux, it’s quite a cumbersome beast requiring a full JDK and will likely be pretty slow on our Pi, so I’d recommend against trying to install it. VSCode is a full featured text editor that can be configured for many languages through the use of plugins and is a familiar tool to me.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">sudo apt install code -y</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">sudo</span><span style="color:#9ECBFF"> apt</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> code</span><span style="color:#79B8FF"> -y</span></span></code></pre>
 <p>You should then see it appear within the programming menu.</p>
-<picture>
-			<source type="image/avif" srcset="/assets/vscode-menu.174e311f_2pfdwV.avif 400w,/assets/vscode-menu.174e311f_ZF849k.avif 900w"><source type="image/webp" srcset="/assets/vscode-menu.174e311f_Z1VB6je.webp 400w,/assets/vscode-menu.174e311f_3cJNr.webp 900w"><source type="image/png" srcset="/assets/vscode-menu.174e311f_23NpdV.png 400w,/assets/vscode-menu.174e311f_Z1Nphiz.png 900w">
-			<img width="900" height="335" src="/assets/vscode-menu.174e311f_Z1oMubi.png" loading="lazy" decoding="async" alt="VSCode shown in menu" class="">
-		</picture>
+<picture widths="400,900"><img src="/_astro/vscode-menu.CCUxwYI5_Z10J0dz.webp" loading="lazy" decoding="async" alt="VSCode shown in menu" class></picture>
 <p>Once you’ve got it up and running, be sure to install the Python plugin to get syntax highlighting and hinting. You can also install any of the other plugins that take your fancy.</p>
 <h1 id="conclusion">Conclusion</h1>
-<p>If you followed the same steps as me, your Raspberry Pi should now be ready to get started doing some serious Python coding on Bullseye. You can save money on microsd cards by keeping all your projects separate on the same machine.</p>
-		</div>
-	</article>
-	<section class="relative astro-HVBEBTVO">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
-		<div class="py-12 md:py-20 astro-HVBEBTVO">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
-					Subscribe for Exclusives
-				</h2>
-				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
-					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
-				</p>
-
-				<div class="mt-6 astro-HVBEBTVO">
-					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-	</main><footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</li>
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; 2003-2026 Ian Wootten
-			</div>
-		</div>
-	</div>
-</footer>
-		<script>
+<p>If you followed the same steps as me, your Raspberry Pi should now be ready to get started doing some serious Python coding on Bullseye. You can save money on microsd cards by keeping all your projects separate on the same machine.</p></div></article><section class="relative" data-astro-cid-cey2t5nt><div class="max-w-6xl mx-auto px-4 sm:px-6" data-astro-cid-cey2t5nt><div class="py-12 md:py-20" data-astro-cid-cey2t5nt><div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none" data-astro-cid-cey2t5nt><h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" data-astro-cid-cey2t5nt>Subscribe for Exclusives</h2><p class="text-xl text-gray-600 dark:text-slate-400" data-astro-cid-cey2t5nt>My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time.</p><div class="mt-6" data-astro-cid-cey2t5nt><div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" data-astro-cid-cey2t5nt><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div></div></div></div></div></section></section></main><footer class="border-t border-gray-200 dark:border-slate-800"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="md:flex md:items-center md:justify-between py-6 md:py-8"><ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-twitter"><symbol id="ai:tabler:brand-twitter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99c-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.8 13.8 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></symbol><use href="#ai:tabler:brand-twitter"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-youtube"><use href="#ai:tabler:brand-youtube"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-github"><use href="#ai:tabler:brand-github"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-linkedin"><symbol id="ai:tabler:brand-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 11v5m0-8v.01M12 16v-5m4 5v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></g></symbol><use href="#ai:tabler:brand-linkedin"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:rss"><use href="#ai:tabler:rss"></use></svg></a></li></ul><div class="text-sm text-gray-700 mr-4 dark:text-slate-400">&copy; 2003-2026 Ian Wootten</div></div></div></footer><script>
 	// Set "light" theme as default
 	// if (!localStorage.theme) {
 	//   localStorage.theme = "light";
@@ -317,8 +127,4 @@
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
 	};
-</script>
-
-		
-	</body>
-</html>
+</script></body></html>

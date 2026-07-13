@@ -1,257 +1,70 @@
-<!DOCTYPE html>
-<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>How a Python Virtual Environment Works — Ian Wootten</title>
-<meta name="robots" content="index,follow" />
-<meta name="description" content="Virtual environments are what we use in Python to allow us to isolate project dependencies from one another. But how do they work?" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="How a Python Virtual Environment Works" />
-<meta property="og:description" content="Virtual environments are what we use in Python to allow us to isolate project dependencies from one another. But how do they work?" />
-<meta property="og:url" content="https://www.ianwootten.co.uk/2023/05/15/how-a-python-virtual-environment-works/" />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://www.ianwootten.co.uk/assets/opengraph.bef0feb9.png" />
-<meta property="og:image:alt" content="How a Python Virtual Environment Works" />
-<link rel="canonical" href="https://www.ianwootten.co.uk/2023/05/15/how-a-python-virtual-environment-works/" />
-
-
-<!-- Or Google Fonts -->
-
-<meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M">
-
-
-
-<script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script>
-
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="mask-icon" href="/favicon.svg" color="#8D46E7">
-
-
-	<link rel="stylesheet" href="/assets/_...page_.377aa6d2.css" />
-<link rel="stylesheet" href="/assets/_slug_.f30ede13.css" />
-<link rel="stylesheet" href="/assets/index.a49322ed.css" /><script type="module" src="/hoisted.1b636b1c.js"></script>
-<script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.3 - MIT builder.io */
-!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(w,1e4),e.addEventListener("pt0",f),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):w())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.3":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function w(t,n){for(f(),t=0;t<s.length;t++)(n=e.createElement("script")).innerHTML=s[t].innerHTML,e.head.appendChild(n);c&&c.parentNode.removeChild(c)}function f(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
-
-	<body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
-		<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center" href="/">
-				<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
-	💻&nbsp;&nbsp;Ian Wootten</span>
-			</a>
-			<div class="flex items-center md:hidden">
-				<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-				<button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:menu"><g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 16h16"/></g></svg>
-</button>
-			</div>
-		</div>
-		<nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu">
-			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products
-					</a>
-				</li>
-				<li>
-					<a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube
-					</a>
-				</li>
-				<li class="md:hidden">
-					<a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github
-					</a>
-				</li>
-			</ul>
-			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
-				<div class="hidden items-center md:flex">
-					<button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
-	<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></g></svg>
-</button>
-					<a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-					<a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header><main>
-		<section class="py-8 sm:py-16 lg:py-20 mx-auto">
-	<article>
-		<header>
-			<p class="max-w-3xl mx-auto text-center">
-				<time datetime="2023-05-15T09:56:39.000Z">May 15, 2023</time> ~ 6 min read
-			</p>
-			<h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">
-				How a Python Virtual Environment Works
-			</h1>
-			<div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8">
-				<ul class="text-sm">
-			<li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/python/">python</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/pip/">pip</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/poetry/">poetry</a>
-				</li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2">
-					<a href="/tags/venv/">venv</a>
-				</li>
-		</ul>
-			</div>
-			
-		</header>
-		<div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
-			<p>Virtual environments, they’re what we use in Python to allow us to install project dependencies into neat isolated folders instead of directly into our global system Python. Once activated, dependencies go into our virtual environment folder instead of our system Python and we can use them without interfering with our global system. This makes them really lightweight environments that we can dispose of and recreate very easily.</p>
+<!DOCTYPE html><html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How a Python Virtual Environment Works — Ian Wootten</title><meta name="description" content="Virtual environments are what we use in Python to allow us to isolate project dependencies from one another. But how do they work?"><link rel="canonical" href="https://www.ianwootten.co.uk/2023/05/15/how-a-python-virtual-environment-works/"><meta property="og:title" content="How a Python Virtual Environment Works"><meta property="og:description" content="Virtual environments are what we use in Python to allow us to isolate project dependencies from one another. But how do they work?"><meta property="og:type" content="article"><meta property="og:image" content="https://www.ianwootten.co.uk/_astro/opengraph.BxwSyX67_1Lk4T7.webp"><meta name="twitter:card" content="summary_large_image"><meta name="google-site-verification" content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"><script async src="https://analytics.niftydigits.com/js/pa-yDUcmgXu6nELf6ykbVIFV.js"></script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#8D46E7"><link rel="stylesheet" href="/_astro/permalinks.3Ph0TD5z.css"><style>form[data-astro-cid-cey2t5nt] .feedback[data-astro-cid-cey2t5nt]{display:none}form[data-astro-cid-cey2t5nt].success input[data-astro-cid-cey2t5nt],form[data-astro-cid-cey2t5nt].success button[data-astro-cid-cey2t5nt]{display:none!important}form[data-astro-cid-cey2t5nt].success .feedback[data-astro-cid-cey2t5nt]{display:unset}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.13.2 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.13.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head><body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900"><header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b border-gray-200 dark:border-b-0"><div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"><div class="flex justify-between"><a class="flex items-center" href="/"><span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">💻&nbsp;&nbsp;Ian Wootten</span></a><div class="flex items-center md:hidden"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" class="w-6 h-6" data-icon="tabler:sun"><symbol id="ai:tabler:sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol><use href="#ai:tabler:sun"></use></svg></button><button type="button" class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu" data-aw-toggle-menu><svg width="1em" height="1em" class="w-6 h-6" optimize="false" data-icon="tabler:menu"><symbol id="ai:tabler:menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></symbol><use href="#ai:tabler:menu"></use></svg></button></div></div><nav class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto" aria-label="Main navigation" id="menu"><ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto collapsed text-xl md:text-base"><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/blog/">Blog</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/about/">About</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="/work-with-me/">Work With Me</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://niftydigits.gumroad.com/">Products</a></li><li><a class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://newsletter.ianwootten.co.uk">Newsletter</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://www.youtube.com/IanWootten?sub_confirmation=1">YouTube</a></li><li class="md:hidden"><a class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out" href="https://github.com/iwootten">Github</a></li></ul><div class="md:self-center flex items-center mb-4 md:mb-0 ml-2"><div class="hidden items-center md:flex"><button type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:sun"><use href="#ai:tabler:sun"></use></svg></button><a href="https://www.youtube.com/IanWootten?sub_confirmation=1" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's YouTube Channel"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-youtube"><symbol id="ai:tabler:brand-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9l5 3l-5 3z"/></g></symbol><use href="#ai:tabler:brand-youtube"></use></svg></a><a href="https://github.com/iwootten" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Ian's Github"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-github"><symbol id="ai:tabler:brand-github" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></symbol><use href="#ai:tabler:brand-github"></use></svg></a><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS Feed" href="/rss.xml"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:rss"><symbol id="ai:tabler:rss" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0-2 0M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></symbol><use href="#ai:tabler:rss"></use></svg></a></div></div></nav></div></header><main><section class="py-8 sm:py-16 lg:py-20 mx-auto"><article><header><p class="max-w-3xl mx-auto text-center"><time datetime="Mon May 15 2023 09:56:39 GMT+0000 (Coordinated Universal Time)">May 15, 2023</time> ~  min read</p><h1 class="px-4 sm:px-6 max-w-3xl mx-auto text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading">How a Python Virtual Environment Works</h1><div class="container text-center mx-auto px-8 sm:px-6 max-w-3xl mt-8"><ul class="text-sm"><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/python/">python</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/pip/">pip</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/poetry/">poetry</a></li><li class="bg-gray-100 dark:bg-slate-700 inline-block mr-2 mb-2 py-0.5 px-2"><a href="/tags/venv/">venv</a></li></ul></div></header><div class="container mx-auto px-6 sm:px-6 max-w-3xl prose prose-lg lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lg mt-8"><p>Virtual environments, they’re what we use in Python to allow us to install project dependencies into neat isolated folders instead of directly into our global system Python. Once activated, dependencies go into our virtual environment folder instead of our system Python and we can use them without interfering with our global system. This makes them really lightweight environments that we can dispose of and recreate very easily.</p>
 <p>So how do they work? We’ve got a lot of options to create them, venv module, pipenv and poetry to name a few, but whatever you use, the venv that’s created has a structure that’s mostly the same and mimics what we see in our system Python.</p>
 <p>In this article I’m going to explore their structure and how the core of their behaviour is defined by a single PEP. If you’d prefer, you can watch the following video I created for YouTube.</p>
-<lite-youtube videoid="dy3svq9CbNo" class="mx-auto" style="background-image: url('https://i.ytimg.com/vi/dy3svq9CbNo/hqdefault.jpg');"></lite-youtube>
-
-
+<lite-youtube videoid="dy3svq9CbNo" class="mx-auto" style="background-image: url('https://i.ytimg.com/vi/dy3svq9CbNo/hqdefault.jpg')"><a href="https://youtube.com/watch?v=dy3svq9CbNo" class="lyt-playbtn"><span class="lyt-visually-hidden">Play</span></a></lite-youtube><script type="module">var e=class e extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute(`videoid`);let t=this.querySelector(`.lyt-playbtn,.lty-playbtn`);if(this.playLabel=t&&t.textContent.trim()||this.getAttribute(`playlabel`)||`Play`,this.dataset.title=this.getAttribute(`title`)||``,this.style.backgroundImage||(this.style.backgroundImage=`url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg")`,this.upgradePosterImage()),t||(t=document.createElement(`button`),t.type=`button`,t.classList.add(`lyt-playbtn`,`lty-playbtn`),this.append(t)),!t.textContent){let e=document.createElement(`span`);e.className=`lyt-visually-hidden`,e.textContent=this.playLabel,t.append(e)}this.addNoscriptIframe(),t.nodeName===`A`&&(t.removeAttribute(`href`),t.setAttribute(`tabindex`,`0`),t.setAttribute(`role`,`button`),t.addEventListener(`keydown`,e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),this.activate())})),this.addEventListener(`pointerover`,e.warmConnections,{once:!0}),this.addEventListener(`focusin`,e.warmConnections,{once:!0}),this.addEventListener(`click`,this.activate),this.needsYTApi=this.hasAttribute(`js-api`)||navigator.vendor.includes(`Apple`)||navigator.userAgent.includes(`Mobi`)}static addPrefetch(e,t,n){let r=document.createElement(`link`);r.rel=e,r.href=t,n&&(r.as=n),document.head.append(r)}static warmConnections(){e.preconnected||=(e.addPrefetch(`preconnect`,`https://www.youtube-nocookie.com`),e.addPrefetch(`preconnect`,`https://www.google.com`),e.addPrefetch(`preconnect`,`https://googleads.g.doubleclick.net`),e.addPrefetch(`preconnect`,`https://static.doubleclick.net`),!0)}fetchYTPlayerApi(){window.YT||window.YT&&window.YT.Player||(this.ytApiPromise=new Promise((e,t)=>{var n=document.createElement(`script`);n.src=`https://www.youtube.com/iframe_api`,n.async=!0,n.onload=t=>{YT.ready(e)},n.onerror=t,this.append(n)}))}async getYTPlayer(){return this.playerPromise||await this.activate(),this.playerPromise}async addYTPlayerIframe(){this.fetchYTPlayerApi(),await this.ytApiPromise;let e=document.createElement(`div`);this.append(e);let t=Object.fromEntries(this.getParams().entries());this.playerPromise=new Promise(n=>{let r=new YT.Player(e,{width:`100%`,videoId:this.videoId,playerVars:t,events:{onReady:e=>{e.target.playVideo(),n(r)}}})})}addNoscriptIframe(){let e=this.createBasicIframe(),t=document.createElement(`noscript`);t.innerHTML=e.outerHTML,this.append(t)}getParams(){let e=new URLSearchParams(this.getAttribute(`params`)||[]);return e.append(`autoplay`,`1`),e.append(`playsinline`,`1`),e}async activate(){if(this.classList.contains(`lyt-activated`))return;if(this.classList.add(`lyt-activated`),this.needsYTApi)return this.addYTPlayerIframe(this.getParams());let e=this.createBasicIframe();this.append(e),e.focus()}createBasicIframe(){let e=document.createElement(`iframe`);return e.width=560,e.height=315,e.title=this.playLabel,e.allow=`accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture`,e.allowFullscreen=!0,e.referrerPolicy=`strict-origin-when-cross-origin`,e.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${this.getParams().toString()}`,e}upgradePosterImage(){setTimeout(()=>{let e=`https://i.ytimg.com/vi_webp/${this.videoId}/sddefault.webp`,t=new Image;t.fetchPriority=`low`,t.referrerpolicy=`origin`,t.src=e,t.onload=t=>{t.target.naturalHeight==90&&t.target.naturalWidth==120||(this.style.backgroundImage=`url("${e}")`)}},100)}};customElements.define(`lite-youtube`,e);</script>
 <h2 id="structure-of-a-virtual-environment">Structure of a Virtual Environment</h2>
 <p>Let’s create a virtual environment now with the venv module and explore what’s created. We’re calling the venv module and passing the name argument ‘venv’.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#C9D1D9">python </span><span style="color:#FF7B72">-</span><span style="color:#C9D1D9">m venv venv</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m venv venv</span></span></code></pre>
 <p>Within the folder that is created we have a bin folder containing symlinked versions of Python, a site packages directory and we also have a pyvenv.cfg file.</p>
 <p><img src="/images/how-a-venv-works/venv-structure.png" alt="Structure of the environment created with venv module"/></p>
 <p><a href="https://peps.python.org/pep-0405/">PEP 405</a> specifies how these files work, which introduced the concept of this pyvenv.cfg file. Python is going to look for this when deciding on its path configuration and if that file exists, it looks for key value pairs within it. Here’s what pyvenv.cfg looks like.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">home = /Users/ian/pyenv/versions/3.11.2/bin</span></span>
-<span class="line"><span style="color:#c9d1d9">include-system-site-packages = false</span></span>
-<span class="line"><span style="color:#c9d1d9">version = 3.11.2</span></span>
-<span class="line"><span style="color:#c9d1d9">executable = /Users/ian/pyenv/versions/3.11.2/bin/python3.11</span></span>
-<span class="line"><span style="color:#c9d1d9">command = /Users/ian/pyenv/versions/3.11.2/bin/python -m venv /Users/ian/dev/python/tutorials/how-venvs-work/venv</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>home = /Users/ian/pyenv/versions/3.11.2/bin</span></span>
+<span class="line"><span>include-system-site-packages = false</span></span>
+<span class="line"><span>version = 3.11.2</span></span>
+<span class="line"><span>executable = /Users/ian/pyenv/versions/3.11.2/bin/python3.11</span></span>
+<span class="line"><span>command = /Users/ian/pyenv/versions/3.11.2/bin/python -m venv /Users/ian/dev/python/tutorials/how-venvs-work/venv</span></span></code></pre>
 <p>If it finds a “home” value, as seen here - it’s going to use the version of Python specified there as the basis for the virtual environment’s Python. So Python knows that we’re now talking about a virtual environment due to pyvenv.cfg and it’s going to be including site packages from this relative directory to this bin folder.</p>
 <p>We’ve also created a whole bunch of activate shell scripts, within which we have the setup for virtual environment variables and also modifying our system path to include Python from our bin folder. We have a deactivate method that will become available in our shell once we execute this activate script and then we can deactivate all these environment variables with it.</p>
 <p>There are many versions of this script for whatever shell you happen to use eg. bash, fish, PowerShell.</p>
 <h2 id="python-paths-for-a-virtual-environment">Python Paths for a Virtual Environment</h2>
 <p>Let’s take a look at how the PATH environment variable is configured prior to running activation for the environment.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">echo $PATH</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>echo $PATH</span></span></code></pre>
 <p>Theres a whole load of paths delimited by colons which are all things that we’re going to be able to call from the command line and Python will exist in one of these directories. Here’s mine for reference.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openss1@1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/shims:/Users/ian/-pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/op t/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us/local/go/bin:/Users/ian/dev/google-clo ud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openssla1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/ian/.local/bin:/Users/ian/local/bin:/Users/1an/.local/bin</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openss1@1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/shims:/Users/ian/-pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/op t/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us/local/go/bin:/Users/ian/dev/google-clo ud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openssla1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/ian/.local/bin:/Users/ian/local/bin:/Users/1an/.local/bin</span></span></code></pre>
 <p>Let’s find out where Python is currently being called from too:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#FF7B72">&gt;</span><span style="color:#C9D1D9"> which python</span></span>
-<span class="line"><span style="color:#C9D1D9">/Users/ian/.pyenv/shims/python</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#F97583">></span><span style="color:#E1E4E8"> which python</span></span>
+<span class="line"><span style="color:#B392F0">/Users/ian/.pyenv/shims/python</span></span></code></pre>
 <p>You can see on my system that I’m using pyenv to manage my version of Python and that it appears a few paths into my $PATH env var.</p>
 <p>Importantly, things that are earlier on in this PATH string are going to get executed earlier. If you put another folder with another python in it as the first in that string, that’s going to get precedence any other Python that appears later.</p>
 <p>We can also see with the python that we’re using which site packages directory it thinks it’s going to be using by running a short script in the command line.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; python -c &#39;import site; print(site.getsitepackages()[0])&#39;</span></span>
-<span class="line"><span style="color:#c9d1d9">/Users/ian/.pyenv/versions/3.11.2/lib/python3.11/site-packages</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> python -c 'import site; print(site.getsitepackages()[0])'</span></span>
+<span class="line"><span>/Users/ian/.pyenv/versions/3.11.2/lib/python3.11/site-packages</span></span></code></pre>
 <p>I can see that I’m using site-packages within pyenv from the PATH. You may be using a global Python version on your system, so that’s where our packages will go if we use something like pip to
 install somethingt.</p>
 <p>Lets call the activate script which activates it and shows its name (venv) as part of my prompt. This way I know I’m working within the venv.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; . ./venv/bin/activate</span></span>
-<span class="line"><span style="color:#c9d1d9">(venv) &gt;</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> . ./venv/bin/activate</span></span>
+<span class="line"><span>(venv) ></span></span></code></pre>
 <p>If we echo out the PATH again, we can see it’s now changed and the venvs bin folder at the beginning.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">/Users/ian/dev/python/tutorials/how-venvs-work/venv/bin:/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openss1@1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/shims:/Users/ian/-pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us/local/go/bin:/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openssla1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/ian/.local/bin:/Users/ian/local/bin:/Users/1an/.local/bin</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>/Users/ian/dev/python/tutorials/how-venvs-work/venv/bin:/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openss1@1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/shims:/Users/ian/-pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/us/local/go/bin:/Users/ian/dev/google-cloud-sdk/bin:/Users/ian/go/bin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/openssla1.1/bin:/opt/homebrew/opt/openjdk/bin:/Users/ian/pyenv/bin:/Users/ian/.nvm/versions/node/v19.5.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/ian/.local/bin:/Users/ian/local/bin:/Users/1an/.local/bin</span></span></code></pre>
 <p>If we also check what our site packages directory is, we can see that it’s now the one within our venv. So it’s correctly configured this so that we are using the standard library from our symlinked python but we are using site packages from the venv. This is all down to the pyvenv.cfg file.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; python -c &#39;import site; print(site.getsitepackages()[0])&#39;</span></span>
-<span class="line"><span style="color:#c9d1d9">/Users/ian/dev/python/tutorials/how-venvs-work/ven/lib/python3.11/site-packages</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> python -c 'import site; print(site.getsitepackages()[0])'</span></span>
+<span class="line"><span>/Users/ian/dev/python/tutorials/how-venvs-work/ven/lib/python3.11/site-packages</span></span></code></pre>
 <h2 id="installing-packages-with-pip">Installing Packages with pip</h2>
 <p>Having a venv limited to a folder makes them easily disposable so that we can just delete it if we wanted to and we’re not going to mess with our global version of python.</p>
 <p>Lets actually go ahead and install requests:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; (venv) pip install requests</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> (venv) pip install requests</span></span></code></pre>
 <p>We can see when we go into this that requests now appears in this folder and if we uninstall it, it’ll get removed from there as well.</p>
 <p><img src="/images/how-a-venv-works/requests-in-subfolder.png" alt="Requests in site-packages"/></p>
 <p>We can also deactivate this because we now have that deactivate command and we come back out of our environment.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">&gt; (venv) deactivate</span></span>
-<span class="line"><span style="color:#c9d1d9">&gt;</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>> (venv) deactivate</span></span>
+<span class="line"><span>></span></span></code></pre>
 <p>Our path and location for site packages will once again be set back to how they were originally as well. Notice that the prompt has updated too.</p>
 <h2 id="installing-packages-with-poetry">Installing Packages with Poetry</h2>
 <p>This structure is the same for any package manager - if you were to go ahead and say install with Poetry you get the same results.</p>
 <p>First of all I’m going to set Poetry my in project variable so that we venvs installed within a directory within the folder
 I’m in.</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">poetry config virtualenvs.in-project true</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>poetry config virtualenvs.in-project true</span></span></code></pre>
 <p>If we init a project accepting defaults and install requests:</p>
-<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#c9d1d9">poetry init</span></span>
-<span class="line"><span style="color:#c9d1d9">poetry add requests</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>poetry init</span></span>
+<span class="line"><span>poetry add requests</span></span></code></pre>
 <p>Poetry automatically creates a venv for me that looks very similar to what I created with the venv module.</p>
 <p><img src="/images/how-a-venv-works/poetry-structure.png" alt="Structure of Poetry created environment"/></p>
 <p>We’ve can see the pyvenv.cfg file but we don’t have the include folder and now we’ve got this wheel because poetry also makes it very easy to create wheels to publish. Then we’ve got the site packages and our requests installed in that.</p>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>As you can see, most of the features that make virtual environments work are controlled with the pyvenv.cfg file I’ve shown. Many of the available package managers add features over and above the PEP405 specfication with the structures and PATH’s we’ve discussed underpinning them. I hope this article helped demystify how they work for you.</p>
-<p><em>NB. I’m in the process of writing an ebook on virtual environments, subscribe to my newsletter if you’re interested in hearing about it when it launches</em></p>
-		</div>
-	</article>
-	<section class="relative astro-HVBEBTVO">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 astro-HVBEBTVO">
-		<div class="py-12 md:py-20 astro-HVBEBTVO">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none astro-HVBEBTVO">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading astro-HVBEBTVO">
-					Subscribe for Exclusives
-				</h2>
-				<p class="text-xl text-gray-600 dark:text-slate-400 astro-HVBEBTVO">
-					My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time. 
-				</p>
-
-				<div class="mt-6 astro-HVBEBTVO">
-					<div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" class="astro-HVBEBTVO"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-	</main><footer class="border-t border-gray-200 dark:border-slate-800">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-twitter"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-youtube"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="18" height="14" x="3" y="5" rx="4"/><path d="m10 9 5 3-5 3z"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-github"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:brand-linkedin"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></g></svg>
-					</a>
-				</li>
-				<li>
-					<a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml">
-						<svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:rss"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon-tabler"><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9"/></g></svg>
-					</a>
-				</li>
-			</ul>
-			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				&copy; 2003-2026 Ian Wootten
-			</div>
-		</div>
-	</div>
-</footer>
-		<script>
+<p><em>NB. I’m in the process of writing an ebook on virtual environments, subscribe to my newsletter if you’re interested in hearing about it when it launches</em></p></div></article><section class="relative" data-astro-cid-cey2t5nt><div class="max-w-6xl mx-auto px-4 sm:px-6" data-astro-cid-cey2t5nt><div class="py-12 md:py-20" data-astro-cid-cey2t5nt><div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none" data-astro-cid-cey2t5nt><h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading" data-astro-cid-cey2t5nt>Subscribe for Exclusives</h2><p class="text-xl text-gray-600 dark:text-slate-400" data-astro-cid-cey2t5nt>My monthly newsletter shares exclusive articles you won't find elsewhere, tools and code. No spam, unsubscribe any time.</p><div class="mt-6" data-astro-cid-cey2t5nt><div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%" data-astro-cid-cey2t5nt><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-button-color="#FF1A75" data-button-text-color="#FFFFFF" data-site="https://newsletter.ianwootten.co.uk/" data-locale="en" async></script></div></div></div></div></div></section></section></main><footer class="border-t border-gray-200 dark:border-slate-800"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="md:flex md:items-center md:justify-between py-6 md:py-8"><ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0"><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Twitter" href="https://twitter.com/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-twitter"><symbol id="ai:tabler:brand-twitter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4.01c-1 .49-1.98.689-3 .99c-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.8 13.8 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></symbol><use href="#ai:tabler:brand-twitter"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="YouTube" href="https://youtube.com/IanWootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-youtube"><use href="#ai:tabler:brand-youtube"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="Github" href="https://github.com/iwootten"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:brand-github"><use href="#ai:tabler:brand-github"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="LinkedIn" href="https://linkedin.com/in/iwootten"><svg width="1em" height="1em" class="w-5 h-5" data-icon="tabler:brand-linkedin"><symbol id="ai:tabler:brand-linkedin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 11v5m0-8v.01M12 16v-5m4 5v-3a2 2 0 1 0-4 0"/><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/></g></symbol><use href="#ai:tabler:brand-linkedin"></use></svg></a></li><li><a class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center" aria-label="RSS" href="/rss.xml"><svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5" data-icon="tabler:rss"><use href="#ai:tabler:rss"></use></svg></a></li></ul><div class="text-sm text-gray-700 mr-4 dark:text-slate-400">&copy; 2003-2026 Ian Wootten</div></div></div></footer><script>
 	// Set "light" theme as default
 	// if (!localStorage.theme) {
 	//   localStorage.theme = "light";
@@ -295,8 +108,4 @@ I’m in.</p>
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
 	};
-</script>
-
-		
-	</body>
-</html>
+</script></body></html>
