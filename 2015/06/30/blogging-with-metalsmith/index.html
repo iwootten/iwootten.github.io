@@ -13,16 +13,16 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 <span class="line"><span style="color:#E1E4E8">  .</span><span style="color:#B392F0">use</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">templates</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'swig'</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#E1E4E8">  .</span><span style="color:#B392F0">build</span><span style="color:#E1E4E8">();</span></span></code></pre>
 <p>This is just standard node script with dependencies installed via npm. Metalsmith assumes defaults of src and build for the source of markdown and destination of html. An example of markdown containing some useful front-matter might be as follows:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
-<span class="line"><span style="color:#E1E4E8">title: Blogging with Metalsmith</span></span>
-<span class="line"><span style="color:#E1E4E8">author: Ian</span></span>
-<span class="line"><span style="color:#E1E4E8">date: 2015-06-30</span></span>
-<span class="line"><span style="color:#E1E4E8">categories:</span></span>
-<span class="line"><span style="color:#FFAB70">  -</span><span style="color:#E1E4E8"> Javascript</span></span>
-<span class="line"><span style="color:#E1E4E8">tags:</span></span>
-<span class="line"><span style="color:#FFAB70">  -</span><span style="color:#E1E4E8"> metalsmith</span></span>
-<span class="line"><span style="color:#FFAB70">  -</span><span style="color:#E1E4E8"> javascript</span></span>
-<span class="line"><span style="color:#79B8FF;font-weight:bold">---</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">---</span></span>
+<span class="line"><span style="color:#85E89D">title</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Blogging with Metalsmith</span></span>
+<span class="line"><span style="color:#85E89D">author</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Ian</span></span>
+<span class="line"><span style="color:#85E89D">date</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2015-06-30</span></span>
+<span class="line"><span style="color:#85E89D">categories</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Javascript</span></span>
+<span class="line"><span style="color:#85E89D">tags</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">metalsmith</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">javascript</span></span>
+<span class="line"><span style="color:#E1E4E8">---</span></span>
 <span class="line"><span style="color:#E1E4E8">I'm switching blogging platforms once more...</span></span></code></pre>
 <p>It also assumes a default template directory under templates, containing a default post template ‘post.html’ - which in the example is written in a swig template as below.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="twig"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">html</span><span style="color:#E1E4E8">></span></span>
