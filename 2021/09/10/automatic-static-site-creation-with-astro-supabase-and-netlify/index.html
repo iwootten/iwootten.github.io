@@ -123,7 +123,7 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 <span class="line"><span style="color:#E1E4E8">  command = </span><span style="color:#9ECBFF">&quot;npm run build&quot;</span></span>
 <span class="line"><span style="color:#E1E4E8">  publish = </span><span style="color:#9ECBFF">&quot;dist&quot;</span></span></code></pre>
 <p>I also added a Netlify build hook, so that I could trigger builds from my scraping workflow. Netlify makes this easy, allowing you to select the relevant branch from a project and request a hook URL. Once created, you can make a POST request to that hook and trigger a build.</p>
-<picture widths="400,900"><img src="/_astro/netlify-hook.B_JUfsG9_Z10tGsQ.webp" loading="lazy" decoding="async" class></picture>
+<picture widths="400,900"><img src="/_astro/netlify-hook.B_JUfsG9_Z10tGsQ.webp" width="900" height="900" loading="lazy" decoding="async" class></picture>
 <p>All that remains is configuring your custom domain to point to netlify correctly, which you can find details of within “Domain management” in Netlify.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This was a quick an dirty example with Astro, but I feel one that really shows the power of these tools together. I like that I can pick and choose sources to push back to Supabase and kick off builds asynchronously when updates have been made from scraping data. I’m planning on adding a number of other sources over time.</p>

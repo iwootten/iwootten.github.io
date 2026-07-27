@@ -9,7 +9,7 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 <h2 id="scraping-the-data">Scraping the Data</h2>
 <p>Pipedream organises projects using steps and workflows. Each workflow comprises of a number of different steps and requires a trigger step to begin. For this project I have 4 different workflows in total of which I’ll focus on a few key areas.</p>
 <p>Most of the triggers I currently execute are based on a simple cron scheduler. You can run any workflow at any time whilst you’re testing it out whilst deciding on a version of the workflow to deploy.</p>
-<picture widths="400,900"><img src="/_astro/pipedream-cron.BAnMra20_Z1rokym.webp" loading="lazy" decoding="async" alt="Steps in a Pipedream Workflow" class></picture>
+<picture widths="400,900"><img src="/_astro/pipedream-cron.BAnMra20_Z1rokym.webp" width="900" height="900" loading="lazy" decoding="async" alt="Steps in a Pipedream Workflow" class></picture>
 <p>Steps can execute any JavaScript or Python code or be based on existing steps which are shared by the community and Pipedream team. To scrape a collection of mixes I use <a href="https://www.npmjs.com/package/cheerio">cheerio</a> and the <a href="https://www.npmjs.com/package/@supabase/supabase-js">Supabase js client</a>.</p>
 <p>Lets start by looking at the workflow step to collect new mixes. Firstly I use Supabase to look up mixes I’ve already indexed from previous weeks so I can ignore them.</p>
 <p>You can see here I’ve used environment variables to set the credentials for Supabase to keep them out of the step. Keeping variables out of the step allows you to share common steps between workflows.</p>
@@ -63,7 +63,7 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 <span class="line"><span style="color:#F97583">  ...</span></span></code></pre>
 <p>This collects all the mixes, but then I also need to index tracks from each of the mixes. I have a separate Pipedream workflow to fetch that data in much the same way as the mixes and store it in a separate table <code>mixes_tracks</code>.</p>
 <p>At this point I should be able to see the data within the interface for my hosted Supabase instance.</p>
-<picture widths="400,900"><img src="/_astro/supabase-interface.D0zS2gM0_Z1muf9g.webp" loading="lazy" decoding="async" alt="Mixes Table in Supabase" class></picture>
+<picture widths="400,900"><img src="/_astro/supabase-interface.D0zS2gM0_Z1muf9g.webp" width="900" height="900" loading="lazy" decoding="async" alt="Mixes Table in Supabase" class></picture>
 <h2 id="creating-the-playlists">Creating the Playlists</h2>
 <p>Next I create the Spotify playlists. If I hadn’t used pipedream here I’d need to authenticate with Spotify and refresh credentials when they expired myself. That’s reduced to a few clicks within Pipedream and allows me to sleep more peacefully.</p>
 <p>Firstly, I have a step that looks up any new data found by joining <code>mixes</code> and <code>mixes_tracks</code>.</p>

@@ -26,26 +26,26 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 </ul>
 <h2 id="using-the-digitalocean-web-app">Using the DigitalOcean Web App</h2>
 <p>Firstly, DigitalOcean needs to know where to find your Django code. Head to the App Platform page and click on “Launch Your App”. The App platform only currently works with Github, so you need to give it permission to access your repositories there:</p>
-<picture widths="400,900"><img src="/_astro/app-platform-launch.1Dqk9asu_BBhac.webp" loading="lazy" decoding="async" alt="The app platform launch page" class></picture>
+<picture widths="400,900"><img src="/_astro/app-platform-launch.1Dqk9asu_BBhac.webp" width="900" height="900" loading="lazy" decoding="async" alt="The app platform launch page" class></picture>
 <p>You’ll need to select the repository you want to deploy from. In my case, I’m using <a href="https://github.com/iwootten/empty-django-app">empty-django-app</a>, which just returns “Hello, world!”:</p>
-<picture widths="400,900"><img src="/_astro/configure-step-1.DoPuZeMr_2oUwEc.webp" loading="lazy" decoding="async" alt="Select a repository" class></picture>
+<picture widths="400,900"><img src="/_astro/configure-step-1.DoPuZeMr_2oUwEc.webp" width="900" height="900" loading="lazy" decoding="async" alt="Select a repository" class></picture>
 <p>Select a name for your app, the region you want to use to deploy to and repository branch to deploy from. Also, ensure that the checkbox “Autodeploy code changes” is enabled. This is one of the great features of the App platform, allowing changes to immediately deploy once merged to a particular branch.</p>
-<picture widths="400,900"><img src="/_astro/configure-step-2.KIm_txlb_ZUPyGz.webp" loading="lazy" decoding="async" alt="Select an app name and branch" class></picture>
+<picture widths="400,900"><img src="/_astro/configure-step-2.KIm_txlb_ZUPyGz.webp" width="900" height="900" loading="lazy" decoding="async" alt="Select an app name and branch" class></picture>
 <p>Next we’ll need to configure how our app is deployed. The App platform is able to understand we want to deploy a Python web service, but we need to change a couple of things to ensure the app is configured correctly.</p>
 <p>Firstly, add an environment variable of <code>APP_DOMAIN</code> and set it to <code>${APP_DOMAIN}</code>. This is a special <a href="https://www.digitalocean.com/docs/app-platform/how-to/use-environment-variables/">App-wide environment variable</a> that DigitalOcean defines and we use within our app to define the <code>ALLOWED_HOSTS</code>.</p>
-<picture widths="400,900"><img src="/_astro/configure-step-3.BoHWoBqY_JalJn.webp" loading="lazy" decoding="async" alt="Configure the application" class></picture>
+<picture widths="400,900"><img src="/_astro/configure-step-3.BoHWoBqY_JalJn.webp" width="900" height="900" loading="lazy" decoding="async" alt="Configure the application" class></picture>
 <p>The run command is what we want to run each time our code is changed. Gunicorn needs to be defined to point to a temporary directory that the platform worker has access to and the appropriate wsgi file:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> manage.py</span><span style="color:#9ECBFF"> migrate</span><span style="color:#E1E4E8">; </span><span style="color:#B392F0">gunicorn</span><span style="color:#79B8FF"> --worker-tmp-dir</span><span style="color:#9ECBFF"> /dev/shm</span><span style="color:#9ECBFF"> djempty.wsgi</span></span></code></pre>
 <p>We also need to change the <code>HTTP_PORT</code> to 8000, which gunicorn will be running from.</p>
 <p>Finally, I’ll be using a single container on the $5/month plan because this is a test and I don’t want to accidentally get charged too much!</p>
-<picture widths="400,900"><img src="/_astro/configure-step-4.7vzmXZ32_kE5BB.webp" loading="lazy" decoding="async" alt="Select the container size" class></picture>
+<picture widths="400,900"><img src="/_astro/configure-step-4.7vzmXZ32_kE5BB.webp" width="900" height="900" loading="lazy" decoding="async" alt="Select the container size" class></picture>
 <p>You can follow the deployment log to check how the build of your app is doing.</p>
-<picture widths="400,900"><img src="/_astro/deploy-in-progress.DSPsUpTT_2a3Izg.webp" loading="lazy" decoding="async" alt="Deployment in progress" class></picture>
-<picture widths="400,900"><img src="/_astro/deploy-logs.Bqapf9Xt_Z21696V.webp" loading="lazy" decoding="async" alt="Deployment logs" class></picture>
+<picture widths="400,900"><img src="/_astro/deploy-in-progress.DSPsUpTT_2a3Izg.webp" width="900" height="900" loading="lazy" decoding="async" alt="Deployment in progress" class></picture>
+<picture widths="400,900"><img src="/_astro/deploy-logs.Bqapf9Xt_Z21696V.webp" width="900" height="900" loading="lazy" decoding="async" alt="Deployment logs" class></picture>
 <p>Hopefully, if everything is configured correctly, your deployment should complete successfully:</p>
-<picture widths="400,900"><img src="/_astro/deploy-success.CLOjqg0Q_oHlwl.webp" loading="lazy" decoding="async" alt="Deployment complete" class></picture>
+<picture widths="400,900"><img src="/_astro/deploy-success.CLOjqg0Q_oHlwl.webp" width="900" height="900" loading="lazy" decoding="async" alt="Deployment complete" class></picture>
 <p>You should now be able to visit the endpoint in a browser and see the response from the main Django view:</p>
-<picture widths="400,900"><img src="/_astro/app-in-browser.VSeUB1Jj_Z1rP3We.webp" loading="lazy" decoding="async" alt="The final app in the browser" class></picture>
+<picture widths="400,900"><img src="/_astro/app-in-browser.VSeUB1Jj_Z1rP3We.webp" width="900" height="900" loading="lazy" decoding="async" alt="The final app in the browser" class></picture>
 <h2 id="using-the-digitalocean-cli-doctl">Using the DigitalOcean CLI (doctl)</h2>
 <p>If you prefer using the commandline for your deployments, you can use <a href="https://www.digitalocean.com/docs/apis-clis/doctl/">doctl</a> to deploy your Django app. Within my repo I’ve described the series of above steps as an <a href="https://github.com/iwootten/empty-django-app/blob/master/config.yaml">App specification</a> which doctl can use to deploy an app. You can see what each of the variables describe on <a href="https://www.digitalocean.com/docs/app-platform/references/app-specification-reference/">the main reference page</a>, but most of them should be clear from the above steps.</p>
 <p>You need to configure doctl with an appropriate API key from the “Account &gt; API” page. Once this is done and you have downloaded the <a href="https://github.com/iwootten/empty-django-app/blob/master/config.yaml">config.yaml</a>, you create a new app by calling:</p>
